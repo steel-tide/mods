@@ -7,7 +7,7 @@
     "赛博朋克：断电协议",
     "사이버펑크: 블랙아웃 프로토콜"
   ],
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Steel Tide",
   "description": [
     "An official near-future arsenal: a complete networked war economy, prism weapons, shield formations, covert raids and autonomous carrier wings. Includes the Blackout operation atlas.",
@@ -5258,6 +5258,7 @@
     "maps/08-blackout.steel-tide-map"
   ],
   "screenshots": [
+    "covers/blackout-card.webp",
     "screenshots/01-gridfall.jpg",
     "screenshots/02-prism-front.jpg",
     "screenshots/03-undertow.jpg",

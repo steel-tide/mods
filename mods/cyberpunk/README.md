@@ -8,7 +8,7 @@ The roster combines regenerating shields, a shared fire-control network, stealth
 
 ## Play
 
-1. Open [Cyberpunk in Steel Tide](https://play.steelti.de/?mod=cyberpunk), or find **Cyberpunk: Blackout Protocol** in **Settings → Mods → Official registry** and install it. For an offline installer, download `cyberpunk-1.2.0.zip` from the [1.2.0 release](https://github.com/steel-tide/mods/releases/tag/cyberpunk-1.2.0), then use **Upload file…** with the ZIP intact.
+1. Open [Cyberpunk in Steel Tide](https://play.steelti.de/?mod=cyberpunk), or find **Cyberpunk: Blackout Protocol** in **Settings → Mods → Official registry** and install it. For an offline installer, download `cyberpunk-1.2.1.zip` from the [1.2.1 release](https://github.com/steel-tide/mods/releases/tag/cyberpunk-1.2.1), then use **Upload file…** with the ZIP intact.
 2. Start a skirmish, choose **Blackout Protocol** in each desired seat’s **Faction** field, and choose **01 · Gridfall** from the mod’s maps. This version needs a Steel Tide build with mod format 2 support.
 3. For the operation atlas, use **Standard**, fog on, **1,600 starting metal**, **150 population**, **6 production slots per HQ**, and turn **Build radius** off. The atlas's island outposts assume unrestricted construction. The arsenal also works with normal construction limits in ordinary matches.
 4. Play maps 01–06 as a duel. On 07 and 08, put **seats 1 + 2 on one team** and **3 + 4 on the other**. Your partner may be an AI or another player.
@@ -42,7 +42,7 @@ The manual's 24 mastery goals are **optional, player-tracked challenges**. A fir
 
 - Seventeen placeable building types, seven economic/air-defense upgrades and thirty-two recruitable units. The deployed artillery form and carrier-only drone are counted separately.
 - Seventy-seven original body, turret, projectile and effect sheets. All twenty-four building definitions have animated power systems; five walkers have registered movement frames.
-- Twelve original weapon and machinery sounds, and three cover paintings.
+- Twelve original weapon and machinery sounds, and three cover paintings. The registry opens with the Blackout cover illustration, followed by four gameplay screenshots.
 - Eight maps, four gameplay screenshots, three-language names/descriptions/ability text, and an offline field manual.
 
 The published folder includes the art prompt workbooks. Full-resolution masters and authoring tools remain in the authoring workspace; the installer contains shipping assets and player documentation.
