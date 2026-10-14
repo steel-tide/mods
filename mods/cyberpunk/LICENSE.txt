@@ -1,0 +1,12 @@
+Cyberpunk: Blackout Protocol
+Copyright (c) 2026 Steel Tide.
+
+SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+
+This expansion follows the license declared by the Steel Tide game and the
+mod manifest: PolyForm Noncommercial License 1.0.0.
+License text: https://polyformproject.org/licenses/noncommercial/1.0.0/
+
+The official rights holder retains the right to distribute this work under
+separate commercial terms. This notice does not grant third parties a right
+to sell the expansion or imply affiliation with another cyberpunk franchise.
