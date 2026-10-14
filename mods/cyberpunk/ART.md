@@ -13,6 +13,7 @@ The pipeline invokes the unmodified vanilla scripts from the adjacent Steel Tide
 | Shipping sprite cuts | `cut-art.mjs` | `buildSprites`, 2× headroom, 2× supersampling metadata, WebP q95 |
 | Three cover paintings | `COVER-PROMPTS.md`, `art/covers/` | `gen-store-art.mjs`, `google/gemini-3-pro-image`; `build-covers.mjs`, framed crop, 1920px |
 | Twelve weapon/machine sounds | `SFX-PROMPTS.md`, `art/sfx/` | `gen-sfx.mjs` through ElevenLabs, two takes each; `build-sfx.mjs` trims and normalizes; `master-sfx.py` measures codec headroom and re-encodes from the selected original |
+| Registry cover card | `art/covers/blackout.png`, `cut-registry-cover.mjs` | Same vanilla cover cutter, followed by a 1600 × 1200 left-framed card cut |
 | Four screenshots | `shoot-scenes.mjs` | Real game rendering through vanilla `scripts/lib/chrome.mjs`; staged gameplay scenes |
 | Roster portraits | `portraits/` | The game's own `defIcon`, blue team recoloring and assembled turrets |
 
@@ -38,6 +39,7 @@ python3 mods/cyberpunk/master-sfx.py
 bun mods/cyberpunk/prepare-world-art.mjs
 python3 mods/cyberpunk/build-campaign.py
 python3 mods/cyberpunk/build-manual.py
+node mods/cyberpunk/cut-registry-cover.mjs
 node mods/cyberpunk/pack.mjs
 ```
 

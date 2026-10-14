@@ -1,6 +1,6 @@
 # Cyberpunk: Blackout Protocol — cover workbook
 
-Original paintings via the vanilla store-art generator. These are cover illustrations, never labelled as gameplay screenshots. Reference files are original Cyberpunk masters. No copyrighted franchise assets or borrowed logos.
+Original paintings via the vanilla store-art generator. These are cover illustrations. The registry card uses the Blackout illustration; the four gallery images after it are actual gameplay screenshots. Reference files are original Cyberpunk masters. No copyrighted franchise assets or borrowed logos.
 
 ### `blackout` — google/gemini-3-pro-image · 16:9 · 2K
 
@@ -21,3 +21,7 @@ A premium original near-future military science-fiction painted film still. Blue
 ```text
 Original premium military cyberpunk expansion illustration, widescreen cinematic painted film still. Street-level view through a shuttered night market into a rain-soaked concrete service alley. A stealth quadruped infiltration drone moves out of deep shadow: narrow matte black diamond torso, four backward-swept articulated blade legs, tiny recessed amber cutting lens, minimal cyan signal traces and restrained amber identification plates. In the far intersection a tall wheeled signal relay vehicle with three cyan antenna blades illuminates the rain and a heavy armoured patrol passes beyond it. Dense overhead cable bundles, metal shutters, puddles and steam, near-future industrial city rather than fantasy. A tense covert raid, no humans required. Carefully designed readable silhouette, physically plausible wear and reflections, dark graphite and cold cyan with warm emergency light. No text, no lettering, no logos, no watermark, no HUD, no health bars, no border. Edge-to-edge image.
 ```
+
+### Registry card
+
+`covers/blackout-card.webp` is a 1600 × 1200 crop of the original `blackout` master. The unmodified vanilla `build-covers.mjs` removes its letterbox; `cut-registry-cover.mjs` frames the shield tank at the left for the registry’s 4:3 card. It is the first manifest gallery entry, followed by all four gameplay screenshots. No new image generation was needed.
