@@ -1,13 +1,13 @@
 {
   "format": "steel-tide-mod",
-  "v": 1,
+  "v": 2,
   "id": "fg-rusted-league",
   "name": [
     "FG Rusted League",
     "FG 铁锈联盟"
   ],
-  "version": "0.2.0",
-  "minGame": "0.8.8",
+  "version": "0.3.0",
+  "minGame": "0.8.14",
   "author": "空中之主 (art by 有人, 基卡 and SS元首); port by Steel Tide",
   "description": [
     "The whole army redrawn in black and acid green — Grizzly and Prism tanks, Kirov airships, Patriot batteries — and the GF plugin's carriers, dreadnoughts, sky fortresses, a Mirage tank that hides as a tree and a hero tank that ranks itself up.",
@@ -35,7 +35,7 @@
       "vision": 12,
       "fw": 3,
       "fh": 3,
-      "power": 20,
+      "power": 60,
       "metalRate": 1.75,
       "weapons": [
         {
@@ -60,10 +60,10 @@
         "fg-rusted-league-builder"
       ],
       "builtBy": [
-        "engineer",
         "fg-rusted-league-builder",
         "fg-rusted-league-rocket-truck"
-      ]
+      ],
+      "isHQ": true
     },
     {
       "id": "fg-rusted-league-army-base",
@@ -10202,5 +10202,17 @@
   ],
   "maps": [
     "maps/proving-ground.steel-tide-map"
+  ],
+  "factions": [
+    {
+      "id": "fg-rusted-league-league",
+      "name": [
+        "FG Rusted League",
+        "FG 铁锈联盟",
+        "FG 러스티드 리그"
+      ],
+      "headquarters": "fg-rusted-league-command",
+      "builder": "fg-rusted-league-builder"
+    }
   ]
 }

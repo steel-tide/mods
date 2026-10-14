@@ -18,6 +18,7 @@ This package prices things in three resources: credits, 柴油 (diesel) and 补�
 (supply). Steel Tide has one, so the three are folded into one figure first.
 """
 import hashlib
+from copy import deepcopy
 import json
 import math
 import os
@@ -1514,6 +1515,69 @@ def convert():
     return defs
 
 
+def faction_setup(defs):
+    """Adapt the original's city/infected picker to Steel Tide's base building.
+
+    The original places structures through scripted buttons. These support
+    variants reuse its own officer, brute and nest art for mobile construction
+    and a deposit-independent infected headquarters.
+    """
+    prefix = f"{MOD_ID}-"
+    by_id = {d["id"]: d for d in defs}
+    dead = {prefix + r[1] for r in ROSTER if r[4].get("kind") == Z}
+    engineer_id, carrier_id, colony_id = (prefix + s for s in ("police-engineer", "spk-carrier", "spk-colony"))
+    infected = dead | {prefix + "sloth-nest", carrier_id, colony_id}
+    police_buildings = [d["id"] for d in defs if d["kind"] == B and d["id"] not in infected and "upgradeOf" not in d]
+    for d in defs:
+        if d["kind"] == B:
+            d["builtBy"] = [carrier_id if d["id"] in infected else engineer_id]
+        if d["id"] in dead:
+            d["power"] = 0  # the dead have no electrical grid
+            d["aiWeight"] = 1
+    for suffix in ("precinct", "precinct-2"):
+        hq = by_id[prefix + suffix]
+        hq.update(isHQ=True, power=10, metalRate=0.5)
+        hq["produces"] = list(dict.fromkeys([engineer_id] + hq["produces"]))
+    nest = by_id[prefix + "sloth-nest"]
+    nest["metalRate"] = 1.4
+
+    engineer = deepcopy(by_id[prefix + "traffic-officer"])
+    engineer.update(id=engineer_id,
+                    name=["Police Engineer", "警用工程员", "경찰 공병"],
+                    desc=["A police construction specialist with a service rifle.", "配备制式步枪的警用工程人员。", "제식 소총을 갖춘 경찰 건설 전문가."],
+                    cost=120, hp=160, buildTime=10, speed=52, buildRate=30, reach=46,
+                    builds=police_buildings, producedBy=[prefix + "precinct", prefix + "precinct-2"], aiWeight=0)
+    carrier = deepcopy(by_id[prefix + "brute"])
+    carrier.update(id=carrier_id,
+                   name=["SPK Carrier", "SPK 携巢者", "SPK 둥지 운반자"],
+                   desc=["An infected host carrying the beginnings of a colony.", "携带巢群雏体的感染宿主。", "군락의 싹을 품은 감염 숙주."],
+                   cost=120, hp=180, buildTime=10, speed=52, buildRate=30, reach=46,
+                   builds=[colony_id, nest["id"]], producedBy=[colony_id], aiWeight=0)
+    colony = dict(id=colony_id,
+                  name=["SPK Colony", "SPK 母巢", "SPK 군락"],
+                  desc=["A living heart of the SPK infection, surrounded by hosts and growing nests.", "SPK 感染的活体核心，宿主与滋长的巢穴环绕四周。", "숙주와 자라나는 둥지에 둘러싸인 SPK 감염의 살아 있는 심장."],
+                  kind=B, tier=1, cost=1500, buildTime=60, hp=3000, armor="structure",
+                  vision=10, fw=3, fh=3, isHQ=True, power=0, metalRate=0.5,
+                  sprite=nest["sprite"], regen=4.5, builtBy=[carrier_id], produces=[carrier_id])
+    # Idempotent so the same helper can migrate an existing manifest without
+    # re-cutting its media, as well as finish a fresh conversion.
+    added = {engineer_id, carrier_id, colony_id}
+    defs[:] = [d for d in defs if d["id"] not in added] + [colony, engineer, carrier]
+    for d in defs:
+        for rule in d.get("rules", []):
+            killed_by = rule.get("if", {}).get("killedBy", [])
+            if prefix + "brute" in killed_by and carrier_id not in killed_by:
+                killed_by.append(carrier_id)
+    return [
+        dict(id=prefix + "city", name=["Adolon City Authority", "阿多隆市政当局", "아돌론 시 당국"],
+             headquarters=prefix + "precinct", builder=engineer_id,
+             roster=[d["id"] for d in defs if d["id"] not in infected]),
+        dict(id=prefix + "infected", name=["SPK Infected", "SPK 感染者", "SPK 감염자"],
+             headquarters=colony_id, builder=carrier_id,
+             roster=[d["id"] for d in defs if d["id"] in infected]),
+    ]
+
+
 def compare_versions(a, b):
     """positive when `a` is newer, as the game compares them"""
     pa = [int(x) if x.isdigit() else 0 for x in re.split(r"[.+-]", str(a))]
@@ -1851,23 +1915,24 @@ def main():
             dump(n)
         return
     defs = convert()
+    factions = faction_setup(defs)
     write_sounds()
     desc_en = ("The city police and the troops that come to their aid, their cruisers, tanks and helicopters, "
                "and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill.")
     desc_zh = "都市警力与前来增援的部队、他们的警车、坦克和直升机，以及他们要对付的死者——从你亲手放置的巢穴中繁殖，被它们杀死的警察也会尸变。"
     manifest = {
         "format": "steel-tide-mod",
-        "v": 1,
+        "v": 2,
         "id": MOD_ID,
         "name": ["Adolence: City of Sin", "Adolence·罪恶之都"],
-        "version": "1.1.0",
-        # the first game with mod behaviour: the dead rising, the nests, the crews (`rules`)
-        "minGame": "0.8.7",
+        "version": "1.2.0",
+        "minGame": "0.8.14",  # format 2: selectable factions and mod headquarters
         "author": "自然常数也有人用? and the Adolence team; port by Steel Tide",
         "description": [desc_en, desc_zh],
         "homepage": "https://github.com/steel-tide/mods/tree/main/mods/adolence",
         "license": "LicenseRef-Adolence",
         "defs": defs,
+        "factions": factions,
         "sprites": SHEETS,
         "sounds": [{"key": k, "file": f} for k, f in dict(SOUND_JOBS.values()).items()],
         "screenshots": [],

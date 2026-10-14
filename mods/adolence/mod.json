@@ -1,13 +1,13 @@
 {
   "format": "steel-tide-mod",
-  "v": 1,
+  "v": 2,
   "id": "adolence",
   "name": [
     "Adolence: City of Sin",
     "Adolence·罪恶之都"
   ],
-  "version": "1.1.1",
-  "minGame": "0.8.7",
+  "version": "1.2.0",
+  "minGame": "0.8.14",
   "author": "自然常数也有人用? and the Adolence team; port by Steel Tide",
   "description": [
     "The city police and the troops that come to their aid, their cruisers, tanks and helicopters, and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill.",
@@ -35,9 +35,10 @@
       "vision": 12,
       "fw": 3,
       "fh": 3,
-      "power": -8,
+      "power": 10,
       "sprite": "u.adolence-precinct",
       "produces": [
+        "adolence-police-engineer",
         "adolence-officer-pistol",
         "adolence-traffic-officer",
         "adolence-armed-police-pistol",
@@ -47,7 +48,12 @@
         "adolence-armoured-car",
         "adolence-amphibious-car",
         "adolence-mortar"
-      ]
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
+      ],
+      "isHQ": true,
+      "metalRate": 0.5
     },
     {
       "id": "adolence-precinct-2",
@@ -68,12 +74,13 @@
       "vision": 14,
       "fw": 3,
       "fh": 3,
-      "power": -10,
+      "power": 10,
       "upgradeOf": "adolence-precinct",
       "upgradeCost": 500,
       "upgradeTime": 15,
       "sprite": "u.adolence-precinct",
       "produces": [
+        "adolence-police-engineer",
         "adolence-officer-pistol",
         "adolence-traffic-officer",
         "adolence-armed-police-pistol",
@@ -122,7 +129,12 @@
         "adolence-m1a1-clickbait",
         "adolence-heavy-mg",
         "adolence-extremism"
-      ]
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
+      ],
+      "isHQ": true,
+      "metalRate": 0.5
     },
     {
       "id": "adolence-outpost",
@@ -167,6 +179,9 @@
         "adolence-zhongzhou-rifleman",
         "adolence-zhongzhou-sniper",
         "adolence-purge-gunner"
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
       ]
     },
     {
@@ -199,6 +214,9 @@
         "adolence-comms-van",
         "adolence-heavy-escort",
         "adolence-ambush-car"
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
       ]
     },
     {
@@ -256,6 +274,9 @@
         "adolence-amphibious-car",
         "adolence-command-van",
         "adolence-heavy-escort"
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
       ]
     },
     {
@@ -281,6 +302,9 @@
       "sprite": "u.adolence-helipad",
       "produces": [
         "adolence-police-heli"
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
       ]
     },
     {
@@ -315,6 +339,9 @@
         "adolence-fighter-u9",
         "adolence-heavy-gunship",
         "adolence-fighter-a2"
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
       ]
     },
     {
@@ -343,6 +370,9 @@
         "adolence-light-ifv",
         "adolence-heavy-ifv",
         "adolence-drone-carrier"
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
       ]
     },
     {
@@ -365,7 +395,10 @@
       "fw": 3,
       "fh": 3,
       "power": 25,
-      "sprite": "u.adolence-solar"
+      "sprite": "u.adolence-solar",
+      "builtBy": [
+        "adolence-police-engineer"
+      ]
     },
     {
       "id": "adolence-solar-2",
@@ -390,7 +423,10 @@
       "upgradeOf": "adolence-solar",
       "upgradeCost": 620,
       "upgradeTime": 30,
-      "sprite": "u.adolence-solar-2"
+      "sprite": "u.adolence-solar-2",
+      "builtBy": [
+        "adolence-police-engineer"
+      ]
     },
     {
       "id": "adolence-supply-cache",
@@ -414,7 +450,10 @@
       "power": -4,
       "metalRate": 1.4,
       "needsDeposit": true,
-      "sprite": "u.adolence-supply-cache"
+      "sprite": "u.adolence-supply-cache",
+      "builtBy": [
+        "adolence-police-engineer"
+      ]
     },
     {
       "id": "adolence-supply-cache-2",
@@ -440,7 +479,10 @@
       "upgradeOf": "adolence-supply-cache",
       "upgradeCost": 1200,
       "upgradeTime": 24,
-      "sprite": "u.adolence-supply-cache-2"
+      "sprite": "u.adolence-supply-cache-2",
+      "builtBy": [
+        "adolence-police-engineer"
+      ]
     },
     {
       "id": "adolence-mg-tower",
@@ -489,6 +531,9 @@
           "on": "turret",
           "when": "firing"
         }
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
       ]
     },
     {
@@ -511,7 +556,10 @@
       "fw": 1,
       "fh": 1,
       "power": 0,
-      "sprite": "u.adolence-barricade"
+      "sprite": "u.adolence-barricade",
+      "builtBy": [
+        "adolence-police-engineer"
+      ]
     },
     {
       "id": "adolence-sloth-nest",
@@ -594,7 +642,11 @@
             }
           }
         }
-      ]
+      ],
+      "builtBy": [
+        "adolence-spk-carrier"
+      ],
+      "metalRate": 1.4
     },
     {
       "id": "adolence-officer-pistol",
@@ -679,7 +731,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -773,7 +826,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -869,7 +923,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -965,7 +1020,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1061,7 +1117,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1157,7 +1214,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1252,7 +1310,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1348,7 +1407,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1443,7 +1503,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1538,7 +1599,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1633,7 +1695,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1725,7 +1788,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1820,7 +1884,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -1915,7 +1980,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -2029,7 +2095,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -2124,7 +2191,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -2222,7 +2290,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -2317,7 +2386,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -2413,7 +2483,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -2510,7 +2581,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -2607,7 +2679,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -2707,7 +2780,8 @@
               "adolence-sin-of-wrath",
               "adolence-turned-anti-materiel",
               "adolence-turned-officer",
-              "adolence-zombie"
+              "adolence-zombie",
+              "adolence-spk-carrier"
             ]
           },
           "do": {
@@ -5691,7 +5765,7 @@
         "len": 1.6
       },
       "sprite": "u.adolence-zombie",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -5718,7 +5792,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-brute",
@@ -5765,7 +5840,7 @@
         "len": 1.6
       },
       "sprite": "u.adolence-brute",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -5792,7 +5867,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-bloater",
@@ -5839,7 +5915,7 @@
         "len": 0
       },
       "sprite": "u.adolence-bloater",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -5867,7 +5943,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-prisoner",
@@ -5914,7 +5991,7 @@
         "len": 1.6
       },
       "sprite": "u.adolence-prisoner",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -5942,7 +6019,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-rager",
@@ -5989,7 +6067,7 @@
         "len": 0
       },
       "sprite": "u.adolence-rager",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6017,7 +6095,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-burster",
@@ -6064,7 +6143,7 @@
         "len": 0
       },
       "sprite": "u.adolence-burster",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6091,7 +6170,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-imploder",
@@ -6138,7 +6218,7 @@
         "len": 0
       },
       "sprite": "u.adolence-imploder",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6166,7 +6246,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-turned-officer",
@@ -6229,7 +6310,7 @@
         "len": 1.6
       },
       "sprite": "u.adolence-turned-officer",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6256,7 +6337,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-turned-anti-materiel",
@@ -6321,7 +6403,7 @@
         "len": 12.5
       },
       "sprite": "u.adolence-turned-anti-materiel",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6348,7 +6430,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-road-rage",
@@ -6395,7 +6478,7 @@
         "len": 0
       },
       "sprite": "u.adolence-road-rage",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6423,7 +6506,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-acid-mass",
@@ -6474,7 +6558,7 @@
         "len": 6.2
       },
       "sprite": "u.adolence-acid-mass",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6502,7 +6586,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-gloater",
@@ -6548,7 +6633,7 @@
         "len": 14.1
       },
       "sprite": "u.adolence-gloater",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [],
       "regen": 0.4,
       "rules": [
@@ -6574,7 +6659,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-flying-husk",
@@ -6622,7 +6708,7 @@
         "len": 0
       },
       "sprite": "u.adolence-flying-husk",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6649,7 +6735,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-gorilla",
@@ -6698,7 +6785,7 @@
         "len": 10.9
       },
       "sprite": "u.adolence-gorilla",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6726,7 +6813,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-no-longer-human",
@@ -6774,7 +6862,7 @@
         "len": 1.6
       },
       "sprite": "u.adolence-no-longer-human",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6802,7 +6890,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-sin-of-wrath",
@@ -6850,7 +6939,7 @@
         "len": 7.8
       },
       "sprite": "u.adolence-sin-of-wrath",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6878,7 +6967,8 @@
             "heal": 5.2
           }
         }
-      ]
+      ],
+      "power": 0
     },
     {
       "id": "adolence-sin-of-gluttony",
@@ -6925,7 +7015,7 @@
         "len": 20.3
       },
       "sprite": "u.adolence-sin-of-gluttony",
-      "aiWeight": 0,
+      "aiWeight": 1,
       "producedBy": [
         "adolence-sloth-nest"
       ],
@@ -6953,6 +7043,234 @@
             "heal": 5.2
           }
         }
+      ],
+      "power": 0
+    },
+    {
+      "id": "adolence-spk-colony",
+      "name": [
+        "SPK Colony",
+        "SPK 母巢",
+        "SPK 군락"
+      ],
+      "desc": [
+        "A living heart of the SPK infection, surrounded by hosts and growing nests.",
+        "SPK 感染的活体核心，宿主与滋长的巢穴环绕四周。",
+        "숙주와 자라나는 둥지에 둘러싸인 SPK 감염의 살아 있는 심장."
+      ],
+      "kind": "building",
+      "tier": 1,
+      "cost": 1500,
+      "buildTime": 60,
+      "hp": 3000,
+      "armor": "structure",
+      "vision": 10,
+      "fw": 3,
+      "fh": 3,
+      "isHQ": true,
+      "power": 0,
+      "metalRate": 0.5,
+      "sprite": "u.adolence-sloth-nest",
+      "regen": 4.5,
+      "builtBy": [
+        "adolence-spk-carrier"
+      ],
+      "produces": [
+        "adolence-spk-carrier"
+      ]
+    },
+    {
+      "id": "adolence-police-engineer",
+      "name": [
+        "Police Engineer",
+        "警用工程员",
+        "경찰 공병"
+      ],
+      "desc": [
+        "A police construction specialist with a service rifle.",
+        "配备制式步枪的警用工程人员。",
+        "제식 소총을 갖춘 경찰 건설 전문가."
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 120,
+      "buildTime": 10,
+      "hp": 160,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 52,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.34,
+          "range": 4.4,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 10.7
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-traffic-officer",
+      "aiWeight": 0,
+      "producedBy": [
+        "adolence-precinct",
+        "adolence-precinct-2"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "buildRate": 30,
+      "reach": 46,
+      "builds": [
+        "adolence-precinct",
+        "adolence-outpost",
+        "adolence-garage",
+        "adolence-helipad",
+        "adolence-coast-guard-base",
+        "adolence-solar",
+        "adolence-supply-cache",
+        "adolence-mg-tower",
+        "adolence-barricade"
+      ]
+    },
+    {
+      "id": "adolence-spk-carrier",
+      "name": [
+        "SPK Carrier",
+        "SPK 携巢者",
+        "SPK 둥지 운반자"
+      ],
+      "desc": [
+        "An infected host carrying the beginnings of a colony.",
+        "携带巢群雏体的感染宿主。",
+        "군락의 싹을 품은 감염 숙주."
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 120,
+      "buildTime": 10,
+      "hp": 180,
+      "pop": 1,
+      "armor": "light",
+      "vision": 6,
+      "radius": 9,
+      "speed": 52,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "2",
+          "cls": "autocannon",
+          "dmg": 15.0,
+          "reload": 0.67,
+          "range": 0.6,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 900,
+          "turret": false,
+          "muzzleOffset": 10.1
+        }
+      ],
+      "body": {
+        "r": 7.0,
+        "len": 1.6
+      },
+      "sprite": "u.adolence-brute",
+      "aiWeight": 0,
+      "producedBy": [
+        "adolence-spk-colony"
+      ],
+      "rules": [
+        {
+          "on": "kill",
+          "cooldown": 20,
+          "do": {
+            "buff": {
+              "damage": 1.4,
+              "reload": 0.7,
+              "for": 8
+            }
+          }
+        },
+        {
+          "every": 2,
+          "if": {
+            "not": {
+              "hurtWithin": 6
+            }
+          },
+          "do": {
+            "heal": 5.2
+          }
+        }
+      ],
+      "power": 0,
+      "buildRate": 30,
+      "reach": 46,
+      "builds": [
+        "adolence-spk-colony",
+        "adolence-sloth-nest"
       ]
     }
   ],
@@ -8020,5 +8338,130 @@
   ],
   "maps": [
     "maps/city-of-sin.steel-tide-map"
+  ],
+  "factions": [
+    {
+      "id": "adolence-city",
+      "name": [
+        "Adolon City Authority",
+        "阿多隆市政当局",
+        "아돌론 시 당국"
+      ],
+      "headquarters": "adolence-precinct",
+      "builder": "adolence-police-engineer",
+      "roster": [
+        "adolence-precinct",
+        "adolence-precinct-2",
+        "adolence-outpost",
+        "adolence-garage",
+        "adolence-arsenal",
+        "adolence-helipad",
+        "adolence-airfield",
+        "adolence-coast-guard-base",
+        "adolence-solar",
+        "adolence-solar-2",
+        "adolence-supply-cache",
+        "adolence-supply-cache-2",
+        "adolence-mg-tower",
+        "adolence-barricade",
+        "adolence-officer-pistol",
+        "adolence-officer-rifle",
+        "adolence-traffic-officer",
+        "adolence-armed-police-pistol",
+        "adolence-armed-police-rifle",
+        "adolence-swat-sea",
+        "adolence-swat-field",
+        "adolence-army-woodland",
+        "adolence-army-marksman",
+        "adolence-guard-rifleman",
+        "adolence-guard-gunner",
+        "adolence-guard-flamethrower",
+        "adolence-military-police",
+        "adolence-taskforce-rifleman",
+        "adolence-taskforce-grenadier",
+        "adolence-taskforce-anti-materiel",
+        "adolence-taskforce-rocketeer",
+        "adolence-taskforce-gunner",
+        "adolence-taskforce-shotgunner",
+        "adolence-zhongzhou-rifleman",
+        "adolence-zhongzhou-sniper",
+        "adolence-purge-gunner",
+        "adolence-sedan-black",
+        "adolence-cruiser",
+        "adolence-armoured-car",
+        "adolence-amphibious-car",
+        "adolence-command-van",
+        "adolence-comms-van",
+        "adolence-heavy-escort",
+        "adolence-ambush-car",
+        "adolence-mortar",
+        "adolence-heavy-mg",
+        "adolence-walker-rifle",
+        "adolence-walker-grenade",
+        "adolence-light-tank-lmg",
+        "adolence-light-tank-mg",
+        "adolence-light-tank",
+        "adolence-light-tank-missile",
+        "adolence-light-tank-flame",
+        "adolence-light-tank-sniper",
+        "adolence-heavy-tank",
+        "adolence-scout-car",
+        "adolence-assault-car",
+        "adolence-utility-vehicle",
+        "adolence-utility-vehicle-mp",
+        "adolence-transport-truck",
+        "adolence-m977",
+        "adolence-m1128",
+        "adolence-m1a2",
+        "adolence-m1a2-tusk",
+        "adolence-m1a2-sepv3",
+        "adolence-m1a1-clickbait",
+        "adolence-light-ifv",
+        "adolence-heavy-ifv",
+        "adolence-extremism",
+        "adolence-police-heli",
+        "adolence-light-gunship",
+        "adolence-heavy-gunship",
+        "adolence-bomber",
+        "adolence-transport-heli",
+        "adolence-fighter-u9",
+        "adolence-fighter-a2",
+        "adolence-scout-boat",
+        "adolence-drone-carrier",
+        "adolence-police-engineer"
+      ]
+    },
+    {
+      "id": "adolence-infected",
+      "name": [
+        "SPK Infected",
+        "SPK 感染者",
+        "SPK 감염자"
+      ],
+      "headquarters": "adolence-spk-colony",
+      "builder": "adolence-spk-carrier",
+      "roster": [
+        "adolence-sloth-nest",
+        "adolence-zombie",
+        "adolence-brute",
+        "adolence-bloater",
+        "adolence-prisoner",
+        "adolence-rager",
+        "adolence-burster",
+        "adolence-imploder",
+        "adolence-turned-officer",
+        "adolence-turned-anti-materiel",
+        "adolence-road-rage",
+        "adolence-acid-mass",
+        "adolence-gloater",
+        "adolence-flying-husk",
+        "adolence-gorilla",
+        "adolence-no-longer-human",
+        "adolence-sin-of-wrath",
+        "adolence-sin-of-gluttony",
+        "adolence-spk-colony",
+        "adolence-spk-carrier"
+      ]
+    }
   ]
 }

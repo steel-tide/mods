@@ -4,7 +4,7 @@
 FG Rusted League is not a mod folder but a whole Rusted Warfare 1.13.3 build with its art
 redrawn — the builder, the tanks, the factories, the turrets, every hull in a black and
 acid-green livery with a Red Alert roster's names — and a plugin of its own units, `GF插件`,
-in `assets/units/ GF`. The unpacked package is at ../../rusted-warfare-mods/skycraft
+in `assets/units/ GF`. The unpacked package is at ../../rusted-warfare-mods/fg-rusted-league
 (git-ignored). This converts the curated roster below into defs, composites the art into
 sheets, and writes mod.json.
 
@@ -45,14 +45,14 @@ from PIL import Image, ImageChops
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
-SKY = os.path.join(REPO, "rusted-warfare-mods", "skycraft")
+SKY = os.path.join(REPO, "rusted-warfare-mods", "fg-rusted-league")
 UNITS = os.path.join(SKY, "assets", "units")
 GF = os.path.join(UNITS, " GF")
 RES = os.path.join(SKY, "res", "drawable")
 STOCK = os.path.join(REPO, "rusted-warfare")
 TRANS = os.path.join(SKY, "assets", "translations", "Strings_zh_cn.properties")
 MOD_ID = "fg-rusted-league"
-MIN_GAME = "0.8.8"  # the first game that reads `turretMounts` and flies a carrier's `wing` (0.8.7 brought mod behaviour)
+MIN_GAME = "0.8.14"  # format 2: selectable factions and mod headquarters
 DRY = "--dry" in sys.argv
 NO_MEDIA = "--no-media" in sys.argv
 OUT = os.path.abspath(sys.argv[sys.argv.index("--out") + 1]) if "--out" in sys.argv else HERE
@@ -1795,13 +1795,25 @@ def convert():
     for d in defs:
         if d["kind"] == "building" and "upgradeOf" not in d:
             who = [f"{MOD_ID}-{u}" for u, blds in BUILDERS.items() if d["id"][len(MOD_ID) + 1:] in blds]
-            d["builtBy"] = (["engineer"] if d["id"] == f"{MOD_ID}-command" else []) + who
+            d["builtBy"] = who
     order = {"building": 0, "unit": 1}
     defs.sort(key=lambda d: order[d["kind"]])
     return defs
 
 
 CARRIER_IDS = {f"{MOD_ID}-{suffix}" for suffix in CARRIER_LEVELS.values()}
+
+
+def faction_setup(defs):
+    """Make the League's command/builder pair a self-contained opening."""
+    command = next(d for d in defs if d["id"] == f"{MOD_ID}-command")
+    command["isHQ"] = True
+    # The nuclear generator is the League's only plant. The starter grid must
+    # carry mines and production until that 3790-metal investment is possible.
+    command["power"] = 60
+    command["builtBy"] = [f"{MOD_ID}-builder", f"{MOD_ID}-rocket-truck"]
+    return [{"id": f"{MOD_ID}-league", "name": ["FG Rusted League", "FG 铁锈联盟", "FG 러스티드 리그"],
+             "headquarters": command["id"], "builder": f"{MOD_ID}-builder"}]
 
 
 def behaviour(defs, by_id, alias):
@@ -1900,31 +1912,35 @@ def main():
             dump(n)
         return
     defs = convert()
+    factions = faction_setup(defs)
     desc_en = ("The whole army redrawn in black and acid green — Grizzly and Prism tanks, Kirov airships, Patriot batteries — "
                "and the GF plugin's carriers, dreadnoughts, sky fortresses, a Mirage tank that hides as a tree and a hero tank "
                "that ranks itself up.")
     desc_zh = "整套重绘的军队——灰熊、光棱坦克、基洛夫空艇、爱国者导弹——以及 GF 插件的航母、无畏战舰、空中堡垒、会变成树的幻影坦克和能自己升级的英雄坦克。"
     manifest = {
         "format": "steel-tide-mod",
-        "v": 1,
+        "v": 2,
         "id": MOD_ID,
         "name": ["FG Rusted League", "FG 铁锈联盟"],
-        "version": "0.2.0",
+        "version": "0.3.0",
         "minGame": MIN_GAME,
         "author": "空中之主 (art by 有人, 基卡 and SS元首); port by Steel Tide",
         "description": [desc_en, desc_zh],
         "homepage": "https://github.com/steel-tide/mods/tree/main/mods/fg-rusted-league",
         "license": "LicenseRef-FG-Rusted-League",
         "defs": defs,
+        "factions": factions,
         "sprites": SHEETS,
         "screenshots": [],
     }
     old = {}
     if os.path.exists(os.path.join(HERE, "mod.json")):
         old = json.load(open(os.path.join(HERE, "mod.json"), encoding="utf-8"))
-        # the version is bumped by hand in mod.json, and kept here; a manifest from before the rename is not
-        if old.get("id") == MOD_ID:
-            manifest["version"] = old.get("version", manifest["version"])
+        # Keep a newer hand-bumped version, never downgrade below this script.
+        def version_parts(value):
+            return tuple(int(n) if n.isdigit() else 0 for n in re.split(r"[.+-]", value))
+        if old.get("id") == MOD_ID and version_parts(old.get("version", "0")) > version_parts(manifest["version"]):
+            manifest["version"] = old["version"]
         manifest["screenshots"] = old.get("screenshots", [])
     if not manifest["screenshots"]:
         shots_dir = os.path.join(HERE, "screenshots")

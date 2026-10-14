@@ -10,16 +10,38 @@ it makes, with three currencies, a day-night cycle, scripted supply drops and a
 faction picker. What comes across is the roster and the art: the police, the
 troops that come to their aid, their vehicles, aircraft and boats, and the
 dead. So does the part of the scripting the game's mod rules can carry (see
-The dead, below). The rest stays behind: the currencies, the supply drops,
-the faction picker, and the infantry's own orders.
+The dead, below). The original's city/infected choice is now the game's faction
+selector. The currencies, supply drops, difficulty scripts and infantry's own
+orders stay behind.
+
+## Choose a side
+
+Enable the mod, then choose a faction for each seat in Conquest or Breakthrough:
+
+| faction | Conquest opening | construction and economy |
+| --- | --- | --- |
+| Adolon City Authority | Joint Precinct and two Police Engineers | Engineers construct police buildings; Solar Arrays power the force and Supply Caches extract metal. |
+| SPK Infected | SPK Colony and two SPK Carriers | Carriers raise colonies and Sin of Sloth nests. Nests extract metal from deposits while breeding the dead. The infected use no electrical power. |
+
+Each side has its own roster, headquarters and replacement builders. Both HQs
+provide territory, production slots and a small metal income; the upgraded VD
+Precinct keeps those functions and can still train engineers. No vanilla HQ or
+engineer is needed. Faction selection requires Steel Tide 0.8.14 with format 2
+support.
+
+The Police Engineer, SPK Carrier and SPK Colony adapt the original's scripted
+construction to this game's mobile builders. They reuse the port's Traffic
+Officer, Brute and Sin of Sloth art respectively. The colony stands on ordinary
+land; its nests need deposits. These additions are in `port-rw.py`, so a fresh
+conversion preserves the faction setup.
 
 ## What is in it
 
-Fifteen buildings, all placed by the engineer:
+Sixteen buildings, placed by their side's construction units:
 
 | building | line | what it does |
 | --- | --- | --- |
-| Joint Precinct → VD Joint Precinct | command | trains the basic police kit; the VD stage has the whole garrison on call |
+| Joint Precinct → VD Joint Precinct | command | city headquarters; trains engineers and the police kit; the VD stage has the whole garrison on call |
 | Police Outpost | infantry | every foot unit, from patrol officers to the task force; the Zhongzhou squad once an arsenal stands |
 | Police Garage → Police Arsenal | vehicles | cruisers and armoured cars; the arsenal adds the military vehicles, the black-steel tanks, the Abrams and the Stryker |
 | Police Helipad → Military Airfield | air | the police helicopter; then gunships, fighters, bomber and transport |
@@ -28,16 +50,17 @@ Fifteen buildings, all placed by the engineer:
 | Supply Cache → II | metal | an extractor on a deposit, 1.4 then 3.0 a second |
 | MG Tower | defence | a machine gun on a street mount, fires at aircraft |
 | Barricade | defence | a 1×1 block of steel to funnel the horde |
-| Sin of Sloth | the dead | a nest on a deposit; it trains every zombie |
+| SPK Colony | infected command | headquarters; breeds SPK Carriers |
+| Sin of Sloth | the dead | a nest on a deposit; extracts 1.4 metal a second and trains the dead |
 
 The game judges a production building by what it turns out, so the coast
 guard base, with a boat on its list, is a naval yard like the game's own: the
-engineer lays it on the water with a shore beside it, and it launches onto
+Police Engineer lays it on the water with a shore beside it, and it launches onto
 the water.
 
-Eighty-one units: 22 kinds of infantry, 33 vehicles, 7 aircraft, 2 boats and
-17 of the dead. The dead were a spawned enemy in the original. Here anyone can
-raise them from a nest, and they breed on their own.
+Eighty-three units: 23 kinds of infantry including the Police Engineer,
+33 vehicles, 7 aircraft, 2 boats and 18 of the dead including the SPK Carrier.
+The infected raise their forces from nests, and the nests also breed on their own.
 
 ## The dead
 
@@ -68,7 +91,8 @@ west bank of Adolon, a road grid with the police dug in along the middle
 avenue, their coast guard base in a pond behind the yards, the dead already
 across the avenue and two nests breeding more in the rubble.
 Seat one opens on the west and gets the police, seat two on the east and gets
-the dead. With the mod on, the map is a card in the Conquest setup and the
+the dead. Choose City Authority for seat one and SPK Infected for seat two to
+match those forces with their own headquarters. With the mod on, the map is a card in the Conquest setup and the
 lobby beside your own map; pick it and it plays exactly as laid. It is drawn by
 `make-map.py` rather than in the Map Editor, so it can be regenerated with the
 roster; the editor opens it like any map, and with the mod on, the mod's units

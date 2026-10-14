@@ -18,10 +18,17 @@ centre could be switched to (its art is Rusted Warfare's own).
 
 ## What is in it
 
-A League base starts from the **League Command**, which the engineer places —
-or the Multi-Role Rocket Truck, which carries one in the original. It trains the
-League's **Builder**, and the builder places everything else; the Construction
-Ship and the Supply Ship place the naval base and defences from the water.
+Enable the mod, then choose **FG Rusted League** for a seat in the Conquest or
+Breakthrough setup. A Conquest base starts with a **League Command** and two
+**Builders**. The command supplies territory and production slots, trains more
+builders, and can be rebuilt by a Builder or Multi-Role Rocket Truck. No vanilla
+HQ or engineer is needed. The Construction Ship and Supply Ship place the naval
+base and defences from the water.
+
+The command supplies 60 power for the opening mines and factories until the
+League can afford its nuclear generator. The faction uses the League roster;
+the original bug toggle remains outside this port, as described above.
+Faction selection requires Steel Tide 0.8.14 with format 2 support.
 
 Some of its units build others, as they do in the original: the Lord of the Sky
 and the Battle Carrier launch helicopters, jets and gunships (and the Lord of
@@ -36,7 +43,7 @@ its orders; each unit it builds is launched beside it, wherever it has got to.
 
 | building | what it does |
 | --- | --- |
-| League Command | trains the builder, guns down anything in range, earns 1.75 a second, +20 power |
+| League Command | headquarters; trains the builder, guns down anything in range, earns 1.75 a second, +60 power |
 | Army Base → II | the tanks and vehicles |
 | Air Force Base → II | helicopters and jets |
 | Naval Base → II | the fleet, and the flying Aircraft Carrier; stands on the water by a shore |
