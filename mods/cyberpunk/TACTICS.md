@@ -10,6 +10,10 @@ Rotate damaged shields out of contact. Shield delay counts time without taking d
 
 Use detector raids to open a route for Wraiths, airlift to bypass long ground corridors, and split naval escorts between sonar and air defense. A mixed formation has practical advantages over repeating one expensive chassis.
 
+## Blackout District
+
+The atlas city blocks use graphite roofs, industrial cladding, copper fittings and cyan windows. Streets, city layouts and destruction retain their ordinary behavior. This district requires Steel Tide 0.8.15; ordinary maps keep their own city appearance.
+
 ## Roster
 
 ### Backstreet Nexus

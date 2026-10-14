@@ -7,6 +7,7 @@ The pipeline invokes the unmodified vanilla scripts from the adjacent Steel Tide
 | Asset | Workbook / source | Vanilla workflow |
 |---|---|---|
 | 77 sprite masters | `PROMPTS.md`, `art/sprites/` | `gen-sprites.mjs`, `openai/gpt-image-2`, high quality |
+| Three Blackout District materials | `TERRAIN-PROMPTS.md`, `art/terrain/` | Same generator and model, 1024 × 1024, Nexus material reference; `cut-terrain.mjs` and vanilla `buildSprites`, 128px world materials at 2× supersampling, WebP q95 |
 | Five four-pose gait studies | `ANIMATION-PROMPTS.md`, `art/gaits/` | Same generator, 2048 × 2048, own body references |
 | Registered walker strips | `compose-animation.mjs`, `art/animations/` | `scripts/lib/frames.mjs`: matte stripping, body registration, premultiplied warping, static-body compositing |
 | Twenty-four building power cycles | `art/stills/`, `art/prepared/` | `paint-glow.mjs`, four frames |
@@ -21,7 +22,9 @@ Audio selection: take 1 for all twelve slots. Raw take 2 is retained as an alter
 
 Transparency: matte removal uses the game's flood fill. Explicitly reviewed enclosed background pockets are cleared for open turret rings, split hulls and the naval slip. The effect strips are cropped into equal square cells. Movement strips retain the original torso while the legs move; the original master remains the idle frame. `art/adjustments.json` records measured alignment decisions.
 
-The separate campaign authoring file uses cuts at native baked resolution (1× extra headroom, still 2× supersampling; portable WebP q70) to fit the existing per-mod JSON ceiling. Its 77 images and twelve sounds are embedded; the regular ZIP keeps 2× extra headroom. Both are derived from the same originals.
+Blackout District uses three opaque materials beneath the city's existing geometry: roof panels, facade cladding and paving. The terrain cutter restores the full RGB surface where the unit-oriented generator cleared matte alpha. Each cut is 256 × 256; no faction recoloring, rotation or backdrop removal applies. The city keeps its windows, roof equipment, shadows and damage, including extinguished windows in ruined buildings. The eight atlas maps explicitly select this variant. Its namespaced sheets do not replace vanilla art, and missing textures retain the variant's procedural colors. Cyberpunk 1.3.0 requires the upcoming Steel Tide 0.8.15 support and is not yet published.
+
+The separate campaign authoring file uses unit cuts at native baked resolution (1× extra headroom, still 2× supersampling; portable WebP q70). Its 80 images and twelve sounds are embedded. City materials use the renderer's native 128-texel sampling size at WebP q90 in the portable world; the regular ZIP carries the 256px q95 cuts. The regular ZIP keeps 2× extra headroom for units. Both are derived from the same originals.
 
 Rebuild from the authoring checkout, with its retained masters and scripts:
 
@@ -35,6 +38,7 @@ python3 mods/cyberpunk/generate-animation.py
 bun mods/cyberpunk/cut-art.mjs
 node mods/cyberpunk/compose-animation.mjs
 bun mods/cyberpunk/cut-art.mjs
+bun mods/cyberpunk/cut-terrain.mjs
 python3 mods/cyberpunk/master-sfx.py
 bun mods/cyberpunk/prepare-world-art.mjs
 python3 mods/cyberpunk/build-campaign.py

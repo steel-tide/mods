@@ -7,7 +7,7 @@
     "赛博朋克：断电协议",
     "사이버펑크: 블랙아웃 프로토콜"
   ],
-  "version": "1.2.1",
+  "version": "1.3.0",
   "author": "Steel Tide",
   "description": [
     "An official near-future arsenal: a complete networked war economy, prism weapons, shield formations, covert raids and autonomous carrier wings. Includes the Blackout operation atlas.",
@@ -15,7 +15,7 @@
     "공식 근미래 전력 확장: 네트워크 전쟁 경제, 프리즘 무기, 방벽 진형, 은밀한 습격과 자율 함재기 편대. 블랙아웃 작전 지도집 포함."
   ],
   "license": "PolyForm-Noncommercial-1.0.0",
-  "minGame": "0.8.14",
+  "minGame": "0.8.15",
   "factions": [
     {
       "id": "cyberpunk-blackout",
@@ -5195,6 +5195,39 @@
       "fps": 12,
       "stabilize": false,
       "freezeStatic": false
+    },
+    {
+      "key": "ter.cyberpunk-city-roof",
+      "file": "terrain/ter.cyberpunk-city-roof.webp",
+      "frames": 1,
+      "fw": 128,
+      "fh": 128,
+      "ss": 2,
+      "teams": false,
+      "stripBg": false,
+      "rotated": false
+    },
+    {
+      "key": "ter.cyberpunk-city-wall",
+      "file": "terrain/ter.cyberpunk-city-wall.webp",
+      "frames": 1,
+      "fw": 128,
+      "fh": 128,
+      "ss": 2,
+      "teams": false,
+      "stripBg": false,
+      "rotated": false
+    },
+    {
+      "key": "ter.cyberpunk-city-ground",
+      "file": "terrain/ter.cyberpunk-city-ground.webp",
+      "frames": 1,
+      "fw": 128,
+      "fh": 128,
+      "ss": 2,
+      "teams": false,
+      "stripBg": false,
+      "rotated": false
     }
   ],
   "sounds": [
@@ -5263,5 +5296,25 @@
     "screenshots/02-prism-front.jpg",
     "screenshots/03-undertow.jpg",
     "screenshots/04-blackout.jpg"
+  ],
+  "terrains": [
+    {
+      "id": "cyberpunk-city",
+      "name": [
+        "Blackout District",
+        "断电城区",
+        "블랙아웃 지구"
+      ],
+      "base": "city",
+      "city": {
+        "roof": "#51616c",
+        "wall": "#354553",
+        "window": "#405767",
+        "lamp": "#67eaff",
+        "roofTexture": "ter.cyberpunk-city-roof",
+        "wallTexture": "ter.cyberpunk-city-wall",
+        "groundTexture": "ter.cyberpunk-city-ground"
+      }
+    }
   ]
 }

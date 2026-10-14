@@ -739,6 +739,7 @@ const STRINGS = {
   "menu.desc.replays": ["Recorded matches, played back from their orders.", "已录制的对局，按其指令重放。", "기록된 대전을 그 명령대로 다시 재생합니다."],
   "menu.desc.storeDot": ["Put the Store's blue dot back on this device.", "在这台设备上重新显示商店的蓝点。", "이 기기에서 상점의 파란 점을 다시 표시합니다."],
   "menu.version": ["v{0}", "v{0}", "v{0}"],
+  "menu.publicBeta": ["Public Beta", "公开测试版", "공개 베타"],
   "dev.enabled": ["Developer mode on.", "已开启开发者模式。", "개발자 모드가 켜졌습니다."],
   // the plate that asks for developer mode's passcode, checked online (`ui/devUnlock.ts`)
   "dev.code.label": ["Passcode", "密码", "암호"],
@@ -1570,6 +1571,7 @@ const STRINGS = {
   "mp.browseRefresh": ["Refresh", "刷新", "새로 고침"],
   // {0} seated of {1} seats the match will have
   "mp.browseSeats": ["{0}/{1} seats", "{0}/{1} 席", "좌석 {0}/{1}"],
+  "mp.browseFree": ["Free", "空闲", "비어 있음"],
   "mp.browseUnreachable": ["Unreachable", "无法连接", "연결 불가"],
   "mp.browseFull": ["Full", "已满", "만석"],
   "mp.browseVersion": [
@@ -4362,7 +4364,7 @@ const STRINGS = {
   "unit.mboat.desc": ["Anti-ship missiles on a small hull. Punches far above its weight.", "小艇扛重锤，反舰导弹一击致命。", "작은 선체에 대함 미사일. 체급을 훌쩍 넘는 한 방입니다."],
   "unit.frigate.name": ["Aegis Frigate", "神盾护卫舰", "이지스 호위함"],
   "unit.frigate.shortName": ["Aegis", "神盾", "이지스"],
-  "unit.frigate.desc": ["Fleet air-defense screen with rapid SAMs and a deck gun.", "舰队防空屏障，快速防空导弹加舰炮。", "속사 대공 미사일과 함포를 갖춘 함대 방공 방패입니다."],
+  "unit.frigate.desc": ["Fleet escort with anti-aircraft missiles, sonar, anti-submarine torpedoes and a light deck gun.", "舰队护航舰，配备防空导弹、声呐、反潜鱼雷和轻型舰炮。", "대공 미사일, 소나, 대잠 어뢰와 경함포를 갖춘 함대 호위함입니다."],
   "unit.destroyer.name": ["Orca Destroyer", "虎鲸驱逐舰", "오르카 구축함"],
   "unit.destroyer.shortName": ["Orca", "虎鲸", "오르카"],
   "unit.carrier.name": ["Aircraft Carrier", "航空母舰", "항공모함"],
@@ -4686,6 +4688,9 @@ const STRINGS = {
   // Scenario settings use a modal at every screen size.
   "editor.settings": ["Map settings", "地图设置", "지도 설정"],
   "editor.terrain": ["Terrain", "地形", "지형"],
+  "editor.terrainStyle": ["{0} appearance", "{0}外观", "{0} 외형"],
+  "editor.originalTerrain": ["Original", "原版", "기본"],
+  "editor.unavailableTerrain": ["{0} (unavailable)", "{0}（不可用）", "{0} (사용 불가)"],
   "editor.decor": ["Props", "装饰物", "장식물"],
   "editor.map": ["Scenario", "场景", "시나리오"],
   "editor.tools": ["Drawing tools", "绘图工具", "그리기 도구"],
@@ -5522,7 +5527,7 @@ const DEFS = {
     sprite: "u.mbt",
     turretSprite: "tur.mbt",
     // on the commander's hatch, measured on `tur.mbt`
-    airMount: { sprite: "tur.pintle", x: -3.2, y: 0.5 }
+    airMount: { sprite: "tur.pintle", x: -2.6, y: 0.54 }
   },
   htank: {
     id: "htank",
@@ -5555,9 +5560,9 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { heavy: 1.1, structure: 1 },
       turret: true,
-      muzzleOffset: 41.3,
+      muzzleOffset: 40.47,
       bores: 2,
-      boreSpacing: 10.56,
+      boreSpacing: 11.05,
       splash: 14,
       burst: 2,
       burstDelay: 0.18,
@@ -5566,8 +5571,8 @@ const DEFS = {
     trail: "tread",
     sprite: "u.htank",
     turretSprite: "tur.htank",
-    // on the right-hand hatch, measured on `tur.htank`
-    airMount: { sprite: "tur.pintle", x: 3.1, y: -0.9 }
+    // on the right-hand roof mounting plate, measured on `tur.htank`
+    airMount: { sprite: "tur.pintle", x: 3.58, y: -1.12 }
   },
   td: {
     id: "td",
@@ -5596,9 +5601,13 @@ const DEFS = {
       range: 7,
       projectile: "missile",
       speed: 300,
+      // Twin canisters: concealed pivot (512,916), tips y=202, centres x=364/660;
+      // a 16 × 18 art frame at scale 1.5625. One missile per reload, alternating.
       targets: ["ground", "ship"],
       turret: true,
-      muzzleOffset: 12.6,
+      muzzleOffset: 13.0737,
+      bores: 2,
+      boreSpacing: 7.2266,
       homing: true,
       interceptable: true,
       sound: "missile"
@@ -6329,15 +6338,16 @@ const DEFS = {
     domain: "ship",
     tier: 2,
     ability: "damageControl",
-    cost: 600,
-    buildTime: 30,
-    pop: 2,
-    power: -2,
+    cost: 700,
+    buildTime: 34,
+    pop: 3,
+    power: -3,
     hp: 900,
     armor: "ship",
     speed: 65,
     turnRate: 2.6,
     vision: 10,
+    sonar: 9,
     radius: 13,
     // measured at the ship's display scale (core/metrics.ts): a beam of 42
     // world px, over a tile, so it needs two tiles of water abeam
@@ -6354,7 +6364,7 @@ const DEFS = {
         speed: 420,
         targets: ["ground", "ship"],
         turret: true,
-        muzzleOffset: 17.71875,
+        muzzleOffset: 14.36,
         splash: 10,
         sound: "cannon"
       }),
@@ -6373,17 +6383,36 @@ const DEFS = {
         range: 8.5,
         projectile: "missile",
         speed: 430,
+        // Hatch grid centre: 8.2 art px forward at the hull's 2.625 scale.
         targets: ["air"],
         homing: true,
         vertical: true,
-        muzzleOffset: 15.75,
+        muzzleOffset: 21.525,
         sound: "missile"
+      }),
+      w({
+        // The escort's torpedoes screen submerged threats; surface fighting
+        // stays with its light deck gun and the fleet's offensive ships.
+        id: "torpedo",
+        cls: "torpedo",
+        dmg: 160,
+        reload: 3.2,
+        range: 7,
+        projectile: "torpedo",
+        speed: 150,
+        targets: ["sub"],
+        mult: { sub: 1.9 },
+        homing: true,
+        sound: "torpedo"
       })
     ],
     trail: "wake",
     sprite: "u.frigate",
-    turretSprite: "tur.frigate"
+    turretSprite: "tur.frigate",
+    // Measured forward ring: 422 / 2016 down the 42 px hull sheet.
+    turretMounts: [{ x: 0, y: -12.2 }]
   },
+  // Retained for existing saves and authored scenarios; absent from yard menus.
   destroyer: {
     id: "destroyer",
     kind: "unit",
@@ -6442,7 +6471,8 @@ const DEFS = {
     trail: "wake",
     sprite: "u.destroyer",
     turretSprite: "tur.destroyer",
-    turretMounts: [{ x: 0, y: -5 }]
+    // Measured gun ring: 620 / 1920 down the 48 px hull sheet.
+    turretMounts: [{ x: 0, y: -8.5 }]
   },
   /**
    * The Barracuda hunts ships and nothing else. It carried a warhead of its
@@ -6539,12 +6569,12 @@ const DEFS = {
       speed: 300,
       targets: ["ground", "ship"],
       mult: { heavy: 1, ship: 1.2 },
-      // measured from the ring the gun turns on, not the hull's centre, at the
-      // display scale the gun is drawn at
+      // 1024 × 1536 turret master: pivot y=921.6, tips y=86, barrel centres
+      // x=425/598, mapped to the original 10 × 16 art frame at scale 3.8.
       turret: true,
-      muzzleOffset: 33.6,
+      muzzleOffset: 33.076,
       bores: 2,
-      boreSpacing: 6.6,
+      boreSpacing: 6.42,
       splash: 54,
       arc: true,
       burst: 3,
@@ -6566,14 +6596,14 @@ const DEFS = {
     trail: "wake",
     sprite: "u.btlship",
     turretSprite: "tur.btlship",
-    // measured off the barbettes painted on `u.btlship`, which the code-drawn
-    // hull in gfx/art/ships.ts puts at the same three rows
+    // Rings measured at y=537/788/1739 on the 800 × 2400 master, mapped to
+    // its 62 art-px height. The code-drawn hull uses the same offsets.
     turretMounts: [
-      { x: 0, y: -17, arc: BROADSIDE },
+      { x: 0, y: -17.1275, arc: BROADSIDE },
       // A, over the bow
-      { x: 0, y: -11, arc: BROADSIDE },
+      { x: 0, y: -10.6433, arc: BROADSIDE },
       // B, superfiring behind A
-      { x: 0, y: 14, rest: Math.PI, arc: BROADSIDE }
+      { x: 0, y: 13.9242, rest: Math.PI, arc: BROADSIDE }
       // X, abaft the bridge
     ]
   },
@@ -7900,7 +7930,7 @@ const DEFS = {
     fh: 3,
     weapons: [],
     power: -12,
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "sub", "gator"],
     upgradesTo: "navyard3",
     upgradeCost: 950,
     upgradeTime: 48,
@@ -7927,7 +7957,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator", "btlship", "kraken", "moray", "carrier"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "sub", "gator", "btlship", "kraken", "moray", "carrier"],
     sprite: "u.navyard3",
     sound: "unit-ship"
   },
@@ -8613,6 +8643,55 @@ function rleDecodeInto(s, out) {
   if (oi < len) out.fill(0, oi);
   return out;
 }
+const TERRAIN_BASES = Object.freeze({
+  grass: Terrain.Grass,
+  sand: Terrain.Sand,
+  road: Terrain.Road,
+  mud: Terrain.Mud,
+  marsh: Terrain.Marsh,
+  snow: Terrain.Snow,
+  rubble: Terrain.Rubble,
+  ice: Terrain.Ice,
+  city: Terrain.City
+});
+const VARIANT_ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
+function readTerrainAssignments(value, path, issues) {
+  if (value === void 0) return void 0;
+  const start = issues.length;
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    issues.push({ path, message: "must be an object of terrain base → variant id" });
+    return void 0;
+  }
+  const entries = Object.entries(value);
+  if (entries.length > Object.keys(TERRAIN_BASES).length) {
+    issues.push({ path, message: `at most ${Object.keys(TERRAIN_BASES).length} terrain bindings` });
+    return void 0;
+  }
+  const out = {};
+  for (const [base, id] of entries) {
+    if (!Object.hasOwn(TERRAIN_BASES, base)) issues.push({ path: `${path}.${base}`, message: "unsupported terrain base" });
+    else if (typeof id !== "string" || !VARIANT_ID_RE.test(id) || !id.includes("-"))
+      issues.push({ path: `${path}.${base}`, message: "must be a namespaced terrain variant id, 2–40 characters" });
+    else out[base] = id;
+  }
+  return issues.length === start && entries.length > 0 ? out : void 0;
+}
+let active$1 = Object.freeze([]);
+let byId = /* @__PURE__ */ new Map();
+function replaceTerrainVariants(variants) {
+  active$1 = Object.freeze(variants.map((variant) => Object.freeze({
+    ...variant,
+    name: Object.freeze([...variant.name]),
+    ...variant.city ? { city: Object.freeze({ ...variant.city }) } : {}
+  })));
+  byId = new Map(active$1.map((variant) => [variant.id, variant]));
+}
+function activeTerrainVariants() {
+  return active$1;
+}
+function terrainVariant(id) {
+  return byId.get(id);
+}
 const CUSTOM_MAP_FORMAT = "steel-tide-map";
 const CUSTOM_MAP_VERSION = 1;
 const CUSTOM_MAP_EXT = ".steel-tide-map";
@@ -8743,6 +8822,9 @@ function parseCustomMap(json, opts = {}) {
   for (let i = 0; i < terrain.length; i++) {
     if (terrain[i] >= TERRAIN_KINDS) return { ok: false, error: "the map uses a terrain this build does not know" };
   }
+  const variantIssues = [];
+  const terrainVariants = readTerrainAssignments(r.terrainVariants, "terrainVariants", variantIssues);
+  if (variantIssues.length) return { ok: false, error: `${variantIssues[0].path}: ${variantIssues[0].message}` };
   let overlays;
   if (r.overlays !== void 0) {
     if (typeof r.overlays !== "string") return { ok: false, error: "bad overlay data" };
@@ -8798,6 +8880,7 @@ function parseCustomMap(json, opts = {}) {
       w: w2,
       h,
       terrain: rleEncode(terrain),
+      ...terrainVariants ? { terrainVariants } : {},
       ...overlays?.some(Boolean) ? { overlays: rleEncode(overlays) } : {},
       deposits,
       spawns,
@@ -9595,6 +9678,7 @@ const MOD_FILE_EXT = ".steel-tide-mod";
 const MOD_MANIFEST_NAME = "mod.json";
 const MAX_MOD_DEFS = 200;
 const MAX_MOD_SPRITES = 192;
+const MAX_MOD_TERRAINS = 32;
 const MAX_DEF_DECALS = 12;
 const MAX_DEF_MOUNTS = 8;
 const MAX_MOD_SOUNDS = 60;
@@ -9609,7 +9693,7 @@ const SOUND_KEY_RE = /^[a-z0-9][a-z0-9-]{1,59}$/;
 const MAX_MANIFEST_BYTES = 1024 * 1024;
 const MAX_MOD_FILES_BYTES = 24 * 1024 * 1024;
 const ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
-const ATLAS_KEY_RE = /^(u|tur|dec|prj|fx)\.[a-z0-9][a-z0-9_-]{1,39}$/;
+const ATLAS_KEY_RE = /^(u|tur|dec|prj|fx|ter)\.[a-z0-9][a-z0-9_-]{1,39}$/;
 const FILE_RE = /^(?!\/)(?!.*\.\.)[A-Za-z0-9_./-]{1,120}$/;
 const IMAGE_FILE_RE = /\.(png|jpe?g|webp)$/i;
 const MAP_FILE_RE = /\.(steel-tide-map|json)$/i;
@@ -9637,8 +9721,9 @@ const MANIFEST_SPECS = [
   { name: "homepage", type: "string", max: 200, doc: ["a link: a repository, a thread", "主页链接"] },
   { name: "license", type: "string", max: 80, def: "CC-BY-4.0", doc: ["the mod's licence (SPDX id)", "模组许可证（SPDX 标识）"] },
   { name: "minGame", type: "string", max: 32, doc: ["the oldest game version it is written for", "所需的最低游戏版本"] },
-  { name: "defs", type: "defs", required: true, doc: ["the units, buildings and upgrade levels", "单位、建筑与升级等级"] },
+  { name: "defs", type: "defs", required: true, doc: ["the units, buildings and upgrade levels; may be empty when terrains are supplied", "单位、建筑与升级等级；提供 terrains 时可为空"] },
   { name: "factions", type: "factions", doc: ["selectable factions, each with its own headquarters, starting builder and roster (format 2)", "可选阵营，各有自己的总部、初始建造单位和单位表（格式 2）"] },
+  { name: "terrains", type: "terrains", doc: [`up to ${MAX_MOD_TERRAINS} map-selected terrain variants; preserve their base terrain’s gameplay`, `最多 ${MAX_MOD_TERRAINS} 种由地图选择的地形外观变体；保留基础地形的游戏规则`] },
   { name: "sprites", type: "sprites", doc: ["the sheets the defs draw with (see below)", "各定义使用的精灵图（见下）"] },
   { name: "sounds", type: "sounds", doc: ["the recordings the weapons fire with (see below)", "武器开火时播放的录音（见下）"] },
   { name: "screenshots", type: "images", doc: [`pictures of the mod in play, relative to mod.json (\`screenshots/1.png\`): 4:3, at least ${MIN_SCREENSHOT_WIDTH} px wide, under ${MAX_SCREENSHOT_BYTES / 1048576} MB each, up to ${MAX_MOD_SCREENSHOTS}. The registry asks for at least one and shows them on the mod's page`, `模组游玩截图，路径相对 mod.json（\`screenshots/1.png\`）：4:3，宽至少 ${MIN_SCREENSHOT_WIDTH} 像素，每张不超过 ${MAX_SCREENSHOT_BYTES / 1048576} MB，最多 ${MAX_MOD_SCREENSHOTS} 张。仓库要求至少一张，并展示在模组页面上`] },
@@ -9784,7 +9869,7 @@ const SOUND_SPECS = [
   { name: "file", type: "string", max: 120, required: true, doc: ["the recording, relative to mod.json. An MP3 plays everywhere; WAV works, OGG not on Safari. Dry, close, under a second", "录音路径，相对 mod.json。MP3 处处可播；WAV 可用，OGG 在 Safari 上不行。干声、近距、一秒以内"] }
 ];
 const SPRITE_SPECS = [
-  { name: "key", type: "string", max: 48, required: true, doc: ["`u.<id>` for a body, `tur.<id>` for a rotating part, `dec.<name>` for a decal, `prj.<name>` for a round and `fx.<name>` for an effect a weapon's look or a rule plays; never a vanilla key", "主体用 `u.<id>`，旋转部件用 `tur.<id>`，贴花用 `dec.<名字>`，弹药用 `prj.<名字>`，武器外观或规则播放的特效用 `fx.<名字>`；不可与原版键重名"] },
+  { name: "key", type: "string", max: 48, required: true, doc: ["`u.<id>` for a body, `tur.<id>` for a rotating part, `dec.<name>` for a decal, `prj.<name>` for a round and `fx.<name>` for an effect a weapon's look or a rule plays; `ter.<mod id>-<name>` for terrain materials; never a vanilla key", "主体用 `u.<id>`，旋转部件用 `tur.<id>`，贴花用 `dec.<名字>`，弹药用 `prj.<名字>`，武器外观或规则播放的特效用 `fx.<名字>`；地形材质用 `ter.<模组 id>-<名字>`；不可与原版键重名"] },
   { name: "file", type: "string", max: 120, required: true, doc: ["the image, relative to mod.json (PNG, WebP or JPEG)", "图片路径，相对 mod.json（PNG、WebP 或 JPEG）"] },
   { name: "frames", type: "int", min: 1, max: 64, def: "1", doc: ["animation frames, left to right in one strip", "动画帧数，横向排列"] },
   { name: "fw", type: "number", min: 4, max: 512, def: "the footprint (a building) or the image", doc: ["in-game frame width, whole world px", "游戏内帧宽（世界像素，整数）"] },
@@ -9813,9 +9898,27 @@ const FACTION_SPECS = [
   { name: "builder", type: "id", required: true, doc: ["this mod’s ground or amphibious builder; the HQ must produce it and it must rebuild the HQ", "本模组的陆地或两栖建造单位；总部必须能生产它，它必须能重建总部"] },
   { name: "roster", type: "ids", max: MAX_MOD_DEFS, doc: ["permitted definitions, including prerequisites and upgrades; defaults to all definitions in this mod", "允许的定义，包括前置建筑与升级；默认为本模组的全部定义"] }
 ];
+const TERRAIN_SPECS = [
+  { name: "id", type: "id", required: true, doc: ["unique terrain variant id, prefixed with the mod id and a dash", "唯一地形变体 id，以模组 id 和连字符开头"] },
+  { name: "name", type: "text", required: true, doc: ["the terrain style name in the editor", "编辑器中的地形外观名称"] },
+  { name: "base", type: "enum", values: Object.keys(TERRAIN_BASES), required: true, doc: ["the existing terrain whose movement, construction and combat behavior stays unchanged", "基础地形；移动、建造和战斗规则保持不变"] },
+  { name: "texture", type: "string", max: 48, doc: ["flat terrain material: a ter.<mod id>-<name> sheet in this pack; city uses its city materials instead", "平面地形材质：本模组中的 ter.<模组 id>-<名字> 图像；城市使用 city 材质"] },
+  { name: "city", type: "cityTerrain", doc: ["materials and lights for the ordinary city geometry; only with base city", "普通城市几何形状的材质和灯光；仅适用于 base city"] }
+];
+const CITY_TERRAIN_SPECS = [
+  { name: "roof", type: "string", max: 7, doc: ["roof color, #RRGGBB", "屋顶颜色，#RRGGBB"] },
+  { name: "wall", type: "string", max: 7, doc: ["wall color, #RRGGBB", "墙面颜色，#RRGGBB"] },
+  { name: "window", type: "string", max: 7, doc: ["lit window color, #RRGGBB", "亮窗颜色，#RRGGBB"] },
+  { name: "lamp", type: "string", max: 7, doc: ["streetlamp color, #RRGGBB", "路灯颜色，#RRGGBB"] },
+  { name: "roofTexture", type: "string", max: 48, doc: ["roof material, a ter.<mod id>-<name> sheet in this pack", "屋顶材质，本模组中的 ter.<模组 id>-<名字> 图像"] },
+  { name: "wallTexture", type: "string", max: 48, doc: ["wall material, a ter.<mod id>-<name> sheet in this pack", "墙面材质，本模组中的 ter.<模组 id>-<名字> 图像"] },
+  { name: "groundTexture", type: "string", max: 48, doc: ["courtyard material, a ter.<mod id>-<name> sheet in this pack", "庭院地面材质，本模组中的 ter.<模组 id>-<名字> 图像"] }
+];
 const FIELD_SPECS = {
   manifest: MANIFEST_SPECS,
   faction: FACTION_SPECS,
+  terrain: TERRAIN_SPECS,
+  cityTerrain: CITY_TERRAIN_SPECS,
   def: DEF_SPECS,
   weapon: WEAPON_SPECS,
   decal: DECAL_SPECS,
@@ -10016,6 +10119,7 @@ function checkField(spec, value, path, issues) {
       return Array.isArray(value) && value.length >= 1 && value.length <= MAX_DEF_MOUNTS || bad(`must be a list of one to ${MAX_DEF_MOUNTS} mounts`);
     case "weapons":
     case "factions":
+    case "terrains":
     case "defs":
     case "sprites":
     case "sounds":
@@ -10029,6 +10133,7 @@ function checkField(spec, value, path, issues) {
     case "look":
     case "anims":
     case "wing":
+    case "cityTerrain":
       return isPlainObject$1(value) || bad("must be an object");
     // a rule's own words never stand in a table this checks: `game/ruleSpec.ts` reads them
     default:
@@ -10074,7 +10179,9 @@ function parseDefinitionPack(input) {
   const head = checkObject(raw, MANIFEST_SPECS, "mod", errors, warnings);
   if (errors.length > 0) return { ok: false, errors, warnings };
   const defs = head.defs;
-  if (defs.length === 0) errors.push({ path: "mod.defs", message: "a mod needs at least one def" });
+  const terrains = head.terrains ?? [];
+  if (defs.length === 0 && terrains.length === 0) errors.push({ path: "mod.defs", message: "a mod needs at least one def or terrain variant" });
+  if (terrains.length > MAX_MOD_TERRAINS) errors.push({ path: "mod.terrains", message: `at most ${MAX_MOD_TERRAINS} terrain variants` });
   if (defs.length > MAX_MOD_DEFS) errors.push({ path: "mod.defs", message: `at most ${MAX_MOD_DEFS} defs` });
   const sprites = head.sprites ?? [];
   if (sprites.length > MAX_MOD_SPRITES) errors.push({ path: "mod.sprites", message: `at most ${MAX_MOD_SPRITES} sheets` });
@@ -10120,8 +10227,24 @@ function resolveDefinitions(mod, table = VANILLA) {
     const clean = checkObject(raw, SPRITE_SPECS, path, errors, warnings);
     if (typeof clean.key !== "string" || typeof clean.file !== "string") return;
     if (!ATLAS_KEY_RE.test(clean.key)) {
-      errors.push({ path: `${path}.key`, message: "must be u.<id>, tur.<id>, dec.<name>, prj.<name> or fx.<name>" });
+      errors.push({ path: `${path}.key`, message: "must be u.<id>, tur.<id>, dec.<name>, prj.<name>, fx.<name> or ter.<mod id>-<name>" });
       return;
+    }
+    if (clean.key.startsWith("ter.")) {
+      if (!clean.key.startsWith(`ter.${mod.id}-`) || clean.key.length <= `ter.${mod.id}-`.length) {
+        errors.push({ path: `${path}.key`, message: `terrain materials must be named "ter.${mod.id}-<name>"` });
+        return;
+      }
+      if ((clean.frames ?? 1) !== 1) errors.push({ path: `${path}.frames`, message: "terrain materials have one frame" });
+      for (const field of ["rotated", "teams", "stripBg", "fitFootprint", "freezeStatic"]) {
+        if (clean[field] === true) errors.push({ path: `${path}.${field}`, message: "terrain materials preserve their square image without rotation, recoloring or cleanup" });
+        clean[field] = false;
+      }
+      if (!Number.isInteger(clean.fw) || !Number.isInteger(clean.fh) || clean.fw !== clean.fh)
+        errors.push({ path, message: "terrain materials require equal whole fw and fh between 4 and 512 (128 recommended)" });
+      for (const field of ["anchorY", "mount", "anims", "animRegion", "pivotX", "pivotY"]) {
+        if (clean[field] !== void 0) errors.push({ path: `${path}.${field}`, message: "not supported on a flat terrain material" });
+      }
     }
     if (VANILLA_SPRITE_KEYS.has(clean.key) || tableSprites.has(clean.key) && !sheetKeys.has(clean.key) && !mod.defs.some((d) => d && (d.sprite === clean.key || d.turretSprite === clean.key || `u.${d.id}` === clean.key || `tur.${d.id}` === clean.key))) {
       errors.push({ path: `${path}.key`, message: `"${clean.key}" is art the game already has; a mod adds art, it does not replace it` });
@@ -10149,6 +10272,54 @@ function resolveDefinitions(mod, table = VANILLA) {
     cleanSprites.push({ ...clean, frames: clean.frames ?? 1 });
   });
   mod.sprites = cleanSprites;
+  if (mod.terrains !== void 0) {
+    const cleanTerrains = [];
+    const terrainIds = /* @__PURE__ */ new Set();
+    if (!Array.isArray(mod.terrains) || mod.terrains.length > MAX_MOD_TERRAINS)
+      errors.push({ path: "terrains", message: `must be a list of up to ${MAX_MOD_TERRAINS} terrain variants` });
+    else mod.terrains.forEach((raw, i) => {
+      const path = `terrains[${i}]`;
+      const before = errors.length;
+      if (!isPlainObject$1(raw)) {
+        errors.push({ path, message: "must be an object" });
+        return;
+      }
+      const clean = checkObject(raw, TERRAIN_SPECS, path, errors, warnings);
+      if (!clean.id || !clean.base || clean.name === void 0) return;
+      if (!clean.id.startsWith(`${mod.id}-`) || clean.id.length <= mod.id.length + 1 || terrainIds.has(clean.id))
+        errors.push({ path: `${path}.id`, message: "must be unique and prefixed with the mod id and a dash" });
+      terrainIds.add(clean.id);
+      const material = (key, at) => {
+        if (key !== void 0 && (!key.startsWith(`ter.${mod.id}-`) || !sheetKeys.has(key)))
+          errors.push({ path: at, message: "must name a terrain material sheet belonging to this mod" });
+      };
+      material(clean.texture, `${path}.texture`);
+      let city;
+      if (clean.city !== void 0) {
+        if (clean.base !== "city") errors.push({ path: `${path}.city`, message: "city materials require base city" });
+        const fields = checkObject(clean.city, CITY_TERRAIN_SPECS, `${path}.city`, errors, warnings);
+        for (const color of ["roof", "wall", "window", "lamp"]) {
+          if (fields[color] !== void 0 && !/^#[0-9a-fA-F]{6}$/.test(fields[color]))
+            errors.push({ path: `${path}.city.${color}`, message: "must be a #RRGGBB color" });
+        }
+        for (const texture of ["roofTexture", "wallTexture", "groundTexture"]) material(fields[texture], `${path}.city.${texture}`);
+        city = Object.freeze(fields);
+      }
+      if (clean.base === "city") {
+        if (clean.texture !== void 0) errors.push({ path: `${path}.texture`, message: "city uses city.roofTexture, wallTexture and groundTexture" });
+        if (!city || Object.keys(city).length === 0) errors.push({ path: `${path}.city`, message: "a city variant needs at least one material or color" });
+      } else if (clean.texture === void 0) errors.push({ path: `${path}.texture`, message: "a flat terrain variant needs a texture" });
+      if (errors.length !== before) return;
+      cleanTerrains.push(Object.freeze({
+        id: clean.id,
+        name: Object.freeze(contentText(clean.name)),
+        base: clean.base,
+        ...clean.texture ? { texture: clean.texture } : {},
+        ...city ? { city } : {}
+      }));
+    });
+    mod.terrains = cleanTerrains;
+  }
   const soundKeys = /* @__PURE__ */ new Set();
   const cleanSounds = [];
   (mod.sounds ?? []).forEach((raw, i) => {
@@ -10598,10 +10769,23 @@ function applyDefinitions(mods) {
   const table = cloneTable(VANILLA);
   const strings = {};
   const report = { active: [], rejected: [], warnings: [], placeholders: [] };
+  const terrains = [];
+  const terrainIds = /* @__PURE__ */ new Set();
+  const terrainSheets = /* @__PURE__ */ new Set();
   for (const mod of mods) {
     const r = resolveDefinitions(mod, table);
     if (!r.ok) {
       report.rejected.push({ id: mod.id, errors: r.errors });
+      continue;
+    }
+    const duplicate = mod.terrains?.find((terrain) => terrainIds.has(terrain.id));
+    if (duplicate) {
+      report.rejected.push({ id: mod.id, errors: [{ path: "terrains", message: `"${duplicate.id}" is already an active terrain variant` }] });
+      continue;
+    }
+    const duplicateSheet = mod.sprites?.find((sprite) => sprite.key.startsWith("ter.") && terrainSheets.has(sprite.key));
+    if (duplicateSheet) {
+      report.rejected.push({ id: mod.id, errors: [{ path: "sprites", message: `"${duplicateSheet.key}" is already an active terrain material` }] });
       continue;
     }
     if (r.warnings.length > 0) report.warnings.push({ id: mod.id, warnings: r.warnings });
@@ -10610,6 +10794,11 @@ function applyDefinitions(mods) {
     Object.assign(strings, r.strings);
     report.placeholders.push(...r.placeholders);
     report.active.push(mod);
+    for (const terrain of mod.terrains ?? []) {
+      terrainIds.add(terrain.id);
+      terrains.push({ ...terrain, name: contentText(terrain.name), mod: mod.id });
+    }
+    for (const sprite of mod.sprites ?? []) if (sprite.key.startsWith("ter.")) terrainSheets.add(sprite.key);
   }
   for (const k of Object.keys(DEFS)) delete DEFS[k];
   Object.assign(DEFS, table);
@@ -10622,6 +10811,7 @@ function applyDefinitions(mods) {
     injected.add(k);
   }
   active = report.active;
+  replaceTerrainVariants(terrains);
   for (const fn of listeners) fn();
   return report;
 }
@@ -10880,6 +11070,10 @@ function typeLabel(spec) {
       return "def[]";
     case "factions":
       return "faction[]";
+    case "terrains":
+      return "terrain[]";
+    case "cityTerrain":
+      return "{ roof, wall, window, lamp, roofTexture, wallTexture, groundTexture }";
     case "sprites":
       return "sheet[]";
     case "files":
@@ -11089,6 +11283,20 @@ function agentPrompt() {
   p(markdownTable(fieldRows("faction")));
   p();
   p("A faction is selected per seat in Conquest and Breakthrough. It changes the headquarters, starting builders and allowed build/production roster; teams and victory rules still belong to the match. The chooser is hidden with only Steel Tide available. The HQ must produce its builder, and that builder must rebuild its HQ. Both must belong to this mod. A starting HQ has no prerequisites; its builder may require only that HQ. Roster building prerequisites must also be in the roster. Format 1 mods continue to work unchanged.");
+  p();
+  p("### A terrain variant (`terrains[]`)");
+  p();
+  p(markdownTable(fieldRows("terrain")));
+  p();
+  p('Terrain variants add map-selected appearances without changing terrain numbers, movement, construction, cover or city destruction. Enabling a mod alone never repaints a vanilla map. A map opts in with `"terrainVariants": { "city": "my-mod-city" }`; the editor preserves these bindings in saves and exports. Missing or disabled content renders the ordinary base terrain, even when old images remain cached. A terrain-only pack uses `"defs": []`.');
+  p();
+  p("Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep the full rectangular material opaque and seamless; do not include buildings, text, shadows or a transparent cutout in a flat material. A variant can reference only terrain sheets in its own pack.");
+  p();
+  p("#### City materials (`terrains[].city`)");
+  p();
+  p(markdownTable(fieldRows("cityTerrain")));
+  p();
+  p("A city variant keeps the normal city block geometry and damage states. It supplies at least one color or material; omitted properties keep the ordinary city treatment. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.");
   p();
   p("### A def (`defs[]`)");
   p();
@@ -11349,6 +11557,7 @@ export {
   MAX_MOD_SCREENSHOTS,
   MAX_MOD_SOUNDS,
   MAX_MOD_SPRITES,
+  MAX_MOD_TERRAINS,
   MAX_REQUIRED_MODS,
   MAX_SCREENSHOT_BYTES,
   MIN_SCREENSHOT_WIDTH,
@@ -11367,6 +11576,7 @@ export {
   SCREENSHOT_ASPECT_TOLERANCE,
   SOUND_KEY_RE,
   TARGET_DOMAINS,
+  TERRAIN_BASES,
   TRAILS,
   UNIT_DOMAINS,
   VANILLA_DEFS,
@@ -11378,6 +11588,7 @@ export {
   activeDefinitions,
   activeContentStamps as activeModStamps,
   activeDefinitions as activeMods,
+  activeTerrainVariants,
   agentPrompt,
   agentPromptFor,
   applyDefinitions,
@@ -11413,11 +11624,13 @@ export {
   parseDefinitionPack,
   parseMod,
   parseModIndex,
+  readTerrainAssignments,
   requiredContentOf,
   requiredContentOf as requiredModOf,
   resolveDefinitions,
   resolveMod,
   rosterLines,
   sameStamps,
-  stampOf
+  stampOf,
+  terrainVariant
 };
