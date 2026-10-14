@@ -26,7 +26,7 @@ One vanilla unit copied and re-tuned. `extends` inherits everything (art, weapon
 ```json
 {
   "format": "steel-tide-mod",
-  "v": 1,
+  "v": 2,
   "id": "bison-ii",
   "name": [
     "Bison II",
@@ -82,7 +82,7 @@ Own art, a defended building, and a fourth level for a vanilla building line:
 ```json
 {
   "format": "steel-tide-mod",
-  "v": 1,
+  "v": 2,
   "id": "ironworks",
   "name": [
     "Ironworks",
@@ -224,7 +224,7 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
 | `format` | string | yes |  | always "steel-tide-mod" |
-| `v` | integer 1–1 | yes |  | format version, 1 |
+| `v` | integer 1–2 | yes |  | format version: 1 remains supported; factions and headquarters require 2 |
 | `id` | id | yes |  | the mod's id: lower case, letters, digits, `-`; also its folder in the registry |
 | `name` | text | yes |  | the name shown in the mod list |
 | `version` | string | yes |  | e.g. `1.0.0`; the game offers an update when the registry's is newer |
@@ -234,6 +234,7 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 | `license` | string |  | CC-BY-4.0 | the mod's licence (SPDX id) |
 | `minGame` | string |  |  | the oldest game version it is written for |
 | `defs` | def[] | yes |  | the units, buildings and upgrade levels |
+| `factions` | faction[] |  |  | selectable factions, each with its own headquarters, starting builder and roster (format 2) |
 | `sprites` | sheet[] |  |  | the sheets the defs draw with (see below) |
 | `sounds` | string |  |  | the recordings the weapons fire with (see below) |
 | `screenshots` | path[] |  |  | pictures of the mod in play, relative to mod.json (`screenshots/1.png`): 4:3, at least 640 px wide, under 2 MB each, up to 8. The registry asks for at least one and shows them on the mod's page |
@@ -242,10 +243,23 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 
 `name`, `description` and every `desc`/`name` on a def are *text*: a string (used for every language), `["English", "中文", "한국어"]` in that order, or `{ "en": "…", "zh": "…", "ko": "…" }`. Only English is required; a language left out reads as English.
 
+### A faction (`factions[]`, format 2)
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `id` | id | yes |  | unique faction id, prefixed with the mod id and a dash |
+| `name` | text | yes |  | the faction name in game setup |
+| `headquarters` | id | yes |  | this mod’s land headquarters definition |
+| `builder` | id | yes |  | this mod’s ground or amphibious builder; the HQ must produce it and it must rebuild the HQ |
+| `roster` | id[] |  |  | permitted definitions, including prerequisites and upgrades; defaults to all definitions in this mod |
+
+A faction is selected per seat in Conquest and Breakthrough. It changes the headquarters, starting builders and allowed build/production roster; teams and victory rules still belong to the match. The chooser is hidden with only Steel Tide available. The HQ must produce its builder, and that builder must rebuild its HQ. Both must belong to this mod. A starting HQ has no prerequisites; its builder may require only that HQ. Roster building prerequisites must also be in the roster. Format 1 mods continue to work unchanged.
+
 ### A def (`defs[]`)
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
+| `isHQ` | boolean | buildings only |  | a headquarters: holds territory and production slots, follows the ordinary HQ loss and sale rules; format 2 |
 | `id` | id | yes |  | unique across every mod and the vanilla roster; prefix a generic word with your mod's id |
 | `name` | text | yes |  | as the HUD shows it |
 | `desc` | text |  | "" | the tooltip line |
@@ -288,6 +302,7 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 | `nukeCost` | number 0–99999 |  |  | a launcher: metal per warhead |
 | `nukeTime` | number 0–3600 |  |  | a launcher: seconds per warhead |
 | `armsAtBase` | number 0–64 | units only |  | a launcher: fabricates its warheads only within this many tiles of one of its own bases of its kind (a naval yard for a hull, an airbase for an aircraft; and, an `underwater` one, only on the surface), and holds the work otherwise (the Kraken's and the Wraith's 4) |
+| `rearmTime` | number 0.1–600 |  | 15 | seconds to fill every gun that carries `ammo` from empty, at a base of its kind |
 | `hatch` | number 0–30 |  |  | a launcher: seconds its doors take to open before the warhead leaves, and to close after; none fires on the spot |
 | `antiWarhead` | boolean |  |  | its anti-air may fire on a nuclear warhead without a veteran's rank |
 | `interceptRange` | number 0–64 |  |  | point defence: reach in tiles |
@@ -303,10 +318,12 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 | `stealth` | number 0–64 | units only |  | seen only within this many tiles of an enemy |
 | `detect` | number 0–64 |  |  | reveals stealth within this many tiles |
 | `radar` | boolean |  |  | sees by radio: the sight circle ignores weather and the hour, and drops to 7 tiles when short of power |
+| `remoteVision` | boolean | units only |  | remote camera feed: hostile jamming blocks its sight within the field |
+| `jamRange` | number 0–64 | buildings only |  | electronic-warfare radius in tiles; requires full power, reveals its location, blocks hostile radar and remote vision, never visual sight or sonar |
 | `hovers` | boolean | units only |  | an aircraft that hovers instead of orbiting |
 | `kamikaze` | boolean | units only |  | the unit is its own round: it never picks a target, and its one weapon flies it into what it is ordered at (the Hornet) |
-| `lowFlying` | boolean | units only |  | an aircraft at treetop height: machine guns and autocannons that fire on the ground reach it too (the Hornet) |
-| `limit` | integer 1–200 | units only |  | at most this many a faction at once, alive and queued together (the Hornet's 6) |
+| `lowFlying` | boolean | units only |  | an aircraft at treetop height: machine guns and autocannons that fire on the ground reach it too (the helicopters and the Hornet) |
+| `limit` | integer 1–200 | units only |  | at most this many a faction at once, alive and queued together (the Hornet's 10) |
 | `altitude` | number 0–64 | units only | 12 | an aircraft's drawn height, px |
 | `fireOnMove` | boolean | units only |  | keeps shooting on a plain move |
 | `burnMult` | number 0–4 | units only | 1 | what fire on the ground does to it, as a multiplier (the Drake's 0.5) |
@@ -346,6 +363,8 @@ An `upgradeOf` def becomes upgrade-only (never placed directly): the named build
 | `splash` | number 0–500 |  |  | blast radius, world px |
 | `burst` | integer 1–32 |  |  | shots per burst |
 | `burstDelay` | number 0–5 |  |  | seconds between the shots of a burst |
+| `ammo` | integer 1–9999 |  |  | rounds carried, a burst one: dry, a unit goes home for more on its own (an airbase for an aircraft, a naval yard for a hull, a war factory for the rest) and a building refills where it stands; absent never runs dry |
+| `vsWarhead` | number 0–10 |  | 1 | against a warhead in flight, this share of what it does to an aircraft |
 | `homing` | boolean |  |  | the round tracks its target |
 | `interceptable` | boolean |  |  | point defence may shoot it down |
 | `arc` | boolean |  |  | a ballistic arc (artillery) |
@@ -366,7 +385,7 @@ The damage a weapon does is `dmg × the armour matrix cell for (cls, target armo
 
 ```
 mg          light ×1.5  medium ×0.8  heavy ×0.4  structure ×0.35  ship ×0.5  air ×0.7
-autocannon  light ×1.5  medium ×1  heavy ×0.5  structure ×0.5  ship ×0.7
+autocannon  light ×1.5  medium ×1  heavy ×0.5  structure ×0.5  ship ×0.7  air ×0.35
 cannon      light ×0.6  medium ×1.3  heavy ×1  structure ×0.8  ship ×0.9
 at          light ×0.4  medium ×1.1  heavy ×1.8  structure ×0.7  ship ×0.75
 he          light ×1.2  medium ×1  heavy ×0.75  structure ×1.6  ship ×1
@@ -781,11 +800,11 @@ A mod may carry maps: files the game's Scenario Editor exports (`.steel-tide-map
 
 ## The vanilla roster (ids you may `extends`, name in `producedBy`/`builtBy`/`requires`/`upgradeOf`, or borrow art from)
 
-- ground units: engineer (T1, 200), buggy (T1, 60), ltank (T1, 120), mbt (T2, 280), htank (T3, 900), td (T2, 320), flak (T1, 170), sam (T2, 400), arty (T2, 420), mlrs (T3, 760), radarcar (T3, 480), salamander (T3, 800), bulwark (T3, 650), drake (T2, 300), hercules (T2, 350), scorpion (T3, 1100)
-- ships: gunboat (T1, 130), mboat (T1, 280), frigate (T2, 600), destroyer (T2, 700), sub (T2, 480), btlship (T3, 1700), seatrans (T1, 220), engboat (T1, 200), kraken (T3, 1000), moray (T3, 700)
-- amphibious units: gator (T2, 240)
-- aircraft: hornet (T2, 120), drone (T1, 40), fighter (T2, 380), heli (T1, 340), jet (T2, 400), mjet (T2, 520), bomber (T2, 1000), theli (T1, 280), c47 (T2, 650), gunship (T3, 1600), wraith (T3, 1400), cormorant (T3, 700)
-- buildings: hq (T1, 2500), extractor (T1, 120), extractor2 (T2, 310, upgrade level), extractor3 (T3, 810, upgrade level), platform (T1, 120), platform2 (T2, 310, upgrade level), platform3 (T3, 810, upgrade level), power (T1, 140), power2 (T2, 400, upgrade level), power3 (T3, 1100, upgrade level), factory (T1, 320), factory2 (T2, 740, upgrade level), factory3 (T3, 1640, upgrade level), airbase (T1, 350), airbase2 (T2, 830, upgrade level), airbase3 (T3, 1780, upgrade level), navyard (T1, 380), navyard2 (T2, 800, upgrade level), navyard3 (T3, 1750, upgrade level), mgturret (T1, 130), gatling (T2, 390, upgrade level), cannonturret (T1, 320), cannonturret2 (T2, 740, upgrade level), aaturret (T1, 240), samsite (T2, 560, upgrade level), interceptor (T2, 450), interceptor2 (T3, 1100, upgrade level), sandbag (T1, 40), repairtower (T1, 360), radar (T2, 400), warlab (T1, 500), reactor (T3, 1400), nukesilo (T3, 1800)
+- ground units: engineer (T1, 150), buggy (T1, 60), ltank (T1, 120), mbt (T2, 280), htank (T3, 900), td (T2, 320), flak (T1, 170), sam (T2, 400), arty (T2, 420), mlrs (T3, 760), radarcar (T3, 480), salamander (T3, 800), bulwark (T3, 650), drake (T2, 400), hercules (T2, 350), scorpion (T3, 1100)
+- ships: gunboat (T1, 130), mboat (T1, 280), frigate (T2, 600), destroyer (T2, 700), sub (T2, 480), btlship (T3, 1700), carrier (T3, 2200), seatrans (T1, 220), engboat (T1, 200), kraken (T3, 1000), moray (T3, 700)
+- amphibious units: gator (T2, 200)
+- aircraft: hornet (T2, 120), drone (T1, 40), fighter (T2, 380), heli (T2, 380), jet (T2, 450), mjet (T2, 520), bomber (T2, 1000), theli (T1, 280), c47 (T2, 650), gunship (T3, 1800), wraith (T3, 1400), cormorant (T3, 700)
+- buildings: hq (T1, 2500), hq2 (T2, 17500, upgrade level), extractor (T1, 120), extractor2 (T2, 310, upgrade level), extractor3 (T3, 810, upgrade level), platform (T1, 120), platform2 (T2, 310, upgrade level), platform3 (T3, 810, upgrade level), power (T1, 140), power2 (T2, 400, upgrade level), power3 (T3, 1100, upgrade level), factory (T1, 320), factory2 (T2, 740, upgrade level), factory3 (T3, 1640, upgrade level), airbase (T1, 380), airbase2 (T2, 830, upgrade level), airbase3 (T3, 1780, upgrade level), navyard (T1, 350), navyard2 (T2, 800, upgrade level), navyard3 (T3, 1750, upgrade level), mgturret (T1, 130), gatling (T2, 330, upgrade level), cannonturret (T1, 320), cannonturret2 (T2, 660, upgrade level), aaturret (T1, 400), samsite (T2, 1000, upgrade level), interceptor (T2, 450), interceptor2 (T3, 1100, upgrade level), sandbag (T1, 40), landmine (T1, 60), watermine (T1, 60), repairtower (T1, 360), radar (T2, 400), warlab (T1, 500), veil (T2, 600), reactor (T3, 1400), nukesilo (T3, 1800)
 
 ## Test
 
