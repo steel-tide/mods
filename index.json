@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-14T11:01:37.163Z",
+  "generated": "2026-10-14T11:08:40.910Z",
   "mods": [
     {
       "id": "adolence",
@@ -5670,7 +5670,7 @@
         "赛博朋克：断电协议",
         "사이버펑크: 블랙아웃 프로토콜"
       ],
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": "Steel Tide",
       "description": [
         "An official near-future arsenal: a complete networked war economy, prism weapons, shield formations, covert raids and autonomous carrier wings. Includes the Blackout operation atlas.",
@@ -5681,9 +5681,14 @@
       "minGame": "0.8.14",
       "path": "mods/cyberpunk",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/cyberpunk/",
-      "updated": "2026-10-14T19:00:56+08:00",
+      "updated": "2026-10-14T19:08:13+08:00",
       "downloads": 0,
       "screenshots": [
+        {
+          "file": "covers/blackout-card.webp",
+          "w": 1600,
+          "h": 1200
+        },
         {
           "file": "screenshots/01-gridfall.jpg",
           "w": 1600,
@@ -10716,7 +10721,7 @@
       "path": "mods/rusted-expansion",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/rusted-expansion/",
       "updated": "2026-09-20T13:14:42+08:00",
-      "downloads": 94,
+      "downloads": 95,
       "screenshots": [
         {
           "file": "screenshots/armour.webp",
