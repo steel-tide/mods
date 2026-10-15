@@ -1062,7 +1062,7 @@
           },
           "turret": true,
           "minRange": 1.6,
-          "muzzleOffset": 44
+          "muzzleOffset": 44.0
         }
       ],
       "aiWeight": 3,
@@ -3051,7 +3051,7 @@
           "splash": 46,
           "friendlyFire": true,
           "spread": 12,
-          "muzzleOffset": 33
+          "muzzleOffset": 33.0
         }
       ],
       "power": -16,
@@ -5228,6 +5228,54 @@
       "teams": false,
       "stripBg": false,
       "rotated": false
+    },
+    {
+      "key": "ter.cyberpunk-city-signs",
+      "file": "terrain/ter.cyberpunk-city-signs.webp",
+      "frames": 1,
+      "fw": 128,
+      "fh": 128,
+      "ss": 2,
+      "teams": false,
+      "stripBg": false,
+      "rotated": false
+    }
+  ],
+  "terrains": [
+    {
+      "id": "cyberpunk-city",
+      "name": [
+        "Blackout District",
+        "断电城区",
+        "블랙아웃 지구"
+      ],
+      "base": "city",
+      "city": {
+        "roof": "#51616c",
+        "wall": "#354553",
+        "window": "#405767",
+        "lamp": "#67eaff",
+        "accent": "#f4b65d",
+        "accent2": "#ef8062",
+        "roofTexture": "ter.cyberpunk-city-roof",
+        "wallTexture": "ter.cyberpunk-city-wall",
+        "groundTexture": "ter.cyberpunk-city-ground",
+        "signTexture": "ter.cyberpunk-city-signs",
+        "architecture": {
+          "forms": [
+            "stepped",
+            "court",
+            "slab",
+            "terrace"
+          ],
+          "minStoreys": 2,
+          "maxStoreys": 4,
+          "coverage": 0.8,
+          "greenery": 0.04,
+          "equipment": 0.7,
+          "facade": "panel"
+        }
+      }
     }
   ],
   "sounds": [
@@ -5295,26 +5343,8 @@
     "screenshots/01-gridfall.jpg",
     "screenshots/02-prism-front.jpg",
     "screenshots/03-undertow.jpg",
-    "screenshots/04-blackout.jpg"
-  ],
-  "terrains": [
-    {
-      "id": "cyberpunk-city",
-      "name": [
-        "Blackout District",
-        "断电城区",
-        "블랙아웃 지구"
-      ],
-      "base": "city",
-      "city": {
-        "roof": "#51616c",
-        "wall": "#354553",
-        "window": "#405767",
-        "lamp": "#67eaff",
-        "roofTexture": "ter.cyberpunk-city-roof",
-        "wallTexture": "ter.cyberpunk-city-wall",
-        "groundTexture": "ter.cyberpunk-city-ground"
-      }
-    }
+    "screenshots/04-blackout.jpg",
+    "screenshots/05-blackout-district.jpg",
+    "screenshots/06-blackout-night.jpg"
   ]
 }

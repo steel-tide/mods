@@ -264,13 +264,13 @@ A faction is selected per seat in Conquest and Breakthrough. It changes the head
 | `name` | text | yes |  | the terrain style name in the editor |
 | `base` | grass \| sand \| road \| mud \| marsh \| snow \| rubble \| ice \| city | yes |  | the existing terrain whose movement, construction and combat behavior stays unchanged |
 | `texture` | string |  |  | flat terrain material: a ter.<mod id>-<name> sheet in this pack; city uses its city materials instead |
-| `city` | { roof, wall, window, lamp, roofTexture, wallTexture, groundTexture } |  |  | materials and lights for the ordinary city geometry; only with base city |
+| `city` | { roof, wall, window, lamp, roofTexture, wallTexture, groundTexture, signTexture, accent, accent2, architecture } |  |  | materials, lights and optional visual architecture; only with base city |
 
 Terrain variants add map-selected appearances without changing terrain numbers, movement, construction, cover or city destruction. Enabling a mod alone never repaints a vanilla map. A map opts in with `"terrainVariants": { "city": "my-mod-city" }`; the editor preserves these bindings in saves and exports. Missing or disabled content renders the ordinary base terrain, even when old images remain cached. A terrain-only pack uses `"defs": []`.
 
-Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep the full rectangular material opaque and seamless; do not include buildings, text, shadows or a transparent cutout in a flat material. A variant can reference only terrain sheets in its own pack.
+Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep flat materials opaque and seamless, without painted buildings, text, cast shadows or transparent cutouts. `city.signTexture` may instead contain sign artwork. A variant can reference only terrain sheets in its own pack.
 
-#### City materials (`terrains[].city`)
+#### City appearance (`terrains[].city`)
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
@@ -281,8 +281,28 @@ Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, d
 | `roofTexture` | string |  |  | roof material, a ter.<mod id>-<name> sheet in this pack |
 | `wallTexture` | string |  |  | wall material, a ter.<mod id>-<name> sheet in this pack |
 | `groundTexture` | string |  |  | courtyard material, a ter.<mod id>-<name> sheet in this pack |
+| `signTexture` | string |  |  | 4×4 atlas of 16 square signs in row-major order, a ter.<mod id>-<name> sheet in this pack; custom architecture selects a cell per building |
+| `accent` | string |  |  | primary architectural lighting color, #RRGGBB |
+| `accent2` | string |  |  | secondary architectural lighting color, #RRGGBB |
+| `architecture` | { forms, minStoreys, maxStoreys, coverage, greenery, equipment, facade } |  |  | optional building kit; omitted keeps ordinary city geometry |
 
-A city variant keeps the normal city block geometry and damage states. It supplies at least one color or material; omitted properties keep the ordinary city treatment. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.
+A city variant supplies colors, materials or a visual architecture kit while preserving city tile collision, cover and destruction rules. Without `architecture`, city geometry stays exactly ordinary. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`, with `signTexture` for architectural signs. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.
+
+#### City architecture (`terrains[].city.architecture`)
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `forms` | (slab \| court \| terrace \| stepped)[] |  | slab, court, terrace, stepped | distinct building forms to mix: slab blocks, courtyard blocks, terraces and stepped towers |
+| `minStoreys` | integer 1–4 |  | 2 | minimum target storeys for the main building; smaller lots and wings may be shorter; must not exceed maxStoreys |
+| `maxStoreys` | integer 1–4 |  | 4 | maximum target storeys for the main building; does not change terrain height or cover |
+| `coverage` | number 0.35–0.9 |  | 0.72 | building coverage within each visual lot |
+| `greenery` | number 0–1 |  | 0.1 | decorative vegetation density |
+| `equipment` | number 0–1 |  | 0.65 | rooftop machinery and service equipment density |
+| `facade` | ribbon \| panel \| industrial |  | panel | wall structure: ribbon windows, panel cladding or industrial frames |
+
+The optional kit changes visible building forms, storeys, lot coverage, planting, rooftop equipment and facade treatment. It never changes terrain height, passability or combat. `forms` lists distinct supported forms. Storey bounds use the documented defaults when omitted and must satisfy `minStoreys <= maxStoreys`. The existing damage states still control collapsed buildings and extinguished signs.
+
+`signTexture` is a 4×4 atlas of 16 square signs in row-major order; a building’s deterministic seed selects one cell. Use equal `fw`/`fh` divisible by 4 (128 recommended), with dark unlit backing and bright lettering or symbols. Pixels whose strongest RGB channel exceeds 120 emit their own color at night. The image is one frame, not a horizontal 16-frame animation strip. Missing sign artwork uses procedural glyphs.
 
 ### A def (`defs[]`)
 

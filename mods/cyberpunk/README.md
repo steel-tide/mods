@@ -38,16 +38,16 @@ The [matchup guide](BALANCE.md) explains each strength and its counterplay. The 
 
 The eight maps have different openings and terrain problems: a disadvantaged urban opening, three contested crossings, a dense market, a naval channel, a volcanic siege, a mountain airlift, a two-front alliance and a fortified final offensive. They are reusable skirmish battlefields with authored starting forces. The standard match victory rules apply.
 
-Their city blocks use **Blackout District**: graphite roof panels, industrial cladding, copper service fittings and cyan windows above worn city paving. Buildings still follow the city's ordinary layouts, shadows and destruction. Roads, movement and combat rules stay the same. The district belongs to these maps; ordinary Steel Tide maps retain their own city appearance.
+**Blackout District** has its own architecture: stepped towers, slab blocks and terraces gather around narrow service courts. Dense rooftop machinery and layered facade panels support cyan, amber and coral commercial signs above graphite paving. City movement, road access and destruction follow the usual rules. The district belongs to these maps; ordinary Steel Tide maps retain their own city appearance.
 
 The manual's 24 mastery goals are **optional, player-tracked challenges**. A first tour and a second tour on Seasoned with the production restrictions provide the intended long-form experience. A full two-tour run is designed around **10+ hours**, including learning and retries; this is a design target, not a measured playtime guarantee. Individual battle lengths depend on difficulty and play style.
 
 ## Included
 
 - Seventeen placeable building types, seven economic/air-defense upgrades and thirty-two recruitable units. The deployed artillery form and carrier-only drone are counted separately.
-- Eighty original sheets: seventy-seven body, turret, projectile and effect sheets, plus three city materials. All twenty-four building definitions have animated power systems; five walkers have registered movement frames.
-- Twelve original weapon and machinery sounds, and three cover paintings. The registry opens with the Blackout cover illustration, followed by four gameplay screenshots.
-- Eight maps, four gameplay screenshots, three-language names/descriptions/ability text, and an offline field manual.
+- Eighty-one original sheets: seventy-seven body, turret, projectile and effect sheets, three city materials and a sixteen-panel sign atlas. All twenty-four building definitions have animated power systems; five walkers have registered movement frames.
+- Twelve original weapon and machinery sounds, and three cover paintings. The registry opens with the Blackout cover illustration, followed by six gameplay screenshots.
+- Eight maps, six gameplay screenshots, three-language names/descriptions/ability text, and an offline field manual.
 
 The published folder includes the art prompt workbooks. Full-resolution masters and authoring tools remain in the authoring workspace; the installer contains shipping assets and player documentation.
 
@@ -55,7 +55,7 @@ The published folder includes the art prompt workbooks. Full-resolution masters 
 
 **赛博朋克：断电协议**包含17类建筑、7项建筑升级、32种可生产单位、8张预置战场和24项手动记录的精通挑战。护盾轮换、火控中继、隐匿突袭、展开式投射器、空运与无人机母舰组成独立的战术体系。
 
-1.3.0制作版本需要即将推出的Steel Tide 0.8.15，尚未发布至官方模组库。地图中的**断电城区**采用石墨屋顶、工业外墙、铜制设施和青色窗灯；建筑布局、破坏效果、道路及战斗规则保持原有行为。普通Steel Tide地图仍保留自身的城市外观。
+1.3.0制作版本需要即将推出的Steel Tide 0.8.15，尚未发布至官方模组库。地图中的**断电城区**以阶梯塔楼、板式楼群和退台建筑围合狭窄的设备内院。密集的屋顶机械与层叠外墙之间悬挂青色、琥珀色和珊瑚色商用招牌；城市通行、道路出入口、破坏及战斗规则保持原有行为。普通Steel Tide地图仍保留自身的城市外观。
 
 在**设置 → 模组 → 上传文件…**导入完整ZIP并开启模组。在各席位的**阵营**中选择**断电协议**，以后街枢纽和两名制造者开局，无需原版总部或工程师。从**01 · 电网坠落**开始。地图集推荐标准难度、开启迷雾、初始金属1600、人口150、每总部6个生产槽，并关闭建造范围。07和08采用1+2对3+4。解压后打开`FIELD-MANUAL.html`，可切换中文并保存挑战进度。普通遭遇战仍遵守其所选规则；地图集挑战由玩家自行记录。
 
@@ -63,6 +63,6 @@ The published folder includes the art prompt workbooks. Full-resolution masters 
 
 **사이버펑크: 블랙아웃 프로토콜**은 건물 17종과 업그레이드 7종, 생산 가능한 유닛 32종, 전장 8개와 직접 기록하는 숙련 도전 24개를 제공한다. 방벽 교대, 사격 통제 중계, 은폐 습격, 전개식 투사포, 공수와 드론 모함을 조합한다.
 
-1.3.0 제작 빌드는 출시 예정인 Steel Tide 0.8.15가 필요하며 아직 공식 목록에 게시되지 않았다. 지도 속 **블랙아웃 지구**에는 흑연색 지붕과 산업용 외벽, 구리 설비와 청록색 창빛이 놓인다. 건물 배치와 파괴, 도로 및 전투 규칙은 그대로다. 일반 Steel Tide 지도는 기존 도시 외관을 유지한다.
+1.3.0 제작 빌드는 출시 예정인 Steel Tide 0.8.15가 필요하며 아직 공식 목록에 게시되지 않았다. 지도 속 **블랙아웃 지구**는 계단형 타워, 판상형 건물과 테라스가 좁은 설비 안뜰을 둘러싼다. 빽빽한 옥상 기계와 겹친 외벽 패널 사이에 청록색, 호박색, 산호색 상업 간판이 놓인다. 도시 이동, 도로 진입, 파괴와 전투 규칙은 그대로다. 일반 Steel Tide 지도는 기존 도시 외관을 유지한다.
 
 **설정 → 모드 → 파일 업로드…**에서 ZIP을 그대로 불러오고 활성화한다. 각 자리의 **진영**에서 **블랙아웃 프로토콜**을 선택하면 기본 본부나 공병 없이 넥서스와 패브리케이터 두 기로 시작한다. **01 · 그리드폴**부터 시작한다. 지도집 권장 설정은 표준 난이도, 전장의 안개 켜기, 시작 금속 1,600, 인구 150, 본부당 생산 슬롯 6, 건설 범위 끄기다. 07과 08은 1+2 대 3+4로 편성한다. 압축을 푼 뒤 `FIELD-MANUAL.html`을 열면 한국어 설명과 저장되는 도전 체크리스트를 볼 수 있다. 일반 대전의 승리 규칙이 적용되며 추가 도전은 플레이어가 기록한다.

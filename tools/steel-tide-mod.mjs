@@ -8654,6 +8654,7 @@ const TERRAIN_BASES = Object.freeze({
   ice: Terrain.Ice,
   city: Terrain.City
 });
+const CITY_FORMS = ["slab", "court", "terrace", "stepped"];
 const VARIANT_ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
 function readTerrainAssignments(value, path, issues) {
   if (value === void 0) return void 0;
@@ -8682,7 +8683,13 @@ function replaceTerrainVariants(variants) {
   active$1 = Object.freeze(variants.map((variant) => Object.freeze({
     ...variant,
     name: Object.freeze([...variant.name]),
-    ...variant.city ? { city: Object.freeze({ ...variant.city }) } : {}
+    ...variant.city ? { city: Object.freeze({
+      ...variant.city,
+      ...variant.city.architecture ? { architecture: Object.freeze({
+        ...variant.city.architecture,
+        ...variant.city.architecture.forms ? { forms: Object.freeze([...variant.city.architecture.forms]) } : {}
+      }) } : {}
+    }) } : {}
   })));
   byId = new Map(active$1.map((variant) => [variant.id, variant]));
 }
@@ -9903,7 +9910,7 @@ const TERRAIN_SPECS = [
   { name: "name", type: "text", required: true, doc: ["the terrain style name in the editor", "编辑器中的地形外观名称"] },
   { name: "base", type: "enum", values: Object.keys(TERRAIN_BASES), required: true, doc: ["the existing terrain whose movement, construction and combat behavior stays unchanged", "基础地形；移动、建造和战斗规则保持不变"] },
   { name: "texture", type: "string", max: 48, doc: ["flat terrain material: a ter.<mod id>-<name> sheet in this pack; city uses its city materials instead", "平面地形材质：本模组中的 ter.<模组 id>-<名字> 图像；城市使用 city 材质"] },
-  { name: "city", type: "cityTerrain", doc: ["materials and lights for the ordinary city geometry; only with base city", "普通城市几何形状的材质和灯光；仅适用于 base city"] }
+  { name: "city", type: "cityTerrain", doc: ["materials, lights and optional visual architecture; only with base city", "材质、灯光与可选建筑外形；仅适用于 base city"] }
 ];
 const CITY_TERRAIN_SPECS = [
   { name: "roof", type: "string", max: 7, doc: ["roof color, #RRGGBB", "屋顶颜色，#RRGGBB"] },
@@ -9912,13 +9919,27 @@ const CITY_TERRAIN_SPECS = [
   { name: "lamp", type: "string", max: 7, doc: ["streetlamp color, #RRGGBB", "路灯颜色，#RRGGBB"] },
   { name: "roofTexture", type: "string", max: 48, doc: ["roof material, a ter.<mod id>-<name> sheet in this pack", "屋顶材质，本模组中的 ter.<模组 id>-<名字> 图像"] },
   { name: "wallTexture", type: "string", max: 48, doc: ["wall material, a ter.<mod id>-<name> sheet in this pack", "墙面材质，本模组中的 ter.<模组 id>-<名字> 图像"] },
-  { name: "groundTexture", type: "string", max: 48, doc: ["courtyard material, a ter.<mod id>-<name> sheet in this pack", "庭院地面材质，本模组中的 ter.<模组 id>-<名字> 图像"] }
+  { name: "groundTexture", type: "string", max: 48, doc: ["courtyard material, a ter.<mod id>-<name> sheet in this pack", "庭院地面材质，本模组中的 ter.<模组 id>-<名字> 图像"] },
+  { name: "signTexture", type: "string", max: 48, doc: ["4×4 atlas of 16 square signs in row-major order, a ter.<mod id>-<name> sheet in this pack; custom architecture selects a cell per building", "4×4 排列的 16 个正方形招牌图集，按行排列，使用本模组的 ter.<模组 id>-<名字> 图像；自定义建筑按楼栋选取单格"] },
+  { name: "accent", type: "string", max: 7, doc: ["primary architectural lighting color, #RRGGBB", "建筑主装饰灯颜色，#RRGGBB"] },
+  { name: "accent2", type: "string", max: 7, doc: ["secondary architectural lighting color, #RRGGBB", "建筑副装饰灯颜色，#RRGGBB"] },
+  { name: "architecture", type: "cityArchitecture", doc: ["optional building kit; omitted keeps ordinary city geometry", "可选建筑外形组合；省略时保留普通城市几何形状"] }
+];
+const CITY_ARCHITECTURE_SPECS = [
+  { name: "forms", type: "enums", values: CITY_FORMS, min: 1, max: CITY_FORMS.length, def: "slab, court, terrace, stepped", doc: ["distinct building forms to mix: slab blocks, courtyard blocks, terraces and stepped towers", "混合使用的不同建筑形态：板楼、庭院街区、露台楼与阶梯塔楼"] },
+  { name: "minStoreys", type: "int", min: 1, max: 4, def: "2", doc: ["minimum target storeys for the main building; smaller lots and wings may be shorter; must not exceed maxStoreys", "主楼目标楼层下限；小地块与附楼可更低；不能超过 maxStoreys"] },
+  { name: "maxStoreys", type: "int", min: 1, max: 4, def: "4", doc: ["maximum target storeys for the main building; does not change terrain height or cover", "主楼目标楼层上限；不改变地形高度或掩护"] },
+  { name: "coverage", type: "number", min: 0.35, max: 0.9, def: "0.72", doc: ["building coverage within each visual lot", "每个外观地块的建筑覆盖比例"] },
+  { name: "greenery", type: "number", min: 0, max: 1, def: "0.1", doc: ["decorative vegetation density", "装饰植被密度"] },
+  { name: "equipment", type: "number", min: 0, max: 1, def: "0.65", doc: ["rooftop machinery and service equipment density", "屋顶机械与附属设备密度"] },
+  { name: "facade", type: "enum", values: ["ribbon", "panel", "industrial"], def: "panel", doc: ["wall structure: ribbon windows, panel cladding or industrial frames", "墙面结构：带状窗、面板外墙或工业框架"] }
 ];
 const FIELD_SPECS = {
   manifest: MANIFEST_SPECS,
   faction: FACTION_SPECS,
   terrain: TERRAIN_SPECS,
   cityTerrain: CITY_TERRAIN_SPECS,
+  cityArchitecture: CITY_ARCHITECTURE_SPECS,
   def: DEF_SPECS,
   weapon: WEAPON_SPECS,
   decal: DECAL_SPECS,
@@ -10065,6 +10086,11 @@ function checkField(spec, value, path, issues) {
       return typeof value === "boolean" || bad("must be true or false");
     case "enum":
       return typeof value === "string" && spec.values.includes(value) || bad(`must be one of ${spec.values.join(", ")}`);
+    case "enums":
+      if (!Array.isArray(value) || value.length < (spec.min ?? 1) || value.length > (spec.max ?? spec.values.length))
+        return bad(`must list ${spec.min ?? 1}–${spec.max ?? spec.values.length} distinct choices`);
+      if (new Set(value).size !== value.length) return bad("must not repeat a choice");
+      return value.every((entry) => typeof entry === "string" && spec.values.includes(entry)) || bad(`every choice must be one of ${spec.values.join(", ")}`);
     case "id":
       return typeof value === "string" && ID_RE.test(value) || bad("must be an id: lower case letters, digits, - or _, 2–40 characters");
     case "ids":
@@ -10134,6 +10160,7 @@ function checkField(spec, value, path, issues) {
     case "anims":
     case "wing":
     case "cityTerrain":
+    case "cityArchitecture":
       return isPlainObject$1(value) || bad("must be an object");
     // a rule's own words never stand in a table this checks: `game/ruleSpec.ts` reads them
     default:
@@ -10297,17 +10324,29 @@ function resolveDefinitions(mod, table = VANILLA) {
       let city;
       if (clean.city !== void 0) {
         if (clean.base !== "city") errors.push({ path: `${path}.city`, message: "city materials require base city" });
+        if (clean.city.architecture === null) errors.push({ path: `${path}.city.architecture`, message: "must be an object" });
         const fields = checkObject(clean.city, CITY_TERRAIN_SPECS, `${path}.city`, errors, warnings);
-        for (const color of ["roof", "wall", "window", "lamp"]) {
+        for (const color of ["roof", "wall", "window", "lamp", "accent", "accent2"]) {
           if (fields[color] !== void 0 && !/^#[0-9a-fA-F]{6}$/.test(fields[color]))
             errors.push({ path: `${path}.city.${color}`, message: "must be a #RRGGBB color" });
         }
-        for (const texture of ["roofTexture", "wallTexture", "groundTexture"]) material(fields[texture], `${path}.city.${texture}`);
+        for (const texture of ["roofTexture", "wallTexture", "groundTexture", "signTexture"]) material(fields[texture], `${path}.city.${texture}`);
+        if (fields.architecture !== void 0) {
+          for (const spec of CITY_ARCHITECTURE_SPECS) {
+            if (fields.architecture[spec.name] === null)
+              errors.push({ path: `${path}.city.architecture.${spec.name}`, message: "must not be null; omit the field to use its default" });
+          }
+          const architecture = checkObject(fields.architecture, CITY_ARCHITECTURE_SPECS, `${path}.city.architecture`, errors, warnings);
+          if ((architecture.minStoreys ?? 2) > (architecture.maxStoreys ?? 4))
+            errors.push({ path: `${path}.city.architecture.minStoreys`, message: "must not exceed maxStoreys (defaults: minStoreys 2, maxStoreys 4)" });
+          if (architecture.forms) architecture.forms = Object.freeze([...architecture.forms]);
+          fields.architecture = Object.freeze(architecture);
+        }
         city = Object.freeze(fields);
       }
       if (clean.base === "city") {
         if (clean.texture !== void 0) errors.push({ path: `${path}.texture`, message: "city uses city.roofTexture, wallTexture and groundTexture" });
-        if (!city || Object.keys(city).length === 0) errors.push({ path: `${path}.city`, message: "a city variant needs at least one material or color" });
+        if (!city || Object.keys(city).length === 0) errors.push({ path: `${path}.city`, message: "a city variant needs at least one material, color or architecture" });
       } else if (clean.texture === void 0) errors.push({ path: `${path}.texture`, message: "a flat terrain variant needs a texture" });
       if (errors.length !== before) return;
       cleanTerrains.push(Object.freeze({
@@ -11033,6 +11072,8 @@ function typeLabel(spec) {
   switch (spec.type) {
     case "enum":
       return spec.values.join(" | ");
+    case "enums":
+      return `(${spec.values.join(" | ")})[]`;
     case "text":
       return "text";
     case "number":
@@ -11073,7 +11114,9 @@ function typeLabel(spec) {
     case "terrains":
       return "terrain[]";
     case "cityTerrain":
-      return "{ roof, wall, window, lamp, roofTexture, wallTexture, groundTexture }";
+      return "{ roof, wall, window, lamp, roofTexture, wallTexture, groundTexture, signTexture, accent, accent2, architecture }";
+    case "cityArchitecture":
+      return "{ forms, minStoreys, maxStoreys, coverage, greenery, equipment, facade }";
     case "sprites":
       return "sheet[]";
     case "files":
@@ -11290,13 +11333,21 @@ function agentPrompt() {
   p();
   p('Terrain variants add map-selected appearances without changing terrain numbers, movement, construction, cover or city destruction. Enabling a mod alone never repaints a vanilla map. A map opts in with `"terrainVariants": { "city": "my-mod-city" }`; the editor preserves these bindings in saves and exports. Missing or disabled content renders the ordinary base terrain, even when old images remain cached. A terrain-only pack uses `"defs": []`.');
   p();
-  p("Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep the full rectangular material opaque and seamless; do not include buildings, text, shadows or a transparent cutout in a flat material. A variant can reference only terrain sheets in its own pack.");
+  p("Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep flat materials opaque and seamless, without painted buildings, text, cast shadows or transparent cutouts. `city.signTexture` may instead contain sign artwork. A variant can reference only terrain sheets in its own pack.");
   p();
-  p("#### City materials (`terrains[].city`)");
+  p("#### City appearance (`terrains[].city`)");
   p();
   p(markdownTable(fieldRows("cityTerrain")));
   p();
-  p("A city variant keeps the normal city block geometry and damage states. It supplies at least one color or material; omitted properties keep the ordinary city treatment. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.");
+  p("A city variant supplies colors, materials or a visual architecture kit while preserving city tile collision, cover and destruction rules. Without `architecture`, city geometry stays exactly ordinary. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`, with `signTexture` for architectural signs. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.");
+  p();
+  p("#### City architecture (`terrains[].city.architecture`)");
+  p();
+  p(markdownTable(fieldRows("cityArchitecture")));
+  p();
+  p("The optional kit changes visible building forms, storeys, lot coverage, planting, rooftop equipment and facade treatment. It never changes terrain height, passability or combat. `forms` lists distinct supported forms. Storey bounds use the documented defaults when omitted and must satisfy `minStoreys <= maxStoreys`. The existing damage states still control collapsed buildings and extinguished signs.");
+  p();
+  p("`signTexture` is a 4×4 atlas of 16 square signs in row-major order; a building’s deterministic seed selects one cell. Use equal `fw`/`fh` divisible by 4 (128 recommended), with dark unlit backing and bright lettering or symbols. Pixels whose strongest RGB channel exceeds 120 emit their own color at night. The image is one frame, not a horizontal 16-frame animation strip. Missing sign artwork uses procedural glyphs.");
   p();
   p("### A def (`defs[]`)");
   p();

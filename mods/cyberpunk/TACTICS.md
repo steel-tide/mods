@@ -12,7 +12,7 @@ Use detector raids to open a route for Wraiths, airlift to bypass long ground co
 
 ## Blackout District
 
-The atlas city blocks use graphite roofs, industrial cladding, copper fittings and cyan windows. Streets, city layouts and destruction retain their ordinary behavior. This district requires Steel Tide 0.8.15; ordinary maps keep their own city appearance.
+Blackout District rises in stepped towers, slab blocks and terraces around narrow service courts. Roof machinery, layered facade panels and cyan, amber and coral commercial signs crowd its graphite streets. City movement, road access and destruction follow the usual rules. This district requires Steel Tide 0.8.15; ordinary maps keep their own city appearance.
 
 ## Roster
 
