@@ -78,6 +78,11 @@ for (const folder of folders) {
       if (bytes.length > MAX_SOUND_BYTES) errors.push({ path: `sounds[${i}].file`, message: `${sound.file} is ${(bytes.length / 1024).toFixed(0)} KB; keep a one-shot under 1 MB` });
       if (/\.ogg$/i.test(sound.file)) warnings.push({ path: `sounds[${i}].file`, message: `${sound.file}: OGG does not play on Safari; MP3 plays everywhere` });
     }
+    for (const [i, track] of (mod.music?.tracks ?? []).entries()) {
+      const file = join(folder, track.file);
+      if (!existsSync(file)) { errors.push({ path: `music.tracks[${i}].file`, message: `${track.file} is missing` }); continue; }
+      if (!isAudio(readFileSync(file))) errors.push({ path: `music.tracks[${i}].file`, message: `${track.file} is not an MP3, WAV or OGG` });
+    }
     // the pictures: the registry shows a mod by them, so a published mod has at least one
     const shots = mod.screenshots ?? [];
     if (shots.length === 0) errors.push({ path: 'mod.screenshots', message: 'a published mod carries at least one screenshot of itself in play (4:3, under screenshots/), named here' });

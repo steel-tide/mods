@@ -168,6 +168,7 @@ const DEFS = {
     power: -1,
     hp: 300,
     armor: "medium",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 75,
     turnRate: 4.5,
     vision: 7,
@@ -204,6 +205,7 @@ const DEFS = {
     power: -2,
     hp: 620,
     armor: "heavy",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 60,
     turnRate: 3.6,
     vision: 7,
@@ -220,6 +222,7 @@ const DEFS = {
       speed: 420,
       targets: ["ground", "ship"],
       turret: true,
+      recoil: 1.6,
       muzzleOffset: 35.7,
       splash: 12,
       sound: "cannon"
@@ -243,6 +246,7 @@ const DEFS = {
     power: -4,
     hp: 1900,
     armor: "heavy",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 42,
     turnRate: 2.6,
     vision: 7,
@@ -261,6 +265,7 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { heavy: 1.1, structure: 1 },
       turret: true,
+      recoil: 2,
       muzzleOffset: 40.47,
       bores: 2,
       boreSpacing: 11.05,
@@ -471,8 +476,18 @@ const DEFS = {
       minRange: 4,
       projectile: "rocket",
       speed: 300,
+      // Inclined 2×3 muzzle face: pivot (512,520), columns x414/610,
+      // rows y291/431/584 on the 1024×1536 master. A 20×30 art frame
+      // at scale 1.5625; fire left/right pairs from front to rear.
       targets: ["ground", "ship"],
-      muzzleOffset: 23.4,
+      muzzlePoints: [
+        { forward: 6.988525390625, lateral: -2.99072265625 },
+        { forward: 6.988525390625, lateral: 2.99072265625 },
+        { forward: 2.716064453125, lateral: -2.99072265625 },
+        { forward: 2.716064453125, lateral: 2.99072265625 },
+        { forward: -1.953125, lateral: -2.99072265625 },
+        { forward: -1.953125, lateral: 2.99072265625 }
+      ],
       splash: 48,
       arc: true,
       burst: 8,
@@ -774,8 +789,8 @@ const DEFS = {
     // a pixel, and the length less the two round ends
     body: { r: 11, len: 14 },
     weapons: [w({
-      // the muzzle is 8.3 art px past the ring on `tur.gator` (the tip at a
-      // fifth of the sheet, the ring at three fifths), at the display scale
+      // tur.gator: measured pivot y=1000, muzzle y=300 on the 1536px
+      // master; 700/1536 * 21 art px * 1.5625 display scale
       id: "autocannon",
       cls: "autocannon",
       dmg: 20,
@@ -785,16 +800,15 @@ const DEFS = {
       speed: 520,
       targets: ["ground", "ship"],
       turret: true,
-      muzzleOffset: 13,
+      muzzleOffset: 14.95361328125,
       sound: "autocannon"
     })],
     trail: "tire",
     sprite: "u.gator",
     turretSprite: "tur.gator",
-    // the ring the sheet paints, an art px forward of the frame's centre
-    // (measured at 0.462 of the sheet's height; a body whose turret fires
-    // declares it here, not in the manifest)
-    turretMounts: [{ x: 0, y: -1 }]
+    // Aft ring at (512,880) on the 1024x1536 hull: (880/1536 - .5)*26.
+    // Rendering and firing share this mount; the hull's frame size stays put.
+    turretMounts: [{ x: 0, y: 1.8958333333333333 }]
   },
   // ------------------------------------------------------ the doctrines' own
   //
@@ -1050,9 +1064,9 @@ const DEFS = {
     vision: 10,
     sonar: 9,
     radius: 13,
-    // measured at the ship's display scale (core/metrics.ts): a beam of 42
+    // measured at the ship's display scale (core/metrics.ts): a beam of 46.2
     // world px, over a tile, so it needs two tiles of water abeam
-    body: { r: 21, len: 67.5 },
+    body: { r: 23.1, len: 74.25 },
     weapons: [
       w({
         // The deck gun works the surface; the forward VLS answers the sky.
@@ -1065,7 +1079,7 @@ const DEFS = {
         speed: 420,
         targets: ["ground", "ship"],
         turret: true,
-        muzzleOffset: 14.36,
+        muzzleOffset: 15.796,
         splash: 10,
         sound: "cannon"
       }),
@@ -1084,11 +1098,11 @@ const DEFS = {
         range: 8.5,
         projectile: "missile",
         speed: 430,
-        // Hatch grid centre: 8.2 art px forward at the hull's 2.625 scale.
+        // Hatch grid centre: 8.2 art px forward at the hull's 2.8875 scale.
         targets: ["air"],
         homing: true,
         vertical: true,
-        muzzleOffset: 21.525,
+        muzzleOffset: 23.6775,
         sound: "missile"
       }),
       w({
@@ -1114,6 +1128,7 @@ const DEFS = {
     turretMounts: [{ x: 0, y: -12.2 }]
   },
   // Retained for existing saves and authored scenarios; absent from yard menus.
+  // Ironworks supplies the buildable copy under its own ironworks-orca ID.
   destroyer: {
     id: "destroyer",
     kind: "unit",
@@ -1370,7 +1385,7 @@ const DEFS = {
   seatrans: {
     id: "seatrans",
     kind: "unit",
-    aliases: ["landingcraft", "lst"],
+    aliases: ["landingcraft", "lst", "lcac"],
     domain: "ship",
     tier: 1,
     cost: 220,
@@ -1382,12 +1397,13 @@ const DEFS = {
     speed: 70,
     turnRate: 2.8,
     vision: 8,
-    radius: 13,
-    transportCap: 4,
+    radius: 20,
+    transportCap: 8,
     // a ramp against a beach has more give than a hoist: a tenth more reach
     // to board it, collect with it, and come to the shore it unloads on
     cargoReach: 1.1,
-    body: { r: 10, len: 29 },
+    // The cushion skirt overhangs the firm hull; retain one-tile beach access.
+    body: { r: 14, len: 30 },
     weapons: [],
     trail: "wake",
     sprite: "u.seatrans"
@@ -1777,7 +1793,7 @@ const DEFS = {
   c47: {
     id: "c47",
     kind: "unit",
-    aliases: ["skytrain", "dakota"],
+    aliases: ["condor", "cargoplane", "skytrain", "dakota"],
     domain: "air",
     tier: 2,
     cost: 650,
@@ -1791,7 +1807,8 @@ const DEFS = {
     vision: 9,
     radius: 15,
     altitude: 16,
-    transportCap: 5,
+    transportCap: 4,
+    transportMaxWeight: 2,
     landsForCargo: true,
     weapons: [],
     sprite: "u.c47"
@@ -2781,6 +2798,7 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { heavy: 1.1, structure: 0.6, ship: 1 },
       turret: true,
+      recoil: 1.8,
       muzzleOffset: 29,
       splash: 12,
       sound: "cannon"
@@ -2820,10 +2838,13 @@ const DEFS = {
       speed: 420,
       targets: ["ground", "ship"],
       mult: { heavy: 1.2, structure: 0.6, ship: 1.1 },
+      // Hidden swivel at (464,1100), tips at y20 with 228px separation;
+      // the 928×1712 master is drawn in a 28×52 world-pixel frame.
       turret: true,
-      muzzleOffset: 40,
+      recoil: 2.2,
+      muzzleOffset: 32.8037,
       bores: 2,
-      boreSpacing: 7,
+      boreSpacing: 6.87931,
       splash: 14,
       burst: 2,
       burstDelay: 0.2,
@@ -3010,6 +3031,7 @@ const DEFS = {
     pop: 0,
     hp: 500,
     armor: "structure",
+    impactMaterial: "earth",
     speed: 0,
     turnRate: 0,
     vision: 3,

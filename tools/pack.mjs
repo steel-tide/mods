@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Pack a mod folder into the single-file form the game's "Upload file…"
- * takes — mod.json with every sheet and sound embedded as a data URL:
+ * takes — mod.json with sheets, sounds, music and maps embedded as data URLs:
  *
  *   node tools/pack.mjs mods/my-mod [out.steel-tide-mod]
  *
@@ -13,7 +13,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, dirname, extname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { MOD_FILE_EXT, parseMod } from './steel-tide-mod.mjs';
+import { CUSTOM_MAP_EXT, MOD_FILE_EXT, parseMod } from './steel-tide-mod.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const MIME = { '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.mp3': 'audio/mpeg', '.wav': 'audio/wav', '.ogg': 'audio/ogg' };
@@ -23,9 +23,10 @@ export function packMod(folder) {
   const parsed = parseMod(readFileSync(join(folder, 'mod.json'), 'utf8'));
   if (!parsed.ok) return { ok: false, errors: parsed.errors };
   const files = {};
-  for (const { file } of [...(parsed.mod.sprites ?? []), ...(parsed.mod.sounds ?? [])]) {
+  const assets = [...(parsed.mod.sprites ?? []), ...(parsed.mod.sounds ?? []), ...(parsed.mod.music?.tracks ?? [])].map(({ file }) => file);
+  for (const file of new Set([...assets, ...(parsed.mod.maps ?? [])])) {
     const bytes = readFileSync(join(folder, file));
-    const mime = MIME[extname(file).toLowerCase()] ?? 'application/octet-stream';
+    const mime = file.endsWith(CUSTOM_MAP_EXT) ? 'application/json' : MIME[extname(file).toLowerCase()] ?? 'application/octet-stream';
     files[file] = `data:${mime};base64,${bytes.toString('base64')}`;
   }
   // the screenshots are the pages' business, not the game's: neither the files nor their names travel

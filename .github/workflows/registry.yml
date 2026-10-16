@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 22
       - run: node tools/check.mjs
-      - run: node --test tests/catalog.test.mjs
+      - run: node --test tests/*.test.mjs
 
   index:
     # the release and the index are rebuilt from what is on main, and the index committed back

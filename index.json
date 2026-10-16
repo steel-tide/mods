@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-16T06:52:42.697Z",
+  "generated": "2026-10-16T06:58:44.596Z",
   "mods": [
     {
       "id": "adolence",
@@ -10,7 +10,7 @@
         "Adolence·罪恶之都",
         "Adolence: City of Sin"
       ],
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": "自然常数也有人用? and the Adolence team; port by Steel Tide",
       "description": [
         "The city police and the troops that come to their aid, their cruisers, tanks and helicopters, and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill.",
@@ -22,7 +22,7 @@
       "minGame": "0.8.14",
       "path": "mods/adolence",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/adolence/",
-      "updated": "2026-10-14T19:01:07+08:00",
+      "updated": "2026-10-16T14:58:07+08:00",
       "downloads": 271,
       "screenshots": [
         {
@@ -50,8 +50,8 @@
         {
           "file": "maps/city-of-sin.steel-tide-map",
           "name": "City of Sin",
-          "w": 72,
-          "h": 48,
+          "w": 104,
+          "h": 76,
           "spawns": 2
         }
       ],
@@ -5670,7 +5670,7 @@
         "赛博朋克：断电协议",
         "사이버펑크: 블랙아웃 프로토콜"
       ],
-      "version": "1.2.1",
+      "version": "1.3.3",
       "author": "Steel Tide",
       "description": [
         "An official near-future arsenal: a complete networked war economy, prism weapons, shield formations, covert raids and autonomous carrier wings. Includes the Blackout operation atlas.",
@@ -5678,10 +5678,10 @@
         "공식 근미래 전력 확장: 네트워크 전쟁 경제, 프리즘 무기, 방벽 진형, 은밀한 습격과 자율 함재기 편대. 블랙아웃 작전 지도집 포함."
       ],
       "license": "PolyForm-Noncommercial-1.0.0",
-      "minGame": "0.8.14",
+      "minGame": "0.8.15",
       "path": "mods/cyberpunk",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/cyberpunk/",
-      "updated": "2026-10-14T19:08:13+08:00",
+      "updated": "2026-10-16T14:58:07+08:00",
       "downloads": 15,
       "screenshots": [
         {
@@ -5708,6 +5708,16 @@
           "file": "screenshots/04-blackout.jpg",
           "w": 1600,
           "h": 1200
+        },
+        {
+          "file": "screenshots/05-blackout-district.jpg",
+          "w": 1440,
+          "h": 1080
+        },
+        {
+          "file": "screenshots/06-blackout-night.jpg",
+          "w": 1440,
+          "h": 1080
         }
       ],
       "maps": [
@@ -7126,6 +7136,34 @@
           "frames": 4,
           "w": 768,
           "h": 192
+        },
+        {
+          "key": "ter.cyberpunk-city-roof",
+          "file": "terrain/ter.cyberpunk-city-roof.webp",
+          "frames": 1,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "key": "ter.cyberpunk-city-wall",
+          "file": "terrain/ter.cyberpunk-city-wall.webp",
+          "frames": 1,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "key": "ter.cyberpunk-city-ground",
+          "file": "terrain/ter.cyberpunk-city-ground.webp",
+          "frames": 1,
+          "w": 256,
+          "h": 256
+        },
+        {
+          "key": "ter.cyberpunk-city-signs",
+          "file": "terrain/ter.cyberpunk-city-signs.webp",
+          "frames": 1,
+          "w": 256,
+          "h": 256
         }
       ],
       "sounds": [
@@ -10599,17 +10637,17 @@
         "铁工厂",
         "Ironworks"
       ],
-      "version": "1.1.0",
+      "version": "1.2.0",
       "author": "Steel Tide",
       "description": [
-        "A hover tank with its own art and sound, a turreted bunker, and a fourth level for the power plant line — one of each thing a mod can add.",
-        "一辆自带图像和音效的悬浮坦克、一座带旋转炮塔的碉堡，以及发电厂线的第四级——模组能加的每种东西各一个。",
-        "A hover tank with its own art and sound, a turreted bunker, and a fourth level for the power plant line — one of each thing a mod can add."
+        "Skimmer hover tanks, Orca destroyers, autocannon bunkers and a fusion power upgrade.",
+        "掠行悬浮坦克、虎鲸驱逐舰、机炮碉堡与聚变发电升级。",
+        "스키머 호버 탱크, 오르카 구축함, 기관포 벙커와 핵융합 발전 업그레이드."
       ],
       "license": "CC-BY-4.0",
       "path": "mods/ironworks",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/ironworks/",
-      "updated": "2026-09-19T20:24:28+08:00",
+      "updated": "2026-10-16T14:58:07+08:00",
       "downloads": 109,
       "screenshots": [
         {
@@ -10636,6 +10674,20 @@
             "Skimmer Hover Tank"
           ],
           "sprite": "u.ironworks-hover"
+        },
+        {
+          "id": "ironworks-orca",
+          "kind": "unit",
+          "domain": "ship",
+          "tier": 2,
+          "cost": 700,
+          "name": [
+            "Orca Destroyer",
+            "虎鲸驱逐舰",
+            "오르카 구축함"
+          ],
+          "sprite": "u.ironworks-orca",
+          "turretSprite": "tur.ironworks-orca"
         },
         {
           "id": "ironworks-bunker",
@@ -10689,6 +10741,22 @@
           "rotated": true,
           "w": 341,
           "h": 512
+        },
+        {
+          "key": "u.ironworks-orca",
+          "file": "sprites/u.ironworks-orca.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 800,
+          "h": 1920
+        },
+        {
+          "key": "tur.ironworks-orca",
+          "file": "sprites/tur.ironworks-orca.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 958,
+          "h": 1642
         }
       ],
       "sounds": [
