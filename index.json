@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-15T09:14:21.006Z",
+  "generated": "2026-10-16T06:52:42.697Z",
   "mods": [
     {
       "id": "adolence",
@@ -23,7 +23,7 @@
       "path": "mods/adolence",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/adolence/",
       "updated": "2026-10-14T19:01:07+08:00",
-      "downloads": 260,
+      "downloads": 271,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -2435,7 +2435,7 @@
       "path": "mods/aot-rumbling",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/aot-rumbling/",
       "updated": "2026-09-30T19:04:34+08:00",
-      "downloads": 70,
+      "downloads": 72,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -5682,7 +5682,7 @@
       "path": "mods/cyberpunk",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/cyberpunk/",
       "updated": "2026-10-14T19:08:13+08:00",
-      "downloads": 8,
+      "downloads": 15,
       "screenshots": [
         {
           "file": "covers/blackout-card.webp",
@@ -7199,7 +7199,7 @@
       "path": "mods/fg-rusted-league",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/fg-rusted-league/",
       "updated": "2026-10-14T19:01:07+08:00",
-      "downloads": 111,
+      "downloads": 113,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -10320,7 +10320,7 @@
       "path": "mods/hades-arsenal",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/hades-arsenal/",
       "updated": "2026-10-09T20:42:04+08:00",
-      "downloads": 128,
+      "downloads": 133,
       "screenshots": [
         {
           "file": "screenshots/cover.webp",
@@ -10610,7 +10610,7 @@
       "path": "mods/ironworks",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/ironworks/",
       "updated": "2026-09-19T20:24:28+08:00",
-      "downloads": 102,
+      "downloads": 109,
       "screenshots": [
         {
           "file": "screenshots/skimmers.webp",
@@ -10721,7 +10721,7 @@
       "path": "mods/rusted-expansion",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/rusted-expansion/",
       "updated": "2026-09-20T13:14:42+08:00",
-      "downloads": 98,
+      "downloads": 100,
       "screenshots": [
         {
           "file": "screenshots/armour.webp",
