@@ -1,6 +1,7 @@
 {
   "name": "steel-tide-mods",
   "private": true,
+  "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "description": "The public registry of Steel Tide mods: new units, buildings and upgrade levels, one folder each.",
   "scripts": {

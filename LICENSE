@@ -1,25 +1,47 @@
-MIT License
+Steel Tide Mods — licensing notice
+
+Tooling
+-------
 
 Copyright (c) 2026 Rene Wang
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The registry tooling in tools/, tests/, .github/workflows/ and the package
+scripts is made available under the PolyForm Strict License 1.0.0:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+  LICENSES/PolyForm-Strict-1.0.0.txt
+  https://polyformproject.org/licenses/strict/1.0.0
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This tooling is source available, not open source. PolyForm Strict permits
+use for its specified purposes, including noncommercial use and personal
+study, but does not grant permission to distribute, modify or create new
+works based on the tooling. Uses outside the licence require separate
+permission from the relevant rights holders. Separately licensed components
+and their notices remain governed by their own terms.
 
-This licence covers the tooling in this repository. Each mod under `mods/` is
-published under the licence its own `mod.json` names (CC-BY-4.0 unless it says
-otherwise) and belongs to its author.
+Mods and assets
+---------------
+
+Everything under mods/ is excluded from the tooling licence, including mod
+definitions, scripts, artwork, audio, maps, screenshots and documentation.
+Each mod remains governed by the licence declared in its mod.json and its
+accompanying licence and attribution notices. Its creators and other
+respective rights holders retain ownership. Inclusion in this repository,
+a generated index or a release package does not transfer ownership or
+relicense any mod or asset.
+
+Submission permissions are described in CONTRIBUTING.md. They give the
+registry specific operational permissions without replacing a mod's public
+licence or granting the public additional reuse rights.
+
+Earlier releases
+----------------
+
+The tooling licence change takes effect with the commit introducing this
+notice. It does not revoke permissions already granted for material
+previously released under MIT or another licence. The previous MIT licence
+and copyright notice are retained in LICENSES/MIT-legacy.txt for that
+material; they do not offer MIT as an alternative for new material released
+only under PolyForm Strict. Existing mod licences remain unchanged.
+
+Nothing here limits rights granted by applicable law or GitHub's terms for
+viewing and forking a public repository on GitHub.
