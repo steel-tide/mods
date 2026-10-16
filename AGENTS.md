@@ -26,7 +26,7 @@ One vanilla unit copied and re-tuned. `extends` inherits everything (art, weapon
 ```json
 {
   "format": "steel-tide-mod",
-  "v": 2,
+  "v": 4,
   "id": "bison-ii",
   "name": [
     "Bison II",
@@ -82,7 +82,7 @@ Own art, a defended building, and a fourth level for a vanilla building line:
 ```json
 {
   "format": "steel-tide-mod",
-  "v": 2,
+  "v": 4,
   "id": "ironworks",
   "name": [
     "Ironworks",
@@ -217,14 +217,16 @@ Own art, a defended building, and a fourth level for a vanilla building line:
 
 ## Fields
 
-Anything not in these tables is ignored with a warning. Numbers outside the stated range are errors.
+Unknown ordinary fields produce a warning. Format-3 extension objects reject unknown fields and unsupported combinations. Numbers outside the stated range are errors.
 
 ### mod.json (top level)
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
+| `requiredCapabilities` | capability id[] |  |  | Required package-provided capability IDs |
+| `extensionPackages` | { id, version, api, capabilities, schema, runtime, presentation? }[] |  |  | Versioned extension packages with SHA-256 verified schema, simulation and optional presentation modules (format 4) |
 | `format` | string | yes |  | always "steel-tide-mod" |
-| `v` | integer 1–2 | yes |  | format version: 1 remains supported; factions and headquarters require 2 |
+| `v` | integer 1–4 | yes |  | format version: 1 remains supported; factions and headquarters require 2; capability data requires 3; executable extension packages require 4 |
 | `id` | id | yes |  | the mod's id: lower case, letters, digits, `-`; also its folder in the registry |
 | `name` | text | yes |  | the name shown in the mod list |
 | `version` | string | yes |  | e.g. `1.0.0`; the game offers an update when the registry's is newer |
@@ -245,6 +247,17 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 | `files` | { path: dataURL } |  |  | single-file form only: the sheets, sounds, music and maps, embedded as data URLs by path |
 
 `name`, `description` and every `desc`/`name` on a def are *text*: a string (used for every language), `["English", "中文", "한국어"]` in that order, or `{ "en": "…", "zh": "…", "ko": "…" }`. Only English is required; a language left out reads as English.
+
+### Extension packages (format 4)
+
+Format 4 packs carry `extensionPackages`: versioned, SHA-256 verified schema, simulation and optional presentation code. The engine provides host API version 1 and no built-in gameplay capability catalog. Declare package-provided IDs in `requiredCapabilities`, then put their data under `extensions[id]`. Only content which requests extensions prepares the optional host. Extension code is executable trusted code, not sandboxed data.
+Executable packages require `v:4`. Formats 1 and 2 and ordinary format 3 data remain supported; former built-in capability packs need compatible implementations embedded in format 4. A missing/unsupported capability rejects activation. Vanilla keeps its ordinary simulation; optional state and update work belong to the enabled match. The shared combined-arms package requires complete non-empty `[en, zh, ko]` label tuples and accepts the fixed data policies its own schema defines.
+
+Read [components, protection, crew, ammunition and services](https://github.com/steel-tide/mods/blob/main/docs/engine-compatibility/M1-M2-AUTHORING.md) and [sensors, guidance, mounts and deployment](https://github.com/steel-tide/mods/blob/main/docs/engine-compatibility/SENSORS-ARTICULATION-V1.md) for the exact accepted fields, bounds, defaults, units, actions and explicit omissions. [Runnable study fixtures](https://github.com/steel-tide/mods/tree/main/docs/engine-compatibility/fixtures) are isolated acceptance examples, not full source-mod ports.
+
+For locally chosen content, game/API consumers must `await prepareContentSchema(raw, true)` before synchronously calling `parseDefinitionPack(raw)` or `parseMod(raw)` on capability-bearing content; await `prepareContentCapabilities(packs)` before opening a match. For a world, prepare its embedded packs by passing the raw world to `prepareContentSchema`. Registry tooling likewise explicitly approves local files. Network inputs use `prepareContentSchema(raw)` and cannot approve unknown code. Read the extension framework guide in the mod repository for package ownership, trust and SDK details. Never ignore a schema or capability loading failure.
+
+The shared inspection model exposes private state and available actions only to authorized viewers. Actions go through `contentAction` and the ordinary commands/orders gateway. The CLI exposes the same interface with `steel content-action <units> <module> <action> [--choice id] [--target id] [--at x,y]`. Port only source combinations the contract represents faithfully; omit and document unsupported behavior.
 
 ### A faction (`factions[]`, format 2)
 
@@ -310,6 +323,7 @@ The optional kit changes visible building forms, storeys, lot coverage, planting
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
+| `extensions` | { capability: configuration } |  |  | Configuration keyed by a required engine capability (format 3) |
 | `isHQ` | boolean | buildings only |  | a headquarters: holds territory and production slots, follows the ordinary HQ loss and sale rules; format 2 |
 | `id` | id | yes |  | unique across every mod and the vanilla roster; prefix a generic word with your mod's id |
 | `name` | text | yes |  | as the HUD shows it |
@@ -327,7 +341,7 @@ The optional kit changes visible building forms, storeys, lot coverage, planting
 | `directionalArmor` | { front, side, rear } | units only |  | ground hull direct-hit multipliers `{front, side, rear}`, each 0–10; 90° front/rear arcs and 90° on each side. Arc fire, collateral blasts, mines and fire ignore facing. Enables slow reversing for short moves behind the hull |
 | `speed` | number 0–1000 | units only | 60 | world px/s (a tile is 32) |
 | `turnRate` | number 0–50 | units only | 3.5 | rad/s |
-| `vision` | number 0–64 |  | 8 | sight, in tiles |
+| `vision` | number 0–64 |  | 8 | sight, in tiles; rounded to the nearest whole tile when activated |
 | `radius` | number 1–200 |  | 9, or the footprint | collision radius, world px, and the *combat* yardstick: range, splash and hits are measured to it |
 | `body` | { r, len } | units only | the circle of `radius` | the room the hull takes up when units push each other apart, world px: `r` its half-width, `len` its length less the two round ends. A long hull is what a circle cannot say. A ship whose beam (`r` twice) is over a tile (32) needs that many tiles of water abeam, rounded up: it never enters a channel narrower than itself |
 | `weapons` | weapon[] |  | [] | the weapons (see below); an empty list is unarmed |
@@ -404,6 +418,7 @@ An `upgradeOf` def becomes upgrade-only (never placed directly): the named build
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
+| `extensions` | { capability: configuration } |  |  | Optional engine weapon configuration (format 3) |
 | `id` | string |  | w1, w2… | a name for the weapon |
 | `cls` | mg \| autocannon \| cannon \| at \| he \| rocket \| navgun \| ashm \| torpedo \| aa | yes |  | what it was built to kill; picks its row of the armour matrix |
 | `dmg` | number 0–100000 | yes |  | damage per hit |
@@ -919,8 +934,8 @@ A mod may carry maps: files the game's Scenario Editor exports (`.steel-tide-map
 
 1. Validate: in a clone of the registry, `node tools/check.mjs path/to/my-mod` prints every error with its path into mod.json. (No clone? The game says the same things when the mod is loaded.)
 2. Load it in the game: Settings → Mods → *Open folder…* (Chrome keeps the folder open, so *Reload* re-reads your edits) or *Upload file…* (a zip of the folder, or a `.steel-tide-mod` file). Errors are listed on the spot; a loaded mod says how many units and buildings it added.
-3. Play: start a Conquest match. Your units are in the factory's production list from the level you gave them; buildings are in the engineer's build menu; an upgrade level is on its building's Upgrade button. The console (backquote) has `give <id>` for anything. Mods apply to Conquest and the campaign; a networked match is always unmodded.
-4. From a static server: `npx serve --cors path/to/my-mod` then open `https://play.steelti.de/?mod=http://localhost:3000/` — the mod is fetched at every boot, so a page reload picks up an edit.
+3. Play: start a Conquest match. Your units are in the factory's production list from the level you gave them; buildings are in the engineer's build menu; an upgrade level is on its building's Upgrade button. The console (backquote) has `give <id>` for anything. Network players need matching packs and support for their required host API.
+4. From a static server: `npx serve --cors path/to/my-mod` then open `https://play.steelti.de/?mod=http://localhost:3000/`. Data-only mods refresh at boot. Executable packages require an explicit local install first, and changed package code needs an explicit reload.
 
 ## Publish
 

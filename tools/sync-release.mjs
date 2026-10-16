@@ -20,12 +20,13 @@
  */
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { dirname, join, resolve } from 'node:path';
+import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { packMod } from './pack.mjs';
 import { MOD_FILE_EXT, MOD_REGISTRY_RELEASE, MOD_REGISTRY_REPO } from './steel-tide-mod.mjs';
+import { registryModFolders } from './registry-folders.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
@@ -69,10 +70,10 @@ const upload = (file) => gh('release', 'upload', MOD_REGISTRY_RELEASE, file, '--
 const remove = (name) => gh('release', 'delete-asset', MOD_REGISTRY_RELEASE, name, '--repo', MOD_REGISTRY_REPO, '--yes');
 
 const counts = {};
-const ids = readdirSync(modsDir).filter((d) => statSync(join(modsDir, d)).isDirectory() && existsSync(join(modsDir, d, 'mod.json'))).sort();
+const ids = registryModFolders(root).filter((folder) => existsSync(join(folder, 'mod.json'))).map((folder) => basename(folder));
 const packedNames = new Set();
 for (const id of ids) {
-  const packed = packMod(join(modsDir, id));
+  const packed = await packMod(join(modsDir, id));
   if (!packed.ok || packed.mod.id !== id) {
     console.warn(`skipping mods/${id}: ${packed.ok ? 'id does not match the folder' : 'does not validate'}`);
     continue;

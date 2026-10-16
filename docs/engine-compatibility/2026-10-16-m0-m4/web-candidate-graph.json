@@ -1,0 +1,1508 @@
+[
+  {
+    "file": "assets/index-BHU0W7JC.css",
+    "type": "asset",
+    "bytes": 315554
+  },
+  {
+    "file": "assets/contentHud-B7N1624o.css",
+    "type": "asset",
+    "bytes": 569
+  },
+  {
+    "file": "assets/index-BaWJWzjR.js",
+    "type": "chunk",
+    "entry": true,
+    "imports": [],
+    "dynamicImports": [
+      "assets/schema-BJPDQGfV.js",
+      "assets/components-tnvqvECT.js",
+      "assets/logistics-CyhV_nCc.js",
+      "assets/sensors-C08WS8F1.js",
+      "assets/articulation-qT0Tu8Ld.js",
+      "assets/runtime-BGS2DB0S.js",
+      "assets/chatFilter-BUb2o6j6.js",
+      "assets/contentHud-CrAzCuB5.js",
+      "assets/contentRenderer-Dzbdfk8d.js",
+      "assets/contentInput-uxYaKVpk.js",
+      "assets/analytics-DyCc9qyV.js",
+      "assets/campaignSelect-D-dNT1pX.js",
+      "assets/sandbox-DAxuyJz-.js",
+      "assets/sandbox-DAxuyJz-.js",
+      "assets/menu-CFJNk1bG.js",
+      "assets/loadgame-pYHRIkJt.js",
+      "assets/menu-CFJNk1bG.js",
+      "assets/multiplayer-CkSr33eO.js",
+      "assets/arsenal-CTKb59W9.js",
+      "assets/profile-BFZxfoLp.js",
+      "assets/arsenal-CTKb59W9.js",
+      "assets/store-ChkxzOWR.js",
+      "assets/menu-CFJNk1bG.js",
+      "assets/worldLibrary-Hu6uTv_z.js",
+      "assets/menu-CFJNk1bG.js",
+      "assets/multiplayer-CkSr33eO.js",
+      "assets/menu-CFJNk1bG.js"
+    ],
+    "bytes": 2110984,
+    "modules": [
+      "\u0000vite/modulepreload-polyfill.js",
+      "game/core/index.html?html-proxy&inline-css&index=0.css",
+      "\u0000vite/preload-helper.js",
+      "game/core/src/ui/styles.css",
+      "game/core/src/core/strings.ts",
+      "game/core/src/core/i18n.ts",
+      "game/core/src/core/music.ts",
+      "game/core/src/core/impactSounds.ts",
+      "game/core/src/core/voice.ts",
+      "game/core/src/game/defs.ts",
+      "game/core/src/core/unitVoice.ts",
+      "game/core/src/core/commentaryStream.ts",
+      "game/core/src/core/commentaryPcm.ts",
+      "game/core/src/core/audio.ts",
+      "game/core/src/gfx/px.ts",
+      "game/core/src/gfx/spriteAlpha.ts",
+      "game/core/src/gfx/palette.ts",
+      "game/core/src/core/math.ts",
+      "game/core/src/core/metrics.ts",
+      "game/core/src/gfx/wreck.ts",
+      "game/core/src/gfx/atlas.ts",
+      "game/core/src/gfx/art/common.ts",
+      "game/core/src/gfx/art/vehicles.ts",
+      "game/core/src/gfx/art/ships.ts",
+      "game/core/src/gfx/art/aircraft.ts",
+      "game/core/src/core/rng.ts",
+      "game/core/src/gfx/art/buildings.ts",
+      "game/core/src/gfx/art/decor.ts",
+      "game/core/src/gfx/art/effects.ts",
+      "game/core/src/game/advancedHQ.ts",
+      "game/core/src/core/types.ts",
+      "game/core/src/game/cityDamage.ts",
+      "game/core/src/game/biomes.ts",
+      "game/core/src/game/map.ts",
+      "game/core/src/game/decor.ts",
+      "game/core/src/game/entityMap.ts",
+      "game/core/src/game/transport.ts",
+      "game/core/src/game/ammo.ts",
+      "game/core/src/core/clone.ts",
+      "game/core/src/game/extensions/contracts.ts",
+      "game/core/src/game/contentSchema.ts",
+      "game/core/src/core/menuBackground.ts",
+      "game/core/src/game/abilityDefs.ts",
+      "game/core/src/game/ruleState.ts",
+      "game/core/src/game/veterancy.ts",
+      "game/core/src/game/tech.ts",
+      "game/core/src/game/contentTerrain.ts",
+      "game/core/src/game/ruleSpec.ts",
+      "game/core/src/game/contentDefs.ts",
+      "game/core/src/game/weather.ts",
+      "game/core/src/game/rle.ts",
+      "game/core/src/game/profile.ts",
+      "game/core/src/game/state.ts",
+      "game/core/src/game/attackArea.ts",
+      "game/core/src/game/elevation.ts",
+      "game/core/src/core/gridLine.ts",
+      "game/core/src/game/bridgeLayout.ts",
+      "game/core/src/game/amphibiousBridgePath.ts",
+      "game/core/src/game/path.ts",
+      "game/core/src/game/surface.ts",
+      "game/core/src/game/power.ts",
+      "game/core/src/game/abilities.ts",
+      "game/core/src/game/armor.ts",
+      "game/core/src/game/move.ts",
+      "game/core/src/game/turrets.ts",
+      "game/core/src/game/warheads.ts",
+      "game/core/src/game/factions.ts",
+      "game/core/src/game/conquest.ts",
+      "game/core/src/game/world.ts",
+      "game/core/src/game/worldShapeValidation.ts",
+      "game/core/src/game/customMap.ts",
+      "game/core/src/game/worldValidation.ts",
+      "game/core/src/game/worldRuntime.ts",
+      "game/core/src/game/vision.ts",
+      "game/core/src/game/pins.ts",
+      "game/core/src/game/targetPriority.ts",
+      "game/core/src/game/formation.ts",
+      "game/core/src/game/protect.ts",
+      "game/core/src/game/repairAura.ts",
+      "game/core/src/game/idleWork.ts",
+      "game/core/src/game/unitTally.ts",
+      "game/core/src/game/modRules.ts",
+      "game/core/src/game/fireControl.ts",
+      "game/core/src/game/wings.ts",
+      "game/core/src/game/ai.ts",
+      "game/core/src/game/aiMap.ts",
+      "game/core/src/game/aiIntel.ts",
+      "game/core/src/game/breakthrough.ts",
+      "game/core/src/game/nukeAim.ts",
+      "game/core/src/game/aiTactics.ts",
+      "game/core/src/game/aiTech.ts",
+      "game/core/src/game/aiPockets.ts",
+      "game/core/src/game/aiNaval.ts",
+      "game/core/src/game/aiBrain.ts",
+      "game/core/src/game/autopilot.ts",
+      "game/core/src/game/terrainChange.ts",
+      "game/core/src/game/earthMaps.ts",
+      "game/core/src/game/taihangChart.ts",
+      "game/core/src/game/taihangMap.ts",
+      "game/core/src/game/dig.ts",
+      "game/core/src/game/contentCapabilities.ts",
+      "game/core/src/game/contentGame.ts",
+      "game/core/src/game/commander.ts",
+      "game/core/src/game/skins.ts",
+      "game/core/src/game/decals.ts",
+      "game/core/src/campaign/missions.ts",
+      "game/core/src/game/openRange.ts",
+      "game/core/src/game/sichuanGeography.ts",
+      "game/core/src/game/sichuanMap.ts",
+      "game/core/src/game/conquestMaps.ts",
+      "game/core/src/game/mapdefs.ts",
+      "game/core/src/game/save.ts",
+      "game/core/src/game/teams.ts",
+      "game/core/src/game/sim.ts",
+      "game/core/src/game/script.ts",
+      "game/core/src/game/orders.ts",
+      "game/core/src/game/longHaul.ts",
+      "game/core/src/game/hqContacts.ts",
+      "game/core/src/game/jamming.ts",
+      "game/core/src/game/impactMaterial.ts",
+      "game/core/src/game/combat.ts",
+      "game/core/src/gfx/art/ruins.ts",
+      "game/core/src/gfx/art/pumpjack.ts",
+      "game/core/src/gfx/art/skins.ts",
+      "game/core/src/gfx/art/landmarks.ts",
+      "game/core/src/gfx/art/longHaul.ts",
+      "game/core/src/gfx/art/flags.ts",
+      "game/core/src/gfx/art/fieldKit.ts",
+      "game/core/src/gfx/art/materials.ts",
+      "game/core/src/gfx/art/groundMarks.ts",
+      "game/core/src/gfx/art/terrain.ts",
+      "game/core/src/gfx/spriteLoader.ts",
+      "game/core/src/ui/scrollFade.ts",
+      "game/core/src/ui/icons.ts",
+      "game/core/src/ui/dropdown.ts",
+      "game/core/src/core/controls.ts",
+      "game/core/src/ui/keys.ts",
+      "game/core/src/ui/dialogs.ts",
+      "game/core/src/ui/curtain.ts",
+      "game/core/src/render/camera.ts",
+      "game/core/src/ui/mapEntryGeometry.ts",
+      "game/core/src/core/designSystem.ts",
+      "game/core/src/core/terrainColors.ts",
+      "game/core/src/ui/battleMap.ts",
+      "game/core/src/ui/minimap.ts",
+      "game/core/src/ui/mapEntry.ts",
+      "game/core/src/ui/documentTitle.ts",
+      "game/core/src/ui/screens.ts",
+      "game/core/src/core/merit.ts",
+      "game/core/src/core/achievements.ts",
+      "game/core/src/core/reviews.ts",
+      "game/core/src/core/downloadRegistry.ts",
+      "game/core/src/core/commentaryModels.ts",
+      "game/core/src/core/graphics.ts",
+      "game/core/src/core/storage.ts",
+      "game/core/src/core/shell.ts",
+      "game/core/src/core/platform.ts",
+      "game/core/src/core/graphicsDevice.ts",
+      "game/core/src/render/shake.ts",
+      "game/core/src/core/analytics.ts",
+      "game/core/src/net/moderation.ts",
+      "game/core/src/ui/settingsState.ts",
+      "game/core/src/ui/rotateHint.ts",
+      "game/core/src/ui/cursorSkin.ts",
+      "game/core/src/ui/tips.ts",
+      "game/core/src/ui/scrollbar.ts",
+      "game/core/src/render/gamepad.ts",
+      "game/core/src/ui/inputMode.ts",
+      "game/core/src/render/padMath.ts",
+      "game/core/src/ui/tabs.ts",
+      "game/core/src/ui/padFocus.ts",
+      "game/core/src/ui/padGlyphs.ts",
+      "game/core/src/ui/padHints.ts",
+      "game/core/src/ui/padDriver.ts",
+      "game/core/src/pwa/register.ts",
+      "game/core/src/ui/updateField.ts",
+      "game/core/src/ui/launchUpdate.ts",
+      "game/core/src/core/shellFloor.ts",
+      "game/core/src/core/site.ts",
+      "game/core/src/ui/shellFloor.ts",
+      "game/core/src/ui/missingFiles.ts",
+      "game/core/src/ui/creditLogos.ts",
+      "game/core/src/core/dataUrl.ts",
+      "game/core/src/game/content.ts",
+      "game/core/src/content/menuBackground.ts",
+      "game/core/src/ui/contentPresentation.ts",
+      "game/core/src/ui/menuCuts.ts",
+      "game/core/src/ui/contentMenuCuts.ts",
+      "game/core/src/render/bakeQueue.ts",
+      "game/core/src/render/lcd.ts",
+      "game/core/src/render/perfSession.ts",
+      "game/core/src/render/airDrawOrder.ts",
+      "game/core/src/render/cargoLayout.ts",
+      "game/core/src/render/groundDrawOrder.ts",
+      "game/core/src/render/decalMounts.ts",
+      "game/core/src/render/sun.ts",
+      "game/core/src/render/buildingShadows.ts",
+      "game/core/src/render/atlasWarm.ts",
+      "game/core/src/render/visualRandom.ts",
+      "game/core/src/render/smokeScreen.ts",
+      "game/core/src/render/groundBlend.ts",
+      "game/core/src/render/roadMarks.ts",
+      "game/core/src/render/bridges.ts",
+      "game/core/src/gfx/spriteContour.ts",
+      "game/core/src/render/buildingOverflow.ts",
+      "game/core/src/render/buildingDestruction.ts",
+      "game/core/src/render/flightScale.ts",
+      "game/core/src/render/unitDecals.ts",
+      "game/core/src/render/hullPose.ts",
+      "game/core/src/render/modLooks.ts",
+      "game/core/src/render/edgeHints.ts",
+      "game/core/src/render/mapBackdrop.ts",
+      "game/core/src/render/wind.ts",
+      "game/core/src/render/contrails.ts",
+      "game/core/src/render/hullRipples.ts",
+      "game/core/src/render/trails.ts",
+      "game/core/src/render/groundCover.ts",
+      "game/core/src/render/materialEdges.ts",
+      "game/core/src/render/shoreline.ts",
+      "game/core/src/render/terrainVariants.ts",
+      "game/core/src/render/terrainTexture.ts",
+      "game/core/src/render/groundArt.ts",
+      "game/core/src/render/shoreFoam.ts",
+      "game/core/src/render/shorePaint.ts",
+      "game/core/src/render/groundChunk.ts",
+      "game/core/src/render/groundBakes.ts",
+      "game/core/src/render/obstacleTerrain.ts",
+      "game/core/src/render/cliffContours.ts",
+      "game/core/src/render/mountainCountry.ts",
+      "game/core/src/render/mountainPlants.ts",
+      "game/core/src/render/cityLayout.ts",
+      "game/core/src/render/cityArt.ts",
+      "game/core/src/render/bridgeTileArt.ts",
+      "game/core/src/render/obstacleArt.ts",
+      "game/core/src/render/weather.ts",
+      "game/core/src/render/lights.ts",
+      "game/core/src/render/fireflies.ts",
+      "game/core/src/render/soar.ts",
+      "game/core/src/render/eagles.ts",
+      "game/core/src/render/zeppelin.ts",
+      "game/core/src/render/sunken.ts",
+      "game/core/src/render/gulls.ts",
+      "game/core/src/render/birds.ts",
+      "game/core/src/render/rotors.ts",
+      "game/core/src/render/rolling.ts",
+      "game/core/src/render/clouds.ts",
+      "game/core/src/render/longHaul.ts",
+      "game/core/src/render/rumour.ts",
+      "game/core/src/render/lamp.ts",
+      "game/core/src/game/lamp.ts",
+      "game/core/src/render/chimneys.ts",
+      "game/core/src/render/effectSmoke.ts",
+      "game/core/src/render/muzzleSmoke.ts",
+      "game/core/src/render/recoil.ts",
+      "game/core/src/render/heatHaze.ts",
+      "game/core/src/render/rainRipples.ts",
+      "game/core/src/render/snowCover.ts",
+      "game/core/src/render/navlights.ts",
+      "game/core/src/render/beacons.ts",
+      "game/core/src/render/designator.ts",
+      "game/core/src/render/pins.ts",
+      "game/core/src/render/priorityTargets.ts",
+      "game/core/src/render/hqContacts.ts",
+      "game/core/src/game/walls.ts",
+      "game/core/src/render/thermal.ts",
+      "game/core/src/render/terrainComposite.ts",
+      "game/core/src/core/mapCoordinates.ts",
+      "game/core/src/render/warheadSight.ts",
+      "game/core/src/render/renderer.ts",
+      "game/core/src/ui/menuScene.ts",
+      "game/core/src/ui/credits.ts",
+      "game/core/src/core/zip.ts",
+      "game/core/src/game/mods.ts",
+      "game/core/src/mods/registry.ts",
+      "game/core/src/content/sprites.ts",
+      "game/core/src/content/sounds.ts",
+      "game/core/src/content/music.ts",
+      "game/core/src/core/idb.ts",
+      "game/core/src/mods/store.ts",
+      "game/core/src/content/manager.ts",
+      "game/core/src/main.ts",
+      "game/core/index.html"
+    ]
+  },
+  {
+    "file": "assets/analytics-DyCc9qyV.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 3189,
+    "modules": [
+      "game/core/src/analytics.ts"
+    ]
+  },
+  {
+    "file": "assets/campaignSelect-D-dNT1pX.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/gamescreen-32MM9-MO.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/menu-CFJNk1bG.js",
+      "assets/stage-DgkGx1J_.js",
+      "assets/stripArrows-D7daoIrb.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/input-33m2Tauh.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/storeReview-Cr2jxzhc.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/frames-SGKrx15Y.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/slider-l33jrX0O.js",
+      "assets/topRow-CBUaLCqY.js",
+      "assets/screenshot-D6q-WNIB.js"
+    ],
+    "dynamicImports": [
+      "assets/sandbox-DAxuyJz-.js"
+    ],
+    "bytes": 10073,
+    "modules": [
+      "game/core/src/ui/konami.ts",
+      "game/core/src/ui/campaignSelect.ts"
+    ]
+  },
+  {
+    "file": "assets/sandbox-DAxuyJz-.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/gamescreen-32MM9-MO.js",
+      "assets/mapPicker-JL-Z20Aq.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/seatMap-BbngNkT0.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/input-33m2Tauh.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/storeReview-Cr2jxzhc.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/frames-SGKrx15Y.js",
+      "assets/topRow-CBUaLCqY.js",
+      "assets/screenshot-D6q-WNIB.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [
+      "assets/loadgame-pYHRIkJt.js"
+    ],
+    "bytes": 20406,
+    "modules": [
+      "game/core/src/ui/sandbox.ts"
+    ]
+  },
+  {
+    "file": "assets/multiplayer-CkSr33eO.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/gamescreen-32MM9-MO.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/mapPicker-JL-Z20Aq.js",
+      "assets/seatMap-BbngNkT0.js",
+      "assets/stage-DgkGx1J_.js",
+      "assets/loadgame-pYHRIkJt.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/input-33m2Tauh.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/storeReview-Cr2jxzhc.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/frames-SGKrx15Y.js",
+      "assets/topRow-CBUaLCqY.js",
+      "assets/screenshot-D6q-WNIB.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [
+      "assets/localHost-D_xML-lQ.js"
+    ],
+    "bytes": 56772,
+    "modules": [
+      "game/core/src/ui/requiredMods.ts",
+      "game/core/src/ui/serverSettings.ts",
+      "game/core/src/ui/multiplayer.ts"
+    ]
+  },
+  {
+    "file": "assets/seatMap-BbngNkT0.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/gamescreen-32MM9-MO.js",
+      "assets/mapPicker-JL-Z20Aq.js",
+      "assets/hub-BW1zMToV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 9045,
+    "modules": [
+      "game/core/src/ui/seatMap.ts"
+    ]
+  },
+  {
+    "file": "assets/loadgame-pYHRIkJt.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/gamescreen-32MM9-MO.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/input-33m2Tauh.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/storeReview-Cr2jxzhc.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/frames-SGKrx15Y.js",
+      "assets/topRow-CBUaLCqY.js",
+      "assets/screenshot-D6q-WNIB.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 3734,
+    "modules": [
+      "game/core/src/ui/loadgame.ts"
+    ]
+  },
+  {
+    "file": "assets/arsenal-CTKb59W9.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/fieldPreview-DjgC9Jcz.js",
+      "assets/servers-r-sSSpXt.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 19192,
+    "modules": [
+      "game/core/src/ui/armorInfo.ts",
+      "game/core/src/ui/fieldManual.ts",
+      "game/core/src/ui/wardrobe.ts",
+      "game/core/src/ui/arsenal.ts"
+    ]
+  },
+  {
+    "file": "assets/profile-BFZxfoLp.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/fieldPreview-DjgC9Jcz.js",
+      "assets/servers-r-sSSpXt.js"
+    ],
+    "dynamicImports": [
+      "assets/arsenal-CTKb59W9.js",
+      "assets/profilePoster-itpSOro0.js"
+    ],
+    "bytes": 9365,
+    "modules": [
+      "game/core/src/ui/badge.ts",
+      "game/core/src/ui/achievements.ts",
+      "game/core/src/ui/profile.ts"
+    ]
+  },
+  {
+    "file": "assets/store-ChkxzOWR.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/stage-DgkGx1J_.js",
+      "assets/fieldPreview-DjgC9Jcz.js",
+      "assets/stripArrows-D7daoIrb.js",
+      "assets/servers-r-sSSpXt.js"
+    ],
+    "dynamicImports": [
+      "assets/arsenal-CTKb59W9.js"
+    ],
+    "bytes": 13883,
+    "modules": [
+      "game/core/src/ui/storeItems.ts",
+      "game/core/src/ui/store.ts"
+    ]
+  },
+  {
+    "file": "assets/fieldPreview-DjgC9Jcz.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hub-BW1zMToV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 7436,
+    "modules": [
+      "game/core/src/ui/fieldPreview.ts"
+    ]
+  },
+  {
+    "file": "assets/worldLibrary-Hu6uTv_z.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/gamescreen-32MM9-MO.js",
+      "assets/stage-DgkGx1J_.js",
+      "assets/stripArrows-D7daoIrb.js"
+    ],
+    "dynamicImports": [
+      "assets/menu-CFJNk1bG.js",
+      "assets/worldEditor-TcTNTBBJ.js",
+      "assets/multiplayer-CkSr33eO.js"
+    ],
+    "bytes": 19242,
+    "modules": [
+      "game/core/src/core/worldFavorites.ts",
+      "game/core/src/game/worldRegistry.ts",
+      "game/core/src/core/mapPublish.ts",
+      "game/core/src/core/worldCommunity.ts",
+      "game/core/src/game/worldCover.ts",
+      "game/core/src/ui/worldCover.ts",
+      "game/core/src/ui/worldLibrary.ts"
+    ]
+  },
+  {
+    "file": "assets/gamescreen-32MM9-MO.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/input-33m2Tauh.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/storeReview-Cr2jxzhc.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/topRow-CBUaLCqY.js"
+    ],
+    "dynamicImports": [
+      "assets/worldLibrary-Hu6uTv_z.js",
+      "assets/areaMarks-Dgb_kYtT.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/guidePanel-BZ7Lp4Bp.js",
+      "assets/loadgame-pYHRIkJt.js",
+      "assets/loadgame-pYHRIkJt.js",
+      "assets/menu-CFJNk1bG.js",
+      "assets/multiplayer-CkSr33eO.js"
+    ],
+    "bytes": 113227,
+    "modules": [
+      "game/core/src/ui/mapPreview.ts",
+      "game/core/src/ui/conduct.ts",
+      "game/core/src/ui/console.ts",
+      "game/core/src/ui/wasted.ts",
+      "game/core/src/ui/respects.ts",
+      "game/core/src/core/frameClock.ts",
+      "game/core/src/ui/gameFrameLoop.ts",
+      "game/core/src/game/ranking.ts",
+      "game/core/src/ui/ranking.ts",
+      "game/core/src/ui/guide.ts",
+      "game/core/src/ui/storeMarks.ts",
+      "game/core/src/ui/awayNotice.ts",
+      "game/core/src/ui/touchStick.ts",
+      "game/core/src/ui/touchHelm.ts",
+      "game/core/src/ui/touchControls.ts",
+      "game/core/src/ui/quickSelect.ts",
+      "game/core/src/ui/radialMenu.ts",
+      "game/core/src/render/padController.ts",
+      "game/core/src/ui/saveSlots.ts",
+      "game/core/src/ui/mouseGlyph.ts",
+      "game/core/src/ui/actionHints.ts",
+      "game/core/src/ui/gamescreen.ts"
+    ]
+  },
+  {
+    "file": "assets/storeReview-Cr2jxzhc.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1277,
+    "modules": [
+      "game/core/src/ui/storeReview.ts"
+    ]
+  },
+  {
+    "file": "assets/stripArrows-D7daoIrb.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1436,
+    "modules": [
+      "game/core/src/ui/stripArrows.ts"
+    ]
+  },
+  {
+    "file": "assets/stage-DgkGx1J_.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 2223,
+    "modules": [
+      "game/core/src/ui/stage.ts"
+    ]
+  },
+  {
+    "file": "assets/hub-BW1zMToV.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/servers-r-sSSpXt.js"
+    ],
+    "dynamicImports": [
+      "assets/multiplayer-CkSr33eO.js",
+      "assets/multiplayer-CkSr33eO.js",
+      "assets/multiplayer-CkSr33eO.js",
+      "assets/menu-CFJNk1bG.js",
+      "assets/arsenal-CTKb59W9.js",
+      "assets/worldLibrary-Hu6uTv_z.js",
+      "assets/store-ChkxzOWR.js",
+      "assets/profile-BFZxfoLp.js",
+      "assets/settingsPage-DCInjmyQ.js",
+      "assets/replayLibrary-Cl9XjgT0.js"
+    ],
+    "bytes": 55139,
+    "modules": [
+      "game/core/src/net/matchmaking.ts",
+      "game/core/src/ui/commanderName.ts",
+      "game/core/src/ui/matchmaking.ts",
+      "game/core/src/game/bundles.ts",
+      "game/core/src/ui/career.ts",
+      "game/core/src/ui/skeleton.ts",
+      "game/core/src/ui/clipboard.ts",
+      "game/core/src/ui/community.ts",
+      "game/core/src/core/redeemCode.ts",
+      "game/core/src/game/roster.ts",
+      "game/core/src/ui/roster.ts",
+      "game/core/src/ui/itemArt.ts",
+      "game/core/src/ui/storeOffer.ts",
+      "game/core/src/ui/redeem.ts",
+      "game/core/src/ui/merit.ts",
+      "game/core/src/ui/setupShell.ts",
+      "game/core/src/core/changelog.ts",
+      "game/core/src/ui/changelog.ts",
+      "game/core/src/ui/onlinePlayers.ts",
+      "game/core/src/ui/hub.ts"
+    ]
+  },
+  {
+    "file": "assets/schema-BJPDQGfV.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/sensorsSpec-DKIwnJcu.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 21563,
+    "modules": [
+      "game/core/src/game/extensions/componentsSpec.ts",
+      "game/core/src/game/extensions/logisticsSpec.ts",
+      "game/core/src/game/extensions/articulationSpec.ts",
+      "game/core/src/game/extensions/schema.ts"
+    ]
+  },
+  {
+    "file": "assets/logistics-CyhV_nCc.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/components-tnvqvECT.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 10950,
+    "modules": [
+      "game/core/src/game/extensions/logistics.ts"
+    ]
+  },
+  {
+    "file": "assets/components-tnvqvECT.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 13894,
+    "modules": [
+      "game/core/src/game/extensions/components.ts"
+    ]
+  },
+  {
+    "file": "assets/sensors-C08WS8F1.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/sensorsSpec-DKIwnJcu.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 12949,
+    "modules": [
+      "game/core/src/game/extensions/sensors.ts"
+    ]
+  },
+  {
+    "file": "assets/articulation-qT0Tu8Ld.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/sensorsSpec-DKIwnJcu.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 16528,
+    "modules": [
+      "game/core/src/game/extensions/articulation.ts"
+    ]
+  },
+  {
+    "file": "assets/sensorsSpec-DKIwnJcu.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [],
+    "dynamicImports": [],
+    "bytes": 5684,
+    "modules": [
+      "game/core/src/game/extensions/sensorsSpec.ts"
+    ]
+  },
+  {
+    "file": "assets/runtime-BGS2DB0S.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/frames-SGKrx15Y.js",
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 44018,
+    "modules": [
+      "game/core/src/game/extensions/frameCodec.ts",
+      "game/core/src/game/extensions/generatedGame.ts",
+      "game/core/src/game/extensions/generatedCombat.ts",
+      "game/core/src/game/extensions/generatedFireControl.ts",
+      "game/core/src/game/extensions/runtime.ts"
+    ]
+  },
+  {
+    "file": "assets/contentHud-CrAzCuB5.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/input-33m2Tauh.js",
+      "assets/commands-C8IJBCoB.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 3918,
+    "modules": [
+      "game/core/src/ui/styles/contentModules.css",
+      "game/core/src/ui/contentHud.ts"
+    ]
+  },
+  {
+    "file": "assets/servers-r-sSSpXt.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 5529,
+    "modules": [
+      "game/core/src/net/identity.ts",
+      "game/core/src/core/runtime.ts",
+      "game/core/src/net/protocol.ts",
+      "game/core/src/net/serverAddress.ts",
+      "game/core/src/net/servers.ts"
+    ]
+  },
+  {
+    "file": "assets/contentRenderer-Dzbdfk8d.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 20409,
+    "modules": [
+      "game/core/src/render/generatedContentRenderer.ts",
+      "game/core/src/render/contentRenderer.ts"
+    ]
+  },
+  {
+    "file": "assets/contentInput-uxYaKVpk.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/input-33m2Tauh.js",
+      "assets/commands-C8IJBCoB.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 810,
+    "modules": [
+      "game/core/src/render/contentInput.ts"
+    ]
+  },
+  {
+    "file": "assets/areaMarks-Dgb_kYtT.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 662,
+    "modules": [
+      "game/core/src/render/areaMarks.ts"
+    ]
+  },
+  {
+    "file": "assets/guidePanel-BZ7Lp4Bp.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/index-BaWJWzjR.js",
+      "assets/frames-SGKrx15Y.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 5325,
+    "modules": [
+      "game/core/src/render/guideMarks.ts",
+      "game/core/src/ui/guidePanel.ts"
+    ]
+  },
+  {
+    "file": "assets/settingsPage-DCInjmyQ.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1181,
+    "modules": [
+      "game/core/src/ui/settingsPage.ts"
+    ]
+  },
+  {
+    "file": "assets/settingsUi-D8gpGHM6.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [
+      "assets/cutsScreen-BwAUKtdz.js"
+    ],
+    "bytes": 52920,
+    "modules": [
+      "game/core/src/ui/toggle.ts",
+      "game/core/src/ui/modDetail.ts",
+      "game/core/src/ui/modsPage.ts",
+      "game/core/src/ui/devTools.ts",
+      "game/core/src/ui/about.ts",
+      "game/core/src/core/worldCollections.ts",
+      "game/core/src/core/worldStorage.ts",
+      "game/core/src/core/backup.ts",
+      "game/core/src/ui/fileSave.ts",
+      "game/core/src/ui/backup.ts",
+      "game/core/src/ui/settingsUi.ts"
+    ]
+  },
+  {
+    "file": "assets/devUnlock-BOT3S7vu.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hub-BW1zMToV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 2193,
+    "modules": [
+      "game/core/src/core/devCode.ts",
+      "game/core/src/ui/devUnlock.ts"
+    ]
+  },
+  {
+    "file": "assets/replayLibrary-Cl9XjgT0.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/worldHome-BU3J2WAX.js"
+    ],
+    "dynamicImports": [
+      "assets/replayScreen-CdlawNAp.js"
+    ],
+    "bytes": 29253,
+    "modules": [
+      "game/core/src/game/profileReport.ts",
+      "game/core/src/core/webm.ts",
+      "game/core/src/game/replay.ts",
+      "game/core/src/ui/replayExport.ts",
+      "game/core/src/ui/replayLibrary.ts"
+    ]
+  },
+  {
+    "file": "assets/matchSession-DnGlb3Op.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/frames-SGKrx15Y.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 106442,
+    "modules": [
+      "game/core/src/game/meritMatch.ts",
+      "game/core/src/net/remoteFrames.ts",
+      "game/core/src/net/contentRemoteFrames.ts",
+      "game/core/src/campaign/worldBaseline.ts",
+      "game/core/src/campaign/tutorial.ts",
+      "game/core/src/campaign/worldCampaign.ts",
+      "game/core/src/core/worldSession.ts",
+      "game/core/src/ui/matchSession.ts"
+    ]
+  },
+  {
+    "file": "assets/frames-SGKrx15Y.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 10611,
+    "modules": [
+      "game/core/src/net/frames.ts"
+    ]
+  },
+  {
+    "file": "assets/admin-B8pSKBuY.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 15162,
+    "modules": [
+      "game/core/src/game/admin.ts"
+    ]
+  },
+  {
+    "file": "assets/recordings-DhuDtvnm.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1882,
+    "modules": [
+      "game/core/src/core/recordings.ts"
+    ]
+  },
+  {
+    "file": "assets/cutsScreen-BwAUKtdz.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/input-33m2Tauh.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/slider-l33jrX0O.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/download-SMlE9tCZ.js"
+    ],
+    "dynamicImports": [
+      "assets/menu-CFJNk1bG.js",
+      "assets/settingsPage-DCInjmyQ.js"
+    ],
+    "bytes": 13574,
+    "modules": [
+      "game/core/src/ui/rasterCuts.ts",
+      "game/core/src/ui/cutsScreen.ts"
+    ]
+  },
+  {
+    "file": "assets/commands-C8IJBCoB.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 10649,
+    "modules": [
+      "game/core/src/game/commands.ts"
+    ]
+  },
+  {
+    "file": "assets/localHost-D_xML-lQ.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/frames-SGKrx15Y.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/chatFilter-BUb2o6j6.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/input-33m2Tauh.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 55868,
+    "modules": [
+      "game/core/src/net/contentFrames.ts",
+      "game/core/src/net/matchmakingProtocol.ts",
+      "game/core/src/net/serverCore.ts",
+      "game/core/src/net/localHost.ts"
+    ]
+  },
+  {
+    "file": "assets/chatFilter-BUb2o6j6.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [],
+    "dynamicImports": [],
+    "bytes": 19134,
+    "modules": [
+      "game/core/src/net/chatTlds.ts",
+      "game/core/src/net/chatFilter.ts"
+    ]
+  },
+  {
+    "file": "assets/profilePoster-itpSOro0.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/screenshot-D6q-WNIB.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/download-SMlE9tCZ.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 4422,
+    "modules": [
+      "game/core/src/ui/profilePosterStats.ts",
+      "game/core/src/ui/profilePoster.ts"
+    ]
+  },
+  {
+    "file": "assets/download-SMlE9tCZ.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [],
+    "dynamicImports": [],
+    "bytes": 168,
+    "modules": [
+      "game/core/src/ui/download.ts"
+    ]
+  },
+  {
+    "file": "assets/worldEditor-TcTNTBBJ.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/mapPicker-JL-Z20Aq.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/worldLibrary-Hu6uTv_z.js",
+      "assets/gamescreen-32MM9-MO.js",
+      "assets/worldHome-BU3J2WAX.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/menu-CFJNk1bG.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/input-33m2Tauh.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/slider-l33jrX0O.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/frames-SGKrx15Y.js",
+      "assets/stage-DgkGx1J_.js",
+      "assets/stripArrows-D7daoIrb.js",
+      "assets/storeReview-Cr2jxzhc.js",
+      "assets/topRow-CBUaLCqY.js",
+      "assets/screenshot-D6q-WNIB.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 131423,
+    "modules": [
+      "game/core/src/game/rustedWarfareMap.ts",
+      "game/core/src/ui/mapImport.ts",
+      "game/core/src/core/mapEditing.ts",
+      "game/core/src/ui/mapSetup.ts",
+      "game/core/src/ui/worldBrowser.ts",
+      "game/core/src/ui/worldEditorFields.ts",
+      "game/core/src/ui/scenarioEditor.ts",
+      "game/core/src/ui/modEditor.ts",
+      "game/core/src/ui/worldEditorContent.ts",
+      "game/core/src/core/mapSubmission.ts",
+      "game/core/src/ui/terrainSwatch.ts",
+      "game/core/src/ui/mapEditor.ts",
+      "game/core/src/ui/worldEditor.ts"
+    ]
+  },
+  {
+    "file": "assets/menu-CFJNk1bG.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/stage-DgkGx1J_.js",
+      "assets/storeReview-Cr2jxzhc.js",
+      "assets/devUnlock-BOT3S7vu.js",
+      "assets/servers-r-sSSpXt.js"
+    ],
+    "dynamicImports": [
+      "assets/replayLibrary-Cl9XjgT0.js",
+      "assets/loadgame-pYHRIkJt.js",
+      "assets/multiplayer-CkSr33eO.js",
+      "assets/sandbox-DAxuyJz-.js",
+      "assets/sandbox-DAxuyJz-.js",
+      "assets/campaignSelect-D-dNT1pX.js",
+      "assets/loadgame-pYHRIkJt.js",
+      "assets/worldLibrary-Hu6uTv_z.js"
+    ],
+    "bytes": 7842,
+    "modules": [
+      "game/core/src/ui/buildNotice.ts",
+      "game/core/src/ui/menu.ts"
+    ]
+  },
+  {
+    "file": "assets/mapPicker-JL-Z20Aq.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/settingsUi-D8gpGHM6.js",
+      "assets/gamescreen-32MM9-MO.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/hub-BW1zMToV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 209548,
+    "modules": [
+      "game/core/src/ui/mapBuilds.ts",
+      "\u0000virtual:map-previews",
+      "game/core/src/core/scenarios.ts",
+      "game/core/src/core/worldEditing.ts",
+      "game/core/src/core/editorMaps.ts",
+      "game/core/src/game/mapRegistry.ts",
+      "game/core/src/maps/registry.ts",
+      "game/core/src/ui/masonry.ts",
+      "game/core/src/ui/mapTip.ts",
+      "game/core/src/ui/communityMaps.ts",
+      "game/core/src/ui/reconcile.ts",
+      "game/core/src/ui/mapPicker.ts"
+    ]
+  },
+  {
+    "file": "assets/worldHome-BU3J2WAX.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 4961,
+    "modules": [
+      "game/core/src/ui/worldHome.ts"
+    ]
+  },
+  {
+    "file": "assets/replayScreen-CdlawNAp.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/replayLibrary-Cl9XjgT0.js",
+      "assets/input-33m2Tauh.js",
+      "assets/matchSession-DnGlb3Op.js",
+      "assets/hud-aOR4Zri1.js",
+      "assets/hub-BW1zMToV.js",
+      "assets/slider-l33jrX0O.js",
+      "assets/topRow-CBUaLCqY.js",
+      "assets/recordings-DhuDtvnm.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/commands-C8IJBCoB.js",
+      "assets/worldHome-BU3J2WAX.js",
+      "assets/frames-SGKrx15Y.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/screenshot-D6q-WNIB.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 13290,
+    "modules": [
+      "game/core/src/game/replayHighlights.ts",
+      "game/core/src/ui/replayScreen.ts"
+    ]
+  },
+  {
+    "file": "assets/topRow-CBUaLCqY.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/screenshot-D6q-WNIB.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1579,
+    "modules": [
+      "game/core/src/ui/topRow.ts"
+    ]
+  },
+  {
+    "file": "assets/hud-aOR4Zri1.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/admin-B8pSKBuY.js",
+      "assets/techUi-CN2rr3U4.js",
+      "assets/servers-r-sSSpXt.js",
+      "assets/input-33m2Tauh.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 169486,
+    "modules": [
+      "game/core/src/ui/commandVoice.ts",
+      "game/core/src/ui/economyBreakdown.ts",
+      "game/core/src/game/standings.ts",
+      "game/core/src/net/client.ts",
+      "game/core/src/net/mutes.ts",
+      "game/core/src/render/director.ts",
+      "game/core/src/ui/holdToReveal.ts",
+      "game/core/src/ui/latency.ts",
+      "game/core/src/ui/playerList.ts",
+      "game/core/src/ui/pauseBrief.ts",
+      "game/core/src/ui/selectionInfo.ts",
+      "game/core/src/game/cheats.ts",
+      "game/core/src/ui/standingFormat.ts",
+      "game/core/src/ui/spectateBoard.ts",
+      "game/core/src/ui/streamingStats.ts",
+      "game/core/src/core/textStream.ts",
+      "game/core/src/core/commentary.ts",
+      "game/core/src/game/commentary.ts",
+      "game/core/src/game/localCommentary.ts",
+      "game/core/src/ui/spectateCommentary.ts",
+      "game/core/src/ui/touchLayout.ts",
+      "game/core/src/ui/hud.ts"
+    ]
+  },
+  {
+    "file": "assets/techUi-CN2rr3U4.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 2237,
+    "modules": [
+      "game/core/src/ui/techUi.ts"
+    ]
+  },
+  {
+    "file": "assets/slider-l33jrX0O.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [],
+    "dynamicImports": [],
+    "bytes": 733,
+    "modules": [
+      "game/core/src/ui/slider.ts"
+    ]
+  },
+  {
+    "file": "assets/input-33m2Tauh.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/commands-C8IJBCoB.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 58674,
+    "modules": [
+      "game/core/src/game/quickSelect.ts",
+      "game/core/src/game/visibleUnits.ts",
+      "game/core/src/render/input.ts"
+    ]
+  },
+  {
+    "file": "assets/screenshot-D6q-WNIB.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-BaWJWzjR.js",
+      "assets/download-SMlE9tCZ.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 953,
+    "modules": [
+      "game/core/src/ui/screenshot.ts"
+    ]
+  },
+  {
+    "file": "assets/groundWorker-DAtuzOAD.js",
+    "type": "asset",
+    "bytes": 63971
+  },
+  {
+    "file": "assets/mapBuildWorker-l4n3yscf.js",
+    "type": "asset",
+    "bytes": 277588
+  },
+  {
+    "file": "assets/worker-schema-B9Y1xHkP.js",
+    "type": "asset",
+    "bytes": 21574
+  },
+  {
+    "file": "assets/worker-logistics-BzjZA8_J.js",
+    "type": "asset",
+    "bytes": 10960
+  },
+  {
+    "file": "assets/worker-components-CAfLZ14g.js",
+    "type": "asset",
+    "bytes": 13889
+  },
+  {
+    "file": "assets/worker-sensors-CJerRsDx.js",
+    "type": "asset",
+    "bytes": 12950
+  },
+  {
+    "file": "assets/worker-articulation-5NEm155i.js",
+    "type": "asset",
+    "bytes": 16515
+  },
+  {
+    "file": "assets/worker-sensorsSpec-DKIwnJcu.js",
+    "type": "asset",
+    "bytes": 5684
+  },
+  {
+    "file": "assets/worker-runtime-BamxqBla.js",
+    "type": "asset",
+    "bytes": 43957
+  },
+  {
+    "file": "assets/hostWorker-B42tlq7a.js",
+    "type": "asset",
+    "bytes": 1387209
+  },
+  {
+    "file": "sw.js",
+    "type": "asset",
+    "bytes": 13132
+  }
+]

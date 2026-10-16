@@ -13,8 +13,12 @@ test('the generator publishes summaries, matching details and a compatible legac
   const fixture = mkdtempSync(join(tmpdir(), 'steel-mod-catalog-'));
   try {
     mkdirSync(join(fixture, 'tools'));
-    for (const file of ['build-index.mjs', 'steel-tide-mod.mjs']) copyFileSync(join(root, 'tools', file), join(fixture, 'tools', file));
+    for (const file of ['build-index.mjs', 'registry-folders.mjs', 'steel-tide-mod.mjs']) copyFileSync(join(root, 'tools', file), join(fixture, 'tools', file));
+    execFileSync('git', ['init', '-q'], { cwd: fixture });
+    writeFileSync(join(fixture, '.gitignore'), '/mods/unfinished/\n');
+    mkdirSync(join(fixture, 'mods', 'unfinished'), { recursive: true });
     const mod = exampleFull();
+    writeFileSync(join(fixture, 'mods', 'unfinished', 'mod.json'), JSON.stringify(mod).replaceAll('ironworks', 'unfinished'));
     const folder = join(fixture, 'mods', mod.id);
     mkdirSync(folder, { recursive: true });
     writeFileSync(join(folder, 'mod.json'), JSON.stringify(mod));

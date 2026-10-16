@@ -1,0 +1,8 @@
+{
+  "emitter": true,
+  "cancel": true,
+  "deployment": true,
+  "selectionProxy": true,
+  "mounts": 2,
+  "errors": []
+}

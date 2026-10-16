@@ -1,0 +1,1814 @@
+{
+  "createdAt": "2026-10-16T12:28:19.223Z",
+  "note": "Descriptive statistics across fresh-browser samples, without a percentage tolerance or automatic performance pass. Tick percentiles are summarized per sample; they are not independent browser observations. FNV digests are behavioral witnesses, not cryptographic identity.",
+  "samples": 48,
+  "identity": [
+    {
+      "scenario": "battle/300/900",
+      "fields": {
+        "frozenDigest": {
+          "identical": true,
+          "values": [
+            "2b7d99ed"
+          ]
+        },
+        "measuredStartDigest": {
+          "identical": true,
+          "values": [
+            "4a73d118"
+          ]
+        },
+        "digest": {
+          "identical": true,
+          "values": [
+            "62939e32"
+          ]
+        },
+        "wireDigest": {
+          "identical": true,
+          "values": [
+            "943e237e"
+          ]
+        },
+        "wireBytes": {
+          "identical": true,
+          "values": [
+            8223962
+          ]
+        },
+        "snapshotBytes": {
+          "identical": true,
+          "values": [
+            143654
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "idle/300/900",
+      "fields": {
+        "frozenDigest": {
+          "identical": true,
+          "values": [
+            "550c0302"
+          ]
+        },
+        "measuredStartDigest": {
+          "identical": true,
+          "values": [
+            "550c0302"
+          ]
+        },
+        "digest": {
+          "identical": true,
+          "values": [
+            "617de372"
+          ]
+        },
+        "wireDigest": {
+          "identical": true,
+          "values": [
+            "d9d499df"
+          ]
+        },
+        "wireBytes": {
+          "identical": true,
+          "values": [
+            6374504
+          ]
+        },
+        "snapshotBytes": {
+          "identical": true,
+          "values": [
+            41172
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "duels/300/900",
+      "fields": {
+        "frozenDigest": {
+          "identical": true,
+          "values": [
+            "8a849916"
+          ]
+        },
+        "measuredStartDigest": {
+          "identical": true,
+          "values": [
+            "8a849916"
+          ]
+        },
+        "digest": {
+          "identical": true,
+          "values": [
+            "2a4b5bfe"
+          ]
+        },
+        "wireDigest": {
+          "identical": true,
+          "values": [
+            "6f7121f9"
+          ]
+        },
+        "wireBytes": {
+          "identical": true,
+          "values": [
+            27700430
+          ]
+        },
+        "snapshotBytes": {
+          "identical": true,
+          "values": [
+            129438
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "projectiles/300/900",
+      "fields": {
+        "frozenDigest": {
+          "identical": true,
+          "values": [
+            "ba9262b2"
+          ]
+        },
+        "measuredStartDigest": {
+          "identical": true,
+          "values": [
+            "ba9262b2"
+          ]
+        },
+        "digest": {
+          "identical": true,
+          "values": [
+            "b995f94d"
+          ]
+        },
+        "wireDigest": {
+          "identical": true,
+          "values": [
+            "a4b3ae93"
+          ]
+        },
+        "wireBytes": {
+          "identical": true,
+          "values": [
+            20404154
+          ]
+        },
+        "snapshotBytes": {
+          "identical": true,
+          "values": [
+            129512
+          ]
+        }
+      }
+    }
+  ],
+  "reports": [
+    {
+      "source": "docs/engine-compatibility/2026-10-16-external-packages/vanilla-timings.json",
+      "options": {
+        "warmup": 900,
+        "measured": 900,
+        "freezeTicks": 300,
+        "rounds": 2,
+        "workloads": [
+          "battle",
+          "idle",
+          "duels",
+          "projectiles"
+        ],
+        "aa": true
+      },
+      "buildCreatedAt": "2026-10-16T12:25:52.303Z",
+      "bundles": {
+        "base": {
+          "head": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+          "workingTreeIncluded": false,
+          "entryBytes": 627059,
+          "entryModules": [
+            "/privategame/core/src/core/types.ts",
+            "/privategame/core/src/core/strings.ts",
+            "/privategame/core/src/core/i18n.ts",
+            "/privategame/core/src/core/rng.ts",
+            "/privategame/core/src/game/biomes.ts",
+            "/privategame/core/src/game/defs.ts",
+            "/privategame/core/src/game/map.ts",
+            "/privategame/core/src/game/decor.ts",
+            "/privategame/core/src/game/rle.ts",
+            "/privategame/core/src/game/contentTerrain.ts",
+            "/privategame/core/src/game/customMap.ts",
+            "/privategame/core/src/core/math.ts",
+            "/privategame/core/src/game/earthMaps.ts",
+            "/privategame/core/src/game/entityMap.ts",
+            "/privategame/core/src/game/transport.ts",
+            "/privategame/core/src/game/ammo.ts",
+            "/privategame/core/src/core/clone.ts",
+            "/privategame/core/src/game/extensions/contracts.ts",
+            "/privategame/core/src/core/menuBackground.ts",
+            "/privategame/core/src/core/music.ts",
+            "/privategame/core/src/game/abilityDefs.ts",
+            "/privategame/core/src/game/ruleState.ts",
+            "/privategame/core/src/game/veterancy.ts",
+            "/privategame/core/src/game/tech.ts",
+            "/privategame/core/src/game/contentDefs.ts",
+            "/privategame/core/src/game/weather.ts",
+            "/privategame/core/src/game/profile.ts",
+            "/privategame/core/src/game/state.ts",
+            "/privategame/core/src/game/advancedHQ.ts",
+            "/privategame/core/src/game/factions.ts",
+            "/privategame/core/src/game/cityDamage.ts",
+            "/privategame/core/src/game/attackArea.ts",
+            "/privategame/core/src/game/elevation.ts",
+            "/privategame/core/src/core/gridLine.ts",
+            "/privategame/core/src/game/bridgeLayout.ts",
+            "/privategame/core/src/game/amphibiousBridgePath.ts",
+            "/privategame/core/src/game/path.ts",
+            "/privategame/core/src/game/surface.ts",
+            "/privategame/core/src/game/power.ts",
+            "/privategame/core/src/game/abilities.ts",
+            "/privategame/core/src/game/armor.ts",
+            "/privategame/core/src/game/move.ts",
+            "/privategame/core/src/core/metrics.ts",
+            "/privategame/core/src/game/turrets.ts",
+            "/privategame/core/src/game/warheads.ts",
+            "/privategame/core/src/game/hqContacts.ts",
+            "/privategame/core/src/game/vision.ts",
+            "/privategame/core/src/game/jamming.ts",
+            "/privategame/core/src/game/unitTally.ts",
+            "/privategame/core/src/game/targetPriority.ts",
+            "/privategame/core/src/game/fireControl.ts",
+            "/privategame/core/src/game/impactMaterial.ts",
+            "/privategame/core/src/game/protect.ts",
+            "/privategame/core/src/game/combat.ts",
+            "/privategame/core/src/game/world.ts",
+            "/privategame/core/src/game/worldShapeValidation.ts",
+            "/privategame/core/src/game/worldValidation.ts",
+            "/privategame/core/src/game/worldRuntime.ts",
+            "/privategame/core/src/game/pins.ts",
+            "/privategame/core/src/game/formation.ts",
+            "/privategame/core/src/game/repairAura.ts",
+            "/privategame/core/src/game/idleWork.ts",
+            "/privategame/core/src/game/modRules.ts",
+            "/privategame/core/src/game/wings.ts",
+            "/privategame/core/src/game/ai.ts",
+            "/privategame/core/src/game/aiMap.ts",
+            "/privategame/core/src/game/aiIntel.ts",
+            "/privategame/core/src/game/breakthrough.ts",
+            "/privategame/core/src/game/nukeAim.ts",
+            "/privategame/core/src/game/aiTactics.ts",
+            "/privategame/core/src/game/aiTech.ts",
+            "/privategame/core/src/game/aiPockets.ts",
+            "/privategame/core/src/game/aiNaval.ts",
+            "/privategame/core/src/game/aiBrain.ts",
+            "/privategame/core/src/game/autopilot.ts",
+            "/privategame/core/src/game/terrainChange.ts",
+            "/privategame/core/src/game/taihangChart.ts",
+            "/privategame/core/src/game/taihangMap.ts",
+            "/privategame/core/src/game/dig.ts",
+            "/privategame/core/src/game/contentCapabilities.ts",
+            "/privategame/core/src/game/contentGame.ts",
+            "/privategame/core/src/game/commander.ts",
+            "/privategame/core/src/game/skins.ts",
+            "/privategame/core/src/game/decals.ts",
+            "/privategame/core/src/game/save.ts",
+            "/privategame/core/src/game/teams.ts",
+            "/privategame/core/src/game/sim.ts",
+            "/privategame/core/src/game/script.ts",
+            "/privategame/core/src/game/longHaul.ts",
+            "/privategame/core/src/game/conquest.ts",
+            "/privategame/core/src/game/orders.ts",
+            "/privategame/core/src/campaign/missions.ts",
+            "/privategame/core/src/game/openRange.ts",
+            "/privategame/core/src/game/sichuanGeography.ts",
+            "/privategame/core/src/game/sichuanMap.ts",
+            "/privategame/core/src/game/conquestMaps.ts",
+            "/privategame/core/src/game/mapdefs.ts",
+            "/privategame/core/server/testkit/game.ts",
+            "/privategame/core/src/net/frames.ts",
+            "/Users/rivertwilight/Developer/steel-tide-mods/dist/external-extension-gate/base.ts"
+          ]
+        },
+        "candidate": {
+          "head": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+          "workingTreeIncluded": true,
+          "entryBytes": 635591,
+          "entryModules": [
+            "game/core/src/game/defs.ts",
+            "game/core/src/game/advancedHQ.ts",
+            "game/core/src/core/strings.ts",
+            "game/core/src/core/menuBackground.ts",
+            "game/core/src/core/types.ts",
+            "game/core/src/core/music.ts",
+            "game/core/src/core/clone.ts",
+            "game/core/src/core/i18n.ts",
+            "game/core/src/game/abilityDefs.ts",
+            "game/core/src/core/rng.ts",
+            "game/core/src/game/biomes.ts",
+            "game/core/src/game/map.ts",
+            "game/core/src/game/decor.ts",
+            "game/core/src/game/entityMap.ts",
+            "game/core/src/game/transport.ts",
+            "game/core/src/game/ammo.ts",
+            "game/core/src/game/ruleState.ts",
+            "game/core/src/game/veterancy.ts",
+            "game/core/src/game/weather.ts",
+            "game/core/src/game/contentTerrain.ts",
+            "game/core/src/game/rle.ts",
+            "game/core/src/game/profile.ts",
+            "game/core/src/game/state.ts",
+            "game/core/src/game/tech.ts",
+            "game/core/src/game/contentDefs.ts",
+            "game/core/src/game/factions.ts",
+            "game/core/src/game/world.ts",
+            "game/core/src/game/worldShapeValidation.ts",
+            "game/core/src/core/math.ts",
+            "game/core/src/game/cityDamage.ts",
+            "game/core/src/game/attackArea.ts",
+            "game/core/src/game/elevation.ts",
+            "game/core/src/core/gridLine.ts",
+            "game/core/src/game/bridgeLayout.ts",
+            "game/core/src/game/amphibiousBridgePath.ts",
+            "game/core/src/game/path.ts",
+            "game/core/src/game/surface.ts",
+            "game/core/src/game/power.ts",
+            "game/core/src/game/abilities.ts",
+            "game/core/src/game/armor.ts",
+            "game/core/src/game/move.ts",
+            "game/core/src/core/metrics.ts",
+            "game/core/src/game/turrets.ts",
+            "game/core/src/game/warheads.ts",
+            "game/core/src/game/hqContacts.ts",
+            "game/core/src/game/vision.ts",
+            "game/core/src/game/jamming.ts",
+            "game/core/src/game/unitTally.ts",
+            "game/core/src/game/targetPriority.ts",
+            "game/core/src/game/fireControl.ts",
+            "game/core/src/game/impactMaterial.ts",
+            "game/core/src/game/protect.ts",
+            "game/core/src/game/combat.ts",
+            "game/core/src/game/script.ts",
+            "game/core/src/game/terrainChange.ts",
+            "game/core/src/game/earthMaps.ts",
+            "game/core/src/game/taihangChart.ts",
+            "game/core/src/game/taihangMap.ts",
+            "game/core/src/game/longHaul.ts",
+            "game/core/src/game/conquest.ts",
+            "game/core/src/game/pins.ts",
+            "game/core/src/game/ai.ts",
+            "game/core/src/game/formation.ts",
+            "game/core/src/game/dig.ts",
+            "game/core/src/game/wings.ts",
+            "game/core/src/game/orders.ts",
+            "game/core/src/game/customMap.ts",
+            "game/core/src/game/worldValidation.ts",
+            "game/core/src/game/worldRuntime.ts",
+            "game/core/src/game/repairAura.ts",
+            "game/core/src/game/idleWork.ts",
+            "game/core/src/game/modRules.ts",
+            "game/core/src/game/aiMap.ts",
+            "game/core/src/game/aiIntel.ts",
+            "game/core/src/game/breakthrough.ts",
+            "game/core/src/game/nukeAim.ts",
+            "game/core/src/game/aiTactics.ts",
+            "game/core/src/game/aiTech.ts",
+            "game/core/src/game/aiPockets.ts",
+            "game/core/src/game/aiNaval.ts",
+            "game/core/src/game/aiBrain.ts",
+            "game/core/src/game/autopilot.ts",
+            "game/core/src/game/commander.ts",
+            "game/core/src/game/skins.ts",
+            "game/core/src/game/decals.ts",
+            "game/core/src/campaign/missions.ts",
+            "game/core/src/game/openRange.ts",
+            "game/core/src/game/sichuanGeography.ts",
+            "game/core/src/game/sichuanMap.ts",
+            "game/core/src/game/conquestMaps.ts",
+            "game/core/src/game/mapdefs.ts",
+            "game/core/src/game/save.ts",
+            "game/core/src/game/teams.ts",
+            "game/core/src/game/sim.ts",
+            "game/core/src/game/contentCapabilities.ts",
+            "game/core/src/game/contentGame.ts",
+            "game/core/src/net/frames.ts",
+            "game/core/src/net/contentFrames.ts",
+            "game/core/server/testkit/game.ts",
+            "/Users/rivertwilight/Developer/steel-tide-mods/dist/external-extension-gate/candidate.ts"
+          ]
+        }
+      },
+      "workloads": [
+        {
+          "workload": "battle",
+          "comparisonSamples": 8,
+          "controlSamples": 4,
+          "metrics": {
+            "sim": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.1723888890196879,
+                    "mean": 1.182086111207803,
+                    "min": 1.153772222234143,
+                    "max": 1.2297944445576934
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.1406749999605945,
+                    "mean": 1.1357902777401936,
+                    "min": 1.0933444443510638,
+                    "max": 1.1684666666885217
+                  },
+                  "medianDeltaPercent": -2.705065644695026
+                },
+                "p50": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.0250000059604645,
+                    "mean": 1.030000001192093,
+                    "min": 1,
+                    "max": 1.0699999928474426
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.994999997317791,
+                    "mean": 0.9924999997019768,
+                    "min": 0.9549999982118607,
+                    "max": 1.0250000059604645
+                  },
+                  "medianDeltaPercent": -2.926830094460564
+                },
+                "p95": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.8350000008940697,
+                    "mean": 1.8649999983608723,
+                    "min": 1.7699999958276749,
+                    "max": 2.019999995827675
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.7950000017881393,
+                    "mean": 1.768750000745058,
+                    "min": 1.6500000059604645,
+                    "max": 1.834999993443489
+                  },
+                  "medianDeltaPercent": -2.1798364624763478
+                },
+                "p99": {
+                  "base": {
+                    "samples": 4,
+                    "median": 3.485000006854534,
+                    "mean": 3.4962500035762787,
+                    "min": 3.415000006556511,
+                    "max": 3.5999999940395355
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 3.342500001192093,
+                    "mean": 3.3937499970197678,
+                    "min": 3.25,
+                    "max": 3.6399999856948853
+                  },
+                  "medianDeltaPercent": -4.088952808670376
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 1.1580444442315234,
+                  "mean": 1.1580444442315234,
+                  "min": 1.1365666665799088,
+                  "max": 1.179522221883138
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 1.1517888889461756,
+                  "mean": 1.1517888889461756,
+                  "min": 1.1221944444709353,
+                  "max": 1.1813833334214157
+                },
+                "medianDeltaPercent": -0.5401826602172477
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.8374999985098839,
+                    "mean": 1.8374999985098839,
+                    "min": 1.8299999982118607,
+                    "max": 1.844999998807907
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.7999999970197678,
+                    "mean": 1.7999999970197678,
+                    "min": 1.7849999964237213,
+                    "max": 1.8149999976158142
+                  },
+                  "medianDeltaPercent": -2.040816409280366
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 3.480000004172325,
+                    "mean": 3.480000004172325,
+                    "min": 3.344999998807907,
+                    "max": 3.615000009536743
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 3.4849999994039536,
+                    "mean": 3.4849999994039536,
+                    "min": 3.4149999916553497,
+                    "max": 3.5550000071525574
+                  },
+                  "medianDeltaPercent": 0.1436780237251023
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 1.154650000060598,
+                  "candidate": 1.1647027777466508,
+                  "deltaPercent": 0.8706341909258342
+                },
+                {
+                  "round": 1,
+                  "base": 1.2095222223550082,
+                  "candidate": 1.1068777777337364,
+                  "deltaPercent": -8.486362856683794
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 1.7924999967217445,
+                    "candidate": 1.802499994635582,
+                    "deltaPercent": 0.5578799404254431
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.9375,
+                    "candidate": 1.7350000068545341,
+                    "deltaPercent": -10.4516125494434
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 3.485000006854534,
+                    "candidate": 3.4799999967217445,
+                    "deltaPercent": -0.14347231342769495
+                  },
+                  {
+                    "round": 1,
+                    "base": 3.5075000002980232,
+                    "candidate": 3.307499997317791,
+                    "deltaPercent": -5.702067083770168
+                  }
+                ]
+              }
+            },
+            "replication": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.0328000000864268,
+                    "mean": 1.0405874999488394,
+                    "min": 1.0120000000298024,
+                    "max": 1.0847499995927017
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.0233083336800337,
+                    "mean": 1.0173541668057442,
+                    "min": 0.9901333335042,
+                    "max": 1.0326666663587094
+                  },
+                  "medianDeltaPercent": -0.9190226961269143
+                },
+                "p50": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.0099999904632568,
+                    "mean": 1.0112499929964542,
+                    "min": 0.989999994635582,
+                    "max": 1.0349999964237213
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.9900000020861626,
+                    "mean": 0.9887500032782555,
+                    "min": 0.9650000035762787,
+                    "max": 1.010000005364418
+                  },
+                  "medianDeltaPercent": -1.9801968877168896
+                },
+                "p95": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.3049999997019768,
+                    "mean": 1.342500001192093,
+                    "min": 1.2249999940395355,
+                    "max": 1.5350000113248825
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.2700000032782555,
+                    "mean": 1.2950000055134296,
+                    "min": 1.2250000089406967,
+                    "max": 1.415000006556511
+                  },
+                  "medianDeltaPercent": -2.6819920637328964
+                },
+                "p99": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.5850000008940697,
+                    "mean": 1.6962499991059303,
+                    "min": 1.530000001192093,
+                    "max": 2.084999993443489
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.572500005364418,
+                    "mean": 1.5837500020861626,
+                    "min": 1.5249999910593033,
+                    "max": 1.665000006556511
+                  },
+                  "medianDeltaPercent": -0.7886432506372665
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 1.020125000178814,
+                  "mean": 1.020125000178814,
+                  "min": 1.0134666666885217,
+                  "max": 1.0267833336691061
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 1.0343999994794526,
+                  "mean": 1.0343999994794526,
+                  "min": 1.0026166663567224,
+                  "max": 1.066183332602183
+                },
+                "medianDeltaPercent": 1.3993382475810723
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.244999997317791,
+                    "mean": 1.244999997317791,
+                    "min": 1.2150000035762787,
+                    "max": 1.2749999910593033
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.282499998807907,
+                    "mean": 1.282499998807907,
+                    "min": 1.1600000113248825,
+                    "max": 1.4049999862909317
+                  },
+                  "medianDeltaPercent": 3.012048318948235
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.572500005364418,
+                    "mean": 1.572500005364418,
+                    "min": 1.4950000047683716,
+                    "max": 1.6500000059604645
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.6749999970197678,
+                    "mean": 1.6749999970197678,
+                    "min": 1.5649999976158142,
+                    "max": 1.7849999964237213
+                  },
+                  "medianDeltaPercent": 6.51828243597341
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 1.0134250002602736,
+                  "candidate": 1.0326500000059604,
+                  "deltaPercent": 1.8970323152428081
+                },
+                {
+                  "round": 1,
+                  "base": 1.0677499996374051,
+                  "candidate": 1.002058333605528,
+                  "deltaPercent": -6.15234521696888
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 1.2650000005960464,
+                    "candidate": 1.2475000023841858,
+                    "deltaPercent": -1.3833990674794405
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.4200000017881393,
+                    "candidate": 1.3425000086426735,
+                    "deltaPercent": -5.457745989286888
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 1.5375000014901161,
+                    "candidate": 1.6175000071525574,
+                    "deltaPercent": 5.203252395766289
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.8549999967217445,
+                    "candidate": 1.5499999970197678,
+                    "deltaPercent": -16.442048530511542
+                  }
+                ]
+              }
+            }
+          },
+          "resourcePaths": [
+            "/base/benchmark.js",
+            "/favicon.ico",
+            "/candidate/benchmark.js"
+          ]
+        },
+        {
+          "workload": "idle",
+          "comparisonSamples": 8,
+          "controlSamples": 4,
+          "metrics": {
+            "sim": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.09058888874120183,
+                    "mean": 0.09082916665822267,
+                    "min": 0.08987222227785323,
+                    "max": 0.09226666687263382
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.0911555553889937,
+                    "mean": 0.09170833326876164,
+                    "min": 0.08893888897365994,
+                    "max": 0.09558333332339923
+                  },
+                  "medianDeltaPercent": 0.6255365924741074
+                },
+                "p50": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.06750000268220901,
+                    "mean": 0.06749999895691872,
+                    "min": 0.06499999761581421,
+                    "max": 0.06999999284744263
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.06750000268220901,
+                    "mean": 0.06750000268220901,
+                    "min": 0.06499999761581421,
+                    "max": 0.07000000774860382
+                  },
+                  "medianDeltaPercent": 0
+                },
+                "p95": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.20750001072883606,
+                    "mean": 0.20625000819563866,
+                    "min": 0.20000000298023224,
+                    "max": 0.21000000834465027
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.20750000327825546,
+                    "mean": 0.20750000327825546,
+                    "min": 0.20499999821186066,
+                    "max": 0.21000000834465027
+                  },
+                  "medianDeltaPercent": -0.0000035906410622565943
+                },
+                "p99": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.3374999985098839,
+                    "mean": 0.35249999538064003,
+                    "min": 0.3349999934434891,
+                    "max": 0.3999999910593033
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.3425000011920929,
+                    "mean": 0.338749997317791,
+                    "min": 0.2849999964237213,
+                    "max": 0.38499999046325684
+                  },
+                  "medianDeltaPercent": 1.4814822827510676
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 0.0911583332469066,
+                  "mean": 0.0911583332469066,
+                  "min": 0.08951666661434704,
+                  "max": 0.09279999987946616
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 0.09198055561217997,
+                  "mean": 0.09198055561217997,
+                  "min": 0.0905722221897708,
+                  "max": 0.09338888903458913
+                },
+                "medianDeltaPercent": 0.9019716969224767
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 0.21000000089406967,
+                    "mean": 0.21000000089406967,
+                    "min": 0.20499999821186066,
+                    "max": 0.2150000035762787
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 0.20999999344348907,
+                    "mean": 0.20999999344348907,
+                    "min": 0.20999999344348907,
+                    "max": 0.20999999344348907
+                  },
+                  "medianDeltaPercent": -0.000003547895510713772
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 0.3674999997019768,
+                    "mean": 0.3674999997019768,
+                    "min": 0.36499999463558197,
+                    "max": 0.3700000047683716
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 0.39249999821186066,
+                    "mean": 0.39249999821186066,
+                    "min": 0.375,
+                    "max": 0.4099999964237213
+                  },
+                  "medianDeltaPercent": 6.802720688478248
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 0.09131388889418707,
+                  "candidate": 0.09384166666203075,
+                  "deltaPercent": 2.768229234846009
+                },
+                {
+                  "round": 1,
+                  "base": 0.09034444442225828,
+                  "candidate": 0.08957499987549253,
+                  "deltaPercent": -0.8516788737661263
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 0.21000000834465027,
+                    "candidate": 0.21000000834465027,
+                    "deltaPercent": 0
+                  },
+                  {
+                    "round": 1,
+                    "base": 0.20250000804662704,
+                    "candidate": 0.20499999821186066,
+                    "deltaPercent": 1.234562995502686
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 0.369999997317791,
+                    "candidate": 0.3749999925494194,
+                    "deltaPercent": 1.351350072398505
+                  },
+                  {
+                    "round": 1,
+                    "base": 0.3349999934434891,
+                    "candidate": 0.30250000208616257,
+                    "deltaPercent": -9.701490147285307
+                  }
+                ]
+              }
+            },
+            "replication": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.2791916669656833,
+                    "mean": 0.278887500166893,
+                    "min": 0.2759999998907248,
+                    "max": 0.2811666668454806
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.27877500002582867,
+                    "mean": 0.28135000007847943,
+                    "min": 0.2769166667262713,
+                    "max": 0.2909333335359891
+                  },
+                  "medianDeltaPercent": -0.14924046422412074
+                },
+                "p50": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.2824999988079071,
+                    "mean": 0.2837500013411045,
+                    "min": 0.2800000011920929,
+                    "max": 0.2900000065565109
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.29249998927116394,
+                    "mean": 0.28999999538064003,
+                    "min": 0.2750000059604645,
+                    "max": 0.29999999701976776
+                  },
+                  "medianDeltaPercent": 3.5398196479485833
+                },
+                "p95": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.48750000447034836,
+                    "mean": 0.49000000208616257,
+                    "min": 0.48000000417232513,
+                    "max": 0.5049999952316284
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.4924999997019768,
+                    "mean": 0.49000000208616257,
+                    "min": 0.4750000089406967,
+                    "max": 0.5
+                  },
+                  "medianDeltaPercent": 1.0256400381084552
+                },
+                "p99": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.6574999988079071,
+                    "mean": 0.6750000007450581,
+                    "min": 0.625,
+                    "max": 0.760000005364418
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.6575000062584877,
+                    "mean": 0.692500002682209,
+                    "min": 0.625,
+                    "max": 0.8299999982118607
+                  },
+                  "medianDeltaPercent": 0.000001133168159306308
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 0.28461666700740657,
+                  "mean": 0.28461666700740657,
+                  "min": 0.27686666677395505,
+                  "max": 0.2923666672408581
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 0.28434166669845584,
+                  "mean": 0.28434166669845584,
+                  "min": 0.28340000038345653,
+                  "max": 0.2852833330134551
+                },
+                "medianDeltaPercent": -0.09662129482513881
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 0.5099999979138374,
+                    "mean": 0.5099999979138374,
+                    "min": 0.47999998927116394,
+                    "max": 0.5400000065565109
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 0.5025000050663948,
+                    "mean": 0.5025000050663948,
+                    "min": 0.4950000047683716,
+                    "max": 0.510000005364418
+                  },
+                  "medianDeltaPercent": -1.470586838847343
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 0.7400000020861626,
+                    "mean": 0.7400000020861626,
+                    "min": 0.5750000029802322,
+                    "max": 0.9050000011920929
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 0.6575000062584877,
+                    "mean": 0.6575000062584877,
+                    "min": 0.6000000089406967,
+                    "max": 0.7150000035762787
+                  },
+                  "medianDeltaPercent": -11.14864805339134
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 0.27956666698058447,
+                  "candidate": 0.2839250001311302,
+                  "deltaPercent": 1.5589602285627224
+                },
+                {
+                  "round": 1,
+                  "base": 0.27820833335320155,
+                  "candidate": 0.27877500002582867,
+                  "deltaPercent": 0.20368429147938905
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 0.4950000047683716,
+                    "candidate": 0.48750000447034836,
+                    "deltaPercent": -1.515151560762662
+                  },
+                  {
+                    "round": 1,
+                    "base": 0.48499999940395355,
+                    "candidate": 0.4924999997019768,
+                    "deltaPercent": 1.5463918159258627
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 0.6574999988079071,
+                    "candidate": 0.7274999991059303,
+                    "deltaPercent": 10.64638789732899
+                  },
+                  {
+                    "round": 1,
+                    "base": 0.692500002682209,
+                    "candidate": 0.6575000062584877,
+                    "deltaPercent": -5.054151088542735
+                  }
+                ]
+              }
+            }
+          },
+          "resourcePaths": [
+            "/base/benchmark.js",
+            "/favicon.ico",
+            "/candidate/benchmark.js"
+          ]
+        },
+        {
+          "workload": "duels",
+          "comparisonSamples": 8,
+          "controlSamples": 4,
+          "metrics": {
+            "sim": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.38570833333664467,
+                    "mean": 0.38928750006688967,
+                    "min": 0.380494444668293,
+                    "max": 0.4052388889259762
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.38510555576947003,
+                    "mean": 0.38745694444825257,
+                    "min": 0.3806611106461949,
+                    "max": 0.3989555556078752
+                  },
+                  "medianDeltaPercent": -0.15627807726117382
+                },
+                "p50": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.35500000417232513,
+                    "mean": 0.35375000536441803,
+                    "min": 0.3500000089406967,
+                    "max": 0.35500000417232513
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.35750000178813934,
+                    "mean": 0.35999999567866325,
+                    "min": 0.35499998927116394,
+                    "max": 0.3699999898672104
+                  },
+                  "medianDeltaPercent": 0.7042246722342771
+                },
+                "p95": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.7725000083446503,
+                    "mean": 0.7700000032782555,
+                    "min": 0.7349999994039536,
+                    "max": 0.7999999970197678
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.7650000005960464,
+                    "mean": 0.7662500031292439,
+                    "min": 0.7400000095367432,
+                    "max": 0.7950000017881393
+                  },
+                  "medianDeltaPercent": -0.970874778975761
+                },
+                "p99": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.0850000008940697,
+                    "mean": 1.0962500013411045,
+                    "min": 1,
+                    "max": 1.2150000035762787
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.1274999976158142,
+                    "mean": 1.1149999983608723,
+                    "min": 0.9949999898672104,
+                    "max": 1.2100000083446503
+                  },
+                  "medianDeltaPercent": 3.917050385873133
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 0.3846000000834465,
+                  "mean": 0.3846000000834465,
+                  "min": 0.37821666662891706,
+                  "max": 0.39098333353797593
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 0.38648611109289854,
+                  "mean": 0.38648611109289854,
+                  "min": 0.3824777777161863,
+                  "max": 0.39049444446961085
+                },
+                "medianDeltaPercent": 0.49040847869026294
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 0.760000005364418,
+                    "mean": 0.760000005364418,
+                    "min": 0.75,
+                    "max": 0.7700000107288361
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 0.7700000032782555,
+                    "mean": 0.7700000032782555,
+                    "min": 0.7699999958276749,
+                    "max": 0.7700000107288361
+                  },
+                  "medianDeltaPercent": 1.3157891899017171
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.052499994635582,
+                    "mean": 1.052499994635582,
+                    "min": 1.0399999916553497,
+                    "max": 1.0649999976158142
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.0375000014901161,
+                    "mean": 1.0375000014901161,
+                    "min": 1.0249999910593033,
+                    "max": 1.050000011920929
+                  },
+                  "medianDeltaPercent": -1.4251775032701475
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 0.3928666667971346,
+                  "candidate": 0.38980833312703506,
+                  "deltaPercent": -0.778466062044092
+                },
+                {
+                  "round": 1,
+                  "base": 0.38570833333664467,
+                  "candidate": 0.38510555576947003,
+                  "deltaPercent": -0.15627807726117382
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 0.7674999982118607,
+                    "candidate": 0.7675000056624413,
+                    "deltaPercent": 9.707596948516084e-7
+                  },
+                  {
+                    "round": 1,
+                    "base": 0.7725000083446503,
+                    "candidate": 0.7650000005960464,
+                    "deltaPercent": -0.970874778975761
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 1.1825000047683716,
+                    "candidate": 1.1274999976158142,
+                    "deltaPercent": -4.651163376809519
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.0099999979138374,
+                    "candidate": 1.1024999991059303,
+                    "deltaPercent": 9.158415978529932
+                  }
+                ]
+              }
+            },
+            "replication": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.9371749998132388,
+                    "mean": 0.9508208331341544,
+                    "min": 0.9319833329319954,
+                    "max": 0.9969499999781449
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.9421666664630175,
+                    "mean": 0.9483999999860923,
+                    "min": 0.9288499999543031,
+                    "max": 0.980416667064031
+                  },
+                  "medianDeltaPercent": 0.5326290874994921
+                },
+                "p50": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.8925000056624413,
+                    "mean": 0.89750000461936,
+                    "min": 0.8700000047683716,
+                    "max": 0.9350000023841858
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.8924999982118607,
+                    "mean": 0.892500001937151,
+                    "min": 0.885000005364418,
+                    "max": 0.9000000059604645
+                  },
+                  "medianDeltaPercent": -8.347989410850687e-7
+                },
+                "p95": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.3625000044703484,
+                    "mean": 1.378750003874302,
+                    "min": 1.3250000029802322,
+                    "max": 1.4650000035762787
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.3775000050663948,
+                    "mean": 1.3787500001490116,
+                    "min": 1.2849999964237213,
+                    "max": 1.4749999940395355
+                  },
+                  "medianDeltaPercent": 1.1009174713271008
+                },
+                "p99": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.8100000098347664,
+                    "mean": 1.7950000017881393,
+                    "min": 1.709999993443489,
+                    "max": 1.8499999940395355
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.8100000023841858,
+                    "mean": 1.9624999985098839,
+                    "min": 1.7950000017881393,
+                    "max": 2.4349999874830246
+                  },
+                  "medianDeltaPercent": -4.1163428221580034e-7
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 0.9382916666815678,
+                  "mean": 0.9382916666815678,
+                  "min": 0.9362999998529752,
+                  "max": 0.9402833335101605
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 0.9365500000119209,
+                  "mean": 0.9365500000119209,
+                  "min": 0.920116666406393,
+                  "max": 0.9529833336174488
+                },
+                "medianDeltaPercent": -0.18562103144394992
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.2974999994039536,
+                    "mean": 1.2974999994039536,
+                    "min": 1.2850000113248825,
+                    "max": 1.3099999874830246
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.3299999982118607,
+                    "mean": 1.3299999982118607,
+                    "min": 1.2999999970197678,
+                    "max": 1.3599999994039536
+                  },
+                  "medianDeltaPercent": 2.5048168649585367
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.8099999949336052,
+                    "mean": 1.8099999949336052,
+                    "min": 1.7749999910593033,
+                    "max": 1.844999998807907
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.8825000077486038,
+                    "mean": 1.8825000077486038,
+                    "min": 1.8300000131130219,
+                    "max": 1.9350000023841858
+                  },
+                  "medianDeltaPercent": 4.0055255811013435
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 0.9339999996374051,
+                  "candidate": 0.9338083335508902,
+                  "deltaPercent": -0.020520994281514326
+                },
+                {
+                  "round": 1,
+                  "base": 0.9676416666309038,
+                  "candidate": 0.9629916664212942,
+                  "deltaPercent": -0.4805498119773821
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 1.3300000056624413,
+                    "candidate": 1.3799999952316284,
+                    "deltaPercent": 3.759397695963429
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.4275000020861626,
+                    "candidate": 1.3775000050663948,
+                    "deltaPercent": -3.502626756336058
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 1.7424999997019768,
+                    "candidate": 1.8000000044703484,
+                    "deltaPercent": 3.2998568021926022
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.847500003874302,
+                    "candidate": 2.1249999925494194,
+                    "deltaPercent": 15.020297055111541
+                  }
+                ]
+              }
+            }
+          },
+          "resourcePaths": [
+            "/base/benchmark.js",
+            "/favicon.ico",
+            "/candidate/benchmark.js"
+          ]
+        },
+        {
+          "workload": "projectiles",
+          "comparisonSamples": 8,
+          "controlSamples": 4,
+          "metrics": {
+            "sim": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.46402499976257483,
+                    "mean": 0.46581527767082054,
+                    "min": 0.4582833334638013,
+                    "max": 0.47692777769433126
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.46951388890544576,
+                    "mean": 0.4700749999905626,
+                    "min": 0.46685555549131497,
+                    "max": 0.47441666666004395
+                  },
+                  "medianDeltaPercent": 1.1828865138040934
+                },
+                "p50": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.4125000014901161,
+                    "mean": 0.4137499965727329,
+                    "min": 0.4099999964237213,
+                    "max": 0.41999998688697815
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.4125000014901161,
+                    "mean": 0.4125000014901161,
+                    "min": 0.4050000011920929,
+                    "max": 0.42000000178813934
+                  },
+                  "medianDeltaPercent": 0
+                },
+                "p95": {
+                  "base": {
+                    "samples": 4,
+                    "median": 0.7124999985098839,
+                    "mean": 0.7187500037252903,
+                    "min": 0.7050000131130219,
+                    "max": 0.7450000047683716
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 0.7249999940395355,
+                    "mean": 0.7249999977648258,
+                    "min": 0.7199999988079071,
+                    "max": 0.7300000041723251
+                  },
+                  "medianDeltaPercent": 1.7543853411640775
+                },
+                "p99": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.0875000059604645,
+                    "mean": 1.086250003427267,
+                    "min": 0.9549999982118607,
+                    "max": 1.2150000035762787
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.25,
+                    "mean": 1.2525000013411045,
+                    "min": 1.2150000035762787,
+                    "max": 1.2950000017881393
+                  },
+                  "medianDeltaPercent": 14.94252810564518
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 0.4629444446083572,
+                  "mean": 0.4629444446083572,
+                  "min": 0.4609222222202354,
+                  "max": 0.46496666699647904
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 0.46763888902134365,
+                  "mean": 0.46763888902134365,
+                  "min": 0.466794444868962,
+                  "max": 0.4684833331737253
+                },
+                "medianDeltaPercent": 1.0140405544682318
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 0.7124999985098839,
+                    "mean": 0.7124999985098839,
+                    "min": 0.7049999982118607,
+                    "max": 0.7199999988079071
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 0.7300000041723251,
+                    "mean": 0.7300000041723251,
+                    "min": 0.7300000041723251,
+                    "max": 0.7300000041723251
+                  },
+                  "medianDeltaPercent": 2.4561411507425523
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.2074999883770943,
+                    "mean": 1.2074999883770943,
+                    "min": 1.1199999898672104,
+                    "max": 1.2949999868869781
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.1800000071525574,
+                    "mean": 1.1800000071525574,
+                    "min": 1.1500000059604645,
+                    "max": 1.2100000083446503
+                  },
+                  "medianDeltaPercent": -2.277431179233169
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 0.46760555557906625,
+                  "candidate": 0.4688527776714828,
+                  "deltaPercent": 0.2667252511300955
+                },
+                {
+                  "round": 1,
+                  "base": 0.46402499976257483,
+                  "candidate": 0.4712972223096424,
+                  "deltaPercent": 1.567204902923014
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 0.7274999991059303,
+                    "candidate": 0.7274999991059303,
+                    "deltaPercent": 0
+                  },
+                  {
+                    "round": 1,
+                    "base": 0.7100000083446503,
+                    "candidate": 0.7224999964237213,
+                    "deltaPercent": 1.7605616805856705
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 1.0850000008940697,
+                    "candidate": 1.25,
+                    "deltaPercent": 15.207373176955375
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.0875000059604645,
+                    "candidate": 1.255000002682209,
+                    "deltaPercent": 15.402298464707687
+                  }
+                ]
+              }
+            },
+            "replication": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.0733250000824532,
+                    "mean": 1.0737583332757155,
+                    "min": 1.0376499997576079,
+                    "max": 1.1107333331803482
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.0690416662146647,
+                    "mean": 1.0796541663507622,
+                    "min": 1.0603166664143404,
+                    "max": 1.1202166665593782
+                  },
+                  "medianDeltaPercent": -0.3990714711256671
+                },
+                "p50": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.0425000041723251,
+                    "mean": 1.0462500005960464,
+                    "min": 1.0199999958276749,
+                    "max": 1.0799999982118607
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.052499994635582,
+                    "mean": 1.058749996125698,
+                    "min": 1.0450000017881393,
+                    "max": 1.084999993443489
+                  },
+                  "medianDeltaPercent": 0.9592316952742985
+                },
+                "p95": {
+                  "base": {
+                    "samples": 4,
+                    "median": 1.5650000050663948,
+                    "mean": 1.5475000031292439,
+                    "min": 1.4650000035762787,
+                    "max": 1.594999998807907
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.5399999991059303,
+                    "mean": 1.5387500002980232,
+                    "min": 1.489999994635582,
+                    "max": 1.5850000083446503
+                  },
+                  "medianDeltaPercent": -1.597444465145792
+                },
+                "p99": {
+                  "base": {
+                    "samples": 4,
+                    "median": 2.0775000005960464,
+                    "mean": 2.0387500002980232,
+                    "min": 1.780000001192093,
+                    "max": 2.219999998807907
+                  },
+                  "candidate": {
+                    "samples": 4,
+                    "median": 1.9874999970197678,
+                    "mean": 1.9912499971687794,
+                    "min": 1.9500000029802322,
+                    "max": 2.0399999916553497
+                  },
+                  "medianDeltaPercent": -4.3321301347993835
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 1.0739250003546477,
+                  "mean": 1.0739250003546477,
+                  "min": 1.0643166672686737,
+                  "max": 1.0835333334406216
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 1.076616666764021,
+                  "mean": 1.076616666764021,
+                  "min": 1.0720166665812334,
+                  "max": 1.0812166669468084
+                },
+                "medianDeltaPercent": 0.25063821109336804
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.5374999940395355,
+                    "mean": 1.5374999940395355,
+                    "min": 1.530000001192093,
+                    "max": 1.5449999868869781
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.5649999976158142,
+                    "mean": 1.5649999976158142,
+                    "min": 1.5049999952316284,
+                    "max": 1.625
+                  },
+                  "medianDeltaPercent": 1.7886181257163347
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 2.157499998807907,
+                    "mean": 2.157499998807907,
+                    "min": 1.9399999976158142,
+                    "max": 2.375
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 2.0424999967217445,
+                    "mean": 2.0424999967217445,
+                    "min": 1.7999999970197678,
+                    "max": 2.2849999964237213
+                  },
+                  "medianDeltaPercent": -5.330243436834481
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 1.0605499999721846,
+                  "candidate": 1.0659416661659877,
+                  "deltaPercent": 0.5083839700103399
+                },
+                {
+                  "round": 1,
+                  "base": 1.0869666665792466,
+                  "candidate": 1.0933666665355364,
+                  "deltaPercent": 0.5887945006106676
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 1.510000005364418,
+                    "candidate": 1.5399999991059303,
+                    "deltaPercent": 1.9867545453599034
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.5850000008940697,
+                    "candidate": 1.5375000014901161,
+                    "deltaPercent": -2.9968453865715894
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 1.880000002682209,
+                    "candidate": 2.0249999910593033,
+                    "deltaPercent": 7.712765328203286
+                  },
+                  {
+                    "round": 1,
+                    "base": 2.1974999979138374,
+                    "candidate": 1.9575000032782555,
+                    "deltaPercent": -10.921501472738216
+                  }
+                ]
+              }
+            }
+          },
+          "resourcePaths": [
+            "/base/benchmark.js",
+            "/favicon.ico",
+            "/candidate/benchmark.js"
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceReportHashes": [
+    {
+      "path": "docs/engine-compatibility/2026-10-16-external-packages/vanilla-timings.json",
+      "sha256": "7a1d271118a6c005f2f28892c6207b8e32cd7828ec1e32a3f9637c9ac121d3ad"
+    }
+  ]
+}

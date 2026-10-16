@@ -1,0 +1,430 @@
+{
+  "source": "/Users/rivertwilight/Developer/steel-tide-mods/docs/engine-compatibility/2026-10-16-m0-m4/browser-initial-runs.json",
+  "note": "Descriptive statistics only; no tolerance or automatic performance pass. FNV digests are behavioral witnesses, not cryptographic identity.",
+  "workloads": [
+    {
+      "workload": "idle",
+      "samplesPerVariant": 4,
+      "warmup": 300,
+      "measured": 900,
+      "identity": {
+        "digest": true,
+        "wireDigest": true,
+        "snapshotBytes": true,
+        "joinBytes": true,
+        "wireBytes": true,
+        "entKeys": true,
+        "gameKeys": true,
+        "stateKeys": true
+      },
+      "metrics": {
+        "sim": {
+          "mean": {
+            "base": 0.10991666673372189,
+            "candidate": 0.11391666669398547,
+            "deltaPercent": 3.639120507496618
+          },
+          "p50": {
+            "base": 0.09999999403953552,
+            "candidate": 0.09999999403953552,
+            "deltaPercent": 0
+          },
+          "p95": {
+            "base": 0.20000000298023224,
+            "candidate": 0.20000000298023224,
+            "deltaPercent": 0
+          },
+          "p99": {
+            "base": 0.42500000074505806,
+            "candidate": 0.42500000074505806,
+            "deltaPercent": 0
+          }
+        },
+        "replication": {
+          "mean": {
+            "base": 0.31000000002483524,
+            "candidate": 0.3114166667809089,
+            "deltaPercent": 0.4569892761161931
+          },
+          "p50": {
+            "base": 0.29999999701976776,
+            "candidate": 0.29999999701976776,
+            "deltaPercent": 0
+          },
+          "p95": {
+            "base": 0.5749999992549419,
+            "candidate": 0.5750000029802322,
+            "deltaPercent": 6.478765746109616e-7
+          },
+          "p99": {
+            "base": 0.8000000007450581,
+            "candidate": 0.8500000014901161,
+            "deltaPercent": 6.250000087311491
+          }
+        },
+        "save": {
+          "mean": {
+            "base": 0.2416666674738129,
+            "candidate": 0.23958333364377418,
+            "deltaPercent": -0.8620691681712644
+          },
+          "p50": {
+            "base": 0.25,
+            "candidate": 0.25,
+            "deltaPercent": 0
+          },
+          "p95": {
+            "base": 0.3500000014901161,
+            "candidate": 0.30000000819563866,
+            "deltaPercent": -14.285712309029641
+          },
+          "p99": {
+            "base": 0.3500000014901161,
+            "candidate": 0.30000000819563866,
+            "deltaPercent": -14.285712309029641
+          }
+        },
+        "load": {
+          "mean": {
+            "base": 4.354166666356226,
+            "candidate": 4.174999999503295,
+            "deltaPercent": -4.114832540456392
+          },
+          "p50": {
+            "base": 3.425000000745058,
+            "candidate": 3.2749999947845936,
+            "deltaPercent": -4.379562216871069
+          },
+          "p95": {
+            "base": 9.225000001490116,
+            "candidate": 8.574999999254942,
+            "deltaPercent": -7.046070483795985
+          },
+          "p99": {
+            "base": 9.225000001490116,
+            "candidate": 8.574999999254942,
+            "deltaPercent": -7.046070483795985
+          }
+        }
+      }
+    },
+    {
+      "workload": "duels",
+      "samplesPerVariant": 4,
+      "warmup": 300,
+      "measured": 900,
+      "identity": {
+        "digest": true,
+        "wireDigest": true,
+        "snapshotBytes": true,
+        "joinBytes": true,
+        "wireBytes": true,
+        "entKeys": true,
+        "gameKeys": true,
+        "stateKeys": true
+      },
+      "metrics": {
+        "sim": {
+          "mean": {
+            "base": 0.4548611111318071,
+            "candidate": 0.4556666665979558,
+            "deltaPercent": 0.17709921697730557
+          },
+          "p50": {
+            "base": 0.4000000059604645,
+            "candidate": 0.4000000059604645,
+            "deltaPercent": 0
+          },
+          "p95": {
+            "base": 0.6250000074505806,
+            "candidate": 0.6000000089406967,
+            "deltaPercent": -3.999999713897706
+          },
+          "p99": {
+            "base": 1.1499999947845936,
+            "candidate": 1.0249999985098839,
+            "deltaPercent": -10.869564942747978
+          }
+        },
+        "replication": {
+          "mean": {
+            "base": 1.0817499998708566,
+            "candidate": 1.0609166666989527,
+            "deltaPercent": -1.9258916731584086
+          },
+          "p50": {
+            "base": 1.0249999985098839,
+            "candidate": 1,
+            "deltaPercent": -2.4390242484125024
+          },
+          "p95": {
+            "base": 1.6249999962747097,
+            "candidate": 1.5249999985098839,
+            "deltaPercent": -6.153846030404586
+          },
+          "p99": {
+            "base": 2.2250000052154064,
+            "candidate": 2.1250000037252903,
+            "deltaPercent": -4.494382078908576
+          }
+        },
+        "save": {
+          "mean": {
+            "base": 0.654166666790843,
+            "candidate": 0.6229166649281979,
+            "deltaPercent": -4.777070347523027
+          },
+          "p50": {
+            "base": 0.6499999985098839,
+            "candidate": 0.6499999985098839,
+            "deltaPercent": 0
+          },
+          "p95": {
+            "base": 0.7750000059604645,
+            "candidate": 0.7750000059604645,
+            "deltaPercent": 0
+          },
+          "p99": {
+            "base": 0.7750000059604645,
+            "candidate": 0.7750000059604645,
+            "deltaPercent": 0
+          }
+        },
+        "load": {
+          "mean": {
+            "base": 5.243749999751648,
+            "candidate": 5.339583335444331,
+            "deltaPercent": 1.82757255203283
+          },
+          "p50": {
+            "base": 4.37499999627471,
+            "candidate": 4.25,
+            "deltaPercent": -2.8571427744262023
+          },
+          "p95": {
+            "base": 10.50000000372529,
+            "candidate": 10.175000004470348,
+            "deltaPercent": -3.09523808704415
+          },
+          "p99": {
+            "base": 10.50000000372529,
+            "candidate": 10.175000004470348,
+            "deltaPercent": -3.09523808704415
+          }
+        }
+      }
+    },
+    {
+      "workload": "projectiles",
+      "samplesPerVariant": 4,
+      "warmup": 300,
+      "measured": 900,
+      "identity": {
+        "digest": true,
+        "wireDigest": true,
+        "snapshotBytes": true,
+        "joinBytes": true,
+        "wireBytes": true,
+        "entKeys": true,
+        "gameKeys": true,
+        "stateKeys": true
+      },
+      "metrics": {
+        "sim": {
+          "mean": {
+            "base": 0.42219444444610016,
+            "candidate": 0.41597222229672803,
+            "deltaPercent": -1.473781152552922
+          },
+          "p50": {
+            "base": 0.3999999985098839,
+            "candidate": 0.4000000022351742,
+            "deltaPercent": 9.313225746154785e-7
+          },
+          "p95": {
+            "base": 0.6250000074505806,
+            "candidate": 0.6000000089406967,
+            "deltaPercent": -3.999999713897706
+          },
+          "p99": {
+            "base": 1.1749999970197678,
+            "candidate": 1.0750000029802322,
+            "deltaPercent": -8.510637812184873
+          }
+        },
+        "replication": {
+          "mean": {
+            "base": 1.1433333332464097,
+            "candidate": 1.132749999972681,
+            "deltaPercent": -0.9256559715335233
+          },
+          "p50": {
+            "base": 1.050000000745058,
+            "candidate": 1.0499999970197678,
+            "deltaPercent": -3.5478955329182327e-7
+          },
+          "p95": {
+            "base": 1.824999999254942,
+            "candidate": 1.800000000745058,
+            "deltaPercent": -1.3698629326076794
+          },
+          "p99": {
+            "base": 2.574999999254942,
+            "candidate": 2.4500000029802322,
+            "deltaPercent": -4.8543687887719456
+          }
+        },
+        "save": {
+          "mean": {
+            "base": 0.45416666722546023,
+            "candidate": 0.4499999998758236,
+            "deltaPercent": -0.9174313419104685
+          },
+          "p50": {
+            "base": 0.45000000298023224,
+            "candidate": 0.45000000298023224,
+            "deltaPercent": 0
+          },
+          "p95": {
+            "base": 0.6000000089406967,
+            "candidate": 0.5749999992549419,
+            "deltaPercent": -4.166668218870939
+          },
+          "p99": {
+            "base": 0.6000000089406967,
+            "candidate": 0.5749999992549419,
+            "deltaPercent": -4.166668218870939
+          }
+        },
+        "load": {
+          "mean": {
+            "base": 4.9874999998137355,
+            "candidate": 5.2354166666045785,
+            "deltaPercent": 4.97076023659353
+          },
+          "p50": {
+            "base": 4.025000002235174,
+            "candidate": 4.125000007450581,
+            "deltaPercent": 2.4844721778850776
+          },
+          "p95": {
+            "base": 10.649999998509884,
+            "candidate": 10.449999999254942,
+            "deltaPercent": -1.8779342655673714
+          },
+          "p99": {
+            "base": 10.649999998509884,
+            "candidate": 10.449999999254942,
+            "deltaPercent": -1.8779342655673714
+          }
+        }
+      }
+    },
+    {
+      "workload": "battle",
+      "samplesPerVariant": 4,
+      "warmup": 300,
+      "measured": 900,
+      "identity": {
+        "digest": true,
+        "wireDigest": true,
+        "snapshotBytes": true,
+        "joinBytes": true,
+        "wireBytes": true,
+        "entKeys": true,
+        "gameKeys": true,
+        "stateKeys": true
+      },
+      "metrics": {
+        "sim": {
+          "mean": {
+            "base": 0.796027777786884,
+            "candidate": 0.8017499999743369,
+            "deltaPercent": 0.7188470486999554
+          },
+          "p50": {
+            "base": 0.6750000007450581,
+            "candidate": 0.7249999940395355,
+            "deltaPercent": 7.407406405820449
+          },
+          "p95": {
+            "base": 1.425000000745058,
+            "candidate": 1.4749999940395355,
+            "deltaPercent": 3.508771457427029
+          },
+          "p99": {
+            "base": 2.149999998509884,
+            "candidate": 2.075000010430813,
+            "deltaPercent": -3.4883715409791516
+          }
+        },
+        "replication": {
+          "mean": {
+            "base": 0.91558333316197,
+            "candidate": 0.9225000002483528,
+            "deltaPercent": 0.7554382911816537
+          },
+          "p50": {
+            "base": 0.8249999955296516,
+            "candidate": 0.8249999992549419,
+            "deltaPercent": 4.515503526647535e-7
+          },
+          "p95": {
+            "base": 1.4749999977648258,
+            "candidate": 1.550000000745058,
+            "deltaPercent": 5.084745972466798
+          },
+          "p99": {
+            "base": 2.300000000745058,
+            "candidate": 2.3250000029802322,
+            "deltaPercent": 1.086956618568502
+          }
+        },
+        "save": {
+          "mean": {
+            "base": 0.4145833340783914,
+            "candidate": 0.4499999983236194,
+            "deltaPercent": 8.542712968421284
+          },
+          "p50": {
+            "base": 0.3999999947845936,
+            "candidate": 0.42500000074505806,
+            "deltaPercent": 6.250001571606867
+          },
+          "p95": {
+            "base": 0.7750000022351742,
+            "candidate": 0.7249999977648258,
+            "deltaPercent": -6.451613461437877
+          },
+          "p99": {
+            "base": 0.7750000022351742,
+            "candidate": 0.7249999977648258,
+            "deltaPercent": -6.451613461437877
+          }
+        },
+        "load": {
+          "mean": {
+            "base": 18.539583332526185,
+            "candidate": 18.685416668032605,
+            "deltaPercent": 0.7866052482990105
+          },
+          "p50": {
+            "base": 17,
+            "candidate": 17.550000000745058,
+            "deltaPercent": 3.2352941220297637
+          },
+          "p95": {
+            "base": 25.725000001490116,
+            "candidate": 26.775000002235174,
+            "deltaPercent": 4.081632655721035
+          },
+          "p99": {
+            "base": 25.725000001490116,
+            "candidate": 26.775000002235174,
+            "deltaPercent": 4.081632655721035
+          }
+        }
+      }
+    }
+  ]
+}

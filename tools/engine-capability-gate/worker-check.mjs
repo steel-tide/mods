@@ -1,0 +1,21 @@
+import { readFileSync, writeFileSync, mkdtempSync, rmSync, existsSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { once } from 'node:events';
+import { createServer } from 'node:http';
+import { resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+const toolHome=fileURLToPath(new URL('./',import.meta.url));
+const candidate=process.env.STEEL_CANDIDATE??resolve(toolHome,'../../../steel-tide');
+const { launchChrome, Page }=await import(pathToFileURL(resolve(candidate,'game/core/scripts/lib/chrome.mjs')).href);
+const home=(process.env.STEEL_GATE_OUT??resolve(candidate,'.steel-tide-data/engine-capability-gate'))+'/';
+const graph=JSON.parse(readFileSync(home+'web-candidate-graph.json','utf8'));
+const worker=graph.find(o=>o.file.includes('/hostWorker-')).file;
+const fixture=JSON.parse(readFileSync(home+'worker-world.json','utf8'));
+const requests=[];
+const server=createServer((req,res)=>{const file=req.url.split('?')[0];requests.push(file);if(file==='/'){res.setHeader('Content-Type','text/html');res.end('<title>Worker validation</title>');return;}if(!/^\/assets\/[\w.-]+\.js$/.test(file)||!existsSync(home+'web-candidate'+file)){res.writeHead(404);res.end();return;}res.setHeader('Content-Type','text/javascript');res.end(readFileSync(home+'web-candidate'+file));});
+await new Promise(r=>server.listen(5348,'127.0.0.1',r));
+const profile=mkdtempSync(`${tmpdir()}/steel-worker-check-`);let chrome,page;
+try {chrome=await launchChrome(9348,profile);page=await Page.open(9348);await page.goto('http://127.0.0.1:5348/');
+ const result=await page.eval(`(async()=>{const worker=new Worker('/${worker}',{type:'module'});const events=[],messages=[];worker.onmessage=({data})=>{events.push(data);if(data.type==='send')messages.push(data.text.startsWith('S')?{type:'frame',frame:JSON.parse(data.text.slice(1))}:JSON.parse(data.text))};worker.onerror=e=>events.push({type:'error',message:e.message});const until=async(f)=>{for(let i=0;i<150;i++){if(f())return;await new Promise(r=>setTimeout(r,20));}throw Error(JSON.stringify({events,messages}))};const say=m=>worker.postMessage({type:'message',id:1,text:JSON.stringify(m)});worker.postMessage({type:'start',hostKey:'module-test-key',joinCode:'test',lanUrls:[],trustedExtensions:${JSON.stringify(fixture.trustedExtensions??[])}});await until(()=>events.some(e=>e.type==='started'));worker.postMessage({type:'open',id:1,remote:'127.0.0.1'});say({type:'hello',protocol:${fixture.protocol},name:'Host',clientId:'module-worker-test',hostKey:'module-test-key',worldVersion:1,engineCapabilities:['extension-host-v1']});await until(()=>messages.some(e=>e.type==='welcome'));say({type:'lobbyPatch',patch:{world:${JSON.stringify(fixture.world)}}});await until(()=>messages.some(e=>e.type==='worldContent'));const content=messages.find(e=>e.type==='worldContent');say({type:'worldReady',contentHash:content.contentHash});say({type:'start'});await until(()=>messages.some(e=>e.type==='frame'));const frame=messages.find(e=>e.type==='frame').frame;if(!frame.extensions)throw Error('No module state');worker.postMessage({type:'stop'});await until(()=>events.some(e=>e.type==='stopped'));worker.terminate();return {started:true,worldLoaded:true,modules:Object.keys(frame.extensions),errors:[...events,...messages].filter(e=>e.type==='error')};})()`);
+ result.requests=requests;writeFileSync(home+'worker-result.json',JSON.stringify(result,null,2));console.log(result);
+}finally{await page?.close();if(chrome){const ended=once(chrome,'exit');chrome.kill();await ended;}server.close();rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:200});}

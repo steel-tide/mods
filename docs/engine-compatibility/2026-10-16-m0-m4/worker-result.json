@@ -1,0 +1,20 @@
+{
+  "started": true,
+  "worldLoaded": true,
+  "modules": [
+    "logistics-v1",
+    "sensors-v1"
+  ],
+  "errors": [],
+  "requests": [
+    "/",
+    "/assets/hostWorker-B42tlq7a.js",
+    "/favicon.ico",
+    "/assets/worker-schema-B9Y1xHkP.js",
+    "/assets/worker-sensorsSpec-DKIwnJcu.js",
+    "/assets/worker-logistics-BzjZA8_J.js",
+    "/assets/worker-sensors-CJerRsDx.js",
+    "/assets/worker-components-CAfLZ14g.js",
+    "/assets/worker-runtime-BamxqBla.js"
+  ]
+}

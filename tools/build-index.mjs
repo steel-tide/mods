@@ -14,10 +14,12 @@
  */
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, rmSync, writeFileSync } from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { applyMods, imageSize, indexEntryFor, modRegistryBase, modSummaryFor, parseCustomMap, parseMod, parseModIndex } from './steel-tide-mod.mjs';
+import { prepareContentSchema } from './steel-tide-mod.mjs';
+import { registryModFolders } from './registry-folders.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
@@ -41,10 +43,12 @@ else if (existsSync(join(root, 'index.json'))) {
 }
 
 const mods = [];
-for (const name of readdirSync(join(root, 'mods')).sort()) {
-  const folder = join(root, 'mods', name);
-  if (!statSync(folder).isDirectory() || !existsSync(join(folder, 'mod.json'))) continue;
-  const parsed = parseMod(readFileSync(join(folder, 'mod.json'), 'utf8'));
+for (const folder of registryModFolders(root)) {
+  const name = basename(folder);
+  if (!existsSync(join(folder, 'mod.json'))) continue;
+  const raw=readFileSync(join(folder,'mod.json'),'utf8');
+  await prepareContentSchema(raw,true);
+  const parsed = parseMod(raw);
   if (!parsed.ok || parsed.mod.id !== name) {
     console.warn(`skipping mods/${name}: ${parsed.ok ? 'id does not match the folder' : 'does not validate'}`);
     continue;

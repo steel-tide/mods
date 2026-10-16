@@ -1,0 +1,5 @@
+{"agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36","cores":15,"dpr":2,"gpu":"ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)"}
+Warming high / clear / pitched / 1024 units
+Remaining offscreen bakes: 66; their normal cost stays in the measurement
+{"cut":"pitched","preset":"high","sky":"clear","hour":"noon","commanders":false,"match":true,"initialUnits":1024,"units":[1006,1047],"fps":59.88981873079791,"frameP95":16.700000000000728,"frameP99":16.80000000000291,"worstFrame":16.80000000000291,"missed":0,"missedPercent":0,"simMean":1.063666666423281,"simP95":2.5999999940395355,"renderMean":8.460500000019868,"renderP95":10.5,"ticksPerSecond":29.994900866843697,"behind":0,"canvas":[2880,1620],"zoom":0.5,"drawn":[1157,1201]}
+Saved /Users/rivertwilight/Developer/steel-tide-mods/docs/engine-compatibility/2026-10-16-m0-m4/renderer/2-candidate.json

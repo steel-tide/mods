@@ -1,0 +1,67 @@
+{
+  "result": {
+    "ids": [
+      [
+        1,
+        "compat-t90-study-hull"
+      ],
+      [
+        2,
+        "compat-t90-study-workshop"
+      ],
+      [
+        3,
+        "compat-signal-lab-emitter"
+      ],
+      [
+        4,
+        "compat-signal-lab-tracker"
+      ],
+      [
+        5,
+        "compat-signal-lab-controller"
+      ],
+      [
+        6,
+        "compat-signal-lab-drone"
+      ],
+      [
+        7,
+        "compat-signal-lab-mounts"
+      ],
+      [
+        8,
+        "compat-signal-lab-trailer"
+      ],
+      [
+        9,
+        "compat-signal-lab-tractor"
+      ],
+      [
+        10,
+        "compat-hj8-study-rifleman"
+      ],
+      [
+        11,
+        "compat-hj8-study-mobile"
+      ],
+      [
+        12,
+        "compat-hj8-study-fixed"
+      ]
+    ],
+    "classes": [
+      "ContentHud",
+      "ContentRenderer",
+      "ContentInput"
+    ]
+  },
+  "buttons": [
+    {
+      "key": "content:logistics-v1/ammunition/compat-t90-study-hull:main/main",
+      "text": "construction",
+      "disabled": false
+    }
+  ],
+  "errors": []
+}

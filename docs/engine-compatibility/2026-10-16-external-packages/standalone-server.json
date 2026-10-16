@@ -1,0 +1,13 @@
+{
+  "standalone": true,
+  "worldVerified": true,
+  "modules": [
+    "components-v1",
+    "logistics-v1",
+    "sensors-v1",
+    "articulation-v1"
+  ],
+  "errors": [],
+  "protocol": 6,
+  "packageVersion": "0.4.0"
+}

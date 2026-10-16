@@ -1,0 +1,21 @@
+$ node scripts/test.mjs extension-host content-cold
+2 files over 2 shards
+server/content-cold.test.ts:
+(pass) cold capability schema rejects unprepared data and the latest pending world selection wins [90.04ms]
+(pass) a cold checkpoint refuses early entry then restores content before welcoming players [199.16ms]
+(pass) ordinary content never loads capability registries, schemas or presentation [135.32ms]
+shard 1: 3 pass · 0 fail · 3 expect() calls · Ran 3 tests across 1 file. [535.00ms]
+server/extension-host.test.ts:
+(pass) a capability unknown to the engine runs from its package, saves, receives orders and unloads [28.49ms]
+(pass) integrity mismatches are rejected before even the schema factory runs [1.90ms]
+(pass) unsupported host ABI and duplicate providers reject before execution [0.14ms]
+(pass) missing providers, invalid package objects and package syntax fail closed [0.76ms]
+(pass) runtime exports must exactly match the declared capabilities [0.62ms]
+(pass) conflicting versions cannot silently replace another active provider [0.79ms]
+(pass) network requirements name the host ABI and exact package hashes [0.81ms]
+(pass) preparing another version does not replace the factory of an earlier content context [1.41ms]
+(pass) network content cannot run a package that has not been installed locally [0.02ms]
+(pass) package IDs may be namespaced without an engine enum or unit-ID restriction [1.03ms]
+(pass) portable SHA-256 matches native crypto at padding boundaries and maximum package size [97.45ms]
+shard 2: 11 pass · 0 fail · 45 expect() calls · Ran 11 tests across 1 file. [293.00ms]
+passed in 0.6s

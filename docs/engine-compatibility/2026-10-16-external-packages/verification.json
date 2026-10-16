@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-16",
+  "gameCommit": "28609d80a1a7dde944fa535fe602434979f58224",
+  "baselineGameCommit": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+  "baselineModCommit": "116ac82ce2e2d45883916fad96c7ea2b5ded9f71",
+  "content": {
+    "version": "0.4.0",
+    "format": 4,
+    "hostApi": 1,
+    "package": {
+      "id": "combined-arms",
+      "version": "1.1.0",
+      "parts": {
+        "schema": {
+          "sha256": "1b16780ccfe24790f031b3fd19c4b286dc9804af1c341f48b39057acf373a53e",
+          "bytes": 35543
+        },
+        "runtime": {
+          "sha256": "7d5e9b6a9c21d9647cb30589253e3c86ddbb96b7ef2daa973c8aecc2cf9d65df",
+          "bytes": 66273
+        },
+        "presentation": {
+          "sha256": "8b2207a9ed1311a9819e5040e5f1f72454bbe765c1fec048c023ed576705a724",
+          "bytes": 4394
+        }
+      }
+    },
+    "separateModRequired": false,
+    "gameplayDataPreserved": true
+  },
+  "checks": {
+    "nativeBodyIdentity": {
+      "passed": true,
+      "identical": 1068,
+      "checked": 1068
+    },
+    "gameTests": {
+      "passed": 4431,
+      "todo": 1,
+      "failed": 0
+    },
+    "cliTests": {
+      "passed": 52,
+      "failed": 0
+    },
+    "frameworkTests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "coldPathTests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "packageAndUcgrTests": {
+      "passed": 86,
+      "assertions": 1103,
+      "failed": 0
+    },
+    "converterTests": {
+      "passed": 54,
+      "failed": 0
+    },
+    "registryNodeTests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "registryDataTests": {
+      "passed": 14,
+      "failed": 0
+    },
+    "registryPacksValidated": 8,
+    "rootTypecheck": true,
+    "externalPackageStrictTypecheck": true,
+    "productionBuild": true,
+    "standaloneServerBuild": true,
+    "desktopSmoke": true,
+    "realFolderImport": true,
+    "withoutWebCryptoFolderImport": true,
+    "productionVanillaOptionalRequests": 0,
+    "productionWorker": true,
+    "standaloneServerWithUcgr": true
+  },
+  "commands": [
+    "pnpm check",
+    "pnpm test:game",
+    "pnpm -C game/core test extension-host content-cold",
+    "pnpm -C game/cli test",
+    "pnpm build",
+    "pnpm build:server",
+    "pnpm desktop:smoke --skip-build",
+    "node ../steel-tide/game/core/node_modules/typescript/bin/tsc -p extensions/combined-arms-v1/tsconfig.json",
+    "bun test ./extensions/combined-arms-v1/test ./mods/usgr-re/game.test.ts ./mods/usgr-re/components-game.test.ts ./mods/usgr-re/sensors-game.test.ts",
+    "python3 -B -m unittest discover -s mods/usgr-re -p \"test_*.py\"",
+    "node tools/check.mjs",
+    "node --test tests/*.test.mjs",
+    "bun test ./tests/ironworks.test.ts ./tests/factions.test.ts",
+    "bun tools/verify-extension-server.mjs"
+  ],
+  "performance": {
+    "overallReleaseGate": "open",
+    "nativeHotBodiesIdentical": true,
+    "optionalDownloadsAtVanillaBoot": 0,
+    "quietBrowserSamples": 48,
+    "extendedProjectileBrowserSamples": 20,
+    "behaviorWitnessesIdentical": true,
+    "conclusion": "No consistent refactor slowdown established in these local experiments; strict full-game, low-end/mobile and cross-platform release evidence remains incomplete."
+  },
+  "knownLimits": [
+    "Former format-3 built-in capability packs and embedded saves need explicit compatible format-4 repackaging.",
+    "Extension code is trusted JavaScript, not a security sandbox.",
+    "Network peers must install/approve package code locally; public world publication needs a reviewed package allowlist."
+  ],
+  "artifacts": {
+    "browser-import.log": "1e860e99da9827121a60c11745a91ef4331b665e75420248cefb7ff4554a7c08",
+    "browser-without-webcrypto.log": "1e860e99da9827121a60c11745a91ef4331b665e75420248cefb7ff4554a7c08",
+    "converter-tests.log": "d65833e7e035a75e3c27ad5ffc7f41c99b727104d01ae9fd22722344093941a1",
+    "desktop-smoke.log": "b16ec5a684bef36e217bfea44637998d2d5ca7d4517c151d3488a06e6151de90",
+    "framework-tests.log": "faf8d53be6cdf30885e2a6a79a28eae8761a8dc7cb3fb545b272ea4617629209",
+    "gameplay-data.json": "3d7a269d2dc7bf0e21fed674d839c69cb9fd2987c7a8dcfeb70d729ae6ff5339",
+    "native-identity.json": "eba092d1bf1f047e73ddcb60a0a38263e609e578cd9a9638d20ad5d14e183898",
+    "production-boot.json": "61aaa04db5aef17f44d65df4ab95a698964de11ed8bff3e7c0ffde4896e4b5a1",
+    "production-graph.json": "167bfaf3dd6cec2303a5db2faae77c9a68854e1bcc908ae9aabb14fdef14d6c5",
+    "production-worker.json": "e1a9f913fbd44691714c83e00379f7a72c586609ab66a732ab2557290a3ddf18",
+    "projectiles-extended.json": "3359f4017b52de8ee8a926c04dd71bdc5e6837bc2fd0d6c9aa44701d1db2f3f3",
+    "projectiles-summary.json": "79332d361e5ce9b1ca8f1d423a072ce26b336f420f175ef91507501efaa68917",
+    "quiet-summary.json": "9ecdbccff11aa5b22dacbec56c34435d264b8b71973bb981d9c7d4c84efa09c7",
+    "registry-check.log": "78ef333d136f020c9c5e98bd25c69d135fe89063887d9796918e74241c47a5f7",
+    "registry-data-tests.log": "ff0653e1435f2f901907a0b7a0d6219e81dcdb0219aa91117ee1eafd884f26cf",
+    "registry-tests.log": "2d892141581ac4082183cd485b1d6f183e30ba329e3d930953065f5fd74df2b3",
+    "standalone-server.json": "e801fdd5c9c78fbd157ba2ef0fc9985188be700df6fce3f3510cd4de1b298f0b",
+    "test-summary.log": "a5fd01a69a5e8b2b505ab014c15cc56b8ab364f54421ef4ccf8f08681d2f41f1",
+    "timing-summary.json": "29d788cc7dd0afba303811849a458847d22aeefcb9098f51be1c8e124bc90493",
+    "typecheck.log": "e95d196c2514ec6982b41af699a784df7cfa0e2b00d2e3badbc62311a1c91246",
+    "vanilla-controlled.json": "3d47163f2b456b80ae38cbfa3f762d3e8309d178fd4797a3f8e817ee193f6a6c",
+    "vanilla-quiet.json": "790dc270c08a92fdae64e765086773b3c43eb6adf26c1daa042fcc54fe887416",
+    "vanilla-timings.json": "7a1d271118a6c005f2f28892c6207b8e32cd7828ec1e32a3f9637c9ac121d3ad"
+  }
+}

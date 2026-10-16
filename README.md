@@ -46,6 +46,10 @@ published mod. **Ids are global** — prefix a generic word with your mod's id
 (`ironworks-bunker`, not `bunker`). CI runs the same check on every pull
 request; once merged, the catalogue and detail files are rebuilt on `main` and the mod is live.
 
+Ignored local draft folders are excluded from registry checks, catalogue generation
+and release selection. You can still check or pack a draft by naming its folder
+explicitly in the commands above.
+
 The screenshots are what the game's mod list and [steelti.de/mods](https://steelti.de/mods)
 show for the mod; the first is its card. Take them in a match with the mod's
 units on screen (the console's `give <faction> <unit id> <n>` puts them there)

@@ -13,10 +13,12 @@
  * or sheet key is taken by another published mod. Exit code 1 on any error;
  * warnings are printed and do not fail.
  */
-import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { MAX_MOD_MAP_BYTES, applyMods, checkScreenshot, imageSize, parseCustomMap, menuCutMapError, parseMod } from './steel-tide-mod.mjs';
+import { prepareContentSchema } from './steel-tide-mod.mjs';
+import { registryModFolders } from './registry-folders.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
@@ -25,7 +27,7 @@ const MAX_SHEET_BYTES = 4 * 1024 * 1024;
 const args = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const folders = args.length > 0
   ? args.map((a) => resolve(a))
-  : readdirSync(join(root, 'mods')).map((d) => join(root, 'mods', d)).filter((d) => statSync(d).isDirectory()).sort();
+  : registryModFolders(root);
 
 let failed = false;
 const loaded = [];
@@ -56,7 +58,9 @@ for (const folder of folders) {
     failed = true;
     continue;
   }
-  const parsed = parseMod(readFileSync(manifestPath, 'utf8'));
+  const raw=readFileSync(manifestPath,'utf8');
+  await prepareContentSchema(raw,true);
+  const parsed = parseMod(raw);
   warnings.push(...parsed.warnings);
   if (!parsed.ok) errors.push(...parsed.errors);
   else {
@@ -122,10 +126,9 @@ for (const folder of folders) {
 // what only the whole registry can tell: two mods claiming the same id, alias or sheet key
 if (args.length > 0) {
   // a single folder is checked against everything already published
-  const others = readdirSync(join(root, 'mods'))
-    .map((d) => join(root, 'mods', d))
-    .filter((d) => statSync(d).isDirectory() && !folders.includes(d) && existsSync(join(d, 'mod.json')))
-    .map((d) => parseMod(readFileSync(join(d, 'mod.json'), 'utf8')))
+  const others = (await Promise.all(registryModFolders(root)
+    .filter((d) => !folders.includes(d) && existsSync(join(d, 'mod.json')))
+    .map(async(d) => {const raw=readFileSync(join(d,'mod.json'),'utf8'); await prepareContentSchema(raw,true);return parseMod(raw);})))
     .filter((p) => p.ok)
     .map((p) => ({ mod: p.mod, label: `mods/${p.mod.id}` }));
   loaded.unshift(...others);

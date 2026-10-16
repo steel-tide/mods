@@ -1,0 +1,711 @@
+{
+  "createdAt": "2026-10-16T13:00:31.657Z",
+  "note": "Descriptive statistics across fresh-browser samples, without a percentage tolerance or automatic performance pass. Tick percentiles are summarized per sample; they are not independent browser observations. FNV digests are behavioral witnesses, not cryptographic identity.",
+  "samples": 20,
+  "identity": [
+    {
+      "scenario": "projectiles/300/1800",
+      "fields": {
+        "frozenDigest": {
+          "identical": true,
+          "values": [
+            "ba9262b2"
+          ]
+        },
+        "measuredStartDigest": {
+          "identical": true,
+          "values": [
+            "ba9262b2"
+          ]
+        },
+        "digest": {
+          "identical": true,
+          "values": [
+            "5e230cb"
+          ]
+        },
+        "wireDigest": {
+          "identical": true,
+          "values": [
+            "8c609f58"
+          ]
+        },
+        "wireBytes": {
+          "identical": true,
+          "values": [
+            35290305
+          ]
+        },
+        "snapshotBytes": {
+          "identical": true,
+          "values": [
+            85700
+          ]
+        }
+      }
+    }
+  ],
+  "reports": [
+    {
+      "source": "docs/engine-compatibility/2026-10-16-external-packages/projectiles-extended.json",
+      "options": {
+        "warmup": 1800,
+        "measured": 1800,
+        "freezeTicks": 300,
+        "rounds": 4,
+        "workloads": [
+          "projectiles"
+        ],
+        "aa": true
+      },
+      "buildCreatedAt": "2026-10-16T12:55:05.701Z",
+      "bundles": {
+        "base": {
+          "head": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+          "workingTreeIncluded": false,
+          "entryBytes": 635575,
+          "entryModules": [
+            "/privategame/core/src/game/defs.ts",
+            "/privategame/core/src/game/advancedHQ.ts",
+            "/privategame/core/src/core/strings.ts",
+            "/privategame/core/src/game/extensions/contracts.ts",
+            "/privategame/core/src/core/menuBackground.ts",
+            "/privategame/core/src/core/types.ts",
+            "/privategame/core/src/core/music.ts",
+            "/privategame/core/src/core/clone.ts",
+            "/privategame/core/src/core/i18n.ts",
+            "/privategame/core/src/game/abilityDefs.ts",
+            "/privategame/core/src/core/rng.ts",
+            "/privategame/core/src/game/biomes.ts",
+            "/privategame/core/src/game/map.ts",
+            "/privategame/core/src/game/decor.ts",
+            "/privategame/core/src/game/entityMap.ts",
+            "/privategame/core/src/game/transport.ts",
+            "/privategame/core/src/game/ammo.ts",
+            "/privategame/core/src/game/ruleState.ts",
+            "/privategame/core/src/game/veterancy.ts",
+            "/privategame/core/src/game/weather.ts",
+            "/privategame/core/src/game/contentTerrain.ts",
+            "/privategame/core/src/game/rle.ts",
+            "/privategame/core/src/game/profile.ts",
+            "/privategame/core/src/game/state.ts",
+            "/privategame/core/src/game/tech.ts",
+            "/privategame/core/src/game/contentDefs.ts",
+            "/privategame/core/src/game/factions.ts",
+            "/privategame/core/src/game/world.ts",
+            "/privategame/core/src/game/worldShapeValidation.ts",
+            "/privategame/core/src/core/math.ts",
+            "/privategame/core/src/game/cityDamage.ts",
+            "/privategame/core/src/game/attackArea.ts",
+            "/privategame/core/src/game/elevation.ts",
+            "/privategame/core/src/core/gridLine.ts",
+            "/privategame/core/src/game/bridgeLayout.ts",
+            "/privategame/core/src/game/amphibiousBridgePath.ts",
+            "/privategame/core/src/game/path.ts",
+            "/privategame/core/src/game/surface.ts",
+            "/privategame/core/src/game/power.ts",
+            "/privategame/core/src/game/abilities.ts",
+            "/privategame/core/src/game/armor.ts",
+            "/privategame/core/src/game/move.ts",
+            "/privategame/core/src/core/metrics.ts",
+            "/privategame/core/src/game/turrets.ts",
+            "/privategame/core/src/game/warheads.ts",
+            "/privategame/core/src/game/hqContacts.ts",
+            "/privategame/core/src/game/vision.ts",
+            "/privategame/core/src/game/jamming.ts",
+            "/privategame/core/src/game/unitTally.ts",
+            "/privategame/core/src/game/targetPriority.ts",
+            "/privategame/core/src/game/fireControl.ts",
+            "/privategame/core/src/game/impactMaterial.ts",
+            "/privategame/core/src/game/protect.ts",
+            "/privategame/core/src/game/combat.ts",
+            "/privategame/core/src/game/script.ts",
+            "/privategame/core/src/game/terrainChange.ts",
+            "/privategame/core/src/game/earthMaps.ts",
+            "/privategame/core/src/game/taihangChart.ts",
+            "/privategame/core/src/game/taihangMap.ts",
+            "/privategame/core/src/game/longHaul.ts",
+            "/privategame/core/src/game/conquest.ts",
+            "/privategame/core/src/game/pins.ts",
+            "/privategame/core/src/game/ai.ts",
+            "/privategame/core/src/game/formation.ts",
+            "/privategame/core/src/game/dig.ts",
+            "/privategame/core/src/game/wings.ts",
+            "/privategame/core/src/game/orders.ts",
+            "/privategame/core/src/game/customMap.ts",
+            "/privategame/core/src/game/worldValidation.ts",
+            "/privategame/core/src/game/worldRuntime.ts",
+            "/privategame/core/src/game/repairAura.ts",
+            "/privategame/core/src/game/idleWork.ts",
+            "/privategame/core/src/game/modRules.ts",
+            "/privategame/core/src/game/aiMap.ts",
+            "/privategame/core/src/game/aiIntel.ts",
+            "/privategame/core/src/game/breakthrough.ts",
+            "/privategame/core/src/game/nukeAim.ts",
+            "/privategame/core/src/game/aiTactics.ts",
+            "/privategame/core/src/game/aiTech.ts",
+            "/privategame/core/src/game/aiPockets.ts",
+            "/privategame/core/src/game/aiNaval.ts",
+            "/privategame/core/src/game/aiBrain.ts",
+            "/privategame/core/src/game/autopilot.ts",
+            "/privategame/core/src/game/commander.ts",
+            "/privategame/core/src/game/skins.ts",
+            "/privategame/core/src/game/decals.ts",
+            "/privategame/core/src/campaign/missions.ts",
+            "/privategame/core/src/game/openRange.ts",
+            "/privategame/core/src/game/sichuanGeography.ts",
+            "/privategame/core/src/game/sichuanMap.ts",
+            "/privategame/core/src/game/conquestMaps.ts",
+            "/privategame/core/src/game/mapdefs.ts",
+            "/privategame/core/src/game/save.ts",
+            "/privategame/core/src/game/teams.ts",
+            "/privategame/core/src/game/sim.ts",
+            "/privategame/core/src/game/contentCapabilities.ts",
+            "/privategame/core/src/game/contentGame.ts",
+            "/privategame/core/src/net/frames.ts",
+            "/privategame/core/src/net/contentFrames.ts",
+            "/privategame/core/server/testkit/game.ts",
+            "/Users/rivertwilight/Developer/steel-tide-mods/dist/external-extension-quiet/base.ts"
+          ]
+        },
+        "candidate": {
+          "head": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+          "workingTreeIncluded": true,
+          "entryBytes": 635591,
+          "entryModules": [
+            "game/core/src/game/defs.ts",
+            "game/core/src/game/advancedHQ.ts",
+            "game/core/src/core/strings.ts",
+            "game/core/src/core/menuBackground.ts",
+            "game/core/src/core/types.ts",
+            "game/core/src/core/music.ts",
+            "game/core/src/core/clone.ts",
+            "game/core/src/core/i18n.ts",
+            "game/core/src/game/abilityDefs.ts",
+            "game/core/src/core/rng.ts",
+            "game/core/src/game/biomes.ts",
+            "game/core/src/game/map.ts",
+            "game/core/src/game/decor.ts",
+            "game/core/src/game/entityMap.ts",
+            "game/core/src/game/transport.ts",
+            "game/core/src/game/ammo.ts",
+            "game/core/src/game/ruleState.ts",
+            "game/core/src/game/veterancy.ts",
+            "game/core/src/game/weather.ts",
+            "game/core/src/game/contentTerrain.ts",
+            "game/core/src/game/rle.ts",
+            "game/core/src/game/profile.ts",
+            "game/core/src/game/state.ts",
+            "game/core/src/game/tech.ts",
+            "game/core/src/game/contentDefs.ts",
+            "game/core/src/game/factions.ts",
+            "game/core/src/game/world.ts",
+            "game/core/src/game/worldShapeValidation.ts",
+            "game/core/src/core/math.ts",
+            "game/core/src/game/cityDamage.ts",
+            "game/core/src/game/attackArea.ts",
+            "game/core/src/game/elevation.ts",
+            "game/core/src/core/gridLine.ts",
+            "game/core/src/game/bridgeLayout.ts",
+            "game/core/src/game/amphibiousBridgePath.ts",
+            "game/core/src/game/path.ts",
+            "game/core/src/game/surface.ts",
+            "game/core/src/game/power.ts",
+            "game/core/src/game/abilities.ts",
+            "game/core/src/game/armor.ts",
+            "game/core/src/game/move.ts",
+            "game/core/src/core/metrics.ts",
+            "game/core/src/game/turrets.ts",
+            "game/core/src/game/warheads.ts",
+            "game/core/src/game/hqContacts.ts",
+            "game/core/src/game/vision.ts",
+            "game/core/src/game/jamming.ts",
+            "game/core/src/game/unitTally.ts",
+            "game/core/src/game/targetPriority.ts",
+            "game/core/src/game/fireControl.ts",
+            "game/core/src/game/impactMaterial.ts",
+            "game/core/src/game/protect.ts",
+            "game/core/src/game/combat.ts",
+            "game/core/src/game/script.ts",
+            "game/core/src/game/terrainChange.ts",
+            "game/core/src/game/earthMaps.ts",
+            "game/core/src/game/taihangChart.ts",
+            "game/core/src/game/taihangMap.ts",
+            "game/core/src/game/longHaul.ts",
+            "game/core/src/game/conquest.ts",
+            "game/core/src/game/pins.ts",
+            "game/core/src/game/ai.ts",
+            "game/core/src/game/formation.ts",
+            "game/core/src/game/dig.ts",
+            "game/core/src/game/wings.ts",
+            "game/core/src/game/orders.ts",
+            "game/core/src/game/customMap.ts",
+            "game/core/src/game/worldValidation.ts",
+            "game/core/src/game/worldRuntime.ts",
+            "game/core/src/game/repairAura.ts",
+            "game/core/src/game/idleWork.ts",
+            "game/core/src/game/modRules.ts",
+            "game/core/src/game/aiMap.ts",
+            "game/core/src/game/aiIntel.ts",
+            "game/core/src/game/breakthrough.ts",
+            "game/core/src/game/nukeAim.ts",
+            "game/core/src/game/aiTactics.ts",
+            "game/core/src/game/aiTech.ts",
+            "game/core/src/game/aiPockets.ts",
+            "game/core/src/game/aiNaval.ts",
+            "game/core/src/game/aiBrain.ts",
+            "game/core/src/game/autopilot.ts",
+            "game/core/src/game/commander.ts",
+            "game/core/src/game/skins.ts",
+            "game/core/src/game/decals.ts",
+            "game/core/src/campaign/missions.ts",
+            "game/core/src/game/openRange.ts",
+            "game/core/src/game/sichuanGeography.ts",
+            "game/core/src/game/sichuanMap.ts",
+            "game/core/src/game/conquestMaps.ts",
+            "game/core/src/game/mapdefs.ts",
+            "game/core/src/game/save.ts",
+            "game/core/src/game/teams.ts",
+            "game/core/src/game/sim.ts",
+            "game/core/src/game/contentCapabilities.ts",
+            "game/core/src/game/contentGame.ts",
+            "game/core/src/net/frames.ts",
+            "game/core/src/net/contentFrames.ts",
+            "game/core/server/testkit/game.ts",
+            "/Users/rivertwilight/Developer/steel-tide-mods/dist/external-extension-quiet/candidate.ts"
+          ]
+        }
+      },
+      "workloads": [
+        {
+          "workload": "projectiles",
+          "comparisonSamples": 16,
+          "controlSamples": 4,
+          "metrics": {
+            "sim": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 8,
+                    "median": 0.4025111111584637,
+                    "mean": 0.4089274305643306,
+                    "min": 0.39942500012616317,
+                    "max": 0.4524500000476837
+                  },
+                  "candidate": {
+                    "samples": 8,
+                    "median": 0.404669444490638,
+                    "mean": 0.4050340278001709,
+                    "min": 0.40164722219937377,
+                    "max": 0.40906944456199806
+                  },
+                  "medianDeltaPercent": 0.5362170813030254
+                },
+                "p50": {
+                  "base": {
+                    "samples": 8,
+                    "median": 0.38500000536441803,
+                    "mean": 0.3875000011175871,
+                    "min": 0.38499999046325684,
+                    "max": 0.4050000011920929
+                  },
+                  "candidate": {
+                    "samples": 8,
+                    "median": 0.38500000536441803,
+                    "mean": 0.3856250010430813,
+                    "min": 0.38499999046325684,
+                    "max": 0.39000000059604645
+                  },
+                  "medianDeltaPercent": 0
+                },
+                "p95": {
+                  "base": {
+                    "samples": 8,
+                    "median": 0.6799999922513962,
+                    "mean": 0.693749999627471,
+                    "min": 0.6700000017881393,
+                    "max": 0.800000011920929
+                  },
+                  "candidate": {
+                    "samples": 8,
+                    "median": 0.6874999925494194,
+                    "mean": 0.6862499993294477,
+                    "min": 0.6749999970197678,
+                    "max": 0.7000000029802322
+                  },
+                  "medianDeltaPercent": 1.102941232865562
+                },
+                "p99": {
+                  "base": {
+                    "samples": 8,
+                    "median": 1.0449999943375587,
+                    "mean": 1.076249998062849,
+                    "min": 0.8999999910593033,
+                    "max": 1.25
+                  },
+                  "candidate": {
+                    "samples": 8,
+                    "median": 1.0625,
+                    "mean": 1.050000000745058,
+                    "min": 0.9650000035762787,
+                    "max": 1.1150000095367432
+                  },
+                  "medianDeltaPercent": 1.6746416992599933
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 0.4012277778320842,
+                  "mean": 0.4012277778320842,
+                  "min": 0.40069166673554313,
+                  "max": 0.4017638889286253
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 0.40186666676153737,
+                  "mean": 0.40186666676153737,
+                  "min": 0.3993500001562966,
+                  "max": 0.4043833333667782
+                },
+                "medianDeltaPercent": 0.1592334740394108
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 0.6800000071525574,
+                    "mean": 0.6800000071525574,
+                    "min": 0.6800000071525574,
+                    "max": 0.6800000071525574
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 0.6849999949336052,
+                    "mean": 0.6849999949336052,
+                    "min": 0.6849999874830246,
+                    "max": 0.6850000023841858
+                  },
+                  "medianDeltaPercent": 0.7352923130081734
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 0.9850000068545341,
+                    "mean": 0.9850000068545341,
+                    "min": 0.9550000131130219,
+                    "max": 1.0150000005960464
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.030000001192093,
+                    "mean": 1.030000001192093,
+                    "min": 0.9749999940395355,
+                    "max": 1.0850000083446503
+                  },
+                  "medianDeltaPercent": 4.568527312122583
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 0.4017583334032032,
+                  "candidate": 0.40196249991655353,
+                  "deltaPercent": 0.05081823981618605
+                },
+                {
+                  "round": 1,
+                  "base": 0.4298138888387216,
+                  "candidate": 0.4064152778933446,
+                  "deltaPercent": -5.4438936369868856
+                },
+                {
+                  "round": 2,
+                  "base": 0.40131111114803286,
+                  "candidate": 0.40578888896852733,
+                  "deltaPercent": 1.115787152686809
+                },
+                {
+                  "round": 3,
+                  "base": 0.402826388867365,
+                  "candidate": 0.40596944442225824,
+                  "deltaPercent": 0.7802506592804459
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 0.6799999997019768,
+                    "candidate": 0.6799999922513962,
+                    "deltaPercent": -0.0000010956736185008253
+                  },
+                  {
+                    "round": 1,
+                    "base": 0.7450000047683716,
+                    "candidate": 0.6850000023841858,
+                    "deltaPercent": -8.05369154364508
+                  },
+                  {
+                    "round": 2,
+                    "base": 0.6749999970197678,
+                    "candidate": 0.6950000002980232,
+                    "deltaPercent": 2.962963461712387
+                  },
+                  {
+                    "round": 3,
+                    "base": 0.6749999970197678,
+                    "candidate": 0.6850000023841858,
+                    "deltaPercent": 1.4814822827510676
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 0.9349999949336052,
+                    "candidate": 1.0150000005960464,
+                    "deltaPercent": 8.55615038459141
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.2424999997019768,
+                    "candidate": 1.0174999982118607,
+                    "deltaPercent": -18.10865203574118
+                  },
+                  {
+                    "round": 2,
+                    "base": 1.0825000032782555,
+                    "candidate": 1.0549999997019768,
+                    "deltaPercent": -2.5404160270667275
+                  },
+                  {
+                    "round": 3,
+                    "base": 1.0449999943375587,
+                    "candidate": 1.1125000044703484,
+                    "deltaPercent": 6.459331148186176
+                  }
+                ]
+              }
+            },
+            "replication": {
+              "comparison": {
+                "mean": {
+                  "base": {
+                    "samples": 8,
+                    "median": 0.9184916664784153,
+                    "mean": 0.930441666636616,
+                    "min": 0.9073833333700896,
+                    "max": 1.0257750000804662
+                  },
+                  "candidate": {
+                    "samples": 8,
+                    "median": 0.9056750000764926,
+                    "mean": 0.909986458433171,
+                    "min": 0.8953583337366581,
+                    "max": 0.9314250000814597
+                  },
+                  "medianDeltaPercent": -1.3954036677396364
+                },
+                "p50": {
+                  "base": {
+                    "samples": 8,
+                    "median": 0.8974999934434891,
+                    "mean": 0.9056250005960464,
+                    "min": 0.885000005364418,
+                    "max": 0.9849999994039536
+                  },
+                  "candidate": {
+                    "samples": 8,
+                    "median": 0.8825000002980232,
+                    "mean": 0.8837500009685755,
+                    "min": 0.8650000095367432,
+                    "max": 0.9000000059604645
+                  },
+                  "medianDeltaPercent": -1.67130844067358
+                },
+                "p95": {
+                  "base": {
+                    "samples": 8,
+                    "median": 1.4575000032782555,
+                    "mean": 1.4949999991804361,
+                    "min": 1.405000001192093,
+                    "max": 1.8199999928474426
+                  },
+                  "candidate": {
+                    "samples": 8,
+                    "median": 1.4400000050663948,
+                    "mean": 1.4506250005215406,
+                    "min": 1.4249999970197678,
+                    "max": 1.4849999994039536
+                  },
+                  "medianDeltaPercent": -1.200685980960492
+                },
+                "p99": {
+                  "base": {
+                    "samples": 8,
+                    "median": 1.8999999985098839,
+                    "mean": 1.8799999989569187,
+                    "min": 1.6549999862909317,
+                    "max": 2.1400000005960464
+                  },
+                  "candidate": {
+                    "samples": 8,
+                    "median": 1.8774999976158142,
+                    "mean": 1.89499999769032,
+                    "min": 1.6949999928474426,
+                    "max": 2.105000004172325
+                  },
+                  "medianDeltaPercent": -1.1842105743008258
+                }
+              },
+              "aaMean": {
+                "base": {
+                  "samples": 2,
+                  "median": 0.9130999997258187,
+                  "mean": 0.9130999997258187,
+                  "min": 0.9087749994297822,
+                  "max": 0.917425000021855
+                },
+                "candidate": {
+                  "samples": 2,
+                  "median": 0.9014541664843758,
+                  "mean": 0.9014541664843758,
+                  "min": 0.8992166663954655,
+                  "max": 0.903691666573286
+                },
+                "medianDeltaPercent": -1.2754170676749332
+              },
+              "aaPercentiles": {
+                "p95": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.4399999976158142,
+                    "mean": 1.4399999976158142,
+                    "min": 1.4350000023841858,
+                    "max": 1.4449999928474426
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.4325000047683716,
+                    "mean": 1.4325000047683716,
+                    "min": 1.425000011920929,
+                    "max": 1.4399999976158142
+                  },
+                  "medianDeltaPercent": -0.5208328374902926
+                },
+                "p99": {
+                  "base": {
+                    "samples": 2,
+                    "median": 1.8574999943375587,
+                    "mean": 1.8574999943375587,
+                    "min": 1.7799999862909317,
+                    "max": 1.9350000023841858
+                  },
+                  "candidate": {
+                    "samples": 2,
+                    "median": 1.8474999964237213,
+                    "mean": 1.8474999964237213,
+                    "min": 1.7999999970197678,
+                    "max": 1.8949999958276749
+                  },
+                  "medianDeltaPercent": -0.538357897406283
+                }
+              },
+              "balancedRounds": [
+                {
+                  "round": 0,
+                  "base": 0.9226791667565704,
+                  "candidate": 0.8991416669388612,
+                  "deltaPercent": -2.550995044187343
+                },
+                {
+                  "round": 1,
+                  "base": 0.9693166668588916,
+                  "candidate": 0.9173458332692583,
+                  "deltaPercent": -5.361594963392802
+                },
+                {
+                  "round": 2,
+                  "base": 0.9115333330631257,
+                  "candidate": 0.915775000154972,
+                  "deltaPercent": 0.4653331850841491
+                },
+                {
+                  "round": 3,
+                  "base": 0.9182374998678764,
+                  "candidate": 0.9076833333695928,
+                  "deltaPercent": -1.1493939748487891
+                }
+              ],
+              "balancedTailRounds": {
+                "p95": [
+                  {
+                    "round": 0,
+                    "base": 1.4674999937415123,
+                    "candidate": 1.4299999997019768,
+                    "deltaPercent": -2.5553658738986518
+                  },
+                  {
+                    "round": 1,
+                    "base": 1.6324999928474426,
+                    "candidate": 1.4650000035762787,
+                    "deltaPercent": -10.260336294336314
+                  },
+                  {
+                    "round": 2,
+                    "base": 1.4175000041723251,
+                    "candidate": 1.4724999964237213,
+                    "deltaPercent": 3.880069988677737
+                  },
+                  {
+                    "round": 3,
+                    "base": 1.4625000059604645,
+                    "candidate": 1.4350000023841858,
+                    "deltaPercent": -1.8803421172103651
+                  }
+                ],
+                "p99": [
+                  {
+                    "round": 0,
+                    "base": 1.8875000029802322,
+                    "candidate": 1.7899999991059303,
+                    "deltaPercent": -5.165563111012251
+                  },
+                  {
+                    "round": 1,
+                    "base": 2.0499999970197678,
+                    "candidate": 1.902499996125698,
+                    "deltaPercent": -7.195122005292731
+                  },
+                  {
+                    "round": 2,
+                    "base": 1.8125,
+                    "candidate": 1.9874999970197678,
+                    "deltaPercent": 9.655172249366494
+                  },
+                  {
+                    "round": 3,
+                    "base": 1.7699999958276749,
+                    "candidate": 1.8999999985098839,
+                    "deltaPercent": 7.344632937211926
+                  }
+                ]
+              }
+            }
+          },
+          "resourcePaths": [
+            "/base/benchmark.js",
+            "/favicon.ico",
+            "/candidate/benchmark.js"
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceReportHashes": [
+    {
+      "path": "docs/engine-compatibility/2026-10-16-external-packages/projectiles-extended.json",
+      "sha256": "3359f4017b52de8ee8a926c04dd71bdc5e6837bc2fd0d6c9aa44701d1db2f3f3"
+    }
+  ]
+}

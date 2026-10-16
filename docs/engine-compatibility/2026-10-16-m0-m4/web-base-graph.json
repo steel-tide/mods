@@ -1,0 +1,1216 @@
+[
+  {
+    "file": "assets/index-BHU0W7JC.css",
+    "type": "asset",
+    "bytes": 315554
+  },
+  {
+    "file": "assets/index-EgyJqaEV.js",
+    "type": "chunk",
+    "entry": true,
+    "imports": [],
+    "dynamicImports": [
+      "assets/chatFilter-BUb2o6j6.js",
+      "assets/analytics-Ca6Bd8Vw.js",
+      "assets/campaignSelect-96EPb_BR.js",
+      "assets/sandbox-DIJmxumJ.js",
+      "assets/sandbox-DIJmxumJ.js",
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/loadgame-B5SxXwVO.js",
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/multiplayer-CVIEMM_e.js",
+      "assets/arsenal-B8meJztq.js",
+      "assets/profile-B9RlHf6n.js",
+      "assets/arsenal-B8meJztq.js",
+      "assets/store-CoGkNRTP.js",
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/worldLibrary-sHrONJa3.js",
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/multiplayer-CVIEMM_e.js",
+      "assets/menu-Cqq6Gxcn.js"
+    ],
+    "bytes": 2098556,
+    "modules": [
+      "\u0000vite/modulepreload-polyfill.js",
+      "/privategame/core/index.html?html-proxy&inline-css&index=0.css",
+      "\u0000vite/preload-helper.js",
+      "/privategame/core/src/ui/styles.css",
+      "/privategame/core/src/core/strings.ts",
+      "/privategame/core/src/core/i18n.ts",
+      "/privategame/core/src/core/music.ts",
+      "/privategame/core/src/core/impactSounds.ts",
+      "/privategame/core/src/core/voice.ts",
+      "/privategame/core/src/game/defs.ts",
+      "/privategame/core/src/core/unitVoice.ts",
+      "/privategame/core/src/core/commentaryStream.ts",
+      "/privategame/core/src/core/commentaryPcm.ts",
+      "/privategame/core/src/core/audio.ts",
+      "/privategame/core/src/gfx/px.ts",
+      "/privategame/core/src/gfx/spriteAlpha.ts",
+      "/privategame/core/src/gfx/palette.ts",
+      "/privategame/core/src/core/math.ts",
+      "/privategame/core/src/core/metrics.ts",
+      "/privategame/core/src/gfx/wreck.ts",
+      "/privategame/core/src/gfx/atlas.ts",
+      "/privategame/core/src/gfx/art/common.ts",
+      "/privategame/core/src/gfx/art/vehicles.ts",
+      "/privategame/core/src/gfx/art/ships.ts",
+      "/privategame/core/src/gfx/art/aircraft.ts",
+      "/privategame/core/src/core/rng.ts",
+      "/privategame/core/src/gfx/art/buildings.ts",
+      "/privategame/core/src/gfx/art/decor.ts",
+      "/privategame/core/src/gfx/art/effects.ts",
+      "/privategame/core/src/game/advancedHQ.ts",
+      "/privategame/core/src/core/types.ts",
+      "/privategame/core/src/game/cityDamage.ts",
+      "/privategame/core/src/game/biomes.ts",
+      "/privategame/core/src/game/map.ts",
+      "/privategame/core/src/game/decor.ts",
+      "/privategame/core/src/game/entityMap.ts",
+      "/privategame/core/src/game/transport.ts",
+      "/privategame/core/src/game/ammo.ts",
+      "/privategame/core/src/core/clone.ts",
+      "/privategame/core/src/core/menuBackground.ts",
+      "/privategame/core/src/game/abilityDefs.ts",
+      "/privategame/core/src/game/ruleState.ts",
+      "/privategame/core/src/game/veterancy.ts",
+      "/privategame/core/src/game/tech.ts",
+      "/privategame/core/src/game/contentTerrain.ts",
+      "/privategame/core/src/game/ruleSpec.ts",
+      "/privategame/core/src/game/contentDefs.ts",
+      "/privategame/core/src/game/weather.ts",
+      "/privategame/core/src/game/rle.ts",
+      "/privategame/core/src/game/profile.ts",
+      "/privategame/core/src/game/state.ts",
+      "/privategame/core/src/game/attackArea.ts",
+      "/privategame/core/src/game/elevation.ts",
+      "/privategame/core/src/core/gridLine.ts",
+      "/privategame/core/src/game/bridgeLayout.ts",
+      "/privategame/core/src/game/amphibiousBridgePath.ts",
+      "/privategame/core/src/game/path.ts",
+      "/privategame/core/src/game/surface.ts",
+      "/privategame/core/src/game/power.ts",
+      "/privategame/core/src/game/abilities.ts",
+      "/privategame/core/src/game/armor.ts",
+      "/privategame/core/src/game/move.ts",
+      "/privategame/core/src/game/turrets.ts",
+      "/privategame/core/src/game/warheads.ts",
+      "/privategame/core/src/game/factions.ts",
+      "/privategame/core/src/game/conquest.ts",
+      "/privategame/core/src/game/world.ts",
+      "/privategame/core/src/game/worldShapeValidation.ts",
+      "/privategame/core/src/game/customMap.ts",
+      "/privategame/core/src/game/worldValidation.ts",
+      "/privategame/core/src/game/worldRuntime.ts",
+      "/privategame/core/src/game/vision.ts",
+      "/privategame/core/src/game/pins.ts",
+      "/privategame/core/src/game/targetPriority.ts",
+      "/privategame/core/src/game/formation.ts",
+      "/privategame/core/src/game/protect.ts",
+      "/privategame/core/src/game/repairAura.ts",
+      "/privategame/core/src/game/idleWork.ts",
+      "/privategame/core/src/game/unitTally.ts",
+      "/privategame/core/src/game/modRules.ts",
+      "/privategame/core/src/game/fireControl.ts",
+      "/privategame/core/src/game/wings.ts",
+      "/privategame/core/src/game/ai.ts",
+      "/privategame/core/src/game/aiMap.ts",
+      "/privategame/core/src/game/aiIntel.ts",
+      "/privategame/core/src/game/breakthrough.ts",
+      "/privategame/core/src/game/nukeAim.ts",
+      "/privategame/core/src/game/aiTactics.ts",
+      "/privategame/core/src/game/aiTech.ts",
+      "/privategame/core/src/game/aiPockets.ts",
+      "/privategame/core/src/game/aiNaval.ts",
+      "/privategame/core/src/game/aiBrain.ts",
+      "/privategame/core/src/game/autopilot.ts",
+      "/privategame/core/src/game/terrainChange.ts",
+      "/privategame/core/src/game/earthMaps.ts",
+      "/privategame/core/src/game/taihangChart.ts",
+      "/privategame/core/src/game/taihangMap.ts",
+      "/privategame/core/src/game/dig.ts",
+      "/privategame/core/src/game/commander.ts",
+      "/privategame/core/src/game/skins.ts",
+      "/privategame/core/src/game/decals.ts",
+      "/privategame/core/src/campaign/missions.ts",
+      "/privategame/core/src/game/openRange.ts",
+      "/privategame/core/src/game/sichuanGeography.ts",
+      "/privategame/core/src/game/sichuanMap.ts",
+      "/privategame/core/src/game/conquestMaps.ts",
+      "/privategame/core/src/game/mapdefs.ts",
+      "/privategame/core/src/game/save.ts",
+      "/privategame/core/src/game/teams.ts",
+      "/privategame/core/src/game/sim.ts",
+      "/privategame/core/src/game/script.ts",
+      "/privategame/core/src/game/orders.ts",
+      "/privategame/core/src/game/longHaul.ts",
+      "/privategame/core/src/game/hqContacts.ts",
+      "/privategame/core/src/game/jamming.ts",
+      "/privategame/core/src/game/impactMaterial.ts",
+      "/privategame/core/src/game/combat.ts",
+      "/privategame/core/src/gfx/art/ruins.ts",
+      "/privategame/core/src/gfx/art/pumpjack.ts",
+      "/privategame/core/src/gfx/art/skins.ts",
+      "/privategame/core/src/gfx/art/landmarks.ts",
+      "/privategame/core/src/gfx/art/longHaul.ts",
+      "/privategame/core/src/gfx/art/flags.ts",
+      "/privategame/core/src/gfx/art/fieldKit.ts",
+      "/privategame/core/src/gfx/art/materials.ts",
+      "/privategame/core/src/gfx/art/groundMarks.ts",
+      "/privategame/core/src/gfx/art/terrain.ts",
+      "/privategame/core/src/gfx/spriteLoader.ts",
+      "/privategame/core/src/ui/scrollFade.ts",
+      "/privategame/core/src/ui/icons.ts",
+      "/privategame/core/src/ui/dropdown.ts",
+      "/privategame/core/src/core/controls.ts",
+      "/privategame/core/src/ui/keys.ts",
+      "/privategame/core/src/ui/dialogs.ts",
+      "/privategame/core/src/ui/curtain.ts",
+      "/privategame/core/src/render/camera.ts",
+      "/privategame/core/src/ui/mapEntryGeometry.ts",
+      "/privategame/core/src/core/designSystem.ts",
+      "/privategame/core/src/core/terrainColors.ts",
+      "/privategame/core/src/ui/battleMap.ts",
+      "/privategame/core/src/ui/minimap.ts",
+      "/privategame/core/src/ui/mapEntry.ts",
+      "/privategame/core/src/ui/documentTitle.ts",
+      "/privategame/core/src/ui/screens.ts",
+      "/privategame/core/src/core/merit.ts",
+      "/privategame/core/src/core/achievements.ts",
+      "/privategame/core/src/core/reviews.ts",
+      "/privategame/core/src/core/downloadRegistry.ts",
+      "/privategame/core/src/core/commentaryModels.ts",
+      "/privategame/core/src/core/graphics.ts",
+      "/privategame/core/src/core/storage.ts",
+      "/privategame/core/src/core/shell.ts",
+      "/privategame/core/src/core/platform.ts",
+      "/privategame/core/src/core/graphicsDevice.ts",
+      "/privategame/core/src/render/shake.ts",
+      "/privategame/core/src/core/analytics.ts",
+      "/privategame/core/src/net/moderation.ts",
+      "/privategame/core/src/ui/settingsState.ts",
+      "/privategame/core/src/ui/rotateHint.ts",
+      "/privategame/core/src/ui/cursorSkin.ts",
+      "/privategame/core/src/ui/tips.ts",
+      "/privategame/core/src/ui/scrollbar.ts",
+      "/privategame/core/src/render/gamepad.ts",
+      "/privategame/core/src/ui/inputMode.ts",
+      "/privategame/core/src/render/padMath.ts",
+      "/privategame/core/src/ui/tabs.ts",
+      "/privategame/core/src/ui/padFocus.ts",
+      "/privategame/core/src/ui/padGlyphs.ts",
+      "/privategame/core/src/ui/padHints.ts",
+      "/privategame/core/src/ui/padDriver.ts",
+      "/privategame/core/src/pwa/register.ts",
+      "/privategame/core/src/ui/updateField.ts",
+      "/privategame/core/src/ui/launchUpdate.ts",
+      "/privategame/core/src/core/shellFloor.ts",
+      "/privategame/core/src/core/site.ts",
+      "/privategame/core/src/ui/shellFloor.ts",
+      "/privategame/core/src/ui/missingFiles.ts",
+      "/privategame/core/src/ui/creditLogos.ts",
+      "/privategame/core/src/core/dataUrl.ts",
+      "/privategame/core/src/game/content.ts",
+      "/privategame/core/src/content/menuBackground.ts",
+      "/privategame/core/src/ui/menuCuts.ts",
+      "/privategame/core/src/ui/contentMenuCuts.ts",
+      "/privategame/core/src/render/bakeQueue.ts",
+      "/privategame/core/src/render/lcd.ts",
+      "/privategame/core/src/render/perfSession.ts",
+      "/privategame/core/src/render/airDrawOrder.ts",
+      "/privategame/core/src/render/cargoLayout.ts",
+      "/privategame/core/src/render/groundDrawOrder.ts",
+      "/privategame/core/src/render/decalMounts.ts",
+      "/privategame/core/src/render/sun.ts",
+      "/privategame/core/src/render/buildingShadows.ts",
+      "/privategame/core/src/render/atlasWarm.ts",
+      "/privategame/core/src/render/visualRandom.ts",
+      "/privategame/core/src/render/smokeScreen.ts",
+      "/privategame/core/src/render/groundBlend.ts",
+      "/privategame/core/src/render/roadMarks.ts",
+      "/privategame/core/src/render/bridges.ts",
+      "/privategame/core/src/gfx/spriteContour.ts",
+      "/privategame/core/src/render/buildingOverflow.ts",
+      "/privategame/core/src/render/buildingDestruction.ts",
+      "/privategame/core/src/render/flightScale.ts",
+      "/privategame/core/src/render/unitDecals.ts",
+      "/privategame/core/src/render/hullPose.ts",
+      "/privategame/core/src/render/modLooks.ts",
+      "/privategame/core/src/render/edgeHints.ts",
+      "/privategame/core/src/render/mapBackdrop.ts",
+      "/privategame/core/src/render/wind.ts",
+      "/privategame/core/src/render/contrails.ts",
+      "/privategame/core/src/render/hullRipples.ts",
+      "/privategame/core/src/render/trails.ts",
+      "/privategame/core/src/render/groundCover.ts",
+      "/privategame/core/src/render/materialEdges.ts",
+      "/privategame/core/src/render/shoreline.ts",
+      "/privategame/core/src/render/terrainVariants.ts",
+      "/privategame/core/src/render/terrainTexture.ts",
+      "/privategame/core/src/render/groundArt.ts",
+      "/privategame/core/src/render/shoreFoam.ts",
+      "/privategame/core/src/render/shorePaint.ts",
+      "/privategame/core/src/render/groundChunk.ts",
+      "/privategame/core/src/render/groundBakes.ts",
+      "/privategame/core/src/render/obstacleTerrain.ts",
+      "/privategame/core/src/render/cliffContours.ts",
+      "/privategame/core/src/render/mountainCountry.ts",
+      "/privategame/core/src/render/mountainPlants.ts",
+      "/privategame/core/src/render/cityLayout.ts",
+      "/privategame/core/src/render/cityArt.ts",
+      "/privategame/core/src/render/bridgeTileArt.ts",
+      "/privategame/core/src/render/obstacleArt.ts",
+      "/privategame/core/src/render/weather.ts",
+      "/privategame/core/src/render/lights.ts",
+      "/privategame/core/src/render/fireflies.ts",
+      "/privategame/core/src/render/soar.ts",
+      "/privategame/core/src/render/eagles.ts",
+      "/privategame/core/src/render/zeppelin.ts",
+      "/privategame/core/src/render/sunken.ts",
+      "/privategame/core/src/render/gulls.ts",
+      "/privategame/core/src/render/birds.ts",
+      "/privategame/core/src/render/rotors.ts",
+      "/privategame/core/src/render/rolling.ts",
+      "/privategame/core/src/render/clouds.ts",
+      "/privategame/core/src/render/longHaul.ts",
+      "/privategame/core/src/render/rumour.ts",
+      "/privategame/core/src/render/lamp.ts",
+      "/privategame/core/src/game/lamp.ts",
+      "/privategame/core/src/render/chimneys.ts",
+      "/privategame/core/src/render/effectSmoke.ts",
+      "/privategame/core/src/render/muzzleSmoke.ts",
+      "/privategame/core/src/render/recoil.ts",
+      "/privategame/core/src/render/heatHaze.ts",
+      "/privategame/core/src/render/rainRipples.ts",
+      "/privategame/core/src/render/snowCover.ts",
+      "/privategame/core/src/render/navlights.ts",
+      "/privategame/core/src/render/beacons.ts",
+      "/privategame/core/src/render/designator.ts",
+      "/privategame/core/src/render/pins.ts",
+      "/privategame/core/src/render/priorityTargets.ts",
+      "/privategame/core/src/render/hqContacts.ts",
+      "/privategame/core/src/game/walls.ts",
+      "/privategame/core/src/render/thermal.ts",
+      "/privategame/core/src/render/terrainComposite.ts",
+      "/privategame/core/src/core/mapCoordinates.ts",
+      "/privategame/core/src/render/warheadSight.ts",
+      "/privategame/core/src/render/renderer.ts",
+      "/privategame/core/src/ui/menuScene.ts",
+      "/privategame/core/src/ui/credits.ts",
+      "/privategame/core/src/core/zip.ts",
+      "/privategame/core/src/game/mods.ts",
+      "/privategame/core/src/mods/registry.ts",
+      "/privategame/core/src/content/sprites.ts",
+      "/privategame/core/src/content/sounds.ts",
+      "/privategame/core/src/content/music.ts",
+      "/privategame/core/src/core/idb.ts",
+      "/privategame/core/src/mods/store.ts",
+      "/privategame/core/src/content/manager.ts",
+      "/privategame/core/src/main.ts",
+      "/privategame/core/index.html"
+    ]
+  },
+  {
+    "file": "assets/analytics-Ca6Bd8Vw.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 3189,
+    "modules": [
+      "/privategame/core/src/analytics.ts"
+    ]
+  },
+  {
+    "file": "assets/campaignSelect-96EPb_BR.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/gamescreen-C7Nf2Bcp.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/stage-BCx_w7zK.js",
+      "assets/stripArrows-ClxPAGsR.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/screenshot-D56Fr_GJ.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/storeReview-CKvBIHi_.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/devUnlock-DFK641fF.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [
+      "assets/sandbox-DIJmxumJ.js"
+    ],
+    "bytes": 9960,
+    "modules": [
+      "/privategame/core/src/ui/konami.ts",
+      "/privategame/core/src/ui/campaignSelect.ts"
+    ]
+  },
+  {
+    "file": "assets/sandbox-DIJmxumJ.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/gamescreen-C7Nf2Bcp.js",
+      "assets/mapPicker-DwXf2mx3.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/seatMap-Dt6AB1PH.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/screenshot-D56Fr_GJ.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/storeReview-CKvBIHi_.js",
+      "assets/devUnlock-DFK641fF.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [
+      "assets/loadgame-B5SxXwVO.js"
+    ],
+    "bytes": 20332,
+    "modules": [
+      "/privategame/core/src/ui/sandbox.ts"
+    ]
+  },
+  {
+    "file": "assets/multiplayer-CVIEMM_e.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/gamescreen-C7Nf2Bcp.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/mapPicker-DwXf2mx3.js",
+      "assets/seatMap-Dt6AB1PH.js",
+      "assets/stage-BCx_w7zK.js",
+      "assets/loadgame-B5SxXwVO.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/screenshot-D56Fr_GJ.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/storeReview-CKvBIHi_.js",
+      "assets/devUnlock-DFK641fF.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [
+      "assets/localHost-BS0zNVRh.js"
+    ],
+    "bytes": 56659,
+    "modules": [
+      "/privategame/core/src/ui/requiredMods.ts",
+      "/privategame/core/src/ui/serverSettings.ts",
+      "/privategame/core/src/ui/multiplayer.ts"
+    ]
+  },
+  {
+    "file": "assets/seatMap-Dt6AB1PH.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/gamescreen-C7Nf2Bcp.js",
+      "assets/mapPicker-DwXf2mx3.js",
+      "assets/hub-C67hl5EW.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 9045,
+    "modules": [
+      "/privategame/core/src/ui/seatMap.ts"
+    ]
+  },
+  {
+    "file": "assets/loadgame-B5SxXwVO.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/gamescreen-C7Nf2Bcp.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/screenshot-D56Fr_GJ.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/storeReview-CKvBIHi_.js",
+      "assets/devUnlock-DFK641fF.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 3586,
+    "modules": [
+      "/privategame/core/src/ui/loadgame.ts"
+    ]
+  },
+  {
+    "file": "assets/arsenal-B8meJztq.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/fieldPreview-uCAWUz1U.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 19163,
+    "modules": [
+      "/privategame/core/src/ui/armorInfo.ts",
+      "/privategame/core/src/ui/fieldManual.ts",
+      "/privategame/core/src/ui/wardrobe.ts",
+      "/privategame/core/src/ui/arsenal.ts"
+    ]
+  },
+  {
+    "file": "assets/profile-B9RlHf6n.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/fieldPreview-uCAWUz1U.js"
+    ],
+    "dynamicImports": [
+      "assets/arsenal-B8meJztq.js",
+      "assets/profilePoster-C2zk2EaV.js"
+    ],
+    "bytes": 9336,
+    "modules": [
+      "/privategame/core/src/ui/badge.ts",
+      "/privategame/core/src/ui/achievements.ts",
+      "/privategame/core/src/ui/profile.ts"
+    ]
+  },
+  {
+    "file": "assets/store-CoGkNRTP.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/stage-BCx_w7zK.js",
+      "assets/fieldPreview-uCAWUz1U.js",
+      "assets/stripArrows-ClxPAGsR.js"
+    ],
+    "dynamicImports": [
+      "assets/arsenal-B8meJztq.js"
+    ],
+    "bytes": 13866,
+    "modules": [
+      "/privategame/core/src/ui/storeItems.ts",
+      "/privategame/core/src/ui/store.ts"
+    ]
+  },
+  {
+    "file": "assets/fieldPreview-uCAWUz1U.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 7436,
+    "modules": [
+      "/privategame/core/src/ui/fieldPreview.ts"
+    ]
+  },
+  {
+    "file": "assets/worldLibrary-sHrONJa3.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/gamescreen-C7Nf2Bcp.js",
+      "assets/stage-BCx_w7zK.js",
+      "assets/stripArrows-ClxPAGsR.js"
+    ],
+    "dynamicImports": [
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/worldEditor-BUxf-hot.js",
+      "assets/multiplayer-CVIEMM_e.js"
+    ],
+    "bytes": 19189,
+    "modules": [
+      "/privategame/core/src/core/worldFavorites.ts",
+      "/privategame/core/src/game/worldRegistry.ts",
+      "/privategame/core/src/core/mapPublish.ts",
+      "/privategame/core/src/core/worldCommunity.ts",
+      "/privategame/core/src/game/worldCover.ts",
+      "/privategame/core/src/ui/worldCover.ts",
+      "/privategame/core/src/ui/worldLibrary.ts"
+    ]
+  },
+  {
+    "file": "assets/gamescreen-C7Nf2Bcp.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/storeReview-CKvBIHi_.js",
+      "assets/settingsUi-CydEQHwq.js"
+    ],
+    "dynamicImports": [
+      "assets/worldLibrary-sHrONJa3.js",
+      "assets/areaMarks-BKktJKIA.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/guidePanel-ehLBe4sY.js",
+      "assets/loadgame-B5SxXwVO.js",
+      "assets/loadgame-B5SxXwVO.js",
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/multiplayer-CVIEMM_e.js"
+    ],
+    "bytes": 112712,
+    "modules": [
+      "/privategame/core/src/ui/mapPreview.ts",
+      "/privategame/core/src/ui/conduct.ts",
+      "/privategame/core/src/ui/console.ts",
+      "/privategame/core/src/ui/wasted.ts",
+      "/privategame/core/src/ui/respects.ts",
+      "/privategame/core/src/core/frameClock.ts",
+      "/privategame/core/src/ui/gameFrameLoop.ts",
+      "/privategame/core/src/game/ranking.ts",
+      "/privategame/core/src/ui/ranking.ts",
+      "/privategame/core/src/ui/guide.ts",
+      "/privategame/core/src/ui/storeMarks.ts",
+      "/privategame/core/src/ui/awayNotice.ts",
+      "/privategame/core/src/ui/touchStick.ts",
+      "/privategame/core/src/ui/touchHelm.ts",
+      "/privategame/core/src/ui/touchControls.ts",
+      "/privategame/core/src/ui/quickSelect.ts",
+      "/privategame/core/src/ui/radialMenu.ts",
+      "/privategame/core/src/render/padController.ts",
+      "/privategame/core/src/ui/saveSlots.ts",
+      "/privategame/core/src/ui/mouseGlyph.ts",
+      "/privategame/core/src/ui/actionHints.ts",
+      "/privategame/core/src/ui/gamescreen.ts"
+    ]
+  },
+  {
+    "file": "assets/storeReview-CKvBIHi_.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1277,
+    "modules": [
+      "/privategame/core/src/ui/storeReview.ts"
+    ]
+  },
+  {
+    "file": "assets/stripArrows-ClxPAGsR.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1436,
+    "modules": [
+      "/privategame/core/src/ui/stripArrows.ts"
+    ]
+  },
+  {
+    "file": "assets/stage-BCx_w7zK.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 2223,
+    "modules": [
+      "/privategame/core/src/ui/stage.ts"
+    ]
+  },
+  {
+    "file": "assets/hub-C67hl5EW.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [
+      "assets/multiplayer-CVIEMM_e.js",
+      "assets/multiplayer-CVIEMM_e.js",
+      "assets/multiplayer-CVIEMM_e.js",
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/arsenal-B8meJztq.js",
+      "assets/worldLibrary-sHrONJa3.js",
+      "assets/store-CoGkNRTP.js",
+      "assets/profile-B9RlHf6n.js",
+      "assets/settingsPage-2t_C6GSx.js",
+      "assets/replayLibrary-CvItPHkD.js"
+    ],
+    "bytes": 60626,
+    "modules": [
+      "/privategame/core/src/net/identity.ts",
+      "/privategame/core/src/core/runtime.ts",
+      "/privategame/core/src/net/protocol.ts",
+      "/privategame/core/src/net/serverAddress.ts",
+      "/privategame/core/src/net/servers.ts",
+      "/privategame/core/src/net/matchmaking.ts",
+      "/privategame/core/src/ui/commanderName.ts",
+      "/privategame/core/src/ui/matchmaking.ts",
+      "/privategame/core/src/game/bundles.ts",
+      "/privategame/core/src/ui/career.ts",
+      "/privategame/core/src/ui/skeleton.ts",
+      "/privategame/core/src/ui/clipboard.ts",
+      "/privategame/core/src/ui/community.ts",
+      "/privategame/core/src/core/redeemCode.ts",
+      "/privategame/core/src/game/roster.ts",
+      "/privategame/core/src/ui/roster.ts",
+      "/privategame/core/src/ui/itemArt.ts",
+      "/privategame/core/src/ui/storeOffer.ts",
+      "/privategame/core/src/ui/redeem.ts",
+      "/privategame/core/src/ui/merit.ts",
+      "/privategame/core/src/ui/setupShell.ts",
+      "/privategame/core/src/core/changelog.ts",
+      "/privategame/core/src/ui/changelog.ts",
+      "/privategame/core/src/ui/onlinePlayers.ts",
+      "/privategame/core/src/ui/hub.ts"
+    ]
+  },
+  {
+    "file": "assets/areaMarks-BKktJKIA.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 662,
+    "modules": [
+      "/privategame/core/src/render/areaMarks.ts"
+    ]
+  },
+  {
+    "file": "assets/guidePanel-ehLBe4sY.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/matchSession-CWUu702w.js",
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 5296,
+    "modules": [
+      "/privategame/core/src/render/guideMarks.ts",
+      "/privategame/core/src/ui/guidePanel.ts"
+    ]
+  },
+  {
+    "file": "assets/settingsPage-2t_C6GSx.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/devUnlock-DFK641fF.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1151,
+    "modules": [
+      "/privategame/core/src/ui/settingsPage.ts"
+    ]
+  },
+  {
+    "file": "assets/settingsUi-CydEQHwq.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/devUnlock-DFK641fF.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/slider-l33jrX0O.js"
+    ],
+    "dynamicImports": [
+      "assets/cutsScreen-B59LP-xw.js"
+    ],
+    "bytes": 52901,
+    "modules": [
+      "/privategame/core/src/ui/toggle.ts",
+      "/privategame/core/src/ui/modDetail.ts",
+      "/privategame/core/src/ui/modsPage.ts",
+      "/privategame/core/src/ui/devTools.ts",
+      "/privategame/core/src/ui/about.ts",
+      "/privategame/core/src/core/worldCollections.ts",
+      "/privategame/core/src/core/worldStorage.ts",
+      "/privategame/core/src/core/backup.ts",
+      "/privategame/core/src/ui/fileSave.ts",
+      "/privategame/core/src/ui/backup.ts",
+      "/privategame/core/src/ui/settingsUi.ts"
+    ]
+  },
+  {
+    "file": "assets/devUnlock-DFK641fF.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 2193,
+    "modules": [
+      "/privategame/core/src/core/devCode.ts",
+      "/privategame/core/src/ui/devUnlock.ts"
+    ]
+  },
+  {
+    "file": "assets/replayLibrary-CvItPHkD.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/worldHome-By5XI8L-.js"
+    ],
+    "dynamicImports": [
+      "assets/replayScreen-BMrmqY7Y.js"
+    ],
+    "bytes": 29220,
+    "modules": [
+      "/privategame/core/src/game/profileReport.ts",
+      "/privategame/core/src/core/webm.ts",
+      "/privategame/core/src/game/replay.ts",
+      "/privategame/core/src/ui/replayExport.ts",
+      "/privategame/core/src/ui/replayLibrary.ts"
+    ]
+  },
+  {
+    "file": "assets/matchSession-CWUu702w.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 131808,
+    "modules": [
+      "/privategame/core/src/game/admin.ts",
+      "/privategame/core/src/game/meritMatch.ts",
+      "/privategame/core/src/net/frames.ts",
+      "/privategame/core/src/net/remoteFrames.ts",
+      "/privategame/core/src/campaign/worldBaseline.ts",
+      "/privategame/core/src/campaign/tutorial.ts",
+      "/privategame/core/src/campaign/worldCampaign.ts",
+      "/privategame/core/src/core/worldSession.ts",
+      "/privategame/core/src/ui/matchSession.ts"
+    ]
+  },
+  {
+    "file": "assets/recordings-DCTZgYuB.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 1882,
+    "modules": [
+      "/privategame/core/src/core/recordings.ts"
+    ]
+  },
+  {
+    "file": "assets/cutsScreen-B59LP-xw.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/slider-l33jrX0O.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/devUnlock-DFK641fF.js",
+      "assets/download-SMlE9tCZ.js"
+    ],
+    "dynamicImports": [
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/settingsPage-2t_C6GSx.js"
+    ],
+    "bytes": 13544,
+    "modules": [
+      "/privategame/core/src/ui/rasterCuts.ts",
+      "/privategame/core/src/ui/cutsScreen.ts"
+    ]
+  },
+  {
+    "file": "assets/commands-DE0LJyOz.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 9685,
+    "modules": [
+      "/privategame/core/src/game/commands.ts"
+    ]
+  },
+  {
+    "file": "assets/localHost-BS0zNVRh.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/chatFilter-BUb2o6j6.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/screenshot-D56Fr_GJ.js",
+      "assets/download-SMlE9tCZ.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 53255,
+    "modules": [
+      "/privategame/core/src/net/matchmakingProtocol.ts",
+      "/privategame/core/src/net/serverCore.ts",
+      "/privategame/core/src/net/localHost.ts"
+    ]
+  },
+  {
+    "file": "assets/chatFilter-BUb2o6j6.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [],
+    "dynamicImports": [],
+    "bytes": 19134,
+    "modules": [
+      "/privategame/core/src/net/chatTlds.ts",
+      "/privategame/core/src/net/chatFilter.ts"
+    ]
+  },
+  {
+    "file": "assets/profilePoster-C2zk2EaV.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/screenshot-D56Fr_GJ.js",
+      "assets/download-SMlE9tCZ.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 4392,
+    "modules": [
+      "/privategame/core/src/ui/profilePosterStats.ts",
+      "/privategame/core/src/ui/profilePoster.ts"
+    ]
+  },
+  {
+    "file": "assets/download-SMlE9tCZ.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [],
+    "dynamicImports": [],
+    "bytes": 168,
+    "modules": [
+      "/privategame/core/src/ui/download.ts"
+    ]
+  },
+  {
+    "file": "assets/worldEditor-BUxf-hot.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/mapPicker-DwXf2mx3.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/worldLibrary-sHrONJa3.js",
+      "assets/gamescreen-C7Nf2Bcp.js",
+      "assets/worldHome-By5XI8L-.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/menu-Cqq6Gxcn.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/screenshot-D56Fr_GJ.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/devUnlock-DFK641fF.js",
+      "assets/slider-l33jrX0O.js",
+      "assets/stage-BCx_w7zK.js",
+      "assets/stripArrows-ClxPAGsR.js",
+      "assets/storeReview-CKvBIHi_.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 131283,
+    "modules": [
+      "/privategame/core/src/game/rustedWarfareMap.ts",
+      "/privategame/core/src/ui/mapImport.ts",
+      "/privategame/core/src/core/mapEditing.ts",
+      "/privategame/core/src/ui/mapSetup.ts",
+      "/privategame/core/src/ui/worldBrowser.ts",
+      "/privategame/core/src/ui/worldEditorFields.ts",
+      "/privategame/core/src/ui/scenarioEditor.ts",
+      "/privategame/core/src/ui/modEditor.ts",
+      "/privategame/core/src/ui/worldEditorContent.ts",
+      "/privategame/core/src/core/mapSubmission.ts",
+      "/privategame/core/src/ui/terrainSwatch.ts",
+      "/privategame/core/src/ui/mapEditor.ts",
+      "/privategame/core/src/ui/worldEditor.ts"
+    ]
+  },
+  {
+    "file": "assets/menu-Cqq6Gxcn.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/stage-BCx_w7zK.js",
+      "assets/storeReview-CKvBIHi_.js",
+      "assets/devUnlock-DFK641fF.js"
+    ],
+    "dynamicImports": [
+      "assets/replayLibrary-CvItPHkD.js",
+      "assets/loadgame-B5SxXwVO.js",
+      "assets/multiplayer-CVIEMM_e.js",
+      "assets/sandbox-DIJmxumJ.js",
+      "assets/sandbox-DIJmxumJ.js",
+      "assets/campaignSelect-96EPb_BR.js",
+      "assets/loadgame-B5SxXwVO.js",
+      "assets/worldLibrary-sHrONJa3.js"
+    ],
+    "bytes": 7812,
+    "modules": [
+      "/privategame/core/src/ui/buildNotice.ts",
+      "/privategame/core/src/ui/menu.ts"
+    ]
+  },
+  {
+    "file": "assets/mapPicker-DwXf2mx3.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/settingsUi-CydEQHwq.js",
+      "assets/gamescreen-C7Nf2Bcp.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/hub-C67hl5EW.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 209551,
+    "modules": [
+      "/privategame/core/src/ui/mapBuilds.ts",
+      "\u0000virtual:map-previews",
+      "/privategame/core/src/core/scenarios.ts",
+      "/privategame/core/src/core/worldEditing.ts",
+      "/privategame/core/src/core/editorMaps.ts",
+      "/privategame/core/src/game/mapRegistry.ts",
+      "/privategame/core/src/maps/registry.ts",
+      "/privategame/core/src/ui/masonry.ts",
+      "/privategame/core/src/ui/mapTip.ts",
+      "/privategame/core/src/ui/communityMaps.ts",
+      "/privategame/core/src/ui/reconcile.ts",
+      "/privategame/core/src/ui/mapPicker.ts"
+    ]
+  },
+  {
+    "file": "assets/worldHome-By5XI8L-.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 4961,
+    "modules": [
+      "/privategame/core/src/ui/worldHome.ts"
+    ]
+  },
+  {
+    "file": "assets/replayScreen-BMrmqY7Y.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/replayLibrary-CvItPHkD.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/topRow-oxPYCao0.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/slider-l33jrX0O.js",
+      "assets/recordings-DCTZgYuB.js",
+      "assets/download-SMlE9tCZ.js",
+      "assets/commands-DE0LJyOz.js",
+      "assets/worldHome-By5XI8L-.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/screenshot-D56Fr_GJ.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 12914,
+    "modules": [
+      "/privategame/core/src/game/replayHighlights.ts",
+      "/privategame/core/src/ui/replayScreen.ts"
+    ]
+  },
+  {
+    "file": "assets/topRow-oxPYCao0.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/matchSession-CWUu702w.js",
+      "assets/techUi-DEQ9WCTP.js",
+      "assets/hub-C67hl5EW.js",
+      "assets/input-mKJ8_vV-.js",
+      "assets/screenshot-D56Fr_GJ.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 170367,
+    "modules": [
+      "/privategame/core/src/ui/commandVoice.ts",
+      "/privategame/core/src/net/client.ts",
+      "/privategame/core/src/net/mutes.ts",
+      "/privategame/core/src/game/cheats.ts",
+      "/privategame/core/src/ui/economyBreakdown.ts",
+      "/privategame/core/src/game/standings.ts",
+      "/privategame/core/src/render/director.ts",
+      "/privategame/core/src/ui/holdToReveal.ts",
+      "/privategame/core/src/ui/latency.ts",
+      "/privategame/core/src/ui/playerList.ts",
+      "/privategame/core/src/ui/pauseBrief.ts",
+      "/privategame/core/src/ui/selectionInfo.ts",
+      "/privategame/core/src/ui/standingFormat.ts",
+      "/privategame/core/src/ui/spectateBoard.ts",
+      "/privategame/core/src/ui/streamingStats.ts",
+      "/privategame/core/src/core/textStream.ts",
+      "/privategame/core/src/core/commentary.ts",
+      "/privategame/core/src/game/commentary.ts",
+      "/privategame/core/src/game/localCommentary.ts",
+      "/privategame/core/src/ui/spectateCommentary.ts",
+      "/privategame/core/src/ui/touchLayout.ts",
+      "/privategame/core/src/ui/hud.ts",
+      "/privategame/core/src/ui/topRow.ts"
+    ]
+  },
+  {
+    "file": "assets/techUi-DEQ9WCTP.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 2237,
+    "modules": [
+      "/privategame/core/src/ui/techUi.ts"
+    ]
+  },
+  {
+    "file": "assets/slider-l33jrX0O.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [],
+    "dynamicImports": [],
+    "bytes": 733,
+    "modules": [
+      "/privategame/core/src/ui/slider.ts"
+    ]
+  },
+  {
+    "file": "assets/input-mKJ8_vV-.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/commands-DE0LJyOz.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 58674,
+    "modules": [
+      "/privategame/core/src/game/quickSelect.ts",
+      "/privategame/core/src/game/visibleUnits.ts",
+      "/privategame/core/src/render/input.ts"
+    ]
+  },
+  {
+    "file": "assets/screenshot-D56Fr_GJ.js",
+    "type": "chunk",
+    "entry": false,
+    "imports": [
+      "assets/index-EgyJqaEV.js",
+      "assets/download-SMlE9tCZ.js"
+    ],
+    "dynamicImports": [],
+    "bytes": 953,
+    "modules": [
+      "/privategame/core/src/ui/screenshot.ts"
+    ]
+  },
+  {
+    "file": "assets/groundWorker-Bcu2WCuS.js",
+    "type": "asset",
+    "bytes": 64007
+  },
+  {
+    "file": "assets/mapBuildWorker-fT2GEgsA.js",
+    "type": "asset",
+    "bytes": 277615
+  },
+  {
+    "file": "assets/hostWorker-a93S8PfU.js",
+    "type": "asset",
+    "bytes": 1364885
+  },
+  {
+    "file": "sw.js",
+    "type": "asset",
+    "bytes": 13011
+  }
+]

@@ -1,0 +1,12 @@
+5:56:08 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+
+  VITE v6.4.3  ready in 191 ms
+
+  ➜  Local:   http://127.0.0.1:5201/
+5:56:15 PM [vite] (ssr) Error when evaluating SSR module /api/online-players.ts: Failed to load url /api/online-players.ts (resolved id: /api/online-players.ts). Does the file exist?
+      at loadAndTransform (file:///Users/rivertwilight/Developer/steel-tide/node_modules/.pnpm/vite@6.4.3_@types+node@24.13.3_jiti@2.7.0_lightningcss@1.32.0_yaml@2.9.0/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:35835:17)
+5:57:58 PM [vite] (ssr) Error when evaluating SSR module /api/online-players.ts: Failed to load url /api/online-players.ts (resolved id: /api/online-players.ts). Does the file exist?
+      at loadAndTransform (file:///Users/rivertwilight/Developer/steel-tide/node_modules/.pnpm/vite@6.4.3_@types+node@24.13.3_jiti@2.7.0_lightningcss@1.32.0_yaml@2.9.0/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:35835:17)
+      at async fetchModule (file:///Users/rivertwilight/Developer/steel-tide/node_modules/.pnpm/vite@6.4.3_@types+node@24.13.3_jiti@2.7.0_lightningcss@1.32.0_yaml@2.9.0/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:46988:16)
+      at async handleInvoke (file:///Users/rivertwilight/Developer/steel-tide/node_modules/.pnpm/vite@6.4.3_@types+node@24.13.3_jiti@2.7.0_lightningcss@1.32.0_yaml@2.9.0/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:39131:22)
+      at async EventEmitter.listenerForInvokeHandler (file:///Users/rivertwilight/Developer/steel-tide/node_modules/.pnpm/vite@6.4.3_@types+node@24.13.3_jiti@2.7.0_lightningcss@1.32.0_yaml@2.9.0/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:39204:19)

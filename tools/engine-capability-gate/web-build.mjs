@@ -1,0 +1,13 @@
+import { mkdirSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { writeFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+const root=process.env.STEEL_CANDIDATE??resolve(fileURLToPath(new URL('./',import.meta.url)),'../../../steel-tide');
+const variant=process.argv[2];
+const repo=variant==='base'?(process.env.STEEL_BASELINE??'/tmp/steel-tide-capability-baseline-c4754358'):root;
+const home=process.env.STEEL_GATE_OUT??resolve(root,'.steel-tide-data/engine-capability-gate');mkdirSync(home,{recursive:true});
+process.env.VERCEL_GIT_COMMIT_SHA=execFileSync('git',['rev-parse',process.env.STEEL_BASELINE_REF??'c4754358'],{cwd:root,encoding:'utf8'}).trim();
+process.chdir(`${repo}/game/core`);
+const {build}=await import(`${repo}/game/core/node_modules/vite/dist/node/index.js`);
+await build({configFile:`${repo}/game/core/vite.config.ts`,publicDir:false,plugins:[{name:'capability-evidence',generateBundle(_,bundle){writeFileSync(`${home}/web-${variant}-graph.json`,JSON.stringify(Object.values(bundle).map(o=>o.type==='chunk'?{file:o.fileName,type:o.type,entry:o.isEntry,imports:o.imports,dynamicImports:o.dynamicImports,bytes:Buffer.byteLength(o.code),modules:Object.keys(o.modules).map(p=>p.replace(repo+'/',''))}:{file:o.fileName,type:o.type,bytes:Buffer.byteLength(o.source)}),null,2)+'\n');}}],build:{outDir:`${home}/web-${variant}`,emptyOutDir:true}});

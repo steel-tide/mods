@@ -1,0 +1,5 @@
+{
+  "extends": "../../../steel-tide/game/core/tsconfig.json",
+  "compilerOptions": { "types": [] },
+  "include": ["src", "../../../steel-tide/game/core/src/vite-env.d.ts"]
+}

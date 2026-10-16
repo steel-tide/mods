@@ -14,13 +14,16 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, dirname, extname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CUSTOM_MAP_EXT, MOD_FILE_EXT, parseMod } from './steel-tide-mod.mjs';
+import { prepareContentSchema } from './steel-tide-mod.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const MIME = { '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.mp3': 'audio/mpeg', '.wav': 'audio/wav', '.ogg': 'audio/ogg' };
 
 /** the packed file's text for a mod folder, or an error message; deterministic for the same folder, so a hash of it says whether the mod changed */
-export function packMod(folder) {
-  const parsed = parseMod(readFileSync(join(folder, 'mod.json'), 'utf8'));
+export async function packMod(folder) {
+  const raw=readFileSync(join(folder,'mod.json'),'utf8');
+  await prepareContentSchema(raw,true);
+  const parsed = parseMod(raw);
   if (!parsed.ok) return { ok: false, errors: parsed.errors };
   const files = {};
   const assets = [...(parsed.mod.sprites ?? []), ...(parsed.mod.sounds ?? []), ...(parsed.mod.music?.tracks ?? [])].map(({ file }) => file);
@@ -41,7 +44,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     process.exit(2);
   }
   const folder = resolve(folderArg);
-  const packed = packMod(folder);
+  const packed = await packMod(folder);
   if (!packed.ok) {
     for (const e of packed.errors) console.error(`✗ ${e.path}: ${e.message}`);
     process.exit(1);

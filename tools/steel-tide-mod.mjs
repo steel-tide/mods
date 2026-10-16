@@ -1,3 +1,365 @@
+let read, references;
+let loading;
+let trustedPackages;
+function grantTrustedExtensions(stamps) {
+  if (!stamps.length) return;
+  for (const stamp of stamps)
+    if (typeof stamp === "string" && stamp.length <= 512 && !trustedPackages?.has(stamp)) {
+      (trustedPackages ??= /* @__PURE__ */ new Set()).add(stamp);
+    }
+}
+function isTrustedExtension(stamp) {
+  return trustedPackages?.has(stamp) ?? false;
+}
+let prepareSchemas$1;
+let checkPackages;
+function registerContentSchema(reader, validator, checker) {
+  read = reader;
+  references = validator;
+  checkPackages = checker;
+}
+function validateContentPackages(raw, issues) {
+  if (!checkPackages)
+    issues.push({ path: "mod.extensionPackages", message: "extension package schema must be prepared" });
+  else checkPackages(raw, "mod.extensionPackages", issues);
+}
+function contentSchemaPrepared() {
+  return read !== void 0;
+}
+function needsContentSchema(input) {
+  if (typeof input === "string") {
+    if (!/"v"\s*:\s*[34](?:\s*[,}])/.test(input)) return false;
+    try {
+      return needsContentSchema(JSON.parse(input));
+    } catch {
+      return false;
+    }
+  }
+  if (Array.isArray(input)) return input.some(needsContentSchema);
+  if (!input || typeof input !== "object") return false;
+  const value = input;
+  const configured = value.extensionPackages !== void 0 || Array.isArray(value.requiredCapabilities) && value.requiredCapabilities.length > 0 || Array.isArray(value.defs) && value.defs.some((def) => {
+    if (!def || typeof def !== "object") return false;
+    const d = def;
+    return d.extensions !== void 0 || Array.isArray(d.weapons) && d.weapons.some((w2) => !!w2 && typeof w2 === "object" && "extensions" in w2);
+  });
+  return value.format === "steel-tide-mod" && (value.v === 3 || value.v === 4) && !!configured || Array.isArray(value.mods) && value.mods.some(needsContentSchema);
+}
+function prepareContentSchema(input, trust = false) {
+  if (!needsContentSchema(input)) return null;
+  if (prepareSchemas$1) return prepareSchemas$1(input, trust);
+  if (!loading) {
+    loading = Promise.resolve().then(() => schema).then((schema2) => {
+      registerContentSchema(schema2.readExtensions, schema2.validateExtensionReferences, schema2.checkExtensionPackages);
+      prepareSchemas$1 = schema2.prepareSchemas;
+      schema2.preparedExtensionStamps;
+    });
+    loading.catch(() => {
+      loading = void 0;
+    });
+  }
+  return loading.then(async () => {
+    await prepareSchemas$1?.(input, trust);
+  });
+}
+function readExtensions$1(raw, pack, path, issues, context, weapon = false) {
+  if (!read) {
+    issues.push({ path, message: "content extension schema must be prepared before validation" });
+    return;
+  }
+  return read(raw, pack, path, issues, context, weapon);
+}
+function validateExtensionReferences$1(def, table, path, issues, forms, pack) {
+  references?.(def, table, path, issues, forms, pack);
+}
+const EXTENSION_HOST_VERSION = 1;
+function validCapabilityId(value) {
+  return typeof value === "string" && /^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,63}$/.test(value) && !["__proto__", "constructor", "prototype"].includes(value);
+}
+function extensionPackageStamp(pkg) {
+  return `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}`;
+}
+const K = new Uint32Array([
+  1116352408,
+  1899447441,
+  3049323471,
+  3921009573,
+  961987163,
+  1508970993,
+  2453635748,
+  2870763221,
+  3624381080,
+  310598401,
+  607225278,
+  1426881987,
+  1925078388,
+  2162078206,
+  2614888103,
+  3248222580,
+  3835390401,
+  4022224774,
+  264347078,
+  604807628,
+  770255983,
+  1249150122,
+  1555081692,
+  1996064986,
+  2554220882,
+  2821834349,
+  2952996808,
+  3210313671,
+  3336571891,
+  3584528711,
+  113926993,
+  338241895,
+  666307205,
+  773529912,
+  1294757372,
+  1396182291,
+  1695183700,
+  1986661051,
+  2177026350,
+  2456956037,
+  2730485921,
+  2820302411,
+  3259730800,
+  3345764771,
+  3516065817,
+  3600352804,
+  4094571909,
+  275423344,
+  430227734,
+  506948616,
+  659060556,
+  883997877,
+  958139571,
+  1322822218,
+  1537002063,
+  1747873779,
+  1955562222,
+  2024104815,
+  2227730452,
+  2361852424,
+  2428436474,
+  2756734187,
+  3204031479,
+  3329325298
+]);
+const rotate = (n, bits) => n >>> bits | n << 32 - bits;
+function sha256Hex(input) {
+  const size = Math.ceil((input.length + 9) / 64) * 64, bytes = new Uint8Array(size), view = new DataView(bytes.buffer);
+  bytes.set(input);
+  bytes[input.length] = 128;
+  const bits = input.length * 8;
+  view.setUint32(size - 8, Math.floor(bits / 4294967296));
+  view.setUint32(size - 4, bits >>> 0);
+  const hash = new Uint32Array([
+    1779033703,
+    3144134277,
+    1013904242,
+    2773480762,
+    1359893119,
+    2600822924,
+    528734635,
+    1541459225
+  ]), words = new Uint32Array(64);
+  for (let block = 0; block < size; block += 64) {
+    for (let i = 0; i < 16; i++) words[i] = view.getUint32(block + i * 4);
+    for (let i = 16; i < 64; i++) {
+      const x = words[i - 15], y = words[i - 2];
+      words[i] = words[i - 16] + (rotate(x, 7) ^ rotate(x, 18) ^ x >>> 3) + words[i - 7] + (rotate(y, 17) ^ rotate(y, 19) ^ y >>> 10) >>> 0;
+    }
+    let [a, b, c, d, e, f, g, h] = hash;
+    for (let i = 0; i < 64; i++) {
+      const first = h + (rotate(e, 6) ^ rotate(e, 11) ^ rotate(e, 25)) + (e & f ^ ~e & g) + K[i] + words[i] >>> 0;
+      const second = (rotate(a, 2) ^ rotate(a, 13) ^ rotate(a, 22)) + (a & b ^ a & c ^ b & c) >>> 0;
+      h = g;
+      g = f;
+      f = e;
+      e = d + first >>> 0;
+      d = c;
+      c = b;
+      b = a;
+      a = first + second >>> 0;
+    }
+    const values = [a, b, c, d, e, f, g, h];
+    for (let i = 0; i < 8; i++) hash[i] = hash[i] + values[i] >>> 0;
+  }
+  return [...hash].map((n) => n.toString(16).padStart(8, "0")).join("");
+}
+const verifiedSources = /* @__PURE__ */ new Map();
+const schemas = /* @__PURE__ */ new Map();
+const pendingSchemas = /* @__PURE__ */ new Map();
+const modules = /* @__PURE__ */ new Map();
+const rawObject = (v) => !!v && typeof v === "object" && !Array.isArray(v);
+const maxSource = 512 * 1024;
+function checkExtensionPackages(raw, path, issues) {
+  const start = issues.length;
+  if (!Array.isArray(raw) || raw.length > 16) {
+    issues.push({ path, message: "must be a list of up to 16 extension packages" });
+    return false;
+  }
+  const ids = /* @__PURE__ */ new Set(), capabilities = /* @__PURE__ */ new Set();
+  for (const [i, value] of raw.entries()) {
+    const p = `${path}[${i}]`;
+    if (!rawObject(value)) {
+      issues.push({ path: p, message: "must be an extension package" });
+      continue;
+    }
+    for (const key of Object.keys(value))
+      if (!["id", "version", "api", "capabilities", "schema", "runtime", "presentation"].includes(key))
+        issues.push({ path: `${p}.${key}`, message: "unsupported field" });
+    if (!validCapabilityId(value.id) || ids.has(value.id))
+      issues.push({ path: `${p}.id`, message: "must be a unique bounded identifier" });
+    else ids.add(value.id);
+    if (typeof value.version !== "string" || !/^[0-9]+\.[0-9]+\.[0-9]+(?:-[a-zA-Z0-9.-]+)?$/.test(value.version) || value.version.length > 32)
+      issues.push({ path: `${p}.version`, message: "must be a semantic version" });
+    if (value.api !== EXTENSION_HOST_VERSION)
+      issues.push({ path: `${p}.api`, message: `requires unsupported extension host API ${String(value.api)}` });
+    if (!Array.isArray(value.capabilities) || !value.capabilities.length || value.capabilities.length > 32 || new Set(value.capabilities).size !== value.capabilities.length || value.capabilities.some((id) => !validCapabilityId(id) || capabilities.has(id)))
+      issues.push({ path: `${p}.capabilities`, message: "must declare unique bounded capability IDs" });
+    else for (const id of value.capabilities) capabilities.add(id);
+    for (const part of ["schema", "runtime", "presentation"]) {
+      const code = value[part];
+      if (part === "presentation" && code === void 0) continue;
+      if (!rawObject(code) || Object.keys(code).some((key) => key !== "source" && key !== "sha256") || typeof code.source !== "string" || !code.source.length || code.source.length > maxSource || typeof code.sha256 !== "string" || !/^[a-f0-9]{64}$/.test(code.sha256))
+        issues.push({ path: `${p}.${part}`, message: "must contain bounded ES module source and its SHA-256 hash" });
+    }
+  }
+  return issues.length === start;
+}
+async function verify(code) {
+  if (verifiedSources.get(code.sha256) === code.source) return;
+  const bytes = new TextEncoder().encode(code.source);
+  const subtle = globalThis.crypto?.subtle;
+  const actual = subtle ? [...new Uint8Array(await subtle.digest("SHA-256", bytes))].map((n) => n.toString(16).padStart(2, "0")).join("") : sha256Hex(bytes);
+  if (actual !== code.sha256) throw new Error("Extension package integrity mismatch");
+  verifiedSources.set(code.sha256, code.source);
+}
+async function importExtension(code, api) {
+  await verify(code);
+  let module = modules.get(code.sha256);
+  if (!module) {
+    const browser = typeof document !== "undefined" || "WorkerGlobalScope" in globalThis || "Bun" in globalThis;
+    const url = browser ? URL.createObjectURL(new Blob([code.source], { type: "text/javascript" })) : `data:text/javascript;base64,${btoa(unescape(encodeURIComponent(code.source)))}`;
+    module = import(
+      /* @vite-ignore */
+      url
+    ).finally(() => {
+      if (browser) URL.revokeObjectURL(url);
+    });
+    modules.set(code.sha256, module);
+    module.catch(() => modules.delete(code.sha256));
+  }
+  const loaded = await module;
+  if (typeof loaded.default !== "function") throw new Error("Extension module must export a host factory");
+  return loaded.default(api);
+}
+function preparedExtensionStamps() {
+  return [...schemas.keys()].map((stamp) => "package:" + stamp);
+}
+function parts(pkg) {
+  return [pkg.schema, pkg.runtime, ...pkg.presentation ? [pkg.presentation] : []];
+}
+function preparedPackage(pkg) {
+  return parts(pkg).every((code) => verifiedSources.get(code.sha256) === code.source) ? schemas.get(extensionPackageStamp(pkg)) : void 0;
+}
+function preparePackageSchemas(packages, trust = false) {
+  if (!trust && packages.some((pkg) => !isTrustedExtension(extensionPackageStamp(pkg))))
+    return Promise.reject(new Error("Extension package code must be installed or approved locally before network use"));
+  const work = packages.filter((pkg) => !preparedPackage(pkg)).map(async (pkg) => {
+    const issues = [];
+    if (!checkExtensionPackages([pkg], "extensionPackages", issues))
+      throw new Error(issues.map((e) => `${e.path}: ${e.message}`).join("; "));
+    await Promise.all(parts(pkg).map(verify));
+    if (trust) grantTrustedExtensions([extensionPackageStamp(pkg)]);
+    const stamp = extensionPackageStamp(pkg);
+    let pending = pendingSchemas.get(stamp);
+    if (!pending) {
+      pending = (async () => {
+        const schema2 = await importExtension(pkg.schema, Object.freeze({}));
+        if (!schema2 || !Array.isArray(schema2.capabilities) || schema2.capabilities.length !== pkg.capabilities.length || new Set(schema2.capabilities.map((s) => s.id)).size !== pkg.capabilities.length || pkg.capabilities.some(
+          (id) => !schema2.capabilities.some(
+            (s) => s.id === id && typeof s.definition === "function" && (s.weapon === void 0 || typeof s.weapon === "function") && (s.references === void 0 || typeof s.references === "function")
+          )
+        ))
+          throw new Error(`Invalid schema exports: ${pkg.id}`);
+        schemas.set(stamp, schema2);
+      })();
+      pendingSchemas.set(stamp, pending);
+      pending.finally(() => pendingSchemas.delete(stamp)).catch(() => {
+      });
+    }
+    return pending;
+  });
+  return work.length ? Promise.all(work).then(() => {
+  }) : null;
+}
+function readExtensions(raw, pack, path, issues, context, weapon = false) {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
+    issues.push({ path, message: "must be an object" });
+    return;
+  }
+  if (pack.v < 3) {
+    issues.push({ path, message: "extensions require format 3 or later" });
+    return;
+  }
+  const out = /* @__PURE__ */ Object.create(null);
+  for (const [id, value] of Object.entries(raw)) {
+    if (!validCapabilityId(id) || !pack.requiredCapabilities?.includes(id)) {
+      issues.push({ path: `${path}.${id}`, message: "must be a valid ID declared in requiredCapabilities" });
+      continue;
+    }
+    const pkg = pack.extensionPackages?.find((p) => p.capabilities.includes(id));
+    const schema2 = pkg && preparedPackage(pkg)?.capabilities.find((s) => s.id === id);
+    const reader = weapon ? schema2?.weapon : schema2?.definition;
+    if (!reader) {
+      issues.push({
+        path: `${path}.${id}`,
+        message: schema2 ? "this capability has no weapon configuration" : "extension package schema has not been prepared"
+      });
+      continue;
+    }
+    const config = reader(value, `${path}.${id}`, issues, context);
+    if (config !== void 0) out[id] = config;
+  }
+  return Object.keys(out).length ? out : void 0;
+}
+function validateExtensionReferences(def, table, path, issues, forms, pack) {
+  for (const pkg of pack?.extensionPackages ?? [])
+    for (const schema2 of preparedPackage(pkg)?.capabilities ?? []) {
+      if (def.extensions?.[schema2.id]) schema2.references?.(def, table, `${path}.${schema2.id}`, issues, forms);
+    }
+}
+function prepareSchemas(input, trust = false) {
+  const raw = typeof input === "string" ? JSON.parse(input) : input;
+  if (Array.isArray(raw)) {
+    const work = raw.map((value2) => prepareSchemas(value2, trust)).filter((p) => p !== null);
+    return work.length ? Promise.all(work).then(() => {
+    }) : null;
+  }
+  if (!raw || typeof raw !== "object") return null;
+  const value = raw;
+  if (Array.isArray(value.mods)) return prepareSchemas(value.mods, trust);
+  if (value.extensionPackages === void 0) return null;
+  if (value.format !== "steel-tide-mod" || value.v !== 4)
+    return Promise.reject(new Error("Executable extension packages require definition pack format 4"));
+  const { files: _files, ...metadata } = value;
+  if (JSON.stringify(metadata).length > 1024 * 1024)
+    return Promise.reject(new Error("Extension manifest is too large"));
+  const issues = [];
+  if (!checkExtensionPackages(value.extensionPackages, "extensionPackages", issues))
+    return Promise.reject(new Error(issues.map((e) => `${e.path}: ${e.message}`).join("; ")));
+  return preparePackageSchemas(value.extensionPackages, trust);
+}
+const schema = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  checkExtensionPackages,
+  prepareSchemas,
+  preparedExtensionStamps,
+  readExtensions,
+  validateExtensionReferences
+}, Symbol.toStringTag, { value: "Module" }));
 const MENU_CUT_IDS = ["flank", "sea", "winter", "raid", "landing", "rockets", "home", "nuke"];
 const MAX_MENU_CUTS = 16;
 const MAX_MENU_QUEUE = 32;
@@ -38,6 +400,22 @@ const MUSIC_FILES = {
 };
 const MUSIC_IDS = new Set(Object.values(MUSIC_FILES).flat());
 const STRINGS = {
+  "cli.contentAction.usage": ["content-action <units> <module> <action> [--choice id] [--target id] [--at x,y]", "content-action <单位> <模块> <操作> [--choice id] [--target id] [--at x,y]", "content-action <유닛> <모듈> <작업> [--choice id] [--target id] [--at x,y]"],
+  "cli.contentAction.help": ["Use an action provided by the match’s content.", "执行当前内容提供的操作。", "현재 콘텐츠에서 제공하는 작업을 수행합니다."],
+  "cli.contentAction.choice": ["An authored choice ID", "内容定义的选项 ID", "콘텐츠에 정의된 선택 ID"],
+  "cli.contentAction.at": ["Ground target in tiles", "目标地块坐标", "타일 단위 지상 목표"],
+  "cli.contentAction.notes": ["Read a unit with steel show to list its module actions and choices. The server validates every order.", "使用 steel show 查看单位的模块操作和选项。服务器会验证每条指令。", "steel show으로 유닛의 모듈 작업과 선택 항목을 확인하세요. 서버가 모든 명령을 검증합니다."],
+  "module.suppression": ["Suppression", "压制", "제압"],
+  "module.disabled": ["Unavailable", "不可用", "사용 불가"],
+  "module.ready": ["Ready", "就绪", "준비 완료"],
+  "module.busy": ["In progress", "进行中", "진행 중"],
+  "module.target": ["Target", "目标", "대상"],
+  "module.confirm": ["Give order", "下达指令", "명령 내리기"],
+  "module.failed": ["The action is unavailable now.", "当前无法执行此操作。", "지금은 이 작업을 수행할 수 없습니다."],
+  "module.restoring": ["The server is restoring its content. Please reconnect shortly.", "服务器正在恢复内容，请稍后重新连接。", "서버가 콘텐츠를 복원하고 있습니다. 잠시 후 다시 연결하세요."],
+  "module.required": ["This room requires engine capabilities this client does not support.", "此房间需要当前客户端不支持的引擎功能。", "이 방에는 현재 클라이언트에서 지원하지 않는 엔진 기능이 필요합니다."],
+  "module.everyoneRequired": ["Everyone in the room must support the required engine capabilities.", "房间内的所有玩家都必须支持所需的引擎功能。", "방의 모든 플레이어가 필요한 엔진 기능을 지원해야 합니다."],
+  "module.loadFailed": ["The required content modules could not be loaded.", "无法加载所需的内容模块。", "필요한 콘텐츠 모듈을 불러올 수 없습니다."],
   "faction.vanilla": ["Steel Tide", "钢铁浪潮", "스틸 타이드"],
   "world.workspace.library": ["Library", "资源库", "라이브러리"],
   "world.workspace.assets": ["Asset Manager", "资源管理器", "에셋 관리자"],
@@ -9777,7 +10155,7 @@ function isTechId(id) {
   return Object.prototype.hasOwnProperty.call(TECH, id);
 }
 const MOD_FORMAT = "steel-tide-mod";
-const MOD_FORMAT_VERSION = 2;
+const MOD_FORMAT_VERSION = 4;
 const MOD_FILE_EXT = ".steel-tide-mod";
 const MOD_MANIFEST_NAME = "mod.json";
 const MAX_MOD_DEFS = 200;
@@ -9817,8 +10195,10 @@ const DECAL_LAYERS = ["under", "hull", "over"];
 const DECAL_ANCHORS = ["hull", "turret"];
 const DECAL_WHENS = ["always", "moving", "still", "firing", "damaged", "night", "ability"];
 const MANIFEST_SPECS = [
+  { name: "requiredCapabilities", type: "capabilities", min: 1, max: 32, doc: ["Required package-provided capability IDs", "由扩展包提供的必需能力 ID"] },
+  { name: "extensionPackages", type: "extensionPackages", doc: ["Versioned extension packages with SHA-256 verified schema, simulation and optional presentation modules (format 4)", "含 SHA-256 校验的配置验证、模拟和可选显示模块的版本化扩展包（格式 4）"] },
   { name: "format", type: "string", required: true, doc: [`always "${MOD_FORMAT}"`, `固定为 "${MOD_FORMAT}"`] },
-  { name: "v", type: "int", required: true, min: 1, max: MOD_FORMAT_VERSION, doc: ["format version: 1 remains supported; factions and headquarters require 2", "格式版本：仍支持 1；阵营和总部需要 2"] },
+  { name: "v", type: "int", required: true, min: 1, max: MOD_FORMAT_VERSION, doc: ["format version: 1 remains supported; factions and headquarters require 2; capability data requires 3; executable extension packages require 4", "格式版本：仍支持 1；阵营和总部需要 2；扩展配置需要 3；可执行扩展包需要 4"] },
   { name: "id", type: "id", required: true, doc: ["the mod's id: lower case, letters, digits, `-`; also its folder in the registry", "模组 id：小写字母、数字和 `-`，也是它在仓库中的文件夹名"] },
   { name: "name", type: "text", required: true, doc: ["the name shown in the mod list", "模组列表中显示的名称"] },
   { name: "version", type: "string", required: true, max: 32, doc: ["e.g. `1.0.0`; the game offers an update when the registry's is newer", "如 `1.0.0`；仓库版本更新时游戏会提示更新"] },
@@ -9839,6 +10219,7 @@ const MANIFEST_SPECS = [
   { name: "files", type: "files", doc: ["single-file form only: the sheets, sounds, music and maps, embedded as data URLs by path", "仅单文件形式：按路径内嵌的图片、音频与地图（data URL）"] }
 ];
 const DEF_SPECS = [
+  { name: "extensions", type: "extensions", doc: ["Configuration keyed by a required engine capability (format 3)", "按必需引擎能力命名的配置（格式 3）"] },
   { name: "isHQ", type: "bool", only: "building", doc: ["a headquarters: holds territory and production slots, follows the ordinary HQ loss and sale rules; format 2", "总部：提供建造范围和生产槽位，遵循普通总部的失守与出售规则；格式 2"] },
   { name: "id", type: "id", required: true, doc: ["unique across every mod and the vanilla roster; prefix a generic word with your mod's id", "在所有模组和原版中唯一；通用名字前加上模组 id 前缀"] },
   { name: "name", type: "text", required: true, doc: ["as the HUD shows it", "HUD 中显示的名称"] },
@@ -9856,7 +10237,7 @@ const DEF_SPECS = [
   { name: "directionalArmor", type: "directionalArmor", only: "unit", doc: ["ground hull direct-hit multipliers `{front, side, rear}`, each 0–10; 90° front/rear arcs and 90° on each side. Arc fire, collateral blasts, mines and fire ignore facing. Enables slow reversing for short moves behind the hull", "地面车体直击倍率 `{front, side, rear}`，各为 0–10；正面、背面各 90°，两侧各 90°。抛射、溅射、地雷与火焰不计朝向。向车后短距离移动时会慢速倒车"] },
   { name: "speed", type: "number", only: "unit", min: 0, max: 1e3, def: "60", doc: ["world px/s (a tile is 32)", "世界像素/秒（一格 32）"] },
   { name: "turnRate", type: "number", only: "unit", min: 0, max: 50, def: "3.5", doc: ["rad/s", "弧度/秒"] },
-  { name: "vision", type: "number", min: 0, max: 64, def: "8", doc: ["sight, in tiles", "视野（格）"] },
+  { name: "vision", type: "number", min: 0, max: 64, def: "8", doc: ["sight, in tiles; rounded to the nearest whole tile when activated", "视野（格）；启用内容时四舍五入为整格"] },
   { name: "radius", type: "number", min: 1, max: 200, def: "9, or the footprint", doc: ["collision radius, world px, and the *combat* yardstick: range, splash and hits are measured to it", "碰撞半径（世界像素），也是*战斗*基准：射程、溅射与命中都以它为准"] },
   { name: "body", type: "body", only: "unit", def: "the circle of `radius`", doc: ["the room the hull takes up when units push each other apart, world px: `r` its half-width, `len` its length less the two round ends. A long hull is what a circle cannot say. A ship whose beam (`r` twice) is over a tile (32) needs that many tiles of water abeam, rounded up: it never enters a channel narrower than itself", "单位互相推挤时所占的形状（世界像素）：`r` 为半宽，`len` 为去掉两端半圆后的长度。圆形无法表达细长的船体。船宽（`r` 的两倍）超过一格（32）的舰船需要相应格数的水面（向上取整），永远不会驶入比自身更窄的水道"] },
   { name: "weapons", type: "weapons", def: "[]", doc: ["the weapons (see below); an empty list is unarmed", "武器列表（见下）；空列表即无武装"] },
@@ -9926,6 +10307,7 @@ const DEF_SPECS = [
   { name: "wing", type: "wing", only: "unit", doc: ["a carrier: planes of this mod it keeps aboard, `{ unit, count, rebuild, sortie, rearm, range }`, sent out at what it fights, taken back to rearm and made again when lost; never the player's to order (see Behaviour); never inherited through `extends`", "母舰：搭载本模组的飞机 `{ unit, count, rebuild, sortie, rearm, range }`，出击它所攻击的目标，返航补给，损失后重新制造；玩家不能直接指挥（见“行为”）；不会通过 `extends` 继承"] }
 ];
 const WEAPON_SPECS = [
+  { name: "extensions", type: "extensions", doc: ["Optional engine weapon configuration (format 3)", "可选引擎武器配置（格式 3）"] },
   { name: "id", type: "string", max: 32, def: "w1, w2…", doc: ["a name for the weapon", "武器名"] },
   { name: "cls", type: "enum", values: WEAPON_CLASSES, required: true, doc: ["what it was built to kill; picks its row of the armour matrix", "设计用途，决定装甲倍率表中的行"] },
   { name: "dmg", type: "number", required: true, min: 0, max: 1e5, doc: ["damage per hit", "每次命中伤害"] },
@@ -10344,6 +10726,11 @@ function checkField(spec, value, path, issues) {
     // read word for word once the mod's defs and sheets are known (`game/ruleSpec.ts`)
     case "rules":
       return Array.isArray(value) || bad("must be a list of rules");
+    case "capabilities":
+      return Array.isArray(value) && value.length >= 1 && value.length <= 32 && value.every(validCapabilityId) && new Set(value).size === value.length || bad("must contain 1–32 unique bounded capability identifiers");
+    case "extensionPackages":
+      return Array.isArray(value) && value.length <= 16 || bad("must be a list of up to 16 extension packages");
+    case "extensions":
     case "shield":
     case "look":
     case "anims":
@@ -10401,11 +10788,20 @@ function parseDefinitionPack(input) {
   if (isPlainObject$1(embedded) && Object.values(embedded).reduce((size, data) => size + (typeof data === "string" ? data.length : 0), 0) > MAX_MOD_FILES_BYTES)
     return { ok: false, errors: [{ path: "files", message: "the embedded files are too large" }], warnings: [] };
   if (raw.format !== MOD_FORMAT) return { ok: false, errors: [{ path: "format", message: `must be "${MOD_FORMAT}"` }], warnings: [] };
-  if (raw.v !== 1 && raw.v !== MOD_FORMAT_VERSION) return { ok: false, errors: [{ path: "v", message: `unsupported format version ${String(raw.v)} (this game reads 1–${MOD_FORMAT_VERSION})` }], warnings: [] };
+  if (raw.v !== 1 && raw.v !== 2 && raw.v !== 3 && raw.v !== MOD_FORMAT_VERSION) return { ok: false, errors: [{ path: "v", message: `unsupported format version ${String(raw.v)} (this game reads 1–${MOD_FORMAT_VERSION})` }], warnings: [] };
+  if (needsContentSchema(raw) && !contentSchemaPrepared()) return { ok: false, errors: [{ path: "v", message: "content extension schema must be prepared before validation" }], warnings: [] };
   const errors = [];
   const warnings = [];
   const head = checkObject(raw, MANIFEST_SPECS, "mod", errors, warnings);
   if (errors.length > 0) return { ok: false, errors, warnings };
+  if (head.requiredCapabilities !== void 0 && Number(head.v) < 3) errors.push({ path: "mod.requiredCapabilities", message: "engine capabilities require format 3" });
+  if (head.extensionPackages !== void 0) {
+    if (Number(head.v) < 4) errors.push({ path: "mod.extensionPackages", message: "executable extension packages require format 4" });
+    validateContentPackages(head.extensionPackages, errors);
+  }
+  if (errors.length) return { ok: false, errors, warnings };
+  const available = new Set((head.extensionPackages ?? []).flatMap((p) => p.capabilities ?? []));
+  for (const id of head.requiredCapabilities ?? []) if (!available.has(id)) errors.push({ path: "mod.requiredCapabilities", message: `no extension package provides ${id}` });
   const defs = head.defs;
   const terrains = head.terrains ?? [];
   if (terrains.length > MAX_MOD_TERRAINS) errors.push({ path: "mod.terrains", message: `at most ${MAX_MOD_TERRAINS} terrain variants` });
@@ -10703,6 +11099,13 @@ function resolveDefinitions(mod, table = VANILLA) {
     const def = buildDef(own, kind, base, mod.id, soundKeys, path, errors, warnings);
     if (def?.isHQ && (def.kind !== "building" || def.offshore || def.needsDeposit)) errors.push({ path: `${path}.isHQ`, message: "a headquarters must be a land building without a deposit requirement" });
     if (!def) return;
+    if (def.extensions !== void 0 || def.weapons.some((w2) => w2.extensions !== void 0)) {
+      const extensionContext = { definition: { ...def, ...raw, extensions: def.extensions, weapons: def.weapons }, weaponIds: def.weapons.map((w2) => w2.id), defIds: /* @__PURE__ */ new Set([...Object.keys(table), ...mod.defs.map((d) => d.id)]), spriteKeys: /* @__PURE__ */ new Set([...tableSprites, ...sheetKeys]) };
+      if (def.extensions !== void 0) def.extensions = readExtensions$1(def.extensions, mod, `${path}.extensions`, errors, extensionContext);
+      def.weapons.forEach((w2, wi) => {
+        if (w2.extensions !== void 0) w2.extensions = readExtensions$1(w2.extensions, mod, `${path}.weapons[${wi}].extensions`, errors, extensionContext, true);
+      });
+    }
     const lookCtx = ruleContext(def, table, built, sheetKeys, soundKeys);
     def.weapons.forEach((wp, k) => {
       if (!wp.look || !own.weapons?.[k]?.look) return;
@@ -10822,17 +11225,17 @@ function resolveDefinitions(mod, table = VANILLA) {
     };
     delete def.rules;
     if (own.rules !== void 0) {
-      const read = readRules(own.rules, `${path}.rules`, ruleContext(def, table, built, sheetKeys, soundKeys), errors);
-      if (read.rules.length) {
-        def.rules = read.rules;
-        for (const r of read.rules) {
+      const read2 = readRules(own.rules, `${path}.rules`, ruleContext(def, table, built, sheetKeys, soundKeys), errors);
+      if (read2.rules.length) {
+        def.rules = read2.rules;
+        for (const r of read2.rules) {
           for (const x of r.do) {
             if (x.morph) forms.add(x.morph);
             if (x.spawn) forms.add(x.spawn.unit);
           }
         }
       }
-      for (const [k, v] of Object.entries(read.strings)) strings[k] = contentText(v, "");
+      for (const [k, v] of Object.entries(read2.strings)) strings[k] = contentText(v, "");
     }
     delete def.wing;
     if (own.wing !== void 0) {
@@ -10899,6 +11302,10 @@ function resolveDefinitions(mod, table = VANILLA) {
     if (lines.length) errors.push({ path: at, message: `"${wing.unit}" is also built by ${lines.join(", ")}; a carrier's plane is made by its carrier alone (\`"producedBy": []\`)` });
     if (built.get(wing.unit)?.wing) errors.push({ path: at, message: `"${wing.unit}" carries a wing of its own; a carrier's plane carries none` });
   });
+  if (mod.requiredCapabilities?.length) {
+    const extensionTable = { ...table, ...Object.fromEntries(built) };
+    defs.forEach((def, i) => validateExtensionReferences$1(def, extensionTable, `defs[${i}].extensions`, errors, forms, mod));
+  }
   const quiet = warnings.filter((w2) => {
     const m = /^defs\[(\d+)\]\.producedBy$/.exec(w2.path);
     const d = m ? mod.defs[Number(m[1])] : void 0;
@@ -11004,7 +11411,9 @@ function buildDef(own, kind, base, modId, soundKeys, path, errors, warnings) {
     armor,
     speed: kind === "building" ? 0 : own.speed ?? inherited.speed ?? 60,
     turnRate: kind === "building" ? 0 : own.turnRate ?? inherited.turnRate ?? 3.5,
-    vision: own.vision ?? inherited.vision ?? 8,
+    // Fog rays and their cache use whole tile coordinates. Normalize authored
+    // and inherited content here, before either simulation kernel sees it.
+    vision: Math.round(own.vision ?? inherited.vision ?? 8),
     radius: own.radius ?? inherited.radius ?? (kind === "building" ? Math.max(fw, fh) * 15 : 9),
     weapons: [],
     sprite: "",
@@ -11372,6 +11781,7 @@ function parseModIndex(json) {
 function isPlainObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
+registerContentSchema(readExtensions, validateExtensionReferences, checkExtensionPackages);
 const VANILLA_DEFS = DEFS;
 function typeLabel(spec) {
   switch (spec.type) {
@@ -11476,6 +11886,12 @@ function typeLabel(spec) {
       return "[first, last] or [first, last, fps]";
     case "near":
       return "{ units, kind, side, within, count }";
+    case "extensions":
+      return "{ capability: configuration }";
+    case "capabilities":
+      return "capability id[]";
+    case "extensionPackages":
+      return "{ id, version, api, capabilities, schema, runtime, presentation? }[]";
     default:
       return "string";
   }
@@ -11640,13 +12056,24 @@ function agentPrompt() {
   p();
   p("## Fields");
   p();
-  p("Anything not in these tables is ignored with a warning. Numbers outside the stated range are errors.");
+  p("Unknown ordinary fields produce a warning. Format-3 extension objects reject unknown fields and unsupported combinations. Numbers outside the stated range are errors.");
   p();
   p("### mod.json (top level)");
   p();
   p(markdownTable(fieldRows("manifest")));
   p();
   p(`\`name\`, \`description\` and every \`desc\`/\`name\` on a def are *text*: a string (used for every language), \`["English", "中文", "한국어"]\` in that order, or \`{ ${LANGS.map((l) => `"${l}": "…"`).join(", ")} }\`. Only English is required; a language left out reads as English.`);
+  p();
+  p("### Extension packages (format 4)");
+  p();
+  p("Format 4 packs carry `extensionPackages`: versioned, SHA-256 verified schema, simulation and optional presentation code. The engine provides host API version 1 and no built-in gameplay capability catalog. Declare package-provided IDs in `requiredCapabilities`, then put their data under `extensions[id]`. Only content which requests extensions prepares the optional host. Extension code is executable trusted code, not sandboxed data.");
+  p("Executable packages require `v:4`. Formats 1 and 2 and ordinary format 3 data remain supported; former built-in capability packs need compatible implementations embedded in format 4. A missing/unsupported capability rejects activation. Vanilla keeps its ordinary simulation; optional state and update work belong to the enabled match. The shared combined-arms package requires complete non-empty `[en, zh, ko]` label tuples and accepts the fixed data policies its own schema defines.");
+  p();
+  p(`Read [components, protection, crew, ammunition and services](${MOD_REGISTRY_WEB}/blob/main/docs/engine-compatibility/M1-M2-AUTHORING.md) and [sensors, guidance, mounts and deployment](${MOD_REGISTRY_WEB}/blob/main/docs/engine-compatibility/SENSORS-ARTICULATION-V1.md) for the exact accepted fields, bounds, defaults, units, actions and explicit omissions. [Runnable study fixtures](${MOD_REGISTRY_WEB}/tree/main/docs/engine-compatibility/fixtures) are isolated acceptance examples, not full source-mod ports.`);
+  p();
+  p("For locally chosen content, game/API consumers must `await prepareContentSchema(raw, true)` before synchronously calling `parseDefinitionPack(raw)` or `parseMod(raw)` on capability-bearing content; await `prepareContentCapabilities(packs)` before opening a match. For a world, prepare its embedded packs by passing the raw world to `prepareContentSchema`. Registry tooling likewise explicitly approves local files. Network inputs use `prepareContentSchema(raw)` and cannot approve unknown code. Read the extension framework guide in the mod repository for package ownership, trust and SDK details. Never ignore a schema or capability loading failure.");
+  p();
+  p("The shared inspection model exposes private state and available actions only to authorized viewers. Actions go through `contentAction` and the ordinary commands/orders gateway. The CLI exposes the same interface with `steel content-action <units> <module> <action> [--choice id] [--target id] [--at x,y]`. Port only source combinations the contract represents faithfully; omit and document unsupported behavior.");
   p();
   p("### A faction (`factions[]`, format 2)");
   p();
@@ -11768,8 +12195,8 @@ function agentPrompt() {
   p();
   p("1. Validate: in a clone of the registry, `node tools/check.mjs path/to/my-mod` prints every error with its path into mod.json. (No clone? The game says the same things when the mod is loaded.)");
   p("2. Load it in the game: Settings → Mods → *Open folder…* (Chrome keeps the folder open, so *Reload* re-reads your edits) or *Upload file…* (a zip of the folder, or a `.steel-tide-mod` file). Errors are listed on the spot; a loaded mod says how many units and buildings it added.");
-  p("3. Play: start a Conquest match. Your units are in the factory's production list from the level you gave them; buildings are in the engineer's build menu; an upgrade level is on its building's Upgrade button. The console (backquote) has `give <id>` for anything. Mods apply to Conquest and the campaign; a networked match is always unmodded.");
-  p("4. From a static server: `npx serve --cors path/to/my-mod` then open `https://play.steelti.de/?mod=http://localhost:3000/` — the mod is fetched at every boot, so a page reload picks up an edit.");
+  p("3. Play: start a Conquest match. Your units are in the factory's production list from the level you gave them; buildings are in the engineer's build menu; an upgrade level is on its building's Upgrade button. The console (backquote) has `give <id>` for anything. Network players need matching packs and support for their required host API.");
+  p("4. From a static server: `npx serve --cors path/to/my-mod` then open `https://play.steelti.de/?mod=http://localhost:3000/`. Data-only mods refresh at boot. Executable packages require an explicit local install first, and changed package code needs an explicit reload.");
   p();
   p("## Publish");
   p();
@@ -12029,6 +12456,7 @@ export {
   parseModCatalog,
   parseModDetail,
   parseModIndex,
+  prepareContentSchema,
   readTerrainAssignments,
   requiredContentOf,
   requiredContentOf as requiredModOf,

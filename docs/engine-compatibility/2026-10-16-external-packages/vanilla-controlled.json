@@ -1,0 +1,2853 @@
+{
+  "createdAt": "2026-10-16T12:43:43.654Z",
+  "scope": "Fresh-browser Vite/Rollup headless vanilla simulation and replication diagnostic, frozen scenario restored after warming both paths; not full-app rendering or a completed performance gate",
+  "options": {
+    "warmup": 900,
+    "measured": 900,
+    "freezeTicks": 300,
+    "rounds": 2,
+    "workloads": [
+      "battle",
+      "idle",
+      "duels",
+      "projectiles"
+    ],
+    "aa": true
+  },
+  "build": {
+    "createdAt": "2026-10-16T12:42:05.847Z",
+    "purpose": "Vite/Rollup diagnostic; keeps real vanilla factory/codec dispatch differences",
+    "variants": {
+      "base": {
+        "root": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-capability-baseline-evRWcP",
+        "head": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+        "workingTreeIncluded": false,
+        "contentDispatch": true,
+        "baselineReference": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+        "target": [
+          "es2020",
+          "chrome87",
+          "firefox92",
+          "safari15.4"
+        ],
+        "minify": "esbuild",
+        "graph": [
+          {
+            "file": "benchmark.js",
+            "entry": true,
+            "imports": [],
+            "dynamicImports": [],
+            "bytes": 635575,
+            "modules": [
+              "/privategame/core/src/game/defs.ts",
+              "/privategame/core/src/game/advancedHQ.ts",
+              "/privategame/core/src/core/strings.ts",
+              "/privategame/core/src/game/extensions/contracts.ts",
+              "/privategame/core/src/core/menuBackground.ts",
+              "/privategame/core/src/core/types.ts",
+              "/privategame/core/src/core/music.ts",
+              "/privategame/core/src/core/clone.ts",
+              "/privategame/core/src/core/i18n.ts",
+              "/privategame/core/src/game/abilityDefs.ts",
+              "/privategame/core/src/core/rng.ts",
+              "/privategame/core/src/game/biomes.ts",
+              "/privategame/core/src/game/map.ts",
+              "/privategame/core/src/game/decor.ts",
+              "/privategame/core/src/game/entityMap.ts",
+              "/privategame/core/src/game/transport.ts",
+              "/privategame/core/src/game/ammo.ts",
+              "/privategame/core/src/game/ruleState.ts",
+              "/privategame/core/src/game/veterancy.ts",
+              "/privategame/core/src/game/weather.ts",
+              "/privategame/core/src/game/contentTerrain.ts",
+              "/privategame/core/src/game/rle.ts",
+              "/privategame/core/src/game/profile.ts",
+              "/privategame/core/src/game/state.ts",
+              "/privategame/core/src/game/tech.ts",
+              "/privategame/core/src/game/contentDefs.ts",
+              "/privategame/core/src/game/factions.ts",
+              "/privategame/core/src/game/world.ts",
+              "/privategame/core/src/game/worldShapeValidation.ts",
+              "/privategame/core/src/core/math.ts",
+              "/privategame/core/src/game/cityDamage.ts",
+              "/privategame/core/src/game/attackArea.ts",
+              "/privategame/core/src/game/elevation.ts",
+              "/privategame/core/src/core/gridLine.ts",
+              "/privategame/core/src/game/bridgeLayout.ts",
+              "/privategame/core/src/game/amphibiousBridgePath.ts",
+              "/privategame/core/src/game/path.ts",
+              "/privategame/core/src/game/surface.ts",
+              "/privategame/core/src/game/power.ts",
+              "/privategame/core/src/game/abilities.ts",
+              "/privategame/core/src/game/armor.ts",
+              "/privategame/core/src/game/move.ts",
+              "/privategame/core/src/core/metrics.ts",
+              "/privategame/core/src/game/turrets.ts",
+              "/privategame/core/src/game/warheads.ts",
+              "/privategame/core/src/game/hqContacts.ts",
+              "/privategame/core/src/game/vision.ts",
+              "/privategame/core/src/game/jamming.ts",
+              "/privategame/core/src/game/unitTally.ts",
+              "/privategame/core/src/game/targetPriority.ts",
+              "/privategame/core/src/game/fireControl.ts",
+              "/privategame/core/src/game/impactMaterial.ts",
+              "/privategame/core/src/game/protect.ts",
+              "/privategame/core/src/game/combat.ts",
+              "/privategame/core/src/game/script.ts",
+              "/privategame/core/src/game/terrainChange.ts",
+              "/privategame/core/src/game/earthMaps.ts",
+              "/privategame/core/src/game/taihangChart.ts",
+              "/privategame/core/src/game/taihangMap.ts",
+              "/privategame/core/src/game/longHaul.ts",
+              "/privategame/core/src/game/conquest.ts",
+              "/privategame/core/src/game/pins.ts",
+              "/privategame/core/src/game/ai.ts",
+              "/privategame/core/src/game/formation.ts",
+              "/privategame/core/src/game/dig.ts",
+              "/privategame/core/src/game/wings.ts",
+              "/privategame/core/src/game/orders.ts",
+              "/privategame/core/src/game/customMap.ts",
+              "/privategame/core/src/game/worldValidation.ts",
+              "/privategame/core/src/game/worldRuntime.ts",
+              "/privategame/core/src/game/repairAura.ts",
+              "/privategame/core/src/game/idleWork.ts",
+              "/privategame/core/src/game/modRules.ts",
+              "/privategame/core/src/game/aiMap.ts",
+              "/privategame/core/src/game/aiIntel.ts",
+              "/privategame/core/src/game/breakthrough.ts",
+              "/privategame/core/src/game/nukeAim.ts",
+              "/privategame/core/src/game/aiTactics.ts",
+              "/privategame/core/src/game/aiTech.ts",
+              "/privategame/core/src/game/aiPockets.ts",
+              "/privategame/core/src/game/aiNaval.ts",
+              "/privategame/core/src/game/aiBrain.ts",
+              "/privategame/core/src/game/autopilot.ts",
+              "/privategame/core/src/game/commander.ts",
+              "/privategame/core/src/game/skins.ts",
+              "/privategame/core/src/game/decals.ts",
+              "/privategame/core/src/campaign/missions.ts",
+              "/privategame/core/src/game/openRange.ts",
+              "/privategame/core/src/game/sichuanGeography.ts",
+              "/privategame/core/src/game/sichuanMap.ts",
+              "/privategame/core/src/game/conquestMaps.ts",
+              "/privategame/core/src/game/mapdefs.ts",
+              "/privategame/core/src/game/save.ts",
+              "/privategame/core/src/game/teams.ts",
+              "/privategame/core/src/game/sim.ts",
+              "/privategame/core/src/game/contentCapabilities.ts",
+              "/privategame/core/src/game/contentGame.ts",
+              "/privategame/core/src/net/frames.ts",
+              "/privategame/core/src/net/contentFrames.ts",
+              "/privategame/core/server/testkit/game.ts",
+              "/Users/rivertwilight/Developer/steel-tide-mods/dist/external-extension-controlled/base.ts"
+            ]
+          }
+        ]
+      },
+      "candidate": {
+        "root": "/Users/rivertwilight/Developer/steel-tide",
+        "head": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+        "workingTreeIncluded": true,
+        "contentDispatch": true,
+        "baselineReference": "31095b4f7db6a03e26b1299f84f415afb96d6da9",
+        "target": [
+          "es2020",
+          "chrome87",
+          "firefox92",
+          "safari15.4"
+        ],
+        "minify": "esbuild",
+        "graph": [
+          {
+            "file": "benchmark.js",
+            "entry": true,
+            "imports": [],
+            "dynamicImports": [],
+            "bytes": 635591,
+            "modules": [
+              "game/core/src/game/defs.ts",
+              "game/core/src/game/advancedHQ.ts",
+              "game/core/src/core/strings.ts",
+              "game/core/src/core/menuBackground.ts",
+              "game/core/src/core/types.ts",
+              "game/core/src/core/music.ts",
+              "game/core/src/core/clone.ts",
+              "game/core/src/core/i18n.ts",
+              "game/core/src/game/abilityDefs.ts",
+              "game/core/src/core/rng.ts",
+              "game/core/src/game/biomes.ts",
+              "game/core/src/game/map.ts",
+              "game/core/src/game/decor.ts",
+              "game/core/src/game/entityMap.ts",
+              "game/core/src/game/transport.ts",
+              "game/core/src/game/ammo.ts",
+              "game/core/src/game/ruleState.ts",
+              "game/core/src/game/veterancy.ts",
+              "game/core/src/game/weather.ts",
+              "game/core/src/game/contentTerrain.ts",
+              "game/core/src/game/rle.ts",
+              "game/core/src/game/profile.ts",
+              "game/core/src/game/state.ts",
+              "game/core/src/game/tech.ts",
+              "game/core/src/game/contentDefs.ts",
+              "game/core/src/game/factions.ts",
+              "game/core/src/game/world.ts",
+              "game/core/src/game/worldShapeValidation.ts",
+              "game/core/src/core/math.ts",
+              "game/core/src/game/cityDamage.ts",
+              "game/core/src/game/attackArea.ts",
+              "game/core/src/game/elevation.ts",
+              "game/core/src/core/gridLine.ts",
+              "game/core/src/game/bridgeLayout.ts",
+              "game/core/src/game/amphibiousBridgePath.ts",
+              "game/core/src/game/path.ts",
+              "game/core/src/game/surface.ts",
+              "game/core/src/game/power.ts",
+              "game/core/src/game/abilities.ts",
+              "game/core/src/game/armor.ts",
+              "game/core/src/game/move.ts",
+              "game/core/src/core/metrics.ts",
+              "game/core/src/game/turrets.ts",
+              "game/core/src/game/warheads.ts",
+              "game/core/src/game/hqContacts.ts",
+              "game/core/src/game/vision.ts",
+              "game/core/src/game/jamming.ts",
+              "game/core/src/game/unitTally.ts",
+              "game/core/src/game/targetPriority.ts",
+              "game/core/src/game/fireControl.ts",
+              "game/core/src/game/impactMaterial.ts",
+              "game/core/src/game/protect.ts",
+              "game/core/src/game/combat.ts",
+              "game/core/src/game/script.ts",
+              "game/core/src/game/terrainChange.ts",
+              "game/core/src/game/earthMaps.ts",
+              "game/core/src/game/taihangChart.ts",
+              "game/core/src/game/taihangMap.ts",
+              "game/core/src/game/longHaul.ts",
+              "game/core/src/game/conquest.ts",
+              "game/core/src/game/pins.ts",
+              "game/core/src/game/ai.ts",
+              "game/core/src/game/formation.ts",
+              "game/core/src/game/dig.ts",
+              "game/core/src/game/wings.ts",
+              "game/core/src/game/orders.ts",
+              "game/core/src/game/customMap.ts",
+              "game/core/src/game/worldValidation.ts",
+              "game/core/src/game/worldRuntime.ts",
+              "game/core/src/game/repairAura.ts",
+              "game/core/src/game/idleWork.ts",
+              "game/core/src/game/modRules.ts",
+              "game/core/src/game/aiMap.ts",
+              "game/core/src/game/aiIntel.ts",
+              "game/core/src/game/breakthrough.ts",
+              "game/core/src/game/nukeAim.ts",
+              "game/core/src/game/aiTactics.ts",
+              "game/core/src/game/aiTech.ts",
+              "game/core/src/game/aiPockets.ts",
+              "game/core/src/game/aiNaval.ts",
+              "game/core/src/game/aiBrain.ts",
+              "game/core/src/game/autopilot.ts",
+              "game/core/src/game/commander.ts",
+              "game/core/src/game/skins.ts",
+              "game/core/src/game/decals.ts",
+              "game/core/src/campaign/missions.ts",
+              "game/core/src/game/openRange.ts",
+              "game/core/src/game/sichuanGeography.ts",
+              "game/core/src/game/sichuanMap.ts",
+              "game/core/src/game/conquestMaps.ts",
+              "game/core/src/game/mapdefs.ts",
+              "game/core/src/game/save.ts",
+              "game/core/src/game/teams.ts",
+              "game/core/src/game/sim.ts",
+              "game/core/src/game/contentCapabilities.ts",
+              "game/core/src/game/contentGame.ts",
+              "game/core/src/net/frames.ts",
+              "game/core/src/net/contentFrames.ts",
+              "game/core/server/testkit/game.ts",
+              "/Users/rivertwilight/Developer/steel-tide-mods/dist/external-extension-controlled/candidate.ts"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rows": [
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.331250000115898,
+          "p50": 1.135000005364418,
+          "p95": 2.1299999952316284,
+          "p99": 4.739999994635582
+        },
+        "replication": {
+          "mean": 1.153483333090941,
+          "p50": 1.084999993443489,
+          "p95": 1.5349999964237213,
+          "p99": 2.1700000017881393
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.146794444637166,
+        "p50": 1,
+        "p95": 1.7550000101327896,
+        "p99": 3.2849999964237213
+      },
+      "replication": {
+        "mean": 1.036266666551431,
+        "p50": 0.9950000047683716,
+        "p95": 1.1850000023841858,
+        "p99": 1.7549999952316284
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.3339388888246484,
+          "p50": 1.1700000017881393,
+          "p95": 2.2150000035762787,
+          "p99": 4.370000004768372
+        },
+        "replication": {
+          "mean": 1.1408666667838891,
+          "p50": 1.0799999982118607,
+          "p95": 1.5249999910593033,
+          "p99": 1.9550000131130219
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.136816666689184,
+        "p50": 0.9900000095367432,
+        "p95": 1.7750000059604645,
+        "p99": 3.439999997615814
+      },
+      "replication": {
+        "mean": 1.0084500000874201,
+        "p50": 0.9800000041723251,
+        "p95": 1.1700000017881393,
+        "p99": 1.5499999970197678
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.3909666668044196,
+          "p50": 1.199999988079071,
+          "p95": 2.2650000005960464,
+          "p99": 4.450000002980232
+        },
+        "replication": {
+          "mean": 1.1952833326160908,
+          "p50": 1.1150000095367432,
+          "p95": 1.7550000101327896,
+          "p99": 2.2149999886751175
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.2107888890140586,
+        "p50": 1.0550000071525574,
+        "p95": 1.9149999916553497,
+        "p99": 3.6200000047683716
+      },
+      "replication": {
+        "mean": 1.0878666669130326,
+        "p50": 1.040000006556511,
+        "p95": 1.469999998807907,
+        "p99": 1.7150000035762787
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.328755555815167,
+          "p50": 1.1749999970197678,
+          "p95": 2.155000001192093,
+          "p99": 4.420000001788139
+        },
+        "replication": {
+          "mean": 1.1590333332121372,
+          "p50": 1.0999999940395355,
+          "p95": 1.6099999994039536,
+          "p99": 2.2899999916553497
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.1182611110806464,
+        "p50": 0.9749999940395355,
+        "p95": 1.7699999958276749,
+        "p99": 3.4099999964237213
+      },
+      "replication": {
+        "mean": 1.0203666668136915,
+        "p50": 0.9849999994039536,
+        "p95": 1.4100000113248825,
+        "p99": 1.5349999964237213
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.3110277776751253,
+          "p50": 1.1400000005960464,
+          "p95": 2.0799999982118607,
+          "p99": 4.495000004768372
+        },
+        "replication": {
+          "mean": 1.1192000002165636,
+          "p50": 1.0700000077486038,
+          "p95": 1.4849999994039536,
+          "p99": 1.8350000083446503
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.1283611110183929,
+        "p50": 0.9750000089406967,
+        "p95": 1.8149999976158142,
+        "p99": 3.230000004172325
+      },
+      "replication": {
+        "mean": 1.0046166667342187,
+        "p50": 0.9749999940395355,
+        "p95": 1.1899999976158142,
+        "p99": 1.635000005364418
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.3563555558191405,
+          "p50": 1.1800000071525574,
+          "p95": 2.185000002384186,
+          "p99": 4.205000013113022
+        },
+        "replication": {
+          "mean": 1.154849999745687,
+          "p50": 1.0799999982118607,
+          "p95": 1.6599999964237213,
+          "p99": 2.239999994635582
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.1502000001238453,
+        "p50": 1.0099999904632568,
+        "p95": 1.8199999928474426,
+        "p99": 3.3500000089406967
+      },
+      "replication": {
+        "mean": 1.0209333330889543,
+        "p50": 1.0049999952316284,
+        "p95": 1.1649999916553497,
+        "p99": 1.594999998807907
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.309600000033776,
+          "p50": 1.1349999904632568,
+          "p95": 2.1949999928474426,
+          "p99": 4.509999990463257
+        },
+        "replication": {
+          "mean": 1.1067500000695387,
+          "p50": 1.0549999922513962,
+          "p95": 1.405000001192093,
+          "p99": 1.9949999898672104
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.1133277775016095,
+        "p50": 0.9699999988079071,
+        "p95": 1.7349999994039536,
+        "p99": 3.199999988079071
+      },
+      "replication": {
+        "mean": 1.0143333332737288,
+        "p50": 0.9750000089406967,
+        "p95": 1.4000000059604645,
+        "p99": 1.6749999970197678
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.3689722223248746,
+          "p50": 1.1899999976158142,
+          "p95": 2.239999994635582,
+          "p99": 4.579999998211861
+        },
+        "replication": {
+          "mean": 1.1585999996463459,
+          "p50": 1.1000000089406967,
+          "p95": 1.635000005364418,
+          "p99": 2.0499999970197678
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.1402055556575457,
+        "p50": 0.9799999892711639,
+        "p95": 1.7349999994039536,
+        "p99": 3.7999999970197678
+      },
+      "replication": {
+        "mean": 1.0157166671256224,
+        "p50": 0.989999994635582,
+        "p95": 1.2150000035762787,
+        "p99": 1.645000010728836
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.3446111110846202,
+          "p50": 1.1700000017881393,
+          "p95": 2.155000001192093,
+          "p99": 4.564999997615814
+        },
+        "replication": {
+          "mean": 1.1613666666050753,
+          "p50": 1.0799999982118607,
+          "p95": 1.5900000035762787,
+          "p99": 2.4649999886751175
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.1519611112773418,
+        "p50": 1,
+        "p95": 1.8499999940395355,
+        "p99": 3.635000005364418
+      },
+      "replication": {
+        "mean": 1.0218166667719681,
+        "p50": 0.9949999898672104,
+        "p95": 1.2000000029802322,
+        "p99": 1.665000006556511
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.3420777777665192,
+          "p50": 1.1700000017881393,
+          "p95": 2.1299999952316284,
+          "p99": 4.090000003576279
+        },
+        "replication": {
+          "mean": 1.1469000002741814,
+          "p50": 1.0799999982118607,
+          "p95": 1.5699999928474426,
+          "p99": 2.3250000029802322
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.1490777776969803,
+        "p50": 0.9949999898672104,
+        "p95": 1.824999988079071,
+        "p99": 3.490000009536743
+      },
+      "replication": {
+        "mean": 0.9988000001013279,
+        "p50": 0.9849999994039536,
+        "p95": 1.1299999952316284,
+        "p99": 1.469999998807907
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.3510777778261238,
+          "p50": 1.1700000017881393,
+          "p95": 2.1400000005960464,
+          "p99": 5.199999988079071
+        },
+        "replication": {
+          "mean": 1.1639000002046427,
+          "p50": 1.094999998807907,
+          "p95": 1.614999994635582,
+          "p99": 2.5750000029802322
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.2044222223924266,
+        "p50": 1.0499999970197678,
+        "p95": 1.905000001192093,
+        "p99": 3.3900000005960464
+      },
+      "replication": {
+        "mean": 1.0821999995410443,
+        "p50": 1.0450000017881393,
+        "p95": 1.4800000041723251,
+        "p99": 1.739999994635582
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "battle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 812,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "62939e32",
+      "snapshotBytes": 143654,
+      "warmed": {
+        "sim": {
+          "mean": 1.350250000026491,
+          "p50": 1.1700000017881393,
+          "p95": 2.1400000005960464,
+          "p99": 4.689999997615814
+        },
+        "replication": {
+          "mean": 1.1668500000735125,
+          "p50": 1.104999989271164,
+          "p95": 1.635000005364418,
+          "p99": 2.070000007748604
+        },
+        "wireDigest": "943e237e",
+        "wireBytes": 8223962,
+        "peakProjectiles": 7
+      },
+      "sim": {
+        "mean": 1.1164555556078752,
+        "p50": 0.9650000035762787,
+        "p95": 1.75,
+        "p99": 3.385000005364418
+      },
+      "replication": {
+        "mean": 1.0013666664063932,
+        "p50": 0.9800000041723251,
+        "p95": 1.1800000071525574,
+        "p99": 1.5199999958276749
+      },
+      "wireDigest": "943e237e",
+      "wireBytes": 8223962,
+      "peakProjectiles": 7,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.11606666689117749,
+          "p50": 0.07999999821186066,
+          "p95": 0.2549999952316284,
+          "p99": 0.625
+        },
+        "replication": {
+          "mean": 0.3056000002721945,
+          "p50": 0.2850000113248825,
+          "p95": 0.5949999988079071,
+          "p99": 1.0450000017881393
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09105000012450748,
+        "p50": 0.0650000125169754,
+        "p95": 0.20999999344348907,
+        "p99": 0.39000000059604645
+      },
+      "replication": {
+        "mean": 0.27819999992847444,
+        "p50": 0.2750000059604645,
+        "p95": 0.48999999463558197,
+        "p99": 0.6800000071525574
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.12026666671037674,
+          "p50": 0.07999999821186066,
+          "p95": 0.2849999964237213,
+          "p99": 0.7200000137090683
+        },
+        "replication": {
+          "mean": 0.2987000000476837,
+          "p50": 0.2849999964237213,
+          "p95": 0.5949999988079071,
+          "p99": 1.145000010728836
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09140000022119946,
+        "p50": 0.06999999284744263,
+        "p95": 0.2149999886751175,
+        "p99": 0.29499998688697815
+      },
+      "replication": {
+        "mean": 0.2774166653056939,
+        "p50": 0.26500000059604645,
+        "p95": 0.48499999940395355,
+        "p99": 0.6649999916553497
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.12020555580655734,
+          "p50": 0.07999999821186066,
+          "p95": 0.2850000113248825,
+          "p99": 0.5649999976158142
+        },
+        "replication": {
+          "mean": 0.3121833329896132,
+          "p50": 0.29999999701976776,
+          "p95": 0.6300000101327896,
+          "p99": 0.9299999922513962
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09268888902333047,
+        "p50": 0.07000000774860382,
+        "p95": 0.20999999344348907,
+        "p99": 0.3799999952316284
+      },
+      "replication": {
+        "mean": 0.2928666660686334,
+        "p50": 0.26500000059604645,
+        "p95": 0.510000005364418,
+        "p99": 1.0499999970197678
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.11693333314524756,
+          "p50": 0.08000001311302185,
+          "p95": 0.2549999952316284,
+          "p99": 0.5250000059604645
+        },
+        "replication": {
+          "mean": 0.3027833334604899,
+          "p50": 0.2900000065565109,
+          "p95": 0.5899999886751175,
+          "p99": 1.145000010728836
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09593888893723487,
+        "p50": 0.07000000774860382,
+        "p95": 0.2199999988079071,
+        "p99": 0.3700000047683716
+      },
+      "replication": {
+        "mean": 0.28631666660308835,
+        "p50": 0.2750000059604645,
+        "p95": 0.5300000011920929,
+        "p99": 0.6850000023841858
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.12184444458948242,
+          "p50": 0.08499999344348907,
+          "p95": 0.2849999964237213,
+          "p99": 0.6300000101327896
+        },
+        "replication": {
+          "mean": 0.3062166659037272,
+          "p50": 0.2900000065565109,
+          "p95": 0.5649999976158142,
+          "p99": 1.0050000101327896
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.10032777786254883,
+        "p50": 0.07500000298023224,
+        "p95": 0.2199999988079071,
+        "p99": 0.4749999940395355
+      },
+      "replication": {
+        "mean": 0.30545000031590464,
+        "p50": 0.29499998688697815,
+        "p95": 0.5150000005960464,
+        "p99": 0.7650000005960464
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.12178888888822662,
+          "p50": 0.08500000834465027,
+          "p95": 0.29500000178813934,
+          "p99": 0.614999994635582
+        },
+        "replication": {
+          "mean": 0.2974833334982395,
+          "p50": 0.2850000113248825,
+          "p95": 0.5850000083446503,
+          "p99": 0.9150000065565109
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09952777783075968,
+        "p50": 0.07500000298023224,
+        "p95": 0.23999999463558197,
+        "p99": 0.4099999964237213
+      },
+      "replication": {
+        "mean": 0.30675000006953873,
+        "p50": 0.3100000023841858,
+        "p95": 0.5800000131130219,
+        "p99": 0.7750000059604645
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.11827777779764599,
+          "p50": 0.08499999344348907,
+          "p95": 0.26500000059604645,
+          "p99": 0.635000005364418
+        },
+        "replication": {
+          "mean": 0.3004499997695287,
+          "p50": 0.2749999910593033,
+          "p95": 0.6449999958276749,
+          "p99": 0.9150000065565109
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09322222251031134,
+        "p50": 0.07000000774860382,
+        "p95": 0.21000000834465027,
+        "p99": 0.35500000417232513
+      },
+      "replication": {
+        "mean": 0.28183333282669387,
+        "p50": 0.2800000011920929,
+        "p95": 0.48499999940395355,
+        "p99": 0.6099999994039536
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.12186666662494341,
+          "p50": 0.08499999344348907,
+          "p95": 0.2800000011920929,
+          "p99": 0.6700000017881393
+        },
+        "replication": {
+          "mean": 0.31475000018874805,
+          "p50": 0.29500000178813934,
+          "p95": 0.6400000005960464,
+          "p99": 0.7800000011920929
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09196666666203075,
+        "p50": 0.07000000774860382,
+        "p95": 0.20499999821186066,
+        "p99": 0.3200000077486038
+      },
+      "replication": {
+        "mean": 0.29525000005960467,
+        "p50": 0.29999999701976776,
+        "p95": 0.4949999898672104,
+        "p99": 1.1749999970197678
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.12183333307504654,
+          "p50": 0.08499999344348907,
+          "p95": 0.2800000011920929,
+          "p99": 0.6550000011920929
+        },
+        "replication": {
+          "mean": 0.3191000003616015,
+          "p50": 0.3050000071525574,
+          "p95": 0.6050000041723251,
+          "p99": 0.9650000035762787
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09469444430536694,
+        "p50": 0.07000000774860382,
+        "p95": 0.2149999886751175,
+        "p99": 0.32500000298023224
+      },
+      "replication": {
+        "mean": 0.29880000015099845,
+        "p50": 0.2849999964237213,
+        "p95": 0.5050000101327896,
+        "p99": 0.7550000101327896
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.13650000015894573,
+          "p50": 0.0949999988079071,
+          "p95": 0.32999999821186066,
+          "p99": 0.885000005364418
+        },
+        "replication": {
+          "mean": 0.34766666650772093,
+          "p50": 0.32999999821186066,
+          "p95": 0.7450000047683716,
+          "p99": 1.3799999952316284
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.10593888872199589,
+        "p50": 0.07999999821186066,
+        "p95": 0.24500000476837158,
+        "p99": 0.5
+      },
+      "replication": {
+        "mean": 0.3248166669905186,
+        "p50": 0.3049999922513962,
+        "p95": 0.5649999976158142,
+        "p99": 0.9150000065565109
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.1252444442278809,
+          "p50": 0.08999998867511749,
+          "p95": 0.30000001192092896,
+          "p99": 0.6449999958276749
+        },
+        "replication": {
+          "mean": 0.31461666713158287,
+          "p50": 0.3050000071525574,
+          "p95": 0.5900000035762787,
+          "p99": 1.0199999958276749
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.09965555566880438,
+        "p50": 0.07000000774860382,
+        "p95": 0.2150000035762787,
+        "p99": 0.6000000089406967
+      },
+      "replication": {
+        "mean": 0.29336666703224185,
+        "p50": 0.3050000071525574,
+        "p95": 0.5399999916553497,
+        "p99": 0.7100000083446503
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "idle",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 134,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "550c0302",
+      "measuredStartDigest": "550c0302",
+      "digest": "617de372",
+      "snapshotBytes": 41172,
+      "warmed": {
+        "sim": {
+          "mean": 0.11836666676733229,
+          "p50": 0.07999999821186066,
+          "p95": 0.2799999862909317,
+          "p99": 0.6099999994039536
+        },
+        "replication": {
+          "mean": 0.301816666473945,
+          "p50": 0.28999999165534973,
+          "p95": 0.6050000041723251,
+          "p99": 1.084999993443489
+        },
+        "wireDigest": "d9d499df",
+        "wireBytes": 6374504,
+        "peakProjectiles": 244
+      },
+      "sim": {
+        "mean": 0.0921722224023607,
+        "p50": 0.06999999284744263,
+        "p95": 0.2150000035762787,
+        "p99": 0.32499998807907104
+      },
+      "replication": {
+        "mean": 0.2809833329419295,
+        "p50": 0.29500000178813934,
+        "p95": 0.5,
+        "p99": 0.6150000095367432
+      },
+      "wireDigest": "d9d499df",
+      "wireBytes": 6374504,
+      "peakProjectiles": 244,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.4247333332233959,
+          "p50": 0.35999999940395355,
+          "p95": 0.8599999994039536,
+          "p99": 2.3799999952316284
+        },
+        "replication": {
+          "mean": 0.9959833331406116,
+          "p50": 0.9149999916553497,
+          "p95": 1.625,
+          "p99": 2.644999995827675
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.39102222219109534,
+        "p50": 0.35500000417232513,
+        "p95": 0.760000005364418,
+        "p99": 1.1000000089406967
+      },
+      "replication": {
+        "mean": 0.9604333339631558,
+        "p50": 0.9150000065565109,
+        "p95": 1.3949999958276749,
+        "p99": 1.7949999868869781
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.43466111100382276,
+          "p50": 0.36499999463558197,
+          "p95": 0.875,
+          "p99": 2.0550000071525574
+        },
+        "replication": {
+          "mean": 1.0198666666448117,
+          "p50": 0.9549999982118607,
+          "p95": 1.540000006556511,
+          "p99": 3.030000001192093
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.4671111111674044,
+        "p50": 0.39000000059604645,
+        "p95": 0.9699999988079071,
+        "p99": 1.5550000071525574
+      },
+      "replication": {
+        "mean": 1.0972000001370907,
+        "p50": 1.040000006556511,
+        "p95": 1.7349999994039536,
+        "p99": 2.020000010728836
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.47154444444510674,
+          "p50": 0.375,
+          "p95": 0.9599999934434891,
+          "p99": 2.520000010728836
+        },
+        "replication": {
+          "mean": 1.0776999998589356,
+          "p50": 0.989999994635582,
+          "p95": 1.9000000059604645,
+          "p99": 3.3599999994039536
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.44582222236527336,
+        "p50": 0.375,
+        "p95": 0.8799999952316284,
+        "p99": 1.344999998807907
+      },
+      "replication": {
+        "mean": 1.0347000002364317,
+        "p50": 0.989999994635582,
+        "p95": 1.5700000077486038,
+        "p99": 1.915000006556511
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.4716499999993377,
+          "p50": 0.38500000536441803,
+          "p95": 0.9600000083446503,
+          "p99": 2.1500000059604645
+        },
+        "replication": {
+          "mean": 1.1035333330432573,
+          "p50": 1.0450000017881393,
+          "p95": 1.7799999862909317,
+          "p99": 3.030000001192093
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.42606111105945377,
+        "p50": 0.3799999952316284,
+        "p95": 0.8599999994039536,
+        "p99": 1.3250000029802322
+      },
+      "replication": {
+        "mean": 1.0816166670620442,
+        "p50": 0.989999994635582,
+        "p95": 1.7150000035762787,
+        "p99": 2.5249999910593033
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.4911166668766075,
+          "p50": 0.3999999910593033,
+          "p95": 1.0199999958276749,
+          "p99": 2.355000004172325
+        },
+        "replication": {
+          "mean": 1.1301333341002464,
+          "p50": 1.0450000017881393,
+          "p95": 1.8799999952316284,
+          "p99": 3.010000005364418
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.4489277776247925,
+        "p50": 0.3799999952316284,
+        "p95": 0.8949999958276749,
+        "p99": 1.2650000005960464
+      },
+      "replication": {
+        "mean": 1.0263833335538706,
+        "p50": 1,
+        "p95": 1.4849999994039536,
+        "p99": 1.9600000083446503
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.4359777776400248,
+          "p50": 0.36499999463558197,
+          "p95": 0.864999994635582,
+          "p99": 1.7650000005960464
+        },
+        "replication": {
+          "mean": 1.036699999521176,
+          "p50": 0.9649999886751175,
+          "p95": 1.5,
+          "p99": 3.1599999964237213
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.41951666666401755,
+        "p50": 0.3700000047683716,
+        "p95": 0.864999994635582,
+        "p99": 1.1449999958276749
+      },
+      "replication": {
+        "mean": 1.0586833327511946,
+        "p50": 0.9750000089406967,
+        "p95": 1.5,
+        "p99": 2.070000007748604
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.45962777776850594,
+          "p50": 0.3699999898672104,
+          "p95": 0.9399999976158142,
+          "p99": 2.5050000101327896
+        },
+        "replication": {
+          "mean": 1.0445666673282783,
+          "p50": 0.9800000041723251,
+          "p95": 1.6749999970197678,
+          "p99": 3.019999995827675
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.4199611110985279,
+        "p50": 0.36499999463558197,
+        "p95": 0.8449999988079071,
+        "p99": 1.2249999940395355
+      },
+      "replication": {
+        "mean": 0.9849333330492178,
+        "p50": 0.9399999976158142,
+        "p95": 1.4399999976158142,
+        "p99": 2.0050000101327896
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.4470833334989018,
+          "p50": 0.3699999898672104,
+          "p95": 0.9050000011920929,
+          "p99": 2.1400000005960464
+        },
+        "replication": {
+          "mean": 1.0252666665613652,
+          "p50": 0.9699999988079071,
+          "p95": 1.5049999952316284,
+          "p99": 2.739999994635582
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.4013888890047868,
+        "p50": 0.36499999463558197,
+        "p95": 0.8149999976158142,
+        "p99": 1.1150000095367432
+      },
+      "replication": {
+        "mean": 0.9951333332061768,
+        "p50": 0.9300000071525574,
+        "p95": 1.3799999952316284,
+        "p99": 2.2549999952316284
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.4542166667017672,
+          "p50": 0.3699999898672104,
+          "p95": 0.9000000059604645,
+          "p99": 2.8599999994039536
+        },
+        "replication": {
+          "mean": 1.056683332870404,
+          "p50": 1.0050000101327896,
+          "p95": 1.635000005364418,
+          "p99": 2.7049999982118607
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.4011111110614406,
+        "p50": 0.3700000047683716,
+        "p95": 0.8250000029802322,
+        "p99": 1.0499999970197678
+      },
+      "replication": {
+        "mean": 1.0189833335578442,
+        "p50": 0.9399999976158142,
+        "p95": 1.4549999982118607,
+        "p99": 1.895000010728836
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.45231666641102897,
+          "p50": 0.3700000047683716,
+          "p95": 0.885000005364418,
+          "p99": 2.2999999970197678
+        },
+        "replication": {
+          "mean": 1.0307000002761681,
+          "p50": 0.9800000041723251,
+          "p95": 1.5449999868869781,
+          "p99": 2.560000002384186
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.3999388887484868,
+        "p50": 0.35999999940395355,
+        "p95": 0.8149999976158142,
+        "p99": 1.1000000089406967
+      },
+      "replication": {
+        "mean": 0.9898499999940396,
+        "p50": 0.9150000065565109,
+        "p95": 1.375,
+        "p99": 1.9200000017881393
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.4486888887981574,
+          "p50": 0.36500000953674316,
+          "p95": 0.9099999964237213,
+          "p99": 2.405000001192093
+        },
+        "replication": {
+          "mean": 1.0150666667024295,
+          "p50": 0.9600000083446503,
+          "p95": 1.5799999982118607,
+          "p99": 2.635000005364418
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.3974777778983116,
+        "p50": 0.35999999940395355,
+        "p95": 0.8149999976158142,
+        "p99": 1.0899999886751175
+      },
+      "replication": {
+        "mean": 0.9653333331644535,
+        "p50": 0.9249999970197678,
+        "p95": 1.344999998807907,
+        "p99": 1.7599999904632568
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "duels",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 1000,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "8a849916",
+      "measuredStartDigest": "8a849916",
+      "digest": "2a4b5bfe",
+      "snapshotBytes": 129438,
+      "warmed": {
+        "sim": {
+          "mean": 0.43354444437556794,
+          "p50": 0.36499999463558197,
+          "p95": 0.8799999952316284,
+          "p99": 2.0750000029802322
+        },
+        "replication": {
+          "mean": 1.0226333336532116,
+          "p50": 0.9700000137090683,
+          "p95": 1.5150000005960464,
+          "p99": 3.334999993443489
+        },
+        "wireDigest": "6f7121f9",
+        "wireBytes": 27700430,
+        "peakProjectiles": 1300
+      },
+      "sim": {
+        "mean": 0.3930333333214124,
+        "p50": 0.35999999940395355,
+        "p95": 0.8050000071525574,
+        "p99": 1.040000006556511
+      },
+      "replication": {
+        "mean": 1.0023666660984356,
+        "p50": 0.9549999982118607,
+        "p95": 1.3699999898672104,
+        "p99": 1.7749999910593033
+      },
+      "wireDigest": "6f7121f9",
+      "wireBytes": 27700430,
+      "peakProjectiles": 1300,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.550061111483309,
+          "p50": 0.4349999874830246,
+          "p95": 1.0850000083446503,
+          "p99": 2.9650000035762787
+        },
+        "replication": {
+          "mean": 1.2246999994913736,
+          "p50": 1.135000005364418,
+          "p95": 2.114999994635582,
+          "p99": 3.060000002384186
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.48563333354062505,
+        "p50": 0.4299999922513962,
+        "p95": 0.7699999958276749,
+        "p99": 1.4300000071525574
+      },
+      "replication": {
+        "mean": 1.1570666669805845,
+        "p50": 1.114999994635582,
+        "p95": 1.6949999928474426,
+        "p99": 2.3799999952316284
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5436277779108948,
+          "p50": 0.4399999976158142,
+          "p95": 1.084999993443489,
+          "p99": 2.780000001192093
+        },
+        "replication": {
+          "mean": 1.2253666660686333,
+          "p50": 1.114999994635582,
+          "p95": 2.0349999964237213,
+          "p99": 3.385000005364418
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.47598333320683905,
+        "p50": 0.42499999701976776,
+        "p95": 0.7549999952316284,
+        "p99": 1.1799999922513962
+      },
+      "replication": {
+        "mean": 1.1097999999920527,
+        "p50": 1.084999993443489,
+        "p95": 1.604999989271164,
+        "p99": 2.2349999994039536
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5588999998569488,
+          "p50": 0.4400000125169754,
+          "p95": 1.0850000083446503,
+          "p99": 3.125
+        },
+        "replication": {
+          "mean": 1.274983333448569,
+          "p50": 1.1599999964237213,
+          "p95": 2.280000001192093,
+          "p99": 4.159999996423721
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.492255555573437,
+        "p50": 0.4399999976158142,
+        "p95": 0.7750000059604645,
+        "p99": 1.364999994635582
+      },
+      "replication": {
+        "mean": 1.149016666561365,
+        "p50": 1.1050000041723251,
+        "p95": 1.7150000035762787,
+        "p99": 2.1749999970197678
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5573277777764533,
+          "p50": 0.4399999976158142,
+          "p95": 1.2000000029802322,
+          "p99": 2.834999993443489
+        },
+        "replication": {
+          "mean": 1.2313500000536441,
+          "p50": 1.155000001192093,
+          "p95": 1.8200000077486038,
+          "p99": 3.4200000017881393
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.5024500001470248,
+        "p50": 0.4450000077486038,
+        "p95": 0.8150000125169754,
+        "p99": 1.3100000023841858
+      },
+      "replication": {
+        "mean": 1.1557333327333132,
+        "p50": 1.125,
+        "p95": 1.6499999910593033,
+        "p99": 2.0900000035762787
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5557333332465755,
+          "p50": 0.4400000125169754,
+          "p95": 1.1000000089406967,
+          "p99": 2.939999997615814
+        },
+        "replication": {
+          "mean": 1.228033333470424,
+          "p50": 1.145000010728836,
+          "p95": 1.9800000041723251,
+          "p99": 2.8250000029802322
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.4811611109972,
+        "p50": 0.42499999701976776,
+        "p95": 0.7449999898672104,
+        "p99": 1.1700000017881393
+      },
+      "replication": {
+        "mean": 1.094999999900659,
+        "p50": 1.0750000029802322,
+        "p95": 1.5649999976158142,
+        "p99": 1.875
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5502666664123536,
+          "p50": 0.4300000071525574,
+          "p95": 1.1599999964237213,
+          "p99": 2.9750000089406967
+        },
+        "replication": {
+          "mean": 1.1778666665653388,
+          "p50": 1.0899999886751175,
+          "p95": 1.8550000041723251,
+          "p99": 3.1649999916553497
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.4740222221116225,
+        "p50": 0.4150000065565109,
+        "p95": 0.7299999892711639,
+        "p99": 1.1799999922513962
+      },
+      "replication": {
+        "mean": 1.1002333328624567,
+        "p50": 1.0699999928474426,
+        "p95": 1.5649999976158142,
+        "p99": 1.8700000047683716
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5593722217943933,
+          "p50": 0.4450000077486038,
+          "p95": 1.0349999964237213,
+          "p99": 2.794999986886978
+        },
+        "replication": {
+          "mean": 1.2075499999026458,
+          "p50": 1.1299999952316284,
+          "p95": 1.8650000095367432,
+          "p99": 2.864999994635582
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.48183333337306977,
+        "p50": 0.4350000023841858,
+        "p95": 0.7249999940395355,
+        "p99": 1.040000006556511
+      },
+      "replication": {
+        "mean": 1.1082166668275992,
+        "p50": 1.0750000029802322,
+        "p95": 1.5499999970197678,
+        "p99": 2.145000010728836
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5399166667792532,
+          "p50": 0.4299999922513962,
+          "p95": 1.030000001192093,
+          "p99": 2.6600000113248825
+        },
+        "replication": {
+          "mean": 1.177433333148559,
+          "p50": 1.0850000083446503,
+          "p95": 1.9800000041723251,
+          "p99": 3.094999998807907
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.4670777778658602,
+        "p50": 0.4150000065565109,
+        "p95": 0.7250000089406967,
+        "p99": 1.0250000059604645
+      },
+      "replication": {
+        "mean": 1.0409833335876464,
+        "p50": 1.0250000059604645,
+        "p95": 1.459999993443489,
+        "p99": 1.6899999976158142
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.542838888814052,
+          "p50": 0.42499999701976776,
+          "p95": 1.030000001192093,
+          "p99": 3.1599999964237213
+        },
+        "replication": {
+          "mean": 1.1937166665991148,
+          "p50": 1.1200000047683716,
+          "p95": 1.7950000017881393,
+          "p99": 2.8500000089406967
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.47171111111839614,
+        "p50": 0.4150000065565109,
+        "p95": 0.7199999988079071,
+        "p99": 1.1449999958276749
+      },
+      "replication": {
+        "mean": 1.074516666928927,
+        "p50": 1.0649999976158142,
+        "p95": 1.5249999910593033,
+        "p99": 1.75
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5370388887160354,
+          "p50": 0.4350000023841858,
+          "p95": 1.0750000029802322,
+          "p99": 2.5450000017881393
+        },
+        "replication": {
+          "mean": 1.219483333180348,
+          "p50": 1.145000010728836,
+          "p95": 1.9249999970197678,
+          "p99": 2.945000007748604
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.4766222221487098,
+        "p50": 0.4150000065565109,
+        "p95": 0.7550000101327896,
+        "p99": 1.25
+      },
+      "replication": {
+        "mean": 1.0773833332955838,
+        "p50": 1.0600000023841858,
+        "p95": 1.479999989271164,
+        "p99": 2.0999999940395355
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5364111112389299,
+          "p50": 0.4300000071525574,
+          "p95": 1.0700000077486038,
+          "p99": 2.5899999886751175
+        },
+        "replication": {
+          "mean": 1.1617833334207535,
+          "p50": 1.0900000035762787,
+          "p95": 1.8299999982118607,
+          "p99": 2.7849999964237213
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.47085555561714704,
+        "p50": 0.42000000178813934,
+        "p95": 0.7450000047683716,
+        "p99": 1.125
+      },
+      "replication": {
+        "mean": 1.0763833327591419,
+        "p50": 1.0599999874830246,
+        "p95": 1.530000001192093,
+        "p99": 2.064999997615814
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "projectiles",
+      "warmup": 900,
+      "measured": 900,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 713,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "ba9262b2",
+      "measuredStartDigest": "ba9262b2",
+      "digest": "b995f94d",
+      "snapshotBytes": 129512,
+      "warmed": {
+        "sim": {
+          "mean": 0.5431277779903677,
+          "p50": 0.4350000023841858,
+          "p95": 1.084999993443489,
+          "p99": 2.814999997615814
+        },
+        "replication": {
+          "mean": 1.2161999999483426,
+          "p50": 1.125,
+          "p95": 1.959999993443489,
+          "p99": 3.219999998807907
+        },
+        "wireDigest": "a4b3ae93",
+        "wireBytes": 20404154,
+        "peakProjectiles": 950
+      },
+      "sim": {
+        "mean": 0.49523333355784416,
+        "p50": 0.42499999701976776,
+        "p95": 0.7999999970197678,
+        "p99": 1.385000005364418
+      },
+      "replication": {
+        "mean": 1.1208666663368543,
+        "p50": 1.1000000089406967,
+        "p95": 1.6050000041723251,
+        "p99": 2.489999994635582
+      },
+      "wireDigest": "a4b3ae93",
+      "wireBytes": 20404154,
+      "peakProjectiles": 950,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "behaviorMismatches": []
+}

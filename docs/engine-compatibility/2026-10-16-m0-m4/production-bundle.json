@@ -1,0 +1,39 @@
+{
+  "base": {
+    "initialJSBytes": 2098556,
+    "initialJSGzipBytes": 770940,
+    "initialFiles": [
+      "assets/index-EgyJqaEV.js"
+    ],
+    "initialSHA256": {
+      "assets/index-EgyJqaEV.js": "ca753e53d60e6e63ed29cb66a033dd9cfcdf2475b6c422762c02b611f2a890cc"
+    }
+  },
+  "candidate": {
+    "initialJSBytes": 2110984,
+    "initialJSGzipBytes": 776485,
+    "initialFiles": [
+      "assets/index-BaWJWzjR.js"
+    ],
+    "initialSHA256": {
+      "assets/index-BaWJWzjR.js": "d940845d7d3c4611f7055abbcf624a966a3cd3aeb954a100b16e5d5d6945e2ae"
+    },
+    "optionalChunks": [
+      "assets/schema-BJPDQGfV.js",
+      "assets/logistics-CyhV_nCc.js",
+      "assets/components-tnvqvECT.js",
+      "assets/sensors-C08WS8F1.js",
+      "assets/articulation-qT0Tu8Ld.js",
+      "assets/sensorsSpec-DKIwnJcu.js",
+      "assets/runtime-BGS2DB0S.js",
+      "assets/contentHud-CrAzCuB5.js",
+      "assets/contentRenderer-Dzbdfk8d.js",
+      "assets/contentInput-uxYaKVpk.js"
+    ],
+    "precachedOptionalChunks": []
+  },
+  "delta": {
+    "initialJSBytes": 12428,
+    "initialJSGzipBytes": 5545
+  }
+}

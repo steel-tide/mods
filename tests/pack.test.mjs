@@ -5,9 +5,9 @@ import { test } from 'node:test';
 import { packMod } from '../tools/pack.mjs';
 import { applyMods, parseCustomMap, parseMod } from '../tools/steel-tide-mod.mjs';
 
-test('a packed Cyberpunk mod includes its maps, music, sheets and sounds for offline use', () => {
+test('a packed Cyberpunk mod includes its maps, music, sheets and sounds for offline use', async () => {
   const folder = new URL('../mods/cyberpunk/', import.meta.url);
-  const packed = packMod(fileURLToPath(folder));
+  const packed = await packMod(fileURLToPath(folder));
   assert.equal(packed.ok, true);
   const parsed = parseMod(packed.text);
   assert.equal(parsed.ok, true);

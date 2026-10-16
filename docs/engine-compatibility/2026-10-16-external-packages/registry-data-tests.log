@@ -1,0 +1,24 @@
+bun test v1.2.20 (6ad208bc)
+
+tests/ironworks.test.ts:
+(pass) navyard2 launches the mod Orca and still refuses the vanilla copy [22.07ms]
+(pass) navyard3 launches the mod Orca and still refuses the vanilla copy [7.43ms]
+(pass) disabling Ironworks removes its Orca while preserving vanilla Orcas in saves [2.74ms]
+
+tests/factions.test.ts:
+(pass) both ports register their factions together and unload cleanly [0.65ms]
+(pass) fg-rusted-league-league: own HQ, builders, production, construction and save/load [79.52ms]
+(pass) fg-rusted-league-league: AI opens an economy and fields combat units on 1200 metal [183.37ms]
+(pass) fg-rusted-league-league: Breakthrough staging and checkpoints use its roster [58.14ms]
+(pass) adolence-city: own HQ, builders, production, construction and save/load [38.53ms]
+(pass) adolence-city: AI opens an economy and fields combat units on 1200 metal [161.51ms]
+(pass) adolence-city: Breakthrough staging and checkpoints use its roster [46.50ms]
+(pass) adolence-infected: own HQ, builders, production, construction and save/load [39.15ms]
+(pass) adolence-infected: AI opens an economy and fields combat units on 1200 metal [598.11ms]
+(pass) adolence-infected: Breakthrough staging and checkpoints use its roster [44.22ms]
+(pass) Adolence sides cannot construct or recruit the other side; an upgraded precinct remains an HQ [42.41ms]
+
+ 14 pass
+ 0 fail
+ 282 expect() calls
+Ran 14 tests across 2 files. [1.56s]

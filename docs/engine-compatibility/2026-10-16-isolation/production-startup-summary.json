@@ -1,0 +1,209 @@
+{
+  "initialDelta": {
+    "bytes": 11478,
+    "gzip": 5248
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "phase": "aa",
+      "readyMs": {
+        "A": {
+          "n": 2,
+          "min": 4073.2999999970198,
+          "median": 4146.25,
+          "max": 4219.20000000298
+        },
+        "B": {
+          "n": 2,
+          "min": 4086.9000000059605,
+          "median": 4088.2000000029802,
+          "max": 4089.5
+        }
+      },
+      "entryMs": {
+        "A": {
+          "n": 2,
+          "min": 642.0999999940395,
+          "median": 677.7000000029802,
+          "max": 713.3000000119209
+        },
+        "B": {
+          "n": 2,
+          "min": 618,
+          "median": 621.8999999985099,
+          "max": 625.7999999970198
+        }
+      },
+      "heap": {
+        "A": {
+          "n": 2,
+          "min": 10998556,
+          "median": 11042690,
+          "max": 11086824
+        },
+        "B": {
+          "n": 2,
+          "min": 10302868,
+          "median": 10305158,
+          "max": 10307448
+        }
+      },
+      "scriptSeconds": {
+        "A": {
+          "n": 2,
+          "min": 0.186456,
+          "median": 0.25832900000000003,
+          "max": 0.330202
+        },
+        "B": {
+          "n": 2,
+          "min": 0.183739,
+          "median": 0.22163,
+          "max": 0.259521
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "phase": "ab",
+      "readyMs": {
+        "base": {
+          "n": 2,
+          "min": 4051.2000000029802,
+          "median": 4075.7500000074506,
+          "max": 4100.300000011921
+        },
+        "candidate": {
+          "n": 2,
+          "min": 4128.70000000298,
+          "median": 4138.64999999851,
+          "max": 4148.5999999940395
+        }
+      },
+      "entryMs": {
+        "base": {
+          "n": 2,
+          "min": 616.9000000059605,
+          "median": 637.3500000014901,
+          "max": 657.7999999970198
+        },
+        "candidate": {
+          "n": 2,
+          "min": 610.5,
+          "median": 630.8999999985099,
+          "max": 651.2999999970198
+        }
+      },
+      "heap": {
+        "base": {
+          "n": 2,
+          "min": 10196336,
+          "median": 10608852,
+          "max": 11021368
+        },
+        "candidate": {
+          "n": 2,
+          "min": 10201532,
+          "median": 10276228,
+          "max": 10350924
+        }
+      },
+      "scriptSeconds": {
+        "base": {
+          "n": 2,
+          "min": 0.195729,
+          "median": 0.22845,
+          "max": 0.261171
+        },
+        "candidate": {
+          "n": 2,
+          "min": 0.185561,
+          "median": 0.2100805,
+          "max": 0.2346
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "phase": "aa",
+      "readyMs": {
+        "A": {
+          "n": 2,
+          "min": 3745,
+          "median": 4228.5,
+          "max": 4712
+        },
+        "B": {
+          "n": 2,
+          "min": 4697,
+          "median": 4712.5,
+          "max": 4728
+        }
+      },
+      "entryMs": {
+        "A": {
+          "n": 2,
+          "min": 451,
+          "median": 457,
+          "max": 463
+        },
+        "B": {
+          "n": 2,
+          "min": 457,
+          "median": 463,
+          "max": 469
+        }
+      },
+      "heap": {
+        "A": null,
+        "B": null
+      },
+      "scriptSeconds": {
+        "A": null,
+        "B": null
+      }
+    },
+    {
+      "engine": "webkit",
+      "phase": "ab",
+      "readyMs": {
+        "base": {
+          "n": 2,
+          "min": 3880,
+          "median": 4325.5,
+          "max": 4771
+        },
+        "candidate": {
+          "n": 2,
+          "min": 3820,
+          "median": 4297.5,
+          "max": 4775
+        }
+      },
+      "entryMs": {
+        "base": {
+          "n": 2,
+          "min": 455,
+          "median": 458,
+          "max": 461
+        },
+        "candidate": {
+          "n": 2,
+          "min": 457,
+          "median": 460.5,
+          "max": 464
+        }
+      },
+      "heap": {
+        "base": null,
+        "candidate": null
+      },
+      "scriptSeconds": {
+        "base": null,
+        "candidate": null
+      }
+    }
+  ],
+  "gate": "measurement only: paired desktop screening found no repeatable runtime regression beyond A/A variation; limited samples do not establish universal zero cost. Byte growth is reported separately under the clarified runtime gate."
+}
