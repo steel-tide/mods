@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-16T07:04:31.746Z",
+  "generated": "2026-10-16T09:07:16.787Z",
   "mods": [
     {
       "id": "adolence",
@@ -23,7 +23,7 @@
       "path": "mods/adolence",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/adolence/",
       "updated": "2026-10-16T14:58:07+08:00",
-      "downloads": 271,
+      "downloads": 272,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -5682,7 +5682,7 @@
       "path": "mods/cyberpunk",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/cyberpunk/",
       "updated": "2026-10-16T14:58:07+08:00",
-      "downloads": 15,
+      "downloads": 16,
       "screenshots": [
         {
           "file": "covers/blackout-card.webp",
@@ -10648,7 +10648,7 @@
       "path": "mods/ironworks",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/ironworks/",
       "updated": "2026-10-16T14:58:07+08:00",
-      "downloads": 109,
+      "downloads": 110,
       "screenshots": [
         {
           "file": "screenshots/skimmers.webp",
