@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: 22
       - run: node tools/check.mjs
+      - run: node --test tests/catalog.test.mjs
 
   index:
     # the release and the index are rebuilt from what is on main, and the index committed back
@@ -39,15 +40,15 @@ jobs:
         run: node tools/sync-release.mjs --out .counts.json
       - run: node tools/build-index.mjs --counts .counts.json
       - name: put the index on the release too
-        run: gh release upload registry index.json --clobber
-      - name: commit index.json
+        run: gh release upload registry index.json catalog.json --clobber
+      - name: commit catalogue and details
         run: |
-          if git diff --quiet -- index.json; then
-            echo "index.json is current"
+          git add index.json catalog.json details/
+          if git diff --cached --quiet; then
+            echo "catalogue is current"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.json
-          git commit -m "index: rebuild [skip ci]"
+          git commit -m "index: rebuild catalogue and details [skip ci]"
           git push

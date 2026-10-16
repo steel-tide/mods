@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /**
- * Write index.json — what the game's Settings → Mods and steelti.de/mods
- * read: one entry per folder under mods/ that validates, with the defs and
- * sheets summarised, each sheet's and screenshot's pixel size for the pages'
- * layout, when it last changed and how often it has been installed. Run by
+ * Write catalog.json for the list, details/<id>/<hash>.json for each mod's page,
+ * and the full index.json for released clients. The catalogue carries
+ * counts instead of rosters and asset tables. Run by
  * CI on every push to main and nightly (for the counts); run it yourself to
  * see what the entry for your mod will look like.
  *
@@ -13,11 +12,12 @@
  * per mod id, from the release the packed mods are attached to. Without it,
  * the counts already in index.json are kept.
  */
+import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { applyMods, imageSize, indexEntryFor, modRegistryBase, parseCustomMap, parseMod, parseModIndex } from './steel-tide-mod.mjs';
+import { applyMods, imageSize, indexEntryFor, modRegistryBase, modSummaryFor, parseCustomMap, parseMod, parseModIndex } from './steel-tide-mod.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
@@ -72,6 +72,28 @@ for (const name of readdirSync(join(root, 'mods')).sort()) {
   mods.push(indexEntryFor(parsed.mod, `mods/${name}`, modRegistryBase(name), { sizes, updated: lastChange(`mods/${name}`), downloads: counts[name] ?? 0, ...(maps.length ? { maps } : {}) }));
 }
 
-const index = { format: 'steel-tide-mod-index', v: 1, generated: new Date().toISOString(), mods };
+const generated = new Date().toISOString();
+const detailDir = join(root, 'details');
+mkdirSync(detailDir, { recursive: true });
+const summaries = mods.map((entry) => {
+  // Counts change nightly; keep that churn in the catalogue and legacy index.
+  const { downloads: _downloads, updated: _updated, ...detail } = entry;
+  const json = JSON.stringify(detail) + '\n';
+  const hash = createHash('sha256').update(json).digest('hex').slice(0, 16);
+  const folder = join(detailDir, entry.id);
+  mkdirSync(folder, { recursive: true });
+  writeFileSync(join(folder, `${hash}.json`), json);
+  const url = new URL(`../../details/${entry.id}/${hash}.json`, modRegistryBase(entry.id)).href;
+  return modSummaryFor(entry, url);
+});
+// Retain earlier detail documents while a cached catalogue may still name them.
+// Removing a mod removes its generated documents as well.
+const ids = new Set(mods.map((entry) => entry.id));
+for (const name of readdirSync(detailDir)) {
+  if (!ids.has(name)) rmSync(join(detailDir, name), { recursive: true, force: true });
+}
+const catalog = { format: 'steel-tide-mod-catalog', v: 1, generated, mods: summaries };
+writeFileSync(join(root, 'catalog.json'), JSON.stringify(catalog) + '\n');
+const index = { format: 'steel-tide-mod-index', v: 1, generated, mods };
 writeFileSync(join(root, 'index.json'), JSON.stringify(index, null, 2) + '\n');
-console.log(`index.json: ${mods.length} mod${mods.length === 1 ? '' : 's'}`);
+console.log(`catalog.json + details/ + legacy index.json: ${mods.length} mod${mods.length === 1 ? '' : 's'}`);

@@ -34,6 +34,7 @@ const args = process.argv.slice(2);
 const outFile = args.includes('--out') ? resolve(args[args.indexOf('--out') + 1]) : join(root, '.counts.json');
 const COUNTS = 'counts.json';
 const INDEX = 'index.json';
+const CATALOG = 'catalog.json';
 
 function gh(...argv) {
   return execFileSync('gh', argv, { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
@@ -103,7 +104,7 @@ for (const id of ids) {
 }
 // whatever is still on the release and not in mods/ is gone from the registry
 for (const name of assets.keys()) {
-  if (name === COUNTS || name === INDEX) continue;
+  if (name === COUNTS || name === INDEX || name === CATALOG) continue;
   console.log(`removing ${name}`);
   remove(name);
 }

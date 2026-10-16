@@ -233,14 +233,16 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 | `homepage` | string |  |  | a link: a repository, a thread |
 | `license` | string |  | CC-BY-4.0 | the mod's licence (SPDX id) |
 | `minGame` | string |  |  | the oldest game version it is written for |
-| `defs` | def[] | yes |  | the units, buildings and upgrade levels; may be empty when terrains are supplied |
+| `defs` | def[] | yes |  | the units, buildings and upgrade levels; may be empty when terrains, music queues or menu backgrounds are supplied |
 | `factions` | faction[] |  |  | selectable factions, each with its own headquarters, starting builder and roster (format 2) |
 | `terrains` | terrain[] |  |  | up to 32 map-selected terrain variants; preserve their base terrain’s gameplay |
 | `sprites` | sheet[] |  |  | the sheets the defs draw with (see below) |
-| `sounds` | string |  |  | the recordings the weapons fire with (see below) |
+| `music` | { tracks, menu, setup, battle } |  |  | custom BGM tracks and ordered menu, setup and battle queues (see below) |
+| `menuBackground` | { cuts, queue } |  |  | ordered home-menu cut queue, mixing original scenes and this pack’s maps (see below) |
+| `sounds` | sound[] |  |  | the recordings the weapons fire with (see below) |
 | `screenshots` | path[] |  |  | pictures of the mod in play, relative to mod.json (`screenshots/1.png`): 4:3, at least 640 px wide, under 2 MB each, up to 8. The registry asks for at least one and shows them on the mod's page |
 | `maps` | string |  |  | maps the mod carries, relative to mod.json (`maps/city.steel-tide-map`): files exported from the Scenario Editor, up to 8, each under 512 KB. A map may stand the mod's own units; the setup screens offer it beside the player's own map while the mod is on |
-| `files` | { path: dataURL } |  |  | single-file form only: the sheets, sounds and maps, embedded as data URLs by path |
+| `files` | { path: dataURL } |  |  | single-file form only: the sheets, sounds, music and maps, embedded as data URLs by path |
 
 `name`, `description` and every `desc`/`name` on a def are *text*: a string (used for every language), `["English", "中文", "한국어"]` in that order, or `{ "en": "…", "zh": "…", "ko": "…" }`. Only English is required; a language left out reads as English.
 
@@ -264,13 +266,13 @@ A faction is selected per seat in Conquest and Breakthrough. It changes the head
 | `name` | text | yes |  | the terrain style name in the editor |
 | `base` | grass \| sand \| road \| mud \| marsh \| snow \| rubble \| ice \| city | yes |  | the existing terrain whose movement, construction and combat behavior stays unchanged |
 | `texture` | string |  |  | flat terrain material: a ter.<mod id>-<name> sheet in this pack; city uses its city materials instead |
-| `city` | { roof, wall, window, lamp, roofTexture, wallTexture, groundTexture } |  |  | materials and lights for the ordinary city geometry; only with base city |
+| `city` | { roof, wall, window, lamp, roofTexture, wallTexture, groundTexture, signTexture, accent, accent2, architecture } |  |  | materials, lights and optional visual architecture; only with base city |
 
 Terrain variants add map-selected appearances without changing terrain numbers, movement, construction, cover or city destruction. Enabling a mod alone never repaints a vanilla map. A map opts in with `"terrainVariants": { "city": "my-mod-city" }`; the editor preserves these bindings in saves and exports. Missing or disabled content renders the ordinary base terrain, even when old images remain cached. A terrain-only pack uses `"defs": []`.
 
-Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep the full rectangular material opaque and seamless; do not include buildings, text, shadows or a transparent cutout in a flat material. A variant can reference only terrain sheets in its own pack.
+Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep flat materials opaque and seamless, without painted buildings, text, cast shadows or transparent cutouts. `city.signTexture` may instead contain sign artwork. A variant can reference only terrain sheets in its own pack.
 
-#### City materials (`terrains[].city`)
+#### City appearance (`terrains[].city`)
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
@@ -281,8 +283,28 @@ Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, d
 | `roofTexture` | string |  |  | roof material, a ter.<mod id>-<name> sheet in this pack |
 | `wallTexture` | string |  |  | wall material, a ter.<mod id>-<name> sheet in this pack |
 | `groundTexture` | string |  |  | courtyard material, a ter.<mod id>-<name> sheet in this pack |
+| `signTexture` | string |  |  | 4×4 atlas of 16 square signs in row-major order, a ter.<mod id>-<name> sheet in this pack; custom architecture selects a cell per building |
+| `accent` | string |  |  | primary architectural lighting color, #RRGGBB |
+| `accent2` | string |  |  | secondary architectural lighting color, #RRGGBB |
+| `architecture` | { forms, minStoreys, maxStoreys, coverage, greenery, equipment, facade } |  |  | optional building kit; omitted keeps ordinary city geometry |
 
-A city variant keeps the normal city block geometry and damage states. It supplies at least one color or material; omitted properties keep the ordinary city treatment. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.
+A city variant supplies colors, materials or a visual architecture kit while preserving city tile collision, cover and destruction rules. Without `architecture`, city geometry stays exactly ordinary. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`, with `signTexture` for architectural signs. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.
+
+#### City architecture (`terrains[].city.architecture`)
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `forms` | (slab \| court \| terrace \| stepped)[] |  | slab, court, terrace, stepped | distinct building forms to mix: slab blocks, courtyard blocks, terraces and stepped towers |
+| `minStoreys` | integer 1–4 |  | 2 | minimum target storeys for the main building; smaller lots and wings may be shorter; must not exceed maxStoreys |
+| `maxStoreys` | integer 1–4 |  | 4 | maximum target storeys for the main building; does not change terrain height or cover |
+| `coverage` | number 0.35–0.9 |  | 0.72 | building coverage within each visual lot |
+| `greenery` | number 0–1 |  | 0.1 | decorative vegetation density |
+| `equipment` | number 0–1 |  | 0.65 | rooftop machinery and service equipment density |
+| `facade` | ribbon \| panel \| industrial |  | panel | wall structure: ribbon windows, panel cladding or industrial frames |
+
+The optional kit changes visible building forms, storeys, lot coverage, planting, rooftop equipment and facade treatment. It never changes terrain height, passability or combat. `forms` lists distinct supported forms. Storey bounds use the documented defaults when omitted and must satisfy `minStoreys <= maxStoreys`. The existing damage states still control collapsed buildings and extinguished signs.
+
+`signTexture` is a 4×4 atlas of 16 square signs in row-major order; a building’s deterministic seed selects one cell. Use equal `fw`/`fh` divisible by 4 (128 recommended), with dark unlit backing and bright lettering or symbols. Pixels whose strongest RGB channel exceeds 120 emit their own color at night. The image is one frame, not a horizontal 16-frame animation strip. Missing sign artwork uses procedural glyphs.
 
 ### A def (`defs[]`)
 
@@ -301,6 +323,8 @@ A city variant keeps the normal city block geometry and damage states. It suppli
 | `pop` | integer 0–50 |  | 1 for a unit, 0 for a building | population it counts for |
 | `hp` | number 1–1000000 | yes |  | hit points |
 | `armor` | light \| medium \| heavy \| ship \| sub \| air \| structure |  | by domain | the armour class weapons are multiplied against |
+| `impactMaterial` | armor \| earth \| concrete |  | concrete for structure armor, armor otherwise | projectile-impact sound material; does not change damage. Both ordinary and heavy impacts use the matching recorded family |
+| `directionalArmor` | { front, side, rear } | units only |  | ground hull direct-hit multipliers `{front, side, rear}`, each 0–10; 90° front/rear arcs and 90° on each side. Arc fire, collateral blasts, mines and fire ignore facing. Enables slow reversing for short moves behind the hull |
 | `speed` | number 0–1000 | units only | 60 | world px/s (a tile is 32) |
 | `turnRate` | number 0–50 | units only | 3.5 | rad/s |
 | `vision` | number 0–64 |  | 8 | sight, in tiles |
@@ -339,6 +363,7 @@ A city variant keeps the normal city block geometry and damage states. It suppli
 | `interceptReload` | number 0.05–600 |  |  | point defence: seconds per round replaced |
 | `interceptMuzzleOffset` | number 0–200 |  |  | point defence: launcher length, world px |
 | `transportCap` | integer 1–50 | units only |  | a transport: hold, in cargo weight |
+| `transportMaxWeight` | number 0–50 | units only | transportCap | a transport: maximum cargo weight of one passenger |
 | `cargoReach` | number 0.5–4 | units only | 1 | a transport: how far its load and unload distances stretch, as a multiple of the default (the landing craft's 1.1, the Moray's 1.5); on a ship it widens the ground its ramp reaches too |
 | `landsForCargo` | boolean | units only |  | a cargo plane that touches down to load |
 | `cargoWeight` | number 0–50 | units only | pop | how much of a hold it takes |
@@ -398,10 +423,12 @@ An `upgradeOf` def becomes upgrade-only (never placed directly): the named build
 | `interceptable` | boolean |  |  | point defence may shoot it down |
 | `arc` | boolean |  |  | a ballistic arc (artillery) |
 | `turret` | boolean |  | true when the def has a turretSprite | fired from the rotating part |
+| `recoil` | number 0–10 |  |  | cosmetic barrel recoil stroke, art px; requires barrel regions on the turret art, changes no weapon statistic |
 | `vertical` | boolean |  |  | launched straight up out of the hull, like a submarine's missile tubes: it fires at any bearing and the hull never turns for it; `muzzleOffset` then runs along the keel to the tubes |
 | `muzzleOffset` | number 0–200 |  |  | pivot to muzzle, world px; a unit's art is drawn 1.5625×, so measure on the sheet and multiply |
 | `bores` | integer 1–8 |  | 1 | barrels, fired one after another |
 | `boreSpacing` | number 0–60 |  |  | gap between adjacent barrels, world px |
+| `muzzlePoints` | string |  |  | explicit muzzle positions, fired in list order: 1–8 `{ forward, lateral }` points in world px from the firing pivot (forward along the bore, lateral to its right; either may be negative); replaces `muzzleOffset`, `bores` and `boreSpacing` |
 | `spread` | number 0–200 |  |  | inaccuracy at full range, world px |
 | `friendlyFire` | boolean |  |  | the blast hurts your own side too |
 | `fan` | number 0–1.5 |  |  | a `flame` jet: the half-angle it is sprayed across, radians |
@@ -467,6 +494,7 @@ A hull with more than one gun — a battleship's turrets fore and aft, a tank wi
 | `pivotY` | number 0–1 |  | 0.5 | rotation pivot, as a fraction of the frame |
 | `anchorY` | number 0–512 |  |  | px from the top to the footprint centre (tall buildings) |
 | `mount` | [x, y] |  |  | a body: where its turret sits (or, with a repair aura, where the beam leaves), as `[fx, fy]` |
+| `barrels` | [left, top, right, bottom][] |  |  | exposed barrel rectangles, each `[left, top, right, bottom]` in 0–1 fractions of the up-facing source frame, in muzzle firing order; leave mantlets fixed. Pair with weapon `recoil` (art px) |
 | `fps` | number 0–60 |  |  | animation speed |
 | `teams` | boolean |  | true | recolour magenta per faction; `false` draws the sheet as painted for every faction, and for the wreck |
 | `ss` | integer 1–4 |  |  | supersample factor; omit to let the game choose |
@@ -478,6 +506,58 @@ A hull with more than one gun — a battleship's turrets fore and aft, a tank wi
 | `bgMinLuma` | number 0–255 |  |  | lightest colour still taken as background |
 | `artifactCleanup` | boolean |  |  | sweep specks left by background removal |
 | `anims` | { moving, idle, firing } |  |  | a unit body's frames by what it is doing, `{ moving, idle, firing }`, each `[first, last]` or `[first, last, fps]`: a tank that is a tree when it stands, a walker whose legs move only when it does (see Animation states) |
+
+Barrel recoil is available to any definition with a rotating turret: put `recoil: 2` on its turret weapon (stroke in art pixels) and `barrels: [[0.4, 0, 0.6, 0.45]]` on its turret sheet. Rectangles use 0–1 fractions of the up-facing source frame, must have positive area and must not overlap. Keep stationary mantlets outside them. For several barrels, list rectangles in the same order as `muzzlePoints`, or left to right when using `bores`/`boreSpacing`. Each firing mount and barrel recoils independently; custom or hidden muzzle flashes work too. Inherited art keeps its barrel regions; custom art supplies its own. Recoil changes no combat statistic.
+
+### Home menu background (`menuBackground`)
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `cuts` | cut[] |  |  | up to 16 custom live scenes |
+| `queue` | cut id[] | yes |  | 1–32 cut IDs in repeating order; original IDs: flank, sea, winter, raid, landing, rockets, home, nuke |
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `id` | id | yes |  | unique cut ID beginning with the mod ID and a dash |
+| `map` | string | yes |  | a path in this pack’s maps; at most 128 × 128 tiles and 200 placed units/buildings |
+| `camera` | { tx, ty, zoom } | yes |  | opening framing: { tx, ty, zoom } |
+| `cameraEnd` | { tx, ty, zoom } |  |  | end framing for a 13-second drift; omitted holds camera |
+| `weather` | clear \| rain \| snow |  | clear | weather held throughout the cut |
+| `minutes` | number 0–24 |  | 6 | held day-cycle time: 0 dawn, 6 noon, 12 dusk, 18 midnight |
+| `seed` | integer 0–2147483647 |  | 1 | simulation seed |
+| `orders` | { owner, tx, ty }[] |  |  | opening attack-move targets for the map’s mobile units, by owner |
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `tx` | number 0–128 | yes |  | horizontal camera centre in tiles, inside the map |
+| `ty` | number 0–128 | yes |  | vertical camera centre in tiles, inside the map |
+| `zoom` | number 0.25–4 | yes |  | camera zoom, capped by the menu on small screens |
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `owner` | integer 0–7 | yes |  | map spawn index; one opening attack-move per owner |
+| `tx` | number 0–128 | yes |  | target tile x |
+| `ty` | number 0–128 | yes |  | target tile y |
+
+Supply a nonempty queue to replace the home-menu reel. It repeats in listed order from a random starting cut, 13 seconds per cut, with the usual camera drift and fades. Mix original IDs with your own, or use only your own. The last active pack with usable cuts wins; disabling it restores the previous reel. A background-only pack may use `defs: []`. A custom cut names a file in `maps`, with its placed units and buildings; every owner needs a spawn, and every camera/order point must be inside the map. Each spawn is a separate side; no AI, default bases or scenario triggers run. Place generators to power the forces. Optional opening orders attack-move all mobile units belonging to the named owner. Missing or invalid cuts are skipped; an unusable queue keeps the previous reel. Reduced motion keeps the still background.
+
+### Background music (`music`)
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `tracks` | track[] |  |  | up to 32 custom recordings, each with an id and file |
+| `menu` | track id[] |  |  | ordered repeating queue for menus; also used for setup unless setup is supplied. Omitted keeps the previous queue; [] is silence |
+| `setup` | track id[] |  |  | optional separate queue for match setup |
+| `battle` | track id[] |  |  | ordered repeating queue during battle. Omitted keeps the previous queue; [] is silence. Built-in IDs: menu, glassline-drive, setup, cold-front, victory, defeat, battle-1, battle-2, assembly-gears, disciplined-unease, methodical-calm, iron-standard, danger-close, dead-reckoning, zero-hour, stand-to, stand-down |
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `id` | id | yes |  | unique track id: <mod id>-<name>; cannot replace a built-in ID |
+| `file` | string | yes |  | MP3, Ogg or WAV path relative to mod.json |
+
+Each supplied queue replaces that slot, plays in listed order and repeats, keeping the normal gaps, music volume and pause behavior. Keep built-in IDs to mix original tracks with your own; use only your own IDs for a complete replacement. Omitted queues keep the previous selection; an empty queue silences the slot. The last active pack supplying a slot wins. Disabling it restores the preceding pack or the original shuffle. A music-only pack uses `defs: []`. Victory and defeat remain unchanged. Tracks travel with the other mod assets, within the existing total asset limit.
+
+Built-in music IDs by original slot: menu: menu, glassline-drive; setup: setup, cold-front; victory: victory; defeat: defeat; battle: battle-1, battle-2, assembly-gears, disciplined-unease, methodical-calm, iron-standard, danger-close, dead-reckoning, zero-hour, stand-to, stand-down. Any of these IDs may appear in a custom queue; an unshipped file is skipped.
 
 ### A sound (`sounds[]`)
 
@@ -851,6 +931,6 @@ A mod may carry maps: files the game's Scenario Editor exports (`.steel-tide-map
 
 ## Rules
 
-- A mod adds; it does not change vanilla defs, art, rules or interface. Do not try to override a vanilla id or key; the validator refuses it.
+- A mod adds definitions and assets; it does not change vanilla defs, art, rules or interface. Music and menu-background queues are explicit exceptions: they select the soundtrack and backdrop without overwriting built-in tracks or cuts. Do not try to override a vanilla id or key; the validator refuses it.
 - Keep it honest: a unit needs a counter. The armour matrix is how the game makes one; give a new weapon a class it belongs to rather than an override on every cell.
 - A mod is published under the licence its manifest names (default CC-BY-4.0). Only ship art you have the right to.

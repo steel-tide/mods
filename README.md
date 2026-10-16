@@ -44,7 +44,7 @@ know: the folder is named after the id, every sheet exists, the screenshots
 are there and 4:3, and no def id, alias or sheet key is taken by another
 published mod. **Ids are global** — prefix a generic word with your mod's id
 (`ironworks-bunker`, not `bunker`). CI runs the same check on every pull
-request; once merged, `index.json` is rebuilt on `main` and the mod is live.
+request; once merged, the catalogue and detail files are rebuilt on `main` and the mod is live.
 
 The screenshots are what the game's mod list and [steelti.de/mods](https://steelti.de/mods)
 show for the mod; the first is its card. Take them in a match with the mod's
@@ -59,9 +59,9 @@ the mod installed.
 | Path                                     | What                                                                                                                                                                |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `mods/<id>/`                             | one mod each; `mods/ironworks` has its own art and sounds, a turreted building and an upgrade level; `mods/rusted-expansion` is the official Rusted Warfare tribute |
-| `index.json`                             | what the game and the website read — generated, never edited by hand; carries each mod's download count and screenshot sizes                                        |
+| `catalog.json`                           | the small list the game and website read: mod metadata, unit/building counts, screenshots and a detail URL                                        |
 | `tools/check.mjs`                        | validate one mod or all of them                                                                                                                                     |
-| `tools/build-index.mjs`                  | rebuild `index.json` (CI does this on `main`, and nightly for the counts)                                                                                           |
+| `tools/build-index.mjs`                  | rebuild the catalogue, details and legacy index (CI does this on `main`, and nightly for the counts)                                                                                           |
 | `tools/pack.mjs`                         | a mod folder into the single-file form the game's _Upload file…_ takes                                                                                              |
 | `tools/sync-release.mjs`                 | keep the `registry` release in step with `mods/`: every mod packed as an asset, which is how the download counts are kept (CI)                                      |
 | `tools/steel-tide-mod.mjs`               | the game's own mod code — validator, resolver, the vanilla roster — bundled from the game repository; do not edit here                                              |
@@ -74,7 +74,7 @@ There is no database. CI packs every mod into its single-file form and
 attaches it to the rolling [`registry` release](https://github.com/steel-tide/mods/releases/tag/registry);
 GitHub counts downloads of a release asset, and installing a mod from the
 game's registry list fetches that asset's URL once. The counts are read back
-off the release nightly and on every push and baked into `index.json`, which
+off the release nightly and on every push and baked into `catalog.json` (and the legacy `index.json`), which
 is the figure the game and the website show; a changed mod is re-uploaded and
 its old count carried over. The packed files are also the one-file form of
 each mod, for anyone who wants it.
@@ -99,3 +99,17 @@ permission to host, package, distribute and display submitted mods through
 the official registry, game, website and mirrors, while preserving credits
 and licences. Submission does not transfer copyright or give Steel Tide
 blanket permission to relicense or sell a creator's mod.
+
+## Catalogue and details
+
+Generated files are never edited by hand. Detail URLs include a content hash;
+previous details remain available so cached catalogues keep opening the matching
+version. Nightly download-count changes do not rewrite detail files. `catalog.json` contains summary
+entries only; `details/<id>/<hash>.json` holds each mod's definitions and asset metadata.
+The game loads a detail file when its dialog opens, and the website when its page
+is visited. Search covers the mod's name, author, description and id.
+
+The full `index.json` remains generated for older released clients. Publish the
+catalogue and all detail files together before deploying clients that read them.
+The download mirror must serve `catalog.json` and `details/` as well as the
+existing files.

@@ -3555,11 +3555,14 @@ const STRINGS = {
     "이 모드를 제거할까요? 이 모드를 쓰는 저장은 다시 설치할 때까지 불러올 수 없습니다."
   ],
   "mods.registry": ["Official registry", "官方仓库", "공식 레지스트리"],
+  "mods.detail.loading": ["Loading mod details…", "正在加载模组详情…", "모드 상세 정보 불러오는 중…"],
+  "mods.detail.offline": ["Mod details could not be loaded.", "无法加载模组详情。", "모드 상세 정보를 불러올 수 없습니다."],
+  "mods.detail.retry": ["Try again", "重试", "다시 시도"],
   "mods.registry.loading": ["Fetching the list…", "正在获取列表…", "목록 가져오는 중…"],
   "mods.registry.offline": ["The registry could not be reached.", "无法连接到模组仓库。", "레지스트리에 연결할 수 없습니다."],
   "mods.registry.empty": ["No mods published yet.", "尚无已发布的模组。", "아직 공개된 모드가 없습니다."],
   "mods.search": ["Search", "搜索", "검색"],
-  "mods.searchHint": ["Name, author, unit…", "名称、作者、单位…", "이름, 제작자, 유닛…"],
+  "mods.searchHint": ["Name, author, description…", "名称、作者、描述…", "이름, 제작자, 설명…"],
   "mods.searchNone": ['Nothing matches "{0}".', "没有匹配“{0}”的模组。", '"{0}"에 맞는 모드가 없습니다.'],
   "mods.install": ["Install", "安装", "설치"],
   "mods.installedMark": ["Installed", "已安装", "설치됨"],
@@ -11235,6 +11238,7 @@ function resolveMod(mod, table) {
 }
 const MOD_REGISTRY_REPO = "steel-tide/mods";
 const MOD_REGISTRY_URL = `https://raw.githubusercontent.com/${MOD_REGISTRY_REPO}/main/index.json`;
+const MOD_CATALOG_URL = `https://raw.githubusercontent.com/${MOD_REGISTRY_REPO}/main/catalog.json`;
 const MOD_REGISTRY_WEB = `https://github.com/${MOD_REGISTRY_REPO}`;
 function modRegistryBase(id) {
   return `https://raw.githubusercontent.com/${MOD_REGISTRY_REPO}/main/mods/${id}/`;
@@ -11247,6 +11251,41 @@ function modCountUrl(id) {
 function modFileUrl(entry, file) {
   const base = entry.base || modRegistryBase(entry.id);
   return (base.endsWith("/") ? base : base + "/") + file;
+}
+function modSummaryFor(entry, details) {
+  const { defs, sprites: _sprites, sounds: _sounds, ...summary } = entry;
+  const buildings = defs.filter((d) => d.kind === "building").length;
+  return { ...summary, units: defs.length - buildings, buildings, details };
+}
+function parseModCatalog(json) {
+  let raw = json;
+  if (typeof raw === "string") {
+    try {
+      raw = JSON.parse(raw);
+    } catch {
+      return null;
+    }
+  }
+  if (!isPlainObject(raw) || raw.format !== "steel-tide-mod-catalog" || raw.v !== 1 || !Array.isArray(raw.mods)) return null;
+  const mods = [];
+  for (const m of raw.mods) {
+    if (!isPlainObject(m) || typeof m.details !== "string" || !m.details || typeof m.units !== "number" || !Number.isSafeInteger(m.units) || m.units < 0 || typeof m.buildings !== "number" || !Number.isSafeInteger(m.buildings) || m.buildings < 0) continue;
+    const entry = parseModIndex({ format: "steel-tide-mod-index", mods: [m] })?.mods[0];
+    if (entry) mods.push({ ...modSummaryFor(entry, m.details), units: m.units, buildings: m.buildings });
+  }
+  return { format: "steel-tide-mod-catalog", v: 1, generated: typeof raw.generated === "string" ? raw.generated : "", mods };
+}
+function parseModDetail(json, expected) {
+  let raw = json;
+  if (typeof raw === "string") {
+    try {
+      raw = JSON.parse(raw);
+    } catch {
+      return null;
+    }
+  }
+  if (!isPlainObject(raw) || raw.id !== expected.id || raw.version !== expected.version || !Array.isArray(raw.defs) || !Array.isArray(raw.sprites)) return null;
+  return parseModIndex({ format: "steel-tide-mod-index", mods: [raw] })?.mods[0] ?? null;
 }
 function indexEntryFor(mod, path, base, extra = {}) {
   const r = resolveMod(mod);
@@ -11922,6 +11961,7 @@ export {
   MAX_REQUIRED_MODS,
   MAX_SCREENSHOT_BYTES,
   MIN_SCREENSHOT_WIDTH,
+  MOD_CATALOG_URL,
   MOD_FILE_EXT,
   MOD_FORMAT,
   MOD_FORMAT_VERSION,
@@ -11978,6 +12018,7 @@ export {
   contentName as modName,
   contentOfDef as modOfDef,
   modRegistryBase,
+  modSummaryFor,
   contentText as modText,
   modTitle,
   onContentChanged,
@@ -11985,6 +12026,8 @@ export {
   parseCustomMap,
   parseDefinitionPack,
   parseMod,
+  parseModCatalog,
+  parseModDetail,
   parseModIndex,
   readTerrainAssignments,
   requiredContentOf,
