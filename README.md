@@ -13,9 +13,16 @@ with sprite sheets beside it if the author drew some — and every folder under
   coding agent as a skill: `npx skills add steel-tide/skills --skill steel-tide-mods-guideline`
   ([skills.sh](https://skills.sh), from [steel-tide/skills](https://github.com/steel-tide/skills);
   the same text is [`AGENTS.md`](AGENTS.md)).
-- **Publish one:** fork, add `mods/<id>/`, run the check, open a pull request.
+- **Publish one:** read the [submission terms](CONTRIBUTING.md), fork, add
+  `mods/<id>/`, run the check, and open a pull request. Creators keep ownership.
 
 ## Adding a mod
+
+For a new submission, explicitly set `license` in `mod.json` and include or
+link the applicable licence text and credits. Choose terms you have the right
+to offer; the tooling's licence does not apply to your mod. The format's
+legacy CC-BY-4.0 default is unchanged, but new submissions must state their
+licence explicitly. See [ownership and submission permissions](CONTRIBUTING.md).
 
 ```
 mods/<id>/
@@ -29,7 +36,7 @@ mods/<id>/
 
 ```sh
 node tools/check.mjs mods/<id>      # every error with its path into mod.json
-node tools/pack.mjs mods/<id>       # optional: one .steel-tide-mod file to share
+node tools/pack.mjs mods/<id>       # optional: one file to share if its licence permits
 ```
 
 The check is the one the game runs on load, plus what only the registry can
@@ -74,7 +81,21 @@ each mod, for anyone who wants it.
 
 ## Licence
 
-The tooling is MIT. Each mod is published under the licence its `mod.json`
-names — CC-BY-4.0 unless it says otherwise — and belongs to its author. By
-opening a pull request you confirm you have the right to publish the mod's
-art under that licence.
+The registry tooling is **source available, not open source**, under
+[PolyForm Strict License 1.0.0](LICENSES/PolyForm-Strict-1.0.0.txt). It permits
+noncommercial use and personal study, but grants no permission to modify or
+redistribute the tooling. Those activities and uses outside the licence
+require separate permission, except where existing rights already allow them.
+See [LICENSE](LICENSE) for the scope and retained rights from earlier releases.
+
+**Mods and their assets remain owned by their creators and other respective
+rights holders.** Each mod keeps the licence declared in its `mod.json` and
+its accompanying notices. PolyForm Strict does not replace those licences:
+existing CC-BY-4.0, PolyForm Noncommercial and custom mod licences remain in
+effect. Check the individual mod's terms before modifying, sharing or reusing it.
+
+The [submission terms](CONTRIBUTING.md) give Steel Tide limited, non-exclusive
+permission to host, package, distribute and display submitted mods through
+the official registry, game, website and mirrors, while preserving credits
+and licences. Submission does not transfer copyright or give Steel Tide
+blanket permission to relicense or sell a creator's mod.
