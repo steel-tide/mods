@@ -10,6 +10,10 @@ Rotate damaged shields out of contact. Shield delay counts time without taking d
 
 Use detector raids to open a route for Wraiths, airlift to bypass long ground corridors, and split naval escorts between sonar and air defense. A mixed formation has practical advantages over repeating one expensive chassis.
 
+## Blackout District
+
+Blackout District rises in stepped towers, slab blocks and terraces around narrow service courts. Roof machinery, layered facade panels and cyan, amber and coral commercial signs crowd its graphite streets. City movement, road access and destruction follow the usual rules. This district requires Steel Tide 0.8.15; ordinary maps keep their own city appearance.
+
 ## Roster
 
 ### Backstreet Nexus

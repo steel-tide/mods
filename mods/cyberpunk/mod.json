@@ -7,7 +7,7 @@
     "赛博朋克：断电协议",
     "사이버펑크: 블랙아웃 프로토콜"
   ],
-  "version": "1.2.1",
+  "version": "1.3.3",
   "author": "Steel Tide",
   "description": [
     "An official near-future arsenal: a complete networked war economy, prism weapons, shield formations, covert raids and autonomous carrier wings. Includes the Blackout operation atlas.",
@@ -15,7 +15,7 @@
     "공식 근미래 전력 확장: 네트워크 전쟁 경제, 프리즘 무기, 방벽 진형, 은밀한 습격과 자율 함재기 편대. 블랙아웃 작전 지도집 포함."
   ],
   "license": "PolyForm-Noncommercial-1.0.0",
-  "minGame": "0.8.14",
+  "minGame": "0.8.15",
   "factions": [
     {
       "id": "cyberpunk-blackout",
@@ -1062,7 +1062,7 @@
           },
           "turret": true,
           "minRange": 1.6,
-          "muzzleOffset": 44
+          "muzzleOffset": 44.0
         }
       ],
       "aiWeight": 3,
@@ -3051,7 +3051,7 @@
           "splash": 46,
           "friendlyFire": true,
           "spread": 12,
-          "muzzleOffset": 33
+          "muzzleOffset": 33.0
         }
       ],
       "power": -16,
@@ -5195,6 +5195,87 @@
       "fps": 12,
       "stabilize": false,
       "freezeStatic": false
+    },
+    {
+      "key": "ter.cyberpunk-city-roof",
+      "file": "terrain/ter.cyberpunk-city-roof.webp",
+      "frames": 1,
+      "fw": 128,
+      "fh": 128,
+      "ss": 2,
+      "teams": false,
+      "stripBg": false,
+      "rotated": false
+    },
+    {
+      "key": "ter.cyberpunk-city-wall",
+      "file": "terrain/ter.cyberpunk-city-wall.webp",
+      "frames": 1,
+      "fw": 128,
+      "fh": 128,
+      "ss": 2,
+      "teams": false,
+      "stripBg": false,
+      "rotated": false
+    },
+    {
+      "key": "ter.cyberpunk-city-ground",
+      "file": "terrain/ter.cyberpunk-city-ground.webp",
+      "frames": 1,
+      "fw": 128,
+      "fh": 128,
+      "ss": 2,
+      "teams": false,
+      "stripBg": false,
+      "rotated": false
+    },
+    {
+      "key": "ter.cyberpunk-city-signs",
+      "file": "terrain/ter.cyberpunk-city-signs.webp",
+      "frames": 1,
+      "fw": 128,
+      "fh": 128,
+      "ss": 2,
+      "teams": false,
+      "stripBg": false,
+      "rotated": false
+    }
+  ],
+  "terrains": [
+    {
+      "id": "cyberpunk-city",
+      "name": [
+        "Blackout District",
+        "断电城区",
+        "블랙아웃 지구"
+      ],
+      "base": "city",
+      "city": {
+        "roof": "#51616c",
+        "wall": "#354553",
+        "window": "#405767",
+        "lamp": "#67eaff",
+        "accent": "#f4b65d",
+        "accent2": "#ef8062",
+        "roofTexture": "ter.cyberpunk-city-roof",
+        "wallTexture": "ter.cyberpunk-city-wall",
+        "groundTexture": "ter.cyberpunk-city-ground",
+        "signTexture": "ter.cyberpunk-city-signs",
+        "architecture": {
+          "forms": [
+            "stepped",
+            "court",
+            "slab",
+            "terrace"
+          ],
+          "minStoreys": 2,
+          "maxStoreys": 4,
+          "coverage": 0.8,
+          "greenery": 0.04,
+          "equipment": 0.7,
+          "facade": "panel"
+        }
+      }
     }
   ],
   "sounds": [
@@ -5262,6 +5343,120 @@
     "screenshots/01-gridfall.jpg",
     "screenshots/02-prism-front.jpg",
     "screenshots/03-undertow.jpg",
-    "screenshots/04-blackout.jpg"
-  ]
+    "screenshots/04-blackout.jpg",
+    "screenshots/05-blackout-district.jpg",
+    "screenshots/06-blackout-night.jpg"
+  ],
+  "music": {
+    "tracks": [
+      {
+        "id": "cyberpunk-blackout-circuit",
+        "file": "music/blackout-circuit.mp3"
+      },
+      {
+        "id": "cyberpunk-copper-siege",
+        "file": "music/copper-siege.mp3"
+      },
+      {
+        "id": "cyberpunk-ghost-relay",
+        "file": "music/ghost-relay.mp3"
+      },
+      {
+        "id": "cyberpunk-overload-vector",
+        "file": "music/overload-vector.mp3"
+      }
+    ],
+    "menu": [
+      "cyberpunk-blackout-circuit"
+    ],
+    "battle": [
+      "cyberpunk-copper-siege",
+      "cyberpunk-ghost-relay",
+      "cyberpunk-overload-vector"
+    ]
+  },
+  "menuBackground": {
+    "cuts": [
+      {
+        "id": "cyberpunk-gridfall",
+        "map": "maps/01-gridfall.steel-tide-map",
+        "camera": {
+          "tx": 20,
+          "ty": 21,
+          "zoom": 1.4
+        },
+        "cameraEnd": {
+          "tx": 24,
+          "ty": 28,
+          "zoom": 1.6
+        },
+        "weather": "rain",
+        "minutes": 18,
+        "orders": [
+          {
+            "owner": 0,
+            "tx": 42,
+            "ty": 37
+          },
+          {
+            "owner": 1,
+            "tx": 69,
+            "ty": 49
+          }
+        ]
+      },
+      {
+        "id": "cyberpunk-district",
+        "map": "maps/01-gridfall.steel-tide-map",
+        "camera": {
+          "tx": 51,
+          "ty": 22,
+          "zoom": 1.5
+        },
+        "cameraEnd": {
+          "tx": 63,
+          "ty": 25,
+          "zoom": 1.7
+        },
+        "weather": "clear",
+        "minutes": 11.5
+      },
+      {
+        "id": "cyberpunk-signal-watch",
+        "map": "maps/01-gridfall.steel-tide-map",
+        "camera": {
+          "tx": 92,
+          "ty": 61,
+          "zoom": 1.4
+        },
+        "cameraEnd": {
+          "tx": 98,
+          "ty": 69,
+          "zoom": 1.6
+        },
+        "weather": "clear",
+        "minutes": 6,
+        "orders": [
+          {
+            "owner": 0,
+            "tx": 42,
+            "ty": 37
+          },
+          {
+            "owner": 1,
+            "tx": 69,
+            "ty": 49
+          }
+        ]
+      }
+    ],
+    "queue": [
+      "cyberpunk-gridfall",
+      "sea",
+      "cyberpunk-district",
+      "winter",
+      "cyberpunk-signal-watch",
+      "rockets"
+    ]
+  }
 }

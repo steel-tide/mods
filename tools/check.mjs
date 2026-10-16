@@ -16,7 +16,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { MAX_MOD_MAP_BYTES, applyMods, checkScreenshot, imageSize, parseCustomMap, parseMod } from './steel-tide-mod.mjs';
+import { MAX_MOD_MAP_BYTES, applyMods, checkScreenshot, imageSize, parseCustomMap, menuCutMapError, parseMod } from './steel-tide-mod.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
@@ -99,6 +99,11 @@ for (const folder of folders) {
       const map = parseCustomMap(text);
       if (!map.ok) errors.push({ path: `maps[${i}]`, message: `${file}: ${map.error}` });
       else if (map.data.spawns.length < 2) warnings.push({ path: `maps[${i}]`, message: `${file}: a map needs at least two spawn points to be played` });
+      if (map.ok) for (const [k, cut] of (mod.menuBackground?.cuts ?? []).entries()) {
+        if (cut.map !== file) continue;
+        const issue = menuCutMapError(cut, map.data);
+        if (issue) errors.push({ path: `menuBackground.cuts[${k}]`, message: issue });
+      }
     }
     if (!existsSync(join(folder, 'README.md'))) warnings.push({ path: 'README.md', message: 'a README tells players what the mod is about' });
     loaded.push({ mod, label });

@@ -1,3 +1,42 @@
+const MENU_CUT_IDS = ["flank", "sea", "winter", "raid", "landing", "rockets", "home", "nuke"];
+const MAX_MENU_CUTS = 16;
+const MAX_MENU_QUEUE = 32;
+const MAX_MENU_MAP_SIDE = 128;
+const MAX_MENU_UNITS = 200;
+function menuCutMapError(cut, map) {
+  if (map.w > MAX_MENU_MAP_SIDE || map.h > MAX_MENU_MAP_SIDE) return `menu maps must be at most ${MAX_MENU_MAP_SIDE} × ${MAX_MENU_MAP_SIDE} tiles`;
+  if ((map.units?.length ?? 0) > MAX_MENU_UNITS) return `menu maps may place at most ${MAX_MENU_UNITS} units and buildings`;
+  if (!map.spawns.length) return "a menu map needs at least one spawn";
+  for (const point of [cut.camera, cut.cameraEnd, ...cut.orders ?? []]) {
+    if (point && (point.tx < 0 || point.ty < 0 || point.tx >= map.w || point.ty >= map.h)) return "camera and order targets must be inside the map";
+  }
+  if (cut.orders?.some((order) => order.owner >= map.spawns.length) || map.units?.some((unit) => unit.owner >= map.spawns.length)) return "each unit and order owner needs a map spawn";
+  return null;
+}
+const CONTENT_MUSIC_SLOTS = ["menu", "setup", "battle"];
+const MUSIC_FILES = {
+  menu: ["menu", "glassline-drive"],
+  setup: ["setup", "cold-front"],
+  // the two the result plate stands on, held under it for as long as it is
+  // up (`MUSIC_LOOP`): the match is over, so there is nothing for a gap
+  // between files to make room for
+  victory: ["victory"],
+  defeat: ["defeat"],
+  battle: [
+    "battle-1",
+    "battle-2",
+    "assembly-gears",
+    "disciplined-unease",
+    "methodical-calm",
+    "iron-standard",
+    "danger-close",
+    "dead-reckoning",
+    "zero-hour",
+    "stand-to",
+    "stand-down"
+  ]
+};
+const MUSIC_IDS = new Set(Object.values(MUSIC_FILES).flat());
 const STRINGS = {
   "faction.vanilla": ["Steel Tide", "钢铁浪潮", "스틸 타이드"],
   "world.workspace.library": ["Library", "资源库", "라이브러리"],
@@ -69,6 +108,8 @@ const STRINGS = {
   "world.field.fh": ["Footprint height", "占地高度", "차지하는 높이"],
   "world.field.sprite": ["Body sprite", "主体图像", "본체 스프라이트"],
   "world.field.turretSprite": ["Turret sprite", "炮塔图像", "포탑 스프라이트"],
+  "world.field.recoil": ["Barrel recoil", "炮管后坐", "포신 반동"],
+  "world.field.barrels": ["Barrel regions", "炮管区域", "포신 영역"],
   "world.field.hasTurret": ["Has turret", "带炮塔", "포탑 있음"],
   "world.field.tier": ["Tier", "等级", "단계"],
   "world.field.requires": ["Requirements", "前置条件", "요구 사항"],
@@ -360,6 +401,8 @@ const STRINGS = {
   "world.field.cost": ["Metal cost", "金属造价", "금속 비용"],
   "world.field.speed": ["Speed", "速度", "속도"],
   "world.field.armor": ["Armour", "装甲", "장갑"],
+  "world.field.impactMaterial": ["Impact sound material", "命中音效材质", "피격음 재질"],
+  "world.field.directionalArmor": ["Directional armor", "方向装甲", "방향별 장갑"],
   "world.field.buildTime": ["Build time", "建造时间", "생산 시간"],
   "world.field.vision": ["Vision", "视野", "시야"],
   "world.field.locked": ["Cannot receive commands", "禁止接受命令", "명령 수신 금지"],
@@ -474,6 +517,20 @@ const STRINGS = {
   "world.field.weapons": ["Weapons", "武器", "무기"],
   "world.field.rules": ["Behaviours", "行为", "동작 규칙"],
   "world.field.sprites": ["Sprite sheets", "精灵图", "스프라이트 시트"],
+  "world.field.menuBackground": ["Menu background", "菜单背景", "메뉴 배경"],
+  "world.field.cuts": ["Background cuts", "背景镜头", "배경 장면"],
+  "world.field.queue": ["Playback queue", "播放队列", "재생 목록"],
+  "world.field.camera": ["Opening camera", "初始镜头", "시작 카메라"],
+  "world.field.cameraEnd": ["Ending camera", "结束镜头", "종료 카메라"],
+  "world.field.minutes": ["Day-cycle time", "昼夜时刻", "일주기 시간"],
+  "world.field.zoom": ["Camera zoom", "镜头缩放", "카메라 확대"],
+  "world.field.tx": ["Tile X", "横向格坐标", "타일 X"],
+  "world.field.ty": ["Tile Y", "纵向格坐标", "타일 Y"],
+  "world.field.music": ["Background music", "背景音乐", "배경 음악"],
+  "world.field.tracks": ["Music tracks", "音乐曲目", "음악 트랙"],
+  "world.field.menu": ["Menu queue", "菜单播放队列", "메뉴 재생 목록"],
+  "world.field.setup": ["Match setup queue", "对局设置播放队列", "전투 설정 재생 목록"],
+  "world.field.battle": ["Battle queue", "战斗播放队列", "전투 재생 목록"],
   "world.field.sounds": ["Audio files", "音频文件", "오디오 파일"],
   "world.field.builtBy": ["Builders", "建造单位", "건설 유닛"],
   "world.field.producedBy": ["Production buildings", "生产建筑", "생산 건물"],
@@ -599,9 +656,9 @@ const STRINGS = {
     "수송은 머릿수가 아니라 무게로 셉니다. 매머드는 4칸을 차지해서 헬기로는 들어 올릴 수 없습니다."
   ],
   "tip.cargoplane": [
-    "The C-47 parks. An idle cargo plane puts its wheels down instead of circling, and passengers walk to it.",
-    "C-47 会停下来：闲着的运输机是把轮子放到地上，而不是在天上盘旋，乘员自己走过去登机。",
-    "C-47은 착륙합니다. 할 일 없는 수송기는 선회하는 대신 바퀴를 내리고, 탑승자가 걸어와 올라탑니다."
+    "The Condor parks. An idle cargo plane puts its wheels down instead of circling, and passengers walk to it.",
+    "神鹰会停下来：闲着的运输机是把轮子放到地上，而不是在天上盘旋，乘员自己走过去登机。",
+    "콘도르는 착륙합니다. 할 일 없는 수송기는 선회하는 대신 바퀴를 내리고, 탑승자가 걸어와 올라탑니다."
   ],
   "tip.intercept": [
     "The Missile Interrupter stops rockets, never shells, and never a nuclear warhead. That is a flying target: a veteran anti-air unit's job, or a SAM Site's.",
@@ -739,6 +796,7 @@ const STRINGS = {
   "menu.desc.replays": ["Recorded matches, played back from their orders.", "已录制的对局，按其指令重放。", "기록된 대전을 그 명령대로 다시 재생합니다."],
   "menu.desc.storeDot": ["Put the Store's blue dot back on this device.", "在这台设备上重新显示商店的蓝点。", "이 기기에서 상점의 파란 점을 다시 표시합니다."],
   "menu.version": ["v{0}", "v{0}", "v{0}"],
+  "menu.preview": ["Early development preview. Content is subject to change.", "早期开发预览版，不代表最终品质。", "초기 개발 미리보기 버전입니다. 콘텐츠는 변경될 수 있습니다."],
   "dev.enabled": ["Developer mode on.", "已开启开发者模式。", "개발자 모드가 켜졌습니다."],
   // the plate that asks for developer mode's passcode, checked online (`ui/devUnlock.ts`)
   "dev.code.label": ["Passcode", "密码", "암호"],
@@ -1570,6 +1628,7 @@ const STRINGS = {
   "mp.browseRefresh": ["Refresh", "刷新", "새로 고침"],
   // {0} seated of {1} seats the match will have
   "mp.browseSeats": ["{0}/{1} seats", "{0}/{1} 席", "좌석 {0}/{1}"],
+  "mp.browseFree": ["Free", "空闲", "비어 있음"],
   "mp.browseUnreachable": ["Unreachable", "无法连接", "연결 불가"],
   "mp.browseFull": ["Full", "已满", "만석"],
   "mp.browseVersion": [
@@ -1976,6 +2035,7 @@ const STRINGS = {
   "rank.2": ["Veteran", "老兵", "베테랑"],
   "rank.3": ["Elite", "精英", "정예"],
   "hud.cargo": ["Cargo {0}/{1}", "载员 {0}/{1}", "적재 {0}/{1}"],
+  "stat.transportMaxWeight": ["Max passenger weight", "单个乘员载重上限", "탑승자당 최대 중량"],
   "hud.hold": ["Cargo hold", "货舱", "적재함"],
   "hud.holdUnit": ["{0} (cargo weight {1})", "{0}（载重 {1}）", "{0} (적재 무게 {1})"],
   "hud.holdEmpty": ["Nothing carried", "未搭载任何单位", "실은 유닛이 없습니다"],
@@ -3377,7 +3437,7 @@ const STRINGS = {
   "settings.edgeScroll": ["Edge scrolling", "屏幕边缘滚动", "가장자리 스크롤"],
   "settings.healthBars": ["Always show health bars", "始终显示血条", "체력 바 항상 표시"],
   "settings.killFeed": ["Show kill log", "显示击毁记录", "격파 기록 표시"],
-  "settings.othersSkins": ["Show other players' building skins", "显示其他玩家的建筑外观", "다른 플레이어의 건물 외형 표시"],
+  "settings.othersSkins": ["Show other players' skins", "显示其他玩家的外观", "다른 플레이어의 외형 표시"],
   "settings.shareUsage": ["Link statistics to this device", "将统计关联到本设备", "통계를 이 기기에 연결"],
   "settings.showFps": ["Show FPS", "显示帧率", "FPS 표시"],
   // the backup of the player's game (`ui/backup.ts`, `core/backup.ts`)
@@ -3428,7 +3488,9 @@ const STRINGS = {
   "settings.graphicsPreset.low": ["Low", "低", "낮음"],
   "settings.graphicsPreset.custom": ["Custom", "自定义", "사용자 지정"],
   "settings.renderScale": ["Render sharpness", "渲染精度", "렌더링 선명도"],
-  "settings.renderScale.1.5": ["1.5×", "1.5×", "1.5×"],
+  "settings.renderScale.low": ["Low", "低", "낮음"],
+  "settings.renderScale.medium": ["Medium", "中", "중간"],
+  "settings.renderScale.high": ["High", "高", "높음"],
   "settings.water": ["Water surface", "水面效果", "수면 효과"],
   "settings.water.full": ["Waves and light", "波浪与光影", "파도와 빛"],
   "settings.water.simple": ["Light only", "仅光影", "빛만"],
@@ -3763,11 +3825,12 @@ const STRINGS = {
   "replay.copy": ["Copy profile", "复制记录", "프로필 복사"],
   "replay.copyTip": ["The match profile as JSON, to paste for analysis", "对局记录 JSON，可粘贴用于分析", "분석용으로 붙여 넣을 대전 프로필 JSON"],
   "replay.restart": ["From the opening", "从开局", "처음부터"],
-  "replay.toEnd": ["To the end of the record", "跳到记录末尾", "기록 끝으로"],
   "replay.play": ["Play", "播放", "재생"],
   "replay.pause": ["Pause", "暂停", "일시 정지"],
   "replay.progress": ["Progress", "进度", "진행"],
-  "replay.moveControls": ["Drag to move playback controls", "拖动移动播放控制栏", "드래그하여 재생 컨트롤 이동"],
+  "replay.event.hq": ["{0}: HQ destroyed", "{0}：总部被摧毁", "{0}: 본부 파괴"],
+  "replay.event.nuclear": ["{0}: Nuclear launch", "{0}：核武器发射", "{0}: 핵무기 발사"],
+  "replay.event.battle": ["Heavy fighting", "激烈交战", "격전"],
   "replay.otherBuild": [
     "Recorded on build {0}; this is {1}. Under different rules the match may go differently.",
     "录制于版本 {0}，当前为 {1}。规则不同，对局可能走向不同。",
@@ -4060,6 +4123,7 @@ const STRINGS = {
   "touch.hintBomb": ["Tap the map where the bomber drops the nuclear bomb", "点击地图选择轰炸机投放核航弹的位置", "지도를 탭해 폭격기가 핵폭탄을 떨굴 곳을 고르세요"],
   // ------------------------------------------------------------- about (the settings' last page) / help
   "about.title": ["About", "关于", "정보"],
+  "about.version": ["v{0} ({1})", "v{0} ({1})", "v{0} ({1})"],
   // the About page's doors (`ui/about.ts`): the website's home, its wiki and its agent page
   "about.website": ["Website", "官网", "웹사이트"],
   "about.wiki": ["Wiki", "百科", "위키"],
@@ -4222,6 +4286,16 @@ const STRINGS = {
   "stat.armor.sub": ["Submarine", "潜艇", "잠수함"],
   "stat.armor.air": ["Aircraft", "飞行器", "항공기"],
   "stat.armor.structure": ["Structure", "建筑", "건물"],
+  "stat.directionalArmor": ["Directional armor", "方向装甲", "방향별 장갑"],
+  "stat.armorFacing.front": ["Front", "正面", "정면"],
+  "stat.armorFacing.side": ["Sides", "侧面", "측면"],
+  "stat.armorFacing.rear": ["Rear", "背面", "후면"],
+  "stat.directionalArmor.value": ["Front {0}% · Sides {1}% · Rear {2}%", "正面 {0}% · 侧面 {1}% · 背面 {2}%", "정면 {0}% · 측면 {1}% · 후면 {2}%"],
+  "stat.directionalArmor.tip": [
+    "Direct-hit damage: front {0}%, sides {1}%, rear {2}%. Each arc is 90°. Artillery, collateral blasts, mines and fire ignore facing. Moves up to {3} tiles behind the hull reverse at {4}% speed.",
+    "直击伤害：正面 {0}%，侧面 {1}%，背面 {2}%。各方向扇区为 90°。炮击、溅射、地雷与火焰不计朝向。向车后 {3} 格内移动时，会以 {4}% 速度倒车。",
+    "직격 피해: 정면 {0}%, 측면 {1}%, 후면 {2}%. 각 방향의 각도는 90°입니다. 곡사 포격, 주변 폭발, 지뢰, 화염은 방향의 영향을 받지 않습니다. 차체 뒤쪽 {3}칸 이내로 이동할 때는 {4}% 속도로 후진합니다."
+  ],
   // ------------------------------------------------------------- teams
   "team.blue": ["Blue", "蓝方", "파랑"],
   "team.red": ["Red", "红方", "빨강"],
@@ -4362,7 +4436,7 @@ const STRINGS = {
   "unit.mboat.desc": ["Anti-ship missiles on a small hull. Punches far above its weight.", "小艇扛重锤，反舰导弹一击致命。", "작은 선체에 대함 미사일. 체급을 훌쩍 넘는 한 방입니다."],
   "unit.frigate.name": ["Aegis Frigate", "神盾护卫舰", "이지스 호위함"],
   "unit.frigate.shortName": ["Aegis", "神盾", "이지스"],
-  "unit.frigate.desc": ["Fleet air-defense screen with rapid SAMs and a deck gun.", "舰队防空屏障，快速防空导弹加舰炮。", "속사 대공 미사일과 함포를 갖춘 함대 방공 방패입니다."],
+  "unit.frigate.desc": ["Fleet escort with anti-aircraft missiles, sonar, anti-submarine torpedoes and a light deck gun.", "舰队护航舰，配备防空导弹、声呐、反潜鱼雷和轻型舰炮。", "대공 미사일, 소나, 대잠 어뢰와 경함포를 갖춘 함대 호위함입니다."],
   "unit.destroyer.name": ["Orca Destroyer", "虎鲸驱逐舰", "오르카 구축함"],
   "unit.destroyer.shortName": ["Orca", "虎鲸", "오르카"],
   "unit.carrier.name": ["Aircraft Carrier", "航空母舰", "항공모함"],
@@ -4381,7 +4455,7 @@ const STRINGS = {
   "unit.btlship.desc": ["Triple heavy guns bombard land and sea from extreme range; secondaries keep helicopters off.", "三联重炮超远程轰击海陆目标，防空副炮驱离直升机。", "3연장 중포가 극한의 사거리에서 육지와 바다를 포격하고, 대공 부포가 헬기를 쫓아냅니다."],
   "unit.seatrans.name": ["Landing Craft", "登陆艇", "상륙정"],
   "unit.seatrans.shortName": ["Landing Craft", "登陆艇", "상륙정"],
-  "unit.seatrans.desc": ["Ferries units across water.", "渡海运输单位。", "유닛을 싣고 물을 건넙니다."],
+  "unit.seatrans.desc": ["An air-cushion landing craft with a broad open vehicle deck.", "配有宽阔开放式车辆甲板的气垫登陆艇。", "넓은 개방형 차량 갑판을 갖춘 공기부양 상륙정."],
   "unit.engboat.name": ["Engineer Boat", "工程船", "공병정"],
   "unit.engboat.shortName": ["Engineer Boat", "工程船", "공병정"],
   "unit.engboat.desc": [
@@ -4421,12 +4495,12 @@ const STRINGS = {
   "unit.theli.name": ["Pelican Transport Helicopter", "鹈鹕运输直升机", "펠리컨 수송 헬기"],
   "unit.theli.shortName": ["Pelican", "鹈鹕", "펠리컨"],
   "unit.theli.desc": ["Airlifts a light load anywhere.", "轻载空运，全图直达。", "가벼운 짐을 어디든 공수합니다."],
-  "unit.c47.name": ["C-47 Skytrain", "C-47 空中列车", "C-47 스카이트레인"],
-  "unit.c47.shortName": ["C-47", "C-47", "C-47"],
+  "unit.c47.name": ["Condor Cargo Plane", "神鹰运输机", "콘도르 수송기"],
+  "unit.c47.shortName": ["Condor", "神鹰", "콘도르"],
   "unit.c47.desc": [
-    "Heavy air transport. It lands to load and unload, and is a ground target while it is down.",
-    "重型运输机。装卸时会降落，停在地面时会像车辆一样挨打。",
-    "대형 수송기. 싣고 내릴 때 착륙하며, 내려앉은 동안에는 지상 표적이 됩니다."
+    "Four-engine jet transport with a broad cargo fuselage and high tail.",
+    "宽大货舱、高置尾翼的四发喷气运输机。",
+    "넓은 화물 동체와 높은 꼬리날개를 갖춘 4발 제트 수송기입니다."
   ],
   "unit.gunship.name": ["Spectre Gunship", "幽灵炮艇机", "스펙터 건십"],
   "unit.gunship.shortName": ["Spectre", "幽灵", "스펙터"],
@@ -4686,6 +4760,9 @@ const STRINGS = {
   // Scenario settings use a modal at every screen size.
   "editor.settings": ["Map settings", "地图设置", "지도 설정"],
   "editor.terrain": ["Terrain", "地形", "지형"],
+  "editor.terrainStyle": ["{0} appearance", "{0}外观", "{0} 외형"],
+  "editor.originalTerrain": ["Original", "原版", "기본"],
+  "editor.unavailableTerrain": ["{0} (unavailable)", "{0}（不可用）", "{0} (사용 불가)"],
   "editor.decor": ["Props", "装饰物", "장식물"],
   "editor.map": ["Scenario", "场景", "시나리오"],
   "editor.tools": ["Drawing tools", "绘图工具", "그리기 도구"],
@@ -5462,6 +5539,7 @@ const DEFS = {
     power: -1,
     hp: 300,
     armor: "medium",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 75,
     turnRate: 4.5,
     vision: 7,
@@ -5498,6 +5576,7 @@ const DEFS = {
     power: -2,
     hp: 620,
     armor: "heavy",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 60,
     turnRate: 3.6,
     vision: 7,
@@ -5514,6 +5593,7 @@ const DEFS = {
       speed: 420,
       targets: ["ground", "ship"],
       turret: true,
+      recoil: 1.6,
       muzzleOffset: 35.7,
       splash: 12,
       sound: "cannon"
@@ -5522,7 +5602,7 @@ const DEFS = {
     sprite: "u.mbt",
     turretSprite: "tur.mbt",
     // on the commander's hatch, measured on `tur.mbt`
-    airMount: { sprite: "tur.pintle", x: -3.2, y: 0.5 }
+    airMount: { sprite: "tur.pintle", x: -2.6, y: 0.54 }
   },
   htank: {
     id: "htank",
@@ -5537,6 +5617,7 @@ const DEFS = {
     power: -4,
     hp: 1900,
     armor: "heavy",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 42,
     turnRate: 2.6,
     vision: 7,
@@ -5555,9 +5636,10 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { heavy: 1.1, structure: 1 },
       turret: true,
-      muzzleOffset: 41.3,
+      recoil: 2,
+      muzzleOffset: 40.47,
       bores: 2,
-      boreSpacing: 10.56,
+      boreSpacing: 11.05,
       splash: 14,
       burst: 2,
       burstDelay: 0.18,
@@ -5566,8 +5648,8 @@ const DEFS = {
     trail: "tread",
     sprite: "u.htank",
     turretSprite: "tur.htank",
-    // on the right-hand hatch, measured on `tur.htank`
-    airMount: { sprite: "tur.pintle", x: 3.1, y: -0.9 }
+    // on the right-hand roof mounting plate, measured on `tur.htank`
+    airMount: { sprite: "tur.pintle", x: 3.58, y: -1.12 }
   },
   td: {
     id: "td",
@@ -5596,9 +5678,13 @@ const DEFS = {
       range: 7,
       projectile: "missile",
       speed: 300,
+      // Twin canisters: concealed pivot (512,916), tips y=202, centres x=364/660;
+      // a 16 × 18 art frame at scale 1.5625. One missile per reload, alternating.
       targets: ["ground", "ship"],
       turret: true,
-      muzzleOffset: 12.6,
+      muzzleOffset: 13.0737,
+      bores: 2,
+      boreSpacing: 7.2266,
       homing: true,
       interceptable: true,
       sound: "missile"
@@ -5761,8 +5847,18 @@ const DEFS = {
       minRange: 4,
       projectile: "rocket",
       speed: 300,
+      // Inclined 2×3 muzzle face: pivot (512,520), columns x414/610,
+      // rows y291/431/584 on the 1024×1536 master. A 20×30 art frame
+      // at scale 1.5625; fire left/right pairs from front to rear.
       targets: ["ground", "ship"],
-      muzzleOffset: 23.4,
+      muzzlePoints: [
+        { forward: 6.988525390625, lateral: -2.99072265625 },
+        { forward: 6.988525390625, lateral: 2.99072265625 },
+        { forward: 2.716064453125, lateral: -2.99072265625 },
+        { forward: 2.716064453125, lateral: 2.99072265625 },
+        { forward: -1.953125, lateral: -2.99072265625 },
+        { forward: -1.953125, lateral: 2.99072265625 }
+      ],
       splash: 48,
       arc: true,
       burst: 8,
@@ -6064,8 +6160,8 @@ const DEFS = {
     // a pixel, and the length less the two round ends
     body: { r: 11, len: 14 },
     weapons: [w({
-      // the muzzle is 8.3 art px past the ring on `tur.gator` (the tip at a
-      // fifth of the sheet, the ring at three fifths), at the display scale
+      // tur.gator: measured pivot y=1000, muzzle y=300 on the 1536px
+      // master; 700/1536 * 21 art px * 1.5625 display scale
       id: "autocannon",
       cls: "autocannon",
       dmg: 20,
@@ -6075,16 +6171,15 @@ const DEFS = {
       speed: 520,
       targets: ["ground", "ship"],
       turret: true,
-      muzzleOffset: 13,
+      muzzleOffset: 14.95361328125,
       sound: "autocannon"
     })],
     trail: "tire",
     sprite: "u.gator",
     turretSprite: "tur.gator",
-    // the ring the sheet paints, an art px forward of the frame's centre
-    // (measured at 0.462 of the sheet's height; a body whose turret fires
-    // declares it here, not in the manifest)
-    turretMounts: [{ x: 0, y: -1 }]
+    // Aft ring at (512,880) on the 1024x1536 hull: (880/1536 - .5)*26.
+    // Rendering and firing share this mount; the hull's frame size stays put.
+    turretMounts: [{ x: 0, y: 1.8958333333333333 }]
   },
   // ------------------------------------------------------ the doctrines' own
   //
@@ -6329,19 +6424,20 @@ const DEFS = {
     domain: "ship",
     tier: 2,
     ability: "damageControl",
-    cost: 600,
-    buildTime: 30,
-    pop: 2,
-    power: -2,
+    cost: 700,
+    buildTime: 34,
+    pop: 3,
+    power: -3,
     hp: 900,
     armor: "ship",
     speed: 65,
     turnRate: 2.6,
     vision: 10,
+    sonar: 9,
     radius: 13,
-    // measured at the ship's display scale (core/metrics.ts): a beam of 42
+    // measured at the ship's display scale (core/metrics.ts): a beam of 46.2
     // world px, over a tile, so it needs two tiles of water abeam
-    body: { r: 21, len: 67.5 },
+    body: { r: 23.1, len: 74.25 },
     weapons: [
       w({
         // The deck gun works the surface; the forward VLS answers the sky.
@@ -6354,7 +6450,7 @@ const DEFS = {
         speed: 420,
         targets: ["ground", "ship"],
         turret: true,
-        muzzleOffset: 17.71875,
+        muzzleOffset: 15.796,
         splash: 10,
         sound: "cannon"
       }),
@@ -6373,17 +6469,37 @@ const DEFS = {
         range: 8.5,
         projectile: "missile",
         speed: 430,
+        // Hatch grid centre: 8.2 art px forward at the hull's 2.8875 scale.
         targets: ["air"],
         homing: true,
         vertical: true,
-        muzzleOffset: 15.75,
+        muzzleOffset: 23.6775,
         sound: "missile"
+      }),
+      w({
+        // The escort's torpedoes screen submerged threats; surface fighting
+        // stays with its light deck gun and the fleet's offensive ships.
+        id: "torpedo",
+        cls: "torpedo",
+        dmg: 160,
+        reload: 3.2,
+        range: 7,
+        projectile: "torpedo",
+        speed: 150,
+        targets: ["sub"],
+        mult: { sub: 1.9 },
+        homing: true,
+        sound: "torpedo"
       })
     ],
     trail: "wake",
     sprite: "u.frigate",
-    turretSprite: "tur.frigate"
+    turretSprite: "tur.frigate",
+    // Measured forward ring: 422 / 2016 down the 42 px hull sheet.
+    turretMounts: [{ x: 0, y: -12.2 }]
   },
+  // Retained for existing saves and authored scenarios; absent from yard menus.
+  // Ironworks supplies the buildable copy under its own ironworks-orca ID.
   destroyer: {
     id: "destroyer",
     kind: "unit",
@@ -6442,7 +6558,8 @@ const DEFS = {
     trail: "wake",
     sprite: "u.destroyer",
     turretSprite: "tur.destroyer",
-    turretMounts: [{ x: 0, y: -5 }]
+    // Measured gun ring: 620 / 1920 down the 48 px hull sheet.
+    turretMounts: [{ x: 0, y: -8.5 }]
   },
   /**
    * The Barracuda hunts ships and nothing else. It carried a warhead of its
@@ -6539,12 +6656,12 @@ const DEFS = {
       speed: 300,
       targets: ["ground", "ship"],
       mult: { heavy: 1, ship: 1.2 },
-      // measured from the ring the gun turns on, not the hull's centre, at the
-      // display scale the gun is drawn at
+      // 1024 × 1536 turret master: pivot y=921.6, tips y=86, barrel centres
+      // x=425/598, mapped to the original 10 × 16 art frame at scale 3.8.
       turret: true,
-      muzzleOffset: 33.6,
+      muzzleOffset: 33.076,
       bores: 2,
-      boreSpacing: 6.6,
+      boreSpacing: 6.42,
       splash: 54,
       arc: true,
       burst: 3,
@@ -6566,14 +6683,14 @@ const DEFS = {
     trail: "wake",
     sprite: "u.btlship",
     turretSprite: "tur.btlship",
-    // measured off the barbettes painted on `u.btlship`, which the code-drawn
-    // hull in gfx/art/ships.ts puts at the same three rows
+    // Rings measured at y=537/788/1739 on the 800 × 2400 master, mapped to
+    // its 62 art-px height. The code-drawn hull uses the same offsets.
     turretMounts: [
-      { x: 0, y: -17, arc: BROADSIDE },
+      { x: 0, y: -17.1275, arc: BROADSIDE },
       // A, over the bow
-      { x: 0, y: -11, arc: BROADSIDE },
+      { x: 0, y: -10.6433, arc: BROADSIDE },
       // B, superfiring behind A
-      { x: 0, y: 14, rest: Math.PI, arc: BROADSIDE }
+      { x: 0, y: 13.9242, rest: Math.PI, arc: BROADSIDE }
       // X, abaft the bridge
     ]
   },
@@ -6639,7 +6756,7 @@ const DEFS = {
   seatrans: {
     id: "seatrans",
     kind: "unit",
-    aliases: ["landingcraft", "lst"],
+    aliases: ["landingcraft", "lst", "lcac"],
     domain: "ship",
     tier: 1,
     cost: 220,
@@ -6651,12 +6768,13 @@ const DEFS = {
     speed: 70,
     turnRate: 2.8,
     vision: 8,
-    radius: 13,
-    transportCap: 4,
+    radius: 20,
+    transportCap: 8,
     // a ramp against a beach has more give than a hoist: a tenth more reach
     // to board it, collect with it, and come to the shore it unloads on
     cargoReach: 1.1,
-    body: { r: 10, len: 29 },
+    // The cushion skirt overhangs the firm hull; retain one-tile beach access.
+    body: { r: 14, len: 30 },
     weapons: [],
     trail: "wake",
     sprite: "u.seatrans"
@@ -7046,7 +7164,7 @@ const DEFS = {
   c47: {
     id: "c47",
     kind: "unit",
-    aliases: ["skytrain", "dakota"],
+    aliases: ["condor", "cargoplane", "skytrain", "dakota"],
     domain: "air",
     tier: 2,
     cost: 650,
@@ -7060,7 +7178,8 @@ const DEFS = {
     vision: 9,
     radius: 15,
     altitude: 16,
-    transportCap: 5,
+    transportCap: 4,
+    transportMaxWeight: 2,
     landsForCargo: true,
     weapons: [],
     sprite: "u.c47"
@@ -7900,7 +8019,7 @@ const DEFS = {
     fh: 3,
     weapons: [],
     power: -12,
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "sub", "gator"],
     upgradesTo: "navyard3",
     upgradeCost: 950,
     upgradeTime: 48,
@@ -7927,7 +8046,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator", "btlship", "kraken", "moray", "carrier"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "sub", "gator", "btlship", "kraken", "moray", "carrier"],
     sprite: "u.navyard3",
     sound: "unit-ship"
   },
@@ -8050,6 +8169,7 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { heavy: 1.1, structure: 0.6, ship: 1 },
       turret: true,
+      recoil: 1.8,
       muzzleOffset: 29,
       splash: 12,
       sound: "cannon"
@@ -8089,10 +8209,13 @@ const DEFS = {
       speed: 420,
       targets: ["ground", "ship"],
       mult: { heavy: 1.2, structure: 0.6, ship: 1.1 },
+      // Hidden swivel at (464,1100), tips at y20 with 228px separation;
+      // the 928×1712 master is drawn in a 28×52 world-pixel frame.
       turret: true,
-      muzzleOffset: 40,
+      recoil: 2.2,
+      muzzleOffset: 32.8037,
       bores: 2,
-      boreSpacing: 7,
+      boreSpacing: 6.87931,
       splash: 14,
       burst: 2,
       burstDelay: 0.2,
@@ -8279,6 +8402,7 @@ const DEFS = {
     pop: 0,
     hp: 500,
     armor: "structure",
+    impactMaterial: "earth",
     speed: 0,
     turnRate: 0,
     vision: 3,
@@ -8613,6 +8737,62 @@ function rleDecodeInto(s, out) {
   if (oi < len) out.fill(0, oi);
   return out;
 }
+const TERRAIN_BASES = Object.freeze({
+  grass: Terrain.Grass,
+  sand: Terrain.Sand,
+  road: Terrain.Road,
+  mud: Terrain.Mud,
+  marsh: Terrain.Marsh,
+  snow: Terrain.Snow,
+  rubble: Terrain.Rubble,
+  ice: Terrain.Ice,
+  city: Terrain.City
+});
+const CITY_FORMS = ["slab", "court", "terrace", "stepped"];
+const VARIANT_ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
+function readTerrainAssignments(value, path, issues) {
+  if (value === void 0) return void 0;
+  const start = issues.length;
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    issues.push({ path, message: "must be an object of terrain base → variant id" });
+    return void 0;
+  }
+  const entries = Object.entries(value);
+  if (entries.length > Object.keys(TERRAIN_BASES).length) {
+    issues.push({ path, message: `at most ${Object.keys(TERRAIN_BASES).length} terrain bindings` });
+    return void 0;
+  }
+  const out = {};
+  for (const [base, id] of entries) {
+    if (!Object.hasOwn(TERRAIN_BASES, base)) issues.push({ path: `${path}.${base}`, message: "unsupported terrain base" });
+    else if (typeof id !== "string" || !VARIANT_ID_RE.test(id) || !id.includes("-"))
+      issues.push({ path: `${path}.${base}`, message: "must be a namespaced terrain variant id, 2–40 characters" });
+    else out[base] = id;
+  }
+  return issues.length === start && entries.length > 0 ? out : void 0;
+}
+let active$1 = Object.freeze([]);
+let byId = /* @__PURE__ */ new Map();
+function replaceTerrainVariants(variants) {
+  active$1 = Object.freeze(variants.map((variant) => Object.freeze({
+    ...variant,
+    name: Object.freeze([...variant.name]),
+    ...variant.city ? { city: Object.freeze({
+      ...variant.city,
+      ...variant.city.architecture ? { architecture: Object.freeze({
+        ...variant.city.architecture,
+        ...variant.city.architecture.forms ? { forms: Object.freeze([...variant.city.architecture.forms]) } : {}
+      }) } : {}
+    }) } : {}
+  })));
+  byId = new Map(active$1.map((variant) => [variant.id, variant]));
+}
+function activeTerrainVariants() {
+  return active$1;
+}
+function terrainVariant(id) {
+  return byId.get(id);
+}
 const CUSTOM_MAP_FORMAT = "steel-tide-map";
 const CUSTOM_MAP_VERSION = 1;
 const CUSTOM_MAP_EXT = ".steel-tide-map";
@@ -8743,6 +8923,9 @@ function parseCustomMap(json, opts = {}) {
   for (let i = 0; i < terrain.length; i++) {
     if (terrain[i] >= TERRAIN_KINDS) return { ok: false, error: "the map uses a terrain this build does not know" };
   }
+  const variantIssues = [];
+  const terrainVariants = readTerrainAssignments(r.terrainVariants, "terrainVariants", variantIssues);
+  if (variantIssues.length) return { ok: false, error: `${variantIssues[0].path}: ${variantIssues[0].message}` };
   let overlays;
   if (r.overlays !== void 0) {
     if (typeof r.overlays !== "string") return { ok: false, error: "bad overlay data" };
@@ -8798,6 +8981,7 @@ function parseCustomMap(json, opts = {}) {
       w: w2,
       h,
       terrain: rleEncode(terrain),
+      ...terrainVariants ? { terrainVariants } : {},
       ...overlays?.some(Boolean) ? { overlays: rleEncode(overlays) } : {},
       deposits,
       spawns,
@@ -9595,9 +9779,12 @@ const MOD_FILE_EXT = ".steel-tide-mod";
 const MOD_MANIFEST_NAME = "mod.json";
 const MAX_MOD_DEFS = 200;
 const MAX_MOD_SPRITES = 192;
+const MAX_MOD_TERRAINS = 32;
 const MAX_DEF_DECALS = 12;
 const MAX_DEF_MOUNTS = 8;
 const MAX_MOD_SOUNDS = 60;
+const MAX_MOD_MUSIC_TRACKS = 32;
+const MAX_MOD_MUSIC_QUEUE = 64;
 const MAX_MOD_SCREENSHOTS = 8;
 const MAX_MOD_MAPS = 8;
 const MAX_MOD_MAP_BYTES = 512 * 1024;
@@ -9609,12 +9796,12 @@ const SOUND_KEY_RE = /^[a-z0-9][a-z0-9-]{1,59}$/;
 const MAX_MANIFEST_BYTES = 1024 * 1024;
 const MAX_MOD_FILES_BYTES = 24 * 1024 * 1024;
 const ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
-const ATLAS_KEY_RE = /^(u|tur|dec|prj|fx)\.[a-z0-9][a-z0-9_-]{1,39}$/;
+const ATLAS_KEY_RE = /^(u|tur|dec|prj|fx|ter)\.[a-z0-9][a-z0-9_-]{1,39}$/;
 const FILE_RE = /^(?!\/)(?!.*\.\.)[A-Za-z0-9_./-]{1,120}$/;
 const IMAGE_FILE_RE = /\.(png|jpe?g|webp)$/i;
 const MAP_FILE_RE = /\.(steel-tide-map|json)$/i;
 function definitionFiles(mod) {
-  return [...(mod.sprites ?? []).map((s) => s.file), ...(mod.sounds ?? []).map((s) => s.file), ...mod.maps ?? []];
+  return [...(mod.sprites ?? []).map((s) => s.file), ...(mod.sounds ?? []).map((s) => s.file), ...(mod.music?.tracks ?? []).map((t) => t.file), ...mod.maps ?? []];
 }
 const ARMOR_CLASSES = ["light", "medium", "heavy", "ship", "sub", "air", "structure"];
 const TARGET_DOMAINS = ["ground", "ship", "sub", "air"];
@@ -9637,13 +9824,16 @@ const MANIFEST_SPECS = [
   { name: "homepage", type: "string", max: 200, doc: ["a link: a repository, a thread", "主页链接"] },
   { name: "license", type: "string", max: 80, def: "CC-BY-4.0", doc: ["the mod's licence (SPDX id)", "模组许可证（SPDX 标识）"] },
   { name: "minGame", type: "string", max: 32, doc: ["the oldest game version it is written for", "所需的最低游戏版本"] },
-  { name: "defs", type: "defs", required: true, doc: ["the units, buildings and upgrade levels", "单位、建筑与升级等级"] },
+  { name: "defs", type: "defs", required: true, doc: ["the units, buildings and upgrade levels; may be empty when terrains, music queues or menu backgrounds are supplied", "单位、建筑与升级等级；提供 terrains、音乐队列或菜单背景时可为空"] },
   { name: "factions", type: "factions", doc: ["selectable factions, each with its own headquarters, starting builder and roster (format 2)", "可选阵营，各有自己的总部、初始建造单位和单位表（格式 2）"] },
+  { name: "terrains", type: "terrains", doc: [`up to ${MAX_MOD_TERRAINS} map-selected terrain variants; preserve their base terrain’s gameplay`, `最多 ${MAX_MOD_TERRAINS} 种由地图选择的地形外观变体；保留基础地形的游戏规则`] },
   { name: "sprites", type: "sprites", doc: ["the sheets the defs draw with (see below)", "各定义使用的精灵图（见下）"] },
+  { name: "music", type: "music", doc: ["custom BGM tracks and ordered menu, setup and battle queues (see below)", "自定义背景音乐及菜单、设置、战斗的顺序播放队列（见下）"] },
+  { name: "menuBackground", type: "menuBackground", doc: ["ordered home-menu cut queue, mixing original scenes and this pack’s maps (see below)", "主页背景镜头的顺序队列，可混用原版场景与本模组地图（见下）"] },
   { name: "sounds", type: "sounds", doc: ["the recordings the weapons fire with (see below)", "武器开火时播放的录音（见下）"] },
   { name: "screenshots", type: "images", doc: [`pictures of the mod in play, relative to mod.json (\`screenshots/1.png\`): 4:3, at least ${MIN_SCREENSHOT_WIDTH} px wide, under ${MAX_SCREENSHOT_BYTES / 1048576} MB each, up to ${MAX_MOD_SCREENSHOTS}. The registry asks for at least one and shows them on the mod's page`, `模组游玩截图，路径相对 mod.json（\`screenshots/1.png\`）：4:3，宽至少 ${MIN_SCREENSHOT_WIDTH} 像素，每张不超过 ${MAX_SCREENSHOT_BYTES / 1048576} MB，最多 ${MAX_MOD_SCREENSHOTS} 张。仓库要求至少一张，并展示在模组页面上`] },
   { name: "maps", type: "maps", doc: [`maps the mod carries, relative to mod.json (\`maps/city.steel-tide-map\`): files exported from the Scenario Editor, up to ${MAX_MOD_MAPS}, each under ${MAX_MOD_MAP_BYTES / 1024} KB. A map may stand the mod's own units; the setup screens offer it beside the player's own map while the mod is on`, `模组自带的地图，路径相对 mod.json（\`maps/city.steel-tide-map\`）：场景编辑器导出的文件，最多 ${MAX_MOD_MAPS} 张，每张不超过 ${MAX_MOD_MAP_BYTES / 1024} KB。地图上可以预置本模组的单位；模组开启时，设置界面会把它列在自定义地图旁`] },
-  { name: "files", type: "files", doc: ["single-file form only: the sheets, sounds and maps, embedded as data URLs by path", "仅单文件形式：按路径内嵌的图片、音频与地图（data URL）"] }
+  { name: "files", type: "files", doc: ["single-file form only: the sheets, sounds, music and maps, embedded as data URLs by path", "仅单文件形式：按路径内嵌的图片、音频与地图（data URL）"] }
 ];
 const DEF_SPECS = [
   { name: "isHQ", type: "bool", only: "building", doc: ["a headquarters: holds territory and production slots, follows the ordinary HQ loss and sale rules; format 2", "总部：提供建造范围和生产槽位，遵循普通总部的失守与出售规则；格式 2"] },
@@ -9659,6 +9849,8 @@ const DEF_SPECS = [
   { name: "pop", type: "int", min: 0, max: 50, def: "1 for a unit, 0 for a building", doc: ["population it counts for", "占用人口"] },
   { name: "hp", type: "number", required: true, min: 1, max: 1e6, doc: ["hit points", "生命值"] },
   { name: "armor", type: "enum", values: ARMOR_CLASSES, def: "by domain", doc: ["the armour class weapons are multiplied against", "武器倍率所针对的装甲类型"] },
+  { name: "impactMaterial", type: "enum", values: ["armor", "earth", "concrete"], def: "concrete for structure armor, armor otherwise", doc: ["projectile-impact sound material; does not change damage. Both ordinary and heavy impacts use the matching recorded family", "弹体命中音效材质，不改变伤害；普通与重型爆炸使用对应的录音组"] },
+  { name: "directionalArmor", type: "directionalArmor", only: "unit", doc: ["ground hull direct-hit multipliers `{front, side, rear}`, each 0–10; 90° front/rear arcs and 90° on each side. Arc fire, collateral blasts, mines and fire ignore facing. Enables slow reversing for short moves behind the hull", "地面车体直击倍率 `{front, side, rear}`，各为 0–10；正面、背面各 90°，两侧各 90°。抛射、溅射、地雷与火焰不计朝向。向车后短距离移动时会慢速倒车"] },
   { name: "speed", type: "number", only: "unit", min: 0, max: 1e3, def: "60", doc: ["world px/s (a tile is 32)", "世界像素/秒（一格 32）"] },
   { name: "turnRate", type: "number", only: "unit", min: 0, max: 50, def: "3.5", doc: ["rad/s", "弧度/秒"] },
   { name: "vision", type: "number", min: 0, max: 64, def: "8", doc: ["sight, in tiles", "视野（格）"] },
@@ -9697,6 +9889,7 @@ const DEF_SPECS = [
   { name: "interceptReload", type: "number", min: 0.05, max: 600, doc: ["point defence: seconds per round replaced", "拦截：每发补充秒数"] },
   { name: "interceptMuzzleOffset", type: "number", min: 0, max: 200, doc: ["point defence: launcher length, world px", "拦截：发射器长度（世界像素）"] },
   { name: "transportCap", type: "int", only: "unit", min: 1, max: 50, doc: ["a transport: hold, in cargo weight", "运输载具：载重"] },
+  { name: "transportMaxWeight", type: "number", only: "unit", min: 0, max: 50, def: "transportCap", doc: ["a transport: maximum cargo weight of one passenger", "运输载具：单个乘员的最大载重"] },
   { name: "cargoReach", type: "number", only: "unit", min: 0.5, max: 4, def: "1", doc: ["a transport: how far its load and unload distances stretch, as a multiple of the default (the landing craft's 1.1, the Moray's 1.5); on a ship it widens the ground its ramp reaches too", "运输载具：装卸距离相对默认值的倍率（登陆艇 1.1，海鳗 1.5）；舰船的卸载落点范围也随之扩大"] },
   { name: "landsForCargo", type: "bool", only: "unit", doc: ["a cargo plane that touches down to load", "装卸时降落的运输机"] },
   { name: "cargoWeight", type: "number", only: "unit", min: 0, max: 50, def: "pop", doc: ["how much of a hold it takes", "占用的载重"] },
@@ -9749,10 +9942,12 @@ const WEAPON_SPECS = [
   { name: "interceptable", type: "bool", doc: ["point defence may shoot it down", "可被拦截"] },
   { name: "arc", type: "bool", doc: ["a ballistic arc (artillery)", "抛物线弹道（火炮）"] },
   { name: "turret", type: "bool", def: "true when the def has a turretSprite", doc: ["fired from the rotating part", "由旋转部件发射"] },
+  { name: "recoil", type: "number", min: 0, max: 10, doc: ["cosmetic barrel recoil stroke, art px; requires barrel regions on the turret art, changes no weapon statistic", "炮管后坐的视觉行程（美术像素）；炮塔图像须带炮管区域，不改变武器属性"] },
   { name: "vertical", type: "bool", doc: ["launched straight up out of the hull, like a submarine's missile tubes: it fires at any bearing and the hull never turns for it; `muzzleOffset` then runs along the keel to the tubes", "从艇体垂直发射，如潜艇的导弹发射筒：任何方向都能开火，艇体无需转向；此时 `muzzleOffset` 沿艇身纵轴量到发射筒"] },
   { name: "muzzleOffset", type: "number", min: 0, max: 200, doc: ["pivot to muzzle, world px; a unit's art is drawn 1.5625×, so measure on the sheet and multiply", "枢轴到炮口距离（世界像素）；单位美术按 1.5625 倍绘制，量图后需乘以该倍数"] },
   { name: "bores", type: "int", min: 1, max: 8, def: "1", doc: ["barrels, fired one after another", "炮管数，逐根轮流开火"] },
   { name: "boreSpacing", type: "number", min: 0, max: 60, doc: ["gap between adjacent barrels, world px", "相邻炮管间距（世界像素）"] },
+  { name: "muzzlePoints", type: "muzzles", min: 1, max: 8, doc: ["explicit muzzle positions, fired in list order: 1–8 `{ forward, lateral }` points in world px from the firing pivot (forward along the bore, lateral to its right; either may be negative); replaces `muzzleOffset`, `bores` and `boreSpacing`", "按列表顺序开火的炮口位置：1–8 个 `{ forward, lateral }` 点，单位为距开火枢轴的世界像素（forward 沿炮管向前，lateral 向右，均可为负）；替代 `muzzleOffset`、`bores` 和 `boreSpacing`"] },
   { name: "spread", type: "number", min: 0, max: 200, doc: ["inaccuracy at full range, world px", "最大射程处的散布（世界像素）"] },
   { name: "friendlyFire", type: "bool", doc: ["the blast hurts your own side too", "溅射也会伤及己方"] },
   { name: "fan", type: "number", min: 0, max: 1.5, doc: ["a `flame` jet: the half-angle it is sprayed across, radians", "`flame` 喷流：喷射张角的一半（弧度）"] },
@@ -9784,7 +9979,7 @@ const SOUND_SPECS = [
   { name: "file", type: "string", max: 120, required: true, doc: ["the recording, relative to mod.json. An MP3 plays everywhere; WAV works, OGG not on Safari. Dry, close, under a second", "录音路径，相对 mod.json。MP3 处处可播；WAV 可用，OGG 在 Safari 上不行。干声、近距、一秒以内"] }
 ];
 const SPRITE_SPECS = [
-  { name: "key", type: "string", max: 48, required: true, doc: ["`u.<id>` for a body, `tur.<id>` for a rotating part, `dec.<name>` for a decal, `prj.<name>` for a round and `fx.<name>` for an effect a weapon's look or a rule plays; never a vanilla key", "主体用 `u.<id>`，旋转部件用 `tur.<id>`，贴花用 `dec.<名字>`，弹药用 `prj.<名字>`，武器外观或规则播放的特效用 `fx.<名字>`；不可与原版键重名"] },
+  { name: "key", type: "string", max: 48, required: true, doc: ["`u.<id>` for a body, `tur.<id>` for a rotating part, `dec.<name>` for a decal, `prj.<name>` for a round and `fx.<name>` for an effect a weapon's look or a rule plays; `ter.<mod id>-<name>` for terrain materials; never a vanilla key", "主体用 `u.<id>`，旋转部件用 `tur.<id>`，贴花用 `dec.<名字>`，弹药用 `prj.<名字>`，武器外观或规则播放的特效用 `fx.<名字>`；地形材质用 `ter.<模组 id>-<名字>`；不可与原版键重名"] },
   { name: "file", type: "string", max: 120, required: true, doc: ["the image, relative to mod.json (PNG, WebP or JPEG)", "图片路径，相对 mod.json（PNG、WebP 或 JPEG）"] },
   { name: "frames", type: "int", min: 1, max: 64, def: "1", doc: ["animation frames, left to right in one strip", "动画帧数，横向排列"] },
   { name: "fw", type: "number", min: 4, max: 512, def: "the footprint (a building) or the image", doc: ["in-game frame width, whole world px", "游戏内帧宽（世界像素，整数）"] },
@@ -9794,6 +9989,7 @@ const SPRITE_SPECS = [
   { name: "pivotY", type: "number", min: 0, max: 1, def: "0.5", doc: ["rotation pivot, as a fraction of the frame", "旋转枢轴（帧高比例）"] },
   { name: "anchorY", type: "number", min: 0, max: 512, doc: ["px from the top to the footprint centre (tall buildings)", "顶部到占地中心的像素（高建筑）"] },
   { name: "mount", type: "pair", doc: ["a body: where its turret sits (or, with a repair aura, where the beam leaves), as `[fx, fy]`", "主体：炮塔安装位置（带维修光环时则是光束的起点），写作 `[fx, fy]`"] },
+  { name: "barrels", type: "barrels", min: 1, max: 8, doc: ["exposed barrel rectangles, each `[left, top, right, bottom]` in 0–1 fractions of the up-facing source frame, in muzzle firing order; leave mantlets fixed. Pair with weapon `recoil` (art px)", "外露炮管矩形，每项为朝上原始帧中 0–1 比例的 `[左, 上, 右, 下]`，按炮口开火顺序排列；不含固定炮盾。搭配武器的 `recoil`（美术像素）"] },
   { name: "fps", type: "number", min: 0, max: 60, doc: ["animation speed", "动画速度"] },
   { name: "teams", type: "bool", def: "true", doc: ["recolour magenta per faction; `false` draws the sheet as painted for every faction, and for the wreck", "按阵营重着色品红部分；`false` 则各阵营（以及残骸）都按原图绘制"] },
   { name: "ss", type: "int", min: 1, max: 4, doc: ["supersample factor; omit to let the game choose", "超采样倍率；留空由游戏决定"] },
@@ -9806,6 +10002,39 @@ const SPRITE_SPECS = [
   { name: "artifactCleanup", type: "bool", doc: ["sweep specks left by background removal", "清理背景去除后的杂点"] },
   { name: "anims", type: "anims", doc: ["a unit body's frames by what it is doing, `{ moving, idle, firing }`, each `[first, last]` or `[first, last, fps]`: a tank that is a tree when it stands, a walker whose legs move only when it does (see Animation states)", "单位主体按状态播放的帧 `{ moving, idle, firing }`，每项为 `[起, 止]` 或 `[起, 止, fps]`：静止时变成树的坦克、只在移动时迈腿的步行机（见“动画状态”）"] }
 ];
+const MENU_BACKGROUND_SPECS = [
+  { name: "cuts", type: "menuCuts", doc: [`up to ${MAX_MENU_CUTS} custom live scenes`, `最多 ${MAX_MENU_CUTS} 个自定义实时场景`] },
+  { name: "queue", type: "menuQueue", required: true, doc: [`1–${MAX_MENU_QUEUE} cut IDs in repeating order; original IDs: ${MENU_CUT_IDS.join(", ")}`, `1–${MAX_MENU_QUEUE} 个循环播放的镜头 id；原版 id：${MENU_CUT_IDS.join("、")}`] }
+];
+const MENU_CAMERA_SPECS = [
+  { name: "tx", type: "number", required: true, min: 0, max: MAX_MENU_MAP_SIDE, doc: ["horizontal camera centre in tiles, inside the map", "镜头中心的横向格坐标，须位于地图内"] },
+  { name: "ty", type: "number", required: true, min: 0, max: MAX_MENU_MAP_SIDE, doc: ["vertical camera centre in tiles, inside the map", "镜头中心的纵向格坐标，须位于地图内"] },
+  { name: "zoom", type: "number", required: true, min: 0.25, max: 4, doc: ["camera zoom, capped by the menu on small screens", "镜头缩放，小屏幕上由菜单限制最大值"] }
+];
+const MENU_ORDER_SPECS = [
+  { name: "owner", type: "int", required: true, min: 0, max: MAX_PLAYERS - 1, doc: ["map spawn index; one opening attack-move per owner", "地图出生点序号；每方可指定一次初始攻击移动"] },
+  ...MENU_CAMERA_SPECS.filter((s) => s.name !== "zoom").map((s) => ({ ...s, doc: [s.name === "tx" ? "target tile x" : "target tile y", s.name === "tx" ? "目标横向格坐标" : "目标纵向格坐标"] }))
+];
+const MENU_CUT_SPECS = [
+  { name: "id", type: "id", required: true, doc: ["unique cut ID beginning with the mod ID and a dash", "唯一镜头 id，以模组 id 和连字符开头"] },
+  { name: "map", type: "string", required: true, max: 120, doc: ["a path in this pack’s maps; at most 128 × 128 tiles and 200 placed units/buildings", "本模组 maps 中的路径；最多 128 × 128 格及 200 个预置单位/建筑"] },
+  { name: "camera", type: "menuCamera", required: true, doc: ["opening framing: { tx, ty, zoom }", "初始构图：{ tx, ty, zoom }"] },
+  { name: "cameraEnd", type: "menuCamera", doc: ["end framing for a 13-second drift; omitted holds camera", "13 秒镜头移动的终点构图；省略则固定镜头"] },
+  { name: "weather", type: "enum", values: ["clear", "rain", "snow"], def: "clear", doc: ["weather held throughout the cut", "镜头期间保持的天气"] },
+  { name: "minutes", type: "number", min: 0, max: 24, def: "6", doc: ["held day-cycle time: 0 dawn, 6 noon, 12 dusk, 18 midnight", "固定昼夜时刻：0 黎明、6 正午、12 黄昏、18 午夜"] },
+  { name: "seed", type: "int", min: 0, max: 2147483647, def: "1", doc: ["simulation seed", "模拟随机种子"] },
+  { name: "orders", type: "menuOrders", doc: ["opening attack-move targets for the map’s mobile units, by owner", "按所属方为地图上的移动单位指定初始攻击移动目标"] }
+];
+const MUSIC_SPECS = [
+  { name: "tracks", type: "musicTracks", doc: [`up to ${MAX_MOD_MUSIC_TRACKS} custom recordings, each with an id and file`, `最多 ${MAX_MOD_MUSIC_TRACKS} 首自定义录音，每首包含 id 和 file`] },
+  { name: "menu", type: "musicQueue", doc: ["ordered repeating queue for menus; also used for setup unless setup is supplied. Omitted keeps the previous queue; [] is silence", "菜单循环顺序队列；未指定 setup 时也用于对局设置。省略保留之前的队列；[] 表示静音"] },
+  { name: "setup", type: "musicQueue", doc: ["optional separate queue for match setup", "可选的对局设置独立队列"] },
+  { name: "battle", type: "musicQueue", doc: [`ordered repeating queue during battle. Omitted keeps the previous queue; [] is silence. Built-in IDs: ${Object.values(MUSIC_FILES).flat().join(", ")}`, `战斗中的循环顺序队列。省略保留之前的队列；[] 表示静音。原版曲目 id：${Object.values(MUSIC_FILES).flat().join("、")}`] }
+];
+const MUSIC_TRACK_SPECS = [
+  { name: "id", type: "id", required: true, doc: ["unique track id: <mod id>-<name>; cannot replace a built-in ID", "唯一曲目 id：<模组 id>-<名字>；不能覆盖原版 id"] },
+  { name: "file", type: "string", required: true, max: 120, doc: ["MP3, Ogg or WAV path relative to mod.json", "相对 mod.json 的 MP3、Ogg 或 WAV 路径"] }
+];
 const FACTION_SPECS = [
   { name: "id", type: "id", required: true, doc: ["unique faction id, prefixed with the mod id and a dash", "唯一阵营 id，以模组 id 和连字符开头"] },
   { name: "name", type: "text", required: true, doc: ["the faction name in game setup", "对局设置中的阵营名称"] },
@@ -9813,9 +10042,47 @@ const FACTION_SPECS = [
   { name: "builder", type: "id", required: true, doc: ["this mod’s ground or amphibious builder; the HQ must produce it and it must rebuild the HQ", "本模组的陆地或两栖建造单位；总部必须能生产它，它必须能重建总部"] },
   { name: "roster", type: "ids", max: MAX_MOD_DEFS, doc: ["permitted definitions, including prerequisites and upgrades; defaults to all definitions in this mod", "允许的定义，包括前置建筑与升级；默认为本模组的全部定义"] }
 ];
+const TERRAIN_SPECS = [
+  { name: "id", type: "id", required: true, doc: ["unique terrain variant id, prefixed with the mod id and a dash", "唯一地形变体 id，以模组 id 和连字符开头"] },
+  { name: "name", type: "text", required: true, doc: ["the terrain style name in the editor", "编辑器中的地形外观名称"] },
+  { name: "base", type: "enum", values: Object.keys(TERRAIN_BASES), required: true, doc: ["the existing terrain whose movement, construction and combat behavior stays unchanged", "基础地形；移动、建造和战斗规则保持不变"] },
+  { name: "texture", type: "string", max: 48, doc: ["flat terrain material: a ter.<mod id>-<name> sheet in this pack; city uses its city materials instead", "平面地形材质：本模组中的 ter.<模组 id>-<名字> 图像；城市使用 city 材质"] },
+  { name: "city", type: "cityTerrain", doc: ["materials, lights and optional visual architecture; only with base city", "材质、灯光与可选建筑外形；仅适用于 base city"] }
+];
+const CITY_TERRAIN_SPECS = [
+  { name: "roof", type: "string", max: 7, doc: ["roof color, #RRGGBB", "屋顶颜色，#RRGGBB"] },
+  { name: "wall", type: "string", max: 7, doc: ["wall color, #RRGGBB", "墙面颜色，#RRGGBB"] },
+  { name: "window", type: "string", max: 7, doc: ["lit window color, #RRGGBB", "亮窗颜色，#RRGGBB"] },
+  { name: "lamp", type: "string", max: 7, doc: ["streetlamp color, #RRGGBB", "路灯颜色，#RRGGBB"] },
+  { name: "roofTexture", type: "string", max: 48, doc: ["roof material, a ter.<mod id>-<name> sheet in this pack", "屋顶材质，本模组中的 ter.<模组 id>-<名字> 图像"] },
+  { name: "wallTexture", type: "string", max: 48, doc: ["wall material, a ter.<mod id>-<name> sheet in this pack", "墙面材质，本模组中的 ter.<模组 id>-<名字> 图像"] },
+  { name: "groundTexture", type: "string", max: 48, doc: ["courtyard material, a ter.<mod id>-<name> sheet in this pack", "庭院地面材质，本模组中的 ter.<模组 id>-<名字> 图像"] },
+  { name: "signTexture", type: "string", max: 48, doc: ["4×4 atlas of 16 square signs in row-major order, a ter.<mod id>-<name> sheet in this pack; custom architecture selects a cell per building", "4×4 排列的 16 个正方形招牌图集，按行排列，使用本模组的 ter.<模组 id>-<名字> 图像；自定义建筑按楼栋选取单格"] },
+  { name: "accent", type: "string", max: 7, doc: ["primary architectural lighting color, #RRGGBB", "建筑主装饰灯颜色，#RRGGBB"] },
+  { name: "accent2", type: "string", max: 7, doc: ["secondary architectural lighting color, #RRGGBB", "建筑副装饰灯颜色，#RRGGBB"] },
+  { name: "architecture", type: "cityArchitecture", doc: ["optional building kit; omitted keeps ordinary city geometry", "可选建筑外形组合；省略时保留普通城市几何形状"] }
+];
+const CITY_ARCHITECTURE_SPECS = [
+  { name: "forms", type: "enums", values: CITY_FORMS, min: 1, max: CITY_FORMS.length, def: "slab, court, terrace, stepped", doc: ["distinct building forms to mix: slab blocks, courtyard blocks, terraces and stepped towers", "混合使用的不同建筑形态：板楼、庭院街区、露台楼与阶梯塔楼"] },
+  { name: "minStoreys", type: "int", min: 1, max: 4, def: "2", doc: ["minimum target storeys for the main building; smaller lots and wings may be shorter; must not exceed maxStoreys", "主楼目标楼层下限；小地块与附楼可更低；不能超过 maxStoreys"] },
+  { name: "maxStoreys", type: "int", min: 1, max: 4, def: "4", doc: ["maximum target storeys for the main building; does not change terrain height or cover", "主楼目标楼层上限；不改变地形高度或掩护"] },
+  { name: "coverage", type: "number", min: 0.35, max: 0.9, def: "0.72", doc: ["building coverage within each visual lot", "每个外观地块的建筑覆盖比例"] },
+  { name: "greenery", type: "number", min: 0, max: 1, def: "0.1", doc: ["decorative vegetation density", "装饰植被密度"] },
+  { name: "equipment", type: "number", min: 0, max: 1, def: "0.65", doc: ["rooftop machinery and service equipment density", "屋顶机械与附属设备密度"] },
+  { name: "facade", type: "enum", values: ["ribbon", "panel", "industrial"], def: "panel", doc: ["wall structure: ribbon windows, panel cladding or industrial frames", "墙面结构：带状窗、面板外墙或工业框架"] }
+];
 const FIELD_SPECS = {
+  menuBackground: MENU_BACKGROUND_SPECS,
+  menuCut: MENU_CUT_SPECS,
+  menuCamera: MENU_CAMERA_SPECS,
+  menuOrder: MENU_ORDER_SPECS,
+  music: MUSIC_SPECS,
+  musicTrack: MUSIC_TRACK_SPECS,
   manifest: MANIFEST_SPECS,
   faction: FACTION_SPECS,
+  terrain: TERRAIN_SPECS,
+  cityTerrain: CITY_TERRAIN_SPECS,
+  cityArchitecture: CITY_ARCHITECTURE_SPECS,
   def: DEF_SPECS,
   weapon: WEAPON_SPECS,
   decal: DECAL_SPECS,
@@ -9962,6 +10229,11 @@ function checkField(spec, value, path, issues) {
       return typeof value === "boolean" || bad("must be true or false");
     case "enum":
       return typeof value === "string" && spec.values.includes(value) || bad(`must be one of ${spec.values.join(", ")}`);
+    case "enums":
+      if (!Array.isArray(value) || value.length < (spec.min ?? 1) || value.length > (spec.max ?? spec.values.length))
+        return bad(`must list ${spec.min ?? 1}–${spec.max ?? spec.values.length} distinct choices`);
+      if (new Set(value).size !== value.length) return bad("must not repeat a choice");
+      return value.every((entry) => typeof entry === "string" && spec.values.includes(entry)) || bad(`every choice must be one of ${spec.values.join(", ")}`);
     case "id":
       return typeof value === "string" && ID_RE.test(value) || bad("must be an id: lower case letters, digits, - or _, 2–40 characters");
     case "ids":
@@ -9998,6 +10270,14 @@ function checkField(spec, value, path, issues) {
         if (typeof v !== "number" || !Number.isFinite(v) || v < 0 || v > 10) return bad(`${k} must be a number between 0 and 10`);
       }
       return true;
+    case "directionalArmor":
+      if (!isPlainObject$1(value)) return bad("must be { front, side, rear } damage multipliers");
+      for (const k of Object.keys(value)) if (k !== "front" && k !== "side" && k !== "rear") return bad(`"${k}" is not an armour facing`);
+      for (const k of ["front", "side", "rear"]) {
+        const n = value[k];
+        if (typeof n !== "number" || !Number.isFinite(n) || n < 0 || n > 10) return bad(`${k} must be a number between 0 and 10`);
+      }
+      return true;
     case "body": {
       if (!isPlainObject$1(value)) return bad('must be { "r": half-width, "len": length }, world px');
       for (const k of Object.keys(value)) if (k !== "r" && k !== "len") return bad(`"${k}" is not a field of a body`);
@@ -10010,12 +10290,48 @@ function checkField(spec, value, path, issues) {
       return Array.isArray(value) && value.length === 2 && value.every((n) => typeof n === "number" && n >= 0 && n <= 1) || bad("must be [x, y] fractions between 0 and 1");
     case "quad":
       return Array.isArray(value) && value.length === 4 && value.every((n) => typeof n === "number" && n >= 0 && n <= 1) || bad("must be [x0, y0, x1, y1] fractions between 0 and 1");
+    case "barrels":
+      if (!Array.isArray(value) || value.length < min || value.length > max) return bad(`must list ${min}–${max} barrel rectangles`);
+      for (let i = 0; i < value.length; i++) {
+        const r = value[i];
+        if (!Array.isArray(r) || r.length !== 4 || r.some((n) => typeof n !== "number" || !Number.isFinite(n) || n < 0 || n > 1))
+          return bad(`barrel ${i} must be [left, top, right, bottom] fractions between 0 and 1`);
+        if (r[0] >= r[2] || r[1] >= r[3]) return bad(`barrel ${i} must have positive width and height`);
+        for (let j = 0; j < i; j++) {
+          const other = value[j];
+          if (r[0] < other[2] && r[2] > other[0] && r[1] < other[3] && r[3] > other[1])
+            return bad(`barrels ${j} and ${i} must not overlap`);
+        }
+      }
+      return true;
     case "decals":
       return Array.isArray(value) && value.length <= MAX_DEF_DECALS || bad(`must be a list of up to ${MAX_DEF_DECALS} decals`);
     case "mounts":
       return Array.isArray(value) && value.length >= 1 && value.length <= MAX_DEF_MOUNTS || bad(`must be a list of one to ${MAX_DEF_MOUNTS} mounts`);
+    case "muzzles":
+      if (!Array.isArray(value) || value.length < min || value.length > max) return bad(`must list ${min}–${max} muzzle points`);
+      for (const point of value) {
+        if (!isPlainObject$1(point)) return bad("every muzzle point must be { forward, lateral }");
+        for (const key of Object.keys(point)) if (key !== "forward" && key !== "lateral") return bad(`"${key}" is not a muzzle coordinate`);
+        for (const key of ["forward", "lateral"]) {
+          const n = point[key];
+          if (typeof n !== "number" || !Number.isFinite(n) || Math.abs(n) > 200) return bad(`${key} must be a number between -200 and 200`);
+        }
+      }
+      return true;
+    case "menuQueue":
+      return Array.isArray(value) && value.length >= 1 && value.length <= MAX_MENU_QUEUE && value.every((id) => typeof id === "string" && ID_RE.test(id)) || bad(`must be a list of 1–${MAX_MENU_QUEUE} cut ids`);
+    case "menuCuts":
+      return Array.isArray(value) && value.length <= MAX_MENU_CUTS || bad(`must be a list of up to ${MAX_MENU_CUTS} cuts`);
+    case "menuOrders":
+      return Array.isArray(value) && value.length <= MAX_PLAYERS || bad(`must be a list of up to ${MAX_PLAYERS} opening orders`);
+    case "musicQueue":
+      return Array.isArray(value) && value.length <= MAX_MOD_MUSIC_QUEUE && value.every((id) => typeof id === "string" && ID_RE.test(id)) || bad(`must be a list of up to ${MAX_MOD_MUSIC_QUEUE} track ids`);
+    case "musicTracks":
+      return Array.isArray(value) && value.length <= MAX_MOD_MUSIC_TRACKS || bad(`must be a list of up to ${MAX_MOD_MUSIC_TRACKS} tracks`);
     case "weapons":
     case "factions":
+    case "terrains":
     case "defs":
     case "sprites":
     case "sounds":
@@ -10029,6 +10345,11 @@ function checkField(spec, value, path, issues) {
     case "look":
     case "anims":
     case "wing":
+    case "cityTerrain":
+    case "cityArchitecture":
+    case "menuBackground":
+    case "menuCamera":
+    case "music":
       return isPlainObject$1(value) || bad("must be an object");
     // a rule's own words never stand in a table this checks: `game/ruleSpec.ts` reads them
     default:
@@ -10059,7 +10380,7 @@ function checkObject(raw, specs, path, issues, warnings, opts = {}) {
 function parseDefinitionPack(input) {
   let raw = input;
   if (typeof input === "string") {
-    if (input.length > MAX_MANIFEST_BYTES) return { ok: false, errors: [{ path: "", message: "the manifest is too large" }], warnings: [] };
+    if (input.length > MAX_MANIFEST_BYTES + MAX_MOD_FILES_BYTES) return { ok: false, errors: [{ path: "", message: "the manifest is too large" }], warnings: [] };
     try {
       raw = JSON.parse(input);
     } catch {
@@ -10067,6 +10388,15 @@ function parseDefinitionPack(input) {
     }
   }
   if (!isPlainObject$1(raw)) return { ok: false, errors: [{ path: "", message: "not a mod manifest" }], warnings: [] };
+  const { files: embedded, ...metadata } = raw;
+  try {
+    if (JSON.stringify(metadata).length > MAX_MANIFEST_BYTES)
+      return { ok: false, errors: [{ path: "", message: "the manifest is too large" }], warnings: [] };
+  } catch {
+    return { ok: false, errors: [{ path: "", message: "manifest metadata must be JSON data" }], warnings: [] };
+  }
+  if (isPlainObject$1(embedded) && Object.values(embedded).reduce((size, data) => size + (typeof data === "string" ? data.length : 0), 0) > MAX_MOD_FILES_BYTES)
+    return { ok: false, errors: [{ path: "files", message: "the embedded files are too large" }], warnings: [] };
   if (raw.format !== MOD_FORMAT) return { ok: false, errors: [{ path: "format", message: `must be "${MOD_FORMAT}"` }], warnings: [] };
   if (raw.v !== 1 && raw.v !== MOD_FORMAT_VERSION) return { ok: false, errors: [{ path: "v", message: `unsupported format version ${String(raw.v)} (this game reads 1–${MOD_FORMAT_VERSION})` }], warnings: [] };
   const errors = [];
@@ -10074,7 +10404,8 @@ function parseDefinitionPack(input) {
   const head = checkObject(raw, MANIFEST_SPECS, "mod", errors, warnings);
   if (errors.length > 0) return { ok: false, errors, warnings };
   const defs = head.defs;
-  if (defs.length === 0) errors.push({ path: "mod.defs", message: "a mod needs at least one def" });
+  const terrains = head.terrains ?? [];
+  if (terrains.length > MAX_MOD_TERRAINS) errors.push({ path: "mod.terrains", message: `at most ${MAX_MOD_TERRAINS} terrain variants` });
   if (defs.length > MAX_MOD_DEFS) errors.push({ path: "mod.defs", message: `at most ${MAX_MOD_DEFS} defs` });
   const sprites = head.sprites ?? [];
   if (sprites.length > MAX_MOD_SPRITES) errors.push({ path: "mod.sprites", message: `at most ${MAX_MOD_SPRITES} sheets` });
@@ -10095,6 +10426,7 @@ function parseDefinitionPack(input) {
     ...files ? { files } : {}
   };
   const resolved = resolveDefinitions(mod, VANILLA);
+  if (defs.length === 0 && terrains.length === 0 && !CONTENT_MUSIC_SLOTS.some((slot) => mod.music?.[slot] !== void 0) && !mod.menuBackground?.queue?.length) errors.push({ path: "mod.defs", message: "a mod needs at least one def, terrain variant, music queue or menu background" });
   errors.push(...resolved.errors);
   warnings.push(...resolved.warnings);
   return errors.length > 0 ? { ok: false, errors, warnings } : { ok: true, pack: mod, warnings };
@@ -10120,8 +10452,24 @@ function resolveDefinitions(mod, table = VANILLA) {
     const clean = checkObject(raw, SPRITE_SPECS, path, errors, warnings);
     if (typeof clean.key !== "string" || typeof clean.file !== "string") return;
     if (!ATLAS_KEY_RE.test(clean.key)) {
-      errors.push({ path: `${path}.key`, message: "must be u.<id>, tur.<id>, dec.<name>, prj.<name> or fx.<name>" });
+      errors.push({ path: `${path}.key`, message: "must be u.<id>, tur.<id>, dec.<name>, prj.<name>, fx.<name> or ter.<mod id>-<name>" });
       return;
+    }
+    if (clean.key.startsWith("ter.")) {
+      if (!clean.key.startsWith(`ter.${mod.id}-`) || clean.key.length <= `ter.${mod.id}-`.length) {
+        errors.push({ path: `${path}.key`, message: `terrain materials must be named "ter.${mod.id}-<name>"` });
+        return;
+      }
+      if ((clean.frames ?? 1) !== 1) errors.push({ path: `${path}.frames`, message: "terrain materials have one frame" });
+      for (const field of ["rotated", "teams", "stripBg", "fitFootprint", "freezeStatic"]) {
+        if (clean[field] === true) errors.push({ path: `${path}.${field}`, message: "terrain materials preserve their square image without rotation, recoloring or cleanup" });
+        clean[field] = false;
+      }
+      if (!Number.isInteger(clean.fw) || !Number.isInteger(clean.fh) || clean.fw !== clean.fh)
+        errors.push({ path, message: "terrain materials require equal whole fw and fh between 4 and 512 (128 recommended)" });
+      for (const field of ["anchorY", "mount", "anims", "animRegion", "pivotX", "pivotY", "barrels"]) {
+        if (clean[field] !== void 0) errors.push({ path: `${path}.${field}`, message: "not supported on a flat terrain material" });
+      }
     }
     if (VANILLA_SPRITE_KEYS.has(clean.key) || tableSprites.has(clean.key) && !sheetKeys.has(clean.key) && !mod.defs.some((d) => d && (d.sprite === clean.key || d.turretSprite === clean.key || `u.${d.id}` === clean.key || `tur.${d.id}` === clean.key))) {
       errors.push({ path: `${path}.key`, message: `"${clean.key}" is art the game already has; a mod adds art, it does not replace it` });
@@ -10149,6 +10497,66 @@ function resolveDefinitions(mod, table = VANILLA) {
     cleanSprites.push({ ...clean, frames: clean.frames ?? 1 });
   });
   mod.sprites = cleanSprites;
+  if (mod.terrains !== void 0) {
+    const cleanTerrains = [];
+    const terrainIds = /* @__PURE__ */ new Set();
+    if (!Array.isArray(mod.terrains) || mod.terrains.length > MAX_MOD_TERRAINS)
+      errors.push({ path: "terrains", message: `must be a list of up to ${MAX_MOD_TERRAINS} terrain variants` });
+    else mod.terrains.forEach((raw, i) => {
+      const path = `terrains[${i}]`;
+      const before = errors.length;
+      if (!isPlainObject$1(raw)) {
+        errors.push({ path, message: "must be an object" });
+        return;
+      }
+      const clean = checkObject(raw, TERRAIN_SPECS, path, errors, warnings);
+      if (!clean.id || !clean.base || clean.name === void 0) return;
+      if (!clean.id.startsWith(`${mod.id}-`) || clean.id.length <= mod.id.length + 1 || terrainIds.has(clean.id))
+        errors.push({ path: `${path}.id`, message: "must be unique and prefixed with the mod id and a dash" });
+      terrainIds.add(clean.id);
+      const material = (key, at) => {
+        if (key !== void 0 && (!key.startsWith(`ter.${mod.id}-`) || !sheetKeys.has(key)))
+          errors.push({ path: at, message: "must name a terrain material sheet belonging to this mod" });
+      };
+      material(clean.texture, `${path}.texture`);
+      let city;
+      if (clean.city !== void 0) {
+        if (clean.base !== "city") errors.push({ path: `${path}.city`, message: "city materials require base city" });
+        if (clean.city.architecture === null) errors.push({ path: `${path}.city.architecture`, message: "must be an object" });
+        const fields = checkObject(clean.city, CITY_TERRAIN_SPECS, `${path}.city`, errors, warnings);
+        for (const color of ["roof", "wall", "window", "lamp", "accent", "accent2"]) {
+          if (fields[color] !== void 0 && !/^#[0-9a-fA-F]{6}$/.test(fields[color]))
+            errors.push({ path: `${path}.city.${color}`, message: "must be a #RRGGBB color" });
+        }
+        for (const texture of ["roofTexture", "wallTexture", "groundTexture", "signTexture"]) material(fields[texture], `${path}.city.${texture}`);
+        if (fields.architecture !== void 0) {
+          for (const spec of CITY_ARCHITECTURE_SPECS) {
+            if (fields.architecture[spec.name] === null)
+              errors.push({ path: `${path}.city.architecture.${spec.name}`, message: "must not be null; omit the field to use its default" });
+          }
+          const architecture = checkObject(fields.architecture, CITY_ARCHITECTURE_SPECS, `${path}.city.architecture`, errors, warnings);
+          if ((architecture.minStoreys ?? 2) > (architecture.maxStoreys ?? 4))
+            errors.push({ path: `${path}.city.architecture.minStoreys`, message: "must not exceed maxStoreys (defaults: minStoreys 2, maxStoreys 4)" });
+          if (architecture.forms) architecture.forms = Object.freeze([...architecture.forms]);
+          fields.architecture = Object.freeze(architecture);
+        }
+        city = Object.freeze(fields);
+      }
+      if (clean.base === "city") {
+        if (clean.texture !== void 0) errors.push({ path: `${path}.texture`, message: "city uses city.roofTexture, wallTexture and groundTexture" });
+        if (!city || Object.keys(city).length === 0) errors.push({ path: `${path}.city`, message: "a city variant needs at least one material, color or architecture" });
+      } else if (clean.texture === void 0) errors.push({ path: `${path}.texture`, message: "a flat terrain variant needs a texture" });
+      if (errors.length !== before) return;
+      cleanTerrains.push(Object.freeze({
+        id: clean.id,
+        name: Object.freeze(contentText(clean.name)),
+        base: clean.base,
+        ...clean.texture ? { texture: clean.texture } : {},
+        ...city ? { city } : {}
+      }));
+    });
+    mod.terrains = cleanTerrains;
+  }
   const soundKeys = /* @__PURE__ */ new Set();
   const cleanSounds = [];
   (mod.sounds ?? []).forEach((raw, i) => {
@@ -10176,6 +10584,70 @@ function resolveDefinitions(mod, table = VANILLA) {
     cleanSounds.push({ key: clean.key, file: clean.file });
   });
   mod.sounds = cleanSounds;
+  if (mod.music !== void 0) {
+    if (!isPlainObject$1(mod.music)) errors.push({ path: "music", message: "must be an object" });
+    else {
+      const music = checkObject(mod.music, MUSIC_SPECS, "music", errors, warnings);
+      const ids = /* @__PURE__ */ new Set();
+      const tracks = [];
+      (music.tracks ?? []).forEach((raw, i) => {
+        const path = `music.tracks[${i}]`;
+        if (!isPlainObject$1(raw)) {
+          errors.push({ path, message: "must be an object" });
+          return;
+        }
+        const track = checkObject(raw, MUSIC_TRACK_SPECS, path, errors, warnings);
+        if (typeof track.id !== "string" || typeof track.file !== "string") return;
+        if (!track.id.startsWith(`${mod.id}-`) || track.id.length <= mod.id.length + 1 || MUSIC_IDS.has(track.id)) errors.push({ path: `${path}.id`, message: `must be a new "${mod.id}-<name>" track id` });
+        if (ids.has(track.id)) errors.push({ path: `${path}.id`, message: "track id is listed twice" });
+        if (!FILE_RE.test(track.file) || !/\.(mp3|ogg|wav)$/i.test(track.file)) errors.push({ path: `${path}.file`, message: "must be a relative MP3, Ogg or WAV path inside the mod" });
+        if (mod.files && !Object.prototype.hasOwnProperty.call(mod.files, track.file)) errors.push({ path: `${path}.file`, message: `"${track.file}" is not among the embedded files` });
+        ids.add(track.id);
+        tracks.push(track);
+      });
+      for (const slot of CONTENT_MUSIC_SLOTS) music[slot]?.forEach((id, i) => {
+        if (!MUSIC_IDS.has(id) && !ids.has(id)) errors.push({ path: `music.${slot}[${i}]`, message: `"${id}" is neither a built-in track nor one of this pack's tracks` });
+      });
+      mod.music = { ...music, tracks };
+    }
+  }
+  if (mod.menuBackground !== void 0) {
+    const bg = checkObject(mod.menuBackground, MENU_BACKGROUND_SPECS, "menuBackground", errors, warnings);
+    const ids = /* @__PURE__ */ new Set();
+    const cuts = [];
+    (bg.cuts ?? []).forEach((raw, i) => {
+      const path = `menuBackground.cuts[${i}]`;
+      if (!isPlainObject$1(raw)) {
+        errors.push({ path, message: "must be an object" });
+        return;
+      }
+      const cut = checkObject(raw, MENU_CUT_SPECS, path, errors, warnings);
+      if (typeof cut.id !== "string") return;
+      if (!cut.id.startsWith(`${mod.id}-`) || cut.id.length <= mod.id.length + 1 || MENU_CUT_IDS.includes(cut.id)) errors.push({ path: `${path}.id`, message: `must be a new "${mod.id}-<name>" cut id` });
+      if (ids.has(cut.id)) errors.push({ path: `${path}.id`, message: "cut id is listed twice" });
+      ids.add(cut.id);
+      if (!mod.maps?.includes(cut.map)) errors.push({ path: `${path}.map`, message: "must name a file listed in this pack’s maps" });
+      for (const key of ["camera", "cameraEnd"]) if (cut[key]) cut[key] = checkObject(cut[key], MENU_CAMERA_SPECS, `${path}.${key}`, errors, warnings);
+      const owners = /* @__PURE__ */ new Set();
+      cut.orders = (cut.orders ?? []).flatMap((raw2, k) => {
+        const orderPath = `${path}.orders[${k}]`;
+        if (!isPlainObject$1(raw2)) {
+          errors.push({ path: orderPath, message: "must be an object" });
+          return [];
+        }
+        const order = checkObject(raw2, MENU_ORDER_SPECS, orderPath, errors, warnings);
+        if (owners.has(order.owner)) errors.push({ path: `${orderPath}.owner`, message: "owner is listed twice" });
+        owners.add(order.owner);
+        return [order];
+      });
+      cuts.push(cut);
+    });
+    const queue = bg.queue ?? [];
+    queue.forEach((id, i) => {
+      if (!MENU_CUT_IDS.includes(id) && !ids.has(id)) errors.push({ path: `menuBackground.queue[${i}]`, message: `"${id}" is neither an original cut nor one of this pack’s cuts` });
+    });
+    mod.menuBackground = { cuts, queue };
+  }
   mod.defs.forEach((raw, i) => {
     const path = `defs[${i}]`;
     if (!isPlainObject$1(raw)) {
@@ -10547,6 +11019,10 @@ function buildDef(own, kind, base, modId, soundKeys, path, errors, warnings) {
     }
   }
   if (def.aliases) def.aliases = def.aliases.map((a) => a.toLowerCase());
+  if (def.directionalArmor && (kind !== "unit" || domain !== "ground")) {
+    if (own.directionalArmor) errors.push({ path: `${path}.directionalArmor`, message: "directional armour requires a ground unit" });
+    else delete def.directionalArmor;
+  }
   const rawWeapons = own.weapons ?? (base ? inherited.weapons : []) ?? [];
   const hasTurret = !!(own.turretSprite ?? (own.sprite ? void 0 : inherited.turretSprite));
   rawWeapons.forEach((raw, i) => {
@@ -10598,10 +11074,23 @@ function applyDefinitions(mods) {
   const table = cloneTable(VANILLA);
   const strings = {};
   const report = { active: [], rejected: [], warnings: [], placeholders: [] };
+  const terrains = [];
+  const terrainIds = /* @__PURE__ */ new Set();
+  const terrainSheets = /* @__PURE__ */ new Set();
   for (const mod of mods) {
     const r = resolveDefinitions(mod, table);
     if (!r.ok) {
       report.rejected.push({ id: mod.id, errors: r.errors });
+      continue;
+    }
+    const duplicate = mod.terrains?.find((terrain) => terrainIds.has(terrain.id));
+    if (duplicate) {
+      report.rejected.push({ id: mod.id, errors: [{ path: "terrains", message: `"${duplicate.id}" is already an active terrain variant` }] });
+      continue;
+    }
+    const duplicateSheet = mod.sprites?.find((sprite) => sprite.key.startsWith("ter.") && terrainSheets.has(sprite.key));
+    if (duplicateSheet) {
+      report.rejected.push({ id: mod.id, errors: [{ path: "sprites", message: `"${duplicateSheet.key}" is already an active terrain material` }] });
       continue;
     }
     if (r.warnings.length > 0) report.warnings.push({ id: mod.id, warnings: r.warnings });
@@ -10610,6 +11099,11 @@ function applyDefinitions(mods) {
     Object.assign(strings, r.strings);
     report.placeholders.push(...r.placeholders);
     report.active.push(mod);
+    for (const terrain of mod.terrains ?? []) {
+      terrainIds.add(terrain.id);
+      terrains.push({ ...terrain, name: contentText(terrain.name), mod: mod.id });
+    }
+    for (const sprite of mod.sprites ?? []) if (sprite.key.startsWith("ter.")) terrainSheets.add(sprite.key);
   }
   for (const k of Object.keys(DEFS)) delete DEFS[k];
   Object.assign(DEFS, table);
@@ -10622,6 +11116,7 @@ function applyDefinitions(mods) {
     injected.add(k);
   }
   active = report.active;
+  replaceTerrainVariants(terrains);
   for (const fn of listeners) fn();
   return report;
 }
@@ -10843,6 +11338,8 @@ function typeLabel(spec) {
   switch (spec.type) {
     case "enum":
       return spec.values.join(" | ");
+    case "enums":
+      return `(${spec.values.join(" | ")})[]`;
     case "text":
       return "text";
     case "number":
@@ -10862,6 +11359,8 @@ function typeLabel(spec) {
       return "(ground | ship | sub | air)[]";
     case "mult":
       return "{ armour: number }";
+    case "directionalArmor":
+      return "{ front, side, rear }";
     case "body":
       return "{ r, len }";
     case "pair":
@@ -10880,8 +11379,32 @@ function typeLabel(spec) {
       return "def[]";
     case "factions":
       return "faction[]";
+    case "terrains":
+      return "terrain[]";
+    case "cityTerrain":
+      return "{ roof, wall, window, lamp, roofTexture, wallTexture, groundTexture, signTexture, accent, accent2, architecture }";
+    case "cityArchitecture":
+      return "{ forms, minStoreys, maxStoreys, coverage, greenery, equipment, facade }";
     case "sprites":
       return "sheet[]";
+    case "sounds":
+      return "sound[]";
+    case "menuBackground":
+      return "{ cuts, queue }";
+    case "menuCuts":
+      return "cut[]";
+    case "menuQueue":
+      return "cut id[]";
+    case "menuCamera":
+      return "{ tx, ty, zoom }";
+    case "menuOrders":
+      return "{ owner, tx, ty }[]";
+    case "music":
+      return "{ tracks, menu, setup, battle }";
+    case "musicTracks":
+      return "track[]";
+    case "musicQueue":
+      return "track id[]";
     case "files":
       return "{ path: dataURL }";
     case "rules":
@@ -10894,6 +11417,8 @@ function typeLabel(spec) {
       return "look";
     case "anims":
       return "{ moving, idle, firing }";
+    case "barrels":
+      return "[left, top, right, bottom][]";
     case "cond":
       return "condition";
     case "effects":
@@ -11090,6 +11615,28 @@ function agentPrompt() {
   p();
   p("A faction is selected per seat in Conquest and Breakthrough. It changes the headquarters, starting builders and allowed build/production roster; teams and victory rules still belong to the match. The chooser is hidden with only Steel Tide available. The HQ must produce its builder, and that builder must rebuild its HQ. Both must belong to this mod. A starting HQ has no prerequisites; its builder may require only that HQ. Roster building prerequisites must also be in the roster. Format 1 mods continue to work unchanged.");
   p();
+  p("### A terrain variant (`terrains[]`)");
+  p();
+  p(markdownTable(fieldRows("terrain")));
+  p();
+  p('Terrain variants add map-selected appearances without changing terrain numbers, movement, construction, cover or city destruction. Enabling a mod alone never repaints a vanilla map. A map opts in with `"terrainVariants": { "city": "my-mod-city" }`; the editor preserves these bindings in saves and exports. Missing or disabled content renders the ordinary base terrain, even when old images remain cached. A terrain-only pack uses `"defs": []`.');
+  p();
+  p("Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep flat materials opaque and seamless, without painted buildings, text, cast shadows or transparent cutouts. `city.signTexture` may instead contain sign artwork. A variant can reference only terrain sheets in its own pack.");
+  p();
+  p("#### City appearance (`terrains[].city`)");
+  p();
+  p(markdownTable(fieldRows("cityTerrain")));
+  p();
+  p("A city variant supplies colors, materials or a visual architecture kit while preserving city tile collision, cover and destruction rules. Without `architecture`, city geometry stays exactly ordinary. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`, with `signTexture` for architectural signs. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.");
+  p();
+  p("#### City architecture (`terrains[].city.architecture`)");
+  p();
+  p(markdownTable(fieldRows("cityArchitecture")));
+  p();
+  p("The optional kit changes visible building forms, storeys, lot coverage, planting, rooftop equipment and facade treatment. It never changes terrain height, passability or combat. `forms` lists distinct supported forms. Storey bounds use the documented defaults when omitted and must satisfy `minStoreys <= maxStoreys`. The existing damage states still control collapsed buildings and extinguished signs.");
+  p();
+  p("`signTexture` is a 4×4 atlas of 16 square signs in row-major order; a building’s deterministic seed selects one cell. Use equal `fw`/`fh` divisible by 4 (128 recommended), with dark unlit backing and bright lettering or symbols. Pixels whose strongest RGB channel exceeds 120 emit their own color at night. The image is one frame, not a horizontal 16-frame animation strip. Missing sign artwork uses procedural glyphs.");
+  p();
   p("### A def (`defs[]`)");
   p();
   p(markdownTable(fieldRows("def")));
@@ -11123,6 +11670,26 @@ function agentPrompt() {
   p("### A sheet (`sprites[]`)");
   p();
   p(markdownTable(fieldRows("sprite")));
+  p();
+  p("Barrel recoil is available to any definition with a rotating turret: put `recoil: 2` on its turret weapon (stroke in art pixels) and `barrels: [[0.4, 0, 0.6, 0.45]]` on its turret sheet. Rectangles use 0–1 fractions of the up-facing source frame, must have positive area and must not overlap. Keep stationary mantlets outside them. For several barrels, list rectangles in the same order as `muzzlePoints`, or left to right when using `bores`/`boreSpacing`. Each firing mount and barrel recoils independently; custom or hidden muzzle flashes work too. Inherited art keeps its barrel regions; custom art supplies its own. Recoil changes no combat statistic.");
+  p();
+  p("### Home menu background (`menuBackground`)");
+  p();
+  for (const section of ["menuBackground", "menuCut", "menuCamera", "menuOrder"]) {
+    p(markdownTable(fieldRows(section)));
+    p();
+  }
+  p("Supply a nonempty queue to replace the home-menu reel. It repeats in listed order from a random starting cut, 13 seconds per cut, with the usual camera drift and fades. Mix original IDs with your own, or use only your own. The last active pack with usable cuts wins; disabling it restores the previous reel. A background-only pack may use `defs: []`. A custom cut names a file in `maps`, with its placed units and buildings; every owner needs a spawn, and every camera/order point must be inside the map. Each spawn is a separate side; no AI, default bases or scenario triggers run. Place generators to power the forces. Optional opening orders attack-move all mobile units belonging to the named owner. Missing or invalid cuts are skipped; an unusable queue keeps the previous reel. Reduced motion keeps the still background.");
+  p();
+  p("### Background music (`music`)");
+  p();
+  p(markdownTable(fieldRows("music")));
+  p();
+  p(markdownTable(fieldRows("musicTrack")));
+  p();
+  p("Each supplied queue replaces that slot, plays in listed order and repeats, keeping the normal gaps, music volume and pause behavior. Keep built-in IDs to mix original tracks with your own; use only your own IDs for a complete replacement. Omitted queues keep the previous selection; an empty queue silences the slot. The last active pack supplying a slot wins. Disabling it restores the preceding pack or the original shuffle. A music-only pack uses `defs: []`. Victory and defeat remain unchanged. Tracks travel with the other mod assets, within the existing total asset limit.");
+  p();
+  p("Built-in music IDs by original slot: " + Object.entries(MUSIC_FILES).map(([slot, ids]) => `${slot}: ${ids.join(", ")}`).join("; ") + ". Any of these IDs may appear in a custom queue; an unshipped file is skipped.");
   p();
   p("### A sound (`sounds[]`)");
   p();
@@ -11174,7 +11741,7 @@ function agentPrompt() {
   p();
   p("## Rules");
   p();
-  p("- A mod adds; it does not change vanilla defs, art, rules or interface. Do not try to override a vanilla id or key; the validator refuses it.");
+  p("- A mod adds definitions and assets; it does not change vanilla defs, art, rules or interface. Music and menu-background queues are explicit exceptions: they select the soundtrack and backdrop without overwriting built-in tracks or cuts. Do not try to override a vanilla id or key; the validator refuses it.");
   p("- Keep it honest: a unit needs a counter. The armour matrix is how the game makes one; give a new weapon a class it belongs to rather than an override on every cell.");
   p("- A mod is published under the licence its manifest names (default CC-BY-4.0). Only ship art you have the right to.");
   return lines.join("\n") + "\n";
@@ -11346,9 +11913,12 @@ export {
   MAX_MOD_FILES_BYTES,
   MAX_MOD_MAPS,
   MAX_MOD_MAP_BYTES,
+  MAX_MOD_MUSIC_QUEUE,
+  MAX_MOD_MUSIC_TRACKS,
   MAX_MOD_SCREENSHOTS,
   MAX_MOD_SOUNDS,
   MAX_MOD_SPRITES,
+  MAX_MOD_TERRAINS,
   MAX_REQUIRED_MODS,
   MAX_SCREENSHOT_BYTES,
   MIN_SCREENSHOT_WIDTH,
@@ -11367,6 +11937,7 @@ export {
   SCREENSHOT_ASPECT_TOLERANCE,
   SOUND_KEY_RE,
   TARGET_DOMAINS,
+  TERRAIN_BASES,
   TRAILS,
   UNIT_DOMAINS,
   VANILLA_DEFS,
@@ -11378,6 +11949,7 @@ export {
   activeDefinitions,
   activeContentStamps as activeModStamps,
   activeDefinitions as activeMods,
+  activeTerrainVariants,
   agentPrompt,
   agentPromptFor,
   applyDefinitions,
@@ -11397,6 +11969,7 @@ export {
   indexEntryFor,
   isContentStamp,
   isContentStamp as isModStamp,
+  menuCutMapError,
   missingContent,
   missingContent as missingMods,
   modCountUrl,
@@ -11413,11 +11986,13 @@ export {
   parseDefinitionPack,
   parseMod,
   parseModIndex,
+  readTerrainAssignments,
   requiredContentOf,
   requiredContentOf as requiredModOf,
   resolveDefinitions,
   resolveMod,
   rosterLines,
   sameStamps,
-  stampOf
+  stampOf,
+  terrainVariant
 };

@@ -1,0 +1,21 @@
+# Local authoring sources and intermediates. Retain originals here so shipping
+# art and audio can be rebuilt; the registry contains the finished assets.
+/art/
+/*.py
+/*.mjs
+/*.ts
+/OPERATIONS.json
+
+# Local tests, generation receipts, browser captures, caches and release audits.
+/qa/
+/QA.md
+__pycache__/
+*.py[cod]
+
+# The companion campaign is an unpublished authoring deliverable, separate from
+# the regular mod. Keep its sources, embedded packs and world file locally.
+/campaign/
+
+# Cutter metadata; the game reads the sheet declarations in mod.json instead.
+/sprites/manifest.json
+/terrain/manifest.json

@@ -233,8 +233,9 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 | `homepage` | string |  |  | a link: a repository, a thread |
 | `license` | string |  | CC-BY-4.0 | the mod's licence (SPDX id) |
 | `minGame` | string |  |  | the oldest game version it is written for |
-| `defs` | def[] | yes |  | the units, buildings and upgrade levels |
+| `defs` | def[] | yes |  | the units, buildings and upgrade levels; may be empty when terrains are supplied |
 | `factions` | faction[] |  |  | selectable factions, each with its own headquarters, starting builder and roster (format 2) |
+| `terrains` | terrain[] |  |  | up to 32 map-selected terrain variants; preserve their base terrain’s gameplay |
 | `sprites` | sheet[] |  |  | the sheets the defs draw with (see below) |
 | `sounds` | string |  |  | the recordings the weapons fire with (see below) |
 | `screenshots` | path[] |  |  | pictures of the mod in play, relative to mod.json (`screenshots/1.png`): 4:3, at least 640 px wide, under 2 MB each, up to 8. The registry asks for at least one and shows them on the mod's page |
@@ -254,6 +255,34 @@ Anything not in these tables is ignored with a warning. Numbers outside the stat
 | `roster` | id[] |  |  | permitted definitions, including prerequisites and upgrades; defaults to all definitions in this mod |
 
 A faction is selected per seat in Conquest and Breakthrough. It changes the headquarters, starting builders and allowed build/production roster; teams and victory rules still belong to the match. The chooser is hidden with only Steel Tide available. The HQ must produce its builder, and that builder must rebuild its HQ. Both must belong to this mod. A starting HQ has no prerequisites; its builder may require only that HQ. Roster building prerequisites must also be in the roster. Format 1 mods continue to work unchanged.
+
+### A terrain variant (`terrains[]`)
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `id` | id | yes |  | unique terrain variant id, prefixed with the mod id and a dash |
+| `name` | text | yes |  | the terrain style name in the editor |
+| `base` | grass \| sand \| road \| mud \| marsh \| snow \| rubble \| ice \| city | yes |  | the existing terrain whose movement, construction and combat behavior stays unchanged |
+| `texture` | string |  |  | flat terrain material: a ter.<mod id>-<name> sheet in this pack; city uses its city materials instead |
+| `city` | { roof, wall, window, lamp, roofTexture, wallTexture, groundTexture } |  |  | materials and lights for the ordinary city geometry; only with base city |
+
+Terrain variants add map-selected appearances without changing terrain numbers, movement, construction, cover or city destruction. Enabling a mod alone never repaints a vanilla map. A map opts in with `"terrainVariants": { "city": "my-mod-city" }`; the editor preserves these bindings in saves and exports. Missing or disabled content renders the ordinary base terrain, even when old images remain cached. A terrain-only pack uses `"defs": []`.
+
+Terrain materials are single-frame, square sheets named `ter.<mod id>-<name>`, declared in `sprites` with equal whole `fw` and `fh` (4–512; 128 recommended). `teams`, `stripBg`, `rotated`, `fitFootprint` and `freezeStatic` are false; their false defaults preserve the image. Anchors, mounts, animation states/regions and pivots are not supported. Keep the full rectangular material opaque and seamless; do not include buildings, text, shadows or a transparent cutout in a flat material. A variant can reference only terrain sheets in its own pack.
+
+#### City materials (`terrains[].city`)
+
+| field | type | required | default | meaning |
+| --- | --- | --- | --- | --- |
+| `roof` | string |  |  | roof color, #RRGGBB |
+| `wall` | string |  |  | wall color, #RRGGBB |
+| `window` | string |  |  | lit window color, #RRGGBB |
+| `lamp` | string |  |  | streetlamp color, #RRGGBB |
+| `roofTexture` | string |  |  | roof material, a ter.<mod id>-<name> sheet in this pack |
+| `wallTexture` | string |  |  | wall material, a ter.<mod id>-<name> sheet in this pack |
+| `groundTexture` | string |  |  | courtyard material, a ter.<mod id>-<name> sheet in this pack |
+
+A city variant keeps the normal city block geometry and damage states. It supplies at least one color or material; omitted properties keep the ordinary city treatment. Flat base terrains require `texture`; cities instead use `roofTexture`, `wallTexture` and `groundTexture`. Unsupported bases such as water, forest and cliffs cannot be declared as flat material variants.
 
 ### A def (`defs[]`)
 
@@ -428,7 +457,7 @@ A hull with more than one gun — a battleship's turrets fore and aft, a tank wi
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
-| `key` | string | yes |  | `u.<id>` for a body, `tur.<id>` for a rotating part, `dec.<name>` for a decal, `prj.<name>` for a round and `fx.<name>` for an effect a weapon's look or a rule plays; never a vanilla key |
+| `key` | string | yes |  | `u.<id>` for a body, `tur.<id>` for a rotating part, `dec.<name>` for a decal, `prj.<name>` for a round and `fx.<name>` for an effect a weapon's look or a rule plays; `ter.<mod id>-<name>` for terrain materials; never a vanilla key |
 | `file` | string | yes |  | the image, relative to mod.json (PNG, WebP or JPEG) |
 | `frames` | integer 1–64 |  | 1 | animation frames, left to right in one strip |
 | `fw` | number 4–512 |  | the footprint (a building) or the image | in-game frame width, whole world px |
@@ -801,7 +830,7 @@ A mod may carry maps: files the game's Scenario Editor exports (`.steel-tide-map
 ## The vanilla roster (ids you may `extends`, name in `producedBy`/`builtBy`/`requires`/`upgradeOf`, or borrow art from)
 
 - ground units: engineer (T1, 150), buggy (T1, 60), ltank (T1, 120), mbt (T2, 280), htank (T3, 900), td (T2, 320), flak (T1, 170), sam (T2, 400), arty (T2, 420), mlrs (T3, 760), radarcar (T3, 480), salamander (T3, 800), bulwark (T3, 650), drake (T2, 400), hercules (T2, 350), scorpion (T3, 1100)
-- ships: gunboat (T1, 130), mboat (T1, 280), frigate (T2, 600), destroyer (T2, 700), sub (T2, 480), btlship (T3, 1700), carrier (T3, 2200), seatrans (T1, 220), engboat (T1, 200), kraken (T3, 1000), moray (T3, 700)
+- ships: gunboat (T1, 130), mboat (T1, 280), frigate (T2, 700), destroyer (T2, 700), sub (T2, 480), btlship (T3, 1700), carrier (T3, 2200), seatrans (T1, 220), engboat (T1, 200), kraken (T3, 1000), moray (T3, 700)
 - amphibious units: gator (T2, 200)
 - aircraft: hornet (T2, 120), drone (T1, 40), fighter (T2, 380), heli (T2, 380), jet (T2, 450), mjet (T2, 520), bomber (T2, 1000), theli (T1, 280), c47 (T2, 650), gunship (T3, 1800), wraith (T3, 1400), cormorant (T3, 700)
 - buildings: hq (T1, 2500), hq2 (T2, 17500, upgrade level), extractor (T1, 120), extractor2 (T2, 310, upgrade level), extractor3 (T3, 810, upgrade level), platform (T1, 120), platform2 (T2, 310, upgrade level), platform3 (T3, 810, upgrade level), power (T1, 140), power2 (T2, 400, upgrade level), power3 (T3, 1100, upgrade level), factory (T1, 320), factory2 (T2, 740, upgrade level), factory3 (T3, 1640, upgrade level), airbase (T1, 380), airbase2 (T2, 830, upgrade level), airbase3 (T3, 1780, upgrade level), navyard (T1, 350), navyard2 (T2, 800, upgrade level), navyard3 (T3, 1750, upgrade level), mgturret (T1, 130), gatling (T2, 330, upgrade level), cannonturret (T1, 320), cannonturret2 (T2, 660, upgrade level), aaturret (T1, 400), samsite (T2, 1000, upgrade level), interceptor (T2, 450), interceptor2 (T3, 1100, upgrade level), sandbag (T1, 40), landmine (T1, 60), watermine (T1, 60), repairtower (T1, 360), radar (T2, 400), warlab (T1, 500), veil (T2, 600), reactor (T3, 1400), nukesilo (T3, 1800)

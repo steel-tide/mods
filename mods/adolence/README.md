@@ -87,16 +87,26 @@ their hulls slowly, as they do in the original.
 ## The map
 
 The mod carries a map, *City of Sin* (`maps/city-of-sin.steel-tide-map`): the
-west bank of Adolon, a road grid with the police dug in along the middle
-avenue, their coast guard base in a pond behind the yards, the dead already
-across the avenue and two nests breeding more in the rubble.
+west bank of Adolon, with the police dug in along the middle avenue, the
+dead across it and nests breeding more in the rubble. The 104×76 map has
+residential blocks, ruined neighbourhoods, a downtown square and broad
+streets leading to the riverfront. City blocks are real obstacles; the
+streets and alleys remain open for the fighting.
+It showcases every unit and building in the mod, including the upgraded
+buildings and both factions' builders. Infantry reserves stand beside the
+police yards, vehicles line the southern motor pool, aircraft gather by the
+airfield, and the carrier shares the coast guard harbour with the scout boat.
+The harbour connects to the river through the southern channel, where the
+infected's aquatic Gloaters also lurk.
 Seat one opens on the west and gets the police, seat two on the east and gets
 the dead. Choose City Authority for seat one and SPK Infected for seat two to
 match those forces with their own headquarters. With the mod on, the map is a card in the Conquest setup and the
 lobby beside your own map; pick it and it plays exactly as laid. It is drawn by
 `make-map.py` rather than in the Map Editor, so it can be regenerated with the
-roster; the editor opens it like any map, and with the mod on, the mod's units
-are in its forces palette.
+roster. The generator checks roster coverage, faction ownership, terrain,
+deposits and overlaps with other pieces or props before writing the file; a roster addition that needs more
+display space fails with a request for new placements. The editor opens it
+like any map, and with the mod on, the mod's units are in its forces palette.
 
 ## How the numbers were made
 

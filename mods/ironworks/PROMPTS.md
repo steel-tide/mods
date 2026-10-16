@@ -1,6 +1,6 @@
 # Ironworks — how its sheets were painted
 
-Three sheets in the game's own sprite contract: a hull as one up-facing image
+The three original sheets follow the game's own sprite contract: a hull as one up-facing image
 (the pod is part of the hull, so there is no turret), a building as one
 top-down frame filling its 2×2-tile footprint, and the gun that turns on it. Painted with the game's
 generator through the Vercel AI Gateway, `openai/gpt-image-2` at high quality:
@@ -70,3 +70,17 @@ Isolation rule: no ground, no cast shadow, no pit, no muzzle flash, no base plat
 ```json
 { "key": "tur.ironworks-bunker", "file": "sprites/tur.ironworks-bunker.png", "frames": 1, "rotated": true, "fw": 26, "fh": 42, "pivotY": 0.66 }
 ```
+
+## Orca asset provenance
+
+Added in 1.2.0 from Steel Tide's current Orca masters, without repainting:
+`game/core/art/sprites/u.destroyer.png` and `tur.destroyer.png` become
+`sprites/u.ironworks-orca.png` and `sprites/tur.ironworks-orca.png`.
+
+The vanilla ship draws at 2.34375×; mod units draw at 1.5625×. The mod's
+frame dimensions are therefore 1.5× the original (hull 30×72, turret 15×27),
+and the gun ring is at y = −12.75 art pixels. With supersampling at 4 instead
+of 6, both copies bake the same number of pixels and retain the same world
+size. The turret pivot remains 0.6 and its muzzle offset remains 25.3125
+world pixels. Torpedoes explicitly use the hull rather than the rotating
+gun, because mod weapons otherwise default to the available turret.

@@ -6,11 +6,12 @@
     "Ironworks",
     "铁工厂"
   ],
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Steel Tide",
   "description": [
-    "A hover tank with its own art and sound, a turreted bunker, and a fourth level for the power plant line — one of each thing a mod can add.",
-    "一辆自带图像和音效的悬浮坦克、一座带旋转炮塔的碉堡，以及发电厂线的第四级——模组能加的每种东西各一个。"
+    "Skimmer hover tanks, Orca destroyers, autocannon bunkers and a fusion power upgrade.",
+    "掠行悬浮坦克、虎鲸驱逐舰、机炮碉堡与聚变发电升级。",
+    "스키머 호버 탱크, 오르카 구축함, 기관포 벙커와 핵융합 발전 업그레이드."
   ],
   "license": "CC-BY-4.0",
   "defs": [
@@ -55,6 +56,97 @@
       "producedBy": [
         "factory2",
         "factory3"
+      ],
+      "aiWeight": 1
+    },
+    {
+      "id": "ironworks-orca",
+      "name": [
+        "Orca Destroyer",
+        "虎鲸驱逐舰",
+        "오르카 구축함"
+      ],
+      "desc": [
+        "Dual-purpose naval gun, sonar and anti-submarine torpedoes: the submarine hunter.",
+        "高平两用舰炮、声呐加反潜鱼雷：潜艇猎手。",
+        "양용 함포와 소나, 그리고 대잠 어뢰. 잠수함 사냥꾼입니다."
+      ],
+      "kind": "unit",
+      "domain": "ship",
+      "tier": 2,
+      "ability": "damageControl",
+      "cost": 700,
+      "buildTime": 34,
+      "pop": 3,
+      "power": -3,
+      "hp": 1300,
+      "armor": "ship",
+      "speed": 60,
+      "turnRate": 2.4,
+      "vision": 10,
+      "sonar": 9,
+      "radius": 15,
+      "body": {
+        "r": 24,
+        "len": 63
+      },
+      "weapons": [
+        {
+          "id": "navgun",
+          "cls": "navgun",
+          "dmg": 70,
+          "reload": 1.8,
+          "range": 7,
+          "projectile": "shell",
+          "speed": 420,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "mult": {
+            "medium": 1.1,
+            "heavy": 0.8,
+            "structure": 0.8
+          },
+          "turret": true,
+          "muzzleOffset": 25.3125,
+          "splash": 12,
+          "sound": "cannon"
+        },
+        {
+          "id": "torpedo",
+          "cls": "torpedo",
+          "dmg": 160,
+          "reload": 3.2,
+          "range": 7,
+          "projectile": "torpedo",
+          "speed": 150,
+          "targets": [
+            "ship",
+            "sub"
+          ],
+          "mult": {
+            "ship": 1.0,
+            "sub": 1.9
+          },
+          "turret": false,
+          "homing": true,
+          "sound": "torpedo"
+        }
+      ],
+      "trail": "wake",
+      "sprite": "u.ironworks-orca",
+      "turretSprite": "tur.ironworks-orca",
+      "turretMounts": [
+        {
+          "x": 0,
+          "y": -12.75
+        }
+      ],
+      "producedBy": [
+        "navyard2",
+        "navyard3"
       ],
       "aiWeight": 1
     },
@@ -148,6 +240,25 @@
       "fw": 26,
       "fh": 42,
       "pivotY": 0.66
+    },
+    {
+      "key": "u.ironworks-orca",
+      "file": "sprites/u.ironworks-orca.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 30,
+      "fh": 72,
+      "ss": 4
+    },
+    {
+      "key": "tur.ironworks-orca",
+      "file": "sprites/tur.ironworks-orca.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 27,
+      "pivotY": 0.6,
+      "ss": 4
     }
   ],
   "sounds": [
