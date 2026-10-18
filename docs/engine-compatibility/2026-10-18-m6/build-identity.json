@@ -1,0 +1,131 @@
+{
+  "createdAt": "2026-10-18T01:13:27.379Z",
+  "note": "Exact bytes and static reachability, without a timing threshold. Optional source must remain outside the vanilla initial closure. This does not prove performance on every device.",
+  "variants": {
+    "base": {
+      "benchmark": {
+        "bytes": 635599,
+        "sha256": "5528d9d005cb43931bb8acc06fc164b16754dfcbbc9512b228b5e2c29cb28880"
+      },
+      "initial": {
+        "bytes": 2113569,
+        "gzip": 784790,
+        "files": [
+          {
+            "file": "assets/index-B6PQ6jy1.js",
+            "bytes": 2113569,
+            "gzip": 784790,
+            "sha256": "e85419fce20dae117931cf054f28dce44c7a67d161ec031eef6404bb0c3be96c"
+          }
+        ]
+      },
+      "eagerlyReachableOptionalModules": [],
+      "optionalChunks": [
+        {
+          "file": "assets/schema-BUVH1ghU.js",
+          "bytes": 2136,
+          "modules": [
+            "/privategame/core/src/game/extensions/schema.ts"
+          ]
+        },
+        {
+          "file": "assets/contentCapabilityLoader-t0Des51g.js",
+          "bytes": 46362,
+          "modules": [
+            "/privategame/core/src/game/extensions/sdk.ts",
+            "/privategame/core/src/game/extensions/frameCodec.ts",
+            "/privategame/core/src/game/extensions/generatedGame.ts",
+            "/privategame/core/src/game/extensions/generatedCombat.ts",
+            "/privategame/core/src/game/extensions/generatedFireControl.ts",
+            "/privategame/core/src/game/extensions/runtime.ts",
+            "/privategame/core/src/game/contentCapabilityLoader.ts"
+          ]
+        },
+        {
+          "file": "assets/contentPresentationLoader-5Maa1Ip2.js",
+          "bytes": 24015,
+          "modules": [
+            "/privategame/core/src/render/generatedContentRenderer.ts",
+            "/privategame/core/src/game/extensions/presentationSdk.ts",
+            "/privategame/core/src/ui/contentHud.ts",
+            "/privategame/core/src/ui/contentPresentationLoader.ts"
+          ]
+        },
+        {
+          "file": "assets/packages-C9w5j_56.js",
+          "bytes": 5456,
+          "modules": [
+            "/privategame/core/src/game/extensions/sha256.ts",
+            "/privategame/core/src/game/extensions/packages.ts"
+          ]
+        }
+      ]
+    },
+    "candidate": {
+      "benchmark": {
+        "bytes": 635599,
+        "sha256": "5528d9d005cb43931bb8acc06fc164b16754dfcbbc9512b228b5e2c29cb28880"
+      },
+      "initial": {
+        "bytes": 2116067,
+        "gzip": 785519,
+        "files": [
+          {
+            "file": "assets/index-C7PitD_l.js",
+            "bytes": 2116067,
+            "gzip": 785519,
+            "sha256": "f9fb81b9e631774acb5c84cf8829e5f4bc5baee1fe3786672451786bfd0bfd40"
+          }
+        ]
+      },
+      "eagerlyReachableOptionalModules": [],
+      "optionalChunks": [
+        {
+          "file": "assets/schema-BJlsEtOX.js",
+          "bytes": 2202,
+          "modules": [
+            "/privategame/core/src/game/extensions/schema.ts"
+          ]
+        },
+        {
+          "file": "assets/contentCapabilityLoader-De0vGEmO.js",
+          "bytes": 46362,
+          "modules": [
+            "/privategame/core/src/game/extensions/sdk.ts",
+            "/privategame/core/src/game/extensions/frameCodec.ts",
+            "/privategame/core/src/game/extensions/generatedGame.ts",
+            "/privategame/core/src/game/extensions/generatedCombat.ts",
+            "/privategame/core/src/game/extensions/generatedFireControl.ts",
+            "/privategame/core/src/game/extensions/runtime.ts",
+            "/privategame/core/src/game/contentCapabilityLoader.ts"
+          ]
+        },
+        {
+          "file": "assets/contentPresentationLoader-rARiD48Z.js",
+          "bytes": 25216,
+          "modules": [
+            "/privategame/core/src/render/generatedContentRenderer.ts",
+            "/privategame/core/src/game/extensions/presentationSdk.ts",
+            "/privategame/core/src/ui/contentHud.ts",
+            "/privategame/core/src/ui/contentFeedback.ts",
+            "/privategame/core/src/ui/contentPresentationLoader.ts"
+          ]
+        },
+        {
+          "file": "assets/packages-WyArbjcK.js",
+          "bytes": 5925,
+          "modules": [
+            "/privategame/core/src/game/extensions/sha256.ts",
+            "/privategame/core/src/game/extensions/packages.ts"
+          ]
+        }
+      ]
+    }
+  },
+  "benchmarkByteIdentical": true,
+  "initialDelta": {
+    "bytes": 2498,
+    "gzip": 729
+  },
+  "optionalIsolationPassed": true
+}

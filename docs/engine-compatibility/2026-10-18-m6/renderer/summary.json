@@ -1,0 +1,215 @@
+{
+  "manifest": {
+    "started": "2026-10-18T01:14:19.070Z",
+    "baseCommit": "1e4087ce8cf135bc721178642de5114ed5bc171d",
+    "candidateHead": "1e4087ce8cf135bc721178642de5114ed5bc171d",
+    "roots": {
+      "base": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-capability-baseline-qtNnZ0",
+      "candidate": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-m6-candidate-ulvqyx78/game"
+    },
+    "ports": {
+      "base": 5201,
+      "candidate": 5202
+    },
+    "order": [
+      "base",
+      "candidate",
+      "candidate",
+      "base"
+    ],
+    "settings": [
+      "--presets",
+      "high",
+      "--skies",
+      "clear",
+      "--cuts",
+      "pitched",
+      "--units",
+      "1024",
+      "--seconds",
+      "10",
+      "--warmup",
+      "5",
+      "--match",
+      "--width",
+      "1920",
+      "--height",
+      "1080",
+      "--zoom",
+      "0.5"
+    ],
+    "notes": [
+      "Candidate includes uncommitted working tree.",
+      "Runs the same unchanged native raster benchmark driver for both served checkouts, with full GameScreen/HUD and no profiling/pass timers.",
+      "Fresh Chrome profile for each sample, high clear/noon, 1024 opening units; terrain pre-baked then 5 s live warmup.",
+      "Direct installed Vite binary on owned ports 5201/5202, bypassing pnpm auto-install; never uses or stops the existing port 5199 server.",
+      "Development module delivery; this is a warmed renderer/HUD comparison, not a production startup benchmark."
+    ]
+  },
+  "runs": [
+    {
+      "variant": "base",
+      "index": 1,
+      "file": "/Users/rivertwilight/Developer/steel-tide-mods/dist/m6-vanilla-renderer/1-base.json",
+      "screenshot": "/Users/rivertwilight/Developer/steel-tide-mods/dist/m6-vanilla-renderer/1-base.png",
+      "errors": [],
+      "summary": {
+        "cut": "pitched",
+        "preset": "high",
+        "sky": "clear",
+        "hour": "noon",
+        "commanders": false,
+        "match": true,
+        "initialUnits": 1024,
+        "units": [
+          1005,
+          1047
+        ],
+        "fps": 59.8862261679546,
+        "frameP95": 16.700000000000728,
+        "frameP99": 16.799999999999272,
+        "worstFrame": 16.80000000000291,
+        "missed": 0,
+        "missedPercent": 0,
+        "simMean": 0.987999999995033,
+        "simP95": 2.2999999970197678,
+        "renderMean": 7.647333333132168,
+        "renderP95": 8.599999994039536,
+        "ticksPerSecond": 29.993101586621666,
+        "behind": 0,
+        "canvas": [
+          2880,
+          1620
+        ],
+        "zoom": 0.5,
+        "drawn": [
+          1156,
+          1201
+        ]
+      }
+    },
+    {
+      "variant": "candidate",
+      "index": 2,
+      "file": "/Users/rivertwilight/Developer/steel-tide-mods/dist/m6-vanilla-renderer/2-candidate.json",
+      "screenshot": "/Users/rivertwilight/Developer/steel-tide-mods/dist/m6-vanilla-renderer/2-candidate.png",
+      "errors": [],
+      "summary": {
+        "cut": "pitched",
+        "preset": "high",
+        "sky": "clear",
+        "hour": "noon",
+        "commanders": false,
+        "match": true,
+        "initialUnits": 1024,
+        "units": [
+          1006,
+          1047
+        ],
+        "fps": 59.89101634754787,
+        "frameP95": 16.799999999999272,
+        "frameP99": 16.80000000000291,
+        "worstFrame": 16.80000000000291,
+        "missed": 0,
+        "missedPercent": 0,
+        "simMean": 0.9874999999379118,
+        "simP95": 2.3000000044703484,
+        "renderMean": 7.78549999995778,
+        "renderP95": 8.700000002980232,
+        "ticksPerSecond": 29.995500674898764,
+        "behind": 0,
+        "canvas": [
+          2880,
+          1620
+        ],
+        "zoom": 0.5,
+        "drawn": [
+          1157,
+          1201
+        ]
+      }
+    },
+    {
+      "variant": "candidate",
+      "index": 3,
+      "file": "/Users/rivertwilight/Developer/steel-tide-mods/dist/m6-vanilla-renderer/3-candidate.json",
+      "screenshot": "/Users/rivertwilight/Developer/steel-tide-mods/dist/m6-vanilla-renderer/3-candidate.png",
+      "errors": [],
+      "summary": {
+        "cut": "pitched",
+        "preset": "high",
+        "sky": "clear",
+        "hour": "noon",
+        "commanders": false,
+        "match": true,
+        "initialUnits": 1024,
+        "units": [
+          1006,
+          1047
+        ],
+        "fps": 59.894010598940106,
+        "frameP95": 16.799999999999272,
+        "frameP99": 16.799999999999272,
+        "worstFrame": 16.80000000000291,
+        "missed": 0,
+        "missedPercent": 0,
+        "simMean": 0.992833333214124,
+        "simP95": 2.399999998509884,
+        "renderMean": 7.385666666738689,
+        "renderP95": 8.300000004470348,
+        "ticksPerSecond": 29.997000299970004,
+        "behind": 0,
+        "canvas": [
+          2880,
+          1620
+        ],
+        "zoom": 0.5,
+        "drawn": [
+          1157,
+          1201
+        ]
+      }
+    },
+    {
+      "variant": "base",
+      "index": 4,
+      "file": "/Users/rivertwilight/Developer/steel-tide-mods/dist/m6-vanilla-renderer/4-base.json",
+      "screenshot": "/Users/rivertwilight/Developer/steel-tide-mods/dist/m6-vanilla-renderer/4-base.png",
+      "errors": [],
+      "summary": {
+        "cut": "pitched",
+        "preset": "high",
+        "sky": "clear",
+        "hour": "noon",
+        "commanders": false,
+        "match": true,
+        "initialUnits": 1024,
+        "units": [
+          1006,
+          1047
+        ],
+        "fps": 59.89101634754787,
+        "frameP95": 16.700000000000728,
+        "frameP99": 16.799999999999272,
+        "worstFrame": 16.80000000000291,
+        "missed": 0,
+        "missedPercent": 0,
+        "simMean": 1.0188333333532016,
+        "simP95": 2.399999998509884,
+        "renderMean": 7.668333333358168,
+        "renderP95": 8.899999998509884,
+        "ticksPerSecond": 29.995500674898764,
+        "behind": 0,
+        "canvas": [
+          2880,
+          1620
+        ],
+        "zoom": 0.5,
+        "drawn": [
+          1157,
+          1201
+        ]
+      }
+    }
+  ]
+}

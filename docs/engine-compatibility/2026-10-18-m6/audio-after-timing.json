@@ -1,0 +1,24 @@
+{
+  "timedSourceSHA256": "8c95fccb081cb52249eb02c1bf91f9c93ab43ac27f5dcafa48da453c70817c2f",
+  "timedSourceMatchesRecordedProvenance": true,
+  "finalSourceSHA256": "ec71e3e1665907d15fad3dd848161f856245f58c7839de2ab03842acd66fd590",
+  "algorithm": "Exact TypeScript AST top-level statement source text, including all declarations and initializers. Timed source reconstructed by reversing the reviewed function edit, then checked against its previously recorded whole-file SHA-256.",
+  "timedStatements": 266,
+  "finalStatements": 266,
+  "unchangedStatements": 265,
+  "changes": [
+    {
+      "index": 199,
+      "before": {
+        "kind": "FunctionDeclaration",
+        "name": "pushMusicQueues",
+        "text": "export function pushMusicQueues(queues: MusicQueues): () => void {\n  const id = Symbol('music-scope');\n  const copy = Object.fromEntries(Object.entries(queues).map(([slot, values]) => [slot, values?.slice()]));\n  (musicQueueScopes ??= new Map()).set(id, copy);\n  applyMusicQueues(Object.assign({}, baseMusicQueues, ...musicQueueScopes.values()));\n  return () => {\n    if (!musicQueueScopes?.delete(id)) return;\n    applyMusicQueues(Object.assign({}, baseMusicQueues, ...musicQueueScopes.values()));\n    if (!musicQueueScopes.size) musicQueueScopes = undefined;\n  };\n}"
+      },
+      "after": {
+        "kind": "FunctionDeclaration",
+        "name": "pushMusicQueues",
+        "text": "export function pushMusicQueues(queues: MusicQueues): () => void {\n  const id = Symbol('music-scope');\n  const copy = Object.fromEntries(Object.entries(queues)\n    .filter(([, values]) => values !== undefined)\n    .map(([slot, values]) => [slot, values!.slice()]));\n  const previousQueues = musicQueues;\n  (musicQueueScopes ??= new Map()).set(id, copy);\n  try {\n    applyMusicQueues(Object.assign({}, baseMusicQueues, ...musicQueueScopes.values()));\n  } catch (error) {\n    musicQueues = previousQueues;\n    musicQueueScopes.delete(id);\n    if (!musicQueueScopes.size) musicQueueScopes = undefined;\n    throw error;\n  }\n  return () => {\n    if (!musicQueueScopes?.delete(id)) return;\n    applyMusicQueues(Object.assign({}, baseMusicQueues, ...musicQueueScopes.values()));\n    if (!musicQueueScopes.size) musicQueueScopes = undefined;\n  };\n}"
+      }
+    }
+  ]
+}

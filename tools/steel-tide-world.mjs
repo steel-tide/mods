@@ -77,7 +77,20 @@ function validCapabilityId(value) {
   return typeof value === "string" && /^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,63}$/.test(value) && !["__proto__", "constructor", "prototype"].includes(value);
 }
 function extensionPackageStamp(pkg) {
-  return `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}`;
+  const resources = pkg.assets ? ":" + resourceFingerprint(pkg.assets) : "";
+  return `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}${resources}`;
+}
+function resourceFingerprint(assets) {
+  const text = JSON.stringify(Object.entries(assets).sort(([a2], [b2]) => a2 < b2 ? -1 : a2 > b2 ? 1 : 0));
+  let a = 2166136261, b = 2654435769, c = 2246822507, d = 3266489909;
+  for (let i = 0; i < text.length; i++) {
+    const n = text.charCodeAt(i);
+    a = Math.imul(a ^ n, 16777619);
+    b = Math.imul(b ^ n, 2246822507);
+    c = Math.imul(c ^ n, 3266489909);
+    d = Math.imul(d ^ n, 668265263);
+  }
+  return [a, b, c, d].map((n) => (n >>> 0).toString(16).padStart(8, "0")).join("");
 }
 const K = new Uint32Array([
   1116352408,
@@ -207,7 +220,7 @@ function checkExtensionPackages(raw, path, issues) {
       continue;
     }
     for (const key of Object.keys(value))
-      if (!["id", "version", "api", "capabilities", "schema", "runtime", "presentation"].includes(key))
+      if (!["id", "version", "api", "capabilities", "schema", "runtime", "presentation", "assets"].includes(key))
         issues.push({ path: `${p}.${key}`, message: "unsupported field" });
     if (!validCapabilityId(value.id) || ids.has(value.id))
       issues.push({ path: `${p}.id`, message: "must be a unique bounded identifier" });
@@ -219,6 +232,15 @@ function checkExtensionPackages(raw, path, issues) {
     if (!Array.isArray(value.capabilities) || !value.capabilities.length || value.capabilities.length > 32 || new Set(value.capabilities).size !== value.capabilities.length || value.capabilities.some((id2) => !validCapabilityId(id2) || capabilities.has(id2)))
       issues.push({ path: `${p}.capabilities`, message: "must declare unique bounded capability IDs" });
     else for (const id2 of value.capabilities) capabilities.add(id2);
+    if (value.assets !== void 0) {
+      if (!rawObject(value.assets) || Object.keys(value.assets).length > 256)
+        issues.push({ path: `${p}.assets`, message: "must map up to 256 resource IDs to relative files" });
+      else for (const [id2, file] of Object.entries(value.assets)) {
+        if (!validCapabilityId(id2)) issues.push({ path: `${p}.assets.${id2}`, message: "must be a bounded resource identifier" });
+        if (typeof file !== "string" || !/^(?!\/)(?!.*\.\.)[A-Za-z0-9_./-]{1,120}$/.test(file))
+          issues.push({ path: `${p}.assets.${id2}`, message: "must be a relative path inside the owning mod" });
+      }
+    }
     for (const part of ["schema", "runtime", "presentation"]) {
       const code = value[part];
       if (part === "presentation" && code === void 0) continue;
@@ -320,7 +342,7 @@ function readExtensions(raw, pack, path, issues, context, weapon = false) {
       });
       continue;
     }
-    const config = reader(value, `${path}.${id2}`, issues, context);
+    const config = reader(value, `${path}.${id2}`, issues, { ...context, assetIds: new Set(Object.keys(pkg?.assets ?? {})) });
     if (config !== void 0) out[id2] = config;
   }
   return Object.keys(out).length ? out : void 0;
@@ -5734,6 +5756,11 @@ function parseDefinitionPack(input) {
     sounds,
     ...files ? { files } : {}
   };
+  if (files) {
+    for (const [i, pkg] of (mod.extensionPackages ?? []).entries())
+      for (const [id2, file] of Object.entries(pkg.assets ?? {}))
+        if (!Object.hasOwn(files, file)) errors.push({ path: `extensionPackages[${i}].assets.${id2}`, message: `"${file}" is not among the embedded files` });
+  }
   const resolved = resolveDefinitions(mod, VANILLA);
   if (defs.length === 0 && terrains.length === 0 && !CONTENT_MUSIC_SLOTS.some((slot) => mod.music?.[slot] !== void 0) && !mod.menuBackground?.queue?.length) errors.push({ path: "mod.defs", message: "a mod needs at least one def, terrain variant, music queue or menu background" });
   errors.push(...resolved.errors);

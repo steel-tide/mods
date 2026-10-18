@@ -1,0 +1,83 @@
+{
+  "baseline": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-capability-baseline-qtNnZ0",
+  "candidate": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-m6-candidate-ulvqyx78/game",
+  "media": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-m6-candidate-ulvqyx78/public-fixed",
+  "ref": "1e4087ce",
+  "isolation": "Temp clone of baseline; M6-owned changed files copied afterward. Shared installed dependencies, frozen copy of current public assets for both variants.",
+  "ownedFiles": [
+    {
+      "path": "game/core/src/game/extensions/contracts.ts",
+      "sha256": "f41473e160f24ab9937b2ee35cd9f35d98f4b150084cc2ca22d923361d8f2a4d"
+    },
+    {
+      "path": "game/core/src/game/extensions/packages.ts",
+      "sha256": "067f57f3be4f037eecff54fc2041c941aeacf0f470a77a58d86ddc4ee8a94364"
+    },
+    {
+      "path": "game/core/src/game/extensions/schema.ts",
+      "sha256": "2f2dfb00227de91f0ea831cc748cc6a4a500327ae0f979846f7a32e900f55715"
+    },
+    {
+      "path": "game/core/src/game/extensions/presentationSdk.ts",
+      "sha256": "d69aebfd8c4e103a7b12279dab835e3cd303595db5e9ffed27f09b3fcae7b509"
+    },
+    {
+      "path": "game/core/src/game/contentDefs.ts",
+      "sha256": "9f8fd5198d9d373637377c2b8188ccd3c2df2c0c9ec8ba01feb0a6d0e18dac4e"
+    },
+    {
+      "path": "game/core/src/content/manager.ts",
+      "sha256": "bcbe8eb2b869f9890b26c51e542834ce4b74157055ed7678d42fcc34aaca107a"
+    },
+    {
+      "path": "game/core/src/ui/contentFeedback.ts",
+      "sha256": "52cff74e16cf6006f2095de06263121a5ed451c1a3fbb84e5dd154af9407a1ca"
+    },
+    {
+      "path": "game/core/src/ui/contentResources.ts",
+      "sha256": "b47c1bf5049d60432972ee6050617e9265ec72064fbb2f1495e9f3b8916c2d4d"
+    },
+    {
+      "path": "game/core/src/ui/contentPresentation.ts",
+      "sha256": "7636aaceb28979da287cf7bc68d74a72700ae777a1322f0cbb34ee4f5aa56e88"
+    },
+    {
+      "path": "game/core/src/ui/contentPresentationLoader.ts",
+      "sha256": "144fcd89de0ba8366f6d12f2ea3069c92ad8ac8ff34281bdb39fea005040506b"
+    },
+    {
+      "path": "game/core/src/ui/gamescreen.ts",
+      "sha256": "d6785189a79c4343ba1491252d7db5bc70eab5266a6a500c6c64f9ec67fe1006"
+    },
+    {
+      "path": "game/core/src/ui/hud.ts",
+      "sha256": "a7ea378fbcf06a3aa3cd051b5528b02ac1b3a99de68e7e321c883157771d6b1d"
+    },
+    {
+      "path": "game/core/src/core/audio.ts",
+      "sha256": "ec71e3e1665907d15fad3dd848161f856245f58c7839de2ab03842acd66fd590"
+    },
+    {
+      "path": "game/core/server/extension-feedback.test.ts",
+      "sha256": "1e700c741510cc2c8949ae5cf020c5437a120534bb9234abc85cdd5c9123ec15"
+    },
+    {
+      "path": "game/core/server/content-cold.test.ts",
+      "sha256": "063abeb6b21356ca45cf5cda39c062698904306205a61a26afa50a98557d6b52"
+    },
+    {
+      "path": "game/core/src/game/extensions/runtime.ts",
+      "sha256": "55e4570e81870407612a6890e2f169c2ff96827b25425b9e1fc436e661e6bea2"
+    },
+    {
+      "path": "game/core/src/game/extensions/sdk.ts",
+      "sha256": "4354625e16b51336de46b6319c7a3600be0eeefb7cf3c3a53ff510d942dac423"
+    }
+  ],
+  "environment": {
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "node": "v24.13.1",
+    "bun": "1.2.20"
+  },
+  "note": "Final snapshot includes optional cached-resource reload/WeakRef ownership and shot-wrapper fixes, plus review fixes for inherited feedback disposal and scoped music transaction rollback. The original candidate-provenance.json retains exact timing snapshot. Only source/build witnesses were refreshed after review; no timing report was relabeled."
+}

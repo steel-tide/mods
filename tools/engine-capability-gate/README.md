@@ -96,6 +96,9 @@ needed. `--engines chromium,webkit --rounds 1` runs A/A controls and ABBA in fre
 browser processes. `--samples 1` is a functional smoke check only. It records
 boot-ready time, screen-entry time, Chromium's collected JS heap and requested
 chunks; it never converts a percentage tolerance into a performance pass.
+`--chrome` and `--webkit` can select explicit already-installed browser binaries;
+the actual browser version is recorded with every sample. These options do not
+download or install browsers.
 
 The current user requirement permits small integration payload growth while
 requiring no measurable vanilla runtime degradation. Byte growth remains

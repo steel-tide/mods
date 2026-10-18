@@ -87,6 +87,12 @@ for (const folder of folders) {
       if (!existsSync(file)) { errors.push({ path: `music.tracks[${i}].file`, message: `${track.file} is missing` }); continue; }
       if (!isAudio(readFileSync(file))) errors.push({ path: `music.tracks[${i}].file`, message: `${track.file} is not an MP3, WAV or OGG` });
     }
+    for (const [i, pkg] of (mod.extensionPackages ?? []).entries()) {
+      for (const [key, resource] of Object.entries(pkg.assets ?? {})) {
+        const path = `extensionPackages[${i}].assets.${key}`, file = join(folder, resource);
+        if (!existsSync(file)) errors.push({ path, message: `${resource} is missing` });
+      }
+    }
     // the pictures: the registry shows a mod by them, so a published mod has at least one
     const shots = mod.screenshots ?? [];
     if (shots.length === 0) errors.push({ path: 'mod.screenshots', message: 'a published mod carries at least one screenshot of itself in play (4:3, under screenshots/), named here' });

@@ -8,10 +8,11 @@ repository root. See [EXTENSION-FRAMEWORK.md](EXTENSION-FRAMEWORK.md) for the
 public host contract.
 
 The M0–M4 work below records the UCGR implementation scope and acceptance
-criteria. Its current 0.4.0 integration binds T-90M AP/HE components and resupply,
+criteria. Its current 0.5.0 integration binds T-90M AP/HE components and resupply,
 MiG-29 radar contacts, and HJ-8 deployment with its exposed member, alongside
 magazines and independent mounts. These are verified slices, not full source
-parity. UCGR's implementations and feature guides now belong under
+parity. M6 adds original voice and component feedback, verified muzzle geometry
+and native recoil bindings. UCGR's implementations and feature guides belong under
 `mods/usgr-re/extensions/combined-arms-v1/`; they are not a framework requirement
 for another mod.
 
@@ -230,8 +231,9 @@ and bound its scalability. Those results cannot relax the vanilla gate.
 
 ## Delivery sequence
 
-The authorized implementation scope is M0–M4 in one pass, with the mandatory
-M0 performance gate before expanding the prototype. M5–M6 remain future work.
+M0–M4 are implemented as documented below. M6 is now authorized for both the
+generic host and the UCGR pack, with the same mandatory vanilla regression gate.
+M5 is explicitly skipped: its authored deployment match is a separate mode.
 Generic component feedback ships inside M1; presentation is not postponed
 until the last milestone.
 
@@ -434,6 +436,9 @@ the current same-kind morph restriction and hope occupancy remains correct.
 
 ### M5: authored match and deck systems
 
+**Skipped for this work.** The following is a future design, not an implemented
+mode or part of the M6 acceptance scope.
+
 Extend the World system's current variables, expressions, counters, triggers
 and scripted results. Add generic purchase/deployment offers with costs,
 availability, cooldown, limits, spawn regions and cancellation/refund rules.
@@ -455,6 +460,29 @@ mobile performance before increasing them. Do not resize an original map and
 call it faithful.
 
 ### M6: authored feedback and roster growth
+
+The host now supplies package-owned resource files, match-entry local feedback
+composition, recording playback through the existing voice mixer, and disposable
+scopes over the existing music queues. UCGR owns its voice bindings and typed
+component indicators. Its original mode-specific music remains omitted with M5;
+ordinary Conquest factions do not imply that soundtrack. The pack also reuses
+native recoil. Its converter records 139 source weapon origins, including 30
+proven fixed aircraft hardpoints, and 11 verified barrel-recoil bindings. Six
+unresolved origins remain flagged rather than guessed. No definition or asset
+caps are raised. Detailed provenance and blocked
+roster candidates remain in the local UCGR draft.
+
+The local implementation has 41 original recorded clips, five component-icon
+pairs, and checks for original silence, fog-filtered observations, spectator
+visibility, save/delta restoration and disposal. Existing source mechanics
+still block the audited roster additions; M6 does not enable them with missing
+defining behavior. M5 remains skipped.
+
+The [M6 performance record](engine-compatibility/2026-10-18-m6/README.md) proves
+byte-identical vanilla simulation/replication code and unchanged render bodies.
+Desktop rendering samples show no slowdown. Cold startup parity remains
+inconclusive; the strict checker also records the changed HUD voice event.
+These results do not establish the full cross-device shipping gate.
 
 Add generic selection/order voice references, typed state cosmetics and
 scenario/faction music selection where needed. Selection voices are local

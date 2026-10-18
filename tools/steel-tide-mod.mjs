@@ -77,7 +77,20 @@ function validCapabilityId(value) {
   return typeof value === "string" && /^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,63}$/.test(value) && !["__proto__", "constructor", "prototype"].includes(value);
 }
 function extensionPackageStamp(pkg) {
-  return `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}`;
+  const resources = pkg.assets ? ":" + resourceFingerprint(pkg.assets) : "";
+  return `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}${resources}`;
+}
+function resourceFingerprint(assets) {
+  const text = JSON.stringify(Object.entries(assets).sort(([a2], [b2]) => a2 < b2 ? -1 : a2 > b2 ? 1 : 0));
+  let a = 2166136261, b = 2654435769, c = 2246822507, d = 3266489909;
+  for (let i = 0; i < text.length; i++) {
+    const n = text.charCodeAt(i);
+    a = Math.imul(a ^ n, 16777619);
+    b = Math.imul(b ^ n, 2246822507);
+    c = Math.imul(c ^ n, 3266489909);
+    d = Math.imul(d ^ n, 668265263);
+  }
+  return [a, b, c, d].map((n) => (n >>> 0).toString(16).padStart(8, "0")).join("");
 }
 const K = new Uint32Array([
   1116352408,
@@ -207,7 +220,7 @@ function checkExtensionPackages(raw, path, issues) {
       continue;
     }
     for (const key of Object.keys(value))
-      if (!["id", "version", "api", "capabilities", "schema", "runtime", "presentation"].includes(key))
+      if (!["id", "version", "api", "capabilities", "schema", "runtime", "presentation", "assets"].includes(key))
         issues.push({ path: `${p}.${key}`, message: "unsupported field" });
     if (!validCapabilityId(value.id) || ids.has(value.id))
       issues.push({ path: `${p}.id`, message: "must be a unique bounded identifier" });
@@ -219,6 +232,15 @@ function checkExtensionPackages(raw, path, issues) {
     if (!Array.isArray(value.capabilities) || !value.capabilities.length || value.capabilities.length > 32 || new Set(value.capabilities).size !== value.capabilities.length || value.capabilities.some((id) => !validCapabilityId(id) || capabilities.has(id)))
       issues.push({ path: `${p}.capabilities`, message: "must declare unique bounded capability IDs" });
     else for (const id of value.capabilities) capabilities.add(id);
+    if (value.assets !== void 0) {
+      if (!rawObject(value.assets) || Object.keys(value.assets).length > 256)
+        issues.push({ path: `${p}.assets`, message: "must map up to 256 resource IDs to relative files" });
+      else for (const [id, file] of Object.entries(value.assets)) {
+        if (!validCapabilityId(id)) issues.push({ path: `${p}.assets.${id}`, message: "must be a bounded resource identifier" });
+        if (typeof file !== "string" || !/^(?!\/)(?!.*\.\.)[A-Za-z0-9_./-]{1,120}$/.test(file))
+          issues.push({ path: `${p}.assets.${id}`, message: "must be a relative path inside the owning mod" });
+      }
+    }
     for (const part of ["schema", "runtime", "presentation"]) {
       const code = value[part];
       if (part === "presentation" && code === void 0) continue;
@@ -320,7 +342,7 @@ function readExtensions(raw, pack, path, issues, context, weapon = false) {
       });
       continue;
     }
-    const config = reader(value, `${path}.${id}`, issues, context);
+    const config = reader(value, `${path}.${id}`, issues, { ...context, assetIds: new Set(Object.keys(pkg?.assets ?? {})) });
     if (config !== void 0) out[id] = config;
   }
   return Object.keys(out).length ? out : void 0;
@@ -10182,7 +10204,7 @@ const FILE_RE = /^(?!\/)(?!.*\.\.)[A-Za-z0-9_./-]{1,120}$/;
 const IMAGE_FILE_RE = /\.(png|jpe?g|webp)$/i;
 const MAP_FILE_RE = /\.(steel-tide-map|json)$/i;
 function definitionFiles(mod) {
-  return [...(mod.sprites ?? []).map((s) => s.file), ...(mod.sounds ?? []).map((s) => s.file), ...(mod.music?.tracks ?? []).map((t) => t.file), ...mod.maps ?? []];
+  return [.../* @__PURE__ */ new Set([...(mod.sprites ?? []).map((s) => s.file), ...(mod.sounds ?? []).map((s) => s.file), ...(mod.music?.tracks ?? []).map((t) => t.file), ...mod.maps ?? [], ...(mod.extensionPackages ?? []).flatMap((pkg) => Object.values(pkg.assets ?? {}))])];
 }
 const ARMOR_CLASSES = ["light", "medium", "heavy", "ship", "sub", "air", "structure"];
 const TARGET_DOMAINS = ["ground", "ship", "sub", "air"];
@@ -10824,6 +10846,11 @@ function parseDefinitionPack(input) {
     sounds,
     ...files ? { files } : {}
   };
+  if (files) {
+    for (const [i, pkg] of (mod.extensionPackages ?? []).entries())
+      for (const [id, file] of Object.entries(pkg.assets ?? {}))
+        if (!Object.hasOwn(files, file)) errors.push({ path: `extensionPackages[${i}].assets.${id}`, message: `"${file}" is not among the embedded files` });
+  }
   const resolved = resolveDefinitions(mod, VANILLA);
   if (defs.length === 0 && terrains.length === 0 && !CONTENT_MUSIC_SLOTS.some((slot) => mod.music?.[slot] !== void 0) && !mod.menuBackground?.queue?.length) errors.push({ path: "mod.defs", message: "a mod needs at least one def, terrain variant, music queue or menu background" });
   errors.push(...resolved.errors);
@@ -12068,6 +12095,7 @@ function agentPrompt() {
   p();
   p("Format 4 packs carry their own `extensionPackages`: versioned, SHA-256 verified schema, simulation and optional presentation code. Extension source, build steps, tests and documentation belong to the mod that owns them; its manifest embeds the executable package. Each mod can define its own namespaced capability IDs and configuration without a shared gameplay package or an engine catalog. The engine provides host API version 1. Declare package-provided IDs in `requiredCapabilities`, then put their data under `extensions[id]`. Only content which requests extensions prepares the optional host. Extension code is executable trusted code, not sandboxed data.");
   p("Executable packages require `v:4`. Formats 1 and 2 and ordinary format 3 data remain supported; former built-in capability packs need compatible implementations embedded in format 4. A missing/unsupported capability rejects activation. Vanilla keeps its ordinary simulation; optional state and update work belong to the enabled match. Package schemas own their accepted fields, bounds, defaults and localization requirements.");
+  p('A package may declare `assets: { resourceId: "relative/file.wav" }` (up to 256 entries). These files travel with the ordinary folder, packed file and world; the existing total asset-size limit applies. Its schema receives only its own `assetIds`; its browser factory receives `asset(id)` to resolve installed bytes without fetching arbitrary URLs. Optional `feedback(context, base)` selects local voice behavior once at match entry and returns `unitVoice` plus an optional `dispose`. Use the host recording mixer and scoped music queues, release package recordings and music scopes on disposal, and reuse native rendering/recoil where suitable. Gameplay-specific recording choices and cosmetic predicates belong to the mod.');
   p();
   p(`Read the [extension framework guide](${MOD_REGISTRY_WEB}/blob/main/docs/EXTENSION-FRAMEWORK.md) for the generic package contract, lifecycle, host SDK and trust model. Gameplay behavior and configuration are documented inside the mod that supplies the package.`);
   p();

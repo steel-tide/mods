@@ -17,7 +17,7 @@ const {chromium,webkit}=await import(pathToFileURL(playwrightPath).href);
 const kinds=arg('--engines','chromium,webkit').split(','), rounds=Number(arg('--rounds','1'));
 const sampleLimit=Number(arg('--samples','0'));
 if(!kinds.every(x=>['chromium','webkit'].includes(x))||!Number.isInteger(rounds)||rounds<1)throw Error('Invalid engines/rounds');
-const optionalPattern=/\/src\/(?:game\/(?:extensions\/(?!contracts\.)|contentCapabilityLoader\.)|render\/(?:contentRenderer|contentInput|generatedContentRenderer)\.|ui\/(?:contentHud|contentPresentationLoader)\.)/;
+const optionalPattern=/\/src\/(?:game\/(?:extensions\/(?!contracts\.)|contentCapabilityLoader\.)|render\/(?:contentRenderer|contentInput|generatedContentRenderer)\.|ui\/(?:contentHud|contentFeedback|contentResources|contentPresentationLoader)\.)/;
 const mime={'.js':'text/javascript','.html':'text/html','.css':'text/css','.json':'application/json','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.mp3':'audio/mpeg','.ogg':'audio/ogg','.ico':'image/x-icon'};
 const graphs=Object.fromEntries(['base','candidate'].map(v=>[v,JSON.parse(readFileSync(resolve(builds,`web-${v}-graph.json`),'utf8'))]));
 const optional=new Set(graphs.candidate.filter(o=>o.type==='chunk'&&o.modules.some(m=>optionalPattern.test('/'+m))).map(o=>'/'+o.file));
@@ -69,7 +69,7 @@ try {
   for(const [index,choice] of sequence.slice(0,sampleLimit||undefined).entries()) {
    serving=choice.variant;requestLog=[];let browser;
    try {
-    browser=await (kind==='chromium'?chromium.launch({headless:true,executablePath:arg('--chrome','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'),args:['--force-color-profile=srgb','--mute-audio']}):webkit.launch({headless:true}));
+    browser=await (kind==='chromium'?chromium.launch({headless:true,executablePath:arg('--chrome','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'),args:['--force-color-profile=srgb','--mute-audio']}):webkit.launch({headless:true,executablePath:arg('--webkit',undefined)}));
     const context=await browser.newContext({viewport:{width:1280,height:720},deviceScaleFactor:1,locale:'en-US',serviceWorkers:'allow'});
     await context.addInitScript(initialization);
     const page=await context.newPage(),cdp=kind==='chromium'?await context.newCDPSession(page):null;

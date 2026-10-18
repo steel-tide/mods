@@ -59,6 +59,8 @@ A descriptor contains:
 - `capabilities`, in the package's deterministic initialization order.
 - `schema` and `runtime`, each `{source, sha256}`.
 - Optional `presentation`, also `{source, sha256}`.
+- Optional `assets`, mapping up to 256 package-local resource IDs to safe relative
+  paths inside the owning mod. Existing total file-size limits still apply.
 
 Each source is a self-contained ES module exporting a default host factory.
 The factory receives an SDK object and returns the part's exports. Modules may
@@ -78,10 +80,43 @@ configuration, RNG through the match, firing/damage and ordinary order functions
 Instances implement lifecycle, private state, restoration, commands and inspection
 through `extensions/contracts.ts` in the game.
 
+An instance may expose `wrapShot(next)`, composed once when an extended match
+is constructed. It wraps the native emitter for both weapon bursts and explicit
+host launches, before projectile and muzzle-effect creation. Keep authored
+definitions immutable and forward unmodified arguments for unrelated weapons.
+The host preserves the original weapon context for `onShot`; geometry adapters
+belong to their owning package. Vanilla does not load or call this composition.
+
 The optional presentation factory receives the browser SDK and exports
 `presentation(base)`, returning Renderer/Input subclasses. Packages compose in
 content order. The generic HUD renders package-owned rows/actions and language
 tuples. Dedicated servers and module workers never import the browser SDK.
+
+The browser SDK's `asset(id)` resolves only that package's declared resources to
+installed data URLs. Resource files travel through ordinary folder/zip imports,
+offline packing and embedded worlds. No separate download or repository is
+needed. Schema readers receive the supplying package's `context.assetIds` for
+reference validation. A changed resource mapping changes package identity;
+reloading content refreshes asset readers even when executable code is unchanged.
+
+Presentation exports may also supply `feedback(context, base)`, where context
+contains the match, local player and spectator status. It returns a `unitVoice`
+callback and optional `dispose`. The host composes these once at match entry and
+routes selection and accepted local commands through the selected callback.
+There is no simulation broadcast or frame-loop feedback lookup. Disposers run
+in reverse order, including cleanup after partial setup failure.
+Each factory returns only its own cleanup; it must not call `base.dispose`
+itself. Forwarding an unchanged inherited disposer does not register it twice.
+
+`playRecordedUnitVoice(defId, action, entityId, takes, {gain, repeatMs})` uses the
+existing voice volume, priority, music ducking and destroyed-speaker cleanup.
+Takes are installed data URLs; absent or undecodable recordings stay silent.
+Release used URLs with `releaseRecordedVoiceResources(takes)` on disposal.
+`pushMusicQueues(queues)` layers a local match/faction choice over the existing
+music player and returns an idempotent disposer. It restores the current content
+queues, including intervening content changes; it does not create another player.
+State cosmetics use the existing optional renderer and fog-filtered module view.
+Native recoil remains available through the presentation SDK.
 
 ## Loading and trust
 
@@ -146,3 +181,6 @@ and package ownership describe that dated revision. Current implementations
 belong inside their individual mods. Native function bodies are checked separately
 from timing. No reproducible vanilla slowdown is acceptable; lack of a measured
 slowdown in a desktop experiment does not establish a universal zero-cost claim.
+The [M6 evidence](engine-compatibility/2026-10-18-m6/README.md) records package
+feedback and launch wrappers, exact hot-path identity, browser measurements and
+the still-inconclusive strict cold-start parity result.

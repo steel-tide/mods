@@ -27,6 +27,7 @@ export async function packMod(folder) {
   if (!parsed.ok) return { ok: false, errors: parsed.errors };
   const files = {};
   const assets = [...(parsed.mod.sprites ?? []), ...(parsed.mod.sounds ?? []), ...(parsed.mod.music?.tracks ?? [])].map(({ file }) => file);
+  assets.push(...(parsed.mod.extensionPackages ?? []).flatMap(pkg => Object.values(pkg.assets ?? {})));
   for (const file of new Set([...assets, ...(parsed.mod.maps ?? [])])) {
     const bytes = readFileSync(join(folder, file));
     const mime = file.endsWith(CUSTOM_MAP_EXT) ? 'application/json' : MIME[extname(file).toLowerCase()] ?? 'application/octet-stream';
