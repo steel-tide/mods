@@ -217,7 +217,7 @@ Own art, a defended building, and a fourth level for a vanilla building line:
 
 ## Fields
 
-Unknown ordinary fields produce a warning. Format-3 extension objects reject unknown fields and unsupported combinations. Numbers outside the stated range are errors.
+Unknown ordinary fields produce a warning. Each extension package defines and validates its own configuration. Numbers outside the stated range are errors.
 
 ### mod.json (top level)
 
@@ -250,10 +250,10 @@ Unknown ordinary fields produce a warning. Format-3 extension objects reject unk
 
 ### Extension packages (format 4)
 
-Format 4 packs carry `extensionPackages`: versioned, SHA-256 verified schema, simulation and optional presentation code. The engine provides host API version 1 and no built-in gameplay capability catalog. Declare package-provided IDs in `requiredCapabilities`, then put their data under `extensions[id]`. Only content which requests extensions prepares the optional host. Extension code is executable trusted code, not sandboxed data.
-Executable packages require `v:4`. Formats 1 and 2 and ordinary format 3 data remain supported; former built-in capability packs need compatible implementations embedded in format 4. A missing/unsupported capability rejects activation. Vanilla keeps its ordinary simulation; optional state and update work belong to the enabled match. The shared combined-arms package requires complete non-empty `[en, zh, ko]` label tuples and accepts the fixed data policies its own schema defines.
+Format 4 packs carry their own `extensionPackages`: versioned, SHA-256 verified schema, simulation and optional presentation code. Extension source, build steps, tests and documentation belong to the mod that owns them; its manifest embeds the executable package. Each mod can define its own namespaced capability IDs and configuration without a shared gameplay package or an engine catalog. The engine provides host API version 1. Declare package-provided IDs in `requiredCapabilities`, then put their data under `extensions[id]`. Only content which requests extensions prepares the optional host. Extension code is executable trusted code, not sandboxed data.
+Executable packages require `v:4`. Formats 1 and 2 and ordinary format 3 data remain supported; former built-in capability packs need compatible implementations embedded in format 4. A missing/unsupported capability rejects activation. Vanilla keeps its ordinary simulation; optional state and update work belong to the enabled match. Package schemas own their accepted fields, bounds, defaults and localization requirements.
 
-Read [components, protection, crew, ammunition and services](https://github.com/steel-tide/mods/blob/main/docs/engine-compatibility/M1-M2-AUTHORING.md) and [sensors, guidance, mounts and deployment](https://github.com/steel-tide/mods/blob/main/docs/engine-compatibility/SENSORS-ARTICULATION-V1.md) for the exact accepted fields, bounds, defaults, units, actions and explicit omissions. [Runnable study fixtures](https://github.com/steel-tide/mods/tree/main/docs/engine-compatibility/fixtures) are isolated acceptance examples, not full source-mod ports.
+Read the [extension framework guide](https://github.com/steel-tide/mods/blob/main/docs/EXTENSION-FRAMEWORK.md) for the generic package contract, lifecycle, host SDK and trust model. Gameplay behavior and configuration are documented inside the mod that supplies the package.
 
 For locally chosen content, game/API consumers must `await prepareContentSchema(raw, true)` before synchronously calling `parseDefinitionPack(raw)` or `parseMod(raw)` on capability-bearing content; await `prepareContentCapabilities(packs)` before opening a match. For a world, prepare its embedded packs by passing the raw world to `prepareContentSchema`. Registry tooling likewise explicitly approves local files. Network inputs use `prepareContentSchema(raw)` and cannot approve unknown code. Read the extension framework guide in the mod repository for package ownership, trust and SDK details. Never ignore a schema or capability loading failure.
 

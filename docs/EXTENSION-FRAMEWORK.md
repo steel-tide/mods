@@ -1,35 +1,59 @@
 # Content extension packages
 
-The game supplies a versioned host. Gameplay capabilities are executable packages
-in this mod repository. There is no engine catalog of component, logistics,
-sensor or articulation implementations.
-
-The shared [`combined-arms` package](../extensions/combined-arms-v1/README.md)
-provides those four capabilities. The unfinished local UCGR draft embeds it in
-`mod.json`; `mods/usgr-re` is currently ignored by Git and excluded from the
-published registry. Its files remain available for local development. Other definition packs
-can embed the identical package without creating another selectable faction or
-requiring a second mod installation.
+The game supplies a versioned extension host. Each mod carries and maintains its
+own extension implementations, alongside its definitions and assets. The game
+and the registry have no catalog of component, logistics, sensor or articulation
+implementations. A mod can supply new gameplay through the host API without
+using another mod's package or adding its implementation to the game.
 
 ## Ownership
 
-| Game host | Extension package | Definition pack |
-| --- | --- | --- |
-| Package validation, integrity, local approval and loading | Configuration readers and cross-definition checks | Required capability IDs and pinned package descriptor |
-| Versioned simulation SDK, lifecycle and selected optional kernels | Component, ammunition, sensor and assembly algorithms | Unit layouts, armor, stocks, sensors and source formulas |
-| Authoritative orders, match state, saves and filtered frames | Private state, actions, restoration and redaction policies | Unit names, artwork, sounds and translations |
-| Generic status/action HUD, rendering and input SDK | Specialized drawing and selection adapters | Original sprites and localized presentation data |
+| Game host | Individual mod |
+| --- | --- |
+| Package validation, integrity, local approval and loading | Package source, build, version and embedded descriptor |
+| Versioned simulation SDK, lifecycle and selected optional kernels | Its own capability IDs, configuration readers and gameplay algorithms |
+| Authoritative orders, match state, saves and filtered frames | Private state, actions, restoration and redaction policies |
+| Generic status/action HUD, rendering and input SDK | Specialized drawing/input adapters, localized labels and original assets |
+| Generic contract tests and vanilla regression gates | Feature tests, fixtures, authoring guides and compatibility reports |
 
-Adding another capability through the existing SDK requires no game edit.
-Adding a new host primitive or breaking its API requires an engine change and
-an explicit API version decision. Vanilla keeps its ordinary constructors and
-kernels. No per-entity extension dispatch is added to its simulation or drawing.
+A mod may organize its sources like this; the host reads the embedded descriptor
+in `mod.json`, so the source directory name is an authoring choice:
+
+```text
+mods/my-mod/
+  mod.json
+  extensions/
+    my-system-v1/
+      src/
+      test/
+      docs/
+      build.mjs
+      extension.json
+  sprites/
+```
+
+The mod's build embeds its own descriptor in `extensionPackages`. Installation
+carries the complete extension with the mod; it does not require a separate
+selectable pack or a repository-level gameplay library. The public framework
+guide describes the host contract. A feature's accepted fields, algorithms and
+fixtures belong with the mod that implements them.
+
+Adding a capability through the existing SDK requires no game edit. Adding a
+new host primitive or breaking its API requires an engine change and an explicit
+API version decision. Vanilla keeps its ordinary constructors and kernels. No
+per-entity extension dispatch is added to its simulation or drawing.
 
 ## Package format
 
 Format 4 adds `extensionPackages` to the existing additive definition-pack
 format. `requiredCapabilities` is a bounded list of package-defined IDs, rather
-than a fixed engine enum. A descriptor contains:
+than a fixed engine enum. Choose namespaced package and capability IDs, such as
+`my-mod.systems-v1` and `my-mod.heat-v1`, to avoid collisions with other mods.
+Namespaces are an authoring convention; the host does not rewrite IDs. A mod
+supplies the matching schema and runtime for every required capability and puts
+its definition or weapon configuration under `extensions[capabilityId]`.
+Conflicting providers are rejected rather than chosen by installation order.
+A descriptor contains:
 
 - `id`, semantic `version`, and host `api` (currently `1`).
 - `capabilities`, in the package's deterministic initialization order.
@@ -39,7 +63,8 @@ than a fixed engine enum. A descriptor contains:
 Each source is a self-contained ES module exporting a default host factory.
 The factory receives an SDK object and returns the part's exports. Modules may
 not depend on a source checkout, package manager, or another downloaded script.
-The package build verifies that no engine source is bundled into its output.
+A package build should verify that no engine implementation is bundled into its
+output; the supplied host SDK is its integration boundary.
 The descriptor is embedded directly so folders, packed files, registry downloads,
 worlds and offline saves carry the same exact source. Metadata remains bounded
 by the game's manifest limit; individual source strings are at most 512 KiB.
@@ -107,13 +132,17 @@ world/save content is not silently rebound to an arbitrary installed version.
 
 ## Verification and performance
 
-The core tests use an unrelated `test-counter-v1` package to prove arbitrary IDs,
-loading, orders, persistence, unload, integrity rejection and version isolation.
-The component/logistics/sensor/articulation suites live beside their implementation
-and still exercise the real engine, server, browser adapters and CLI. UCGR retains
-its source-specific pack tests.
+The core tests use unrelated counter packages to prove arbitrary IDs,
+independent mods running together, orders, persistence, disposal, return to
+vanilla, integrity rejection and version isolation. The [ownership verification](engine-compatibility/2026-10-18-mod-owned-extensions/README.md)
+records the current layout and checks.
+Each mod keeps its feature suites beside its implementation and exercises the
+real engine, server, browser adapters and CLI as needed. Shared host tests must
+not import a particular mod or depend on a local draft.
 
 The [refactor evidence](engine-compatibility/2026-10-16-external-packages/README.md)
-compares against engine `31095b4f`. Native function bodies are checked separately
+records the earlier extraction against engine `31095b4f`; its directory paths
+and package ownership describe that dated revision. Current implementations
+belong inside their individual mods. Native function bodies are checked separately
 from timing. No reproducible vanilla slowdown is acceptable; lack of a measured
 slowdown in a desktop experiment does not establish a universal zero-cost claim.

@@ -1,23 +1,31 @@
 # Content compatibility extension plan
 
-Status: M0–M4 gameplay implementations now live in reusable extension packages in
-this mod repository; the game supplies the generic host. See
-[EXTENSION-FRAMEWORK.md](EXTENSION-FRAMEWORK.md) for the current architecture. The current **0.4.0**
-UCGR integration now binds real source cases in the existing
-[`mods/usgr-re`](../mods/usgr-re/README.md) pack: T-90M AP/HE components and
-resupply, MiG-29 radar contacts, and HJ-8 deployment with its exposed member,
-in addition to the existing magazines and independent mounts. These are
-specific verified slices, not a full implementation of every source system.
-See the [pack boundaries](../mods/usgr-re/COMPATIBILITY.md).
+Current ownership: each mod carries its own extension source, descriptor,
+feature tests, authoring documentation and fixtures inside that mod's folder.
+The game supplies the generic host and SDK; the registry supplies distribution
+and validation tooling. There is no shared gameplay extension library at the
+repository root. See [EXTENSION-FRAMEWORK.md](EXTENSION-FRAMEWORK.md) for the
+public host contract.
+
+The M0–M4 work below records the UCGR implementation scope and acceptance
+criteria. Its current 0.4.0 integration binds T-90M AP/HE components and resupply,
+MiG-29 radar contacts, and HJ-8 deployment with its exposed member, alongside
+magazines and independent mounts. These are verified slices, not full source
+parity. UCGR's implementations and feature guides now belong under
+`mods/usgr-re/extensions/combined-arms-v1/`; they are not a framework requirement
+for another mod.
 
 UCGR remains unfinished. Its `mods/usgr-re` folder is a local ignored draft,
 excluded from Git tracking and registry publication until the port is ready.
+Its compatibility report and feature documentation stay in that draft; this
+public plan and the generic host guide do not require those files.
 
 The user clarified the critical gate: **a few KB of new code is acceptable;
 there must be no measurable vanilla runtime degradation.** No percentage
 slowdown allowance is granted. Optional feature code/state remains lazy and
 native hot bodies remain unchanged. The [external-package refactor evidence](engine-compatibility/2026-10-16-external-packages/README.md)
-records the current host extraction. The [earlier isolation evidence](engine-compatibility/2026-10-16-isolation/README.md)
+records the earlier host extraction and the ownership at that revision.
+The [earlier isolation evidence](engine-compatibility/2026-10-16-isolation/README.md)
 covers cold imports, production startup and retained heap in Chromium and
 desktop WebKit, including measurement limits. The [earlier M0–M4 record](engine-compatibility/2026-10-16-m0-m4/README.md)
 remains a historical snapshot, not a claim of current pack coverage.
@@ -31,12 +39,13 @@ old saves are not silently rebound to an arbitrary implementation. Restore unsup
 features only after their actual behavior can be expressed and verified; leave
 the omission in place until then.
 
-| Game host owns | Extension package or definition pack owns |
+| Game host owns | Each mod owns |
 | --- | --- |
-| Loading, host ABI, lifecycle, integrity and local approval | Versioned implementation modules and required capability IDs |
+| Loading, host ABI, lifecycle, integrity and local approval | Its extension source, versioned descriptor and namespaced capability IDs |
 | Generic simulation SDK, orders, save/frame bridges and optional kernels | Component, crew, supply, sensor, guidance and assembly algorithms |
 | Generic status/action HUD and presentation SDK | Feature drawing/input adapters, localized labels and original art |
 | World primitives and content activation | Source setup, deck/economy data and scenarios within supported contracts |
+| Generic contract tests and vanilla regression gates | Feature tests, fixtures, authoring guides and compatibility reports |
 
 No engine branch may test a UCGR pack ID, source filename, vehicle name or
 translated string. A component called `driver` must not gain movement effects
@@ -49,7 +58,8 @@ references. Only shared interface vocabulary, such as Repair, Disabled and
 Reloading, belongs in `core/strings.ts`. Simulation uses stable IDs; changing
 language cannot change behavior. Reuse the existing `t()`/`pick()` and content
 text lifecycle, including removal when content is disabled. Custom text and
-art do not grant packs HTML, CSS or interface-code execution.
+art remain data. Approved presentation modules use the browser SDK; they are
+executable JavaScript and are covered by the package trust boundary.
 
 ## What already exists
 
@@ -80,10 +90,18 @@ content never starts one.
 
 ## Capability module architecture
 
-Capabilities are versioned executable packages supplied by content and approved
-locally. The engine provides a generic host API and no gameplay module catalog.
-Package code is trusted JavaScript, not sandboxed configuration. A match resolves its required module
-set once at creation; the set and dependency order remain fixed for that match.
+Capabilities are versioned executable packages carried by their individual mods
+and approved locally. Each mod may define its own namespaced capability IDs,
+schema, simulation and optional presentation through the host API. The engine
+has no gameplay module catalog; another mod need not adopt UCGR's implementation
+or its data model. A mod embeds every implementation it requires in its own
+manifest, with no shared repository package or extra installation.
+
+Package code is trusted JavaScript, not sandboxed configuration. Integrity and
+local approval do not establish an isolated process or constrain JavaScript's
+ambient access. Network messages cannot approve unknown code. A match resolves
+its required module set once at creation; initialization order remains fixed
+for that match.
 A vanilla match keeps the direct runtime. An extended match binds a specialized
 runtime with only the required modules and disposes its state on exit.
 
@@ -92,12 +110,10 @@ flowchart TD
     Packs[Definition packs with approved hashed packages] --> Setup[Resolve requirements at match setup]
     Setup -->|No capabilities| Native[Native Game and presentation]
     Setup -->|Required capabilities| Extended[Optional match runtime]
-    Extended --> Package[Mod-owned combined-arms package]
-    Package --> Components[Components and crew]
-    Package --> Logistics[Feeds, supplies and suppression]
-    Package --> Sensors[Contacts and guidance]
-    Package --> Articulation[Mounts, attachments and deployment]
-    Extended --> State[Match-owned state, codecs and controls]
+    ModA[Mod A with its own schema, runtime and presentation] --> Packs
+    ModB[Mod B with its own schema, runtime and presentation] --> Packs
+    Extended --> Modules[Only the capabilities requested by active content]
+    Modules --> State[Match-owned state, codecs and controls]
 ```
 
 Each module owns its bounded schema, compiled definition data, participant
@@ -271,11 +287,12 @@ are design artifacts, not declarations that a proposed field already works.
 
 ## M1: component combat implementation and acceptance
 
-Implemented as `components-v1`, with schema, participant state, hit routing,
-actions and persistence owned by the optional module. The exact authoring
-contract is [M1/M2 authoring](engine-compatibility/M1-M2-AUTHORING.md); values,
-labels and the source-derived [T90 study](engine-compatibility/fixtures/T90-SYSTEMS-STUDY.md)
-remain in this repository. This is a bounded statistical component model.
+UCGR implements `components-v1` with schema, participant state, hit routing,
+actions and persistence owned by its extension. Its exact M1/M2 authoring guide
+lives in that extension's `docs/`; source-derived study fixtures live in its
+`test/fixtures/`. These contracts and the bounded statistical component model
+are UCGR implementation choices. Another mod may supply a different namespaced
+capability and schema using the same generic host contract.
 
 ### Armor and hit resolution
 
@@ -343,9 +360,9 @@ broader roster acceptance remains pack work.
 
 ### M2: ammunition, logistics and suppression
 
-Implemented as `logistics-v1`, an optional module beside the unchanged ordinary
-`ammo.ts` path. Stocks have explicit capacity and initial quantity. Alternative
-weapons in a feed share the committed reload clock; selecting a round cannot
+UCGR implements `logistics-v1` inside its own extension, beside the unchanged
+ordinary engine `ammo.ts` path. Stocks have explicit capacity and initial
+quantity. Alternative weapons in a feed share the committed reload clock; selecting a round cannot
 reset cooldown or fire another barrel. A stock cost is paid once per committed
 burst, including when its remaining rounds continue after the stock reaches
 zero. Explicit `refillAfter` is an unlimited timed empty-magazine policy; finite
@@ -474,12 +491,16 @@ content and runtime costs, not raised to fit the source inventory by default.
   additive fields are compatible. Do not bump `PROTOCOL_VERSION` or `SAVE_VERSION`
   merely for a mod; make the decision from the actual serialization change.
   A breaking wire change requires a coordinated four-platform release.
-- **Distribution:** regenerate mod/world checker bundles and generated author
-  documentation from the owning schemas; keep registry/editor/headless behavior
-  consistent. Content installation and activation still do not execute scenarios.
-- **Isolation:** no new runtime dependencies, arbitrary scripts, global balance
-  overrides or shell-specific gameplay. Generic commands and read models serve
-  browser, desktop, mobile, server and CLI.
+- **Distribution:** keep generic mod/world checker bundles and host author
+  documentation aligned with the host contract. Each mod builds and embeds its
+  own extension and owns its feature schemas, guides and fixtures. Keep
+  registry/editor/headless behavior consistent. Content installation and
+  activation still do not execute scenarios.
+- **Isolation:** the engine gains no runtime dependencies, mod-specific gameplay
+  or global balance overrides. Load executable packages only through the
+  approved package path; do not execute unknown code received from a peer.
+  Generic commands and read models serve browser, desktop, mobile, server and
+  CLI. The host is not a JavaScript sandbox.
 
 ## Validation and release gates
 
