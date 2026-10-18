@@ -14,10 +14,10 @@
  */
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { applyMods, imageSize, indexEntryFor, modRegistryBase, modSummaryFor, parseCustomMap, parseMod, parseModIndex } from './steel-tide-mod.mjs';
+import { applyMods, imageSize, indexEntryFor, modFiles, modRegistryBase, modSummaryFor, parseCustomMap, parseMod, parseModIndex } from './steel-tide-mod.mjs';
 import { prepareContentSchema } from './steel-tide-mod.mjs';
 import { registryModFolders } from './registry-folders.mjs';
 
@@ -29,6 +29,14 @@ const countsFile = args.includes('--counts') ? resolve(args[args.indexOf('--coun
 function lastChange(path) {
   try {
     return execFileSync('git', ['log', '-1', '--format=%cI', '--', path], { cwd: root, encoding: 'utf8' }).trim() || undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+function firstPublication(path) {
+  try {
+    return execFileSync('git', ['log', '--diff-filter=A', '--format=%cI', '--', path], { cwd: root, encoding: 'utf8' }).trim().split('\n').at(-1) || undefined;
   } catch {
     return undefined;
   }
@@ -73,7 +81,15 @@ for (const folder of registryModFolders(root)) {
     }
     applyMods([]);
   }
-  mods.push(indexEntryFor(parsed.mod, `mods/${name}`, modRegistryBase(name), { sizes, updated: lastChange(`mods/${name}`), downloads: counts[name] ?? 0, ...(maps.length ? { maps } : {}) }));
+  // Match the game's folder install: the manifest and unique referenced assets.
+  // Screenshots and repository docs are previews, not part of the download.
+  const bytes = Buffer.byteLength(raw) + modFiles(parsed.mod)
+    .filter((file) => !parsed.mod.files?.[file])
+    .reduce((total, file) => total + statSync(join(folder, file)).size, 0);
+  mods.push(indexEntryFor(parsed.mod, `mods/${name}`, modRegistryBase(name), {
+    sizes, bytes, published: firstPublication(`mods/${name}/mod.json`),
+    updated: lastChange(`mods/${name}`), downloads: counts[name] ?? 0, ...(maps.length ? { maps } : {}),
+  }));
 }
 
 const generated = new Date().toISOString();

@@ -30,6 +30,11 @@ test('the generator publishes summaries, matching details and a compatible legac
       mkdirSync(dirname(join(folder, file)), { recursive: true });
       writeFileSync(join(folder, file), png);
     }
+    const commit = (date) => execFileSync('git', ['-c', 'user.name=Registry test', '-c', 'user.email=registry@example.test', 'commit', '-qm', 'Mod publication'], {
+      cwd: fixture, env: { ...process.env, GIT_AUTHOR_DATE: date, GIT_COMMITTER_DATE: date },
+    });
+    execFileSync('git', ['add', 'mods/ironworks'], { cwd: fixture });
+    commit('2026-09-01T00:00:00Z');
     mkdirSync(join(fixture, 'details'));
     writeFileSync(join(fixture, 'details', 'removed-mod.json'), '{}');
     const countsFile = join(fixture, 'counts.json');
@@ -45,6 +50,8 @@ test('the generator publishes summaries, matching details and a compatible legac
     assert.equal(summary.units, 1);
     assert.equal(summary.buildings, 2);
     assert.equal(summary.downloads, 12);
+    assert.equal(new Date(summary.published).toISOString(), '2026-09-01T00:00:00.000Z');
+    assert.equal(summary.bytes, Buffer.byteLength(JSON.stringify(mod)) + mod.sprites.length * png.length);
     assert.match(summary.details, /^https:\/\/raw\.githubusercontent\.com\/steel-tide\/mods\/main\/details\/ironworks\/[a-f0-9]{16}\.json$/);
     const detailPath = join(fixture, new URL(summary.details).pathname.replace('/steel-tide/mods/main/', ''));
     for (const field of ['defs', 'sprites', 'sounds']) assert.equal(Object.hasOwn(JSON.parse(raw).mods[0], field), false);
@@ -63,9 +70,13 @@ test('the generator publishes summaries, matching details and a compatible legac
     assert.equal(readdirSync(join(fixture, 'details', 'ironworks')).length, 1);
     mod.version = '2.0.0';
     writeFileSync(join(folder, 'mod.json'), JSON.stringify(mod));
+    execFileSync('git', ['add', 'mods/ironworks'], { cwd: fixture });
+    commit('2026-09-19T00:00:00Z');
     build(23);
     const updated = parseModCatalog(readFileSync(join(fixture, 'catalog.json'), 'utf8')).mods[0];
     assert.notEqual(updated.details, summary.details);
+    assert.equal(updated.published, summary.published);
+    assert.equal(new Date(updated.updated).toISOString(), '2026-09-19T00:00:00.000Z');
     assert.equal(readFileSync(detailPath, 'utf8'), detailRaw);
     assert.ok(parseModDetail(detailRaw, summary));
     assert.equal(readdirSync(join(fixture, 'details', 'ironworks')).length, 2);

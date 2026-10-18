@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-17T08:39:55.294Z",
+  "generated": "2026-10-18T08:02:13.499Z",
   "mods": [
     {
       "id": "adolence",
@@ -10,8 +10,8 @@
         "Adolence·罪恶之都",
         "Adolence: City of Sin"
       ],
-      "version": "1.2.1",
-      "author": "自然常数也有人用? and the Adolence team; port by Steel Tide",
+      "version": "1.2.2",
+      "author": "自然常数也有人用? and the Adolence team",
       "description": [
         "The city police and the troops that come to their aid, their cruisers, tanks and helicopters, and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill.",
         "都市警力与前来增援的部队、他们的警车、坦克和直升机，以及他们要对付的死者——从你亲手放置的巢穴中繁殖，被它们杀死的警察也会尸变。",
@@ -23,6 +23,8 @@
       "path": "mods/adolence",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/adolence/",
       "updated": "2026-10-16T14:58:07+08:00",
+      "published": "2026-09-20T15:16:26+08:00",
+      "bytes": 756886,
       "downloads": 295,
       "screenshots": [
         {
@@ -2422,8 +2424,8 @@
         "进击の巨人『地鸣』",
         "Attack on Titan: The Rumbling"
       ],
-      "version": "0.1.2",
-      "author": "辣条QWQ (original by Mirka); port by Steel Tide",
+      "version": "0.1.3",
+      "author": "辣条QWQ (original by Mirka)",
       "description": [
         "The Walls and the Survey Corps on their gear, Marley's army, air fleet and Warriors, the Middle-East Allied Forces, and the Titans: shifters who take their Titan forms, Eldians who become mindless ones, and the Rumbling.",
         "城墙与驾驶立体机动装置的调查兵团，马莱的陆军、空军与战士，中东联合军，以及巨人：能变身的九大巨人继承者、化为无垢巨人的艾尔迪亚人，还有地鸣。",
@@ -2435,6 +2437,8 @@
       "path": "mods/aot-rumbling",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/aot-rumbling/",
       "updated": "2026-09-30T19:04:34+08:00",
+      "published": "2026-09-28T15:17:15+08:00",
+      "bytes": 9628083,
       "downloads": 81,
       "screenshots": [
         {
@@ -5682,6 +5686,8 @@
       "path": "mods/cyberpunk",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/cyberpunk/",
       "updated": "2026-10-16T14:58:07+08:00",
+      "published": "2026-10-14T19:00:56+08:00",
+      "bytes": 11709377,
       "downloads": 27,
       "screenshots": [
         {
@@ -7224,8 +7230,8 @@
         "FG 铁锈联盟",
         "FG Rusted League"
       ],
-      "version": "0.3.0",
-      "author": "空中之主 (art by 有人, 基卡 and SS元首); port by Steel Tide",
+      "version": "0.3.1",
+      "author": "空中之主 (art by 有人, 基卡 and SS元首)",
       "description": [
         "The whole army redrawn in black and acid green — Grizzly and Prism tanks, Kirov airships, Patriot batteries — and the GF plugin's carriers, dreadnoughts, sky fortresses, a Mirage tank that hides as a tree and a hero tank that ranks itself up.",
         "整套重绘的军队——灰熊、光棱坦克、基洛夫空艇、爱国者导弹——以及 GF 插件的航母、无畏战舰、空中堡垒、会变成树的幻影坦克和能自己升级的英雄坦克。",
@@ -7237,6 +7243,8 @@
       "path": "mods/fg-rusted-league",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/fg-rusted-league/",
       "updated": "2026-10-14T19:01:07+08:00",
+      "published": "2026-09-28T08:53:21+08:00",
+      "bytes": 741061,
       "downloads": 123,
       "screenshots": [
         {
@@ -10358,6 +10366,8 @@
       "path": "mods/hades-arsenal",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/hades-arsenal/",
       "updated": "2026-10-09T20:42:04+08:00",
+      "published": "2026-09-27T14:59:28+08:00",
+      "bytes": 579557,
       "downloads": 143,
       "screenshots": [
         {
@@ -10648,6 +10658,8 @@
       "path": "mods/ironworks",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/ironworks/",
       "updated": "2026-10-16T14:58:07+08:00",
+      "published": "2026-09-08T12:34:52+08:00",
+      "bytes": 3228743,
       "downloads": 126,
       "screenshots": [
         {
@@ -10789,6 +10801,8 @@
       "path": "mods/rusted-expansion",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/rusted-expansion/",
       "updated": "2026-09-20T13:14:42+08:00",
+      "published": "2026-09-08T22:53:58+08:00",
+      "bytes": 15799299,
       "downloads": 109,
       "screenshots": [
         {

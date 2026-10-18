@@ -1925,9 +1925,9 @@ def main():
         "v": 2,
         "id": MOD_ID,
         "name": ["Adolence: City of Sin", "Adolence·罪恶之都"],
-        "version": "1.2.0",
+        "version": "1.2.2",
         "minGame": "0.8.14",  # format 2: selectable factions and mod headquarters
-        "author": "自然常数也有人用? and the Adolence team; port by Steel Tide",
+        "author": "自然常数也有人用? and the Adolence team",
         "description": [desc_en, desc_zh],
         "homepage": "https://github.com/steel-tide/mods/tree/main/mods/adolence",
         "license": "LicenseRef-Adolence",
