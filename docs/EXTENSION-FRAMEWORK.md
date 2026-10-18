@@ -55,12 +55,12 @@ its definition or weapon configuration under `extensions[capabilityId]`.
 Conflicting providers are rejected rather than chosen by installation order.
 A descriptor contains:
 
-- `id`, semantic `version`, and host `api` (currently `1`).
+- `id`, semantic `version`, and host `api` (`1` or `2`; new integrations use `2`).
 - `capabilities`, in the package's deterministic initialization order.
 - `schema` and `runtime`, each `{source, sha256}`.
 - Optional `presentation`, also `{source, sha256}`.
-- Optional `assets`, mapping up to 256 package-local resource IDs to safe relative
-  paths inside the owning mod. Existing total file-size limits still apply.
+- Optional `assets`, mapping package-local resource IDs to safe relative paths
+  inside the owning mod: 256 normally, 2,048 with the owning pack's large capacity.
 
 Each source is a self-contained ES module exporting a default host factory.
 The factory receives an SDK object and returns the part's exports. Modules may
@@ -69,16 +69,78 @@ A package build should verify that no engine implementation is bundled into its
 output; the supplied host SDK is its integration boundary.
 The descriptor is embedded directly so folders, packed files, registry downloads,
 worlds and offline saves carry the same exact source. Metadata remains bounded
-by the game's manifest limit; individual source strings are at most 512 KiB.
+by the game's manifest limit; individual source strings are at most 512 KiB
+normally or 2 MiB with large capacity.
 
 The schema factory receives no simulation or browser SDK. It returns
 `capabilities: [{id, definition, weapon?, references?}]`. Readers validate and
 normalize data; reference checks validate composed definitions. The runtime
-factory receives the version-1 simulation SDK and returns
+factory receives the simulation SDK with its declared `apiVersion` and returns
 `capabilities: [{id, create(host)}]`. The host supplies match-owned participants,
 configuration, RNG through the match, firing/damage and ordinary order functions.
 Instances implement lifecycle, private state, restoration, commands and inspection
 through `extensions/contracts.ts` in the game.
+
+API 1 packages remain accepted and receive `apiVersion: 1`. Their package stamps
+are unchanged. API 2 package identity includes the API requirement; peers must
+advertise `extension-host-v2` before those packages can start. Declaring API 2
+does not put a feature implementation in the game: each package still supplies
+all of its behavior.
+
+## Capacity
+
+Format 4 packs can declare `"capacity": "large"`. This selects bounded validation
+and installation budgets; it does not allocate simulation arrays or load assets
+in a vanilla match. The profile is carried through ordinary folders, packed
+files, registry downloads, worlds and saves.
+
+| Budget | Standard | Large |
+| --- | ---: | ---: |
+| Definitions | 200 | 1,024 |
+| Sprite sheets | 192 | 2,048 |
+| Ordinary sounds | 60 | 512 |
+| Metadata | 1 MiB | 4 MiB |
+| Stored embedded file data | 24 MiB | 256 MiB |
+| Definition HP | 1,000,000 | 100,000,000 |
+| Code per schema/runtime/presentation part | 512 KiB | 2 MiB |
+| Resources per extension package | 256 | 2,048 |
+
+Metadata and file budgets apply independently. The file budget counts stored
+data-URL characters, including base64 expansion. Existing path, identity,
+reference, art ownership and numeric validation remain in force. A large pack
+requires `content-capacity-large-v1` on peers even when it contains no executable
+extension. A native definition already supports eight weapons; more elaborate
+weapon organization can live in package data and its weapon updater.
+
+A world containing an explicitly large format-4 pack has a 128 MiB aggregate
+container budget. Ordinary worlds retain 16 MiB. Large-world saves allow 320 MiB
+because the existing launch configuration carries embedded dependencies in two
+places; ordinary world saves retain 64 MiB and ordinary saves retain 8 MiB.
+The socket envelope permits these cold transfers, while ordinary command/chat
+and ordinary-world envelope limits remain unchanged. The world budget is
+independent of a standalone pack's larger file budget. These are content
+capacity changes, not new player counts, map dimensions or match rules.
+
+## API 2 simulation integration
+
+All adapters below are composed only in an enabled match. Packages must
+delegate for entities/projectiles they do not own and validate/redact their own
+state through `snapshot`, `restore` and `validateRestoredState`.
+
+| Extension point | Package responsibility |
+| --- | --- |
+| `projectileStep(projectile, dt)` | Return `undefined` for native handling, `keep` to own the complete tick, or `remove` to retire the round. A claimed round skips native lifetime, interception, steering, collision and impact processing. |
+| `host.resolveImpact(...)` | Resolve an authored impact through the composed impact/damage pipeline, retaining damage accounting and the scoped `currentImpact`. |
+| `wrapFirePolicy`, `wrapTargetTracking`, `wrapTargetAcquisition` | Supply targeting, terrain and launch eligibility; `canFire` remains the final shared veto. Sensor contact does not automatically disclose an entity. |
+| `wrapUnitStep`, `wrapBuildingStep` | Own or delegate per-entity updates, including specialized flight, movement and deployment. |
+| `wrapAI`, `wrapAutopilot` | Own or delegate faction decisions without competing with a native brain. Issue orders through the shared gateway. |
+| `wrapPointDefence`, `wrapActiveProtection` | Own or delegate interception/defensive ability policies. |
+| `wrapBoardPassenger`, `wrapReleasePassenger`, `wrapUnloadStep` | Intercept native cargo transitions so an assembly can complete a coordinated transaction. |
+| `cmdEmbarkGroup`, `cmdDisembarkGroup` in the SDK | Commit a validated group transaction atomically through `orders.ts`; retain normal cargo ownership for persistence and carrier-death handling. |
+
+The SDK also exposes ordinary movement, transport, effect and ordnance helpers.
+Source-specific seekers, component arithmetic, morale, reloads, tactics, towing
+and crew rules remain package code. The host does not interpret RW scripts.
 
 An instance may expose `wrapShot(next)`, composed once when an extended match
 is constructed. It wraps the native emitter for both weapon bursts and explicit
@@ -101,9 +163,12 @@ reloading content refreshes asset readers even when executable code is unchanged
 
 Presentation exports may also supply `feedback(context, base)`, where context
 contains the match, local player and spectator status. It returns a `unitVoice`
-callback and optional `dispose`. The host composes these once at match entry and
+callback and optional `dispose`. API 2 also accepts `update(frame)`. The host composes these once at match entry and
 routes selection and accepted local commands through the selected callback.
-There is no simulation broadcast or frame-loop feedback lookup. Disposers run
+An update callback receives presentation time/delta, simulation time, pause and
+viewer state after the native listener update, including frames where drawing
+is capped. Only matches supplying an update replace their update method at
+entry; vanilla retains its original method. Disposers run
 in reverse order, including cleanup after partial setup failure.
 Each factory returns only its own cleanup; it must not call `base.dispose`
 itself. Forwarding an unchanged inherited disposer does not register it twice.
@@ -117,6 +182,20 @@ music player and returns an idempotent disposer. It restores the current content
 queues, including intervening content changes; it does not create another player.
 State cosmetics use the existing optional renderer and fog-filtered module view.
 Native recoil remains available through the presentation SDK.
+
+`createRecordedAudioScope()` provides installed-resource one-shots and loops on
+the native SFX/recording graph, with positional attenuation, gain/rate changes,
+pause/resume, preparation, replay-seek reset and disposal. Each package owns its
+scope/cache, supplies cues from its filtered presentation state, calls `update`
+after listener changes, and disposes it on exit. Pending decodes cannot start
+playback after reset/disposal. No optional audio polling runs in vanilla.
+
+The optional generated renderer exposes `drawContentDecal`, `drawContentEffect`,
+`drawContentProjectileTrail` and `drawContentProjectile` at their native world
+layers. Returning true handles/suppresses the owned item; returning false
+delegates. Existing entity-picture and input subclassing supports dynamic unit
+art and authored overlays. Honor fog, balance canvas state, and compose with the
+previous package. See [presentation details](engine-compatibility/2026-10-18-capability-closure/presentation.md).
 
 ## Loading and trust
 
@@ -144,7 +223,9 @@ world must first install its trusted mod/package locally. Public world submissio
 validation likewise refuses an unapproved executable package; publishing these
 worlds needs a reviewed package allowlist in that service.
 
-The existing `engineCapabilities` handshake field now advertises `extension-host-v1`.
+The existing `engineCapabilities` handshake advertises `extension-host-v1`,
+`extension-host-v2` and `content-capacity-large-v1`. A room requires only the
+versions/profiles its active packages use; API 1 content does not require API 2.
 Ordinary mod rooms additionally compare exact package version/code stamps. World
 rooms verify the complete embedded world hash before readiness, including code,
 and each endpoint verifies the package's individual hashes. The wire field shapes

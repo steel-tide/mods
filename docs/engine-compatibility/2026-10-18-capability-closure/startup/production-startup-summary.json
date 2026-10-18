@@ -1,0 +1,209 @@
+{
+  "initialDelta": {
+    "bytes": 5634,
+    "gzip": 1481
+  },
+  "results": [
+    {
+      "engine": "chromium",
+      "phase": "aa",
+      "readyMs": {
+        "A": {
+          "n": 2,
+          "min": 3826.6999999955297,
+          "median": 3841.25,
+          "max": 3855.8000000044703
+        },
+        "B": {
+          "n": 2,
+          "min": 3842,
+          "median": 3850.949999999255,
+          "max": 3859.89999999851
+        }
+      },
+      "entryMs": {
+        "A": {
+          "n": 2,
+          "min": 612.2999999970198,
+          "median": 638.7999999970198,
+          "max": 665.2999999970198
+        },
+        "B": {
+          "n": 2,
+          "min": 635.8999999985099,
+          "median": 646.1999999992549,
+          "max": 656.5
+        }
+      },
+      "heap": {
+        "A": {
+          "n": 2,
+          "min": 10308884,
+          "median": 10690820,
+          "max": 11072756
+        },
+        "B": {
+          "n": 2,
+          "min": 10320876,
+          "median": 10569546,
+          "max": 10818216
+        }
+      },
+      "scriptSeconds": {
+        "A": {
+          "n": 2,
+          "min": 0.169889,
+          "median": 0.210354,
+          "max": 0.250819
+        },
+        "B": {
+          "n": 2,
+          "min": 0.206301,
+          "median": 0.2265835,
+          "max": 0.246866
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "phase": "ab",
+      "readyMs": {
+        "base": {
+          "n": 6,
+          "min": 3833.5,
+          "median": 3862.25,
+          "max": 3880.3000000044703
+        },
+        "candidate": {
+          "n": 6,
+          "min": 3841,
+          "median": 3884.300000000745,
+          "max": 3927.8000000044703
+        }
+      },
+      "entryMs": {
+        "base": {
+          "n": 6,
+          "min": 620.6000000014901,
+          "median": 641.4499999992549,
+          "max": 689.7000000029802
+        },
+        "candidate": {
+          "n": 6,
+          "min": 608.5,
+          "median": 644.7000000029802,
+          "max": 702.5
+        }
+      },
+      "heap": {
+        "base": {
+          "n": 6,
+          "min": 9755020,
+          "median": 10574530,
+          "max": 11012024
+        },
+        "candidate": {
+          "n": 6,
+          "min": 10188860,
+          "median": 10391232,
+          "max": 10565568
+        }
+      },
+      "scriptSeconds": {
+        "base": {
+          "n": 6,
+          "min": 0.171463,
+          "median": 0.192743,
+          "max": 0.25107
+        },
+        "candidate": {
+          "n": 6,
+          "min": 0.124682,
+          "median": 0.175971,
+          "max": 0.25133
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "phase": "aa",
+      "readyMs": {
+        "A": {
+          "n": 2,
+          "min": 3409,
+          "median": 3512.5,
+          "max": 3616
+        },
+        "B": {
+          "n": 2,
+          "min": 3479,
+          "median": 3534,
+          "max": 3589
+        }
+      },
+      "entryMs": {
+        "A": {
+          "n": 2,
+          "min": 458,
+          "median": 459.5,
+          "max": 461
+        },
+        "B": {
+          "n": 2,
+          "min": 455,
+          "median": 459,
+          "max": 463
+        }
+      },
+      "heap": {
+        "A": null,
+        "B": null
+      },
+      "scriptSeconds": {
+        "A": null,
+        "B": null
+      }
+    },
+    {
+      "engine": "webkit",
+      "phase": "ab",
+      "readyMs": {
+        "base": {
+          "n": 6,
+          "min": 3523,
+          "median": 3639,
+          "max": 4724
+        },
+        "candidate": {
+          "n": 6,
+          "min": 3506,
+          "median": 4666,
+          "max": 4703
+        }
+      },
+      "entryMs": {
+        "base": {
+          "n": 6,
+          "min": 454,
+          "median": 458,
+          "max": 466
+        },
+        "candidate": {
+          "n": 6,
+          "min": 451,
+          "median": 462.5,
+          "max": 472
+        }
+      },
+      "heap": {
+        "base": null,
+        "candidate": null
+      },
+      "scriptSeconds": {
+        "base": null,
+        "candidate": null
+      }
+    }
+  ],
+  "gate": "measurement only: compare paired runtime results with A/A variation; byte growth is reported separately, with no automatic percentage tolerance or universal zero-cost assertion"
+}

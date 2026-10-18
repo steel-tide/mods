@@ -1,0 +1,289 @@
+{
+  "createdAt": "2026-10-18T02:22:00.873642+00:00",
+  "baseline": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-capability-closure-base-e3gsc5a9",
+  "candidate": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-capability-closure-01wzktl_/candidate",
+  "baseRef": "2408f73fe5f1880ee49485edec97d9fdc16e0bc7",
+  "method": "Frozen pre-pass tracked and initial untracked working tree; candidate replaces only owned files plus exact capacity edits in protocol.ts and strings.ts. Other concurrent changes excluded. Shared read-only production media and node_modules symlinks.",
+  "files": [
+    {
+      "path": "game/core/api/_worldChecker.d.mts",
+      "base": "35fc350ef9f04651481720dd2ad44bd5371a6a30904b7f66b90aeddcbde6022e",
+      "candidate": "0a92648a8bc6673c1b72e8045002409037c4f7ad70cc14a24f34b9b8a45c7731"
+    },
+    {
+      "path": "game/core/api/_worldChecker.mjs",
+      "base": "cfec77f4946c7bb73106714218568f8a3a4ba3deccdce8fe288844dafab81320",
+      "candidate": "4f43f36ee1e17d222e31468d4aae31cb664a924e06fc937888268b5014d39943"
+    },
+    {
+      "path": "game/core/api/worlds/publish.ts",
+      "base": "797e576d585186340fccee0d904431b20901712df4a12cf11b04b518ad2a2172",
+      "candidate": "3e61aa3f4789ea84593fcd0931225fb367853667108f0c7420455996c1d911d3"
+    },
+    {
+      "path": "game/core/scripts/generate-content-kernels.mjs",
+      "base": "97a7ddd372172a1a2223bc3a31d93c5e5a0c84caadcd527789f6f35f9f259de8",
+      "candidate": "75583929f1df2631e6fe1ffe8ef234e3d8ae594b8f6c1b0909b856aec8f58d47"
+    },
+    {
+      "path": "game/core/server/content-cold.test.ts",
+      "base": "063abeb6b21356ca45cf5cda39c062698904306205a61a26afa50a98557d6b52",
+      "candidate": "60e41d3a4ee039e2ad7834d52337ace4863488014995ee3771bf900b8182dda7"
+    },
+    {
+      "path": "game/core/server/content-tools.test.ts",
+      "base": "a39c75473fda88be1ebf2de9d162ba2c4957093b49d63154922083194252ac97",
+      "candidate": "d2b09e2e5765a0a2eef9ff66118eb32f640e8ab061af7a19a811a750fb8f8ee0"
+    },
+    {
+      "path": "game/core/server/extension-feedback.test.ts",
+      "base": "1e700c741510cc2c8949ae5cf020c5437a120534bb9234abc85cdd5c9123ec15",
+      "candidate": "523b776f16b3bcf7eebae6f65ef209cc3acb96771d5ee0e624a32617450be91c"
+    },
+    {
+      "path": "game/core/server/index.ts",
+      "base": "bdf09e727d4744540b21b7c8d6d5c583808a1e374adc2eb26a1738ea571b7f48",
+      "candidate": "d3c036ec83ebebcc56ce4127578814942afcc9d5a4af9b9d336970ca65504fe5"
+    },
+    {
+      "path": "game/core/server/worldRegistry.test.ts",
+      "base": "1705f63564829583a247fee08ab82070352c1c6b447ff064ae26d58b8bed2c70",
+      "candidate": "49115f0df208cb582206d1bdd650061749891b03dc99b987b964d37460acface"
+    },
+    {
+      "path": "game/core/src/content/manager.ts",
+      "base": "bcbe8eb2b869f9890b26c51e542834ce4b74157055ed7678d42fcc34aaca107a",
+      "candidate": "a092f24b662520233112d7f35a7b9dff725f40dd001d6470c621a5878f18a280"
+    },
+    {
+      "path": "game/core/src/core/audio.ts",
+      "base": "ec71e3e1665907d15fad3dd848161f856245f58c7839de2ab03842acd66fd590",
+      "candidate": "69ebb31dbb86bc783d62761bfcbb77f60556aa73b7856bb6aa601a900514dd2d"
+    },
+    {
+      "path": "game/core/src/core/backup.ts",
+      "base": "ef091ef0d392c148e89977f5dd370ec9150f541293216a944ab352fa53f19013",
+      "candidate": "c23cd2300edf2c9780b9965d6d3f44e5411d86c99406a7023c363709ee5d8ba3"
+    },
+    {
+      "path": "game/core/src/core/worldCommunity.ts",
+      "base": "65a7be1caf350ab7facc4b33dc184e7628a422235980ffe4a884dd48fbfa0683",
+      "candidate": "0e8faf4c5b8d54fcc7f3d7df2412ba77afeb0718d0da52708e5cdf280d2f0614"
+    },
+    {
+      "path": "game/core/src/game/content.ts",
+      "base": "8ab01cffeec4798a1a3bb2f2acd7cabbe83930b2e7dd183f8b3715f7bf729009",
+      "candidate": "b22689716603dc408459ef92b11f247a4d53c8e2f11032d791119dee9ef433d8"
+    },
+    {
+      "path": "game/core/src/game/contentCapabilities.ts",
+      "base": "b80fec03cc65871b4746d574ef10f8a364fecd1388a09f3ce8aab1b1f2c72439",
+      "candidate": "ef6050d621a4e5c08d5a0a764b5f038c5b292ebbecad0a5e2fb5bdf2732c5e73"
+    },
+    {
+      "path": "game/core/src/game/contentCapabilityLoader.ts",
+      "base": "20c677e4db72e4215155430a340b68598580e54ed48da7c881f8df9eb6f1ce91",
+      "candidate": "83d65423bd789cf04fc577febb4fc4b1c89a5a505c114f22d62db3a52640a641"
+    },
+    {
+      "path": "game/core/src/game/contentDefs.ts",
+      "base": "9f8fd5198d9d373637377c2b8188ccd3c2df2c0c9ec8ba01feb0a6d0e18dac4e",
+      "candidate": "8ce2c52444f4c3b094ddfdbeeae366e054678a481c2cefbeb2fae1d7508d41f1"
+    },
+    {
+      "path": "game/core/src/game/contentGame.ts",
+      "base": "5622c1d41944d13452dc64c95660a1141a01d9d7f74433f8da58656c7b3e9bc4",
+      "candidate": "a3ff810cd688f13d8a7ab925f74badc79151fcb66edc9cebabcc94a849e92bd4"
+    },
+    {
+      "path": "game/core/src/game/contentSchema.ts",
+      "base": "60e4a6755f382bf1965e1f539c52d91e64aa0bd978f792fd8456927811db42eb",
+      "candidate": "8ffb076e0aa8611fd802e5cc2497908cf723dc32ac9a4e2682eb3b4a95e95024"
+    },
+    {
+      "path": "game/core/src/game/extensions/contracts.ts",
+      "base": "f41473e160f24ab9937b2ee35cd9f35d98f4b150084cc2ca22d923361d8f2a4d",
+      "candidate": "fab832ae54f3245afd1d40b9ebd3bf062ca417616598f2478bd96f9d0cf140c3"
+    },
+    {
+      "path": "game/core/src/game/extensions/generatedCombat.ts",
+      "base": "73ebb51f07cdeda9bff370f49c8b1b2179b17f8ff7c903d7e4293ff3c6265d77",
+      "candidate": "6e8452c61f3693c3d74ebf95c27e97af70e7380b5856c88bd88a5300ef360cff"
+    },
+    {
+      "path": "game/core/src/game/extensions/generatedGame.ts",
+      "base": "d3d6557fd266b77476132a3e103fcf9c72f3df97c4257d30c71dbe7b91222a83",
+      "candidate": "612b76d4dc7e61f8eb92447dc9dabb1cac973f970243307ec5993aa0460f1a60"
+    },
+    {
+      "path": "game/core/src/game/extensions/packages.ts",
+      "base": "067f57f3be4f037eecff54fc2041c941aeacf0f470a77a58d86ddc4ee8a94364",
+      "candidate": "03d195e697c05cfd4f52957852321911505a49f2e21b737ac43d27b88022db8e"
+    },
+    {
+      "path": "game/core/src/game/extensions/presentationSdk.ts",
+      "base": "d69aebfd8c4e103a7b12279dab835e3cd303595db5e9ffed27f09b3fcae7b509",
+      "candidate": "c73f4000ec73b37fcf23188d4b7fa7ed7e1551b8e4d768e4ec9e053ade799216"
+    },
+    {
+      "path": "game/core/src/game/extensions/runtime.ts",
+      "base": "55e4570e81870407612a6890e2f169c2ff96827b25425b9e1fc436e661e6bea2",
+      "candidate": "e06f1c21d99917a658e2ed875e1475063e97fe8f6945c010cb0c5f003f90453f"
+    },
+    {
+      "path": "game/core/src/game/extensions/schema.ts",
+      "base": "2f2dfb00227de91f0ea831cc748cc6a4a500327ae0f979846f7a32e900f55715",
+      "candidate": "302db523b243631824a9fa8a773ce514361af375807b9436a61e0feee594ac9c"
+    },
+    {
+      "path": "game/core/src/game/extensions/sdk.ts",
+      "base": "4354625e16b51336de46b6319c7a3600be0eeefb7cf3c3a53ff510d942dac423",
+      "candidate": "ca26da058ba5c503761c2d1120b1bbd69ab8312bf7f78c4d3fd9d95825817ed4"
+    },
+    {
+      "path": "game/core/src/game/modTools.ts",
+      "base": "efa818388f939ba8c46e0355fbf13417f6465bdbc5955cc1acf1ba32fc52889c",
+      "candidate": "498b209d4e013d186037d1f6c3beb2571044cc522f2f59a123b26e4bc02444c8"
+    },
+    {
+      "path": "game/core/src/game/orders.ts",
+      "base": "da5270b1a6850172441492df9a269b8714346aff171876c5528abb82daa40a72",
+      "candidate": "f3d3c611d6c9d08ff224b2e7acb8741e5770c552f15053b877634f2a2ade39c4"
+    },
+    {
+      "path": "game/core/src/game/save.ts",
+      "base": "f152d862cb5e729258d0cea6e0adcfb0566935ea845ee0cb1bcacace7a57df43",
+      "candidate": "36afe08ba8d8267dac5ed40b48cc36141fced9df9bf4e18559a0d62d40c1cc77"
+    },
+    {
+      "path": "game/core/src/game/sim.ts",
+      "base": "9010f12524cd13f2184fef10df98f69427d096b9c2faf5e0cb4cfaeafba118cc",
+      "candidate": "e0d3da80bbfdc479db636d73fc7c853a16ff70ac652119be8faff56a13d52ae6"
+    },
+    {
+      "path": "game/core/src/game/world.ts",
+      "base": "9199b0de10a4a244bb17ee9c217cb7a278d9226b649982c406905b0dd68d5c1a",
+      "candidate": "cb5a1739f223aca955bc6ccb42f37c19cb08546ec689647992a4f04bde161fcb"
+    },
+    {
+      "path": "game/core/src/game/worldRegistry.ts",
+      "base": "0a432ddb50e5f0b1855c406d57f5ad3c2cfd20a0f63871a9270942949fcf1018",
+      "candidate": "24460954a6927d92d718f0c041436ec880ee73244fbe09b498fc889791d4e97b"
+    },
+    {
+      "path": "game/core/src/game/worldTools.ts",
+      "base": "a22b5e84957ff8cfd447518af010f727ac2a800059209f2c1b20daa7e2fb4d23",
+      "candidate": "86970a140c49f60d12e0b94e9d469866e99622a97a59b36572564bddbe9b0a51"
+    },
+    {
+      "path": "game/core/src/game/worldValidation.ts",
+      "base": "39f9789fe0a7506e69f33104d4162ca54351c615cbf65847c088f3be4932a3e1",
+      "candidate": "8e8e44d69e88792316a086b2ea2f201ea88520b3dec3fa713284ce7fe4d9fd99"
+    },
+    {
+      "path": "game/core/src/mods/registry.ts",
+      "base": "97257b54de1e9dd34fb226bf3d0ad0ea4cc136f2301af332eaf3e757d34c83fa",
+      "candidate": "3281928e4d8725299e16adf85a3af6e6a8180b98575d66ad57ac3a1824517442"
+    },
+    {
+      "path": "game/core/src/render/generatedContentRenderer.ts",
+      "base": "3997af8ac88f8314b388845268a97d1d1a2cf1b7f2b90b330697e2e192ce4113",
+      "candidate": "00aa6f32e7c6310d93cf61b9da037669f87223d17eeaac0a6928162a66404558"
+    },
+    {
+      "path": "game/core/src/render/renderer.ts",
+      "base": "250eeb2e64399b81b1e3e8979917f65f7907f903b159e9f18f7ddd59a1704441",
+      "candidate": "685354ccfdf6ba4bafb51185dd4ee67d7a911a63f4376033288080b73170567b"
+    },
+    {
+      "path": "game/core/src/ui/contentFeedback.ts",
+      "base": "52cff74e16cf6006f2095de06263121a5ed451c1a3fbb84e5dd154af9407a1ca",
+      "candidate": "00847701f8f0c91a822f8563e61ea57e2955a79f68a903bd44c96da77912b8e2"
+    },
+    {
+      "path": "game/core/src/ui/contentPresentationLoader.ts",
+      "base": "144fcd89de0ba8366f6d12f2ea3069c92ad8ac8ff34281bdb39fea005040506b",
+      "candidate": "caa3bbde9a11d038c3fec33823e98cc159c2a9536cf663d2e43288a0ade20603"
+    },
+    {
+      "path": "game/core/src/ui/gamescreen.ts",
+      "base": "d6785189a79c4343ba1491252d7db5bc70eab5266a6a500c6c64f9ec67fe1006",
+      "candidate": "00b83f757cac71bf0f1bb9d832977b808fb47cf64b724b3b84774e13887aa60f"
+    },
+    {
+      "path": "game/core/src/ui/worldBrowser.ts",
+      "base": "28fac0b0fd61396449b75c4a9966b7447b53455019bbcf043275738588a29a8f",
+      "candidate": "411cb8bc1996b1c0cc5459946d9f7af5f47d92fadc2799b645653cfa47223d33"
+    },
+    {
+      "path": "game/core/src/ui/worldEditor.ts",
+      "base": "cade19d2f40e202457f885ed85250e100c8051af281eeb1621bdf0127621f17b",
+      "candidate": "78b05f471ec0a8e96240e7a08f407d8d5dc7ffce8539d437d56e9d85da9437fe"
+    },
+    {
+      "path": "game/core/src/ui/worldLibrary.ts",
+      "base": "ea5bde5d296fd50177e04d381351503850471fa1a4ef3ceed4616fe753266785",
+      "candidate": "cd686736737760f4ce46a2c5db3741bfeea3023ea9433d1fc2f86f1bbd793274"
+    },
+    {
+      "path": "game/core/server/content-capacity.test.ts",
+      "base": null,
+      "candidate": "fd3fc11007b0aca324130bf90131a49539d0023cc90b2cd544e141eada969d81"
+    },
+    {
+      "path": "game/core/server/extension-envelope.test.ts",
+      "base": null,
+      "candidate": "823447a270f01ed84288b52f85c574f74722b86054c888a5748ad32a479b6971"
+    },
+    {
+      "path": "game/core/server/extension-host-version.test.ts",
+      "base": null,
+      "candidate": "d4039380c0676c0457fc2f614ac8e1778177890bf13a418438401fa79d56d5ea"
+    },
+    {
+      "path": "game/core/server/extension-recorded-audio.test.ts",
+      "base": null,
+      "candidate": "4036b7a43792a26353cd6f120e8e7f116617520a53ae2890cf3b37184b536203"
+    },
+    {
+      "path": "game/core/server/extension-simulation.test.ts",
+      "base": null,
+      "candidate": "1dfd7b9d20c5427dbc06084310e0dd3b5f06af2e187ee370e59de3e98c040dcf"
+    },
+    {
+      "path": "game/core/server/extension-visuals.test.ts",
+      "base": null,
+      "candidate": "3f177e1b4811f94dcefb8b2ce103f81964dc6863d2fa905206048a40d23058ed"
+    },
+    {
+      "path": "game/core/server/world-capacity.test.ts",
+      "base": null,
+      "candidate": "4bc3e02cacb72ad45a615882001f94076e000541b8e96dedb91d0866e5db3b46"
+    },
+    {
+      "path": "game/core/src/core/recordedAudio.ts",
+      "base": null,
+      "candidate": "becdb3b590abab932844c88a9e3a42798938a5314b202f487be6bfa6040688f3"
+    },
+    {
+      "path": "game/core/src/game/contentLimits.ts",
+      "base": null,
+      "candidate": "592a0b3bbb5dffb5a0c8b49eaea820dd7dd7933a4dd792087f3b419f660a2398"
+    },
+    {
+      "path": "game/core/src/render/contentVisuals.ts",
+      "base": null,
+      "candidate": "f489ef8264b3b17c1678cd7758bbdb199d43be13e06a12e74077a330d2a1a707"
+    },
+    {
+      "path": "game/core/src/net/protocol.ts",
+      "base": "7b7e82dcb155230df3dd6295d1ebd41fa0d02981f7ef2712340fcbb6b4e54924",
+      "candidate": "e7d2908c6b61791d064dfa2743871f6040af062aec7f70b5b2298cdf0983ae6b"
+    },
+    {
+      "path": "game/core/src/core/strings.ts",
+      "base": "a6a4ddf753a5255bd3d5037ce5342b852ab3c8899230e3eca1879e24d2c5f7e1",
+      "candidate": "b9379970f1c4e74bd6d66c72264824c823d1fd1631ec2271ee7a233cd0c8519e"
+    }
+  ]
+}

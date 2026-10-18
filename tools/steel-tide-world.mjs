@@ -18,10 +18,10 @@ function registerContentSchema(reader, validator, checker) {
   references = validator;
   checkPackages = checker;
 }
-function validateContentPackages(raw, issues) {
+function validateContentPackages(raw, issues, limits) {
   if (!checkPackages)
     issues.push({ path: "mod.extensionPackages", message: "extension package schema must be prepared" });
-  else checkPackages(raw, "mod.extensionPackages", issues);
+  else checkPackages(raw, "mod.extensionPackages", issues, limits);
 }
 function contentSchemaPrepared() {
   return read !== void 0;
@@ -72,13 +72,47 @@ function readExtensions$1(raw, pack, path, issues, context, weapon = false) {
 function validateExtensionReferences$1(def, table, path, issues, forms, pack) {
   references?.(def, table, path, issues, forms, pack);
 }
-const EXTENSION_HOST_VERSION = 1;
+const STANDARD_CONTENT_LIMITS = Object.freeze({
+  defs: 200,
+  sprites: 192,
+  sounds: 60,
+  manifestBytes: 1024 * 1024,
+  filesBytes: 24 * 1024 * 1024,
+  hp: 1e6,
+  extensionSourceBytes: 512 * 1024,
+  extensionAssets: 256
+});
+const LARGE_CONTENT_LIMITS = Object.freeze({
+  defs: 1024,
+  sprites: 2048,
+  sounds: 512,
+  manifestBytes: 4 * 1024 * 1024,
+  filesBytes: 256 * 1024 * 1024,
+  hp: 1e8,
+  extensionSourceBytes: 2 * 1024 * 1024,
+  extensionAssets: 2048
+});
+function contentLimits(pack) {
+  return pack.v === 4 && pack.capacity === "large" ? LARGE_CONTENT_LIMITS : STANDARD_CONTENT_LIMITS;
+}
+const MAX_CONTENT_INPUT_BYTES = LARGE_CONTENT_LIMITS.manifestBytes + LARGE_CONTENT_LIMITS.filesBytes;
+function contentFilesSize(files) {
+  let size = 0;
+  for (const value of Object.values(files)) if (typeof value === "string") size += value.length;
+  return size;
+}
+function hasLargeWorldContent(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const mods = value.mods;
+  return Array.isArray(mods) && mods.some((pack) => !!pack && typeof pack === "object" && !Array.isArray(pack) && pack.format === "steel-tide-mod" && pack.v === 4 && pack.capacity === "large");
+}
+const EXTENSION_HOST_VERSION = 2;
 function validCapabilityId(value) {
   return typeof value === "string" && /^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,63}$/.test(value) && !["__proto__", "constructor", "prototype"].includes(value);
 }
 function extensionPackageStamp(pkg) {
   const resources = pkg.assets ? ":" + resourceFingerprint(pkg.assets) : "";
-  return `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}${resources}`;
+  return `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}${resources}${pkg.api > 1 ? ":api" + pkg.api : ""}`;
 }
 function resourceFingerprint(assets) {
   const text = JSON.stringify(Object.entries(assets).sort(([a2], [b2]) => a2 < b2 ? -1 : a2 > b2 ? 1 : 0));
@@ -205,8 +239,7 @@ const schemas = /* @__PURE__ */ new Map();
 const pendingSchemas = /* @__PURE__ */ new Map();
 const modules = /* @__PURE__ */ new Map();
 const rawObject = (v) => !!v && typeof v === "object" && !Array.isArray(v);
-const maxSource = 512 * 1024;
-function checkExtensionPackages(raw, path, issues) {
+function checkExtensionPackages(raw, path, issues, limits = STANDARD_CONTENT_LIMITS) {
   const start = issues.length;
   if (!Array.isArray(raw) || raw.length > 16) {
     issues.push({ path, message: "must be a list of up to 16 extension packages" });
@@ -227,14 +260,14 @@ function checkExtensionPackages(raw, path, issues) {
     else ids.add(value.id);
     if (typeof value.version !== "string" || !/^[0-9]+\.[0-9]+\.[0-9]+(?:-[a-zA-Z0-9.-]+)?$/.test(value.version) || value.version.length > 32)
       issues.push({ path: `${p}.version`, message: "must be a semantic version" });
-    if (value.api !== EXTENSION_HOST_VERSION)
+    if (!Number.isInteger(value.api) || value.api < 1 || value.api > EXTENSION_HOST_VERSION)
       issues.push({ path: `${p}.api`, message: `requires unsupported extension host API ${String(value.api)}` });
     if (!Array.isArray(value.capabilities) || !value.capabilities.length || value.capabilities.length > 32 || new Set(value.capabilities).size !== value.capabilities.length || value.capabilities.some((id2) => !validCapabilityId(id2) || capabilities.has(id2)))
       issues.push({ path: `${p}.capabilities`, message: "must declare unique bounded capability IDs" });
     else for (const id2 of value.capabilities) capabilities.add(id2);
     if (value.assets !== void 0) {
-      if (!rawObject(value.assets) || Object.keys(value.assets).length > 256)
-        issues.push({ path: `${p}.assets`, message: "must map up to 256 resource IDs to relative files" });
+      if (!rawObject(value.assets) || Object.keys(value.assets).length > limits.extensionAssets)
+        issues.push({ path: `${p}.assets`, message: `must map up to ${limits.extensionAssets} resource IDs to relative files` });
       else for (const [id2, file] of Object.entries(value.assets)) {
         if (!validCapabilityId(id2)) issues.push({ path: `${p}.assets.${id2}`, message: "must be a bounded resource identifier" });
         if (typeof file !== "string" || !/^(?!\/)(?!.*\.\.)[A-Za-z0-9_./-]{1,120}$/.test(file))
@@ -244,7 +277,7 @@ function checkExtensionPackages(raw, path, issues) {
     for (const part of ["schema", "runtime", "presentation"]) {
       const code = value[part];
       if (part === "presentation" && code === void 0) continue;
-      if (!rawObject(code) || Object.keys(code).some((key) => key !== "source" && key !== "sha256") || typeof code.source !== "string" || !code.source.length || code.source.length > maxSource || typeof code.sha256 !== "string" || !/^[a-f0-9]{64}$/.test(code.sha256))
+      if (!rawObject(code) || Object.keys(code).some((key) => key !== "source" && key !== "sha256") || typeof code.source !== "string" || !code.source.length || code.source.length > limits.extensionSourceBytes || typeof code.sha256 !== "string" || !/^[a-f0-9]{64}$/.test(code.sha256))
         issues.push({ path: `${p}.${part}`, message: "must contain bounded ES module source and its SHA-256 hash" });
     }
   }
@@ -286,12 +319,12 @@ function parts(pkg) {
 function preparedPackage(pkg) {
   return parts(pkg).every((code) => verifiedSources.get(code.sha256) === code.source) ? schemas.get(extensionPackageStamp(pkg)) : void 0;
 }
-function preparePackageSchemas(packages, trust = false) {
+function preparePackageSchemas(packages, trust = false, limits = STANDARD_CONTENT_LIMITS) {
   if (!trust && packages.some((pkg) => !isTrustedExtension(extensionPackageStamp(pkg))))
     return Promise.reject(new Error("Extension package code must be installed or approved locally before network use"));
   const work = packages.filter((pkg) => !preparedPackage(pkg)).map(async (pkg) => {
     const issues = [];
-    if (!checkExtensionPackages([pkg], "extensionPackages", issues))
+    if (!checkExtensionPackages([pkg], "extensionPackages", issues, limits))
       throw new Error(issues.map((e) => `${e.path}: ${e.message}`).join("; "));
     await Promise.all(parts(pkg).map(verify));
     if (trust) grantTrustedExtensions([extensionPackageStamp(pkg)]);
@@ -354,6 +387,7 @@ function validateExtensionReferences(def, table, path, issues, forms, pack) {
     }
 }
 function prepareSchemas(input, trust = false) {
+  if (typeof input === "string" && input.length > MAX_CONTENT_INPUT_BYTES) return Promise.reject(new Error("Extension manifest is too large"));
   const raw = typeof input === "string" ? JSON.parse(input) : input;
   if (Array.isArray(raw)) {
     const work = raw.map((value2) => prepareSchemas(value2, trust)).filter((p) => p !== null);
@@ -366,13 +400,14 @@ function prepareSchemas(input, trust = false) {
   if (value.extensionPackages === void 0) return null;
   if (value.format !== "steel-tide-mod" || value.v !== 4)
     return Promise.reject(new Error("Executable extension packages require definition pack format 4"));
+  const limits = contentLimits(value);
   const { files: _files, ...metadata } = value;
-  if (JSON.stringify(metadata).length > 1024 * 1024)
+  if (JSON.stringify(metadata).length > limits.manifestBytes)
     return Promise.reject(new Error("Extension manifest is too large"));
   const issues = [];
-  if (!checkExtensionPackages(value.extensionPackages, "extensionPackages", issues))
+  if (!checkExtensionPackages(value.extensionPackages, "extensionPackages", issues, limits))
     return Promise.reject(new Error(issues.map((e) => `${e.path}: ${e.message}`).join("; ")));
-  return preparePackageSchemas(value.extensionPackages, trust);
+  return preparePackageSchemas(value.extensionPackages, trust, limits);
 }
 const schema = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
@@ -386,6 +421,10 @@ const WORLD_FORMAT = "steel-tide-world";
 const WORLD_VERSION = 1;
 const WORLD_EXT = ".steel-tide-world";
 const WORLD_MAX_BYTES = 16 * 1024 * 1024;
+const WORLD_LARGE_MAX_BYTES = 128 * 1024 * 1024;
+function worldMaxBytes(value) {
+  return hasLargeWorldContent(value) ? WORLD_LARGE_MAX_BYTES : WORLD_MAX_BYTES;
+}
 const WORLD_EVENT_TYPES = ["start", "tick", "time", "destroyed", "created", "completed", "removed", "escaped", "enter", "leave", "objective", "projectile"];
 const WORLD_ACTION_TYPES = ["set", "add", "if", "each", "call", "delay", "trigger", "spawn", "wave", "group", "remove", "damage", "order", "entity", "metal", "research", "dress", "objective", "announce", "ping", "sound", "launch", "result"];
 const WORLD_EXPR_OPS = ["add", "sub", "mul", "div", "mod", "min", "max", "floor", "ceil", "eq", "ne", "lt", "lte", "gt", "gte", "all", "any", "not"];
@@ -5137,12 +5176,12 @@ function readAnims(raw, frames, path, errors) {
 }
 const MOD_FORMAT = "steel-tide-mod";
 const MOD_FORMAT_VERSION = 4;
-const MAX_MOD_DEFS = 200;
-const MAX_MOD_SPRITES = 192;
+const MAX_MOD_DEFS = STANDARD_CONTENT_LIMITS.defs;
+const MAX_MOD_SPRITES = STANDARD_CONTENT_LIMITS.sprites;
 const MAX_MOD_TERRAINS = 32;
 const MAX_DEF_DECALS = 12;
 const MAX_DEF_MOUNTS = 8;
-const MAX_MOD_SOUNDS = 60;
+const MAX_MOD_SOUNDS = STANDARD_CONTENT_LIMITS.sounds;
 const MAX_MOD_MUSIC_TRACKS = 32;
 const MAX_MOD_MUSIC_QUEUE = 64;
 const MAX_MOD_SCREENSHOTS = 8;
@@ -5151,8 +5190,8 @@ const MAX_MOD_MAP_BYTES = 512 * 1024;
 const MIN_SCREENSHOT_WIDTH = 640;
 const MAX_SCREENSHOT_BYTES = 2 * 1024 * 1024;
 const SOUND_KEY_RE = /^[a-z0-9][a-z0-9-]{1,59}$/;
-const MAX_MANIFEST_BYTES = 1024 * 1024;
-const MAX_MOD_FILES_BYTES = 24 * 1024 * 1024;
+const MAX_MANIFEST_BYTES = STANDARD_CONTENT_LIMITS.manifestBytes;
+const MAX_MOD_FILES_BYTES = STANDARD_CONTENT_LIMITS.filesBytes;
 const ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
 const ATLAS_KEY_RE = /^(u|tur|dec|prj|fx|ter)\.[a-z0-9][a-z0-9_-]{1,39}$/;
 const FILE_RE = /^(?!\/)(?!.*\.\.)[A-Za-z0-9_./-]{1,120}$/;
@@ -5169,6 +5208,7 @@ const DECAL_LAYERS = ["under", "hull", "over"];
 const DECAL_ANCHORS = ["hull", "turret"];
 const DECAL_WHENS = ["always", "moving", "still", "firing", "damaged", "night", "ability"];
 const MANIFEST_SPECS = [
+  { name: "capacity", type: "enum", values: ["standard", "large"], def: "standard", doc: [`format 4: large allows ${LARGE_CONTENT_LIMITS.defs} defs, ${LARGE_CONTENT_LIMITS.sprites} sheets, ${LARGE_CONTENT_LIMITS.sounds} sounds, ${LARGE_CONTENT_LIMITS.manifestBytes / 1048576} MiB metadata and ${LARGE_CONTENT_LIMITS.filesBytes / 1048576} MiB stored data URLs; standard keeps ${MAX_MOD_DEFS}/${MAX_MOD_SPRITES}/${MAX_MOD_SOUNDS}, ${MAX_MANIFEST_BYTES / 1048576}/${MAX_MOD_FILES_BYTES / 1048576} MiB`, `格式 4：large 允许 ${LARGE_CONTENT_LIMITS.defs} 个定义、${LARGE_CONTENT_LIMITS.sprites} 张图、${LARGE_CONTENT_LIMITS.sounds} 个音效、${LARGE_CONTENT_LIMITS.manifestBytes / 1048576} MiB 元数据和 ${LARGE_CONTENT_LIMITS.filesBytes / 1048576} MiB 已编码资源；standard 保留 ${MAX_MOD_DEFS}/${MAX_MOD_SPRITES}/${MAX_MOD_SOUNDS} 和 ${MAX_MANIFEST_BYTES / 1048576}/${MAX_MOD_FILES_BYTES / 1048576} MiB 限额`] },
   { name: "requiredCapabilities", type: "capabilities", min: 1, max: 32, doc: ["Required package-provided capability IDs", "由扩展包提供的必需能力 ID"] },
   { name: "extensionPackages", type: "extensionPackages", doc: ["Versioned extension packages with SHA-256 verified schema, simulation and optional presentation modules (format 4)", "含 SHA-256 校验的配置验证、模拟和可选显示模块的版本化扩展包（格式 4）"] },
   { name: "format", type: "string", required: true, doc: [`always "${MOD_FORMAT}"`, `固定为 "${MOD_FORMAT}"`] },
@@ -5205,7 +5245,7 @@ const DEF_SPECS = [
   { name: "cost", type: "number", required: true, min: 0, max: 99999, doc: ["metal", "金属造价"] },
   { name: "buildTime", type: "number", min: 0, max: 3600, def: "cost ÷ 14", doc: ["seconds at full power", "满电力下的建造秒数"] },
   { name: "pop", type: "int", min: 0, max: 50, def: "1 for a unit, 0 for a building", doc: ["population it counts for", "占用人口"] },
-  { name: "hp", type: "number", required: true, min: 1, max: 1e6, doc: ["hit points", "生命值"] },
+  { name: "hp", type: "number", required: true, min: 1, max: LARGE_CONTENT_LIMITS.hp, doc: [`hit points; standard capacity is limited to ${STANDARD_CONTENT_LIMITS.hp}, large to ${LARGE_CONTENT_LIMITS.hp}`, `生命值；standard 上限为 ${STANDARD_CONTENT_LIMITS.hp}，large 上限为 ${LARGE_CONTENT_LIMITS.hp}`] },
   { name: "armor", type: "enum", values: ARMOR_CLASSES, def: "by domain", doc: ["the armour class weapons are multiplied against", "武器倍率所针对的装甲类型"] },
   { name: "impactMaterial", type: "enum", values: ["armor", "earth", "concrete"], def: "concrete for structure armor, armor otherwise", doc: ["projectile-impact sound material; does not change damage. Both ordinary and heavy impacts use the matching recorded family", "弹体命中音效材质，不改变伤害；普通与重型爆炸使用对应的录音组"] },
   { name: "directionalArmor", type: "directionalArmor", only: "unit", doc: ["ground hull direct-hit multipliers `{front, side, rear}`, each 0–10; 90° front/rear arcs and 90° on each side. Arc fire, collateral blasts, mines and fire ignore facing. Enables slow reversing for short moves behind the hull", "地面车体直击倍率 `{front, side, rear}`，各为 0–10；正面、背面各 90°，两侧各 90°。抛射、溅射、地雷与火焰不计朝向。向车后短距离移动时会慢速倒车"] },
@@ -5399,7 +5439,7 @@ const FACTION_SPECS = [
   { name: "name", type: "text", required: true, doc: ["the faction name in game setup", "对局设置中的阵营名称"] },
   { name: "headquarters", type: "id", required: true, doc: ["this mod’s land headquarters definition", "本模组的陆地总部定义"] },
   { name: "builder", type: "id", required: true, doc: ["this mod’s ground or amphibious builder; the HQ must produce it and it must rebuild the HQ", "本模组的陆地或两栖建造单位；总部必须能生产它，它必须能重建总部"] },
-  { name: "roster", type: "ids", max: MAX_MOD_DEFS, doc: ["permitted definitions, including prerequisites and upgrades; defaults to all definitions in this mod", "允许的定义，包括前置建筑与升级；默认为本模组的全部定义"] }
+  { name: "roster", type: "ids", max: LARGE_CONTENT_LIMITS.defs, doc: ["permitted definitions, including prerequisites and upgrades; defaults to all definitions in this mod", "允许的定义，包括前置建筑与升级；默认为本模组的全部定义"] }
 ];
 const TERRAIN_SPECS = [
   { name: "id", type: "id", required: true, doc: ["unique terrain variant id, prefixed with the mod id and a dash", "唯一地形变体 id，以模组 id 和连字符开头"] },
@@ -5695,14 +5735,15 @@ function checkObject(raw, specs, path, issues, warnings, opts = {}) {
       warnings.push({ path: `${path}.${spec.name}`, message: `only applies to a ${spec.only}, ignored` });
       continue;
     }
-    if (checkField(spec, value, `${path}.${spec.name}`, issues)) out[spec.name] = value;
+    const effective = opts.idListMax !== void 0 && spec.type === "ids" ? { ...spec, max: opts.idListMax } : spec;
+    if (checkField(effective, value, `${path}.${spec.name}`, issues)) out[spec.name] = value;
   }
   return out;
 }
 function parseDefinitionPack(input) {
   let raw = input;
   if (typeof input === "string") {
-    if (input.length > MAX_MANIFEST_BYTES + MAX_MOD_FILES_BYTES) return { ok: false, errors: [{ path: "", message: "the manifest is too large" }], warnings: [] };
+    if (input.length > MAX_CONTENT_INPUT_BYTES) return { ok: false, errors: [{ path: "", message: "the manifest is too large" }], warnings: [] };
     try {
       raw = JSON.parse(input);
     } catch {
@@ -5710,14 +5751,15 @@ function parseDefinitionPack(input) {
     }
   }
   if (!isPlainObject(raw)) return { ok: false, errors: [{ path: "", message: "not a mod manifest" }], warnings: [] };
+  const limits = contentLimits(raw);
   const { files: embedded, ...metadata } = raw;
   try {
-    if (JSON.stringify(metadata).length > MAX_MANIFEST_BYTES)
+    if (JSON.stringify(metadata).length > limits.manifestBytes)
       return { ok: false, errors: [{ path: "", message: "the manifest is too large" }], warnings: [] };
   } catch {
     return { ok: false, errors: [{ path: "", message: "manifest metadata must be JSON data" }], warnings: [] };
   }
-  if (isPlainObject(embedded) && Object.values(embedded).reduce((size, data) => size + (typeof data === "string" ? data.length : 0), 0) > MAX_MOD_FILES_BYTES)
+  if (isPlainObject(embedded) && contentFilesSize(embedded) > limits.filesBytes)
     return { ok: false, errors: [{ path: "files", message: "the embedded files are too large" }], warnings: [] };
   if (raw.format !== MOD_FORMAT) return { ok: false, errors: [{ path: "format", message: `must be "${MOD_FORMAT}"` }], warnings: [] };
   if (raw.v !== 1 && raw.v !== 2 && raw.v !== 3 && raw.v !== MOD_FORMAT_VERSION) return { ok: false, errors: [{ path: "v", message: `unsupported format version ${String(raw.v)} (this game reads 1–${MOD_FORMAT_VERSION})` }], warnings: [] };
@@ -5726,10 +5768,11 @@ function parseDefinitionPack(input) {
   const warnings = [];
   const head = checkObject(raw, MANIFEST_SPECS, "mod", errors, warnings);
   if (errors.length > 0) return { ok: false, errors, warnings };
+  if (head.capacity !== void 0 && Number(head.v) < 4) errors.push({ path: "mod.capacity", message: "capacity profiles require format 4" });
   if (head.requiredCapabilities !== void 0 && Number(head.v) < 3) errors.push({ path: "mod.requiredCapabilities", message: "engine capabilities require format 3" });
   if (head.extensionPackages !== void 0) {
     if (Number(head.v) < 4) errors.push({ path: "mod.extensionPackages", message: "executable extension packages require format 4" });
-    validateContentPackages(head.extensionPackages, errors);
+    validateContentPackages(head.extensionPackages, errors, limits);
   }
   if (errors.length) return { ok: false, errors, warnings };
   const available = new Set((head.extensionPackages ?? []).flatMap((p) => p.capabilities ?? []));
@@ -5737,11 +5780,11 @@ function parseDefinitionPack(input) {
   const defs = head.defs;
   const terrains = head.terrains ?? [];
   if (terrains.length > MAX_MOD_TERRAINS) errors.push({ path: "mod.terrains", message: `at most ${MAX_MOD_TERRAINS} terrain variants` });
-  if (defs.length > MAX_MOD_DEFS) errors.push({ path: "mod.defs", message: `at most ${MAX_MOD_DEFS} defs` });
+  if (defs.length > limits.defs) errors.push({ path: "mod.defs", message: `at most ${limits.defs} defs` });
   const sprites = head.sprites ?? [];
-  if (sprites.length > MAX_MOD_SPRITES) errors.push({ path: "mod.sprites", message: `at most ${MAX_MOD_SPRITES} sheets` });
+  if (sprites.length > limits.sprites) errors.push({ path: "mod.sprites", message: `at most ${limits.sprites} sheets` });
   const sounds = head.sounds ?? [];
-  if (sounds.length > MAX_MOD_SOUNDS) errors.push({ path: "mod.sounds", message: `at most ${MAX_MOD_SOUNDS} sounds` });
+  if (sounds.length > limits.sounds) errors.push({ path: "mod.sounds", message: `at most ${limits.sounds} sounds` });
   if (errors.length > 0) return { ok: false, errors, warnings };
   const files = head.files;
   if (files) {
@@ -5768,6 +5811,7 @@ function parseDefinitionPack(input) {
   return errors.length > 0 ? { ok: false, errors, warnings } : { ok: true, pack: mod, warnings };
 }
 function resolveDefinitions(mod, table = VANILLA) {
+  const limits = contentLimits(mod);
   const errors = [];
   const warnings = [];
   const defs = [];
@@ -6027,7 +6071,8 @@ function resolveDefinitions(mod, table = VANILLA) {
     const clean = checkObject(raw, DEF_SPECS, path, errors, warnings, {
       kind,
       // the base supplies what a fresh def would have to state
-      skipRequired: base ? /* @__PURE__ */ new Set(["kind", "cost", "hp"]) : void 0
+      skipRequired: base ? /* @__PURE__ */ new Set(["kind", "cost", "hp"]) : void 0,
+      idListMax: mod.capacity === "large" && mod.v === 4 ? limits.defs : void 0
     });
     const own = clean;
     if (own.isHQ && mod.v < 2) errors.push({ path: `${path}.isHQ`, message: "headquarters require format 2" });
@@ -6036,6 +6081,7 @@ function resolveDefinitions(mod, table = VANILLA) {
     const def = buildDef(own, kind, base, mod.id, soundKeys, path, errors, warnings);
     if (def?.isHQ && (def.kind !== "building" || def.offshore || def.needsDeposit)) errors.push({ path: `${path}.isHQ`, message: "a headquarters must be a land building without a deposit requirement" });
     if (!def) return;
+    if (def.hp > limits.hp) errors.push({ path: `${path}.hp`, message: `must be between 1 and ${limits.hp} for ${mod.capacity ?? "standard"} capacity` });
     if (def.extensions !== void 0 || def.weapons.some((w2) => w2.extensions !== void 0)) {
       const extensionContext = { definition: { ...def, ...raw, extensions: def.extensions, weapons: def.weapons }, weaponIds: def.weapons.map((w2) => w2.id), defIds: /* @__PURE__ */ new Set([...Object.keys(table), ...mod.defs.map((d) => d.id)]), spriteKeys: /* @__PURE__ */ new Set([...tableSprites, ...sheetKeys]) };
       if (def.extensions !== void 0) def.extensions = readExtensions$1(def.extensions, mod, `${path}.extensions`, errors, extensionContext);
@@ -6277,6 +6323,7 @@ function resolveDefinitions(mod, table = VANILLA) {
         if (hq?.requires?.length) errors.push({ path: `${path}.headquarters`, message: "a starting headquarters cannot require another building or research" });
         if (builder?.requires?.some((id2) => id2 !== f.headquarters)) errors.push({ path: `${path}.builder`, message: "the starting builder can require only its headquarters" });
         const roster = f.roster ?? defs.map((d) => d.id);
+        if (roster.length > limits.defs) errors.push({ path: `${path}.roster`, message: `at most ${limits.defs} definitions for ${mod.capacity ?? "standard"} capacity` });
         if (!roster.includes(f.headquarters) || !roster.includes(f.builder)) errors.push({ path: `${path}.roster`, message: "must include the headquarters and starting builder" });
         for (const id2 of roster) {
           const def = resolved[id2];
@@ -6640,8 +6687,9 @@ function parseWorld(input) {
   let value;
   try {
     const text = typeof input === "string" ? input : JSON.stringify(input);
-    if (new TextEncoder().encode(text).length > WORLD_MAX_BYTES) return { ok: false, errors: [{ path: "", message: "World project exceeds the 16 MiB limit." }] };
+    if (text.length > WORLD_LARGE_MAX_BYTES) return { ok: false, errors: [{ path: "", message: "World project exceeds its package size limit." }] };
     value = JSON.parse(text);
+    if (new TextEncoder().encode(text).length > worldMaxBytes(value)) return { ok: false, errors: [{ path: "", message: "World project exceeds its package size limit." }] };
   } catch {
     return { ok: false, errors: [{ path: "", message: "The file is not a JSON world project." }] };
   }
@@ -6668,7 +6716,7 @@ function parseWorldIndex(input) {
     if (!plain(value) || value.format !== WORLD_INDEX_FORMAT || value.v !== 1 || !Array.isArray(value.worlds) || value.worlds.length > 2e3) return null;
     const seen = /* @__PURE__ */ new Set(), worlds = [];
     for (const raw of value.worlds) {
-      if (!plain(raw) || typeof raw.id !== "string" || !ID.test(raw.id) || raw.id.length > 96 || seen.has(raw.id) || typeof raw.name !== "string" || !raw.name.trim() || raw.name.length > 96 || typeof raw.version !== "string" || !VERSION.test(raw.version) || typeof raw.description !== "string" || raw.description.length > 1200 || typeof raw.author !== "string" || !raw.author.trim() || raw.author.length > 96 || typeof raw.license !== "string" || !WORLD_PUBLISH_LICENSES.includes(raw.license) || typeof raw.hash !== "string" || !HASH.test(raw.hash) || !Number.isInteger(raw.bytes) || Number(raw.bytes) < 1 || Number(raw.bytes) > WORLD_MAX_BYTES || !Number.isInteger(raw.scenarios) || Number(raw.scenarios) < 0 || Number(raw.scenarios) > 128 || !Number.isInteger(raw.campaigns) || Number(raw.campaigns) < 0 || Number(raw.campaigns) > 128 || !Number.isInteger(raw.players) || Number(raw.players) < 0 || Number(raw.players) > 8 || raw.path !== `${WORLD_REGISTRY_DIR}/${raw.id}${WORLD_EXT}` || raw.sample !== void 0) return null;
+      if (!plain(raw) || typeof raw.id !== "string" || !ID.test(raw.id) || raw.id.length > 96 || seen.has(raw.id) || typeof raw.name !== "string" || !raw.name.trim() || raw.name.length > 96 || typeof raw.version !== "string" || !VERSION.test(raw.version) || typeof raw.description !== "string" || raw.description.length > 1200 || typeof raw.author !== "string" || !raw.author.trim() || raw.author.length > 96 || typeof raw.license !== "string" || !WORLD_PUBLISH_LICENSES.includes(raw.license) || typeof raw.hash !== "string" || !HASH.test(raw.hash) || !Number.isInteger(raw.bytes) || Number(raw.bytes) < 1 || Number(raw.bytes) > WORLD_LARGE_MAX_BYTES || !Number.isInteger(raw.scenarios) || Number(raw.scenarios) < 0 || Number(raw.scenarios) > 128 || !Number.isInteger(raw.campaigns) || Number(raw.campaigns) < 0 || Number(raw.campaigns) > 128 || !Number.isInteger(raw.players) || Number(raw.players) < 0 || Number(raw.players) > 8 || raw.path !== `${WORLD_REGISTRY_DIR}/${raw.id}${WORLD_EXT}` || raw.sample !== void 0) return null;
       seen.add(raw.id);
       worlds.push({ id: raw.id, name: raw.name, version: raw.version, description: raw.description, author: raw.author, license: raw.license, hash: raw.hash, bytes: Number(raw.bytes), scenarios: Number(raw.scenarios), campaigns: Number(raw.campaigns), players: Number(raw.players), path: raw.path });
     }
@@ -6679,7 +6727,14 @@ function parseWorldIndex(input) {
 }
 async function checkWorldFile(contents, fileId) {
   const bytes = new TextEncoder().encode(contents).byteLength;
-  if (bytes > WORLD_MAX_BYTES) return { ok: false, reason: "size" };
+  if (bytes > WORLD_LARGE_MAX_BYTES) return { ok: false, reason: "size" };
+  if (bytes > WORLD_MAX_BYTES) {
+    try {
+      if (bytes > worldMaxBytes(JSON.parse(contents))) return { ok: false, reason: "size" };
+    } catch {
+      return { ok: false, reason: "size" };
+    }
+  }
   try {
     await prepareContentSchema(contents);
   } catch {
@@ -6700,6 +6755,7 @@ export {
   WORLD_EXT,
   WORLD_FORMAT,
   WORLD_INDEX_FORMAT,
+  WORLD_LARGE_MAX_BYTES,
   WORLD_MAX_BYTES,
   WORLD_PUBLISH_LICENSES,
   WORLD_REGISTRY_DIR,
@@ -6709,5 +6765,6 @@ export {
   parseWorld,
   parseWorldIndex,
   validateWorld,
+  worldMaxBytes,
   worldPackageHash
 };

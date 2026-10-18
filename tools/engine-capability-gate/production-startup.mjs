@@ -17,7 +17,7 @@ const {chromium,webkit}=await import(pathToFileURL(playwrightPath).href);
 const kinds=arg('--engines','chromium,webkit').split(','), rounds=Number(arg('--rounds','1'));
 const sampleLimit=Number(arg('--samples','0'));
 if(!kinds.every(x=>['chromium','webkit'].includes(x))||!Number.isInteger(rounds)||rounds<1)throw Error('Invalid engines/rounds');
-const optionalPattern=/\/src\/(?:game\/(?:extensions\/(?!contracts\.)|contentCapabilityLoader\.)|render\/(?:contentRenderer|contentInput|generatedContentRenderer)\.|ui\/(?:contentHud|contentFeedback|contentResources|contentPresentationLoader)\.)/;
+const optionalPattern=/\/src\/(?:core\/recordedAudio\.|game\/(?:extensions\/(?!contracts\.)|contentCapabilityLoader\.)|render\/(?:contentRenderer|contentInput|contentVisuals|generatedContentRenderer)\.|ui\/(?:contentHud|contentFeedback|contentResources|contentPresentationLoader)\.)/;
 const mime={'.js':'text/javascript','.html':'text/html','.css':'text/css','.json':'application/json','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2','.mp3':'audio/mpeg','.ogg':'audio/ogg','.ico':'image/x-icon'};
 const graphs=Object.fromEntries(['base','candidate'].map(v=>[v,JSON.parse(readFileSync(resolve(builds,`web-${v}-graph.json`),'utf8'))]));
 const optional=new Set(graphs.candidate.filter(o=>o.type==='chunk'&&o.modules.some(m=>optionalPattern.test('/'+m))).map(o=>'/'+o.file));
@@ -60,7 +60,7 @@ const evidence={date:new Date().toISOString(),engineHead:execFileSync('git',['re
  'Repeated desktop timings are noisy estimates. Neither a nonsignificant result nor structural identity proves literal zero overhead across hardware.',
  'This fresh no-mod lifecycle does not show that previously loaded ES modules can be unloaded after disabling a mod; browser module caches retain code until page reload.'
 ]};
-const initialization=`window.__gate={errors:[],ready:0,entered:0};addEventListener('error',e=>{if(e.message)__gate.errors.push(e.message)});addEventListener('unhandledrejection',e=>__gate.errors.push(String(e.reason)));const watch=new MutationObserver(()=>{if(!__gate.ready&&document.querySelector('#boot-loading-status.continue'))__gate.ready=performance.now();if(__gate.ready&&!__gate.entered&&!document.getElementById('boot'))__gate.entered=performance.now()});watch.observe(document,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});`;
+const initialization=`window.__gate={errors:[],ready:0,entered:0,milestones:[]};addEventListener('error',e=>{if(e.message)__gate.errors.push(e.message)});addEventListener('unhandledrejection',e=>__gate.errors.push(String(e.reason)));const watch=new MutationObserver(()=>{const progress=document.getElementById('boot-mark')?.getAttribute('aria-valuenow');if(progress!==null&&progress!==undefined&&__gate.milestones.at(-1)?.progress!==progress)__gate.milestones.push({progress,at:performance.now()});if(!__gate.ready&&document.querySelector('#boot-loading-status.continue'))__gate.ready=performance.now();if(__gate.ready&&!__gate.entered&&!document.getElementById('boot'))__gate.entered=performance.now()});watch.observe(document,{childList:true,subtree:true,attributes:true,attributeFilter:['class','aria-valuenow']});`;
 const save=()=>writeFileSync(resolve(out,'production-startup.json'),JSON.stringify(evidence,null,2)+'\n');
 try {
  for(const kind of kinds) {
@@ -83,7 +83,7 @@ try {
     await page.waitForFunction(()=>window.__gate.entered>0,undefined,{timeout:120000});
     await page.waitForTimeout(1000);
     if(cdp){await cdp.send('HeapProfiler.collectGarbage');retained=Object.fromEntries((await cdp.send('Performance.getMetrics')).metrics.map(m=>[m.name,m.value]));}
-    const loaded=await page.evaluate(()=>({readyMs:__gate.ready,entryMs:__gate.entered-__gate.enterRequested,errors:__gate.errors,resources:performance.getEntriesByType('resource').filter(r=>/\.js(?:\?|$)/.test(r.name)).map(r=>({url:new URL(r.name).pathname,bytes:r.encodedBodySize,decoded:r.decodedBodySize}))}));
+    const loaded=await page.evaluate(()=>({milestones:__gate.milestones,readyMs:__gate.ready,entryMs:__gate.entered-__gate.enterRequested,errors:__gate.errors,resources:performance.getEntriesByType('resource').filter(r=>/\.js(?:\?|$)/.test(r.name)).map(r=>({url:new URL(r.name).pathname,bytes:r.encodedBodySize,decoded:r.decodedBodySize}))}));
     await page.evaluate(()=> 'serviceWorker' in navigator?Promise.race([navigator.serviceWorker.ready.then(()=>new Promise(r=>setTimeout(r,500))),new Promise(r=>setTimeout(r,1500))]):null);
     const sample={engine:kind,browserVersion:browser.version(),index,...choice,boot,bootMetrics,retained,...loaded,requests:[...new Set(requestLog)],optionalRequests:requestLog.filter(u=>optional.has(u))};
     evidence.runs.push(sample);save();

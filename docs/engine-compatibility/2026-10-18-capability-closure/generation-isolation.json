@@ -1,0 +1,16 @@
+{
+  "snapshot": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-clean-generated-stsiy0sb/candidate",
+  "baseRef": "2408f73fe5f1880ee49485edec97d9fdc16e0bc7",
+  "cleanBundleSha256": "60436907d5e37e803b66a0f0b8d526cc73e62f5f1d74106725ff50d3b6d1f6fa",
+  "cleanWorldAndAgentsByteIdentical": true,
+  "sourceAfterIdentical": true,
+  "changedArtifacts": [
+    "/Users/rivertwilight/Developer/steel-tide-mods/tools/steel-tide-mod.mjs"
+  ],
+  "verification": {
+    "modTests": 4,
+    "publishedMods": 7,
+    "ucgrValidated": true,
+    "kernelCheck": "current"
+  }
+}

@@ -1,0 +1,919 @@
+{
+  "createdAt": "2026-10-18T02:25:12.479Z",
+  "scope": "Fresh-browser Vite/Rollup headless vanilla simulation and replication diagnostic, frozen scenario restored after warming both paths; not full-app rendering or a completed performance gate",
+  "options": {
+    "warmup": 3600,
+    "measured": 3600,
+    "freezeTicks": 300,
+    "rounds": 2,
+    "workloads": [
+      "battle"
+    ],
+    "aa": true
+  },
+  "build": {
+    "createdAt": "2026-10-18T02:22:17.763Z",
+    "purpose": "Vite/Rollup diagnostic; keeps real vanilla factory/codec dispatch differences",
+    "variants": {
+      "base": {
+        "root": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-capability-closure-base-e3gsc5a9",
+        "head": "2408f73fe5f1880ee49485edec97d9fdc16e0bc7",
+        "workingTreeIncluded": false,
+        "contentDispatch": true,
+        "baselineReference": "2408f73fe5f1880ee49485edec97d9fdc16e0bc7",
+        "target": [
+          "es2020",
+          "chrome87",
+          "firefox92",
+          "safari15.4"
+        ],
+        "minify": "esbuild",
+        "graph": [
+          {
+            "file": "benchmark.js",
+            "entry": true,
+            "imports": [],
+            "dynamicImports": [],
+            "bytes": 635599,
+            "modules": [
+              "/privategame/core/src/game/defs.ts",
+              "/privategame/core/src/game/advancedHQ.ts",
+              "/privategame/core/src/core/strings.ts",
+              "/privategame/core/src/core/menuBackground.ts",
+              "/privategame/core/src/core/types.ts",
+              "/privategame/core/src/core/music.ts",
+              "/privategame/core/src/core/clone.ts",
+              "/privategame/core/src/core/i18n.ts",
+              "/privategame/core/src/game/abilityDefs.ts",
+              "/privategame/core/src/core/rng.ts",
+              "/privategame/core/src/game/biomes.ts",
+              "/privategame/core/src/game/map.ts",
+              "/privategame/core/src/game/decor.ts",
+              "/privategame/core/src/game/entityMap.ts",
+              "/privategame/core/src/game/transport.ts",
+              "/privategame/core/src/game/ammo.ts",
+              "/privategame/core/src/game/ruleState.ts",
+              "/privategame/core/src/game/veterancy.ts",
+              "/privategame/core/src/game/weather.ts",
+              "/privategame/core/src/game/contentTerrain.ts",
+              "/privategame/core/src/game/rle.ts",
+              "/privategame/core/src/game/profile.ts",
+              "/privategame/core/src/game/state.ts",
+              "/privategame/core/src/game/tech.ts",
+              "/privategame/core/src/game/contentDefs.ts",
+              "/privategame/core/src/game/factions.ts",
+              "/privategame/core/src/game/world.ts",
+              "/privategame/core/src/game/worldShapeValidation.ts",
+              "/privategame/core/src/core/math.ts",
+              "/privategame/core/src/game/cityDamage.ts",
+              "/privategame/core/src/game/attackArea.ts",
+              "/privategame/core/src/game/elevation.ts",
+              "/privategame/core/src/core/gridLine.ts",
+              "/privategame/core/src/game/bridgeLayout.ts",
+              "/privategame/core/src/game/amphibiousBridgePath.ts",
+              "/privategame/core/src/game/path.ts",
+              "/privategame/core/src/game/surface.ts",
+              "/privategame/core/src/game/power.ts",
+              "/privategame/core/src/game/abilities.ts",
+              "/privategame/core/src/game/armor.ts",
+              "/privategame/core/src/game/move.ts",
+              "/privategame/core/src/core/metrics.ts",
+              "/privategame/core/src/game/turrets.ts",
+              "/privategame/core/src/game/warheads.ts",
+              "/privategame/core/src/game/hqContacts.ts",
+              "/privategame/core/src/game/vision.ts",
+              "/privategame/core/src/game/jamming.ts",
+              "/privategame/core/src/game/unitTally.ts",
+              "/privategame/core/src/game/targetPriority.ts",
+              "/privategame/core/src/game/fireControl.ts",
+              "/privategame/core/src/game/impactMaterial.ts",
+              "/privategame/core/src/game/protect.ts",
+              "/privategame/core/src/game/combat.ts",
+              "/privategame/core/src/game/script.ts",
+              "/privategame/core/src/game/terrainChange.ts",
+              "/privategame/core/src/game/earthMaps.ts",
+              "/privategame/core/src/game/taihangChart.ts",
+              "/privategame/core/src/game/taihangMap.ts",
+              "/privategame/core/src/game/longHaul.ts",
+              "/privategame/core/src/game/conquest.ts",
+              "/privategame/core/src/game/pins.ts",
+              "/privategame/core/src/game/ai.ts",
+              "/privategame/core/src/game/formation.ts",
+              "/privategame/core/src/game/dig.ts",
+              "/privategame/core/src/game/wings.ts",
+              "/privategame/core/src/game/orders.ts",
+              "/privategame/core/src/game/customMap.ts",
+              "/privategame/core/src/game/worldValidation.ts",
+              "/privategame/core/src/game/worldRuntime.ts",
+              "/privategame/core/src/game/repairAura.ts",
+              "/privategame/core/src/game/idleWork.ts",
+              "/privategame/core/src/game/modRules.ts",
+              "/privategame/core/src/game/aiMap.ts",
+              "/privategame/core/src/game/aiIntel.ts",
+              "/privategame/core/src/game/breakthrough.ts",
+              "/privategame/core/src/game/nukeAim.ts",
+              "/privategame/core/src/game/aiTactics.ts",
+              "/privategame/core/src/game/aiTech.ts",
+              "/privategame/core/src/game/aiPockets.ts",
+              "/privategame/core/src/game/aiNaval.ts",
+              "/privategame/core/src/game/aiBrain.ts",
+              "/privategame/core/src/game/autopilot.ts",
+              "/privategame/core/src/game/commander.ts",
+              "/privategame/core/src/game/skins.ts",
+              "/privategame/core/src/game/decals.ts",
+              "/privategame/core/src/campaign/missions.ts",
+              "/privategame/core/src/game/openRange.ts",
+              "/privategame/core/src/game/sichuanGeography.ts",
+              "/privategame/core/src/game/sichuanMap.ts",
+              "/privategame/core/src/game/conquestMaps.ts",
+              "/privategame/core/src/game/mapdefs.ts",
+              "/privategame/core/src/game/save.ts",
+              "/privategame/core/src/game/teams.ts",
+              "/privategame/core/src/game/sim.ts",
+              "/privategame/core/src/game/contentCapabilities.ts",
+              "/privategame/core/src/game/contentGame.ts",
+              "/privategame/core/src/net/frames.ts",
+              "/privategame/core/src/net/contentFrames.ts",
+              "/privategame/core/server/testkit/game.ts",
+              "/Users/rivertwilight/Developer/steel-tide-mods/dist/capability-closure-gate/base.ts"
+            ]
+          }
+        ]
+      },
+      "candidate": {
+        "root": "/var/folders/fm/3k9cv0ds6xb9lmst99dzm63r0000gn/T/steel-capability-closure-01wzktl_/candidate",
+        "head": "2408f73fe5f1880ee49485edec97d9fdc16e0bc7",
+        "workingTreeIncluded": true,
+        "contentDispatch": true,
+        "baselineReference": "2408f73fe5f1880ee49485edec97d9fdc16e0bc7",
+        "target": [
+          "es2020",
+          "chrome87",
+          "firefox92",
+          "safari15.4"
+        ],
+        "minify": "esbuild",
+        "graph": [
+          {
+            "file": "benchmark.js",
+            "entry": true,
+            "imports": [],
+            "dynamicImports": [],
+            "bytes": 636753,
+            "modules": [
+              "/privategame/core/src/game/defs.ts",
+              "/privategame/core/src/game/advancedHQ.ts",
+              "/privategame/core/src/core/strings.ts",
+              "/privategame/core/src/game/contentLimits.ts",
+              "/privategame/core/src/core/menuBackground.ts",
+              "/privategame/core/src/core/types.ts",
+              "/privategame/core/src/core/music.ts",
+              "/privategame/core/src/core/clone.ts",
+              "/privategame/core/src/core/i18n.ts",
+              "/privategame/core/src/game/abilityDefs.ts",
+              "/privategame/core/src/core/rng.ts",
+              "/privategame/core/src/game/biomes.ts",
+              "/privategame/core/src/game/map.ts",
+              "/privategame/core/src/game/decor.ts",
+              "/privategame/core/src/game/entityMap.ts",
+              "/privategame/core/src/game/transport.ts",
+              "/privategame/core/src/game/ammo.ts",
+              "/privategame/core/src/game/ruleState.ts",
+              "/privategame/core/src/game/veterancy.ts",
+              "/privategame/core/src/game/weather.ts",
+              "/privategame/core/src/game/contentTerrain.ts",
+              "/privategame/core/src/game/rle.ts",
+              "/privategame/core/src/game/profile.ts",
+              "/privategame/core/src/game/state.ts",
+              "/privategame/core/src/game/tech.ts",
+              "/privategame/core/src/game/ruleSpec.ts",
+              "/privategame/core/src/game/contentDefs.ts",
+              "/privategame/core/src/game/factions.ts",
+              "/privategame/core/src/game/world.ts",
+              "/privategame/core/src/game/worldShapeValidation.ts",
+              "/privategame/core/src/core/math.ts",
+              "/privategame/core/src/game/cityDamage.ts",
+              "/privategame/core/src/game/attackArea.ts",
+              "/privategame/core/src/game/elevation.ts",
+              "/privategame/core/src/core/gridLine.ts",
+              "/privategame/core/src/game/bridgeLayout.ts",
+              "/privategame/core/src/game/amphibiousBridgePath.ts",
+              "/privategame/core/src/game/path.ts",
+              "/privategame/core/src/game/surface.ts",
+              "/privategame/core/src/game/power.ts",
+              "/privategame/core/src/game/abilities.ts",
+              "/privategame/core/src/game/armor.ts",
+              "/privategame/core/src/game/move.ts",
+              "/privategame/core/src/core/metrics.ts",
+              "/privategame/core/src/game/turrets.ts",
+              "/privategame/core/src/game/warheads.ts",
+              "/privategame/core/src/game/hqContacts.ts",
+              "/privategame/core/src/game/vision.ts",
+              "/privategame/core/src/game/jamming.ts",
+              "/privategame/core/src/game/unitTally.ts",
+              "/privategame/core/src/game/targetPriority.ts",
+              "/privategame/core/src/game/fireControl.ts",
+              "/privategame/core/src/game/impactMaterial.ts",
+              "/privategame/core/src/game/protect.ts",
+              "/privategame/core/src/game/combat.ts",
+              "/privategame/core/src/game/script.ts",
+              "/privategame/core/src/game/terrainChange.ts",
+              "/privategame/core/src/game/earthMaps.ts",
+              "/privategame/core/src/game/taihangChart.ts",
+              "/privategame/core/src/game/taihangMap.ts",
+              "/privategame/core/src/game/longHaul.ts",
+              "/privategame/core/src/game/conquest.ts",
+              "/privategame/core/src/game/pins.ts",
+              "/privategame/core/src/game/ai.ts",
+              "/privategame/core/src/game/formation.ts",
+              "/privategame/core/src/game/dig.ts",
+              "/privategame/core/src/game/wings.ts",
+              "/privategame/core/src/game/orders.ts",
+              "/privategame/core/src/game/customMap.ts",
+              "/privategame/core/src/game/worldValidation.ts",
+              "/privategame/core/src/game/worldRuntime.ts",
+              "/privategame/core/src/game/repairAura.ts",
+              "/privategame/core/src/game/idleWork.ts",
+              "/privategame/core/src/game/modRules.ts",
+              "/privategame/core/src/game/aiMap.ts",
+              "/privategame/core/src/game/aiIntel.ts",
+              "/privategame/core/src/game/breakthrough.ts",
+              "/privategame/core/src/game/nukeAim.ts",
+              "/privategame/core/src/game/aiTactics.ts",
+              "/privategame/core/src/game/aiTech.ts",
+              "/privategame/core/src/game/aiPockets.ts",
+              "/privategame/core/src/game/aiNaval.ts",
+              "/privategame/core/src/game/aiBrain.ts",
+              "/privategame/core/src/game/autopilot.ts",
+              "/privategame/core/src/game/commander.ts",
+              "/privategame/core/src/game/skins.ts",
+              "/privategame/core/src/game/decals.ts",
+              "/privategame/core/src/campaign/missions.ts",
+              "/privategame/core/src/game/openRange.ts",
+              "/privategame/core/src/game/sichuanGeography.ts",
+              "/privategame/core/src/game/sichuanMap.ts",
+              "/privategame/core/src/game/conquestMaps.ts",
+              "/privategame/core/src/game/mapdefs.ts",
+              "/privategame/core/src/game/save.ts",
+              "/privategame/core/src/game/teams.ts",
+              "/privategame/core/src/game/sim.ts",
+              "/privategame/core/src/game/contentCapabilities.ts",
+              "/privategame/core/src/game/contentGame.ts",
+              "/privategame/core/src/net/frames.ts",
+              "/privategame/core/src/net/contentFrames.ts",
+              "/privategame/core/server/testkit/game.ts",
+              "/Users/rivertwilight/Developer/steel-tide-mods/dist/capability-closure-gate/candidate.ts"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rows": [
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.077601388870842,
+          "p50": 1,
+          "p95": 1.7700000032782555,
+          "p99": 2.4549999982118607
+        },
+        "replication": {
+          "mean": 1.0812750001003344,
+          "p50": 1.0600000023841858,
+          "p95": 1.3799999952316284,
+          "p99": 1.7349999994039536
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 0.9964430554956197,
+        "p50": 0.9250000044703484,
+        "p95": 1.614999994635582,
+        "p99": 2.185000002384186
+      },
+      "replication": {
+        "mean": 1.0145500000938774,
+        "p50": 1.005000002682209,
+        "p95": 1.2400000020861626,
+        "p99": 1.6049999967217445
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.0630027777018647,
+          "p50": 0.9849999994039536,
+          "p95": 1.7400000020861626,
+          "p99": 2.3849999979138374
+        },
+        "replication": {
+          "mean": 1.052824999988079,
+          "p50": 1.0450000017881393,
+          "p95": 1.3350000008940697,
+          "p99": 1.6150000020861626
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.0108597222612137,
+        "p50": 0.9499999955296516,
+        "p95": 1.589999996125698,
+        "p99": 2.125
+      },
+      "replication": {
+        "mean": 1.0230666666664183,
+        "p50": 1.0150000005960464,
+        "p95": 1.2299999967217445,
+        "p99": 1.4350000023841858
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "B",
+      "variant": "base",
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.07344861112535,
+          "p50": 0.994999997317791,
+          "p95": 1.7649999931454659,
+          "p99": 2.3299999982118607
+        },
+        "replication": {
+          "mean": 1.073912499944369,
+          "p50": 1.0599999949336052,
+          "p95": 1.3999999985098839,
+          "p99": 1.719999998807907
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.000770833324641,
+        "p50": 0.9349999949336052,
+        "p95": 1.6049999967217445,
+        "p99": 2.1749999970197678
+      },
+      "replication": {
+        "mean": 1.0296125001025696,
+        "p50": 1.010000005364418,
+        "p95": 1.2700000032782555,
+        "p99": 1.6700000017881393
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "AA",
+      "label": "A",
+      "variant": "base",
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.0737805555574595,
+          "p50": 0.9950000047683716,
+          "p95": 1.7849999964237213,
+          "p99": 2.3900000005960464
+        },
+        "replication": {
+          "mean": 1.0779916665392617,
+          "p50": 1.0499999970197678,
+          "p95": 1.4299999997019768,
+          "p99": 1.7950000017881393
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.0093736111082965,
+        "p50": 0.9450000002980232,
+        "p95": 1.6050000041723251,
+        "p99": 2.1950000002980232
+      },
+      "replication": {
+        "mean": 1.0425375001318753,
+        "p50": 1.0299999937415123,
+        "p95": 1.2950000017881393,
+        "p99": 1.7349999994039536
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.0752138888463378,
+          "p50": 0.994999997317791,
+          "p95": 1.760000005364418,
+          "p99": 2.480000004172325
+        },
+        "replication": {
+          "mean": 1.058729166823129,
+          "p50": 1.0499999970197678,
+          "p95": 1.3600000068545341,
+          "p99": 1.6749999970197678
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.0367819444566138,
+        "p50": 0.9600000008940697,
+        "p95": 1.6850000023841858,
+        "p99": 2.3049999997019768
+      },
+      "replication": {
+        "mean": 1.0611166667751968,
+        "p50": 1.0549999997019768,
+        "p95": 1.3000000044703484,
+        "p99": 1.6799999997019768
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.0794527777656913,
+          "p50": 0.9950000047683716,
+          "p95": 1.7749999985098839,
+          "p99": 2.4499999955296516
+        },
+        "replication": {
+          "mean": 1.0790749998452762,
+          "p50": 1.0600000023841858,
+          "p95": 1.4199999943375587,
+          "p99": 1.7899999991059303
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.017930555563006,
+        "p50": 0.9449999928474426,
+        "p95": 1.6349999979138374,
+        "p99": 2.1349999979138374
+      },
+      "replication": {
+        "mean": 1.0547249998773138,
+        "p50": 1.0200000032782555,
+        "p95": 1.2999999970197678,
+        "p99": 1.6449999958276749
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 0,
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.08562222228489,
+          "p50": 1.005000002682209,
+          "p95": 1.8100000023841858,
+          "p99": 2.4600000008940697
+        },
+        "replication": {
+          "mean": 1.0844249999150635,
+          "p50": 1.0700000002980232,
+          "p95": 1.4200000017881393,
+          "p99": 1.7650000005960464
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.024151388913807,
+        "p50": 0.9600000008940697,
+        "p95": 1.655000001192093,
+        "p99": 2.1649999991059303
+      },
+      "replication": {
+        "mean": 1.054633333577464,
+        "p50": 1.0399999991059303,
+        "p95": 1.3049999997019768,
+        "p99": 1.6749999970197678
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 0,
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.0542861110903323,
+          "p50": 0.9799999967217445,
+          "p95": 1.719999998807907,
+          "p99": 2.350000001490116
+        },
+        "replication": {
+          "mean": 1.043329166577508,
+          "p50": 1.0349999964237213,
+          "p95": 1.344999998807907,
+          "p99": 1.7049999982118607
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 0.9871902777461542,
+        "p50": 0.9150000065565109,
+        "p95": 1.5549999997019768,
+        "p99": 2.149999998509884
+      },
+      "replication": {
+        "mean": 1.0126458333681028,
+        "p50": 1.0049999952316284,
+        "p95": 1.214999996125698,
+        "p99": 1.6099999994039536
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.083238888879617,
+          "p50": 1,
+          "p95": 1.7699999958276749,
+          "p99": 2.505000002682209
+        },
+        "replication": {
+          "mean": 1.0713958333494762,
+          "p50": 1.0549999997019768,
+          "p95": 1.3500000014901161,
+          "p99": 1.7299999967217445
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.0129958333344096,
+        "p50": 0.9450000002980232,
+        "p95": 1.655000001192093,
+        "p99": 2.1950000002980232
+      },
+      "replication": {
+        "mean": 1.0380666667409242,
+        "p50": 1.0349999964237213,
+        "p95": 1.2549999952316284,
+        "p99": 1.7100000008940697
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.0675416666248607,
+          "p50": 0.989999994635582,
+          "p95": 1.7549999952316284,
+          "p99": 2.4550000056624413
+        },
+        "replication": {
+          "mean": 1.0579958333075046,
+          "p50": 1.0450000017881393,
+          "p95": 1.3599999994039536,
+          "p99": 1.7699999958276749
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 0.996327777740856,
+        "p50": 0.9299999997019768,
+        "p95": 1.5750000029802322,
+        "p99": 2.0450000017881393
+      },
+      "replication": {
+        "mean": 1.0368583333988985,
+        "p50": 1.0150000005960464,
+        "p95": 1.2699999958276749,
+        "p99": 1.6750000044703484
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "base",
+      "variant": "base",
+      "round": 1,
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.0797833333599072,
+          "p50": 1,
+          "p95": 1.785000003874302,
+          "p99": 2.4849999994039536
+        },
+        "replication": {
+          "mean": 1.083125000136594,
+          "p50": 1.0700000002980232,
+          "p95": 1.4400000050663948,
+          "p99": 1.7700000032782555
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.0285305555475255,
+        "p50": 0.9649999961256981,
+        "p95": 1.6499999985098839,
+        "p99": 2.2200000062584877
+      },
+      "replication": {
+        "mean": 1.0560749999061227,
+        "p50": 1.0349999964237213,
+        "p95": 1.3100000023841858,
+        "p99": 1.6950000002980232
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/base/benchmark.js",
+        "/favicon.ico"
+      ]
+    },
+    {
+      "group": "comparison",
+      "label": "candidate",
+      "variant": "candidate",
+      "round": 1,
+      "workload": "battle",
+      "warmup": 3600,
+      "measured": 3600,
+      "freezeTicks": 300,
+      "measuredStartTick": 300,
+      "entities": 454,
+      "runtime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+      "frozenDigest": "2b7d99ed",
+      "measuredStartDigest": "4a73d118",
+      "digest": "446ca7a5",
+      "snapshotBytes": 94788,
+      "warmed": {
+        "sim": {
+          "mean": 1.0856972222402692,
+          "p50": 1.005000002682209,
+          "p95": 1.785000003874302,
+          "p99": 2.439999997615814
+        },
+        "replication": {
+          "mean": 1.079866666768988,
+          "p50": 1.0599999949336052,
+          "p95": 1.380000002682209,
+          "p99": 1.8000000044703484
+        },
+        "wireDigest": "ae5bd9dd",
+        "wireBytes": 34444953,
+        "peakProjectiles": 32
+      },
+      "sim": {
+        "mean": 1.0018958333383003,
+        "p50": 0.9299999997019768,
+        "p95": 1.594999998807907,
+        "p99": 2.1699999943375587
+      },
+      "replication": {
+        "mean": 1.0329791667126118,
+        "p50": 1.0200000032782555,
+        "p95": 1.244999997317791,
+        "p99": 1.6099999994039536
+      },
+      "wireDigest": "ae5bd9dd",
+      "wireBytes": 34444953,
+      "peakProjectiles": 32,
+      "hashAlgorithm": "FNV-1a32",
+      "resourcePaths": [
+        "/candidate/benchmark.js",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "behaviorMismatches": []
+}

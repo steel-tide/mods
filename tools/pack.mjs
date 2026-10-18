@@ -35,7 +35,10 @@ export async function packMod(folder) {
   }
   // the screenshots are the pages' business, not the game's: neither the files nor their names travel
   const { screenshots: _shots, ...mod } = parsed.mod;
-  return { ok: true, mod: parsed.mod, text: JSON.stringify({ ...mod, files }, null, 2) };
+  const text = JSON.stringify({ ...mod, files }, null, 2);
+  const packed = parseMod(text);
+  if (!packed.ok) return { ok: false, errors: packed.errors };
+  return { ok: true, mod: parsed.mod, text };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

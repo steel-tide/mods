@@ -223,6 +223,7 @@ Unknown ordinary fields produce a warning. Each extension package defines and va
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
+| `capacity` | standard \| large |  | standard | format 4: large allows 1024 defs, 2048 sheets, 512 sounds, 4 MiB metadata and 256 MiB stored data URLs; standard keeps 200/192/60, 1/24 MiB |
 | `requiredCapabilities` | capability id[] |  |  | Required package-provided capability IDs |
 | `extensionPackages` | { id, version, api, capabilities, schema, runtime, presentation? }[] |  |  | Versioned extension packages with SHA-256 verified schema, simulation and optional presentation modules (format 4) |
 | `format` | string | yes |  | always "steel-tide-mod" |
@@ -248,11 +249,13 @@ Unknown ordinary fields produce a warning. Each extension package defines and va
 
 `name`, `description` and every `desc`/`name` on a def are *text*: a string (used for every language), `["English", "中文", "한국어"]` in that order, or `{ "en": "…", "zh": "…", "ko": "…" }`. Only English is required; a language left out reads as English.
 
+Capacity is an installation-time declaration. Omit it for the existing ordinary limits, or set `capacity: "large"` in format 4 for 1024 definitions and entries per production/build/reference list (ordinary lists allow 64), 2048 sheets, 512 sounds, 4 MiB of metadata and 256 MiB of stored data URLs. Large packs allow 100000000 HP per definition and 2 MiB per executable module; their combined source and configuration must still fit the metadata budget. All path, identity, reference and adds-only checks still apply. Budgets do not preallocate runtime memory. Ordinary multiplayer transfers manifests; players install the asset bytes locally.
+
 ### Extension packages (format 4)
 
-Format 4 packs carry their own `extensionPackages`: versioned, SHA-256 verified schema, simulation and optional presentation code. Extension source, build steps, tests and documentation belong to the mod that owns them; its manifest embeds the executable package. Each mod can define its own namespaced capability IDs and configuration without a shared gameplay package or an engine catalog. The engine provides host API version 1. Declare package-provided IDs in `requiredCapabilities`, then put their data under `extensions[id]`. Only content which requests extensions prepares the optional host. Extension code is executable trusted code, not sandboxed data.
+Format 4 packs carry their own `extensionPackages`: versioned, SHA-256 verified schema, simulation and optional presentation code. Extension source, build steps, tests and documentation belong to the mod that owns them; its manifest embeds the executable package. Each mod can define its own namespaced capability IDs and configuration without a shared gameplay package or an engine catalog. The engine provides host API version 2 and retains compatible older package APIs. Declare package-provided IDs in `requiredCapabilities`, then put their data under `extensions[id]`. Only content which requests extensions prepares the optional host. Extension code is executable trusted code, not sandboxed data.
 Executable packages require `v:4`. Formats 1 and 2 and ordinary format 3 data remain supported; former built-in capability packs need compatible implementations embedded in format 4. A missing/unsupported capability rejects activation. Vanilla keeps its ordinary simulation; optional state and update work belong to the enabled match. Package schemas own their accepted fields, bounds, defaults and localization requirements.
-A package may declare `assets: { resourceId: "relative/file.wav" }` (up to 256 entries). These files travel with the ordinary folder, packed file and world; the existing total asset-size limit applies. Its schema receives only its own `assetIds`; its browser factory receives `asset(id)` to resolve installed bytes without fetching arbitrary URLs. Optional `feedback(context, base)` selects local voice behavior once at match entry and returns `unitVoice` plus an optional `dispose`. Use the host recording mixer and scoped music queues, release package recordings and music scopes on disposal, and reuse native rendering/recoil where suitable. Gameplay-specific recording choices and cosmetic predicates belong to the mod.
+A package may declare `assets: { resourceId: "relative/file.wav" }` (up to 256 entries, or 2048 with large capacity). These files travel with the ordinary folder, packed file and world; the existing total asset-size limit applies. Its schema receives only its own `assetIds`; its browser factory receives `asset(id)` to resolve installed bytes without fetching arbitrary URLs. Optional `feedback(context, base)` selects local voice behavior once at match entry and returns `unitVoice` plus an optional `dispose`. Use the host recording mixer and scoped music queues, release package recordings and music scopes on disposal, and reuse native rendering/recoil where suitable. Gameplay-specific recording choices and cosmetic predicates belong to the mod.
 
 Read the [extension framework guide](https://github.com/steel-tide/mods/blob/main/docs/EXTENSION-FRAMEWORK.md) for the generic package contract, lifecycle, host SDK and trust model. Gameplay behavior and configuration are documented inside the mod that supplies the package.
 
@@ -336,7 +339,7 @@ The optional kit changes visible building forms, storeys, lot coverage, planting
 | `cost` | number 0–99999 | yes |  | metal |
 | `buildTime` | number 0–3600 |  | cost ÷ 14 | seconds at full power |
 | `pop` | integer 0–50 |  | 1 for a unit, 0 for a building | population it counts for |
-| `hp` | number 1–1000000 | yes |  | hit points |
+| `hp` | number 1–100000000 | yes |  | hit points; standard capacity is limited to 1000000, large to 100000000 |
 | `armor` | light \| medium \| heavy \| ship \| sub \| air \| structure |  | by domain | the armour class weapons are multiplied against |
 | `impactMaterial` | armor \| earth \| concrete |  | concrete for structure armor, armor otherwise | projectile-impact sound material; does not change damage. Both ordinary and heavy impacts use the matching recorded family |
 | `directionalArmor` | { front, side, rear } | units only |  | ground hull direct-hit multipliers `{front, side, rear}`, each 0–10; 90° front/rear arcs and 90° on each side. Arc fire, collateral blasts, mines and fire ignore facing. Enables slow reversing for short moves behind the hull |
