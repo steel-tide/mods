@@ -6,5 +6,6 @@ rusted-warfare
 rusted-warfare-mods
 mods/rusted-expansion/sfx/
 draft
+/docs/
 # Unfinished local port; keep it out of the published registry.
 /mods/usgr-re/
