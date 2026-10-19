@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-19T05:20:06.420Z",
+  "generated": "2026-10-19T10:04:20.525Z",
   "mods": [
     {
       "id": "adolence",
@@ -25,7 +25,7 @@
       "updated": "2026-10-18T16:02:28+08:00",
       "published": "2026-09-20T15:16:26+08:00",
       "bytes": 756886,
-      "downloads": 336,
+      "downloads": 340,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -10368,7 +10368,7 @@
       "updated": "2026-10-09T20:42:04+08:00",
       "published": "2026-09-27T14:59:28+08:00",
       "bytes": 579557,
-      "downloads": 165,
+      "downloads": 166,
       "screenshots": [
         {
           "file": "screenshots/cover.webp",
@@ -10660,7 +10660,7 @@
       "updated": "2026-10-16T14:58:07+08:00",
       "published": "2026-09-08T12:34:52+08:00",
       "bytes": 3228743,
-      "downloads": 145,
+      "downloads": 147,
       "screenshots": [
         {
           "file": "screenshots/skimmers.webp",
@@ -10803,7 +10803,7 @@
       "updated": "2026-10-19T12:25:54+08:00",
       "published": "2026-10-19T12:25:54+08:00",
       "bytes": 43892117,
-      "downloads": 1,
+      "downloads": 3,
       "screenshots": [
         {
           "file": "screenshots/carrier-operations.jpg",
@@ -19577,7 +19577,7 @@
       "updated": "2026-09-20T13:14:42+08:00",
       "published": "2026-09-08T22:53:58+08:00",
       "bytes": 15799299,
-      "downloads": 117,
+      "downloads": 119,
       "screenshots": [
         {
           "file": "screenshots/armour.webp",
