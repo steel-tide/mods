@@ -1,0 +1,26 @@
+bun test v1.2.20 (6ad208bc)
+
+mods/naval-warfare/simulation.test.ts:
+(pass) all five factions keep an HQ/builder reconstruction loop and closed rosters [0.73ms]
+(pass) each selectable faction actually starts with its HQ and can train another own builder [258.67ms]
+(pass) AI establishes the source crane construction chain and fields recruited ground units [1512.86ms]
+(pass) Iowa retains every firing barrel beyond the eight HUD entries [9.04ms]
+(pass) a real main gun emits from its source mount and damages a target [3.63ms]
+(pass) a factory batch uses its source action price/time and exits onto passable ground [2.46ms]
+(pass) an original stationary crane constructs through native placement checks and survives saving mid-build [48.48ms]
+(pass) ownership, insufficient funds and invalid strike coordinates leave state unchanged [1.84ms]
+(pass) carrier starts with the source mixed aircraft, and launch/recovery retain ownership [2.57ms]
+(pass) deployment morph keeps identity, health share and source energy [3.34ms]
+(pass) in-flight shots and an unfinished paid action survive save/restore deterministically [7.61ms]
+(pass) a slave barrel follows its parent turret when the enemy is off the bow [5.10ms]
+(pass) invalid manual nuclear aim leaves energy and money untouched [2.12ms]
+(pass) reactor temperature transitions and cooling survive an immediate save [6.13ms]
+(pass) a source meltdown triggers the immediate death blast without orphaned saved state [3.30ms]
+(pass) carrier purchases preserve two queued batches and their source costs [4.94ms]
+(pass) public frames expose visible mount poses without ammunition or action orders [2.72ms]
+(pass) corrupt restored clocks are rejected transactionally [4.09ms]
+
+ 18 pass
+ 0 fail
+ 96 expect() calls
+Ran 18 tests across 1 file. [2.20s]

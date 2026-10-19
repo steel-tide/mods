@@ -1,0 +1,2944 @@
+{
+  "modDescription": [
+    "My enemies are many. My equals are none. In the shade of olive trees, they said Italy could never be conquered. In the land of pharaohs and kings, they said Egypt could never be humbled.",
+    "我的敌人众多，却无人可与我匹敌。在橄榄树荫下，他们说意大利永远不会被征服。在法老与国王的土地上，他们说埃及永远不会屈服。",
+    "나의 적은 많지만 나와 대등한 자는 없다. 올리브 나무 그늘에서 사람들은 이탈리아를 결코 정복할 수 없다고 했다. 파라오와 왕들의 땅에서 사람들은 이집트를 결코 굴복시킬 수 없다고 했다."
+  ],
+  "originalModDescription": ",私の敵は多い。私に匹敵する者はいない。オリーブの木陰で、イタリアは決して征服されないと言われた。ファラオと王の地で、エジプトは決して屈服しないと言われていた。",
+  "names": {
+    "CVADPEscort": {
+      "en": "MOTHER SHIP",
+      "zh": "MOTHER SHIP",
+      "ko": "MOTHER SHIP"
+    },
+    "Dlongsword": {
+      "en": "Longsword",
+      "zh": "Longsword",
+      "ko": "Longsword"
+    },
+    "[BlobMob30002]": {
+      "en": "[ENEMY]",
+      "zh": "[ENEMY]",
+      "ko": "[ENEMY]"
+    },
+    "[BlobMob3000]": {
+      "en": "[ENEMY]",
+      "zh": "[ENEMY]",
+      "ko": "[ENEMY]"
+    },
+    "Shaanxi KJ-2000": {
+      "en": "Shaanxi KJ-2000",
+      "zh": "陕西空警-2000",
+      "ko": "산시 KJ-2000"
+    },
+    "H-20": {
+      "en": "H-20",
+      "zh": "H-20",
+      "ko": "H-20"
+    },
+    "H-6": {
+      "en": "H-6",
+      "zh": "H-6",
+      "ko": "H-6"
+    },
+    "GJ-11": {
+      "en": "GJ-11",
+      "zh": "GJ-11",
+      "ko": "GJ-11"
+    },
+    "GJ-2": {
+      "en": "Wing loong II",
+      "zh": "翼龙II",
+      "ko": "윙룽 II"
+    },
+    "J-10C": {
+      "en": "J-10C",
+      "zh": "J-10C",
+      "ko": "J-10C"
+    },
+    "J-11": {
+      "en": "J-11",
+      "zh": "J-11",
+      "ko": "J-11"
+    },
+    "J-15": {
+      "en": "J-15",
+      "zh": "J-15",
+      "ko": "J-15"
+    },
+    "J-16A": {
+      "en": "J-16A",
+      "zh": "J-16A",
+      "ko": "J-16A"
+    },
+    "J-16": {
+      "en": "J-16",
+      "zh": "J-16",
+      "ko": "J-16"
+    },
+    "J-31": {
+      "en": "J-31",
+      "zh": "J-31",
+      "ko": "J-31"
+    },
+    "J-20": {
+      "en": "J-20",
+      "zh": "J-20",
+      "ko": "J-20"
+    },
+    "WZ-10": {
+      "en": "WZ10",
+      "zh": "武直-10",
+      "ko": "WZ-10"
+    },
+    "Z-19": {
+      "en": "Z-19 Harbin",
+      "zh": "哈尔滨直-19",
+      "ko": "하얼빈 Z-19"
+    },
+    "Y-20": {
+      "en": "Y20",
+      "zh": "Y20",
+      "ko": "Y20"
+    },
+    "PLA Air Base": {
+      "en": "PLA Air Base",
+      "zh": "解放军空军基地",
+      "ko": "인민해방군 공군기지"
+    },
+    "CN Crane": {
+      "en": "CN Crane",
+      "zh": "中国起重机",
+      "ko": "중국 크레인"
+    },
+    "CHDCK": {
+      "en": "PLA Dock",
+      "zh": "解放军船坞",
+      "ko": "인민해방군 조선소"
+    },
+    "PLAF": {
+      "en": "People of liberation army Factory",
+      "zh": "解放军工厂",
+      "ko": "인민해방군 공장"
+    },
+    "CHHQ": {
+      "en": "PEOPLE LIBERATION Army",
+      "zh": "中国人民解放军总部",
+      "ko": "중국 인민해방군 본부"
+    },
+    "CH_NavalDepot": {
+      "en": "Naval Depot",
+      "zh": "海军仓库",
+      "ko": "해군 보급창"
+    },
+    "HQ-19": {
+      "en": "HQ-19",
+      "zh": "HQ-19",
+      "ko": "HQ-19"
+    },
+    "HQ-19D": {
+      "en": "HQ-19Dep",
+      "zh": "红旗-19（已部署）",
+      "ko": "HQ-19 (전개)"
+    },
+    "HQ-9": {
+      "en": "HQ-9",
+      "zh": "HQ-9",
+      "ko": "HQ-9"
+    },
+    "HQ-9DEP": {
+      "en": "HQ-9 DEP",
+      "zh": "红旗-9（已部署）",
+      "ko": "HQ-9 (전개)"
+    },
+    "phl03": {
+      "en": "PHL-03",
+      "zh": "PHL-03",
+      "ko": "PHL-03"
+    },
+    "PHL-03_Deployedh": {
+      "en": "PHL-03Deployed",
+      "zh": "PHL-03（已部署）",
+      "ko": "PHL-03 (전개)"
+    },
+    "Excavator CH": {
+      "en": "Excavator CH",
+      "zh": "中国挖掘机",
+      "ko": "중국 굴착기"
+    },
+    "ZBD-05": {
+      "en": "ZBD-05",
+      "zh": "ZBD-05",
+      "ko": "ZBD-05"
+    },
+    "ZTZ99A": {
+      "en": "ZTZ-99A",
+      "zh": "99A式",
+      "ko": "99A식"
+    },
+    "ZBL09": {
+      "en": "ZBL-09",
+      "zh": "ZBL-09",
+      "ko": "ZBL-09"
+    },
+    "TYPE-075": {
+      "en": "TYPE-075",
+      "zh": "TYPE-075",
+      "ko": "TYPE-075"
+    },
+    "Type-054B": {
+      "en": "Type-054B",
+      "zh": "Type-054B",
+      "ko": "Type-054B"
+    },
+    "TYPE-055": {
+      "en": "TYPE-055A",
+      "zh": "TYPE-055A",
+      "ko": "TYPE-055A"
+    },
+    "Type-002": {
+      "en": "Type-002 Liaoning Aircraft Carrier",
+      "zh": "002型辽宁号航空母舰",
+      "ko": "002형 랴오닝 항공모함"
+    },
+    "Type-003": {
+      "en": "Type-003 fuji",
+      "zh": "003型fuji",
+      "ko": "003형 fuji"
+    },
+    "Type-052A": {
+      "en": "TYPE-052A",
+      "zh": "TYPE-052A",
+      "ko": "TYPE-052A"
+    },
+    "Type-052D": {
+      "en": "052D",
+      "zh": "052D",
+      "ko": "052D"
+    },
+    "Type-053A": {
+      "en": "054A",
+      "zh": "054A",
+      "ko": "054A"
+    },
+    "Type-056": {
+      "en": "Type-056",
+      "zh": "Type-056",
+      "ko": "Type-056"
+    },
+    "Type-094": {
+      "en": "CH Type-094",
+      "zh": "中国094型",
+      "ko": "중국 094형"
+    },
+    "TYPE-094UN": {
+      "en": "CH Type-094",
+      "zh": "中国094型（潜航）",
+      "ko": "중국 094형 (잠항)"
+    },
+    "Type-91 Dive": {
+      "en": "Type-91 submarine",
+      "zh": "091型潜艇（潜航）",
+      "ko": "091형 잠수함 (잠항)"
+    },
+    "Type-91": {
+      "en": "Type-91 submarine",
+      "zh": "091型潜艇",
+      "ko": "091형 잠수함"
+    },
+    "Type-728 Class Landing Craft j": {
+      "en": "type728CH",
+      "zh": "728型气垫登陆艇",
+      "ko": "728형 호버크래프트 상륙정"
+    },
+    "Type-728 Class Landing Craft": {
+      "en": "type728CH",
+      "zh": "728型气垫登陆艇",
+      "ko": "728형 호버크래프트 상륙정"
+    },
+    "P-3": {
+      "en": "P-3",
+      "zh": "P-3",
+      "ko": "P-3"
+    },
+    "F-15J": {
+      "en": "F-15J",
+      "zh": "F-15J",
+      "ko": "F-15J"
+    },
+    "F-2": {
+      "en": "F-2",
+      "zh": "F-2",
+      "ko": "F-2"
+    },
+    "F-35J": {
+      "en": "F-35J",
+      "zh": "F-35J",
+      "ko": "F-35J"
+    },
+    "F-4J": {
+      "en": "F-4",
+      "zh": "F-4",
+      "ko": "F-4"
+    },
+    "AH1S": {
+      "en": "AH1S",
+      "zh": "AH1S",
+      "ko": "AH1S"
+    },
+    "UH60J": {
+      "en": "MH-60J",
+      "zh": "MH-60J",
+      "ko": "MH-60J"
+    },
+    "C2": {
+      "en": "Kawasaki C-2",
+      "zh": "川崎C-2",
+      "ko": "가와사키 C-2"
+    },
+    "Type88": {
+      "en": "Type 88",
+      "zh": "88式",
+      "ko": "88식"
+    },
+    "Type 88 dep": {
+      "en": "Type 88",
+      "zh": "88式（已部署）",
+      "ko": "88식 (전개)"
+    },
+    "PatriotPAC3JSDFDepo": {
+      "en": "MIM-104 Patriot PAC-3 MSE",
+      "zh": "MIM-104爱国者PAC-3 MSE（已部署）",
+      "ko": "MIM-104 패트리엇 PAC-3 MSE (전개)"
+    },
+    "PatriotPAC3JSDFy": {
+      "en": "MIM-104 Patriot PAC-3 MSE",
+      "zh": "MIM-104爱国者PAC-3 MSE",
+      "ko": "MIM-104 패트리엇 PAC-3 MSE"
+    },
+    "Type 03": {
+      "en": "Type 03",
+      "zh": "03式",
+      "ko": "03식"
+    },
+    "Type03dep": {
+      "en": "Type03",
+      "zh": "03式（已部署）",
+      "ko": "03식 (전개)"
+    },
+    "Type 11 Sam-tan Kai II": {
+      "en": "Type 11 Sam-tan Kai II",
+      "zh": "11式短SAM改II",
+      "ko": "11식 단SAM 개량 II"
+    },
+    "Type 81": {
+      "en": "Type81",
+      "zh": "81式",
+      "ko": "81식"
+    },
+    "Type87": {
+      "en": "Type 87",
+      "zh": "87式",
+      "ko": "87식"
+    },
+    "m270mlrsJ": {
+      "en": "m270mlrs",
+      "zh": "m270mlrs",
+      "ko": "m270mlrs"
+    },
+    "m270mlrs_DeployedJ": {
+      "en": "m270mlrs Deployed",
+      "zh": "M270多管火箭炮（已部署）",
+      "ko": "M270 다연장로켓포 (전개)"
+    },
+    "PatriotPAC3o": {
+      "en": "MIM-104 Patriot PAC-3 MSE",
+      "zh": "MIM-104爱国者PAC-3 MSE（已部署）",
+      "ko": "MIM-104 패트리엇 PAC-3 MSE (전개)"
+    },
+    "PatriotPAC3JSDF": {
+      "en": "MIM-104 Patriot PAC-3 MSE",
+      "zh": "MIM-104爱国者PAC-3 MSE",
+      "ko": "MIM-104 패트리엇 PAC-3 MSE"
+    },
+    "TYPE90": {
+      "en": "Type 90",
+      "zh": "90式",
+      "ko": "90식"
+    },
+    "Type 16": {
+      "en": "Type 16",
+      "zh": "16式",
+      "ko": "16식"
+    },
+    "TYPE-74E": {
+      "en": "Type 74E",
+      "zh": "74E式",
+      "ko": "74E식"
+    },
+    "Type 89": {
+      "en": "Type 89",
+      "zh": "89式",
+      "ko": "89식"
+    },
+    "Type-10": {
+      "en": "Type 10",
+      "zh": "10式",
+      "ko": "10식"
+    },
+    "Excavator JP": {
+      "en": "Excavator JP",
+      "zh": "日本挖掘机",
+      "ko": "일본 굴착기"
+    },
+    "JDDG-102": {
+      "en": "JS ATAGO",
+      "zh": "爱宕号",
+      "ko": "JS 아타고"
+    },
+    "JDDG-54": {
+      "en": "JS Kongo",
+      "zh": "金刚号",
+      "ko": "JS 공고"
+    },
+    "JP Cost guard": {
+      "en": "Js kintani",
+      "zh": "金谷号",
+      "ko": "JS 킨타니"
+    },
+    "JS Maya Class": {
+      "en": "JS Maya",
+      "zh": "摩耶号",
+      "ko": "JS 마야"
+    },
+    "JS NOSHIRO": {
+      "en": "JS NOSHIRO",
+      "zh": "能代号",
+      "ko": "JS 노시로"
+    },
+    "SHIRANUI": {
+      "en": "JS Shiranui",
+      "zh": "不知火号",
+      "ko": "JS 시라누이"
+    },
+    "JS Asagari": {
+      "en": "JS Asagari",
+      "zh": "朝雾号",
+      "ko": "JS 아사기리"
+    },
+    "JS Sumasame": {
+      "en": "JS Sumasame",
+      "zh": "村雨号",
+      "ko": "JS 무라사메"
+    },
+    "Ōsumi-class tank landing ship": {
+      "en": "Ōsumi-class tank landing ship",
+      "zh": "大隅级坦克登陆舰",
+      "ko": "오스미급 전차상륙함"
+    },
+    "JS izumo": {
+      "en": "IZUMU-class helicopter destroyer",
+      "zh": "出云级直升机驱逐舰",
+      "ko": "이즈모급 헬기구축함"
+    },
+    "JS Soryo": {
+      "en": "Js_Hyūga-class helicopter destroyer",
+      "zh": "日向级直升机驱逐舰",
+      "ko": "휴가급 헬기구축함"
+    },
+    "Mogami class": {
+      "en": "JS mogami",
+      "zh": "最上号",
+      "ko": "JS 모가미"
+    },
+    "jmsdfakizuki-wdd-115-destroyer": {
+      "en": "JS Shiranui",
+      "zh": "不知火号",
+      "ko": "JS 시라누이"
+    },
+    "Soryu D": {
+      "en": "Söryü Class submarine",
+      "zh": "苍龙级潜艇（潜航）",
+      "ko": "소류급 잠수함 (잠항)"
+    },
+    "Soryu Class sub": {
+      "en": "Söryü Class submarine",
+      "zh": "苍龙级潜艇",
+      "ko": "소류급 잠수함"
+    },
+    "JSDF Air Base": {
+      "en": "Japan self defense forces Air Base",
+      "zh": "日本自卫队航空基地",
+      "ko": "일본 자위대 항공기지"
+    },
+    "JSDF Crane": {
+      "en": "JSDF Crane",
+      "zh": "日本起重机",
+      "ko": "일본 크레인"
+    },
+    "JPDCK": {
+      "en": "Japan Dock",
+      "zh": "日本船坞",
+      "ko": "일본 조선소"
+    },
+    "JSDFF": {
+      "en": "Japan Self defense forces Factory",
+      "zh": "日本自卫队工厂",
+      "ko": "일본 자위대 공장"
+    },
+    "JPHQ": {
+      "en": "Japan HQ",
+      "zh": "日本总部",
+      "ko": "일본 본부"
+    },
+    "JP_NavalDepot": {
+      "en": "Naval Depot",
+      "zh": "海军仓库",
+      "ko": "해군 보급창"
+    },
+    "AH1ZPH": {
+      "en": "AH1Z",
+      "zh": "AH1Z",
+      "ko": "AH1Z"
+    },
+    "AW-159": {
+      "en": "Agusta AW-159",
+      "zh": "阿古斯塔AW-159",
+      "ko": "아구스타 AW-159"
+    },
+    "Abukuma": {
+      "en": "Abukuma class destroyer escort",
+      "zh": "阿武隈级护航驱逐舰",
+      "ko": "아부쿠마급 호위구축함"
+    },
+    "Bramos": {
+      "en": "Bramos",
+      "zh": "Bramos",
+      "ko": "Bramos"
+    },
+    "Bastion Depo": {
+      "en": "Bramos Dep",
+      "zh": "布拉莫斯（已部署）",
+      "ko": "브라모스 (전개)"
+    },
+    "BRP JOSE RIZAL": {
+      "en": "BRP Jose Rizal",
+      "zh": "何塞·黎刹号",
+      "ko": "BRP 호세 리살"
+    },
+    "BRP RAJAH Sulayman": {
+      "en": "BRP Rajah Sulayman",
+      "zh": "拉贾·苏莱曼号",
+      "ko": "BRP 라자 술라이만"
+    },
+    "C-130H": {
+      "en": "C-130H",
+      "zh": "C-130H",
+      "ko": "C-130H"
+    },
+    "AFP Crane": {
+      "en": "AFP Crane",
+      "zh": "菲律宾起重机",
+      "ko": "필리핀 크레인"
+    },
+    "AFPD": {
+      "en": "Armed forces of Philippines Shipyard",
+      "zh": "菲律宾武装部队造船厂",
+      "ko": "필리핀군 조선소"
+    },
+    "F-50": {
+      "en": "F-50",
+      "zh": "F-50",
+      "ko": "F-50"
+    },
+    "AFPF": {
+      "en": "Armed forces of Philippines Factory",
+      "zh": "菲律宾武装部队工厂",
+      "ko": "필리핀군 공장"
+    },
+    "REPUBLIC OF PHILIPPINES": {
+      "en": "REPUBLIC OF PHILIPPINES (AFP)",
+      "zh": "菲律宾共和国（武装部队）",
+      "ko": "필리핀 공화국 (AFP)"
+    },
+    "AFP _NavalDepot": {
+      "en": "Naval Depot",
+      "zh": "海军仓库",
+      "ko": "해군 보급창"
+    },
+    "Sabra": {
+      "en": "Sabrah",
+      "zh": "萨布拉",
+      "ko": "사브라"
+    },
+    "FV101 Scorpion": {
+      "en": "FV101 Scorpion",
+      "zh": "FV101蝎式",
+      "ko": "FV101 스콜피온"
+    },
+    "M113 AIFV PH": {
+      "en": "M113 AIFV PH",
+      "zh": "菲律宾M113装甲步兵战车",
+      "ko": "필리핀 M113 장갑보병전투차"
+    },
+    "NASAMS": {
+      "en": "NATIONAL ADVANCE SURFACE TO AIR MISSILE SYSTEM",
+      "zh": "国家先进地空导弹系统",
+      "ko": "국가 첨단 지대공 미사일 체계"
+    },
+    "1E": {
+      "en": "Scorpene submarine class",
+      "zh": "鲉鱼级潜艇",
+      "ko": "스코르펜급 잠수함"
+    },
+    "2E": {
+      "en": "Scorpene submarine class",
+      "zh": "鲉鱼级潜艇（潜航）",
+      "ko": "스코르펜급 잠수함 (잠항)"
+    },
+    "UH-60": {
+      "en": "UH-60 Blackhawk",
+      "zh": "UH-60黑鹰",
+      "ko": "UH-60 블랙호크"
+    },
+    "Bm30_Deployedeed": {
+      "en": "Spyder ER Deployed",
+      "zh": "蜘蛛ER（已部署）",
+      "ko": "스파이더 ER (전개)"
+    },
+    "T-29": {
+      "en": "T-29",
+      "zh": "T-29",
+      "ko": "T-29"
+    },
+    "T129": {
+      "en": "T129",
+      "zh": "T129",
+      "ko": "T129"
+    },
+    "AFP Air Base": {
+      "en": "ARMED FORCES OF PHILIPPINES Air Base",
+      "zh": "菲律宾武装部队航空基地",
+      "ko": "필리핀군 항공기지"
+    },
+    "Atmoss 2000": {
+      "en": "ATMOS 2000",
+      "zh": "ATMOS 2000",
+      "ko": "ATMOS 2000"
+    },
+    "BRP Gregorio del Pilar": {
+      "en": "BRP Gregorio del Pilar (PS-40",
+      "zh": "格雷戈里奥·德尔·皮拉尔号（PS-40）",
+      "ko": "BRP 그레고리오 델 필라르 (PS-40)"
+    },
+    "Excavator AFP": {
+      "en": "Excavator AFP",
+      "zh": "菲律宾挖掘机",
+      "ko": "필리핀 굴착기"
+    },
+    "NASAMSRUe": {
+      "en": "MASASM",
+      "zh": "MASASM",
+      "ko": "MASASM"
+    },
+    "Bm30mlrsje": {
+      "en": "Spyder",
+      "zh": "Spyder",
+      "ko": "Spyder"
+    },
+    "A-50": {
+      "en": "A-50",
+      "zh": "A-50",
+      "ko": "A-50"
+    },
+    "PAK DA": {
+      "en": "Tupolev PAK DA",
+      "zh": "图波列夫PAK DA",
+      "ko": "투폴레프 PAK DA"
+    },
+    "SU-34": {
+      "en": "SU-34",
+      "zh": "SU-34",
+      "ko": "SU-34"
+    },
+    "Tu-160": {
+      "en": "Tupolev Tu-160",
+      "zh": "图波列夫图-160",
+      "ko": "투폴레프 Tu-160"
+    },
+    "Tu-95": {
+      "en": "Tu-95",
+      "zh": "Tu-95",
+      "ko": "Tu-95"
+    },
+    "Tu-95A": {
+      "en": "Tu-95A",
+      "zh": "Tu-95A",
+      "ko": "Tu-95A"
+    },
+    "Kronshtadt Orion": {
+      "en": "Kronshtadt Orion",
+      "zh": "喀琅施塔得猎户座",
+      "ko": "크론시타트 오리온"
+    },
+    "S70": {
+      "en": "Sukhoi -70",
+      "zh": "苏霍伊-70",
+      "ko": "수호이 -70"
+    },
+    "shahed136RU": {
+      "en": "Shahed_238",
+      "zh": "Shahed_238",
+      "ko": "Shahed_238"
+    },
+    "Mig29K": {
+      "en": "Mig-29K",
+      "zh": "Mig-29K",
+      "ko": "Mig-29K"
+    },
+    "Mig29": {
+      "en": "Mig-29",
+      "zh": "Mig-29",
+      "ko": "Mig-29"
+    },
+    "Mig-31": {
+      "en": "Mig-31",
+      "zh": "Mig-31",
+      "ko": "Mig-31"
+    },
+    "SU-25": {
+      "en": "SU-25T Frogfoot",
+      "zh": "苏-25T蛙足",
+      "ko": "Su-25T 프로그풋"
+    },
+    "Su-27": {
+      "en": "Su-27",
+      "zh": "Su-27",
+      "ko": "Su-27"
+    },
+    "Su-30": {
+      "en": "Su-35",
+      "zh": "Su-35",
+      "ko": "Su-35"
+    },
+    "Su-33": {
+      "en": "Su-33",
+      "zh": "Su-33",
+      "ko": "Su-33"
+    },
+    "Su-47": {
+      "en": "Su-47 berkut",
+      "zh": "苏-47金雕",
+      "ko": "Su-47 베르쿠트"
+    },
+    "Su-57": {
+      "en": "Su-57",
+      "zh": "Su-57",
+      "ko": "Su-57"
+    },
+    "Mi-17": {
+      "en": "Mi-17",
+      "zh": "Mi-17",
+      "ko": "Mi-17"
+    },
+    "Mi-24": {
+      "en": "Mi-24 hind",
+      "zh": "米-24雌鹿",
+      "ko": "Mi-24 하인드"
+    },
+    "A-50T": {
+      "en": "A-50T",
+      "zh": "A-50T",
+      "ko": "A-50T"
+    },
+    "Ann-225": {
+      "en": "Antov-225",
+      "zh": "Antov-225",
+      "ko": "Antov-225"
+    },
+    "ka-29A": {
+      "en": "Ка-29",
+      "zh": "Ка-29",
+      "ko": "Ка-29"
+    },
+    "Ka-50": {
+      "en": "Ka-50 Black shark",
+      "zh": "卡-50黑鲨",
+      "ko": "Ka-50 블랙샤크"
+    },
+    "Ka-52": {
+      "en": "Ka-52 Alligator",
+      "zh": "卡-52短吻鳄",
+      "ko": "Ka-52 앨리게이터"
+    },
+    "RUSSIAN FEDERATION Air Base": {
+      "en": "RU Air Base",
+      "zh": "俄罗斯空军基地",
+      "ko": "러시아 공군기지"
+    },
+    "Kortik": {
+      "en": "Kortik",
+      "zh": "卡什坦近防系统",
+      "ko": "코르티크 근접방어체계"
+    },
+    "Crane ru": {
+      "en": "Crane ru",
+      "zh": "俄罗斯起重机",
+      "ko": "러시아 크레인"
+    },
+    "RUDCK": {
+      "en": "Russia Dock",
+      "zh": "俄罗斯船坞",
+      "ko": "러시아 조선소"
+    },
+    "RuF": {
+      "en": "Russian Factory",
+      "zh": "俄罗斯工厂",
+      "ko": "러시아 공장"
+    },
+    "RUHQ": {
+      "en": "Russia HQ",
+      "zh": "俄罗斯总部",
+      "ko": "러시아 본부"
+    },
+    "RU_NavalDepot": {
+      "en": "Naval Depot",
+      "zh": "海军仓库",
+      "ko": "해군 보급창"
+    },
+    "NASAMSRU": {
+      "en": "9K331 Tor-M1",
+      "zh": "9K331道尔-M1",
+      "ko": "9K331 토르-M1"
+    },
+    "s400": {
+      "en": "S-400",
+      "zh": "S-400",
+      "ko": "S-400"
+    },
+    "s400dep": {
+      "en": "S-400",
+      "zh": "S-400",
+      "ko": "S-400"
+    },
+    "pantsir": {
+      "en": "Pantsir-s",
+      "zh": "Pantsir-s",
+      "ko": "Pantsir-s"
+    },
+    "s300": {
+      "en": "S-300",
+      "zh": "S-300",
+      "ko": "S-300"
+    },
+    "s300dep": {
+      "en": "S-300",
+      "zh": "S-300",
+      "ko": "S-300"
+    },
+    "2s135": {
+      "en": "2S35 Koalitsiya",
+      "zh": "2S35联盟",
+      "ko": "2S35 코알리치야"
+    },
+    "2s1 Msta": {
+      "en": "2S19 Msta",
+      "zh": "2S19姆斯塔",
+      "ko": "2S19 므스타"
+    },
+    "Bastion Dep": {
+      "en": "Bastion Dep",
+      "zh": "棱堡（已部署）",
+      "ko": "바스티온 (전개)"
+    },
+    "Bastion": {
+      "en": "Bastion",
+      "zh": "Bastion",
+      "ko": "Bastion"
+    },
+    "Bm30_Deployed": {
+      "en": "bm30mlrs Deployed",
+      "zh": "BM-30多管火箭炮（已部署）",
+      "ko": "BM-30 다연장로켓포 (전개)"
+    },
+    "Bm30mlrs": {
+      "en": "Bm30mlrs",
+      "zh": "Bm30mlrs",
+      "ko": "Bm30mlrs"
+    },
+    "BMP2": {
+      "en": "BMP-2M Berezhok",
+      "zh": "BMP-2M别列若克",
+      "ko": "BMP-2M 베레조크"
+    },
+    "T-72": {
+      "en": "T-72",
+      "zh": "T-72",
+      "ko": "T-72"
+    },
+    "T-80": {
+      "en": "T-80",
+      "zh": "T-80",
+      "ko": "T-80"
+    },
+    "t-90": {
+      "en": "T-90",
+      "zh": "T-90",
+      "ko": "T-90"
+    },
+    "T-90M": {
+      "en": "T-90M",
+      "zh": "T-90M",
+      "ko": "T-90M"
+    },
+    "Excavator RU": {
+      "en": "Excavator RU",
+      "zh": "俄罗斯挖掘机",
+      "ko": "러시아 굴착기"
+    },
+    "Admiral Gorshkov-class frigatee": {
+      "en": "Admiral Gorshkov",
+      "zh": "戈尔什科夫海军上将号",
+      "ko": "고르시코프 제독함"
+    },
+    "Admiral Gorshkov class II": {
+      "en": "Admiral Gorshkov II",
+      "zh": "戈尔什科夫海军上将II级",
+      "ko": "고르시코프 제독 II급"
+    },
+    "Admiral_Lidimentkiy": {
+      "en": "admiral Lidimentkiy",
+      "zh": "利季缅特基海军上将号",
+      "ko": "리디멘트키 제독함"
+    },
+    "Admiral Kuznetsov Aircraft Carrier": {
+      "en": "Admiral Kuznetsov Aircraft Carrier",
+      "zh": "库兹涅佐夫海军上将号航空母舰",
+      "ko": "쿠즈네초프 제독 항공모함"
+    },
+    "Admiral_Levchenko": {
+      "en": "Admiral Levchenko",
+      "zh": "列夫琴科海军上将号",
+      "ko": "레프첸코 제독함"
+    },
+    "AdmiralMakarov": {
+      "en": "Admiral Makarov",
+      "zh": "马卡罗夫海军上将号",
+      "ko": "마카로프 제독함"
+    },
+    "Admiral_Nakhimov": {
+      "en": "Admiral Nakhimov",
+      "zh": "纳希莫夫海军上将号",
+      "ko": "나히모프 제독함"
+    },
+    "KRIVAK": {
+      "en": "Krivak III Frigate",
+      "zh": "克里瓦克III级护卫舰",
+      "ko": "크리바크 III급 호위함"
+    },
+    "Project 1164": {
+      "en": "Slava Class guided missile",
+      "zh": "光荣级导弹巡洋舰",
+      "ko": "슬라바급 유도탄 순양함"
+    },
+    "RF UDALOY": {
+      "en": "Udaloy class I",
+      "zh": "无畏I级",
+      "ko": "우달로이 I급"
+    },
+    "Borei": {
+      "en": "Alexander Nevsky",
+      "zh": "亚历山大·涅夫斯基号",
+      "ko": "알렉산드르 네프스키함"
+    },
+    "BoreiDived": {
+      "en": "Alexander Nevsky",
+      "zh": "亚历山大·涅夫斯基号（潜航）",
+      "ko": "알렉산드르 네프스키함 (잠항)"
+    },
+    "Akula": {
+      "en": "akula Class submarine",
+      "zh": "阿库拉级潜艇",
+      "ko": "아쿨라급 잠수함"
+    },
+    "AkulaD": {
+      "en": "akula Class submarine",
+      "zh": "阿库拉级潜艇（潜航）",
+      "ko": "아쿨라급 잠수함 (잠항)"
+    },
+    "Zubr Class Landing Craft": {
+      "en": "Zubr Class Landing Craft",
+      "zh": "欧洲野牛级气垫登陆艇",
+      "ko": "주브르급 호버크래프트 상륙정"
+    },
+    "E2C": {
+      "en": "E2C",
+      "zh": "E-2C鹰眼",
+      "ko": "E-2C 호크아이"
+    },
+    "E3": {
+      "en": "E-3 Sentry",
+      "zh": "E-3望楼",
+      "ko": "E-3 센트리"
+    },
+    "B2": {
+      "en": "B-2",
+      "zh": "B-2",
+      "ko": "B-2"
+    },
+    "B52": {
+      "en": "B-52",
+      "zh": "B-52",
+      "ko": "B-52"
+    },
+    "MQ20": {
+      "en": "MQ20",
+      "zh": "MQ20",
+      "ko": "MQ20"
+    },
+    "MQ9": {
+      "en": "MQ-9",
+      "zh": "MQ-9",
+      "ko": "MQ-9"
+    },
+    "RQ180": {
+      "en": "RQ180",
+      "zh": "RQ180",
+      "ko": "RQ180"
+    },
+    "X-47bH": {
+      "en": "X-47bH",
+      "zh": "X-47bH",
+      "ko": "X-47bH"
+    },
+    "A-10": {
+      "en": "A-10C",
+      "zh": "A-10C",
+      "ko": "A-10C"
+    },
+    "F-15": {
+      "en": "F-15E",
+      "zh": "F-15E",
+      "ko": "F-15E"
+    },
+    "F-16": {
+      "en": "F-16C",
+      "zh": "F-16C",
+      "ko": "F-16C"
+    },
+    "F-18": {
+      "en": "F/A-18",
+      "zh": "F/A-18",
+      "ko": "F/A-18"
+    },
+    "F-35C": {
+      "en": "F-35C",
+      "zh": "F-35C",
+      "ko": "F-35C"
+    },
+    "F/A-22": {
+      "en": "F/A-22 RAPTOR",
+      "zh": "F/A-22猛禽",
+      "ko": "F/A-22 랩터"
+    },
+    "AH1Z": {
+      "en": "AH1Z",
+      "zh": "AH1Z",
+      "ko": "AH1Z"
+    },
+    "AH-64A": {
+      "en": "AH-64A Apache",
+      "zh": "AH-64A阿帕奇",
+      "ko": "AH-64A 아파치"
+    },
+    "SH60": {
+      "en": "MH-60R Seahawk",
+      "zh": "MH-60R海鹰",
+      "ko": "MH-60R 시호크"
+    },
+    "C17": {
+      "en": "C-17 Globemaster",
+      "zh": "C-17环球霸王",
+      "ko": "C-17 글로브마스터"
+    },
+    "Avenger": {
+      "en": "Avenger",
+      "zh": "Avenger",
+      "ko": "Avenger"
+    },
+    "PatriotPAC3USDep": {
+      "en": "MIM-104 Patriot PAC-3 MSE",
+      "zh": "MIM-104爱国者PAC-3 MSE（已部署）",
+      "ko": "MIM-104 패트리엇 PAC-3 MSE (전개)"
+    },
+    "PatriotPAC3US": {
+      "en": "MIM-104 Patriot PAC-3 MSE",
+      "zh": "MIM-104爱国者PAC-3 MSE",
+      "ko": "MIM-104 패트리엇 PAC-3 MSE"
+    },
+    "Thaad un": {
+      "en": "Thaad",
+      "zh": "Thaad",
+      "ko": "Thaad"
+    },
+    "Thaaddep": {
+      "en": "Thaad",
+      "zh": "Thaad",
+      "ko": "Thaad"
+    },
+    "Lav25": {
+      "en": "Lav-25",
+      "zh": "Lav-25",
+      "ko": "Lav-25"
+    },
+    "m1128": {
+      "en": "M1128 Stryker",
+      "zh": "M1128斯特赖克",
+      "ko": "M1128 스트라이커"
+    },
+    "MBT1": {
+      "en": "M1A Abrams",
+      "zh": "M1A艾布拉姆斯",
+      "ko": "M1A 에이브럼스"
+    },
+    "MBT2": {
+      "en": "M1A2 Abrams",
+      "zh": "M1A2艾布拉姆斯",
+      "ko": "M1A2 에이브럼스"
+    },
+    "M-109": {
+      "en": "M109 Paladin",
+      "zh": "M109帕拉丁",
+      "ko": "M109 팔라딘"
+    },
+    "m270mlrs": {
+      "en": "m270mlrs",
+      "zh": "m270mlrs",
+      "ko": "m270mlrs"
+    },
+    "m270mlrs_Deployed": {
+      "en": "m270mlrs Deployed",
+      "zh": "M270多管火箭炮（已部署）",
+      "ko": "M270 다연장로켓포 (전개)"
+    },
+    "Excavator US": {
+      "en": "Excavator US",
+      "zh": "美国挖掘机",
+      "ko": "미국 굴착기"
+    },
+    "LCAC With tropps": {
+      "en": "LCAC",
+      "zh": "LCAC",
+      "ko": "LCAC"
+    },
+    "LCAC JSDF": {
+      "en": "LCAC",
+      "zh": "LCAC",
+      "ko": "LCAC"
+    },
+    "LCAC": {
+      "en": "LCAC",
+      "zh": "LCAC",
+      "ko": "LCAC"
+    },
+    "CG-72": {
+      "en": "USS Vella Gulf",
+      "zh": "维拉湾号",
+      "ko": "USS 벨라 걸프"
+    },
+    "CV-54": {
+      "en": "USS Independence",
+      "zh": "独立号",
+      "ko": "USS 인디펜던스"
+    },
+    "CVN-74": {
+      "en": "Nimitz-class",
+      "zh": "尼米兹级",
+      "ko": "니미츠급"
+    },
+    "DDG-105": {
+      "en": "USS Samson",
+      "zh": "桑普森号",
+      "ko": "USS 샘슨"
+    },
+    "DDG-53": {
+      "en": "Arleigh burke",
+      "zh": "阿利·伯克级",
+      "ko": "알레이 버크급"
+    },
+    "Gerald R. Ford Aircraft Carrier": {
+      "en": "Gerald R. Ford Aircraft Carrier",
+      "zh": "杰拉尔德·R·福特号航空母舰",
+      "ko": "제럴드 R. 포드 항공모함"
+    },
+    "USS America": {
+      "en": "USS America",
+      "zh": "美国号",
+      "ko": "USS 아메리카"
+    },
+    "USS LPD-17": {
+      "en": "LPD-17",
+      "zh": "LPD-17",
+      "ko": "LPD-17"
+    },
+    "USS UTAH BEACH": {
+      "en": "USS UTAH BEACH",
+      "zh": "犹他海滩号",
+      "ko": "USS 유타 비치"
+    },
+    "US Cost guard": {
+      "en": "USS Legend",
+      "zh": "传奇号",
+      "ko": "USS 레전드"
+    },
+    "USS los Angeles Dive": {
+      "en": "Los Angeles Class submarine",
+      "zh": "洛杉矶级潜艇（潜航）",
+      "ko": "로스앤젤레스급 잠수함 (잠항)"
+    },
+    "Los Angeles Class sub": {
+      "en": "Los Angeles Class submarine",
+      "zh": "洛杉矶级潜艇",
+      "ko": "로스앤젤레스급 잠수함"
+    },
+    "SSB-79D": {
+      "en": "USS OHIO",
+      "zh": "俄亥俄号（潜航）",
+      "ko": "USS 오하이오 (잠항)"
+    },
+    "SSB-79": {
+      "en": "USS OHIO",
+      "zh": "俄亥俄号",
+      "ko": "USS 오하이오"
+    },
+    "USAF Air Base": {
+      "en": "US Air Base",
+      "zh": "美国空军基地",
+      "ko": "미국 공군기지"
+    },
+    "C-Ram": {
+      "en": "C-RAM",
+      "zh": "C-RAM近防系统",
+      "ko": "C-RAM 근접방어체계"
+    },
+    "Crane Us": {
+      "en": "Crane Us",
+      "zh": "美国起重机",
+      "ko": "미국 크레인"
+    },
+    "USDCK": {
+      "en": "United States Dock",
+      "zh": "美国船坞",
+      "ko": "미국 조선소"
+    },
+    "USF": {
+      "en": "United States Factory",
+      "zh": "美国工厂",
+      "ko": "미국 공장"
+    },
+    "USHQ": {
+      "en": "United States HQ",
+      "zh": "美国总部",
+      "ko": "미국 본부"
+    },
+    "IRON DOME": {
+      "en": "IRON DOME",
+      "zh": "铁穹",
+      "ko": "아이언 돔"
+    },
+    "US_NavalDepot": {
+      "en": "Naval Depot",
+      "zh": "海军仓库",
+      "ko": "해군 보급창"
+    },
+    "Admiral Gorshkov-class frigate": {
+      "en": "Admiral Gorshkov",
+      "zh": "戈尔什科夫海军上将号",
+      "ko": "고르시코프 제독함"
+    },
+    "JP Hayabusa": {
+      "en": "Js Hayabusa",
+      "zh": "隼号",
+      "ko": "JS 하야부사"
+    },
+    "33": {
+      "en": "Goodbye",
+      "zh": "Goodbye",
+      "ko": "Goodbye"
+    },
+    "Steelexjtractor": {
+      "en": "Cheat",
+      "zh": "Cheat",
+      "ko": "Cheat"
+    },
+    "Steregushchy": {
+      "en": "Steregushchy",
+      "zh": "守护级",
+      "ko": "스테레구시치급"
+    },
+    "Z-8": {
+      "en": "Z-8",
+      "zh": "直-8",
+      "ko": "Z-8"
+    },
+    "DF10": {
+      "en": "DF-10",
+      "zh": "DF-10",
+      "ko": "DF-10"
+    },
+    "DF10dep": {
+      "en": "DF10 Deployed",
+      "zh": "东风-10（已部署）",
+      "ko": "DF-10 (전개)"
+    },
+    "PHL-81": {
+      "en": "PHL-81",
+      "zh": "PHL-81",
+      "ko": "PHL-81"
+    },
+    "PHL-81Dep": {
+      "en": "PHL-81 Deployed",
+      "zh": "PHL-81（已部署）",
+      "ko": "PHL-81 (전개)"
+    },
+    "plz05CH": {
+      "en": "PLZ-05",
+      "zh": "05式自行榴弹炮",
+      "ko": "PLZ-05"
+    },
+    "Type-99": {
+      "en": "Type 99 Artillery",
+      "zh": "99式自行榴弹炮",
+      "ko": "99식 자주포"
+    },
+    "2s25 Sprut-SD": {
+      "en": "2S25 Sprut-SD",
+      "zh": "2S25章鱼-SD",
+      "ko": "2S25 스프루트-SD"
+    },
+    "ZBL-19": {
+      "en": "ZBL-19",
+      "zh": "ZBL-19装甲车",
+      "ko": "ZBL-19 장갑차"
+    },
+    "Nuclear_factory": {
+      "en": "Nuclear Credit Factory",
+      "zh": "核能资金工厂",
+      "ko": "원자력 자금 공장"
+    },
+    "Nuclear_factory1": {
+      "en": "Nuclear Credit Factory",
+      "zh": "核能资金工厂（过热）",
+      "ko": "원자력 자금 공장 (과열)"
+    },
+    "Nuclear_factory2": {
+      "en": "Nuclear Credit Factory",
+      "zh": "核能资金工厂（危险）",
+      "ko": "원자력 자금 공장 (위험)"
+    },
+    "Nuclear_factory3": {
+      "en": "Nuclear Credit Factory",
+      "zh": "核能资金工厂（熔毁）",
+      "ko": "원자력 자금 공장 (노심용융)"
+    },
+    "Nuclear_factoryC": {
+      "en": "Nuclear Credit Factory",
+      "zh": "核能资金工厂（冷却）",
+      "ko": "원자력 자금 공장 (냉각)"
+    },
+    "Nuclear_factoryC1": {
+      "en": "Nuclear Credit Factory",
+      "zh": "核能资金工厂（冷却，过热）",
+      "ko": "원자력 자금 공장 (냉각, 과열)"
+    },
+    "Nuclear_factoryC2": {
+      "en": "Nuclear Credit Factory",
+      "zh": "核能资金工厂（冷却，危险）",
+      "ko": "원자력 자금 공장 (냉각, 위험)"
+    },
+    "ZBD-04": {
+      "en": "ZBD-04",
+      "zh": "ZBD-04",
+      "ko": "ZBD-04"
+    },
+    "cloudEmiter": {
+      "en": "cloudEmiter",
+      "zh": "cloudEmiter",
+      "ko": "cloudEmiter"
+    },
+    "Radiation": {
+      "en": "Radiation",
+      "zh": "Radiation",
+      "ko": "Radiation"
+    },
+    "RadiationCore": {
+      "en": "Radiactive dust",
+      "zh": "Radiactive dust",
+      "ko": "Radiactive dust"
+    },
+    "ZTZ99": {
+      "en": "ZTZ-99",
+      "zh": "99式",
+      "ko": "99식"
+    },
+    "TripodAttacking": {
+      "en": "TripodAttacking",
+      "zh": "TripodAttacking",
+      "ko": "TripodAttacking"
+    },
+    "TripodHunting": {
+      "en": "TripodHunting",
+      "zh": "TripodHunting",
+      "ko": "TripodHunting"
+    },
+    "Tripod": {
+      "en": "Tripod",
+      "zh": "Tripod",
+      "ko": "Tripod"
+    },
+    "tripodh": {
+      "en": "[ENEMY]",
+      "zh": "[ENEMY]",
+      "ko": "[ENEMY]"
+    },
+    "Oil extract": {
+      "en": "US Oil storage",
+      "zh": "美国石油储存站",
+      "ko": "미국 석유 저장소"
+    },
+    "Steelextractor": {
+      "en": "US Steel storage",
+      "zh": "美国钢铁储存站",
+      "ko": "미국 강철 저장소"
+    },
+    "JPASMS": {
+      "en": "Anti Ship Missile Site",
+      "zh": "反舰导弹阵地",
+      "ko": "대함미사일 진지"
+    },
+    "OT_factionSelector": {
+      "en": "Factions Selector",
+      "zh": "Factions Selector",
+      "ko": "Factions Selector"
+    },
+    "Helipad PLA": {
+      "en": "Helipad",
+      "zh": "直升机坪",
+      "ko": "헬리패드"
+    },
+    "Helipad JSDF": {
+      "en": "Helipad",
+      "zh": "直升机坪",
+      "ko": "헬리패드"
+    },
+    "Helipad  AFP": {
+      "en": "Helipad",
+      "zh": "直升机坪",
+      "ko": "헬리패드"
+    },
+    "Helipad  US": {
+      "en": "Helipad",
+      "zh": "直升机坪",
+      "ko": "헬리패드"
+    },
+    "Helipad RU": {
+      "en": "Helipad",
+      "zh": "直升机坪",
+      "ko": "헬리패드"
+    },
+    "Oilextractor": {
+      "en": "oil storage",
+      "zh": "石油储存站",
+      "ko": "석유 저장소"
+    },
+    "987668": {
+      "en": "Nuke",
+      "zh": "Nuke",
+      "ko": "Nuke"
+    },
+    "nukeLauncher": {
+      "en": "Nuclear launcher",
+      "zh": "核弹发射井",
+      "ko": "핵미사일 발사대"
+    },
+    "SimpleIowa": {
+      "en": "USS Iowa",
+      "zh": "衣阿华号",
+      "ko": "USS 아이오와"
+    },
+    "Oil refinery": {
+      "en": "Oil refinery",
+      "zh": "炼油厂",
+      "ko": "정유소"
+    },
+    "RUExtractor": {
+      "en": "oil Storage",
+      "zh": "石油储存站",
+      "ko": "석유 저장소"
+    },
+    "Oil extract ru": {
+      "en": "Ru Oil storage",
+      "zh": "俄罗斯石油储存站",
+      "ko": "러시아 석유 저장소"
+    },
+    "Steelextractor ru": {
+      "en": "Ru Steel storage",
+      "zh": "俄罗斯钢铁储存站",
+      "ko": "러시아 강철 저장소"
+    },
+    "Steel refinery": {
+      "en": "Steel factory",
+      "zh": "炼钢厂",
+      "ko": "제강소"
+    },
+    "Wall 1х3": {
+      "en": "Wall 1x3",
+      "zh": "1x3围墙",
+      "ko": "1x3 방벽"
+    },
+    "Wall 3х3": {
+      "en": "Wall 3x3",
+      "zh": "3x3围墙",
+      "ko": "3x3 방벽"
+    },
+    "Wall 3х1": {
+      "en": "Wall 3x1",
+      "zh": "3x1围墙",
+      "ko": "3x1 방벽"
+    }
+  },
+  "descriptions": {
+    "-Fight in space and air \\n -12x long range plasma torpedo \\n -2x medium laser \\n -Transport a few things \\n -Called as reinforcement, already has crew \\n -Has spaces for some extra population \\n -Tier 4 Spaceship": {
+      "en": "-Fight in space and air \n -12x long range plasma torpedo \n -2x medium laser \n -Transport a few things \n -Called as reinforcement, already has crew \n -Has spaces for some extra population \n -Tier 4 Spaceship",
+      "zh": "可在太空和空中作战；12门远程等离子鱼雷、2门中程激光；可运输少量单位；作为增援抵达时已有乘员，并提供额外人口空间；四级太空舰。",
+      "ko": "우주와 공중에서 전투. 장거리 플라스마 어뢰 12문, 중거리 레이저 2문. 소량의 화물과 추가 인구 공간. 승무원이 탑승한 증원으로 도착하는 4단계 우주선."
+    },
+    "standard fighter \\n -2x missiles \\n -1x rotary cannon": {
+      "en": "standard fighter \n -2x missiles \n -1x rotary cannon",
+      "zh": "标准战斗机；2枚导弹，1门旋转机炮。",
+      "ko": "표준 전투기. 미사일 2기와 회전식 기관포 1문."
+    },
+    "ENEMY": {
+      "en": "ENEMY",
+      "zh": "敌人",
+      "ko": "적"
+    },
+    "The Shaanxi KJ-2000++ (Chinese: 空警-2000; pinyin: Kōngjǐng Liǎngqiān; lit. 'Airwarning-2000', NATO reporting name: Mainring) is a Chinese second-generation airborne early warning and control (AEW&C) aircraft developed by the Shaanxi Aircraft Corporation, and is the first AEW&C system in service to the People's Liberation Army Air Force. It is built upon a modified Russian Ilyushin Il-76 airframe using domestically designed avionics and a fixed radome featuring three active electronically scanned array (AESA) radars each covering a 120-degree sector,[3] unlike the rotating radome on the comparable E-3 Sentry serving the United States Air Force": {
+      "en": "The Shaanxi KJ-2000++ (Chinese: 空警-2000; pinyin: Kōngjǐng Liǎngqiān; lit. 'Airwarning-2000', NATO reporting name: Mainring) is a Chinese second-generation airborne early warning and control (AEW&C) aircraft developed by the Shaanxi Aircraft Corporation, and is the first AEW&C system in service to the People's Liberation Army Air Force. It is built upon a modified Russian Ilyushin Il-76 airframe using domestically designed avionics and a fixed radome featuring three active electronically scanned array (AESA) radars each covering a 120-degree sector,[3] unlike the rotating radome on the comparable E-3 Sentry serving the United States Air Force",
+      "zh": "空警-2000是陕西飞机公司研制的中国第二代空中预警指挥机，也是解放军空军首个服役的预警指挥系统。以改装的俄罗斯伊尔-76为机体，采用国产航电和固定雷达罩，内装3部各覆盖120度的有源相控阵雷达；与美国E-3的旋转雷达罩不同。",
+      "ko": "KJ-2000은 산시 항공이 개발한 중국 2세대 공중조기경보통제기이자 중국 공군 최초의 실전 배치 조기경보 체계다. 개조된 러시아 Il-76 기체에 국산 항전 장비와 고정식 레이돔을 사용하며, 각 120도를 담당하는 AESA 레이더 3기를 탑재한다. 미국 E-3의 회전식 레이돔과 다르다."
+    },
+    "The Xi'an H-20 (Chinese: 轰-20; pinyin: Hōng-20; alternatively Xi'an H-X) is a projected subsonic stealth bomber design of the People's Liberation Army Air Force. It is referred to as a strategic project by the People's Liberation Army,[2][3] and will be the first dedicated strategic bomber developed by China.[": {
+      "en": "The Xi'an H-20 (Chinese: 轰-20; pinyin: Hōng-20; alternatively Xi'an H-X) is a projected subsonic stealth bomber design of the People's Liberation Army Air Force. It is referred to as a strategic project by the People's Liberation Army,[2][3] and will be the first dedicated strategic bomber developed by China.[",
+      "zh": "西安轰-20，又称H-X，是中国人民解放军空军规划的亚音速隐身轰炸机，被列为战略项目，将是中国首款自主研制的专用战略轰炸机。",
+      "ko": "시안 H-20(H-X)은 중국 공군이 계획한 아음속 스텔스 폭격기다. 전략 사업으로 분류되며 중국이 독자 개발하는 첫 전용 전략폭격기가 될 예정이다."
+    },
+    "Chinese Bomber": {
+      "en": "Chinese Bomber",
+      "zh": "中国轰炸机。",
+      "ko": "중국 폭격기."
+    },
+    "The Chinese GJ-11 is an stealth unmanned aerial vehicle (UAV) surveillance aircraft intended for contested airspace.": {
+      "en": "The Chinese GJ-11 is an stealth unmanned aerial vehicle (UAV) surveillance aircraft intended for contested airspace.",
+      "zh": "攻击-11是用于争夺空域侦察监视的中国隐身无人机。",
+      "ko": "GJ-11은 위협이 존재하는 공역의 감시·정찰을 위한 중국 스텔스 무인기다."
+    },
+    "Chengdu GJ-2, also known as Wing Loong 2, is an unmanned aerial vehicle (UAV) capable of remotely controlled or autonomous flight developed by the Chengdu Aircraft Industry Group in the People's Republic of China. Intended for use as a surveillance and aerial reconnaissance and precision strike platform, Chengdu unveiled the concept of Wing Loong II at the Aviation Expo China in Beijing in September 2015. Wing Loong II has long range strike capability with a satellite link": {
+      "en": "Chengdu GJ-2, also known as Wing Loong 2, is an unmanned aerial vehicle (UAV) capable of remotely controlled or autonomous flight developed by the Chengdu Aircraft Industry Group in the People's Republic of China. Intended for use as a surveillance and aerial reconnaissance and precision strike platform, Chengdu unveiled the concept of Wing Loong II at the Aviation Expo China in Beijing in September 2015. Wing Loong II has long range strike capability with a satellite link",
+      "zh": "成都攻击-2又称翼龙II，是成都飞机工业集团研制的中国无人机，可遥控或自主飞行，用于监视、空中侦察和精确打击。翼龙II概念于2015年9月北京航展公布，卫星链路赋予其远程打击能力。",
+      "ko": "청두 GJ-2(윙룽 II)는 원격 또는 자율 비행으로 감시, 항공 정찰, 정밀타격을 수행하는 중국 무인기다. 2015년 9월 베이징 항공전에서 공개되었으며 위성 연결을 통한 장거리 타격 능력을 갖춘다."
+    },
+    "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike": {
+      "en": "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike",
+      "zh": "可进行空中格斗和对地打击的多用途战斗机。",
+      "ko": "공중전과 지상 타격이 가능한 다목적 전투기."
+    },
+    "Early version of J-15/16 ,less advance Multi-role Fighter Capable of Air-air Dog fight and Ground Strike": {
+      "en": "Early version of J-15/16 ,less advance Multi-role Fighter Capable of Air-air Dog fight and Ground Strike",
+      "zh": "J-15/16的早期型号，技术较旧；可进行空中格斗和对地打击的多用途战斗机。",
+      "ko": "J-15/16의 초기형으로 기술 수준이 낮다. 공중전과 지상 타격이 가능한 다목적 전투기."
+    },
+    "Anti submarine Multi-role Fighter Capable of Air-air Dog fight and Ground Strike/": {
+      "en": "Anti submarine Multi-role Fighter Capable of Air-air Dog fight and Ground Strike/",
+      "zh": "具备反潜、空中格斗和对地打击能力的多用途战斗机。",
+      "ko": "대잠전, 공중전, 지상 타격이 가능한 다목적 전투기."
+    },
+    "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike/": {
+      "en": "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike/",
+      "zh": "可进行空中格斗和对地打击的多用途战斗机。",
+      "ko": "공중전과 지상 타격이 가능한 다목적 전투기."
+    },
+    "J-31 air superiority aircraft Made By China GOOD AT LONG RANGE AIR TO AIR COMBAT AND ALSO AIR TO GROUND COMBAT, SEEING THE ENEMY ALREADY DESTROYED BEFORE THEY GOT CLOSE/The Shenyang J-35 (Chinese: 歼-35; pinyin: jiān-sānwǔ) is a series of Chinese single-seater, twin-engine, all-weather, stealth multirole combat aircraft manufactured by Shenyang Aircraft Corporation (SAC), designed for air superiority and surface strike missions. The aircraft has two variants, a land-based variant designed for the People's Liberation Army Air Force (PLAAF), and a carrier-based variant optimized for catapult-assisted takeoff (CATOBAR) for the People's Liberation Army Naval Air Force (PLANAF). The aircraft is also promoted for export. It is the first fifth-generation fighter in the world to have been launched from an aircraft carrier using an electromagnetic catapult (EMALS).[6]": {
+      "en": "J-31 air superiority aircraft Made By China GOOD AT LONG RANGE AIR TO AIR COMBAT AND ALSO AIR TO GROUND COMBAT, SEEING THE ENEMY ALREADY DESTROYED BEFORE THEY GOT CLOSE/The Shenyang J-35 (Chinese: 歼-35; pinyin: jiān-sānwǔ) is a series of Chinese single-seater, twin-engine, all-weather, stealth multirole combat aircraft manufactured by Shenyang Aircraft Corporation (SAC), designed for air superiority and surface strike missions. The aircraft has two variants, a land-based variant designed for the People's Liberation Army Air Force (PLAAF), and a carrier-based variant optimized for catapult-assisted takeoff (CATOBAR) for the People's Liberation Army Naval Air Force (PLANAF). The aircraft is also promoted for export. It is the first fifth-generation fighter in the world to have been launched from an aircraft carrier using an electromagnetic catapult (EMALS).[6]",
+      "zh": "中国制造的J-31制空战斗机，擅长远程空战和对地攻击，可在敌人接近前将其摧毁。沈飞J-35系列为单座、双发动机、全天候隐身多用途战斗机，有空军陆基型和海军弹射舰载型，也面向出口；原文称其为首款通过航母电磁弹射器起飞的第五代战斗机。",
+      "ko": "중국 J-31 제공 전투기로 장거리 공중전과 지상 공격에 강하며 적이 접근하기 전에 파괴한다. 선양 J-35 계열은 단좌·쌍발·전천후 스텔스 다목적 전투기로 공군 지상형과 해군 사출 함재형, 수출형이 있다. 원문은 전자기 사출기로 항모에서 이륙한 최초의 5세대 전투기라고 설명한다."
+    },
+    "Multi-role Fighter Capable of Air-air Dog fight/5TH GENERATION AIRCRAFT": {
+      "en": "Multi-role Fighter Capable of Air-air Dog fight/5TH GENERATION AIRCRAFT",
+      "zh": "可进行空中格斗的第五代多用途战斗机。",
+      "ko": "공중전이 가능한 5세대 다목적 전투기."
+    },
+    "CAS helicopter\\n-Arnament: two rocket complexes": {
+      "en": "CAS helicopter\n-Arnament: two rocket complexes",
+      "zh": "近距空中支援直升机，装备两套火箭武器系统。",
+      "ko": "로켓 무장 체계 2기를 탑재한 근접항공지원 헬리콥터."
+    },
+    "While the official series name of the aircraft is Kunpeng, a mythical giant fish-bird from the Taoist classic Zhuangzi, it is nicknamed \"Chubby Girl\" (Chinese: 胖妞; pinyin: Pàng niū) in the Chinese aviation industry because its fuselage is much wider than aircraft previously developed in China.": {
+      "en": "While the official series name of the aircraft is Kunpeng, a mythical giant fish-bird from the Taoist classic Zhuangzi, it is nicknamed \"Chubby Girl\" (Chinese: 胖妞; pinyin: Pàng niū) in the Chinese aviation industry because its fuselage is much wider than aircraft previously developed in China.",
+      "zh": "正式系列名称为“鲲鹏”，取自《庄子》中的巨鱼化鸟。因机身比中国此前研制的飞机宽得多，在中国航空界被昵称为“胖妞”。",
+      "ko": "정식 명칭은 장자의 거대한 물고기와 새에서 따온 ‘쿤펑’이다. 이전 중국제 항공기보다 동체가 훨씬 넓어 중국 항공업계에서는 ‘뚱녀’라는 별칭으로 불린다."
+    },
+    "Decent Planes": {
+      "en": "Decent Planes",
+      "zh": "生产性能尚可的飞机。",
+      "ko": "준수한 항공기를 생산한다."
+    },
+    "": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "Can build cheat Chinese WARSHIPS": {
+      "en": "Can build cheat Chinese WARSHIPS",
+      "zh": "可建造作弊版中国军舰。",
+      "ko": "중국 군함의 치트 버전을 건조할 수 있다."
+    },
+    "-Anti-Nuke capable": {
+      "en": "-Anti-Nuke capable",
+      "zh": "具备反核能力。",
+      "ko": "핵 요격 능력 보유."
+    },
+    "-Anti-air system.": {
+      "en": "-Anti-air system.",
+      "zh": "防空系统。",
+      "ko": "방공 체계."
+    },
+    "The HQ-9 is a long-range semi-active radar homing surface-to-air missile developed by the People's Republic of China. The naval variant is the HHQ-9. The HQ-9 and its export variants are developed by China Aerospace Science and Industry Corporation.": {
+      "en": "The HQ-9 is a long-range semi-active radar homing surface-to-air missile developed by the People's Republic of China. The naval variant is the HHQ-9. The HQ-9 and its export variants are developed by China Aerospace Science and Industry Corporation.",
+      "zh": "红旗-9是中国研制的远程半主动雷达制导地空导弹，舰载型为海红旗-9。红旗-9及其出口型由中国航天科工集团研制。",
+      "ko": "HQ-9은 중국이 개발한 장거리 반능동 레이더 유도 지대공 미사일이다. 해상형은 HHQ-9이며 중국항천과공집단이 HQ-9과 수출형을 개발한다."
+    },
+    ": -Multiple Launch Rocket System \\n -good against infantry and vehicles \\n -can only attack land \\n-long range": {
+      "en": ": -Multiple Launch Rocket System \n -good against infantry and vehicles \n -can only attack land \n-long range",
+      "zh": "多管火箭炮；擅长打击步兵和车辆；只能攻击地面目标；射程远。",
+      "ko": "다연장 로켓포. 보병과 차량에 효과적이며 지상 목표만 공격한다. 긴 사거리."
+    },
+    "Armored troop carrier \\n -It moves faster than infantry \\n -Armed with 25mm cannon and missiles": {
+      "en": "Armored troop carrier \n -It moves faster than infantry \n -Armed with 25mm cannon and missiles",
+      "zh": "装甲运兵车；比步兵移动更快；装备25毫米机炮和导弹。",
+      "ko": "장갑 병력수송차. 보병보다 빠르며 25mm 기관포와 미사일을 장비한다."
+    },
+    "The Type 99 (Chinese: 99式主战坦克; pinyin: Jiǔjiǔshì Zhǔzhàn Tǎnkè) or ZTZ-99 is a Chinese third generation main battle tank (MBT).[6] The vehicle was a replacement for the aging Type 88 introduced in the late 1980s. The Type 99 MBT was China's first mass-produced third-generation main battle tank. Combining modular composite armour and tandem-charge defeating ERA, 125 mm smoothbore gun with ATGM-capability, high mobility, digital systems and optics, the Type 99 represents a shift towards rapid modernization by the PLA.": {
+      "en": "The Type 99 (Chinese: 99式主战坦克; pinyin: Jiǔjiǔshì Zhǔzhàn Tǎnkè) or ZTZ-99 is a Chinese third generation main battle tank (MBT).[6] The vehicle was a replacement for the aging Type 88 introduced in the late 1980s. The Type 99 MBT was China's first mass-produced third-generation main battle tank. Combining modular composite armour and tandem-charge defeating ERA, 125 mm smoothbore gun with ATGM-capability, high mobility, digital systems and optics, the Type 99 represents a shift towards rapid modernization by the PLA.",
+      "zh": "99式或ZTZ-99是中国第三代主战坦克，用于替换20世纪80年代末引入的老旧88式，也是中国首款大规模生产的第三代主战坦克。模块化复合装甲、可抵御串联装药的反应装甲、可发射反坦克导弹的125毫米滑膛炮、高机动性、数字系统和光学设备体现了解放军的快速现代化。",
+      "ko": "99식(ZTZ-99)은 노후한 88식을 대체한 중국의 3세대 주력전차이자 최초의 대량생산 3세대 전차다. 모듈식 복합장갑, 탠덤 탄두 대응 반응장갑, ATGM 발사가 가능한 125mm 활강포, 높은 기동성, 디지털 체계와 광학장비로 인민해방군의 현대화를 보여준다."
+    },
+    "Armored troop carrier \\n -It moves faster than infantry \\n -Armed with 20mm cannon and missile": {
+      "en": "Armored troop carrier \n -It moves faster than infantry \n -Armed with 20mm cannon and missile",
+      "zh": "装甲运兵车；比步兵移动更快；装备20毫米机炮和导弹。",
+      "ko": "장갑 병력수송차. 보병보다 빠르며 20mm 기관포와 미사일을 장비한다."
+    },
+    "- \\n-Vunerable in Long Range Combat\\n-Powerful Air Strike\\n-Slow": {
+      "en": "- \n-Vunerable in Long Range Combat\n-Powerful Air Strike\n-Slow",
+      "zh": "远程交战中较脆弱；空袭威力强；速度慢。",
+      "ko": "장거리 교전에 취약하지만 공습이 강력하다. 느림."
+    },
+    "The Type-054B class of guided-missile destroyer Of The Chinese Naval army is a modified version of the Type-054 with improvement, with an updated Aegis Combat System and electric propulsion system.[3] Maya was commissioned on March 19, 2020.[4] Haguro was commissioned on March 19, 2021\\nAN/SPY-1A Multi-function radar \\nAN/SPS-73 Surface-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-116 Rolling Airframe Missile \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2": {
+      "en": "The Type-054B class of guided-missile destroyer Of The Chinese Naval army is a modified version of the Type-054 with improvement, with an updated Aegis Combat System and electric propulsion system.[3] Maya was commissioned on March 19, 2020.[4] Haguro was commissioned on March 19, 2021\nAN/SPY-1A Multi-function radar \nAN/SPS-73 Surface-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-116 Rolling Airframe Missile \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2",
+      "zh": "054B型为中国海军导弹驱逐舰，原文称其改进自054型，配备更新的宙斯盾作战系统和电力推进，并引用摩耶与羽黑于2020、2021年服役。装备AN/SPY-1A多功能雷达、AN/SPS-73水面搜索雷达、AN/SPG-62火控雷达、2门5英寸/54倍径Mk45舰炮、RIM-116、RIM-174A（SM-6）和2套Mk15密集阵近防系统。",
+      "ko": "054B형 유도탄 구축함. 원문은 054형의 개량형으로 개선된 이지스와 전기추진을 사용한다고 설명하며 마야·하구로의 2020·2021년 취역을 인용한다. AN/SPY-1A 다기능, AN/SPS-73 수상탐색, AN/SPG-62 사격통제 레이더, 5인치/54 Mk45 함포 2문, RIM-116, RIM-174A(SM-6), Mk15 팰렁스 2기를 장비한다."
+    },
+    "The Type 055 destroyer (NATO/OSD designation Renhai-class cruiser)[18] is a class of stealth guided-missile destroyers (rated as guided-missile cruisers per NATO/OSD standard parlance) constructed for the Chinese People's Liberation Army Navy (PLAN). It has a multi-mission design; the combination of sensors and weapons provides a main role of area air defence, with anti-submarine warfare capabilities surpassing previous Chinese surface combatants.[19]": {
+      "en": "The Type 055 destroyer (NATO/OSD designation Renhai-class cruiser)[18] is a class of stealth guided-missile destroyers (rated as guided-missile cruisers per NATO/OSD standard parlance) constructed for the Chinese People's Liberation Army Navy (PLAN). It has a multi-mission design; the combination of sensors and weapons provides a main role of area air defence, with anti-submarine warfare capabilities surpassing previous Chinese surface combatants.[19]",
+      "zh": "055型是中国海军隐身导弹驱逐舰，北约/美国国防部称刃海级巡洋舰。多任务传感器和武器组合以区域防空为主，其反潜能力超过中国以往的水面战斗舰。",
+      "ko": "055형은 중국 해군의 스텔스 유도탄 구축함으로 NATO·미 국방부는 런하이급 순양함으로 분류한다. 다목적 센서와 무장으로 광역 방공을 주로 수행하며 이전 중국 수상전투함보다 강한 대잠 능력을 갖춘다."
+    },
+    "-Launches 8 Fighter Jets\\n-Vunerable in Long Range Combat\\n-Powerful Air Strike\\n-Slow": {
+      "en": "-Launches 8 Fighter Jets\n-Vunerable in Long Range Combat\n-Powerful Air Strike\n-Slow",
+      "zh": "可放飞8架战斗机；远程交战中较脆弱；空袭威力强；速度慢。",
+      "ko": "전투기 8대 출격. 장거리 교전에 취약하지만 공습이 강력하다. 느림."
+    },
+    "-Launches 10 Fighter Jets\\n-Vunerable in Long Range Combat\\n-Powerful Air Strike\\n-Slow": {
+      "en": "-Launches 10 Fighter Jets\n-Vunerable in Long Range Combat\n-Powerful Air Strike\n-Slow",
+      "zh": "可放飞10架战斗机；远程交战中较脆弱；空袭威力强；速度慢。",
+      "ko": "전투기 10대 출격. 장거리 교전에 취약하지만 공습이 강력하다. 느림."
+    },
+    "The Type 052A destroyer is a class of guided-missile destroyers in the Chinese People's Liberation Army Navy (PLAN), and currently one of the most numerous principal surface combatant classes in service of the PLAN Surface Force.": {
+      "en": "The Type 052A destroyer is a class of guided-missile destroyers in the Chinese People's Liberation Army Navy (PLAN), and currently one of the most numerous principal surface combatant classes in service of the PLAN Surface Force.",
+      "zh": "052A型是中国海军导弹驱逐舰级别，也是海军现役数量较多的主力水面战舰之一。",
+      "ko": "052A형은 중국 해군의 유도탄 구축함급이며 현역 주력 수상전투함 가운데 수가 많은 함급이다."
+    },
+    "The Type 052D destroyer (NATO/OSD reporting name: Luyang III-class destroyer)[13] is a class of guided-missile destroyers in the Chinese People's Liberation Army Navy (PLAN), and currently one of the most numerous principal surface combatant classes in service of the PLAN Surface Force.": {
+      "en": "The Type 052D destroyer (NATO/OSD reporting name: Luyang III-class destroyer)[13] is a class of guided-missile destroyers in the Chinese People's Liberation Army Navy (PLAN), and currently one of the most numerous principal surface combatant classes in service of the PLAN Surface Force.",
+      "zh": "052D型导弹驱逐舰，北约/美国国防部称旅洋III级，是中国海军现役数量较多的主力水面战舰之一。",
+      "ko": "052D형 유도탄 구축함(NATO·미 국방부 명칭 루양 III급)은 중국 해군에서 수가 많은 주력 수상전투함이다."
+    },
+    "The Type 053A frigate (NATO/OSD reporting name: Shingyan I-class frigate)[13] is a class of guided-missile destroyers in the Chinese People's Liberation Army Navy (PLAN), and currently one of the most numerous principal surface combatant classes in service of the PLAN Surface Force.": {
+      "en": "The Type 053A frigate (NATO/OSD reporting name: Shingyan I-class frigate)[13] is a class of guided-missile destroyers in the Chinese People's Liberation Army Navy (PLAN), and currently one of the most numerous principal surface combatant classes in service of the PLAN Surface Force.",
+      "zh": "053A型护卫舰，原文北约/美国国防部称Shingyan I级，并将其描述为中国海军现役数量较多的导弹驱逐舰级别。",
+      "ko": "053A형 호위함. 원문은 NATO·미 국방부 명칭을 Shingyan I급으로 적고 중국 해군에 다수 배치된 유도탄 구축함급으로 설명한다."
+    },
+    "curret \\nCurrently in service with the CCG \\nTRS-3D Multi-function E-band radar \\nBBS-15  III Anti-Ship/Land-Attack missile \\nMark 15 Phalanx CIWS ×1 \\nOTO Melara 75mm. naval gun ×1": {
+      "en": "curret \nCurrently in service with the CCG \nTRS-3D Multi-function E-band radar \nBBS-15  III Anti-Ship/Land-Attack missile \nMark 15 Phalanx CIWS ×1 \nOTO Melara 75mm. naval gun ×1",
+      "zh": "轻型舰；目前在中国海警服役；TRS-3D E波段多功能雷达、BBS-15 III反舰/对陆导弹、1套Mk15密集阵和1门奥托梅莱拉75毫米舰炮。",
+      "ko": "중국 해경에서 운용하는 경함정. TRS-3D E밴드 다기능 레이더, BBS-15 III 대함·대지 미사일, Mk15 팰렁스 1기, 오토멜라라 75mm 함포 1문."
+    },
+    "The Type 094 (Chinese: 09-IV型核潜艇; Chinese designation: 09-IV; NATO reporting name: Jin class) is a class of nuclear-powered ballistic missile submarines developed by China for the People's Liberation Army Navy Submarine Force. The Type 094 succeeds the Type 092 submarine and precedes the Type 096 submarine, which is under development": {
+      "en": "The Type 094 (Chinese: 09-IV型核潜艇; Chinese designation: 09-IV; NATO reporting name: Jin class) is a class of nuclear-powered ballistic missile submarines developed by China for the People's Liberation Army Navy Submarine Force. The Type 094 succeeds the Type 092 submarine and precedes the Type 096 submarine, which is under development",
+      "zh": "094型（09-IV，北约称晋级）是中国为海军潜艇部队建造的核动力弹道导弹潜艇，继承092型，并将由正在研制的096型接替。",
+      "ko": "094형(09-IV, NATO 명칭 진급)은 중국 해군 잠수함 부대를 위한 핵추진 탄도미사일 잠수함이다. 092형의 후속이며 개발 중인 096형의 전신이다."
+    },
+    "Good at Sub hunting mission": {
+      "en": "Good at Sub hunting mission",
+      "zh": "擅长猎潜任务。",
+      "ko": "잠수함 사냥에 능하다."
+    },
+    "-Troop/Vehicle carrier \\n -Hover": {
+      "en": "-Troop/Vehicle carrier \n -Hover",
+      "zh": "运兵/运车气垫艇。",
+      "ko": "병력·차량 수송용 호버크래프트."
+    },
+    "SUBMARINE HUNTER": {
+      "en": "SUBMARINE HUNTER",
+      "zh": "潜艇猎手。",
+      "ko": "잠수함 사냥꾼."
+    },
+    "JAPANESE VERSION OF F-15E Multi-role Fighter Capable of Air-air Dog fight and Ground Strike": {
+      "en": "JAPANESE VERSION OF F-15E Multi-role Fighter Capable of Air-air Dog fight and Ground Strike",
+      "zh": "日本版F-15E，可进行空中格斗和对地打击。",
+      "ko": "일본형 F-15E 다목적 전투기. 공중전과 지상 타격 가능."
+    },
+    "Japanese verion of F-35C air superiority aircraft Made By Lockheed Martin": {
+      "en": "Japanese verion of F-35C air superiority aircraft Made By Lockheed Martin",
+      "zh": "洛克希德·马丁制造的F-35C日本版本制空战斗机。",
+      "ko": "록히드 마틴 F-35C의 일본형 제공 전투기."
+    },
+    "The Bell AH-1 SuperCobra is a twin-engined attack helicopter that was developed on behalf of, and primarily operated by, the United States Marine Corps. The twin Cobra family, itself part of the larger Huey family, includes the AH-1J SeaCobra, the AH-1T Improved SeaCobra, and the AH-1W SuperCobra.": {
+      "en": "The Bell AH-1 SuperCobra is a twin-engined attack helicopter that was developed on behalf of, and primarily operated by, the United States Marine Corps. The twin Cobra family, itself part of the larger Huey family, includes the AH-1J SeaCobra, the AH-1T Improved SeaCobra, and the AH-1W SuperCobra.",
+      "zh": "贝尔AH-1超级眼镜蛇是为美国海军陆战队研制、主要由其使用的双发动机攻击直升机。双发眼镜蛇家族属于休伊系列，包括AH-1J海眼镜蛇、AH-1T改进型海眼镜蛇和AH-1W超级眼镜蛇。",
+      "ko": "벨 AH-1 슈퍼코브라는 미국 해병대를 위해 개발되어 주로 운용되는 쌍발 공격헬기다. 휴이 계열에 속하는 쌍발 코브라 계열에는 AH-1J 시코브라, AH-1T 개량형 시코브라, AH-1W 슈퍼코브라가 있다."
+    },
+    "Design and built by Sikorsky Aircraft Co. \\nDeveloped from UH-60 Blackhawk helicopter \\nVery good for Anti-Submarine Warfare \\nMk-46 Torpedoes \\nM260 Hydra rocket pods ×1 \\nM260 is loaded with M229 HE rocket \\n(High Explosive)": {
+      "en": "Design and built by Sikorsky Aircraft Co. \nDeveloped from UH-60 Blackhawk helicopter \nVery good for Anti-Submarine Warfare \nMk-46 Torpedoes \nM260 Hydra rocket pods ×1 \nM260 is loaded with M229 HE rocket \n(High Explosive)",
+      "zh": "西科斯基设计制造，源自UH-60黑鹰。擅长反潜，装备Mk46鱼雷和1套M260“九头蛇”火箭巢，装填M229高爆火箭弹。",
+      "ko": "시코르스키가 UH-60 블랙호크를 기반으로 개발·생산했다. 대잠전에 강하며 Mk46 어뢰와 M229 고폭 로켓을 사용하는 M260 하이드라 로켓포드 1기를 장비한다."
+    },
+    "Mid Transportation plane": {
+      "en": "Mid Transportation plane",
+      "zh": "中型运输机。",
+      "ko": "중형 수송기."
+    },
+    "-Anti-Ships ystem.": {
+      "en": "-Anti-Ships ystem.",
+      "zh": "反舰系统。",
+      "ko": "대함 체계."
+    },
+    "-Anti-surface system.": {
+      "en": "-Anti-surface system.",
+      "zh": "对地/对海攻击系统。",
+      "ko": "대지·대함 체계."
+    },
+    "-medium range surface-air missile system \\n -Armed with an surface-to-air missiles": {
+      "en": "-medium range surface-air missile system \n -Armed with an surface-to-air missiles",
+      "zh": "中程地空导弹系统，装备地对空导弹。",
+      "ko": "지대공 미사일을 탑재한 중거리 방공 체계."
+    },
+    "The Type 11 Tan-SAM Kai II is a Japanese short-range surface-to-air missile (SAM) system developed for the Japan Self-Defense Forces to succeed the Type 81. Featuring an active radar homing seeker, it specializes in engaging low-flying aircraft, cruise missiles, and drones, with a range of approximately 14–15 km and utilizing a canister-based launch method.": {
+      "en": "The Type 11 Tan-SAM Kai II is a Japanese short-range surface-to-air missile (SAM) system developed for the Japan Self-Defense Forces to succeed the Type 81. Featuring an active radar homing seeker, it specializes in engaging low-flying aircraft, cruise missiles, and drones, with a range of approximately 14–15 km and utilizing a canister-based launch method.",
+      "zh": "11式短SAM改II是日本为自卫队研制、用于替换81式的近程防空导弹系统。主动雷达导引头适于拦截低空飞机、巡航导弹和无人机，射程约14—15千米，采用发射筒发射。",
+      "ko": "11식 단SAM 개량 II는 81식을 대체하기 위해 일본 자위대용으로 개발한 단거리 지대공 체계다. 능동 레이더 탐색기와 발사관을 사용하며 저공 항공기·순항미사일·무인기 교전에 특화되었다. 사거리 약 14~15km."
+    },
+    "medium range surface-air missile system \\n -Armed with an surface-to-air missiles": {
+      "en": "medium range surface-air missile system \n -Armed with an surface-to-air missiles",
+      "zh": "中程地空导弹系统，装备地对空导弹。",
+      "ko": "지대공 미사일을 탑재한 중거리 방공 체계."
+    },
+    "-SPAA \\n -Anti-air SPAA \\n -Armed with an AA cannons": {
+      "en": "-SPAA \n -Anti-air SPAA \n -Armed with an AA cannons",
+      "zh": "自行高炮，装备防空机炮。",
+      "ko": "대공 기관포를 장비한 자주대공포."
+    },
+    "JGSDF TYPE 90\\n2A46M-2 125mm. smoothbore main gun \\nUsing 3VBM20 APFSDS-T Ammunition \\nSteel and Composite Armor \\n-5 Explosive Reactive Armour \\nV-92S2 Diesel engine \\nCan attack Ground only": {
+      "en": "JGSDF TYPE 90\n2A46M-2 125mm. smoothbore main gun \nUsing 3VBM20 APFSDS-T Ammunition \nSteel and Composite Armor \n-5 Explosive Reactive Armour \nV-92S2 Diesel engine \nCan attack Ground only",
+      "zh": "日本陆上自卫队90式；2A46M-2 125毫米滑膛主炮，使用3VBM20尾翼稳定脱壳曳光穿甲弹；钢/复合装甲、5块爆炸反应装甲、V-92S2柴油机；只能攻击地面。",
+      "ko": "육상자위대 90식. 2A46M-2 125mm 활강포와 3VBM20 APFSDS-T 탄약, 강철·복합장갑, 폭발반응장갑 5개, V-92S2 디젤엔진. 지상 목표만 공격."
+    },
+    "Mobile Gun System of the JSDF \\nProduced by MiStubishi\\nFast 8×8 Vehicle \\nCan attack Ground only \\nFast Auto-loader \\nM68A1E4 105mm. main gun \\nCaterpillar C7 Diesel engine \\nCan not swim": {
+      "en": "Mobile Gun System of the JSDF \nProduced by MiStubishi\nFast 8×8 Vehicle \nCan attack Ground only \nFast Auto-loader \nM68A1E4 105mm. main gun \nCaterpillar C7 Diesel engine \nCan not swim",
+      "zh": "日本自卫队机动火炮系统，三菱生产。快速8×8车辆，自动装弹速度快，M68A1E4 105毫米主炮、卡特彼勒C7柴油机。只能对地攻击，不能游泳。",
+      "ko": "미쓰비시가 생산한 일본 자위대 기동포 체계. 빠른 8×8 차량과 자동장전기, M68A1E4 105mm 주포, 캐터필러 C7 디젤엔진. 지상 공격만 가능하며 수영할 수 없다."
+    },
+    "Second-Gen version of the T-74 Main Battle Tank \\n2A46M 125mm. main gun \\nUsing 3VBM17 APFSDS-T Ammunition \\nV-92S2F Diesel engine \\n-5 Explosive Reactive Armour \\nCan attack Ground only": {
+      "en": "Second-Gen version of the T-74 Main Battle Tank \n2A46M 125mm. main gun \nUsing 3VBM17 APFSDS-T Ammunition \nV-92S2F Diesel engine \n-5 Explosive Reactive Armour \nCan attack Ground only",
+      "zh": "T-74主战坦克第二代型号；2A46M 125毫米主炮，使用3VBM17尾翼稳定脱壳曳光穿甲弹；V-92S2F柴油机、5块爆炸反应装甲；只能攻击地面。",
+      "ko": "T-74 주력전차의 2세대형. 2A46M 125mm 주포와 3VBM17 APFSDS-T 탄약, V-92S2F 디젤엔진, 폭발반응장갑 5개. 지상 목표만 공격."
+    },
+    "Armored troop carrier \\n -It moves faster than infantry \\n -Armed with 25mm cannon": {
+      "en": "Armored troop carrier \n -It moves faster than infantry \n -Armed with 25mm cannon",
+      "zh": "装甲运兵车；比步兵移动更快；装备25毫米机炮。",
+      "ko": "장갑 병력수송차. 보병보다 빠르며 25mm 기관포 장비."
+    },
+    "The Type 10 (10式戦車, Hitomaru-shiki sensha) is a Japanese fourth generation main battle tank produced by Mitsubishi Heavy Industries for the Japanese Ground Self Defense Force. It entered service in 2012. Compared with other currently-serving main battle tanks in the JGSDF, the Type 10 is better equipped to deal with anti-tank weapons.[4]": {
+      "en": "The Type 10 (10式戦車, Hitomaru-shiki sensha) is a Japanese fourth generation main battle tank produced by Mitsubishi Heavy Industries for the Japanese Ground Self Defense Force. It entered service in 2012. Compared with other currently-serving main battle tanks in the JGSDF, the Type 10 is better equipped to deal with anti-tank weapons.[4]",
+      "zh": "10式是三菱重工业为日本陆上自卫队生产的第四代主战坦克，2012年服役。相比其他现役自卫队主战坦克，10式更适于应对反坦克武器。",
+      "ko": "10식은 미쓰비시 중공업이 육상자위대용으로 생산한 일본의 4세대 주력전차로 2012년 취역했다. 다른 현역 자위대 전차보다 대전차 무기에 대한 대응력이 높다."
+    },
+    "(DDG-102)Arleigh Burke-class Guided-missile Destroyer (Flight IIA) \\nAN/SPY-1D 3D Air-search radar \\nAN/SPS-67(V)2 Surface-search radar \\nAN/SPG-62 Fire-control radar \\nRIM-66M Standard MR (SM-2MR) \\nRGM-109B Tomahawk Anti-Ship Missile \\nHave no Phalanx CIWS onboard \\n5\"/62 caliber Mark 45 Mod 4 gun ×1": {
+      "en": "(DDG-102)Arleigh Burke-class Guided-missile Destroyer (Flight IIA) \nAN/SPY-1D 3D Air-search radar \nAN/SPS-67(V)2 Surface-search radar \nAN/SPG-62 Fire-control radar \nRIM-66M Standard MR (SM-2MR) \nRGM-109B Tomahawk Anti-Ship Missile \nHave no Phalanx CIWS onboard \n5\"/62 caliber Mark 45 Mod 4 gun ×1",
+      "zh": "（DDG-102）阿利·伯克级IIA型导弹驱逐舰；AN/SPY-1D三维空中搜索、AN/SPS-67(V)2水面搜索、AN/SPG-62火控雷达；RIM-66M（SM-2MR）、RGM-109B战斧反舰导弹；未配密集阵；1门5英寸/62倍径Mk45 Mod4舰炮。",
+      "ko": "DDG-102 알레이 버크급 플라이트 IIA 유도탄 구축함. AN/SPY-1D 3차원 대공탐색, AN/SPS-67(V)2 수상탐색, AN/SPG-62 사격통제 레이더. RIM-66M(SM-2MR), RGM-109B 토마호크 대함미사일. 팰렁스 없음. 5인치/62 Mk45 Mod4 함포 1문."
+    },
+    "Arleigh Burke-class Guided-missile Destroyer (Flight IA) \\nAN/SPY-6 AESA 3D Air-search radar \\nAN/SPS-73(V)12 Surface-search radar \\nAN/SPG-62 Fire-control radar \\nRIM-67B Standard ER (SM-2ER) \\nRIM-116 Rolling Airframe Missile \\nRGM-84D Harpoon Anti-Ship Missile \\nMark 15 Phalanx CIWS ×1 \\n5\"/54 caliber Mark 45 Mod 1 gun ×1": {
+      "en": "Arleigh Burke-class Guided-missile Destroyer (Flight IA) \nAN/SPY-6 AESA 3D Air-search radar \nAN/SPS-73(V)12 Surface-search radar \nAN/SPG-62 Fire-control radar \nRIM-67B Standard ER (SM-2ER) \nRIM-116 Rolling Airframe Missile \nRGM-84D Harpoon Anti-Ship Missile \nMark 15 Phalanx CIWS ×1 \n5\"/54 caliber Mark 45 Mod 1 gun ×1",
+      "zh": "阿利·伯克级IA型导弹驱逐舰；AN/SPY-6 AESA三维空中搜索、AN/SPS-73(V)12水面搜索、AN/SPG-62火控雷达；RIM-67B（SM-2ER）、RIM-116、RGM-84D鱼叉；1套Mk15密集阵，1门5英寸/54倍径Mk45 Mod1舰炮。",
+      "ko": "알레이 버크급 플라이트 IA 구축함. AN/SPY-6 AESA 3차원 대공탐색, AN/SPS-73(V)12 수상탐색, AN/SPG-62 사격통제 레이더. RIM-67B(SM-2ER), RIM-116, RGM-84D 하푼. Mk15 팰렁스 1기와 5인치/54 Mk45 Mod1 함포 1문."
+    },
+    "curret \\nCurrently in service with the USCG \\nTRS-3D Multi-function C-band radar \\nRBS-15 Mk. III Anti-Ship/Land-Attack missile \\nMark 15 Phalanx CIWS ×1 \\nOTO Melara 75mm. naval gun ×1": {
+      "en": "curret \nCurrently in service with the USCG \nTRS-3D Multi-function C-band radar \nRBS-15 Mk. III Anti-Ship/Land-Attack missile \nMark 15 Phalanx CIWS ×1 \nOTO Melara 75mm. naval gun ×1",
+      "zh": "轻型舰，目前在美国海岸警卫队服役；TRS-3D C波段多功能雷达、RBS-15 MkIII反舰/对陆导弹、1套Mk15密集阵、1门奥托梅莱拉75毫米舰炮。",
+      "ko": "미국 해안경비대에서 운용하는 경함정. TRS-3D C밴드 다기능 레이더, RBS-15 MkIII 대함·대지 미사일, Mk15 팰렁스 1기, 오토멜라라 75mm 함포 1문."
+    },
+    "The Maya class of guided-missile destroyers (まや型護衛艦, Maya-gata Goeikan) in the Japan Maritime Self-Defense Force is a modified version of the Atago class, with an updated Aegis Combat System and electric propulsion system.[3] Maya was commissioned on March 19, 2020.[4] Haguro was commissioned on March 19, 2021\\nAN/SPY-1A Multi-function radar \\nAN/SPS-73 Surface-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-116 Rolling Airframe Missile \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2": {
+      "en": "The Maya class of guided-missile destroyers (まや型護衛艦, Maya-gata Goeikan) in the Japan Maritime Self-Defense Force is a modified version of the Atago class, with an updated Aegis Combat System and electric propulsion system.[3] Maya was commissioned on March 19, 2020.[4] Haguro was commissioned on March 19, 2021\nAN/SPY-1A Multi-function radar \nAN/SPS-73 Surface-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-116 Rolling Airframe Missile \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2",
+      "zh": "摩耶级是日本海上自卫队爱宕级导弹驱逐舰的改进型，配备升级宙斯盾系统和电力推进。摩耶2020年3月19日服役，羽黑2021年3月19日服役。AN/SPY-1A、AN/SPS-73、AN/SPG-62雷达；2门5英寸/54 Mk45舰炮、RIM-116、RIM-174A（SM-6）、2套Mk15密集阵。",
+      "ko": "마야급은 해상자위대 아타고급 구축함의 개량형으로 개선된 이지스와 전기추진을 사용한다. 마야는 2020년 3월 19일, 하구로는 2021년 3월 19일 취역했다. AN/SPY-1A, AN/SPS-73, AN/SPG-62 레이더, 5인치/54 Mk45 함포 2문, RIM-116, RIM-174A(SM-6), Mk15 팰렁스 2기."
+    },
+    "JS NOSHIRO(DD-103)/Medium  Frigate \\nAN/SPY-1A Multi-function radar \\nAN/SPS-73 Surface-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-116 Rolling Airframe Missile \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2": {
+      "en": "JS NOSHIRO(DD-103)/Medium  Frigate \nAN/SPY-1A Multi-function radar \nAN/SPS-73 Surface-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-116 Rolling Airframe Missile \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2",
+      "zh": "能代（DD-103），中型护卫舰。AN/SPY-1A多功能、AN/SPS-73水面搜索、AN/SPG-62火控雷达；2门5英寸/54 Mk45舰炮、RIM-116、RIM-174A（SM-6）、2套Mk15密集阵。",
+      "ko": "노시로(DD-103), 중형 호위함. AN/SPY-1A 다기능, AN/SPS-73 수상탐색, AN/SPG-62 사격통제 레이더. 5인치/54 Mk45 함포 2문, RIM-116, RIM-174A(SM-6), Mk15 팰렁스 2기."
+    },
+    "Asha-clads Guided-missile Cruiser \\nAN/SPY-1B Multi-function radar \\nAN/SPS-49 Air-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-67B Standard ER (SM-2ER) \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2/MORE POWERFUL": {
+      "en": "Asha-clads Guided-missile Cruiser \nAN/SPY-1B Multi-function radar \nAN/SPS-49 Air-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-67B Standard ER (SM-2ER) \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2/MORE POWERFUL",
+      "zh": "Asha级导弹巡洋舰；AN/SPY-1B多功能、AN/SPS-49空中搜索、AN/SPG-62火控雷达；2门5英寸/54 Mk45舰炮、RIM-67B（SM-2ER）、RIM-174A（SM-6）、2套Mk15密集阵。火力更强。",
+      "ko": "Asha급 유도탄 순양함. AN/SPY-1B 다기능, AN/SPS-49 대공탐색, AN/SPG-62 사격통제 레이더. 5인치/54 Mk45 함포 2문, RIM-67B(SM-2ER), RIM-174A(SM-6), Mk15 팰렁스 2기. 더욱 강력한 화력."
+    },
+    "The Asagari class Destroyer Escort, in the Japan Maritime Self-Defense Force is a modified version of the  tanakami class, with an updated Aegis Combat System and electric propulsion system.[3] Maya was commissioned on March 19, 2020.[4] Haguro was commissioned on March 19, 2021\\nAN/SPY-1A Multi-function radar \\nAN/SPS-73 Surface-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-116 Rolling Airframe Missile \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2": {
+      "en": "The Asagari class Destroyer Escort, in the Japan Maritime Self-Defense Force is a modified version of the  tanakami class, with an updated Aegis Combat System and electric propulsion system.[3] Maya was commissioned on March 19, 2020.[4] Haguro was commissioned on March 19, 2021\nAN/SPY-1A Multi-function radar \nAN/SPS-73 Surface-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-116 Rolling Airframe Missile \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2",
+      "zh": "朝雾级护航驱逐舰，原文称改进自tanakami级，升级宙斯盾和电力推进，并引用摩耶、羽黑于2020、2021年服役。AN/SPY-1A、AN/SPS-73、AN/SPG-62雷达；2门5英寸/54 Mk45舰炮、RIM-116、RIM-174A（SM-6）、2套Mk15密集阵。",
+      "ko": "아사기리급 호위구축함. 원문은 tanakami급의 개량형으로 이지스와 전기추진을 사용한다고 설명하고 마야·하구로의 2020·2021년 취역을 인용한다. AN/SPY-1A, AN/SPS-73, AN/SPG-62 레이더, 5인치/54 Mk45 함포 2문, RIM-116, RIM-174A(SM-6), Mk15 팰렁스 2기."
+    },
+    "The Sumasame class frigate, in the Japan Maritime Self-Defense Force is a modified version of the  akizu class, with an updated Aegis Combat System and electric propulsion system.[3] Maya was commissioned on March 19, 2020.[4] Haguro was commissioned on March 19, 2021\\nAN/SPY-1A Multi-function radar \\nAN/SPS-73 Surface-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-116 Rolling Airframe Missile \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2": {
+      "en": "The Sumasame class frigate, in the Japan Maritime Self-Defense Force is a modified version of the  akizu class, with an updated Aegis Combat System and electric propulsion system.[3] Maya was commissioned on March 19, 2020.[4] Haguro was commissioned on March 19, 2021\nAN/SPY-1A Multi-function radar \nAN/SPS-73 Surface-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-116 Rolling Airframe Missile \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2",
+      "zh": "村雨级护卫舰，原文称改进自akizu级，升级宙斯盾和电力推进，并引用摩耶、羽黑于2020、2021年服役。AN/SPY-1A、AN/SPS-73、AN/SPG-62雷达；2门5英寸/54 Mk45舰炮、RIM-116、RIM-174A（SM-6）、2套Mk15密集阵。",
+      "ko": "무라사메급 호위함. 원문은 akizu급의 개량형으로 이지스와 전기추진을 사용한다고 설명하고 마야·하구로의 2020·2021년 취역을 인용한다. AN/SPY-1A, AN/SPS-73, AN/SPG-62 레이더, 5인치/54 Mk45 함포 2문, RIM-116, RIM-174A(SM-6), Mk15 팰렁스 2기."
+    },
+    "The Ōsumi class (おおすみ型輸送艦), is a Japanese tank landing ship. The class is also known as the Oosumi class. While the Japan Maritime Self-Defense Force (JMSDF) describes the Ōsumi class as tank landing ships (LSTs), they lack the bow doors and beaching capability traditionally associated with LSTs.[citation needed] Functionally, their well deck makes the Ōsumi class more like a dock landing ship (LSD).[citation needed]": {
+      "en": "The Ōsumi class (おおすみ型輸送艦), is a Japanese tank landing ship. The class is also known as the Oosumi class. While the Japan Maritime Self-Defense Force (JMSDF) describes the Ōsumi class as tank landing ships (LSTs), they lack the bow doors and beaching capability traditionally associated with LSTs.[citation needed] Functionally, their well deck makes the Ōsumi class more like a dock landing ship (LSD).[citation needed]",
+      "zh": "大隅级是日本坦克登陆舰，又称Oosumi级。虽被海上自卫队归为LST，却没有传统LST的舰艏门和抢滩能力；其坞舱使其功能更接近船坞登陆舰LSD。",
+      "ko": "오스미급은 일본의 전차상륙함으로 Oosumi급으로도 표기한다. 해상자위대는 LST로 부르지만 전통적인 LST의 함수문과 해안 접안 능력은 없다. 웰도크 때문에 기능상 LSD에 가깝다."
+    },
+    "-\\n-Vunerable in Long Range Combat\\n-Powerful Air Strike\\n-Slow": {
+      "en": "-\n-Vunerable in Long Range Combat\n-Powerful Air Strike\n-Slow",
+      "zh": "远程交战中较脆弱；空袭威力强；速度慢。",
+      "ko": "장거리 교전에 취약하지만 공습이 강력하다. 느림."
+    },
+    "Mogami-Class Frigate \\nAN/SPY-6 AESA 3D Air-search radar \\nAN/SPS-73(V)12 Surface-search radar \\nAN/SPG-62 Fire-control radar \\nRIM-67B Standard ER (SM-2ER) \\nRIM-116 Rolling Airframe Missile \\nRGM-84D Harpoon Anti-Ship Missile \\nMark 15 Phalanx CIWS ×1 \\n5\"": {
+      "en": "Mogami-Class Frigate \nAN/SPY-6 AESA 3D Air-search radar \nAN/SPS-73(V)12 Surface-search radar \nAN/SPG-62 Fire-control radar \nRIM-67B Standard ER (SM-2ER) \nRIM-116 Rolling Airframe Missile \nRGM-84D Harpoon Anti-Ship Missile \nMark 15 Phalanx CIWS ×1 \n5\"",
+      "zh": "最上级护卫舰；AN/SPY-6 AESA三维空中搜索、AN/SPS-73(V)12水面搜索、AN/SPG-62火控雷达；RIM-67B（SM-2ER）、RIM-116、RGM-84D鱼叉，1套Mk15密集阵和5英寸舰炮。",
+      "ko": "모가미급 호위함. AN/SPY-6 AESA 3차원 대공탐색, AN/SPS-73(V)12 수상탐색, AN/SPG-62 사격통제 레이더. RIM-67B(SM-2ER), RIM-116, RGM-84D 하푼, Mk15 팰렁스 1기와 5인치 함포."
+    },
+    "The Akizuki class of destroyers of the Japan Maritime Self-Defense Force is intended to escort the Hyūga-class and Izumo-class helicopter-carrier destroyers, and safeguard the other Aegis-capable warships such as the Kongō class and Atago class. The destroyer provides defense against surface, airborne and undersea threats. The class was initially designated as \"19DD\", referring to a date on the Japanese calendar, specifically the 19th fiscal year of the Heisei period (2007).[": {
+      "en": "The Akizuki class of destroyers of the Japan Maritime Self-Defense Force is intended to escort the Hyūga-class and Izumo-class helicopter-carrier destroyers, and safeguard the other Aegis-capable warships such as the Kongō class and Atago class. The destroyer provides defense against surface, airborne and undersea threats. The class was initially designated as \"19DD\", referring to a date on the Japanese calendar, specifically the 19th fiscal year of the Heisei period (2007).[",
+      "zh": "秋月级驱逐舰用于护航海上自卫队日向级、出云级直升机驱逐舰，并保护金刚级、爱宕级等宙斯盾舰，防御水面、空中和水下威胁。最初称19DD，取自日本平成19财政年度（2007年）。",
+      "ko": "아키즈키급 구축함은 해상자위대의 휴가급·이즈모급 헬기구축함을 호위하고 공고급·아타고급 이지스함을 보호한다. 수상·공중·수중 위협에 대응한다. 최초 명칭 19DD는 헤이세이 19회계연도(2007년)에서 유래한다."
+    },
+    "Can buildJAPANESE WARSHIPS": {
+      "en": "Can buildJAPANESE WARSHIPS",
+      "zh": "可建造日本军舰。",
+      "ko": "일본 군함을 건조할 수 있다."
+    },
+    "Design and built by Agusta Aircraft Co. \\nDeveloped from Aw-159E helicopter \\nVery good for Anti-Submarine Warfare \\nMk-46 Torpedoes\\": {
+      "en": "Design and built by Agusta Aircraft Co. \nDeveloped from Aw-159E helicopter \nVery good for Anti-Submarine Warfare \nMk-46 Torpedoes\\",
+      "zh": "阿古斯塔设计制造，源自AW-159E直升机；擅长反潜，装备Mk46鱼雷。",
+      "ko": "아구스타가 AW-159E를 기반으로 개발·생산. 대잠전에 강하며 Mk46 어뢰 장비."
+    },
+    "The Abukuma-class destroyer escort (or frigate) (Japanese: あぶくま型護衛艦, romanized Abukuma-gata-goeikan) is the general-purpose destroyer escort of the Japan Maritime Self-Defense Force (JMSDF). It is the successor of the earlier Yūbari class.[3] It is being replaced by the Mogami-class frigates.[4]": {
+      "en": "The Abukuma-class destroyer escort (or frigate) (Japanese: あぶくま型護衛艦, romanized Abukuma-gata-goeikan) is the general-purpose destroyer escort of the Japan Maritime Self-Defense Force (JMSDF). It is the successor of the earlier Yūbari class.[3] It is being replaced by the Mogami-class frigates.[4]",
+      "zh": "阿武隈级护航驱逐舰/护卫舰是日本海上自卫队通用护航舰，接替夕张级，正在由最上级护卫舰替代。",
+      "ko": "아부쿠마급 호위구축함·호위함은 해상자위대의 범용 호위함으로 유바리급을 계승했으며 모가미급으로 대체되고 있다."
+    },
+    "Surface-to-surface \\n -Cannot attack air units \\n -long range range \\n -effective againts compact targets\\Anti Ship": {
+      "en": "Surface-to-surface \n -Cannot attack air units \n -long range range \n -effective againts compact targets\\Anti Ship",
+      "zh": "地对地武器，不能攻击飞机；射程远，适合打击密集目标，也可反舰。",
+      "ko": "지대지 무기. 항공기를 공격할 수 없으며 사거리가 길다. 밀집 목표와 함정에 효과적."
+    },
+    "Ready to fire": {
+      "en": "Ready to fire",
+      "zh": "准备开火。",
+      "ko": "사격 준비 완료."
+    },
+    "BRP Jose Rizal (FFG-14) is the lead ship of her class of guided missile frigates of the Philippine Navy. She is the first purpose-built frigate of the service,[1] as its previous major warships were mostly obtained from retired patrol ships of other countries. She is also one of the navy's primary warships able to conduct multi-role operations, such as coastal patrol, anti-air and anti-submarine warfare.[2]": {
+      "en": "BRP Jose Rizal (FFG-14) is the lead ship of her class of guided missile frigates of the Philippine Navy. She is the first purpose-built frigate of the service,[1] as its previous major warships were mostly obtained from retired patrol ships of other countries. She is also one of the navy's primary warships able to conduct multi-role operations, such as coastal patrol, anti-air and anti-submarine warfare.[2]",
+      "zh": "何塞·黎刹号（FFG-14）为菲律宾海军同级导弹护卫舰首舰，也是该军种首艘专门建造的护卫舰；此前主要军舰多为他国退役巡逻舰。可执行近岸巡逻、防空、反潜等多用途任务。",
+      "ko": "호세 리살함(FFG-14)은 필리핀 해군 동급 유도탄 호위함의 선도함이자 최초의 전용 신조 호위함이다. 이전 주력함은 주로 외국의 퇴역 초계함이었다. 연안 순찰, 대공·대잠전 등 다목적 임무 수행."
+    },
+    "BRP Rajah Sulayman (PS-20) is the lead ship of her class of offshore patrol vessels of the Philippine Navy. She is the second ship to be named after Rajah Sulayman III, the 14th Rajah of the Kingdom of Maynila who fought the Spanish conquest from 1570.[8]": {
+      "en": "BRP Rajah Sulayman (PS-20) is the lead ship of her class of offshore patrol vessels of the Philippine Navy. She is the second ship to be named after Rajah Sulayman III, the 14th Rajah of the Kingdom of Maynila who fought the Spanish conquest from 1570.[8]",
+      "zh": "拉贾·苏莱曼号（PS-20）是菲律宾海军同级近海巡逻舰首舰，也是第二艘以1570年抵抗西班牙征服的马尼拉王国第14任拉贾苏莱曼三世命名的舰艇。",
+      "ko": "라자 술라이만함(PS-20)은 필리핀 해군 동급 원양초계함의 선도함이다. 1570년 스페인 정복에 맞섰던 마닐라 왕국 14대 라자 술라이만 3세의 이름을 이은 두 번째 함정이다."
+    },
+    "Main military transport plane of the AFP(ARMED FORCES OF PHILIPPINES)": {
+      "en": "Main military transport plane of the AFP(ARMED FORCES OF PHILIPPINES)",
+      "zh": "菲律宾武装部队的主力军用运输机。",
+      "ko": "필리핀군의 주력 군용 수송기."
+    },
+    "Can build AFP Operated WARSHIPS": {
+      "en": "Can build AFP Operated WARSHIPS",
+      "zh": "可建造菲律宾武装部队使用的军舰。",
+      "ko": "필리핀군이 운용하는 군함을 건조한다."
+    },
+    "The Sabrah light tank is series of armored fighting vehicles developed by Elbit Systems to cater to the Philippine Army's light tank/tank destroyer requirement. The tracked light tank configuration is based on ASCOD 2 platform, supplied by Spanish manufacturer GDELS - Santa Bárbara Sistemas.[2] The wheeled light tank configuration is based on the 8×8 Pandur II platform supplied by the Czech manufacturer Excalibur Army.[3] Elbit Systems received a three-year contract worth $172m to supply the Sabrah light tanks to the Philippine Army in January 2021.[4][5]": {
+      "en": "The Sabrah light tank is series of armored fighting vehicles developed by Elbit Systems to cater to the Philippine Army's light tank/tank destroyer requirement. The tracked light tank configuration is based on ASCOD 2 platform, supplied by Spanish manufacturer GDELS - Santa Bárbara Sistemas.[2] The wheeled light tank configuration is based on the 8×8 Pandur II platform supplied by the Czech manufacturer Excalibur Army.[3] Elbit Systems received a three-year contract worth $172m to supply the Sabrah light tanks to the Philippine Army in January 2021.[4][5]",
+      "zh": "萨布拉轻型坦克由埃尔比特系统公司为菲律宾陆军轻型坦克/坦克歼击车需求研制。履带型使用西班牙GDELS圣巴巴拉的ASCOD2底盘，轮式使用捷克Excalibur Army的8×8 Pandur II底盘。2021年1月获得价值1.72亿美元、期限三年的供货合同。",
+      "ko": "사브라 경전차는 필리핀 육군의 경전차·구축전차 요구에 맞춰 엘빗 시스템즈가 개발했다. 궤도형은 스페인 GDELS 산타바르바라의 ASCOD 2, 차륜형은 체코 엑스칼리버 아미의 8×8 판두르 II 플랫폼을 사용한다. 2021년 1월 1억7200만 달러 규모 3년 공급 계약 체결."
+    },
+    "The FV101 Scorpion is a British armoured reconnaissance vehicle and light tank. It was the lead vehicle and the fire support type in the Combat Vehicle Reconnaissance (Tracked), CVR(T), family of seven armoured vehicles. Manufactured by Alvis, it was introduced into service with the British Army in 1973 and was withdrawn in 1994.[6][7] More than 3,000 were produced and used as reconnaissance vehicles or light tanks.": {
+      "en": "The FV101 Scorpion is a British armoured reconnaissance vehicle and light tank. It was the lead vehicle and the fire support type in the Combat Vehicle Reconnaissance (Tracked), CVR(T), family of seven armoured vehicles. Manufactured by Alvis, it was introduced into service with the British Army in 1973 and was withdrawn in 1994.[6][7] More than 3,000 were produced and used as reconnaissance vehicles or light tanks.",
+      "zh": "FV101蝎式是英国装甲侦察车和轻型坦克，也是七车种CVR(T)履带侦察车家族的首款及火力支援车型。阿尔维斯制造，1973年英军服役、1994年退役；产量超过3000辆，用于侦察或轻型坦克任务。",
+      "ko": "FV101 스콜피온은 영국의 장갑정찰차 겸 경전차이며 7종으로 구성된 CVR(T) 계열의 선도·화력지원 차량이다. 알비스가 생산하여 1973년 영국군에 도입되고 1994년 퇴역했다. 3천 대 이상 생산되어 정찰차나 경전차로 사용되었다."
+    },
+    "Semi-active radar homing Surface-to-Air Missile  \\nManufactured by Raytheon Corporation \\nCan attack Air only \\nLong range.": {
+      "en": "Semi-active radar homing Surface-to-Air Missile  \nManufactured by Raytheon Corporation \nCan attack Air only \nLong range.",
+      "zh": "雷神公司制造的半主动雷达制导地空导弹；只能攻击空中目标，射程远。",
+      "ko": "레이시온이 제작한 반능동 레이더 유도 지대공 미사일. 공중 목표만 공격하며 긴 사거리."
+    },
+    "Design and built by Sikorsky Aircraft Co. \\nDeveloped from UH-60 Blackhawk helicopter \\nM260 Hydra rocket pods ×1 \\nM260 is loaded with M229 HE rocket \\n(High Explosive)": {
+      "en": "Design and built by Sikorsky Aircraft Co. \nDeveloped from UH-60 Blackhawk helicopter \nM260 Hydra rocket pods ×1 \nM260 is loaded with M229 HE rocket \n(High Explosive)",
+      "zh": "西科斯基设计制造，源自UH-60黑鹰；配备1套M260九头蛇火箭巢，装填M229高爆火箭弹。",
+      "ko": "시코르스키가 UH-60 블랙호크를 기반으로 개발·생산. M229 고폭 로켓을 사용하는 M260 하이드라 로켓포드 1기 장비."
+    },
+    "The TAI/AgustaWestland T129 ATAK is a twin-engine, tandem seat, multi-role, all-weather attack helicopter based on the Agusta A129 Mangusta platform. It was developed by Turkish Aerospace Industries (TAI)[1] in partnership with Leonardo S.p.A.[2] The helicopter is designed for armed reconnaissance and attack missions in hot and high environments and rough geography in both day and night conditions.[5][": {
+      "en": "The TAI/AgustaWestland T129 ATAK is a twin-engine, tandem seat, multi-role, all-weather attack helicopter based on the Agusta A129 Mangusta platform. It was developed by Turkish Aerospace Industries (TAI)[1] in partnership with Leonardo S.p.A.[2] The helicopter is designed for armed reconnaissance and attack missions in hot and high environments and rough geography in both day and night conditions.[5][",
+      "zh": "TAI/阿古斯塔韦斯特兰T129 ATAK是基于阿古斯塔A129“猫鼬”的双发动机、串列双座、多用途全天候攻击直升机，由土耳其航空航天与莱昂纳多合作研制，适合昼夜、高温高原及复杂地形的武装侦察和攻击任务。",
+      "ko": "TAI/아구스타웨스트랜드 T129 ATAK은 A129 망구스타를 기반으로 한 쌍발·탠덤좌석·다목적 전천후 공격헬기다. 터키항공우주와 레오나르도가 공동개발했으며 주야간 고온·고지대·험지에서 무장정찰과 공격을 수행한다."
+    },
+    "Long range artillery \\n -Cannot attack air units \\n -Can perform long range shots even without direct visual of the target \\n -Needs to be deployed": {
+      "en": "Long range artillery \n -Cannot attack air units \n -Can perform long range shots even without direct visual of the target \n -Needs to be deployed",
+      "zh": "远程火炮；不能攻击飞机；可对没有直接视线的目标远程射击；需要部署。",
+      "ko": "장거리 포병. 항공기를 공격할 수 없으며 직접 시야가 없어도 장거리 사격이 가능하다. 전개 필요."
+    },
+    "BRP Gregorio del Pilar (PS-40) is the lead ship of her class of offshore patrol vessel of the Philippine Navy. She is the second ship to be named after Gregorio del Pilar, a Filipino revolutionary general known for his role at the Battle of Tirad Pass. She was originally designated as \"PF-15\" from 2012 to mid-2016. Then the Navy adopted a new code designation system and she was redesignated as \"FF-15\". In February 2019, the Navy downgraded the status of the entire class from frigate to patrol ship and redesignated her as \"PS-15\".[9] The ship, together with its two other sisterships, were again re-designated in March 2026, with BRP Gregorio del Pilar given the hull number PS-40.": {
+      "en": "BRP Gregorio del Pilar (PS-40) is the lead ship of her class of offshore patrol vessel of the Philippine Navy. She is the second ship to be named after Gregorio del Pilar, a Filipino revolutionary general known for his role at the Battle of Tirad Pass. She was originally designated as \"PF-15\" from 2012 to mid-2016. Then the Navy adopted a new code designation system and she was redesignated as \"FF-15\". In February 2019, the Navy downgraded the status of the entire class from frigate to patrol ship and redesignated her as \"PS-15\".[9] The ship, together with its two other sisterships, were again re-designated in March 2026, with BRP Gregorio del Pilar given the hull number PS-40.",
+      "zh": "格雷戈里奥·德尔·皮拉尔号（PS-40）为菲律宾海军同级近海巡逻舰首舰，第二艘以蒂拉德山口战役中的革命将军命名的舰艇。2012年至2016年中称PF-15，后改FF-15；2019年2月全级从护卫舰降为巡逻舰，改PS-15；2026年3月与两艘姊妹舰再次改号，本舰改PS-40。",
+      "ko": "그레고리오 델 필라르함(PS-40)은 필리핀 해군 동급 원양초계함의 선도함이며 티라드 고개 전투의 혁명 장군 이름을 이은 두 번째 함정이다. 2012~2016년 중반 PF-15, 이후 FF-15로 불렸다. 2019년 2월 함급이 초계함으로 재분류되어 PS-15, 2026년 3월 자매함들과 함께 다시 변경되어 PS-40이 되었다."
+    },
+    "NATIONAL AIR TO SURFACE ARIAL SYSTEM MISSILE\\nAll-weather, Air defense system \\nD \\nManufactu \\nCan attack Air only \\nLong range": {
+      "en": "NATIONAL AIR TO SURFACE ARIAL SYSTEM MISSILE\nAll-weather, Air defense system \nD \nManufactu \nCan attack Air only \nLong range",
+      "zh": "全天候防空导弹系统；只能攻击空中目标，射程远。原文另有未写完的系统及制造商说明。",
+      "ko": "전천후 방공 미사일 체계. 공중 목표만 공격하며 긴 사거리. 원문의 체계·제작사 설명 일부는 미완성이다."
+    },
+    ": -Medium  Air defence  System \\n -good againts Fast moving Aircay\\n -can only attack Aircraft\\n-long range": {
+      "en": ": -Medium  Air defence  System \n -good againts Fast moving Aircay\n -can only attack Aircraft\n-long range",
+      "zh": "中程防空系统；擅长攻击快速飞行目标；只能攻击飞机；射程远。",
+      "ko": "중거리 방공 체계. 빠른 항공기에 효과적이며 항공기만 공격한다. 긴 사거리."
+    },
+    "The Tupolev PAK DA or PAK DA (Russian: ПАК ДА, short for: Перспективный авиационный комплекс дальней авиации, romanized: Perspektivnyi aviatsionnyi kompleks dal'ney aviatsii, lit. ''Prospective aviation complex for long-range aviation''),[3] codename Poslannik (Russian: Посланник, lit. 'Envoy'),[4] is a next-generation stealth strategic bomber being developed by Tupolev for the Long-Range Aviation branch of the Russian Aerospace Forces.[5] The PAK DA is set to complement and eventually replace the older Tupolev Tu-95 in Russia's Air Force service.[6]": {
+      "en": "The Tupolev PAK DA or PAK DA (Russian: ПАК ДА, short for: Перспективный авиационный комплекс дальней авиации, romanized: Perspektivnyi aviatsionnyi kompleks dal'ney aviatsii, lit. ''Prospective aviation complex for long-range aviation''),[3] codename Poslannik (Russian: Посланник, lit. 'Envoy'),[4] is a next-generation stealth strategic bomber being developed by Tupolev for the Long-Range Aviation branch of the Russian Aerospace Forces.[5] The PAK DA is set to complement and eventually replace the older Tupolev Tu-95 in Russia's Air Force service.[6]",
+      "zh": "图波列夫PAK DA意为“远程航空未来航空综合体”，代号“使者”，是为俄罗斯空天军远程航空兵研制的下一代隐身战略轰炸机，计划补充并最终替换老旧的图-95。",
+      "ko": "투폴레프 PAK DA는 ‘장거리 항공을 위한 미래 항공 복합체’의 약자로 암호명은 ‘전령’이다. 러시아 항공우주군 장거리항공대용 차세대 스텔스 전략폭격기로 노후한 Tu-95를 보완하고 최종 대체할 예정이다."
+    },
+    "Soviet/Russia ground attack fighter aircraft \\nDeveloped by: Sukhoi Design Bureau \\nVery good for close air support mission \\nGryazev-Shipunov GSh-30-2 30mm. Autocannon \\nS-13 122mm. unguided rocket \\nKh-25ML ATGM (AS-10 Karen)": {
+      "en": "Soviet/Russia ground attack fighter aircraft \nDeveloped by: Sukhoi Design Bureau \nVery good for close air support mission \nGryazev-Shipunov GSh-30-2 30mm. Autocannon \nS-13 122mm. unguided rocket \nKh-25ML ATGM (AS-10 Karen)",
+      "zh": "苏联/俄罗斯对地攻击机，由苏霍伊设计局研制；擅长近距空中支援；GSh-30-2 30毫米机炮、S-13 122毫米无制导火箭、Kh-25ML反坦克导弹（AS-10 Karen）。",
+      "ko": "수호이 설계국이 개발한 소련·러시아 공격기. 근접항공지원에 강하다. GSh-30-2 30mm 기관포, S-13 122mm 무유도 로켓, Kh-25ML ATGM(AS-10 Karen) 장비."
+    },
+    "The Tupolev Tu-160 (Russian: Туполев Ту-160 «Белый лебедь», romanized: Bely Lebed, lit. 'White Swan';[1] NATO reporting name: Blackjack) is a supersonic, variable-sweep wing nuclear-capable heavy strategic bomber and airborne missile platform designed by the Tupolev Design Bureau in the Soviet Union in the 1970s. The aircraft is large, longer than a Boeing B-52 Stratofortress at 54 m, with wingspan 56 m when spread, 36 m when swept back. The Tu-160 is operated by the Long Range Aviation branch of the Russian Aerospace Forces.[2]": {
+      "en": "The Tupolev Tu-160 (Russian: Туполев Ту-160 «Белый лебедь», romanized: Bely Lebed, lit. 'White Swan';[1] NATO reporting name: Blackjack) is a supersonic, variable-sweep wing nuclear-capable heavy strategic bomber and airborne missile platform designed by the Tupolev Design Bureau in the Soviet Union in the 1970s. The aircraft is large, longer than a Boeing B-52 Stratofortress at 54 m, with wingspan 56 m when spread, 36 m when swept back. The Tu-160 is operated by the Long Range Aviation branch of the Russian Aerospace Forces.[2]",
+      "zh": "图波列夫图-160“白天鹅”（北约称Blackjack）是苏联图波列夫设计局在20世纪70年代设计的超音速、可变后掠翼、可携核武重型战略轰炸机和空中导弹平台。机长54米，比B-52更长；机翼展开翼展56米，后掠时36米。由俄罗斯空天军远程航空兵使用。",
+      "ko": "Tu-160 ‘백조’(NATO: Blackjack)는 1970년대 소련 투폴레프 설계국이 설계한 초음속 가변익 핵탑재 중전략폭격기 겸 공중 미사일 플랫폼이다. 길이 54m로 B-52보다 길며 날개를 펴면 폭 56m, 접으면 36m다. 러시아 항공우주군 장거리항공대가 운용한다."
+    },
+    ".....NATO Reporting Name Bear": {
+      "en": ".....NATO Reporting Name Bear",
+      "zh": "……北约代号“熊”。",
+      "ko": "……NATO 명칭 ‘베어’."
+    },
+    ".....NATO Reporting Name Bear,Anti submarine": {
+      "en": ".....NATO Reporting Name Bear,Anti submarine",
+      "zh": "……北约代号“熊”，反潜型。",
+      "ko": "……NATO 명칭 ‘베어’, 대잠형."
+    },
+    "The Kronshtadt Orion is a family of Russian unmanned aerial vehicles (UAV) developed by Kronstadt Group.[4][5][6] There are several variants of the drone, both for Russia's domestic and export market": {
+      "en": "The Kronshtadt Orion is a family of Russian unmanned aerial vehicles (UAV) developed by Kronstadt Group.[4][5][6] There are several variants of the drone, both for Russia's domestic and export market",
+      "zh": "喀琅施塔得“猎户座”是喀琅施塔得集团研制的俄罗斯无人机家族，有面向俄罗斯国内和出口市场的多个型号。",
+      "ko": "크론시타트 오리온은 크론시타트 그룹이 개발한 러시아 무인기 계열이다. 러시아 내수용과 수출용 등 여러 변형이 있다."
+    },
+    "...": {
+      "en": "...",
+      "zh": "……",
+      "ko": "……"
+    },
+    "An Iranian loitering munition designed for long-range strikes against static targets.": {
+      "en": "An Iranian loitering munition designed for long-range strikes against static targets.",
+      "zh": "伊朗研制的巡飞弹，用于远距离打击固定目标。",
+      "ko": "고정 목표 장거리 타격용으로 이란이 설계한 배회탄."
+    },
+    "The Mikoyan MiG-29 Fulcrum(Микоян МиГ-29) is the embodiment of a Russian military aircraft. The interceptor and multirole fighter aircraft MiG-29 Fulcrum uniquely combines unbelievable manoeuvrability with great speed. The first MiG-29 Fulcrum airframes were delivered to the Soviet Air Force in 1983. The MiG-29 Fulcrum was exported to numerous countries: Until today, more than 1’500 aircraft in various versions of the air superiority fighter MiG-29 were built.": {
+      "en": "The Mikoyan MiG-29 Fulcrum(Микоян МиГ-29) is the embodiment of a Russian military aircraft. The interceptor and multirole fighter aircraft MiG-29 Fulcrum uniquely combines unbelievable manoeuvrability with great speed. The first MiG-29 Fulcrum airframes were delivered to the Soviet Air Force in 1983. The MiG-29 Fulcrum was exported to numerous countries: Until today, more than 1’500 aircraft in various versions of the air superiority fighter MiG-29 were built.",
+      "zh": "米高扬米格-29“支点”以极高机动性和速度结合著称，兼具截击和多用途作战能力。首批机体于1983年交付苏联空军，此后出口多国，各型制空战斗机累计制造超过1500架。",
+      "ko": "미코얀 MiG-29 ‘펄크럼’은 뛰어난 기동성과 고속 성능을 결합한 러시아의 요격·다목적 전투기다. 1983년 소련 공군에 첫 기체가 인도되었고 여러 나라에 수출되어 각종 제공형이 1,500대 이상 제작되었다."
+    },
+    "Multi-role 4th Gen Fighter of the Russia Air Force \\nDeveloped by Migs Aviation Corporation \\nBuilt by Komsomolsk-on-Amur Aircraft Plant (KnAAPO) \\nVery good for Air-to-Air and Air-to-Ground Combat \\nR-74 (AA-11 Archer) \\nR-77 (AA-12 Adder) \\nKAB-500L Laser-guided Bomb": {
+      "en": "Multi-role 4th Gen Fighter of the Russia Air Force \nDeveloped by Migs Aviation Corporation \nBuilt by Komsomolsk-on-Amur Aircraft Plant (KnAAPO) \nVery good for Air-to-Air and Air-to-Ground Combat \nR-74 (AA-11 Archer) \nR-77 (AA-12 Adder) \nKAB-500L Laser-guided Bomb",
+      "zh": "俄罗斯空军第四代多用途战斗机，米格航空公司研制、阿穆尔河畔共青城飞机制造厂生产；擅长空对空和空对地作战。R-74（AA-11 Archer）、R-77（AA-12 Adder）、KAB-500L激光制导炸弹。",
+      "ko": "러시아 공군의 4세대 다목적 전투기. 미그가 개발하고 KnAAPO가 생산했다. 공대공·공대지 전투에 강하며 R-74(AA-11 Archer), R-77(AA-12 Adder), KAB-500L 레이저 유도폭탄 장비."
+    },
+    "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike More Stronger than F-15 in other word it is capable of Defeating the F-15 eagle": {
+      "en": "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike More Stronger than F-15 in other word it is capable of Defeating the F-15 eagle",
+      "zh": "可进行空中格斗和对地打击的多用途战斗机；原文称其强于F-15，可击败F-15“鹰”。",
+      "ko": "공중전과 지상 타격이 가능한 다목적 전투기. 원문은 F-15 이글보다 강하며 격파할 수 있다고 설명한다."
+    },
+    "SU-35 MEDIUM AIRCRAFT": {
+      "en": "SU-35 MEDIUM AIRCRAFT",
+      "zh": "苏-35中型战斗机。",
+      "ko": "Su-35 중형 전투기."
+    },
+    "The Su-33 (Su-27K Flanker-D) is a carrier-based variant in the Su-27 family. Developed with naval operations in mind, the Su-33 utilizes a strengthened undercarriage, folding wing surfaces and an arresting hook. Other changes include enlarged control surfaces, an installed in-flight refueling probe, canards, and a shortened aft radar sting GOOD AT LONG ANTI SHIP MISSION,BAD AT AIR TO AIR": {
+      "en": "The Su-33 (Su-27K Flanker-D) is a carrier-based variant in the Su-27 family. Developed with naval operations in mind, the Su-33 utilizes a strengthened undercarriage, folding wing surfaces and an arresting hook. Other changes include enlarged control surfaces, an installed in-flight refueling probe, canards, and a shortened aft radar sting GOOD AT LONG ANTI SHIP MISSION,BAD AT AIR TO AIR",
+      "zh": "苏-33（苏-27K，Flanker-D）是苏-27家族舰载型，为海军作战强化起落架，采用折叠机翼和拦阻钩，并扩大操纵面，增加空中加油探管和鸭翼、缩短尾部雷达锥。擅长远程反舰，但空战能力较弱。",
+      "ko": "Su-33(Su-27K Flanker-D)은 Su-27 계열의 함재형이다. 강화된 착륙장치, 접이식 날개, 착함고리, 커진 조종면, 공중급유 프로브, 카나드, 짧아진 꼬리 레이더 돌출부를 갖춘다. 장거리 대함전에 강하지만 공대공전에는 약하다."
+    },
+    "SU-47 BERKUT MEDIUM AIRCRAFT": {
+      "en": "SU-47 BERKUT MEDIUM AIRCRAFT",
+      "zh": "苏-47“金雕”中型战斗机。",
+      "ko": "Su-47 베르쿠트 중형 전투기."
+    },
+    "Su-57air superiority aircraft Made By Sukhoi/": {
+      "en": "Su-57air superiority aircraft Made By Sukhoi/",
+      "zh": "苏霍伊制造的苏-57制空战斗机。",
+      "ko": "수호이 제작 Su-57 제공 전투기."
+    },
+    "Transport Helicopter \\n Weak protection, only against small arms \\n No armament \\n Speed reaches 250 km/h \\n Turning speed - high \\n Can carry up to 12 soldiers \\n All troops are inside the helicopter, so it is protected. It has good visibility and can be used for reconnaissance and patrolling. \\n Flies, drives asses, cheap, fuck you. \\n Due to the lack of weapons, it cannot support the infantry,": {
+      "en": "Transport Helicopter \n Weak protection, only against small arms \n No armament \n Speed reaches 250 km/h \n Turning speed - high \n Can carry up to 12 soldiers \n All troops are inside the helicopter, so it is protected. It has good visibility and can be used for reconnaissance and patrolling. \n Flies, drives asses, cheap, fuck you. \n Due to the lack of weapons, it cannot support the infantry,",
+      "zh": "运输直升机；装甲薄，只能防轻武器；无武装；最高时速250千米，转向快，最多运载12名士兵。乘员在机内受保护，视野好，可侦察巡逻。飞得起、跑腿快、便宜，去你的。由于没有武器，无法为步兵提供支援。",
+      "ko": "수송헬기. 방호력이 약해 소화기만 막으며 무장이 없다. 최고 250km/h, 빠른 선회, 병사 최대 12명 수송. 병력은 기내에서 보호되고 시야가 좋아 정찰·순찰에 쓸 수 있다. 날아다니며 싸고 잘 실어 나른다, 엿 먹어라. 무장이 없어 보병 화력지원은 불가능하다."
+    },
+    "Attack helicopter.\\n-Armed with four rocket complexes, mobile 30mm M230 autocannon": {
+      "en": "Attack helicopter.\n-Armed with four rocket complexes, mobile 30mm M230 autocannon",
+      "zh": "攻击直升机；装备四套火箭系统和可转动的30毫米M230机炮。",
+      "ko": "공격헬기. 로켓 체계 4기와 가동식 30mm M230 기관포 장비."
+    },
+    "Transport plane,Fast": {
+      "en": "Transport plane,Fast",
+      "zh": "速度快的运输机。",
+      "ko": "빠른 수송기."
+    },
+    "Antov 225 Heavy transport aircraft": {
+      "en": "Antov 225 Heavy transport aircraft",
+      "zh": "安东诺夫225重型运输机。",
+      "ko": "안토노프 225 대형 수송기."
+    },
+    "Design and built by kamoskov Aircraft Co. \\nDeveloped from KA-29E helicopter \\nVery good for Anti-Submarine Warfare \\nMk-46 Torpedoes \\nSm-9 rocket pods ×1 \\nis loaded with Guided Torpedo \\n(High Explosive)": {
+      "en": "Design and built by kamoskov Aircraft Co. \nDeveloped from KA-29E helicopter \nVery good for Anti-Submarine Warfare \nMk-46 Torpedoes \nSm-9 rocket pods ×1 \nis loaded with Guided Torpedo \n(High Explosive)",
+      "zh": "卡莫夫设计制造，源自KA-29E；擅长反潜，装备Mk46鱼雷、1套Sm-9火箭巢，装填制导高爆鱼雷。",
+      "ko": "카모프가 KA-29E를 기반으로 개발·생산. 대잠전에 강하며 Mk46 어뢰, 고폭 유도어뢰를 사용하는 Sm-9 로켓포드 1기 장비."
+    },
+    "CAS helicopter\\n-Arnament: two S-8 rocket complexes, 2A42 autocannon": {
+      "en": "CAS helicopter\n-Arnament: two S-8 rocket complexes, 2A42 autocannon",
+      "zh": "近距空中支援直升机；两套S-8火箭系统和2A42机炮。",
+      "ko": "S-8 로켓 체계 2기와 2A42 기관포를 장비한 근접항공지원 헬리콥터."
+    },
+    "decent but more cheaper": {
+      "en": "decent but more cheaper",
+      "zh": "性能尚可，价格更便宜。",
+      "ko": "준수한 성능에 더 저렴한 가격."
+    },
+    "....": {
+      "en": "....",
+      "zh": "……",
+      "ko": "……"
+    },
+    "Can build Russian Navy (VMF) warships": {
+      "en": "Can build Russian Navy (VMF) warships",
+      "zh": "可建造俄罗斯海军军舰。",
+      "ko": "러시아 해군 군함을 건조한다."
+    },
+    "NATO reporting name: SA-15 Gauntlet \\nAll-weather, Air defense system \\nDesigned by Antey Design Bureau \\nManufactured by IEMZ Kupol \\nCan attack Air only \\nLong range": {
+      "en": "NATO reporting name: SA-15 Gauntlet \nAll-weather, Air defense system \nDesigned by Antey Design Bureau \nManufactured by IEMZ Kupol \nCan attack Air only \nLong range",
+      "zh": "北约代号SA-15 Gauntlet；全天候防空系统，安泰设计局设计、库波尔机电厂制造；只能攻击空中目标，射程远。",
+      "ko": "NATO 명칭 SA-15 Gauntlet. 안테이 설계국 설계, IEMZ 쿠폴 제작 전천후 방공 체계. 공중 목표만 공격하며 긴 사거리."
+    },
+    "-Attack air units.\\n-Light armor.\\n-Large radius of attack.": {
+      "en": "-Attack air units.\n-Light armor.\n-Large radius of attack.",
+      "zh": "攻击空中单位；轻装甲；攻击范围大。",
+      "ko": "공중 유닛 공격. 경장갑이며 넓은 공격 반경."
+    },
+    "''": {
+      "en": "''",
+      "zh": "准备开火。",
+      "ko": "사격 준비 완료."
+    },
+    "Amphibious Infantry Fighting Vehicle \\nUpgraded by KBP Design Bureau \\nCan attack Ground only \\nShipunov 2A42 30mm. Autocannon \\n9M133 Kornet (AT-14 Spriggan) ATGM \\nAble to move on water": {
+      "en": "Amphibious Infantry Fighting Vehicle \nUpgraded by KBP Design Bureau \nCan attack Ground only \nShipunov 2A42 30mm. Autocannon \n9M133 Kornet (AT-14 Spriggan) ATGM \nAble to move on water",
+      "zh": "两栖步兵战车，KBP设计局升级；只能攻击地面；2A42 30毫米机炮、9M133短号反坦克导弹（AT-14 Spriggan）；可水上行驶。",
+      "ko": "KBP 설계국이 개량한 수륙양용 보병전투차. 지상 공격만 가능. 2A42 30mm 기관포와 9M133 코르넷 ATGM(AT-14 Spriggan). 수상 이동 가능."
+    },
+    "Third-Gen version of the T-72 Main Battle Tank \\n2A46M 125mm. main gun \\nUsing 3VBM17 APFSDS-T Ammunition \\nV-92S2F Diesel engine \\nKontakt-5 Explosive Reactive Armour \\nCan attack Ground only": {
+      "en": "Third-Gen version of the T-72 Main Battle Tank \n2A46M 125mm. main gun \nUsing 3VBM17 APFSDS-T Ammunition \nV-92S2F Diesel engine \nKontakt-5 Explosive Reactive Armour \nCan attack Ground only",
+      "zh": "第三代T-72主战坦克；2A46M 125毫米主炮，3VBM17尾翼稳定脱壳曳光穿甲弹，V-92S2F柴油机，接触-5爆炸反应装甲；只能攻击地面。",
+      "ko": "3세대 T-72 주력전차. 2A46M 125mm 주포, 3VBM17 APFSDS-T 탄약, V-92S2F 디젤엔진, 콘탁트-5 폭발반응장갑. 지상 공격만 가능."
+    },
+    "Russian MBT developed from T-80U in the early 2000s \\n\"U\" for Uluchsheniye meaning \"Improvement\" \\n2A46M-1 125mm. smoothbore main gun \\nUsing 3VBM12 APFSDS-T Ammunition \\n1A46 Fire Control System \\nSteel/Composite & Kontakt-5 ERA \\nGTD-1250 Gas turbine engine \\nCan attack Ground only": {
+      "en": "Russian MBT developed from T-80U in the early 2000s \n\"U\" for Uluchsheniye meaning \"Improvement\" \n2A46M-1 125mm. smoothbore main gun \nUsing 3VBM12 APFSDS-T Ammunition \n1A46 Fire Control System \nSteel/Composite & Kontakt-5 ERA \nGTD-1250 Gas turbine engine \nCan attack Ground only",
+      "zh": "21世纪初由T-80U发展的俄罗斯主战坦克；U意为“改进”。2A46M-1 125毫米滑膛主炮、3VBM12穿甲弹、1A46火控、钢/复合装甲与接触-5反应装甲、GTD-1250燃气轮机；只能攻击地面。",
+      "ko": "2000년대 초 T-80U에서 발전한 러시아 주력전차. U는 ‘개량’을 뜻한다. 2A46M-1 125mm 활강포, 3VBM12 APFSDS-T, 1A46 사격통제, 강철·복합장갑과 콘탁트-5 ERA, GTD-1250 가스터빈. 지상 공격만 가능."
+    },
+    "An upgrade version of the standard T-90 \\n2A46M-2 125mm. smoothbore main gun \\nUsing 3VBM20 APFSDS-T Ammunition \\nSteel and Composite Armor \\nKontakt-5 Explosive Reactive Armour \\nV-92S2 Diesel engine \\nCan attack Ground only": {
+      "en": "An upgrade version of the standard T-90 \n2A46M-2 125mm. smoothbore main gun \nUsing 3VBM20 APFSDS-T Ammunition \nSteel and Composite Armor \nKontakt-5 Explosive Reactive Armour \nV-92S2 Diesel engine \nCan attack Ground only",
+      "zh": "标准T-90升级型；2A46M-2 125毫米滑膛主炮、3VBM20尾翼稳定脱壳曳光穿甲弹、钢/复合装甲、接触-5爆炸反应装甲、V-92S2柴油机；只能攻击地面。",
+      "ko": "기본 T-90 개량형. 2A46M-2 125mm 활강포, 3VBM20 APFSDS-T 탄약, 강철·복합장갑, 콘탁트-5 ERA, V-92S2 디젤엔진. 지상 공격만 가능."
+    },
+    "New modernized version of the T-90 family \\nAdvanced \"Kalina\" fire control system \\n2A46M-5 125mm. smoothbore main gun \\nUsing 3VBM23 APFSDS-T Ammunition \\nUpgraded Auto-loader \\nPowerful V-92S2 Diesel engine \\nUpgraded Composite Armor \\nRelikt Explosive Reactive Armour \\nCan attack Ground only": {
+      "en": "New modernized version of the T-90 family \nAdvanced \"Kalina\" fire control system \n2A46M-5 125mm. smoothbore main gun \nUsing 3VBM23 APFSDS-T Ammunition \nUpgraded Auto-loader \nPowerful V-92S2 Diesel engine \nUpgraded Composite Armor \nRelikt Explosive Reactive Armour \nCan attack Ground only",
+      "zh": "T-90家族现代化型号；先进“卡利纳”火控、2A46M-5 125毫米滑膛炮、3VBM23穿甲弹、升级自动装弹机、强劲V-92S2柴油机、升级复合装甲和“化石”爆炸反应装甲；只能攻击地面。",
+      "ko": "현대화된 T-90 계열. 첨단 칼리나 사격통제, 2A46M-5 125mm 활강포, 3VBM23 APFSDS-T, 개량 자동장전기, 강력한 V-92S2 디젤엔진, 개량 복합장갑과 렐릭트 ERA. 지상 공격만 가능."
+    },
+    "The Admiral Gorshkov class, Russian designation Project 22350, is a class of frigates of the Russian Navy.[13] The ships are being built by the Severnaya Verf in Saint Petersburg at a cost of $250 million per ship. The class was designed by the Severnoye Design Bureau and incorporates use of stealth technology.[14] As of August 2020, ten vessels have been ordered for delivery by 2027. The lead ship of the class, Admiral Gorshkov, was commissioned on 28 July 2018.": {
+      "en": "The Admiral Gorshkov class, Russian designation Project 22350, is a class of frigates of the Russian Navy.[13] The ships are being built by the Severnaya Verf in Saint Petersburg at a cost of $250 million per ship. The class was designed by the Severnoye Design Bureau and incorporates use of stealth technology.[14] As of August 2020, ten vessels have been ordered for delivery by 2027. The lead ship of the class, Admiral Gorshkov, was commissioned on 28 July 2018.",
+      "zh": "戈尔什科夫海军上将级（22350型）是俄罗斯护卫舰，由北方设计局设计、采用隐身技术，圣彼得堡北方造船厂建造，每艘约2.5亿美元。截至2020年8月订购10艘，计划2027年前交付；首舰2018年7月28日服役。",
+      "ko": "고르시코프 제독급(프로젝트 22350)은 러시아 해군 호위함이다. 세베르노예 설계국이 스텔스 기술을 적용했고 상트페테르부르크 세베르나야 조선소가 척당 약 2억5천만 달러에 건조한다. 2020년 8월 기준 2027년까지 인도할 10척이 주문되었으며 선도함은 2018년 7월 28일 취역했다."
+    },
+    "The Admiral Gorshkov class II, Russian designation Project 22350, is a class of frigates of the Russian Navy.[13] The ships are being built by the Severnaya Verf in Saint Petersburg at a cost of $250 million per ship. The class was designed by the Severnoye Design Bureau and incorporates use of stealth technology.[14] As of August 2020, ten vessels have been ordered for delivery by 2027. The lead ship of the class, Admiral Gorshkov, was commissioned on 28 July 2018.": {
+      "en": "The Admiral Gorshkov class II, Russian designation Project 22350, is a class of frigates of the Russian Navy.[13] The ships are being built by the Severnaya Verf in Saint Petersburg at a cost of $250 million per ship. The class was designed by the Severnoye Design Bureau and incorporates use of stealth technology.[14] As of August 2020, ten vessels have been ordered for delivery by 2027. The lead ship of the class, Admiral Gorshkov, was commissioned on 28 July 2018.",
+      "zh": "戈尔什科夫海军上将II级（22350型）俄罗斯护卫舰；北方设计局设计，采用隐身技术，由圣彼得堡北方造船厂以每艘约2.5亿美元建造。2020年8月时共订购10艘，计划2027年前交付；首舰2018年7月28日服役。",
+      "ko": "고르시코프 제독 II급(프로젝트 22350) 러시아 호위함. 세베르노예 설계국이 스텔스 기술로 설계하고 세베르나야 조선소가 척당 약 2억5천만 달러에 건조한다. 2020년 8월 기준 2027년까지 인도할 10척 주문. 선도함은 2018년 7월 28일 취역."
+    },
+    "Udaloy II-class Anti-submarine Frigate \\nMR-390M Topaz-V Air & Surface search radar \\n84R/URPK-4 Metel-U (SS-N-14 Silex) Anti-Ship Missile \\n3K95 Kinzhal (SA-N-9 Gauntlet) Anti-Aircraft Missile \\nTwo AK-100 100mm. Naval gun \\nTwo AK-630 30mm. CIWS \\nType-53 torpedo for Anti-Submarine Warfare": {
+      "en": "Udaloy II-class Anti-submarine Frigate \nMR-390M Topaz-V Air & Surface search radar \n84R/URPK-4 Metel-U (SS-N-14 Silex) Anti-Ship Missile \n3K95 Kinzhal (SA-N-9 Gauntlet) Anti-Aircraft Missile \nTwo AK-100 100mm. Naval gun \nTwo AK-630 30mm. CIWS \nType-53 torpedo for Anti-Submarine Warfare",
+      "zh": "无畏II级反潜护卫舰；MR-390M Topaz-V空中/水面搜索雷达、84R/URPK-4 Metel-U（SS-N-14 Silex）反舰导弹、3K95匕首（SA-N-9 Gauntlet）防空导弹、2门AK-100 100毫米舰炮、2套AK-630 30毫米近防炮、53型反潜鱼雷。",
+      "ko": "우달로이 II급 대잠호위함. MR-390M Topaz-V 대공·수상탐색 레이더, 84R/URPK-4 Metel-U(SS-N-14 Silex) 대함미사일, 3K95 킨잘(SA-N-9) 대공미사일, AK-100 100mm 함포 2문, AK-630 30mm CIWS 2기, 53형 대잠어뢰."
+    },
+    "Udaloy II-class Anti-submarine Destroyer \\nMR-320M Topaz-V Air & Surface search radar \\n84R/URPK-4 Metel-U (SS-N-14 Silex) Anti-Ship Missile \\n3K95 Kinzhal (SA-N-9 Gauntlet) Anti-Aircraft Missile \\nTwo AK-100 100mm. Naval gun \\nTwo AK-630 30mm. CIWS \\nType-53 torpedo for Anti-Submarine Warfare": {
+      "en": "Udaloy II-class Anti-submarine Destroyer \nMR-320M Topaz-V Air & Surface search radar \n84R/URPK-4 Metel-U (SS-N-14 Silex) Anti-Ship Missile \n3K95 Kinzhal (SA-N-9 Gauntlet) Anti-Aircraft Missile \nTwo AK-100 100mm. Naval gun \nTwo AK-630 30mm. CIWS \nType-53 torpedo for Anti-Submarine Warfare",
+      "zh": "无畏II级反潜驱逐舰；MR-320M Topaz-V空中/水面搜索雷达、84R/URPK-4 Metel-U（SS-N-14 Silex）反舰导弹、3K95匕首（SA-N-9 Gauntlet）防空导弹、2门AK-100 100毫米舰炮、2套AK-630 30毫米近防炮、53型反潜鱼雷。",
+      "ko": "우달로이 II급 대잠구축함. MR-320M Topaz-V 대공·수상탐색 레이더, 84R/URPK-4 Metel-U(SS-N-14 Silex) 대함미사일, 3K95 킨잘(SA-N-9) 대공미사일, AK-100 100mm 함포 2문, AK-630 30mm CIWS 2기, 53형 대잠어뢰."
+    },
+    "Admiral Grigorovich-class Frigate \\nFregat M2M Air-search radar \\n3Ts-25 Garpun-B Surface-search radar \\n5P-10 \"Puma\" Fire-control radar \\n9M317M (SA-17 Grizzly) Anti-Aircraft Missile \\n9K333 (SA-25 Verba) Anti-Aircraft Missile \\nA-190 100mm. naval gun \\nAK-630 30mm. CIWS \\nTorpedo for Anti-Submarine Warfare": {
+      "en": "Admiral Grigorovich-class Frigate \nFregat M2M Air-search radar \n3Ts-25 Garpun-B Surface-search radar \n5P-10 \"Puma\" Fire-control radar \n9M317M (SA-17 Grizzly) Anti-Aircraft Missile \n9K333 (SA-25 Verba) Anti-Aircraft Missile \nA-190 100mm. naval gun \nAK-630 30mm. CIWS \nTorpedo for Anti-Submarine Warfare",
+      "zh": "格里戈洛维奇海军上将级护卫舰；Fregat M2M空中搜索、3Ts-25 Garpun-B水面搜索、5P-10“美洲狮”火控雷达；9M317M（SA-17 Grizzly）、9K333（SA-25 Verba）防空导弹、A-190 100毫米舰炮、AK-630 30毫米近防炮和反潜鱼雷。",
+      "ko": "그리고로비치 제독급 호위함. Fregat M2M 대공탐색, 3Ts-25 Garpun-B 수상탐색, 5P-10 푸마 사격통제 레이더. 9M317M(SA-17), 9K333(SA-25) 대공미사일, A-190 100mm 함포, AK-630 30mm CIWS, 대잠어뢰."
+    },
+    "Kirov-class Nuclear-powered Battlecruiser \\nVoskhod MR-800 3D Surface & Air search radar \\nFregat MR-710 3D Surface search radar \\nP-700 Granit (SS-N-19 Shipwreck) Anti-Ship Missile \\nS-300FM (SA-N-20 Grumble) Anti-Aircraft Missile \\nAK-130 Twin 130mm. Dual-purpose Gun \\nAK-630 30mm. CIWS \\nType-53 torpedo for Anti-Submarine Warfare": {
+      "en": "Kirov-class Nuclear-powered Battlecruiser \nVoskhod MR-800 3D Surface & Air search radar \nFregat MR-710 3D Surface search radar \nP-700 Granit (SS-N-19 Shipwreck) Anti-Ship Missile \nS-300FM (SA-N-20 Grumble) Anti-Aircraft Missile \nAK-130 Twin 130mm. Dual-purpose Gun \nAK-630 30mm. CIWS \nType-53 torpedo for Anti-Submarine Warfare",
+      "zh": "基洛夫级核动力战列巡洋舰；Voskhod MR-800三维水面/空中搜索、Fregat MR-710三维水面搜索雷达；P-700花岗岩（SS-N-19 Shipwreck）反舰导弹、S-300FM（SA-N-20 Grumble）防空导弹、AK-130双联130毫米两用炮、AK-630 30毫米近防炮、53型反潜鱼雷。",
+      "ko": "키로프급 핵추진 순양전함. Voskhod MR-800 3차원 대공·수상탐색, Fregat MR-710 3차원 수상탐색 레이더. P-700 그라니트(SS-N-19) 대함미사일, S-300FM(SA-N-20) 대공미사일, AK-130 쌍열 130mm 양용포, AK-630 30mm CIWS, 53형 대잠어뢰."
+    },
+    "Patrol Ship \\n -All purpouses light ship \\n -Limited capabilities against air": {
+      "en": "Patrol Ship \n -All purpouses light ship \n -Limited capabilities against air",
+      "zh": "巡逻舰；通用轻型舰艇；防空能力有限。",
+      "ko": "범용 경초계함. 대공 능력은 제한적이다."
+    },
+    "The Project 1164 Atlant or Slava Class guided missile cruisers were built by the Nikolayev shipyard, named after 61 Communards, for the Soviet Navy.": {
+      "en": "The Project 1164 Atlant or Slava Class guided missile cruisers were built by the Nikolayev shipyard, named after 61 Communards, for the Soviet Navy.",
+      "zh": "1164型“大西洋”或光荣级导弹巡洋舰，由苏联尼古拉耶夫六十一名公社社员造船厂建造。",
+      "ko": "프로젝트 1164 아틀란트, 즉 슬라바급 유도탄 순양함은 소련 니콜라예프의 61코뮌 조선소에서 건조되었다."
+    },
+    "The Soviet Union developed the Project 1155, also referred to as Frigat and Udaloy, class destroyers in the 1970s on the basis of the Krivak class anti-submarine frigate. These ships were designed to engage submarines as their primary target with surface ships being their secondary target. The Udaloy class destroyers sensor suite includes Fregat MA air surveillance radar, hull mounted sonar and variable depth sonar. The propulsion system is based in four gas turbines in a COmbined Gas And Gas (COGAG) arrangement allowing a top speed of 35 knots. These destroyers are equipped with hangar and flight deck for two Ka-25 and/or Ka-27 anti-submarine warfare (ASW) helicopters. The Soviet Navy and Russian Navy commissioned 13 Udaloy class destroyers between 1980 and 1999.": {
+      "en": "The Soviet Union developed the Project 1155, also referred to as Frigat and Udaloy, class destroyers in the 1970s on the basis of the Krivak class anti-submarine frigate. These ships were designed to engage submarines as their primary target with surface ships being their secondary target. The Udaloy class destroyers sensor suite includes Fregat MA air surveillance radar, hull mounted sonar and variable depth sonar. The propulsion system is based in four gas turbines in a COmbined Gas And Gas (COGAG) arrangement allowing a top speed of 35 knots. These destroyers are equipped with hangar and flight deck for two Ka-25 and/or Ka-27 anti-submarine warfare (ASW) helicopters. The Soviet Navy and Russian Navy commissioned 13 Udaloy class destroyers between 1980 and 1999.",
+      "zh": "1155型（Frigat/无畏级）驱逐舰是苏联在1970年代基于克里瓦克级反潜护卫舰发展的舰艇，以潜艇为主要目标、水面舰为次要目标。装备Fregat MA空中监视雷达、舰壳及变深声呐，四台燃气轮机构成COGAG动力，最高35节，机库和甲板可容纳两架卡-25/卡-27反潜直升机。1980—1999年苏联及俄罗斯海军共服役13艘。",
+      "ko": "프로젝트 1155(Frigat·우달로이급)는 1970년대 소련이 크리바크급을 바탕으로 개발한 구축함이다. 잠수함이 주목표이고 수상함이 부목표다. Fregat MA 대공레이더, 선체·가변심도 소나, 가스터빈 4기의 COGAG 추진으로 최고 35노트를 낸다. Ka-25·Ka-27 대잠헬기 2대용 격납고와 비행갑판을 갖추며 1980~1999년 총 13척 취역했다."
+    },
+    "Borei-class Nuclear-powered Ballistic missile submarine \\nNATO reporting name: Borey \\nDesigned and built by the Russia for the Russia Navy \\nOK-650B nuclear reactor \\nRSM-56 Bulava ICBM (SS-N-32) \\nRSM-56 Bulava is armed with Nuclear Warhead \\nType 53 Torpedoes \\n\"But it is such a perfect place to start...\"": {
+      "en": "Borei-class Nuclear-powered Ballistic missile submarine \nNATO reporting name: Borey \nDesigned and built by the Russia for the Russia Navy \nOK-650B nuclear reactor \nRSM-56 Bulava ICBM (SS-N-32) \nRSM-56 Bulava is armed with Nuclear Warhead \nType 53 Torpedoes \n\"But it is such a perfect place to start...\"",
+      "zh": "北风之神级核动力弹道导弹潜艇，北约称Borey，俄罗斯为本国海军设计建造；OK-650B核反应堆、携带核弹头的RSM-56“布拉瓦”（SS-N-32）洲际弹道导弹和53型鱼雷。“但这里真是个完美的起点……”",
+      "ko": "보레이급 핵추진 탄도미사일 잠수함. 러시아 해군용으로 설계·건조되었다. OK-650B 원자로, 핵탄두를 탑재한 RSM-56 불라바(SS-N-32) ICBM, 53형 어뢰 장비. ‘하지만 시작하기에 정말 완벽한 곳이야…’"
+    },
+    "鹰眼": {
+      "en": "Hawkeye",
+      "zh": "鹰眼",
+      "ko": "호크아이"
+    },
+    "The Boeing E-3 Sentry is an American airborne early warning and control (AEW&C) aircraft developed by Boeing. E-3s are commonly known as AWACS (Airborne Warning and Control System). Derived from the Boeing 707 airliner, it provides all-weather surveillance, command, control, and communications, and is used by the United States Air Force, NATO, French Air and Space Force, Royal Saudi Air Force and Chilean Air Force. The E-3 has a distinctive rotating radar dome (rotodome) above the fuselage. Production ended in 1992 after 68 aircraft had been built.": {
+      "en": "The Boeing E-3 Sentry is an American airborne early warning and control (AEW&C) aircraft developed by Boeing. E-3s are commonly known as AWACS (Airborne Warning and Control System). Derived from the Boeing 707 airliner, it provides all-weather surveillance, command, control, and communications, and is used by the United States Air Force, NATO, French Air and Space Force, Royal Saudi Air Force and Chilean Air Force. The E-3 has a distinctive rotating radar dome (rotodome) above the fuselage. Production ended in 1992 after 68 aircraft had been built.",
+      "zh": "波音E-3“望楼”是以707客机为基础的美国空中预警指挥机，通常称AWACS，可提供全天候监视、指挥、控制和通信。由美国、北约、法国、沙特阿拉伯和智利空军使用，机身上方有独特旋转雷达罩；1992年停产，共制造68架。",
+      "ko": "보잉 E-3 센트리는 707 여객기를 기반으로 한 미국의 공중조기경보통제기로 AWACS라고도 한다. 전천후 감시·지휘·통제·통신을 제공한다. 미국, NATO, 프랑스, 사우디아라비아, 칠레가 운용하며 동체 위 회전식 레이돔이 특징이다. 1992년까지 68대 생산."
+    },
+    "Can drop a  Bomb powerful as a Nuclear Bomb": {
+      "en": "Can drop a  Bomb powerful as a Nuclear Bomb",
+      "zh": "可投放威力相当于核弹的炸弹。",
+      "ko": "핵폭탄만큼 강력한 폭탄 투하 가능."
+    },
+    "Good Morning Vietnam": {
+      "en": "Good Morning Vietnam",
+      "zh": "早安，越南。",
+      "ko": "굿모닝 베트남."
+    },
+    "The General Atomics MQ-20 Avenger (formerly Predator C) is a developmental unmanned combat aerial vehicle built by General Atomics Aeronautical Systems for the U.S. military.": {
+      "en": "The General Atomics MQ-20 Avenger (formerly Predator C) is a developmental unmanned combat aerial vehicle built by General Atomics Aeronautical Systems for the U.S. military.",
+      "zh": "通用原子MQ-20“复仇者”，原称“捕食者C”，是通用原子航空系统公司为美国军方研制的无人作战飞机。",
+      "ko": "제너럴 아토믹스 MQ-20 어벤저(구 프레데터 C)는 미군을 위해 개발한 무인전투기다."
+    },
+    "American drone": {
+      "en": "American drone",
+      "zh": "美国无人机。",
+      "ko": "미국 무인기."
+    },
+    "The Northrop Grumman RQ-180 is an American stealth unmanned aerial vehicle (UAV) surveillance aircraft intended for contested airspace. While there has been no official confirmation as of 2025, evidence points to the existence of the RQ-180 and its use in regular front-line service.[1]": {
+      "en": "The Northrop Grumman RQ-180 is an American stealth unmanned aerial vehicle (UAV) surveillance aircraft intended for contested airspace. While there has been no official confirmation as of 2025, evidence points to the existence of the RQ-180 and its use in regular front-line service.[1]",
+      "zh": "诺斯罗普·格鲁曼RQ-180是美国隐身无人侦察机，设计用于争夺空域。原文称截至2025年仍无官方确认，但证据显示其存在并常态执行一线任务。",
+      "ko": "노스롭 그루먼 RQ-180은 위협 공역용 미국 스텔스 무인정찰기다. 원문은 2025년까지 공식 확인은 없으나 존재와 정기적인 일선 운용 증거가 있다고 설명한다."
+    },
+    "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike GOES brrttttt": {
+      "en": "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike GOES brrttttt",
+      "zh": "可空中格斗和对地攻击的多用途战机，机炮“哒哒哒哒”！",
+      "ko": "공중전과 지상 타격이 가능한 다목적 전투기. 기관포가 브르르르!"
+    },
+    "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike More Stronger than F-15/mostly good at anti ship mission/": {
+      "en": "Multi-role Fighter Capable of Air-air Dog fight and Ground Strike More Stronger than F-15/mostly good at anti ship mission/",
+      "zh": "可空中格斗和对地攻击的多用途战斗机，比F-15更强，尤其擅长反舰任务。",
+      "ko": "F-15보다 강한 다목적 전투기. 공중전·지상 타격이 가능하며 특히 대함 임무에 강하다."
+    },
+    "F-35C air superiority aircraft Made By Lockheed Martin": {
+      "en": "F-35C air superiority aircraft Made By Lockheed Martin",
+      "zh": "洛克希德·马丁制造的F-35C制空战斗机。",
+      "ko": "록히드 마틴 제작 F-35C 제공 전투기."
+    },
+    "F-22 air superiority aircraft Made By Lockheed Martin/": {
+      "en": "F-22 air superiority aircraft Made By Lockheed Martin/",
+      "zh": "洛克希德·马丁制造的F-22制空战斗机。",
+      "ko": "록히드 마틴 제작 F-22 제공 전투기."
+    },
+    "Attack helicopter.\\n-Armed with four AGM-114 rocket complexes, mobile 30mm M230 autocannon": {
+      "en": "Attack helicopter.\n-Armed with four AGM-114 rocket complexes, mobile 30mm M230 autocannon",
+      "zh": "攻击直升机；装备四套AGM-114导弹系统和可转动的30毫米M230机炮。",
+      "ko": "공격헬기. AGM-114 미사일 체계 4기와 가동식 30mm M230 기관포 장비."
+    },
+    ".....": {
+      "en": ".....",
+      "zh": "……",
+      "ko": "……"
+    },
+    "A mobile short-range air defense system equipped with Stinger missiles for engaging low-altitude threats.": {
+      "en": "A mobile short-range air defense system equipped with Stinger missiles for engaging low-altitude threats.",
+      "zh": "配备毒刺导弹的机动近程防空系统，用于拦截低空威胁。",
+      "ko": "저고도 위협 대응용 스팅어 미사일을 장비한 기동 단거리 방공 체계."
+    },
+    "-Anti-NUKE": {
+      "en": "-Anti-NUKE",
+      "zh": "反核武器。",
+      "ko": "핵무기 요격용."
+    },
+    "Amphibious Infantry Fighting Vehicle \\ \\nCan attack Ground only \\nShipunov 2A42 30mm. Autocannon \\Javilin  ATGM \\nAble to move on water": {
+      "en": "Amphibious Infantry Fighting Vehicle \\ \nCan attack Ground only \nShipunov 2A42 30mm. Autocannon \\Javilin  ATGM \nAble to move on water",
+      "zh": "两栖步兵战车；只能攻击地面；2A42 30毫米机炮、标枪反坦克导弹；可水上行驶。",
+      "ko": "수륙양용 보병전투차. 지상 공격만 가능. 2A42 30mm 기관포, 재블린 ATGM. 수상 이동 가능."
+    },
+    "Mobile Gun System of the U.S. Army \\nProduced by General Dynamics Land Systems \\nFast 8×8 Vehicle \\nCan attack Ground only \\nFast Auto-loader \\nM68A1E4 105mm. main gun \\nCaterpillar C7 Diesel engine \\nCan not swim": {
+      "en": "Mobile Gun System of the U.S. Army \nProduced by General Dynamics Land Systems \nFast 8×8 Vehicle \nCan attack Ground only \nFast Auto-loader \nM68A1E4 105mm. main gun \nCaterpillar C7 Diesel engine \nCan not swim",
+      "zh": "美国陆军机动火炮系统，通用动力地面系统公司生产；快速8×8车辆、快速自动装弹机、M68A1E4 105毫米主炮、卡特彼勒C7柴油机；只能攻击地面，不能游泳。",
+      "ko": "제너럴 다이내믹스 랜드 시스템즈의 미 육군 기동포 체계. 빠른 8×8 차량, 고속 자동장전기, M68A1E4 105mm 주포, 캐터필러 C7 디젤엔진. 지상 공격만 가능하며 수영 불가."
+    },
+    "MBT": {
+      "en": "MBT",
+      "zh": "主战坦克。",
+      "ko": "주력전차."
+    },
+    "Also khown as \"M1A2SEPv3\" \\nM256A1 120mm. main gun \\nM153 CROWS II with .50Cal HMG \\nCROWS II can attack both Ground and Air \\nUsing M829A4 APFSDS-T Ammunition \\nUpgraded CITV and Advanced Fire Control System \\nNext Generation Armor Package (NGAP) \\nHoneywell AGT-1500C Turbine engine": {
+      "en": "Also khown as \"M1A2SEPv3\" \nM256A1 120mm. main gun \nM153 CROWS II with .50Cal HMG \nCROWS II can attack both Ground and Air \nUsing M829A4 APFSDS-T Ammunition \nUpgraded CITV and Advanced Fire Control System \nNext Generation Armor Package (NGAP) \nHoneywell AGT-1500C Turbine engine",
+      "zh": "又称M1A2SEPv3；M256A1 120毫米主炮、配.50口径重机枪的M153 CROWS II（可对地及对空）；M829A4尾翼稳定脱壳曳光穿甲弹、升级CITV及先进火控、下一代装甲包NGAP、霍尼韦尔AGT-1500C涡轮发动机。",
+      "ko": "M1A2SEPv3라고도 한다. M256A1 120mm 주포, 지상·공중 공격이 가능한 .50구경 중기관총 장착 M153 CROWS II, M829A4 APFSDS-T, 개량 CITV와 첨단 사격통제, 차세대 장갑 패키지 NGAP, 허니웰 AGT-1500C 터빈엔진."
+    },
+    "-Troop/Vehicle carrier \\n -Hover,With Troops": {
+      "en": "-Troop/Vehicle carrier \n -Hover,With Troops",
+      "zh": "载有部队的运兵/运车气垫艇。",
+      "ko": "병력이 탑승한 병력·차량 수송용 호버크래프트."
+    },
+    "Ticonderoga-class Guided-missile Cruiser \\nAN/SPY-1B Multi-function radar \\nAN/SPS-49 Air-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-67B Standard ER (SM-2ER) \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2": {
+      "en": "Ticonderoga-class Guided-missile Cruiser \nAN/SPY-1B Multi-function radar \nAN/SPS-49 Air-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-67B Standard ER (SM-2ER) \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2",
+      "zh": "提康德罗加级导弹巡洋舰；AN/SPY-1B多功能、AN/SPS-49空中搜索、AN/SPG-62火控雷达；2门5英寸/54 Mk45舰炮、RIM-67B（SM-2ER）、RIM-174A（SM-6）、2套Mk15密集阵。",
+      "ko": "타이콘데로가급 유도탄 순양함. AN/SPY-1B 다기능, AN/SPS-49 대공탐색, AN/SPG-62 사격통제 레이더. 5인치/54 Mk45 함포 2문, RIM-67B(SM-2ER), RIM-174A(SM-6), Mk15 팰렁스 2기."
+    },
+    "USS INDEPENDENCE/Medium  Frigate \\nAN/SPY-1A Multi-function radar \\nAN/SPS-73 Surface-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-116 Rolling Airframe Missile \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2": {
+      "en": "USS INDEPENDENCE/Medium  Frigate \nAN/SPY-1A Multi-function radar \nAN/SPS-73 Surface-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-116 Rolling Airframe Missile \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2",
+      "zh": "独立号，中型护卫舰；AN/SPY-1A多功能、AN/SPS-73水面搜索、AN/SPG-62火控雷达；2门5英寸/54 Mk45舰炮、RIM-116、RIM-174A（SM-6）、2套Mk15密集阵。",
+      "ko": "USS 인디펜던스, 중형 호위함. AN/SPY-1A 다기능, AN/SPS-73 수상탐색, AN/SPG-62 사격통제 레이더. 5인치/54 Mk45 함포 2문, RIM-116, RIM-174A(SM-6), Mk15 팰렁스 2기."
+    },
+    "Nimitz-class Nuclear-powered Super carrier \\nAN/SPS-48E 3D Air-search radar \\nAN/SPS-49(V)5 2D Air-search radar \\nRIM-162 Evolved Sea Sparrow \\nRIM-116 Rolling Airframe Missile \\nMk-15 Phalanx CIWS ×3 \\nCan built F-35C & Super hornet \\nAlso product 100 income \\nGone nuclear on death": {
+      "en": "Nimitz-class Nuclear-powered Super carrier \nAN/SPS-48E 3D Air-search radar \nAN/SPS-49(V)5 2D Air-search radar \nRIM-162 Evolved Sea Sparrow \nRIM-116 Rolling Airframe Missile \nMk-15 Phalanx CIWS ×3 \nCan built F-35C & Super hornet \nAlso product 100 income \nGone nuclear on death",
+      "zh": "尼米兹级核动力超级航母；AN/SPS-48E三维空中搜索和AN/SPS-49(V)5二维空中搜索雷达；RIM-162改进型海麻雀、RIM-116、3套Mk15密集阵；可生产F-35C和超级大黄蜂，每次产生100收入，死亡时核爆。",
+      "ko": "니미츠급 핵추진 슈퍼항모. AN/SPS-48E 3차원 및 AN/SPS-49(V)5 2차원 대공탐색 레이더. RIM-162 ESSM, RIM-116, Mk15 팰렁스 3기. F-35C와 슈퍼호넷 생산, 수입 100 생성, 파괴 시 핵폭발."
+    },
+    "Arleigh Burke-class Guided-missile Destroyer (Flight IIA) \\nAN/SPY-1D 3D Air-search radar \\nAN/SPS-67(V)2 Surface-search radar \\nAN/SPG-62 Fire-control radar \\nRIM-66M Standard MR (SM-2MR) \\nRGM-109B Tomahawk Anti-Ship Missile \\nHave no Phalanx CIWS onboard \\n5\"/62 caliber Mark 45 Mod 4 gun ×1": {
+      "en": "Arleigh Burke-class Guided-missile Destroyer (Flight IIA) \nAN/SPY-1D 3D Air-search radar \nAN/SPS-67(V)2 Surface-search radar \nAN/SPG-62 Fire-control radar \nRIM-66M Standard MR (SM-2MR) \nRGM-109B Tomahawk Anti-Ship Missile \nHave no Phalanx CIWS onboard \n5\"/62 caliber Mark 45 Mod 4 gun ×1",
+      "zh": "阿利·伯克级IIA型导弹驱逐舰；AN/SPY-1D三维空中搜索、AN/SPS-67(V)2水面搜索、AN/SPG-62火控雷达；RIM-66M（SM-2MR）、RGM-109B战斧反舰导弹；未配密集阵；1门5英寸/62 Mk45 Mod4舰炮。",
+      "ko": "알레이 버크급 플라이트 IIA 구축함. AN/SPY-1D 3차원 대공탐색, AN/SPS-67(V)2 수상탐색, AN/SPG-62 사격통제 레이더. RIM-66M(SM-2MR), RGM-109B 토마호크 대함미사일. 팰렁스 없음. 5인치/62 Mk45 Mod4 함포 1문."
+    },
+    "-n-Vunerable in Long Range Combat\\n-Powerful Air Strike\\n-Slow": {
+      "en": "-n-Vunerable in Long Range Combat\n-Powerful Air Strike\n-Slow",
+      "zh": "远程交战中较脆弱；空袭威力强；速度慢。",
+      "ko": "장거리 교전에 취약하지만 공습이 강력하다. 느림."
+    },
+    "..... you can use it as an anti air": {
+      "en": "..... you can use it as an anti air",
+      "zh": "……可将它用作防空舰。",
+      "ko": "……대공함으로 사용할 수 있다."
+    },
+    "\"": {
+      "en": "\"",
+      "zh": "“",
+      "ko": "“"
+    },
+    "Better planes": {
+      "en": "Better planes",
+      "zh": "生产更好的飞机。",
+      "ko": "더 좋은 항공기를 생산한다."
+    },
+    "Can build United States & European warships": {
+      "en": "Can build United States & European warships",
+      "zh": "可建造美国和欧洲军舰。",
+      "ko": "미국·유럽 군함을 건조할 수 있다."
+    },
+    "curret \\nCurrently in service with as the Off-Shore Partol \\nTRS-3D Multi-function C-band radar \\nRBS-15 Mk. III Anti-Ship/Land-Attack missile\\nOTO Melara 75mm. naval gun ×1": {
+      "en": "curret \nCurrently in service with as the Off-Shore Partol \nTRS-3D Multi-function C-band radar \nRBS-15 Mk. III Anti-Ship/Land-Attack missile\nOTO Melara 75mm. naval gun ×1",
+      "zh": "近海巡逻轻型舰；TRS-3D C波段多功能雷达、RBS-15 MkIII反舰/对陆导弹和1门奥托梅莱拉75毫米舰炮。",
+      "ko": "원해순찰 경함정. TRS-3D C밴드 다기능 레이더, RBS-15 MkIII 대함·대지 미사일, 오토멜라라 75mm 함포 1문."
+    },
+    "Bye to your game": {
+      "en": "Bye to your game",
+      "zh": "和你的游戏说再见。",
+      "ko": "게임과 작별하라."
+    },
+    "Her name is Maria kujou and if you destroy her,your game will crash!!!!! remember only use this in sandbox mode!!!!": {
+      "en": "Her name is Maria kujou and if you destroy her,your game will crash!!!!! remember only use this in sandbox mode!!!!",
+      "zh": "她名叫九条玛利亚，摧毁她会让游戏崩溃！记住只能在沙盒模式使用！",
+      "ko": "이름은 마리아 쿠죠이며 파괴하면 게임이 충돌한다! 샌드박스 모드에서만 사용하라!"
+    },
+    "The Steregushchy class frigate, in the Russian Navy is a modified version of the Steregushchy I, with an updated  Combat System and electric propulsion system.\\nAN/SPY-1A Multi-function radar \\nAN/SPS-73 Surface-search radar \\nAN/SPG-62 Fire-control radar \\n5\"/54 caliber Mark 45 gun ×2 \\nRIM-116 Rolling Airframe Missile \\nRIM-174A Standard (SM-6) \\nMark 15 Phalanx CIWS ×2": {
+      "en": "The Steregushchy class frigate, in the Russian Navy is a modified version of the Steregushchy I, with an updated  Combat System and electric propulsion system.\nAN/SPY-1A Multi-function radar \nAN/SPS-73 Surface-search radar \nAN/SPG-62 Fire-control radar \n5\"/54 caliber Mark 45 gun ×2 \nRIM-116 Rolling Airframe Missile \nRIM-174A Standard (SM-6) \nMark 15 Phalanx CIWS ×2",
+      "zh": "守护级俄罗斯护卫舰，原文称改进自守护I级，采用升级作战系统和电力推进。AN/SPY-1A、AN/SPS-73、AN/SPG-62雷达；2门5英寸/54 Mk45舰炮、RIM-116、RIM-174A（SM-6）、2套Mk15密集阵。",
+      "ko": "스테레구시치급 러시아 호위함. 원문은 스테레구시치 I급의 개량형으로 개선된 전투체계와 전기추진을 사용한다고 설명한다. AN/SPY-1A, AN/SPS-73, AN/SPG-62 레이더, 5인치/54 Mk45 함포 2문, RIM-116, RIM-174A(SM-6), Mk15 팰렁스 2기."
+    },
+    ". \\nDeveloped from Former Z-7 helicopter \\nVery good for Anti-Submarine Warfare \\nMk-46 Torpedoes \\nSm-9 rocket pods ×1 \\nis loaded with Guided Torpedo \\n(High Explosive)": {
+      "en": ". \nDeveloped from Former Z-7 helicopter \nVery good for Anti-Submarine Warfare \nMk-46 Torpedoes \nSm-9 rocket pods ×1 \nis loaded with Guided Torpedo \n(High Explosive)",
+      "zh": "源自早期直-7；擅长反潜；Mk46鱼雷、1套Sm-9火箭巢，装填高爆制导鱼雷。",
+      "ko": "기존 Z-7 기반. 대잠전에 강하며 Mk46 어뢰와 고폭 유도어뢰를 사용하는 Sm-9 로켓포드 1기 장비."
+    },
+    "-Anti-Ships system": {
+      "en": "-Anti-Ships system",
+      "zh": "反舰系统。",
+      "ko": "대함 체계."
+    },
+    "-Anti-ship system": {
+      "en": "-Anti-ship system",
+      "zh": "反舰系统。",
+      "ko": "대함 체계."
+    },
+    "-Light tank \\n -It moves faster than infantry \\n -Armed with 100mm cannon and cal50 machine gun.": {
+      "en": "-Light tank \n -It moves faster than infantry \n -Armed with 100mm cannon and cal50 machine gun.",
+      "zh": "轻型坦克；比步兵移动快；100毫米炮和.50口径机枪。",
+      "ko": "경전차. 보병보다 빠르며 100mm 포와 .50구경 기관총 장비."
+    },
+    "-Armored troop carrier \\n -It moves faster than infantry \\n -Armed with 100mm cannon and cal50 gun.": {
+      "en": "-Armored troop carrier \n -It moves faster than infantry \n -Armed with 100mm cannon and cal50 gun.",
+      "zh": "装甲运兵车；比步兵移动快；100毫米炮和.50口径机枪。",
+      "ko": "장갑수송차. 보병보다 빠르며 100mm 포와 .50구경 기관총 장비."
+    },
+    "-Generates credits at a insane rate\\n -Requires constant cooling \\n-Goes nuclear on death": {
+      "en": "-Generates credits at a insane rate\n -Requires constant cooling \n-Goes nuclear on death",
+      "zh": "以惊人速度产生资金；必须持续冷却；被摧毁时核爆。",
+      "ko": "막대한 자금 생산. 지속적인 냉각 필요. 파괴 시 핵폭발."
+    },
+    "-Generates credits at a insane rate\\n -Requires constant cooling\\n-Goes nuclear on death": {
+      "en": "-Generates credits at a insane rate\n -Requires constant cooling\n-Goes nuclear on death",
+      "zh": "以惊人速度产生资金；必须持续冷却；被摧毁时核爆。",
+      "ko": "막대한 자금 생산. 지속적인 냉각 필요. 파괴 시 핵폭발."
+    },
+    "Armored troop carrier \\n -It moves faster than infantry \\n -Armed with 25mm cannon a": {
+      "en": "Armored troop carrier \n -It moves faster than infantry \n -Armed with 25mm cannon a",
+      "zh": "装甲运兵车；比步兵移动快；装备25毫米机炮（原文到此中断）。",
+      "ko": "장갑수송차. 보병보다 빠르며 25mm 기관포 장비(원문은 여기서 끝남)."
+    },
+    "- Radiation cloud, disappears at 0 energy": {
+      "en": "- Radiation cloud, disappears at 0 energy",
+      "zh": "辐射云，能量耗尽时消失。",
+      "ko": "에너지가 0이 되면 사라지는 방사능 구름."
+    },
+    "- Radiactive dust, disappears at 0 energy,": {
+      "en": "- Radiactive dust, disappears at 0 energy,",
+      "zh": "放射性尘埃，能量耗尽时消失。",
+      "ko": "에너지가 0이 되면 사라지는 방사성 먼지."
+    },
+    "-Can Attack Ground only /n- Land": {
+      "en": "-Can Attack Ground only /n- Land",
+      "zh": "只能攻击地面目标；陆地单位。",
+      "ko": "지상 목표만 공격하는 육상 유닛."
+    },
+    "+8,+25 oil": {
+      "en": "+8,+25 oil",
+      "zh": "+8，+25石油。",
+      "ko": "+8, +25 석유."
+    },
+    "+8,+25 steel": {
+      "en": "+8,+25 steel",
+      "zh": "+8，+25钢铁。",
+      "ko": "+8, +25 강철."
+    },
+    "Defensive Missle Site": {
+      "en": "Defensive Missle Site",
+      "zh": "防御导弹阵地。",
+      "ko": "방어용 미사일 진지."
+    },
+    "Select the factions that you will like to play with": {
+      "en": "Select the factions that you will like to play with",
+      "zh": "选择你想使用的阵营。",
+      "ko": "플레이할 진영을 선택한다."
+    },
+    "+8": {
+      "en": "+8",
+      "zh": "+8。",
+      "ko": "+8."
+    },
+    "Shsss": {
+      "en": "Shsss",
+      "zh": "嘘。",
+      "ko": "쉿."
+    },
+    "\\n medium speed \\n Advanced anti air guns \\n Medium ground area damage \\n Makes a medium mushroom cloud explosion on death": {
+      "en": "medium speed \n Advanced anti air guns \n Medium ground area damage \n Makes a medium mushroom cloud explosion on death",
+      "zh": "中等速度；先进防空炮；中等地面范围伤害；死亡时产生中型蘑菇云爆炸。",
+      "ko": "중간 속도, 첨단 대공포, 중간 규모 지상 범위 피해. 파괴 시 중형 버섯구름 폭발."
+    },
+    "Generates 90 Cridits": {
+      "en": "Generates 90 Cridits",
+      "zh": "产生90资金。",
+      "ko": "자금 90 생성."
+    },
+    "-Defense wall": {
+      "en": "-Defense wall",
+      "zh": "防御墙。",
+      "ko": "방벽."
+    },
+    "A crane is a machine used to move materials both vertically and horizontally, utilizing a system of a boom, hoist, wire ropes or chains, and sheaves for lifting and relocating heavy objects within the swing of its boom. The device uses one or more simple machines, such as the lever and pulley, to create mechanical advantage to do its work.[1] Cranes are commonly employed in transportation for the loading and unloading of freight, in construction for the movement of materials, and in manufacturing for the assembling of heavy equipment": {
+      "en": "A crane is a machine used to move materials both vertically and horizontally, utilizing a system of a boom, hoist, wire ropes or chains, and sheaves for lifting and relocating heavy objects within the swing of its boom. The device uses one or more simple machines, such as the lever and pulley, to create mechanical advantage to do its work.[1] Cranes are commonly employed in transportation for the loading and unloading of freight, in construction for the movement of materials, and in manufacturing for the assembling of heavy equipment",
+      "zh": "起重机利用起重臂、卷扬机、钢丝绳或链条及滑轮组，垂直或水平移动材料，在吊臂回转范围内吊装和转移重物。通过杠杆和滑轮等简单机械获得机械增益，常用于交通运输中的装卸、建筑工地的材料搬运，以及制造业中的重型设备装配。",
+      "ko": "크레인은 붐, 호이스트, 와이어로프나 체인, 도르래를 이용해 자재를 수직·수평으로 이동시키며 붐의 회전 범위에서 무거운 물체를 들어 옮긴다. 지레와 도르래 등 단순 기계의 기계적 이득을 활용하며 운송업의 화물 하역, 건설 자재 이동, 제조업의 중장비 조립에 널리 쓰인다."
+    },
+    "heavy construction equipment primarily consisting of a boom, dipper, bucket, and cab on a rotating platform known as the \"house\". The modern excavator's house sits atop an undercarriage with tracks or wheels, being an evolution of the steam shovel.": {
+      "en": "heavy construction equipment primarily consisting of a boom, dipper, bucket, and cab on a rotating platform known as the \"house\". The modern excavator's house sits atop an undercarriage with tracks or wheels, being an evolution of the steam shovel.",
+      "zh": "重型工程机械，主要由动臂、斗杆、铲斗和位于旋转平台（上车）上的驾驶室组成。现代挖掘机的上车安装于履带或轮式底盘之上，由蒸汽铲发展而来。",
+      "ko": "붐, 암, 버킷, 그리고 하우스라 부르는 회전 플랫폼의 운전실로 구성된 중장비다. 현대 굴착기는 증기삽에서 발전했으며 궤도식 또는 차륜식 하부 구조 위에 상부 회전체가 놓인다."
+    }
+  },
+  "actions": {
+    "AWACS": [
+      "AWACS",
+      "空中预警机",
+      "공중조기경보기"
+    ],
+    "Attack helicopter": [
+      "Attack helicopter",
+      "攻击直升机",
+      "공격헬기"
+    ],
+    "Build Jet Fighter": [
+      "Build Jet Fighter",
+      "建造喷气战斗机",
+      "제트 전투기 제작"
+    ],
+    "Build Jet Stealth Fighter": [
+      "Build Jet Stealth Fighter",
+      "建造隐身喷气战斗机",
+      "스텔스 제트 전투기 제작"
+    ],
+    "Build nukes": [
+      "Build nukes",
+      "制造核弹",
+      "핵탄두 제작"
+    ],
+    "But steel": [
+      "But steel",
+      "购买钢铁",
+      "강철 구매"
+    ],
+    "Buy oil": [
+      "Buy oil",
+      "购买石油",
+      "석유 구매"
+    ],
+    "Clear Active Waypoint": [
+      "Clear Active Waypoint",
+      "清除当前航点",
+      "활성 경유지 해제"
+    ],
+    "Cooling of a nuclear reactor": [
+      "Cooling of a nuclear reactor",
+      "冷却核反应堆",
+      "원자로 냉각"
+    ],
+    "Deploy": [
+      "Deploy",
+      "部署",
+      "전개"
+    ],
+    "Displace": [
+      "Displace",
+      "收起",
+      "철수"
+    ],
+    "Dive": [
+      "Dive",
+      "下潜",
+      "잠항"
+    ],
+    "Drones": [
+      "Drones",
+      "无人机",
+      "무인기"
+    ],
+    "Firing JL-2": [
+      "Firing JL-2",
+      "发射巨浪-2",
+      "JL-2 발사"
+    ],
+    "Firing RSM-56": [
+      "Firing RSM-56",
+      "发射RSM-56",
+      "RSM-56 발사"
+    ],
+    "Firing RSM-56 Bulava": [
+      "Firing RSM-56 Bulava",
+      "发射RSM-56布拉瓦",
+      "RSM-56 불라바 발사"
+    ],
+    "Firing Trident-III": [
+      "Firing Trident-III",
+      "发射三叉戟III",
+      "트라이던트 III 발사"
+    ],
+    "HQ-19 Long range anti air": [
+      "HQ-19 Long range anti air",
+      "红旗-19远程防空",
+      "HQ-19 장거리 방공"
+    ],
+    "HQ-9 Air defense system": [
+      "HQ-9 Air defense system",
+      "红旗-9防空系统",
+      "HQ-9 방공 체계"
+    ],
+    "Hovercraft": [
+      "Hovercraft",
+      "气垫艇",
+      "호버크래프트"
+    ],
+    "Mobile Air defense system": [
+      "Mobile Air defense system",
+      "机动防空系统",
+      "기동 방공 체계"
+    ],
+    "Move": [
+      "Move",
+      "移动",
+      "이동"
+    ],
+    "move": [
+      "move",
+      "移动",
+      "이동"
+    ],
+    "Patriot Air defense system": [
+      "Patriot Air defense system",
+      "爱国者防空系统",
+      "패트리엇 방공 체계"
+    ],
+    "SPAA": [
+      "SPAA",
+      "自行高炮",
+      "자주대공포"
+    ],
+    "Sell Oil": [
+      "Sell Oil",
+      "出售石油",
+      "석유 판매"
+    ],
+    "Sell Steel": [
+      "Sell Steel",
+      "出售钢铁",
+      "강철 판매"
+    ],
+    "Spyder Air defence system": [
+      "Spyder Air defence system",
+      "蜘蛛防空系统",
+      "스파이더 방공 체계"
+    ],
+    "Stealth Strategical Drone": [
+      "Stealth Strategical Drone",
+      "隐身战略无人机",
+      "스텔스 전략 무인기"
+    ],
+    "Surface": [
+      "Surface",
+      "上浮",
+      "부상"
+    ],
+    "TYPE 03 Long range anti air": [
+      "TYPE 03 Long range anti air",
+      "03式远程防空",
+      "03식 장거리 방공"
+    ],
+    "Thaad Long range anti air": [
+      "Thaad Long range anti air",
+      "萨德远程防空",
+      "사드 장거리 방공"
+    ],
+    "Type-99 Artillery": [
+      "Type-99 Artillery",
+      "99式火炮",
+      "99식 자주포"
+    ],
+    "Type88 Anti-Ship": [
+      "Type88 Anti-Ship",
+      "88式反舰导弹",
+      "88식 대함미사일"
+    ],
+    "Undeploy": [
+      "Undeploy",
+      "撤收",
+      "전개 해제"
+    ],
+    "Upgrade  to Steel extractor": [
+      "Upgrade  to Steel extractor",
+      "升级为钢铁采集器",
+      "강철 추출기로 개량"
+    ],
+    "Upgrade to Oil extractor": [
+      "Upgrade to Oil extractor",
+      "升级为石油采集器",
+      "석유 추출기로 개량"
+    ],
+    "i:gui.actions.launchNuke": [
+      "i:gui.actions.launchNuke",
+      "发射核弹",
+      "핵미사일 발사"
+    ],
+    "includedAmmo": [
+      "includedAmmo",
+      "已含弹药",
+      "포함 탄약"
+    ],
+    "needReload": [
+      "needReload",
+      "需要装填",
+      "재장전 필요"
+    ],
+    "triggerParticles": [
+      "triggerParticles",
+      "粒子效果",
+      "입자 효과"
+    ],
+    "unloadAuto": [
+      "unloadAuto",
+      "自动卸载",
+      "자동 하차"
+    ],
+    "M1A abrams": [
+      "M1A abrams",
+      "M1A艾布拉姆斯",
+      "M1A 에이브럼스"
+    ],
+    "M1A2 Abrams": [
+      "M1A2 Abrams",
+      "M1A2艾布拉姆斯",
+      "M1A2 에이브럼스"
+    ],
+    "m1128 Striker": [
+      "m1128 Striker",
+      "M1128斯特赖克",
+      "M1128 스트라이커"
+    ],
+    "M-109 Paladin": [
+      "M-109 Paladin",
+      "M109帕拉丁",
+      "M109 팔라딘"
+    ],
+    "LCAC JSDF": [
+      "LCAC JSDF",
+      "日本自卫队LCAC",
+      "자위대 LCAC"
+    ],
+    "M113 AIFV": [
+      "M113 AIFV",
+      "M113装甲步兵战车",
+      "M113 장갑보병전투차"
+    ],
+    "Type-728 Class Landing Craft j": [
+      "Type-728 Class Landing Craft j",
+      "728型气垫登陆艇",
+      "728형 호버크래프트 상륙정"
+    ],
+    "ZBL09": [
+      "ZBL09",
+      "ZBL09",
+      "ZBL09"
+    ],
+    "ZBL-19": [
+      "ZBL-19",
+      "ZBL-19装甲车",
+      "ZBL-19 장갑차"
+    ],
+    "ZTZ99": [
+      "ZTZ-99",
+      "99式",
+      "99식"
+    ],
+    "ZBD-04": [
+      "ZBD-04",
+      "ZBD-04",
+      "ZBD-04"
+    ],
+    "ZBD-05": [
+      "ZBD-05",
+      "ZBD-05",
+      "ZBD-05"
+    ],
+    "PHL-03": [
+      "PHL-03",
+      "PHL-03",
+      "PHL-03"
+    ],
+    "DF10": [
+      "DF10",
+      "DF10",
+      "DF10"
+    ],
+    "PHZ-05": [
+      "PHZ-05",
+      "PHZ-05",
+      "PHZ-05"
+    ],
+    "PHL-81": [
+      "PHL-81",
+      "PHL-81",
+      "PHL-81"
+    ],
+    "Reload 28 rounds": [
+      "Reload 28 rounds",
+      "装填28 rounds",
+      "28 rounds 재장전"
+    ],
+    "Stored ammo:": [
+      "Stored ammo:",
+      "库存ammo：",
+      "보유 ammo:"
+    ],
+    "Reload SM-6": [
+      "Reload SM-6",
+      "装填SM-6",
+      "SM-6 재장전"
+    ],
+    "Stored SM-6:": [
+      "Stored SM-6:",
+      "库存SM-6：",
+      "보유 SM-6:"
+    ],
+    "Reload SM-2ER": [
+      "Reload SM-2ER",
+      "装填SM-2ER",
+      "SM-2ER 재장전"
+    ],
+    "Stored SM-2ER:": [
+      "Stored SM-2ER:",
+      "库存SM-2ER：",
+      "보유 SM-2ER:"
+    ],
+    "Reload RBS-15": [
+      "Reload RBS-15",
+      "装填RBS-15",
+      "RBS-15 재장전"
+    ],
+    "Stored RBS-15:": [
+      "Stored RBS-15:",
+      "库存RBS-15：",
+      "보유 RBS-15:"
+    ],
+    "Type 89": [
+      "Type 89",
+      "89式",
+      "89식"
+    ],
+    "Type 16": [
+      "Type 16",
+      "16式",
+      "16식"
+    ],
+    "TYPE-74E": [
+      "Type 74E",
+      "74E式",
+      "74E식"
+    ],
+    "TYPE90": [
+      "Type 90",
+      "90式",
+      "90식"
+    ],
+    "Type-10": [
+      "Type 10",
+      "10式",
+      "10식"
+    ],
+    "m270mlrsJ": [
+      "m270mlrsJ",
+      "m270mlrsJ",
+      "m270mlrsJ"
+    ],
+    "Type 11 Sam-tan Kai II": [
+      "Type 11 Sam-tan Kai II",
+      "11式短SAM改II",
+      "11식 단SAM 개량 II"
+    ],
+    "FV101 Scorpion": [
+      "FV101 Scorpion",
+      "FV101蝎式",
+      "FV101 스콜피온"
+    ],
+    "Sabra": [
+      "Sabrah",
+      "萨布拉",
+      "사브라"
+    ],
+    "Bramos": [
+      "Bramos",
+      "Bramos",
+      "Bramos"
+    ],
+    "Atmoss 2000": [
+      "ATMOS 2000",
+      "ATMOS 2000",
+      "ATMOS 2000"
+    ],
+    "BMP2": [
+      "BMP-2M Berezhok",
+      "BMP-2M别列若克",
+      "BMP-2M 베레조크"
+    ],
+    "T-72": [
+      "T-72",
+      "T-72",
+      "T-72"
+    ],
+    "T-80": [
+      "T-80",
+      "T-80",
+      "T-80"
+    ],
+    "t-90": [
+      "T-90",
+      "T-90",
+      "T-90"
+    ],
+    "T-90M": [
+      "T-90M",
+      "T-90M",
+      "T-90M"
+    ],
+    "S-300": [
+      "S-300",
+      "S-300",
+      "S-300"
+    ],
+    "Bm30mlrs": [
+      "Bm30mlrs",
+      "Bm30mlrs",
+      "Bm30mlrs"
+    ],
+    "pantsir": [
+      "pantsir",
+      "pantsir",
+      "pantsir"
+    ],
+    "S-400": [
+      "S-400",
+      "S-400",
+      "S-400"
+    ],
+    "Bastion": [
+      "Bastion",
+      "Bastion",
+      "Bastion"
+    ],
+    "MSta": [
+      "MSta",
+      "MSta",
+      "MSta"
+    ],
+    "2s135": [
+      "2S35 Koalitsiya",
+      "2S35联盟",
+      "2S35 코알리치야"
+    ],
+    "Reload 9M317M": [
+      "Reload 9M317M",
+      "装填9M317M",
+      "9M317M 재장전"
+    ],
+    "Stored 9M317M:": [
+      "Stored 9M317M:",
+      "库存9M317M：",
+      "보유 9M317M:"
+    ],
+    "Reload P-700": [
+      "Reload P-700",
+      "装填P-700",
+      "P-700 재장전"
+    ],
+    "Stored P-700:": [
+      "Stored P-700:",
+      "库存P-700：",
+      "보유 P-700:"
+    ],
+    "Lav-25": [
+      "Lav-25",
+      "Lav-25",
+      "Lav-25"
+    ],
+    "Avenger": [
+      "Avenger",
+      "Avenger",
+      "Avenger"
+    ],
+    "Wind": [
+      "Wind",
+      "Wind",
+      "Wind"
+    ],
+    "Hunting Light": [
+      "Hunting Light",
+      "Hunting Light",
+      "Hunting Light"
+    ],
+    "Call Nearby Tripods": [
+      "Call Nearby Tripods",
+      "Call Nearby Tripods",
+      "Call Nearby Tripods"
+    ],
+    "Off light": [
+      "Off light",
+      "Off light",
+      "Off light"
+    ],
+    "U,S": [
+      "U,S",
+      "U,S",
+      "U,S"
+    ],
+    "JAPAN": [
+      "JAPAN",
+      "JAPAN",
+      "JAPAN"
+    ],
+    "RUSSIA": [
+      "RUSSIA",
+      "RUSSIA",
+      "RUSSIA"
+    ],
+    "CHINA": [
+      "CHINA",
+      "CHINA",
+      "CHINA"
+    ],
+    "REPUBLIC OF PHILIPPINES": [
+      "REPUBLIC OF PHILIPPINES (AFP)",
+      "菲律宾共和国（武装部队）",
+      "필리핀 공화국 (AFP)"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+Local review copy — upstream terms unresolved
+
+The original Naval Warfare content remains the property of its respective
+rights holders. The supplied source package contains no identified public
+license or redistribution permission. No additional license to that content
+is granted by this port. This applies to its images, audio, music, prose and
+other original material.
+
+The manifest's LicenseRef-Naval-Warfare-Upstream identifies this notice; it
+does not assert that an upstream license has been found. Public registry
+submission, redistribution and commercial use require the applicable rights
+holders' permission or other established legal authorization. No such grant
+is inferred from the registry's legacy default license or from possession of
+the source files.
+
+This directory was prepared for the requesting user's local review and
+testing. Its source provenance and outstanding attribution are documented in
+CREDITS.md. The repository's tooling license does not relicense this mod's
+original assets.

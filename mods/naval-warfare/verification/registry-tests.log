@@ -1,0 +1,12 @@
+✔ the generator publishes summaries, matching details and a compatible legacy index together (317.982208ms)
+✔ an unrelated extension carries its private resource bytes in the ordinary offline pack (5.331875ms)
+✔ a packed Cyberpunk mod includes its maps, music, sheets and sounds for offline use (76.075667ms)
+✔ large capacity exports a full catalog and validates the encoded asset budget (163.516ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 355.19875

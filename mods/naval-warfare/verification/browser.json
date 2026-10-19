@@ -1,0 +1,470 @@
+{
+  "packVersion": "0.1.0",
+  "origin": "http://127.0.0.1:5209",
+  "errors": [],
+  "screenshots": [
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/fleet.jpg",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/construction.jpg",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/carrier-operations.jpg",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/naval-engagement.jpg",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/harbor-base.jpg"
+  ],
+  "import": {
+    "enabled": true,
+    "defs": 285,
+    "sprites": 643,
+    "sounds": 25,
+    "music": 13,
+    "missing": []
+  },
+  "audio": [
+    {
+      "file": "sounds/naval-warfare-cb241246bbbb87.mp3",
+      "duration": 0.9375,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-c6dc5f0c771ddf.mp3",
+      "duration": 8.700854166666666,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-b22929121e3dd9.mp3",
+      "duration": 4.4582291666666665,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-397c7a972aac80.mp3",
+      "duration": 1.7586666666666666,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-727d69c28333ad.mp3",
+      "duration": 1.1290208333333334,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-2a090706c3aac7.mp3",
+      "duration": 2.6,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-a5198055746595.mp3",
+      "duration": 6.100645833333333,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-32ac452d5ac0f0.mp3",
+      "duration": 1.4809791666666667,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-56fc21200e33fd.mp3",
+      "duration": 1.5150833333333333,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-d750e45aca0f22.mp3",
+      "duration": 0.9283958333333333,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-c5f4daf2a18666.mp3",
+      "duration": 1.9807291666666667,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-e9633d25b68b17.mp3",
+      "duration": 4.314291666666667,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-27bacef5b92d25.mp3",
+      "duration": 0.7488333333333334,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-64a705d6b23f99.mp3",
+      "duration": 2.3219791666666665,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-da91b29d48c888.mp3",
+      "duration": 3.7926458333333333,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-636c92443c5e4e.mp3",
+      "duration": 1.3421458333333334,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-dc05f592e6383b.mp3",
+      "duration": 1.3421458333333334,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-a3c6493fb53609.mp3",
+      "duration": 4.062270833333334,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-e98c7af11c8a9f.mp3",
+      "duration": 5.572770833333333,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-3409e178386db2.mp3",
+      "duration": 1.7123958333333333,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-04e44375a53018.mp3",
+      "duration": 5.852479166666667,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-50f13571c8a2e8.mp3",
+      "duration": 5.852479166666667,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-96e4fda5a08c0a.mp3",
+      "duration": 3.6320833333333336,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-52ebf3ea499fe5.mp3",
+      "duration": 8.102104166666667,
+      "channels": 1
+    },
+    {
+      "file": "sounds/naval-warfare-7666b2e2d588f1.mp3",
+      "duration": 7.520145833333333,
+      "channels": 1
+    },
+    {
+      "file": "music/naval-warfare-track-1.mp3",
+      "duration": 374.3985416666667,
+      "channels": 2
+    }
+  ],
+  "runtime": {
+    "missing": [],
+    "modules": [
+      "naval-warfare.systems-v1"
+    ],
+    "renderer": "NavalWarfareRenderer"
+  },
+  "fleet": {
+    "ids": [
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273
+    ],
+    "units": [
+      {
+        "id": 267,
+        "definition": "naval-warfare-cvn-74",
+        "cargo": 5
+      },
+      {
+        "id": 268,
+        "definition": "naval-warfare-ddg-105"
+      },
+      {
+        "id": 269,
+        "definition": "naval-warfare-cg-72"
+      },
+      {
+        "id": 270,
+        "definition": "naval-warfare-admiral-nakhimov"
+      },
+      {
+        "id": 271,
+        "definition": "naval-warfare-f-35c"
+      },
+      {
+        "id": 272,
+        "definition": "naval-warfare-f-18"
+      },
+      {
+        "id": 273,
+        "definition": "naval-warfare-borei"
+      }
+    ],
+    "pictures": [
+      {
+        "id": 267,
+        "body": true,
+        "mounts": 5
+      },
+      {
+        "id": 268,
+        "body": true,
+        "mounts": 4
+      },
+      {
+        "id": 269,
+        "body": true,
+        "mounts": 6
+      },
+      {
+        "id": 270,
+        "body": true,
+        "mounts": 5
+      },
+      {
+        "id": 271,
+        "body": true,
+        "mounts": 0
+      },
+      {
+        "id": 272,
+        "body": true,
+        "mounts": 0
+      },
+      {
+        "id": 273,
+        "body": true,
+        "mounts": 0
+      }
+    ]
+  },
+  "carrierAction": {
+    "ok": true,
+    "before": 5,
+    "after": 0,
+    "actions": [
+      [
+        "Build Jet Fighter · F/A-18 ×1 · 520 metal / 5s",
+        "建造喷气战斗机 · F/A-18 ×1 · 520 金属 / 5秒",
+        "제트 전투기 제작 · F/A-18 ×1 · 520 금속 / 5초"
+      ],
+      [
+        "Build Jet Fighter · F-35C ×1 · 690 metal / 5s",
+        "建造喷气战斗机 · F-35C ×1 · 690 金属 / 5秒",
+        "제트 전투기 제작 · F-35C ×1 · 690 금속 / 5초"
+      ],
+      [
+        "Stealth Strategical Drone · X-47bH ×1 · 550 metal / 5s",
+        "隐身战略无人机 · X-47bH ×1 · 550 金属 / 5秒",
+        "스텔스 전략 무인기 · X-47bH ×1 · 550 금속 / 5초"
+      ],
+      [
+        "Attack helicopter · AH1Z ×1 · 490 metal / 5s",
+        "攻击直升机 · AH1Z ×1 · 490 金属 / 5秒",
+        "공격헬기 · AH1Z ×1 · 490 금속 / 5초"
+      ],
+      [
+        "AWACS · E2C ×1 · 290 metal / 5s",
+        "空中预警机 · E-2C鹰眼 ×1 · 290 金属 / 5秒",
+        "공중조기경보기 · E-2C 호크아이 ×1 · 290 금속 / 5초"
+      ],
+      [
+        "Clear Active Waypoint",
+        "清除当前航点",
+        "활성 경유지 해제"
+      ],
+      [
+        "Launch aircraft",
+        "放飞舰载机",
+        "함재기 출격"
+      ],
+      [
+        "Recover aircraft",
+        "回收飞机",
+        "항공기 회수"
+      ]
+    ]
+  },
+  "translations": {
+    "en": {
+      "name": "Nimitz-class",
+      "description": "Nimitz-class Nuclear-powered Super carrier \nAN/SPS-48E 3D Air-search radar \nAN/SPS-49(V)5 2D Air-search radar \nRIM-162 Evolved Sea Sparrow \nRIM-116 Rolling Airframe Missile \nMk-15 Phalanx CIWS ×3 \nCan built F-35C & Super hornet \nAlso product 100 income \nGone nuclear on death"
+    },
+    "zh": {
+      "name": "尼米兹级",
+      "description": "尼米兹级核动力超级航母；AN/SPS-48E三维空中搜索和AN/SPS-49(V)5二维空中搜索雷达；RIM-162改进型海麻雀、RIM-116、3套Mk15密集阵；可生产F-35C和超级大黄蜂，每次产生100收入，死亡时核爆。"
+    },
+    "ko": {
+      "name": "니미츠급",
+      "description": "니미츠급 핵추진 슈퍼항모. AN/SPS-48E 3차원 및 AN/SPS-49(V)5 2차원 대공탐색 레이더. RIM-162 ESSM, RIM-116, Mk15 팰렁스 3기. F-35C와 슈퍼호넷 생산, 수입 100 생성, 파괴 시 핵폭발."
+    }
+  },
+  "construction": {
+    "hq": 279,
+    "crane": 280,
+    "builder": 281,
+    "ok": true,
+    "actions": [
+      [
+        "Anti Ship Missile Site · 433.79 metal / 8s",
+        "反舰导弹阵地 · 433.79 金属 / 8秒",
+        "대함미사일 진지 · 433.79 금속 / 8초"
+      ],
+      [
+        "US Air Base · 6492.31 metal / 40s",
+        "美国空军基地 · 6492.31 金属 / 40秒",
+        "미국 공군기지 · 6492.31 금속 / 40초"
+      ],
+      [
+        "Oil refinery · 800 metal / 100s",
+        "炼油厂 · 800 金属 / 100秒",
+        "정유소 · 800 금속 / 100초"
+      ],
+      [
+        "Steel factory · 700 metal / 100s",
+        "炼钢厂 · 700 金属 / 100秒",
+        "제강소 · 700 금속 / 100초"
+      ],
+      [
+        "Helipad · 474.62 metal / 100s",
+        "直升机坪 · 474.62 金属 / 100秒",
+        "헬리패드 · 474.62 금속 / 100초"
+      ],
+      [
+        "oil storage · 5 metal / 16.67s",
+        "石油储存站 · 5 金属 / 16.67秒",
+        "석유 저장소 · 5 금속 / 16.67초"
+      ],
+      [
+        "Nuclear Credit Factory · 7951.54 metal / 1666.67s",
+        "核能资金工厂 · 7951.54 金属 / 1666.67秒",
+        "원자력 자금 공장 · 7951.54 금속 / 1666.67초"
+      ],
+      [
+        "IRON DOME · 540 metal / 20s",
+        "铁穹 · 540 金属 / 20秒",
+        "아이언 돔 · 540 금속 / 20초"
+      ],
+      [
+        "United States Factory · 240 metal / 100s",
+        "美国工厂 · 240 金属 / 100秒",
+        "미국 공장 · 240 금속 / 100초"
+      ],
+      [
+        "Wall 3x1 · 45.77 metal / 20s",
+        "3x1围墙 · 45.77 金属 / 20秒",
+        "3x1 방벽 · 45.77 금속 / 20초"
+      ],
+      [
+        "Wall 3x3 · 45.77 metal / 20s",
+        "3x3围墙 · 45.77 金属 / 20秒",
+        "3x3 방벽 · 45.77 금속 / 20초"
+      ],
+      [
+        "Wall 1x3 · 45.77 metal / 20s",
+        "1x3围墙 · 45.77 金属 / 20秒",
+        "1x3 방벽 · 45.77 금속 / 20초"
+      ],
+      [
+        "United States Dock · 338.46 metal / 35s",
+        "美国船坞 · 338.46 金属 / 35秒",
+        "미국 조선소 · 338.46 금속 / 35초"
+      ],
+      [
+        "Naval Depot · 401.54 metal / 45s",
+        "海军仓库 · 401.54 金属 / 45秒",
+        "해군 보급창 · 401.54 금속 / 45초"
+      ],
+      [
+        "Nuclear launcher · 20284.78 metal / 130s",
+        "核弹发射井 · 20284.78 金属 / 130秒",
+        "핵미사일 발사대 · 20284.78 금속 / 130초"
+      ],
+      [
+        "C-RAM · 227.69 metal / 6s",
+        "C-RAM近防系统 · 227.69 金属 / 6秒",
+        "C-RAM 근접방어체계 · 227.69 금속 / 6초"
+      ]
+    ],
+    "site": {
+      "id": 282,
+      "building": "naval-warfare-usf",
+      "underConstruction": true,
+      "hp": 1.4
+    }
+  },
+  "gallery": {
+    "carrier": {
+      "spawned": [
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289
+      ],
+      "units": [
+        "Gerald R. Ford Aircraft Carrier",
+        "DDG-105",
+        "CG-72",
+        "F-35C",
+        "F-18",
+        "F-18",
+        "F-35C"
+      ],
+      "launched": true
+    },
+    "combat": {
+      "spawned": [
+        292,
+        293,
+        294,
+        295,
+        296,
+        297
+      ],
+      "units": [
+        "SimpleIowa",
+        "CG-72",
+        "DDG-105",
+        "Admiral_Nakhimov",
+        "Project 1164",
+        "Borei"
+      ],
+      "projectiles": 15,
+      "effects": 2
+    },
+    "harbor": {
+      "spawned": [
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311
+      ],
+      "units": [
+        "USHQ",
+        "USF",
+        "USF",
+        "C-Ram",
+        "Crane Us",
+        "Helipad  US",
+        "US_NavalDepot",
+        "USDCK",
+        "Excavator US",
+        "MBT1",
+        "MBT1",
+        "DDG-105",
+        "CG-72",
+        "F-35C"
+      ]
+    }
+  }
+}
