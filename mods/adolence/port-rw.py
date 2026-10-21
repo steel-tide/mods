@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Port Adolence (罪恶之都) from its Rusted Warfare package into this Steel Tide mod.
 
-Reads the unpacked package at ../../rusted-warfare-mods/A9999[V3.0] (git-ignored),
+Reads the unpacked package at ../../rusted-warfare-mods/adolence (git-ignored),
 converts the curated roster below into defs, composites the art into sheets,
 cuts the firing sounds to mono MP3 one-shots, and writes mod.json.
 
@@ -28,10 +28,11 @@ import subprocess
 import sys
 
 from PIL import Image, ImageFilter, ImageStat
+from weapon_geometry import apply_weapon_geometry
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
-RW = os.path.join(REPO, "rusted-warfare-mods", "A9999[V3.0]")
+RW = os.path.join(REPO, "rusted-warfare-mods", "adolence")
 MOD_ID = "adolence"
 DRY = "--dry" in sys.argv
 NO_MEDIA = "--no-media" in sys.argv
@@ -1925,8 +1926,8 @@ def main():
         "v": 2,
         "id": MOD_ID,
         "name": ["Adolence: City of Sin", "Adolence·罪恶之都"],
-        "version": "1.2.2",
-        "minGame": "0.8.14",  # format 2: selectable factions and mod headquarters
+        "version": "1.3.0",
+        "minGame": "0.8.16",  # authored muzzle points and native mod barrel recoil
         "author": "自然常数也有人用? and the Adolence team",
         "description": [desc_en, desc_zh],
         "homepage": "https://github.com/steel-tide/mods/tree/main/mods/adolence",
@@ -1950,13 +1951,19 @@ def main():
         if os.path.isdir(shots_dir):
             manifest["screenshots"] = [f"screenshots/{f}" for f in sorted(os.listdir(shots_dir)) if re.search(r"\.(png|jpe?g|webp)$", f, re.I)]
     if old.get("maps"):
-        manifest["maps"] = old["maps"]  # the map make-map.py writes; it is the mod's own, not the package's
+        manifest["maps"] = old["maps"]  # preserve the showcase and original maps registered by the map generators
+    if NO_MEDIA or DRY:
+        # Kept PNGs must retain their own sizes, even if source attachments
+        # have changed since they were composited (notably the Abrams).
+        retained = {s["key"]: s for s in old.get("sprites", [])}
+        manifest["sprites"] = [deepcopy(retained.get(s["key"], s)) for s in SHEETS]
+    apply_weapon_geometry(manifest, HERE if NO_MEDIA or DRY else OUT)
     text = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
     if DRY:
         art = "--art" in sys.argv
         for d in defs:
             if art:
-                print(f"{d['id'][9:]:28} {d.get('_art', '-')}" + (f"  | tur {d['_tur']}" if '_tur' in d else "") + (f"  mz {[w.get('muzzleOffset') for w in d['weapons']]}" if 'weapons' in d else ""))
+                print(f"{d['id'][9:]:28} {d.get('_art', '-')}" + (f"  | tur {d['_tur']}" if '_tur' in d else "") + (f"  mz {[w.get('muzzlePoints', w.get('muzzleOffset')) for w in d['weapons']]}" if 'weapons' in d else ""))
                 continue
             ws = "; ".join(f"{w['id']}:{w['cls']} {w['dmg']}/{w['reload']}s r{w['range']}" + (f" ×{w['burst']}" if 'burst' in w else "") + (f" b{w['bores']}" if 'bores' in w else "") for w in d.get("weapons", []))
             print(f"{d['id']:34} {d['kind'][0]} T{d['tier']} cost {d['cost']:>5} hp {d['hp']:>5} pop {d.get('pop','-'):>2} spd {d.get('speed','-'):>3} {d.get('armor','')[:5]:5} | {ws}")

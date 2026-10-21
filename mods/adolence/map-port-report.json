@@ -1,0 +1,1689 @@
+[
+  {
+    "source": "(10P)危险的市区.tmx",
+    "sourceSha256": "64d572c4b03c806e96c4b1a528c5c7d8d11684cc49accd6170a6142a9a7c3c0b",
+    "map": "dangerous-downtown.steel-tide-map",
+    "pack": "adolence",
+    "sourceSize": [
+      200,
+      200
+    ],
+    "size": [
+      200,
+      200
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "omittedTeams": [
+      8,
+      9
+    ],
+    "players": 8,
+    "spawnAdjustments": [
+      {
+        "source": [
+          176,
+          185
+        ],
+        "spawn": [
+          176,
+          185
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          8,
+          9
+        ],
+        "spawn": [
+          8,
+          9
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          15,
+          182
+        ],
+        "spawn": [
+          15,
+          182
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          18,
+          9
+        ],
+        "spawn": [
+          18,
+          9
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          77,
+          185
+        ],
+        "spawn": [
+          77,
+          185
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          44,
+          9
+        ],
+        "spawn": [
+          44,
+          9
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          127,
+          185
+        ],
+        "spawn": [
+          127,
+          185
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          115,
+          10
+        ],
+        "spawn": [
+          115,
+          10
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 296,
+    "deposits": 296,
+    "relocatedDeposits": 282,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "commandCenter": 21
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "(10P)洛杉矶郊区之战等待陆战一师马奇空军基地支援 .tmx",
+    "sourceSha256": "bdfaf443dfa7f7b5b61d494518a4c349c64a66c21149abaec5131f8bd21cba67",
+    "map": "los-angeles-outskirts.steel-tide-map",
+    "pack": "adolence",
+    "sourceSize": [
+      250,
+      150
+    ],
+    "size": [
+      250,
+      150
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "omittedTeams": [
+      8,
+      9
+    ],
+    "players": 8,
+    "spawnAdjustments": [
+      {
+        "source": [
+          171,
+          72
+        ],
+        "spawn": [
+          171,
+          72
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          6,
+          6
+        ],
+        "spawn": [
+          6,
+          6
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          142,
+          73
+        ],
+        "spawn": [
+          142,
+          73
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          13,
+          6
+        ],
+        "spawn": [
+          16,
+          6
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          85,
+          118
+        ],
+        "spawn": [
+          85,
+          119
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          27,
+          7
+        ],
+        "spawn": [
+          27,
+          7
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          127,
+          71
+        ],
+        "spawn": [
+          127,
+          71
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          9,
+          23
+        ],
+        "spawn": [
+          9,
+          23
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 60,
+    "deposits": 60,
+    "relocatedDeposits": 28,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "commandCenter": 26
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "(1v2)绿色生活-城镇住宅小区.tmx",
+    "sourceSha256": "8ad0ef7c948d06a3c4b475437a51274d40b8e82ca10ecb37dc15014c9b4fb792",
+    "map": "green-life.steel-tide-map",
+    "pack": "adolence",
+    "sourceSize": [
+      100,
+      140
+    ],
+    "size": [
+      100,
+      140
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2
+    ],
+    "omittedTeams": [],
+    "players": 3,
+    "spawnAdjustments": [
+      {
+        "source": [
+          49,
+          11
+        ],
+        "spawn": [
+          49,
+          11
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          89,
+          129
+        ],
+        "spawn": [
+          89,
+          129
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          10,
+          129
+        ],
+        "spawn": [
+          10,
+          129
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 10,
+    "deposits": 10,
+    "relocatedDeposits": 0,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 295,
+      "commandCenter": 3,
+      "builder": 3
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "(4p)港口城镇-沙漏倒计.tmx",
+    "sourceSha256": "e52ec58a8fd532ee79a3a6f3b5f78929a547ee320bf60bf8305233de67d1a25f",
+    "map": "harbour-town.steel-tide-map",
+    "pack": "adolence",
+    "sourceSize": [
+      170,
+      160
+    ],
+    "size": [
+      170,
+      160
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "omittedTeams": [],
+    "players": 4,
+    "spawnAdjustments": [
+      {
+        "source": [
+          10,
+          146
+        ],
+        "spawn": [
+          10,
+          146
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          9,
+          12
+        ],
+        "spawn": [
+          9,
+          12
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          46,
+          153
+        ],
+        "spawn": [
+          46,
+          153
+        ],
+        "clearedTiles": 1
+      },
+      {
+        "source": [
+          42,
+          10
+        ],
+        "spawn": [
+          42,
+          10
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 10,
+    "deposits": 10,
+    "relocatedDeposits": 0,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 445,
+      "commandCenter": 4
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "(4p)灰色城市-铁路网络.tmx",
+    "sourceSha256": "1c54b9c0256b51ecd8b0df57e30e10afd8dd7f408f4a27599ed6029a96ce02d2",
+    "map": "railway-network.steel-tide-map",
+    "pack": "adolence",
+    "sourceSize": [
+      279,
+      278
+    ],
+    "size": [
+      279,
+      278
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "omittedTeams": [],
+    "players": 4,
+    "spawnAdjustments": [
+      {
+        "source": [
+          54,
+          183
+        ],
+        "spawn": [
+          54,
+          183
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          54,
+          94
+        ],
+        "spawn": [
+          54,
+          94
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          224,
+          183
+        ],
+        "spawn": [
+          224,
+          183
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          224,
+          94
+        ],
+        "spawn": [
+          224,
+          94
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 20,
+    "deposits": 20,
+    "relocatedDeposits": 0,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 99,
+      "fabricator": 8,
+      "commandCenter": 4,
+      "builder": 4,
+      "turret": 12
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "(4p)遗失文明-断桥商业街.tmx",
+    "sourceSha256": "ad4ea3bdfd5e176e0b3550cc9c084e41c13f475c44f443a252ab95748287ea1a",
+    "map": "broken-bridge.steel-tide-map",
+    "pack": "adolence",
+    "sourceSize": [
+      225,
+      210
+    ],
+    "size": [
+      225,
+      210
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2
+    ],
+    "omittedTeams": [],
+    "players": 3,
+    "spawnAdjustments": [
+      {
+        "source": [
+          185,
+          33
+        ],
+        "spawn": [
+          185,
+          33
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          169,
+          161
+        ],
+        "spawn": [
+          169,
+          161
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          186,
+          110
+        ],
+        "spawn": [
+          186,
+          110
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 18,
+    "deposits": 18,
+    "relocatedDeposits": 7,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 201,
+      "builder": 3,
+      "commandCenter": 3
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "10P沙漠公路.tmx",
+    "sourceSha256": "d214604b8b1cfc2385a1736c023b2fd19225c7ffbeb6f58380d697e98488056a",
+    "map": "desert-highway.steel-tide-map",
+    "pack": "adolence",
+    "sourceSize": [
+      220,
+      220
+    ],
+    "size": [
+      220,
+      220
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "omittedTeams": [
+      8,
+      9
+    ],
+    "players": 8,
+    "spawnAdjustments": [
+      {
+        "source": [
+          34,
+          206
+        ],
+        "spawn": [
+          34,
+          206
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          19,
+          14
+        ],
+        "spawn": [
+          19,
+          14
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          66,
+          206
+        ],
+        "spawn": [
+          66,
+          206
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          57,
+          16
+        ],
+        "spawn": [
+          57,
+          16
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          97,
+          202
+        ],
+        "spawn": [
+          97,
+          202
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          105,
+          12
+        ],
+        "spawn": [
+          105,
+          12
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          156,
+          202
+        ],
+        "spawn": [
+          157,
+          203
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          171,
+          14
+        ],
+        "spawn": [
+          171,
+          14
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 18,
+    "deposits": 18,
+    "relocatedDeposits": 9,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [
+      1831
+    ],
+    "sourceTileUnits": {
+      "commandCenter": 10
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "4p长桥久战.tmx",
+    "sourceSha256": "6c3ee1ac5c0d8d8559e352c3023e56b9490d2470daae96b201ab3ba365f9d0d6",
+    "map": "long-bridge.steel-tide-map",
+    "pack": "adolence-maps",
+    "sourceSize": [
+      300,
+      60
+    ],
+    "size": [
+      300,
+      60
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "omittedTeams": [],
+    "players": 4,
+    "spawnAdjustments": [
+      {
+        "source": [
+          4,
+          23
+        ],
+        "spawn": [
+          4,
+          23
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          295,
+          23
+        ],
+        "spawn": [
+          295,
+          23
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          4,
+          34
+        ],
+        "spawn": [
+          4,
+          34
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          295,
+          34
+        ],
+        "spawn": [
+          295,
+          34
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 32,
+    "deposits": 32,
+    "relocatedDeposits": 32,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "builder": 4,
+      "builderShip": 4,
+      "commandCenter": 4
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "8p_industrial_zone_mini_bySeCtAnT_ft.Teoshebo.tmx",
+    "sourceSha256": "485d010acc07ba861e7b53f7ae5991f02762aee8b0368e54407bf014a4859122",
+    "map": "industrial-zone.steel-tide-map",
+    "pack": "adolence-maps",
+    "sourceSize": [
+      190,
+      190
+    ],
+    "size": [
+      190,
+      190
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "omittedTeams": [],
+    "players": 8,
+    "spawnAdjustments": [
+      {
+        "source": [
+          151,
+          19
+        ],
+        "spawn": [
+          151,
+          19
+        ],
+        "clearedTiles": 3
+      },
+      {
+        "source": [
+          38,
+          170
+        ],
+        "spawn": [
+          38,
+          170
+        ],
+        "clearedTiles": 3
+      },
+      {
+        "source": [
+          132,
+          19
+        ],
+        "spawn": [
+          132,
+          19
+        ],
+        "clearedTiles": 3
+      },
+      {
+        "source": [
+          57,
+          170
+        ],
+        "spawn": [
+          57,
+          170
+        ],
+        "clearedTiles": 4
+      },
+      {
+        "source": [
+          151,
+          38
+        ],
+        "spawn": [
+          151,
+          38
+        ],
+        "clearedTiles": 8
+      },
+      {
+        "source": [
+          37,
+          151
+        ],
+        "spawn": [
+          37,
+          151
+        ],
+        "clearedTiles": 8
+      },
+      {
+        "source": [
+          171,
+          38
+        ],
+        "spawn": [
+          171,
+          38
+        ],
+        "clearedTiles": 3
+      },
+      {
+        "source": [
+          18,
+          152
+        ],
+        "spawn": [
+          18,
+          152
+        ],
+        "clearedTiles": 3
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 34,
+    "deposits": 34,
+    "relocatedDeposits": 16,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 3,
+      "commandCenter": 8
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "大城市平原战争超大地图.tmx",
+    "sourceSha256": "6673db99f841b7bc032fe6f87a68179899998033e370d9021454788c99e1a8f3",
+    "map": "great-city-plains.steel-tide-map",
+    "pack": "adolence-maps",
+    "sourceSize": [
+      1000,
+      1000
+    ],
+    "size": [
+      500,
+      500
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "omittedTeams": [
+      8,
+      9
+    ],
+    "players": 8,
+    "spawnAdjustments": [
+      {
+        "source": [
+          280,
+          432
+        ],
+        "spawn": [
+          280,
+          432
+        ],
+        "clearedTiles": 34
+      },
+      {
+        "source": [
+          308,
+          162
+        ],
+        "spawn": [
+          308,
+          162
+        ],
+        "clearedTiles": 51
+      },
+      {
+        "source": [
+          14,
+          471
+        ],
+        "spawn": [
+          14,
+          471
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          467,
+          154
+        ],
+        "spawn": [
+          467,
+          154
+        ],
+        "clearedTiles": 38
+      },
+      {
+        "source": [
+          92,
+          418
+        ],
+        "spawn": [
+          92,
+          418
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          348,
+          31
+        ],
+        "spawn": [
+          348,
+          31
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          465,
+          474
+        ],
+        "spawn": [
+          465,
+          474
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          61,
+          115
+        ],
+        "spawn": [
+          61,
+          118
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 268,
+    "deposits": 268,
+    "relocatedDeposits": 70,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [
+      4563,
+      4569
+    ],
+    "sourceTileUnits": {
+      "tree": 387,
+      "commandCenter": 10
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "好多入😍😍😍.tmx",
+    "sourceSha256": "7a32828da2fdf766d6587f02c23a8b342df319422c5a3b8a9efddca5ba2b7e30",
+    "map": "crowded-city.steel-tide-map",
+    "pack": "adolence-maps",
+    "sourceSize": [
+      500,
+      500
+    ],
+    "size": [
+      500,
+      500
+    ],
+    "sourceTeams": [],
+    "retainedTeams": [],
+    "omittedTeams": [],
+    "players": 2,
+    "spawnAdjustments": [
+      {
+        "source": [
+          125,
+          250
+        ],
+        "spawn": [
+          125,
+          250
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          375,
+          250
+        ],
+        "spawn": [
+          375,
+          250
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0
+    ],
+    "sourceDeposits": 0,
+    "deposits": 4,
+    "relocatedDeposits": 0,
+    "omittedDeposits": 0,
+    "addedDeposits": 4,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 4415
+    },
+    "sourceObjectUnits": {
+      "平民": 959
+    },
+    "survivalAdaptation": true
+  },
+  {
+    "source": "尸城.tmx",
+    "sourceSha256": "7064b66215374888941517a20431e5c9470887ed99fe44cc08014754b51b2d6a",
+    "map": "dead-city.steel-tide-map",
+    "pack": "adolence-maps",
+    "sourceSize": [
+      500,
+      500
+    ],
+    "size": [
+      500,
+      500
+    ],
+    "sourceTeams": [],
+    "retainedTeams": [],
+    "omittedTeams": [],
+    "players": 2,
+    "spawnAdjustments": [
+      {
+        "source": [
+          125,
+          250
+        ],
+        "spawn": [
+          125,
+          250
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          375,
+          250
+        ],
+        "spawn": [
+          375,
+          250
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0
+    ],
+    "sourceDeposits": 0,
+    "deposits": 4,
+    "relocatedDeposits": 0,
+    "omittedDeposits": 0,
+    "addedDeposits": 4,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 4415
+    },
+    "sourceObjectUnits": {
+      "丧尸-壮汉": 554,
+      "特区运输机": 5
+    },
+    "survivalAdaptation": true
+  },
+  {
+    "source": "森林湖郊区[8p].tmx",
+    "sourceSha256": "8f954fb1cc08b71427ded540216c8e64bd51f77dffba1bf1882bf4e69ffff5d4",
+    "map": "forest-lake.steel-tide-map",
+    "pack": "adolence-maps",
+    "sourceSize": [
+      210,
+      120
+    ],
+    "size": [
+      210,
+      120
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "omittedTeams": [],
+    "players": 8,
+    "spawnAdjustments": [
+      {
+        "source": [
+          169,
+          4
+        ],
+        "spawn": [
+          169,
+          4
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          33,
+          61
+        ],
+        "spawn": [
+          33,
+          61
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          169,
+          27
+        ],
+        "spawn": [
+          169,
+          27
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          33,
+          17
+        ],
+        "spawn": [
+          33,
+          17
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          171,
+          67
+        ],
+        "spawn": [
+          171,
+          67
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          7,
+          35
+        ],
+        "spawn": [
+          7,
+          35
+        ],
+        "clearedTiles": 81
+      },
+      {
+        "source": [
+          172,
+          109
+        ],
+        "spawn": [
+          172,
+          109
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          13,
+          90
+        ],
+        "spawn": [
+          13,
+          90
+        ],
+        "clearedTiles": 81
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 16,
+    "deposits": 16,
+    "relocatedDeposits": 0,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 6,
+      "commandCenter": 8
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "森林湖郊区官方重置版.tmx",
+    "sourceSha256": "af8f8f0a93646e932c0fd8f22e70ef263ab5c3cfcb66f5064d95252172c9869e",
+    "map": "forest-lake-remastered.steel-tide-map",
+    "pack": "adolence-maps",
+    "sourceSize": [
+      250,
+      142
+    ],
+    "size": [
+      250,
+      142
+    ],
+    "sourceTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "retainedTeams": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "omittedTeams": [
+      8,
+      9,
+      10
+    ],
+    "players": 8,
+    "spawnAdjustments": [
+      {
+        "source": [
+          232,
+          15
+        ],
+        "spawn": [
+          232,
+          15
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          33,
+          61
+        ],
+        "spawn": [
+          33,
+          61
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          235,
+          120
+        ],
+        "spawn": [
+          235,
+          120
+        ],
+        "clearedTiles": 81
+      },
+      {
+        "source": [
+          33,
+          17
+        ],
+        "spawn": [
+          33,
+          17
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          178,
+          59
+        ],
+        "spawn": [
+          178,
+          59
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          7,
+          35
+        ],
+        "spawn": [
+          7,
+          35
+        ],
+        "clearedTiles": 81
+      },
+      {
+        "source": [
+          169,
+          117
+        ],
+        "spawn": [
+          169,
+          117
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          13,
+          90
+        ],
+        "spawn": [
+          13,
+          90
+        ],
+        "clearedTiles": 81
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sourceDeposits": 22,
+    "deposits": 22,
+    "relocatedDeposits": 1,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 184,
+      "commandCenter": 11
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  },
+  {
+    "source": "隔岸.tmx",
+    "sourceSha256": "ff32fc3ddfef590b22c6935754f4f3fbe9e9923e88ec700adc31245b8685f4fa",
+    "map": "opposite-bank.steel-tide-map",
+    "pack": "adolence-maps",
+    "sourceSize": [
+      100,
+      100
+    ],
+    "size": [
+      100,
+      100
+    ],
+    "sourceTeams": [
+      0,
+      1
+    ],
+    "retainedTeams": [
+      0,
+      1
+    ],
+    "omittedTeams": [],
+    "players": 2,
+    "spawnAdjustments": [
+      {
+        "source": [
+          94,
+          30
+        ],
+        "spawn": [
+          94,
+          30
+        ],
+        "clearedTiles": 0
+      },
+      {
+        "source": [
+          5,
+          52
+        ],
+        "spawn": [
+          4,
+          50
+        ],
+        "clearedTiles": 0
+      }
+    ],
+    "spawnGroundComponents": [
+      0,
+      0
+    ],
+    "sourceDeposits": 16,
+    "deposits": 16,
+    "relocatedDeposits": 0,
+    "omittedDeposits": 0,
+    "addedDeposits": 0,
+    "invalidSourceTileIds": [],
+    "sourceTileUnits": {
+      "tree": 322,
+      "commandCenter": 2,
+      "builder": 2
+    },
+    "sourceObjectUnits": {},
+    "survivalAdaptation": false
+  }
+]

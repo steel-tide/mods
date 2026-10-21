@@ -6,8 +6,8 @@
     "Adolence: City of Sin",
     "Adolence·罪恶之都"
   ],
-  "version": "1.2.2",
-  "minGame": "0.8.14",
+  "version": "1.3.0",
+  "minGame": "0.8.16",
   "author": "自然常数也有人用? and the Adolence team",
   "description": [
     "The city police and the troops that come to their aid, their cruisers, tanks and helicopters, and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill.",
@@ -3665,8 +3665,14 @@
           "projectile": "bullet",
           "speed": 384,
           "sound": "adolence-m2",
-          "muzzleOffset": 27.5,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 32.0312,
+              "lateral": 0.0
+            }
+          ],
+          "recoil": 0.6
         }
       ],
       "body": {
@@ -3727,8 +3733,14 @@
           "projectile": "bullet",
           "speed": 384,
           "sound": "adolence-m2",
-          "muzzleOffset": 27.5,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 32.0312,
+              "lateral": 0.0
+            }
+          ],
+          "recoil": 0.7
         }
       ],
       "body": {
@@ -3789,8 +3801,14 @@
           "speed": 192,
           "splash": 58,
           "sound": "adolence-m2-2",
-          "muzzleOffset": 27.8,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 36.0034,
+              "lateral": 0.4972
+            }
+          ],
+          "recoil": 1.2
         }
       ],
       "body": {
@@ -3845,11 +3863,18 @@
           "speed": 192,
           "splash": 38,
           "homing": true,
-          "bores": 2,
-          "boreSpacing": 10.2,
           "sound": "missile",
-          "muzzleOffset": 12.5,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 13.8861,
+              "lateral": -6.8866
+            },
+            {
+              "forward": 13.8861,
+              "lateral": 6.8866
+            }
+          ]
         }
       ],
       "body": {
@@ -3908,8 +3933,13 @@
           "burstDelay": 0.04,
           "spread": 51,
           "sound": "adolence-flame",
-          "muzzleOffset": 28.3,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 31.0303,
+              "lateral": 0.0
+            }
+          ]
         }
       ],
       "body": {
@@ -3963,8 +3993,14 @@
           "speed": 768,
           "splash": 35,
           "sound": "adolence-120mm",
-          "muzzleOffset": 37.5,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 33.2292,
+              "lateral": 0.0
+            }
+          ],
+          "recoil": 1.8
         }
       ],
       "body": {
@@ -4017,8 +4053,14 @@
           "speed": 384,
           "splash": 90,
           "sound": "cannon",
-          "muzzleOffset": 22.9,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 32.8713,
+              "lateral": 0.0
+            }
+          ],
+          "recoil": 2.2
         }
       ],
       "body": {
@@ -4512,7 +4554,13 @@
           "splash": 14,
           "turret": true,
           "sound": "adolence-105mm",
-          "muzzleOffset": 40.7
+          "muzzlePoints": [
+            {
+              "forward": 38.2425,
+              "lateral": 0.3199
+            }
+          ],
+          "recoil": 1.8
         },
         {
           "id": "coax",
@@ -4526,7 +4574,12 @@
           ],
           "turret": true,
           "sound": "mg",
-          "muzzleOffset": 40.7
+          "muzzlePoints": [
+            {
+              "forward": 1.9282,
+              "lateral": -2.2392
+            }
+          ]
         }
       ],
       "body": {
@@ -4604,7 +4657,13 @@
           "splash": 12,
           "turret": true,
           "sound": "adolence-120mm-2",
-          "muzzleOffset": 42.1
+          "muzzlePoints": [
+            {
+              "forward": 45.6414,
+              "lateral": -0.3075
+            }
+          ],
+          "recoil": 2
         },
         {
           "id": "coax",
@@ -4618,7 +4677,12 @@
           ],
           "turret": true,
           "sound": "mg",
-          "muzzleOffset": 42.1
+          "muzzlePoints": [
+            {
+              "forward": 22.2039,
+              "lateral": 1.8451
+            }
+          ]
         }
       ],
       "body": {
@@ -4697,7 +4761,13 @@
           "splash": 12,
           "turret": true,
           "sound": "adolence-120mm-2",
-          "muzzleOffset": 42.1
+          "muzzlePoints": [
+            {
+              "forward": 45.6414,
+              "lateral": -0.6031
+            }
+          ],
+          "recoil": 2
         },
         {
           "id": "coax",
@@ -4711,7 +4781,12 @@
           ],
           "turret": true,
           "sound": "mg",
-          "muzzleOffset": 42.1
+          "muzzlePoints": [
+            {
+              "forward": 22.2039,
+              "lateral": 1.5077
+            }
+          ]
         }
       ],
       "body": {
@@ -4790,7 +4865,13 @@
           "splash": 12,
           "turret": true,
           "sound": "adolence-120mm-2",
-          "muzzleOffset": 42.1
+          "muzzlePoints": [
+            {
+              "forward": 45.6414,
+              "lateral": -0.3075
+            }
+          ],
+          "recoil": 2
         },
         {
           "id": "coax",
@@ -4804,7 +4885,12 @@
           ],
           "turret": true,
           "sound": "mg",
-          "muzzleOffset": 42.1
+          "muzzlePoints": [
+            {
+              "forward": 22.2039,
+              "lateral": 1.8451
+            }
+          ]
         }
       ],
       "body": {
@@ -4883,7 +4969,13 @@
           "splash": 12,
           "turret": true,
           "sound": "adolence-120mm-2",
-          "muzzleOffset": 42.1
+          "muzzlePoints": [
+            {
+              "forward": 45.6414,
+              "lateral": -0.6063
+            }
+          ],
+          "recoil": 2
         },
         {
           "id": "coax",
@@ -4897,7 +4989,12 @@
           ],
           "turret": true,
           "sound": "mg",
-          "muzzleOffset": 42.1
+          "muzzlePoints": [
+            {
+              "forward": 22.2039,
+              "lateral": 1.5159
+            }
+          ]
         }
       ],
       "body": {
@@ -4975,8 +5072,14 @@
           "projectile": "bullet",
           "speed": 768,
           "sound": "cannon",
-          "muzzleOffset": 20.0,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 13.916,
+              "lateral": 0.0
+            }
+          ],
+          "recoil": 0.4
         }
       ],
       "body": {
@@ -5060,8 +5163,14 @@
           "projectile": "bullet",
           "speed": 672,
           "sound": "cannon",
-          "muzzleOffset": 20.8,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 11.7188,
+              "lateral": 0.0
+            }
+          ],
+          "recoil": 0.4
         }
       ],
       "body": {
@@ -5145,10 +5254,17 @@
           ],
           "projectile": "bullet",
           "speed": 576,
-          "bores": 2,
-          "boreSpacing": 19.2,
-          "muzzleOffset": 2,
-          "turret": true
+          "turret": false,
+          "muzzlePoints": [
+            {
+              "forward": -12.9748,
+              "lateral": -6.7139
+            },
+            {
+              "forward": -12.9748,
+              "lateral": 6.7139
+            }
+          ]
         },
         {
           "id": "1",
@@ -5166,8 +5282,14 @@
           "arc": true,
           "spread": 26,
           "sound": "cannon",
-          "muzzleOffset": 31.4,
-          "turret": true
+          "turret": true,
+          "muzzlePoints": [
+            {
+              "forward": 40.6798,
+              "lateral": 0.0
+            }
+          ],
+          "recoil": 2.4
         },
         {
           "id": "2",
@@ -5182,8 +5304,14 @@
           "speed": 192,
           "homing": true,
           "sound": "missile",
-          "muzzleOffset": 20.4,
-          "turret": true
+          "turret": false,
+          "vertical": true,
+          "muzzlePoints": [
+            {
+              "forward": -0.825,
+              "lateral": 0
+            }
+          ]
         }
       ],
       "body": {
@@ -7669,7 +7797,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 14,
-      "fh": 42
+      "fh": 42,
+      "barrels": [
+        [
+          0.37037037,
+          0.01190476,
+          0.59259259,
+          0.28571429
+        ]
+      ]
     },
     {
       "key": "dec.adolence-3c-2",
@@ -7685,7 +7821,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 14,
-      "fh": 42
+      "fh": 42,
+      "barrels": [
+        [
+          0.37037037,
+          0.01190476,
+          0.59259259,
+          0.28571429
+        ]
+      ]
     },
     {
       "key": "dec.adolence-3c-3",
@@ -7709,7 +7853,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 14,
-      "fh": 51
+      "fh": 51,
+      "barrels": [
+        [
+          0.40909091,
+          0.04819277,
+          0.63636364,
+          0.28915663
+        ]
+      ]
     },
     {
       "key": "tur.adolence-light-tank-missile",
@@ -7741,7 +7893,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 12,
-      "fh": 44
+      "fh": 44,
+      "barrels": [
+        [
+          0.3125,
+          0.01666667,
+          0.6875,
+          0.33333333
+        ]
+      ]
     },
     {
       "key": "u.adolence-heavy-tank",
@@ -7757,7 +7917,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 13,
-      "fh": 43
+      "fh": 43,
+      "barrels": [
+        [
+          0.34482759,
+          0.01075269,
+          0.65517241,
+          0.31182796
+        ]
+      ]
     },
     {
       "key": "u.adolence-scout-car",
@@ -7833,7 +8001,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 52,
-      "fh": 58
+      "fh": 58,
+      "barrels": [
+        [
+          0.48818898,
+          0.07801418,
+          0.51968504,
+          0.41843972
+        ]
+      ]
     },
     {
       "key": "dec.adolence-m1128t-outline",
@@ -7865,7 +8041,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 37,
-      "fh": 60
+      "fh": 60,
+      "barrels": [
+        [
+          0.46808511,
+          0.01315789,
+          0.5212766,
+          0.31578947
+        ]
+      ]
     },
     {
       "key": "dec.adolence-m1t-outline",
@@ -7897,7 +8081,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 22,
-      "fh": 60
+      "fh": 60,
+      "barrels": [
+        [
+          0.43859649,
+          0.01315789,
+          0.52631579,
+          0.31578947
+        ]
+      ]
     },
     {
       "key": "dec.adolence-tusk-outline",
@@ -7929,7 +8121,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 37,
-      "fh": 60
+      "fh": 60,
+      "barrels": [
+        [
+          0.46808511,
+          0.01315789,
+          0.5212766,
+          0.31578947
+        ]
+      ]
     },
     {
       "key": "dec.adolence-sepv3-outline",
@@ -7953,7 +8153,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 26,
-      "fh": 60
+      "fh": 60,
+      "barrels": [
+        [
+          0.44776119,
+          0.01315789,
+          0.52238806,
+          0.31578947
+        ]
+      ]
     },
     {
       "key": "dec.adolence-m1a1-t-outline",
@@ -7981,7 +8189,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 8,
-      "fh": 19
+      "fh": 19,
+      "barrels": [
+        [
+          0.38461538,
+          0.03125,
+          0.61538462,
+          0.3125
+        ]
+      ]
     },
     {
       "key": "u.adolence-heavy-ifv",
@@ -8001,7 +8217,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 6,
-      "fh": 16
+      "fh": 16,
+      "barrels": [
+        [
+          0.38461538,
+          0.03125,
+          0.61538462,
+          0.3125
+        ]
+      ]
     },
     {
       "key": "u.adolence-extremism",
@@ -8021,7 +8245,15 @@
       "frames": 1,
       "rotated": true,
       "fw": 16,
-      "fh": 53
+      "fh": 53,
+      "barrels": [
+        [
+          0.34285714,
+          0.00877193,
+          0.65714286,
+          0.31578947
+        ]
+      ]
     },
     {
       "key": "u.adolence-police-heli",
@@ -8337,7 +8569,14 @@
     "screenshots/screenshot-3.png"
   ],
   "maps": [
-    "maps/city-of-sin.steel-tide-map"
+    "maps/city-of-sin.steel-tide-map",
+    "maps/dangerous-downtown.steel-tide-map",
+    "maps/los-angeles-outskirts.steel-tide-map",
+    "maps/green-life.steel-tide-map",
+    "maps/harbour-town.steel-tide-map",
+    "maps/railway-network.steel-tide-map",
+    "maps/broken-bridge.steel-tide-map",
+    "maps/desert-highway.steel-tide-map"
   ],
   "factions": [
     {

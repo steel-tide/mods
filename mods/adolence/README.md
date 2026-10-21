@@ -11,8 +11,9 @@ faction picker. What comes across is the roster and the art: the police, the
 troops that come to their aid, their vehicles, aircraft and boats, and the
 dead. So does the part of the scripting the game's mod rules can carry (see
 The dead, below). The original's city/infected choice is now the game's faction
-selector. The currencies, supply drops, difficulty scripts and infantry's own
-orders stay behind.
+selector. This release requires Steel Tide 0.8.16 for authored muzzle positions
+and native barrel recoil. The currencies, supply drops, difficulty scripts and
+infantry's own orders stay behind.
 
 ## Choose a side
 
@@ -84,10 +85,16 @@ The original's scripts that the game's mod rules can carry come across with it:
 The black-steel tanks, the drone carrier, the bomber and the bigger dead mend
 their hulls slowly, as they do in the original.
 
-## The map
+## The maps
 
-The mod carries a map, *City of Sin* (`maps/city-of-sin.steel-tide-map`): the
-west bank of Adolon, with the police dug in along the middle avenue, the
+The mod now includes seven original map layouts alongside the showcase below.
+Enable the companion **Adolence: Original Maps II** for the other eight originals.
+All 15 source maps are accounted for in [the map inventory and port notes](MAPS.md).
+Maps with more than eight starting teams are capped to eight. The 1000×1000
+layout is reduced to 500×500; the two survival layouts are skirmish adaptations.
+
+The original showcase, *City of Sin* (`maps/city-of-sin.steel-tide-map`), depicts
+the west bank of Adolon, with the police dug in along the middle avenue, the
 dead across it and nests breeding more in the rubble. The 104×76 map has
 residential blocks, ruined neighbourhoods, a downtown square and broad
 streets leading to the riverfront. City blocks are real obstacles; the
@@ -169,6 +176,21 @@ Abrams family on treads, the cars, the trucks and the Stryker on tyres, so each
 cuts its own marks and is heard as its own engine; the infantry, the crewed
 pieces, the walkers and the hovercraft (`trail: "none"`) cut nothing and are
 not heard rolling.
+
+Tank and IFV weapons use muzzle positions measured on their actual sprites,
+including the separate coaxial guns on the Abrams and Stryker and both missile
+pods. Exposed gun barrels recoil through the game's native `barrels`/`recoil`
+fields; mantlets, turret bodies and roof fittings stay fixed. Coaxial fire does
+not kick the main gun, and missile and flame weapons have no barrel recoil.
+Extremism's two hull guns fire from their painted positions behind the turret;
+they follow the hull's bearing, while its anti-air missiles launch from the
+hull centre independently of the main gun.
+
+`weapon_geometry.py` records the measured source pixels and converts them using
+each saved sheet's `fw`, `fh` and pivot, plus the game's unit display scale.
+`port-rw.py` applies these measurements on every conversion; `--no-media` keeps
+the existing PNGs and their sheet sizes. Re-measure the calibration if the art
+changes. Damage, reload, range and the rest of the combat values are unchanged.
 
 The firing sounds are the package's recordings, cut to dry mono one-shots
 under a second. The Abrams and the Stryker fire the 120 mm and 105 mm
