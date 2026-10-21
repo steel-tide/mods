@@ -1,11 +1,12 @@
 # Original Adolence maps
 
 All 15 TMX files in `rusted-warfare-mods/adolence/maps` have native layout ports.
-Enable **Adolence: City of Sin** and **Adolence: Original Maps II** to see the
-whole collection in Conquest and multiplayer setup. Steel Tide allows eight
-maps per mod: City of Sin keeps its existing showcase and seven originals;
-the companion supplies the other eight. The companion also works with vanilla
-factions and has a map-selected grey urban material. It adds no units.
+All ports live in this mod’s `maps/` folder. Steel Tide allows eight bundled
+maps per mod, so the existing showcase and seven originals appear in setup.
+Download any of the remaining eight `.steel-tide-map` files from the inventory
+below and import it through the Scenario Editor to use it as a custom map.
+Those eight files are kept in the repository; they are not included in the
+packed `.steel-tide-mod` download.
 
 The maps use native terrain and city buildings, not the original tile artwork.
 Their roads, districts, waterways, crossings, trees and resource locations are
@@ -15,23 +16,23 @@ wave scripts and mission triggers are not carried across.
 
 ## Inventory
 
-| Original file | Native map | Pack | Size | Players |
+| Original file | Native map | Access | Size | Players |
 | --- | --- | --- | --- | --- |
-| `(10P)危险的市区.tmx` | [Dangerous Downtown](maps/dangerous-downtown.steel-tide-map) | City of Sin | 200×200 | 8 |
-| `(10P)洛杉矶郊区之战等待陆战一师马奇空军基地支援 .tmx` | [Los Angeles Outskirts](maps/los-angeles-outskirts.steel-tide-map) | City of Sin | 250×150 | 8 |
-| `(1v2)绿色生活-城镇住宅小区.tmx` | [Green Life: Residential District](maps/green-life.steel-tide-map) | City of Sin | 100×140 | 3 |
-| `(4p)港口城镇-沙漏倒计.tmx` | [Harbour Town: Hourglass](maps/harbour-town.steel-tide-map) | City of Sin | 170×160 | 4 |
-| `(4p)灰色城市-铁路网络.tmx` | [Grey City: Railway Network](maps/railway-network.steel-tide-map) | City of Sin | 279×278 | 4 |
-| `(4p)遗失文明-断桥商业街.tmx` | [Lost Civilization: Broken Bridge](maps/broken-bridge.steel-tide-map) | City of Sin | 225×210 | 3 |
-| `10P沙漠公路.tmx` | [Desert Highway](maps/desert-highway.steel-tide-map) | City of Sin | 220×220 | 8 |
-| `4p长桥久战.tmx` | [The Long Bridge](../adolence-maps/maps/long-bridge.steel-tide-map) | Original Maps II | 300×60 | 4 |
-| `8p_industrial_zone_mini_bySeCtAnT_ft.Teoshebo.tmx` | [Industrial Zone Mini](../adolence-maps/maps/industrial-zone.steel-tide-map) | Original Maps II | 190×190 | 8 |
-| `大城市平原战争超大地图.tmx` | [Great City: War on the Plains](../adolence-maps/maps/great-city-plains.steel-tide-map) | Original Maps II | 500×500 | 8 |
-| `好多入😍😍😍.tmx` | [Crowded City (Skirmish)](../adolence-maps/maps/crowded-city.steel-tide-map) | Original Maps II | 500×500 | 2 |
-| `尸城.tmx` | [Dead City (Skirmish)](../adolence-maps/maps/dead-city.steel-tide-map) | Original Maps II | 500×500 | 2 |
-| `森林湖郊区[8p].tmx` | [Forest Lake Suburbs](../adolence-maps/maps/forest-lake.steel-tide-map) | Original Maps II | 210×120 | 8 |
-| `森林湖郊区官方重置版.tmx` | [Forest Lake: Remastered](../adolence-maps/maps/forest-lake-remastered.steel-tide-map) | Original Maps II | 250×142 | 8 |
-| `隔岸.tmx` | [The Opposite Bank](../adolence-maps/maps/opposite-bank.steel-tide-map) | Original Maps II | 100×100 | 2 |
+| `(10P)危险的市区.tmx` | [Dangerous Downtown](maps/dangerous-downtown.steel-tide-map) | Bundled | 200×200 | 8 |
+| `(10P)洛杉矶郊区之战等待陆战一师马奇空军基地支援 .tmx` | [Los Angeles Outskirts](maps/los-angeles-outskirts.steel-tide-map) | Bundled | 250×150 | 8 |
+| `(1v2)绿色生活-城镇住宅小区.tmx` | [Green Life: Residential District](maps/green-life.steel-tide-map) | Bundled | 100×140 | 3 |
+| `(4p)港口城镇-沙漏倒计.tmx` | [Harbour Town: Hourglass](maps/harbour-town.steel-tide-map) | Bundled | 170×160 | 4 |
+| `(4p)灰色城市-铁路网络.tmx` | [Grey City: Railway Network](maps/railway-network.steel-tide-map) | Bundled | 279×278 | 4 |
+| `(4p)遗失文明-断桥商业街.tmx` | [Lost Civilization: Broken Bridge](maps/broken-bridge.steel-tide-map) | Bundled | 225×210 | 3 |
+| `10P沙漠公路.tmx` | [Desert Highway](maps/desert-highway.steel-tide-map) | Bundled | 220×220 | 8 |
+| `4p长桥久战.tmx` | [The Long Bridge](maps/long-bridge.steel-tide-map) | Manual import | 300×60 | 4 |
+| `8p_industrial_zone_mini_bySeCtAnT_ft.Teoshebo.tmx` | [Industrial Zone Mini](maps/industrial-zone.steel-tide-map) | Manual import | 190×190 | 8 |
+| `大城市平原战争超大地图.tmx` | [Great City: War on the Plains](maps/great-city-plains.steel-tide-map) | Manual import | 500×500 | 8 |
+| `好多入😍😍😍.tmx` | [Crowded City (Skirmish)](maps/crowded-city.steel-tide-map) | Manual import | 500×500 | 2 |
+| `尸城.tmx` | [Dead City (Skirmish)](maps/dead-city.steel-tide-map) | Manual import | 500×500 | 2 |
+| `森林湖郊区[8p].tmx` | [Forest Lake Suburbs](maps/forest-lake.steel-tide-map) | Manual import | 210×120 | 8 |
+| `森林湖郊区官方重置版.tmx` | [Forest Lake: Remastered](maps/forest-lake-remastered.steel-tide-map) | Manual import | 250×142 | 8 |
+| `隔岸.tmx` | [The Opposite Bank](maps/opposite-bank.steel-tide-map) | Manual import | 100×100 | 2 |
 
 ## Adaptations
 
@@ -51,25 +52,24 @@ From the repository root (Python 3 with Pillow and Node 22+):
 ```sh
 python3 mods/adolence/port-maps.py
 node mods/adolence/verify-maps.mjs
-node tools/check.mjs mods/adolence mods/adolence-maps
+node tools/check.mjs mods/adolence
 ```
 
-`port-maps.py` reads the originals without changing them and refreshes both
-map lists. External stock TSX references use the preserved RW assets under
+`port-maps.py` reads the originals without changing them, writes all 15 ports
+under `adolence/maps/`, and refreshes the eight-entry bundled map list. External stock TSX references use the preserved RW assets under
 `rusted-warfare-mods/fg-rusted-league/assets/tilesets`; pass `--tilesets` to use
 another copy. `--output-root` writes to a staging `mods` directory, and
 `--preview` optionally generates terrain overview PNGs.
 
 `map-port-report.json` records the source SHA-256 hashes, dimensions, retained
-and omitted team IDs, starting-area adjustments, resource relocations and
-original unit counts. `verify-maps.mjs` independently opens every map with
+and omitted team IDs, starting-area adjustments, resource relocations, original
+unit counts and whether each map is bundled or requires manual import. `verify-maps.mjs` independently opens every map with
 Steel Tide’s parser and checks inventory coverage, map limits, resource
 foundations, starting space and connected ground routes.
 
 The initial port was also exercised in 45 native match openings: all 15 maps
 with vanilla, City Authority and SPK Infected, covering 240 headquarters and
-480 starting builders. Industrial Zone was rendered in the native browser
-engine for the companion pack screenshot.
+480 starting builders.
 
 ## Attribution
 

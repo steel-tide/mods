@@ -247,7 +247,7 @@ def component_labels(terrain, w, h):
     return labels, sizes
 
 
-def convert(source, slug, english, chinese, output, companion):
+def convert(source, slug, english, chinese, output):
     # Keep whole source tiles at a uniform integer scale. Only the 1000-square
     # layout needs reduction (2:1); there is no cropping of its outer districts.
     scale = math.ceil(max(source.w, source.h) / 512)
@@ -398,8 +398,6 @@ def convert(source, slug, english, chinese, output, companion):
             'deposits':deposits, 'spawns':spawns}
     if BRIDGE in terrain:
         data['overlays'] = rle([BRIDGE if t == BRIDGE else 0 for t in terrain])
-    if companion:
-        data['terrainVariants'] = {'city':'adolence-maps-urban'}
     output.parent.mkdir(parents=True, exist_ok=True)
     raw = json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n'
     assert len(raw.encode()) <= 512 * 1024
@@ -424,14 +422,17 @@ def main():
     found = {p.name for p in args.source.glob('*.tmx')}
     if expected != found:
         raise ValueError(f'TMX inventory changed: missing={expected-found}, unlisted={found-expected}')
-    reports, packs = [], defaultdict(list)
+    reports, bundled = [], ['maps/city-of-sin.steel-tide-map']
     for index, (filename, slug, en, zh) in enumerate(SOURCES):
-        companion = index >= 7
-        pack = 'adolence-maps' if companion else 'adolence'
+        pack = 'adolence'
         relative = f'maps/{slug}.steel-tide-map'
-        data, terrain, report = convert(SourceMap(args.source / filename, args.tilesets), slug, en, zh, args.output_root / pack / relative, companion)
+        data, terrain, report = convert(SourceMap(args.source / filename, args.tilesets), slug, en, zh, args.output_root / pack / relative)
+        # The showcase plus seven originals fit the eight-map manifest cap.
+        # Keep the other layouts beside them for manual editor import.
+        report['bundled'] = index < 7
         reports.append(report)
-        packs[pack].append(relative)
+        if report['bundled']:
+            bundled.append(relative)
         if args.preview:
             args.preview.mkdir(parents=True, exist_ok=True)
             image = Image.new('RGB', (data['w'],data['h']))
@@ -445,12 +446,11 @@ def main():
                 x,y=p['x'],p['y'];draw.ellipse((x-3,y-3,x+3,y+3),fill='#ed625c');draw.text((x+3,y-5),str(n+1),fill='white')
             image.resize((data['w']*2,data['h']*2),Image.Resampling.NEAREST).save(args.preview / f'{slug}.png')
         print(f'{pack}/{relative}: {data["w"]}x{data["h"]}, {len(data["spawns"])} players, {len(data["deposits"])} deposits')
-    for pack, maps in packs.items():
-        manifest = args.output_root / pack / 'mod.json'
-        if manifest.exists():
-            data = json.loads(manifest.read_text())
-            data['maps'] = (['maps/city-of-sin.steel-tide-map'] if pack == 'adolence' else []) + maps
-            manifest.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
+    manifest = args.output_root / 'adolence/mod.json'
+    if manifest.exists():
+        data = json.loads(manifest.read_text())
+        data['maps'] = bundled
+        manifest.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
     (args.output_root / 'adolence/map-port-report.json').write_text(json.dumps(reports, ensure_ascii=False, indent=2) + '\n')
 
 

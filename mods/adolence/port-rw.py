@@ -1926,7 +1926,7 @@ def main():
         "v": 2,
         "id": MOD_ID,
         "name": ["Adolence: City of Sin", "Adolence·罪恶之都"],
-        "version": "1.3.0",
+        "version": "1.3.1",
         "minGame": "0.8.16",  # authored muzzle points and native mod barrel recoil
         "author": "自然常数也有人用? and the Adolence team",
         "description": [desc_en, desc_zh],

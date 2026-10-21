@@ -15,13 +15,14 @@ assert.deepEqual(report.map(r => r.source).sort(), sources, 'every source TMX mu
 const ground = new Set([2, 3, 6, 7, 8, 9, 10, 17, 18, 19]);
 const foundation = new Set([2, 3, 6, 9]);
 let seats = 0;
-for (const pack of ['adolence', 'adolence-maps']) {
-  const manifest = JSON.parse(readFileSync(resolve(mods, pack, 'mod.json'), 'utf8'));
-  assert.equal(manifest.maps.length, 8, `${pack}: expected eight registered maps`);
-  const expected = report.filter(r => r.pack === pack).map(r => `maps/${r.map}`);
-  if (pack === 'adolence') expected.unshift('maps/city-of-sin.steel-tide-map');
-  assert.deepEqual(manifest.maps, expected, `${pack}: unregistered port`);
-}
+const manifest = JSON.parse(readFileSync(resolve(here, 'mod.json'), 'utf8'));
+assert.equal(manifest.maps.length, 8, 'expected eight registered maps');
+const expected = ['maps/city-of-sin.steel-tide-map', ...report.filter(r => r.bundled).map(r => `maps/${r.map}`)];
+assert.deepEqual(manifest.maps, expected, 'bundled map list differs from the port report');
+assert.equal(report.filter(r => !r.bundled).length, 8, 'expected eight maps for manual import');
+assert(report.every(r => r.pack === 'adolence'), 'all ports must belong to Adolence');
+assert.deepEqual(readdirSync(resolve(here, 'maps')).filter(f => f.endsWith('.steel-tide-map')).sort(),
+  ['city-of-sin.steel-tide-map', ...report.map(r => r.map)].sort(), 'missing or unexpected map files');
 for (const row of report) {
   const source = readFileSync(resolve(here, '../../rusted-warfare-mods/adolence/maps', row.source));
   assert.equal(createHash('sha256').update(source).digest('hex'), row.sourceSha256, `${row.source}: regenerate after a source change`);
@@ -29,6 +30,7 @@ for (const row of report) {
   assert(Buffer.byteLength(raw) <= 512 * 1024, `${row.map}: asset budget`);
   const parsed = parseCustomMap(raw);
   assert(parsed.ok, `${row.map}: ${parsed.error}`);
+  assert(!parsed.data.terrainVariants, `${row.map}: unexpected external terrain dependency`);
   const map = customMapToGameMap(parsed.data);
   assert.deepEqual([map.w, map.h], row.size);
   assert(map.w <= 512 && map.h <= 512);

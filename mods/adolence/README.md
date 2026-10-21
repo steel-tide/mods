@@ -87,8 +87,10 @@ their hulls slowly, as they do in the original.
 
 ## The maps
 
-The mod now includes seven original map layouts alongside the showcase below.
-Enable the companion **Adolence: Original Maps II** for the other eight originals.
+All 15 original map layouts are kept in this mod’s `maps/` folder. The showcase
+and seven originals appear in setup, within the eight-map manifest limit.
+The other eight `.steel-tide-map` files can be downloaded from this folder and
+imported through the Scenario Editor; they are not included in the packed mod.
 All 15 source maps are accounted for in [the map inventory and port notes](MAPS.md).
 Maps with more than eight starting teams are capped to eight. The 1000×1000
 layout is reduced to 500×500; the two survival layouts are skirmish adaptations.

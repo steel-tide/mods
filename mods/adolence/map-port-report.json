@@ -149,7 +149,8 @@
       "commandCenter": 21
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": true
   },
   {
     "source": "(10P)洛杉矶郊区之战等待陆战一师马奇空军基地支援 .tmx",
@@ -301,7 +302,8 @@
       "commandCenter": 26
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": true
   },
   {
     "source": "(1v2)绿色生活-城镇住宅小区.tmx",
@@ -380,7 +382,8 @@
       "builder": 3
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": true
   },
   {
     "source": "(4p)港口城镇-沙漏倒计.tmx",
@@ -472,7 +475,8 @@
       "commandCenter": 4
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": true
   },
   {
     "source": "(4p)灰色城市-铁路网络.tmx",
@@ -567,7 +571,8 @@
       "turret": 12
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": true
   },
   {
     "source": "(4p)遗失文明-断桥商业街.tmx",
@@ -646,7 +651,8 @@
       "commandCenter": 3
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": true
   },
   {
     "source": "10P沙漠公路.tmx",
@@ -800,13 +806,14 @@
       "commandCenter": 10
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": true
   },
   {
     "source": "4p长桥久战.tmx",
     "sourceSha256": "6c3ee1ac5c0d8d8559e352c3023e56b9490d2470daae96b201ab3ba365f9d0d6",
     "map": "long-bridge.steel-tide-map",
-    "pack": "adolence-maps",
+    "pack": "adolence",
     "sourceSize": [
       300,
       60
@@ -893,13 +900,14 @@
       "commandCenter": 4
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": false
   },
   {
     "source": "8p_industrial_zone_mini_bySeCtAnT_ft.Teoshebo.tmx",
     "sourceSha256": "485d010acc07ba861e7b53f7ae5991f02762aee8b0368e54407bf014a4859122",
     "map": "industrial-zone.steel-tide-map",
-    "pack": "adolence-maps",
+    "pack": "adolence",
     "sourceSize": [
       190,
       190
@@ -1041,13 +1049,14 @@
       "commandCenter": 8
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": false
   },
   {
     "source": "大城市平原战争超大地图.tmx",
     "sourceSha256": "6673db99f841b7bc032fe6f87a68179899998033e370d9021454788c99e1a8f3",
     "map": "great-city-plains.steel-tide-map",
-    "pack": "adolence-maps",
+    "pack": "adolence",
     "sourceSize": [
       1000,
       1000
@@ -1197,13 +1206,14 @@
       "commandCenter": 10
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": false
   },
   {
     "source": "好多入😍😍😍.tmx",
     "sourceSha256": "7a32828da2fdf766d6587f02c23a8b342df319422c5a3b8a9efddca5ba2b7e30",
     "map": "crowded-city.steel-tide-map",
-    "pack": "adolence-maps",
+    "pack": "adolence",
     "sourceSize": [
       500,
       500
@@ -1256,13 +1266,14 @@
     "sourceObjectUnits": {
       "平民": 959
     },
-    "survivalAdaptation": true
+    "survivalAdaptation": true,
+    "bundled": false
   },
   {
     "source": "尸城.tmx",
     "sourceSha256": "7064b66215374888941517a20431e5c9470887ed99fe44cc08014754b51b2d6a",
     "map": "dead-city.steel-tide-map",
-    "pack": "adolence-maps",
+    "pack": "adolence",
     "sourceSize": [
       500,
       500
@@ -1316,13 +1327,14 @@
       "丧尸-壮汉": 554,
       "特区运输机": 5
     },
-    "survivalAdaptation": true
+    "survivalAdaptation": true,
+    "bundled": false
   },
   {
     "source": "森林湖郊区[8p].tmx",
     "sourceSha256": "8f954fb1cc08b71427ded540216c8e64bd51f77dffba1bf1882bf4e69ffff5d4",
     "map": "forest-lake.steel-tide-map",
-    "pack": "adolence-maps",
+    "pack": "adolence",
     "sourceSize": [
       210,
       120
@@ -1464,13 +1476,14 @@
       "commandCenter": 8
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": false
   },
   {
     "source": "森林湖郊区官方重置版.tmx",
     "sourceSha256": "af8f8f0a93646e932c0fd8f22e70ef263ab5c3cfcb66f5064d95252172c9869e",
     "map": "forest-lake-remastered.steel-tide-map",
-    "pack": "adolence-maps",
+    "pack": "adolence",
     "sourceSize": [
       250,
       142
@@ -1619,13 +1632,14 @@
       "commandCenter": 11
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": false
   },
   {
     "source": "隔岸.tmx",
     "sourceSha256": "ff32fc3ddfef590b22c6935754f4f3fbe9e9923e88ec700adc31245b8685f4fa",
     "map": "opposite-bank.steel-tide-map",
-    "pack": "adolence-maps",
+    "pack": "adolence",
     "sourceSize": [
       100,
       100
@@ -1684,6 +1698,7 @@
       "builder": 2
     },
     "sourceObjectUnits": {},
-    "survivalAdaptation": false
+    "survivalAdaptation": false,
+    "bundled": false
   }
 ]
