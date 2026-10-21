@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-21T15:25:22.882Z",
+  "generated": "2026-10-21T15:32:54.824Z",
   "mods": [
     {
       "id": "adolence",
@@ -10,7 +10,7 @@
         "Adolence·罪恶之都",
         "Adolence: City of Sin"
       ],
-      "version": "1.3.0",
+      "version": "1.3.1",
       "author": "自然常数也有人用? and the Adolence team",
       "description": [
         "The city police and the troops that come to their aid, their cruisers, tanks and helicopters, and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill.",
@@ -22,7 +22,7 @@
       "minGame": "0.8.16",
       "path": "mods/adolence",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/adolence/",
-      "updated": "2026-10-21T23:24:35+08:00",
+      "updated": "2026-10-21T23:32:05+08:00",
       "published": "2026-09-20T15:16:26+08:00",
       "bytes": 834673,
       "downloads": 362,
@@ -2465,97 +2465,6 @@
           "file": "sounds/husk-beam.mp3"
         }
       ]
-    },
-    {
-      "id": "adolence-maps",
-      "name": [
-        "Adolence: Original Maps II",
-        "Adolence·原版地图 II",
-        "Adolence: Original Maps II"
-      ],
-      "version": "1.0.0",
-      "author": "自然常数也有人用? and the Adolence team",
-      "description": [
-        "Eight more original Adolence map layouts, including the Long Bridge, Industrial Zone and Forest Lake. Enable alongside City of Sin to play with its factions.",
-        "另外八张 Adolence 原版地图布局，包含长桥、工业区与森林湖。与罪恶之都模组同时启用即可使用其阵营。",
-        "Eight more original Adolence map layouts, including the Long Bridge, Industrial Zone and Forest Lake. Enable alongside City of Sin to play with its factions."
-      ],
-      "license": "LicenseRef-Adolence",
-      "homepage": "https://github.com/steel-tide/mods/tree/main/mods/adolence-maps",
-      "minGame": "0.8.16",
-      "path": "mods/adolence-maps",
-      "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/adolence-maps/",
-      "updated": "2026-10-21T23:24:35+08:00",
-      "published": "2026-10-21T23:24:35+08:00",
-      "bytes": 192189,
-      "downloads": 0,
-      "screenshots": [
-        {
-          "file": "screenshots/industrial-zone.png",
-          "w": 1200,
-          "h": 900
-        }
-      ],
-      "maps": [
-        {
-          "file": "maps/long-bridge.steel-tide-map",
-          "name": "The Long Bridge",
-          "w": 300,
-          "h": 60,
-          "spawns": 4
-        },
-        {
-          "file": "maps/industrial-zone.steel-tide-map",
-          "name": "Industrial Zone Mini",
-          "w": 190,
-          "h": 190,
-          "spawns": 8
-        },
-        {
-          "file": "maps/great-city-plains.steel-tide-map",
-          "name": "Great City: War on the Plains",
-          "w": 500,
-          "h": 500,
-          "spawns": 8
-        },
-        {
-          "file": "maps/crowded-city.steel-tide-map",
-          "name": "Crowded City (Skirmish)",
-          "w": 500,
-          "h": 500,
-          "spawns": 2
-        },
-        {
-          "file": "maps/dead-city.steel-tide-map",
-          "name": "Dead City (Skirmish)",
-          "w": 500,
-          "h": 500,
-          "spawns": 2
-        },
-        {
-          "file": "maps/forest-lake.steel-tide-map",
-          "name": "Forest Lake Suburbs",
-          "w": 210,
-          "h": 120,
-          "spawns": 8
-        },
-        {
-          "file": "maps/forest-lake-remastered.steel-tide-map",
-          "name": "Forest Lake: Remastered",
-          "w": 250,
-          "h": 142,
-          "spawns": 8
-        },
-        {
-          "file": "maps/opposite-bank.steel-tide-map",
-          "name": "The Opposite Bank",
-          "w": 100,
-          "h": 100,
-          "spawns": 2
-        }
-      ],
-      "defs": [],
-      "sprites": []
     },
     {
       "id": "aot-rumbling",
