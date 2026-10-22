@@ -2,8 +2,8 @@
 """Rebuild NW 0.10.1J from the supplied RW folder; never execute RW code.
 
 python3 mods/naval-warfare/port.py [--no-media]
-Source units: 20 px/tile, 60 ticks/s. A uniform .5 world-px/RW-px
-coordinate conversion keeps even the source's very large ships usable.
+Source units: 20 px/tile, 60 ticks/s. A .5 world-px/RW-px coordinate
+conversion keeps ships usable; compact buildings use native-sized footprints.
 Credits/oil/steel are explicitly exchanged into native metal (see README).
 All firing mounts, not just the eight HUD weapons, go into this mod's package.
 """
@@ -49,6 +49,36 @@ NATIONS = {
     'cn': ('China', 'CHHQ', 'PLAF', ['China', '中国', '중국']),
     'ph': ('PHILIPPINES', 'REPUBLIC OF PHILIPPINES', 'AFPF', ['Philippines', '菲律宾', '필리핀']),
 }
+
+def building_size(entry, definition, width, height):
+    """Enlarge compact structures without changing mobile units or huge bases.
+
+    Dimensions are the source body's world size, before sheet rounding. Scale
+    every attached part by the same factor and preserve the source aspect.
+    """
+    name = entry['rwName']
+    major = {name for _, hq, factory, _ in NATIONS.values() for name in (hq, factory)}
+    major.update(('CHDCK', 'JPDCK', 'AFPD', 'RUDCK', 'USDCK'))
+    if name in major:
+        definition.update(fw=3, fh=3)
+        target, extent = 96, width
+    elif 'crane' in name.lower():
+        definition.update(fw=2, fh=2)
+        target, extent = 48, width
+    elif name.startswith('Helipad'):
+        definition.update(fw=2, fh=2)
+        target, extent = 64, width
+    elif name == 'nukeLauncher':
+        definition.update(fw=2, fh=3)
+        target, extent = 64, width
+    elif name.startswith(('Nuclear_factory', 'Wall ')) or name.endswith('Air Base'):
+        return 1
+    elif yes(entry['ini'].get('attack', {}).get('canAttack')):
+        # Narrow launchers/towers should remain narrow, with a readable silhouette.
+        target, extent = 32, max(width, height)
+    else:
+        target, extent = definition['fw'] * 32, width
+    return max(1, min(target / max(.001, extent), 512 / max(width, height, .001)))
 
 def write(file, value):
     (HERE / file).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
@@ -227,6 +257,11 @@ class Media:
         if path and g.get('scaleImagesTo'):
             scale = num(g['scaleImagesTo']) / max(1, Image.open(path).width / frames)
         building = definition['kind'] == 'building'
+        building_factor = 1
+        if building and path:
+            with Image.open(path) as im:
+                building_factor = building_size(entry, definition, im.width / frames * scale * WORLD, im.height * scale * WORLD)
+            scale *= building_factor
         key = self.sheet(entry, 'graphics', 'image', 'u.' + entry['id'], scale, frames, not building,
                          60 / max(1, num(g.get('animation_idle_speed'), 10)) if frames > 1 else 0)
         if key:
@@ -235,7 +270,12 @@ class Media:
                 # Explicit anchor keeps the source artwork centered on its footprint.
                 sheet=next(s for s in self.sprites if s['key']==key)
                 sheet['anchorY'] = round(sheet['fh'] / 2)
-        return scale
+                # Preserve source coordinates for turrets and arms; automatic
+                # content fitting would move/resize the body independently.
+                if building_factor > 1:
+                    sheet['fitFootprint'] = False
+                self.images[key]['buildingScaleFactor'] = round(building_factor, 5)
+        return scale, building_factor
 
     def music_tracks(self):
         # The source explicitly chooses -MUSIC-; do not import unrelated audio.
@@ -332,19 +372,20 @@ def weapon(entry, sec, turret, media):
             'requiredTags':[t.strip() for t in turret.get('canOnlyAttackUnitsWithTags','').split(',') if t.strip()],
             'condition': turret.get('canAttackCondition', '')}
 
-def config(entry, definition, scale, media, lookup):
+def config(entry, definition, scale, media, lookup, building_factor=1):
     ini = entry['ini']; core = ini['core']; g = ini.get('graphics', {})
+    geometry = WORLD * building_factor
     mounts, guns, actions, notes = [], [], [], []
     for sec, turret in ini.items():
         if not sec.startswith('turret_'):
             continue
         mount_id = sec.removeprefix('turret_')
-        mount = {'id': mount_id, 'x': num(turret.get('x')) * WORLD, 'y': -num(turret.get('y')) * WORLD,
+        mount = {'id': mount_id, 'x': num(turret.get('x')) * geometry, 'y': -num(turret.get('y')) * geometry,
                  'parent': turret.get('attachedTo', ''), 'slave': yes(turret.get('slave')),
                  'rest': num(turret.get('idleDir')) * math.pi / 180, 'arc': num(turret.get('limitingAngle'), 180) * math.pi / 180,
                  'turn': num(turret.get('turnSpeed', ini.get('attack', {}).get('turretTurnSpeed')), 4) * math.pi / 3,
                  'spin': num(turret.get('idleSpin')) * math.pi / 3,
-                 'recoil':num(turret.get('recoilOffset'))*WORLD,'recoilOut':seconds(turret.get('recoilOutTime')),
+                 'recoil':num(turret.get('recoilOffset'))*geometry,'recoilOut':seconds(turret.get('recoilOutTime')),
                  'recoilReturn':seconds(turret.get('recoilReturnTime'),.2)}
         if not yes(turret.get('invisible')):
             image_key = 'image' if turret.get('image') else 'image_turret'
@@ -354,7 +395,7 @@ def config(entry, definition, scale, media, lookup):
                 turret_scale = num(g.get('turretImageScale', g.get('imageScale')), 1)
                 if g.get('scaleTurretImagesTo'):
                     turret_scale = num(g['scaleTurretImagesTo']) / max(1, Image.open(path).width)
-                sprite = media.sheet(entry, section, image_key, 'dec.' + entry['id'] + '-mount-' + mount_id, turret_scale)
+                sprite = media.sheet(entry, section, image_key, 'dec.' + entry['id'] + '-mount-' + mount_id, turret_scale * building_factor)
                 if sprite:
                     mount['sprite'] = sprite
         mounts.append(mount)
@@ -367,7 +408,7 @@ def config(entry, definition, scale, media, lookup):
         if not sec.startswith('arm_') or not arm.get('image_end'):continue
         sprite=media.sheet(entry,sec,'image_end','dec.'+entry['id']+'-'+sec.replace('_','-'),scale)
         if sprite:
-            mounts.append({'id':sec,'x':num(arm.get('x'))*WORLD,'y':-num(arm.get('y'))*WORLD,
+            mounts.append({'id':sec,'x':num(arm.get('x'))*geometry,'y':-num(arm.get('y'))*geometry,
                            'parent':'','slave':False,'rest':num(arm.get('drawDirOffset'))*math.pi/180,'arc':math.pi,
                            'turn':0,'spin':num(arm.get('spinRate'))*math.pi/3,'sprite':sprite,'recoil':0,'recoilOut':0,'recoilReturn':0})
     # Manual silos/ICBM turrets have canShoot:false: compile them explicitly.
@@ -448,7 +489,10 @@ def config(entry, definition, scale, media, lookup):
            'capacity':num(core.get('maxTransportingUnits')), 'dieOnZeroEnergy':yes(core.get('dieOnZeroEnergy')),
            'cargoHeal': num(core.get('transportUnitsHealBy')) * 60,
            'regen': num(core.get('selfRegenRate')) * 60}
-    cfg['attachments']=[{'x':num(a.get('x'))*WORLD,'y':-num(a.get('y'))*WORLD,'angle':num(a.get('idleDir'))*math.pi/180}
+    for gun in guns:
+        gun['muzzle'] *= building_factor
+        gun['lateral'] *= building_factor
+    cfg['attachments']=[{'x':num(a.get('x'))*geometry,'y':-num(a.get('y'))*geometry,'angle':num(a.get('idleDir'))*math.pi/180}
                         for s,a in ini.items() if s.startswith('attachment_') and yes(a.get('addTransportedUnits')) and yes(a.get('isVisible'),True)]
     wreck=media.sheet(entry,'graphics','image_wreak','dec.'+entry['id']+'-wreck',scale,rotated=False)
     if wreck:cfg['wreck']=wreck
@@ -522,8 +566,8 @@ def main():
                     d['landsForCargo'] = True
         if num(c.get('maxShield')) > 0:
             d['shield'] = {'hp': num(c['maxShield']), 'regen': max(0,num(c.get('shieldRegen'))*60), 'delay':0}
-        scale = media.body(e,d)
-        cfg = config(e,d,scale,media,lookup)
+        scale, building_factor = media.body(e,d)
+        cfg = config(e,d,scale,media,lookup,building_factor)
         if any('sub' in w['weapon']['targets'] for w in cfg['guns']):
             # Source has no independent sonar mechanic; submarine hunters must see their targets.
             if not building:
@@ -635,7 +679,7 @@ def main():
     media.music_tracks()
     manifest={'format':'steel-tide-mod','v':4,'capacity':'large','id':'naval-warfare',
               'name':'Naval Warfare',
-              'version':'0.1.1','author':'Naval Warfare original creators',
+              'version':'0.1.2','author':'Naval Warfare original creators',
               'description':localization['modDescription'], 'license':'LicenseRef-Naval-Warfare-Upstream', 'minGame':'0.8.16',
               'requiredCapabilities':[CAP],'extensionPackages':[package],'defs':defs,'factions':factions,
               'sprites':media.sprites,'sounds':media.sounds,

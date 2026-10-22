@@ -12539,7 +12539,8 @@
         512,
         159
       ],
-      "minimumSizeFactor": 0.9588
+      "minimumSizeFactor": 0.9588,
+      "buildingScaleFactor": 1
     },
     "dec.naval-warfare-pla-air-base-wreck": {
       "source": "Factions/China/Building/Air base/airfield_dead.png",
@@ -12556,131 +12557,136 @@
     },
     "u.naval-warfare-cn-crane": {
       "source": "Factions/China/Building/Crane/track.png",
-      "scale": 0.27,
+      "scale": 0.6315789473684209,
       "sourceFrame": [
         152,
         200
       ],
       "displayFrame": [
-        21,
-        27
+        48,
+        63
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 2.33918
     },
     "dec.naval-warfare-cn-crane-mount-2": {
       "source": "Factions/China/Building/Crane/top.png",
-      "scale": 0.47,
+      "scale": 1.0994152046783623,
       "sourceFrame": [
         290,
         437
       ],
       "displayFrame": [
-        44,
-        66
+        102,
+        154
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-chdck": {
       "source": "Factions/China/Building/Dock/1.png",
-      "scale": 0.5825242718446602,
+      "scale": 1.8640776699029127,
       "sourceFrame": [
         103,
         112
       ],
       "displayFrame": [
-        30,
-        33
+        96,
+        104
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-chdck-wreck": {
       "source": "Factions/China/Building/Dock/2.png",
-      "scale": 0.5825242718446602,
+      "scale": 1.8640776699029127,
       "sourceFrame": [
         97,
         112
       ],
       "displayFrame": [
-        28,
-        33
+        90,
+        104
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-plaf": {
       "source": "Factions/China/Building/Factory/1.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         61,
         70
       ],
       "displayFrame": [
-        30,
-        34
+        96,
+        110
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-plaf-wreck": {
       "source": "Factions/China/Building/Factory/2.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         61,
         77
       ],
       "displayFrame": [
-        30,
-        38
+        96,
+        121
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-chhq": {
       "source": "Factions/China/Building/HQ/hqrus.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         61,
         70
       ],
       "displayFrame": [
-        30,
-        34
+        96,
+        110
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-chhq-wreck": {
       "source": "Factions/China/Building/HQ/2.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         59,
         70
       ],
       "displayFrame": [
-        29,
-        34
+        93,
+        110
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-ch-navaldepot": {
       "source": "Factions/China/Building/Naval Depot jap/NATO_Sea_Top.png",
-      "scale": 1,
+      "scale": 1.0756302521008403,
       "sourceFrame": [
         119,
         160
       ],
       "displayFrame": [
-        60,
-        80
+        64,
+        86
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.07563
     },
     "dec.naval-warfare-ch-navaldepot-wreck": {
       "source": "Factions/China/Building/Naval Depot jap/NATO_Sea_Dead.png",
-      "scale": 1,
+      "scale": 1.0756302521008403,
       "sourceFrame": [
         113,
         152
       ],
       "displayFrame": [
-        56,
-        76
+        61,
+        82
       ],
       "minimumSizeFactor": 1
     },
@@ -15169,53 +15175,55 @@
     },
     "u.naval-warfare-jpdck": {
       "source": "Factions/JAPAN/building/Dock/JPdock.png",
-      "scale": 0.5825242718446602,
+      "scale": 1.8640776699029127,
       "sourceFrame": [
         103,
         112
       ],
       "displayFrame": [
-        30,
-        33
+        96,
+        104
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-jpdck-wreck": {
       "source": "Factions/JAPAN/building/Dock/2.png",
-      "scale": 0.5825242718446602,
+      "scale": 1.8640776699029127,
       "sourceFrame": [
         102,
         112
       ],
       "displayFrame": [
-        30,
-        33
+        95,
+        104
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-jphq": {
       "source": "Factions/JAPAN/building/HQ/hqjpn.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         61,
         70
       ],
       "displayFrame": [
-        30,
-        34
+        96,
+        110
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-jphq-wreck": {
       "source": "Factions/JAPAN/building/HQ/2.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         61,
         70
       ],
       "displayFrame": [
-        30,
-        34
+        96,
+        110
       ],
       "minimumSizeFactor": 1
     },
@@ -15494,27 +15502,28 @@
     },
     "u.naval-warfare-afpd": {
       "source": "Factions/PHILIPPINES/Units/JPdock.png",
-      "scale": 0.4444444444444444,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         135,
         112
       ],
       "displayFrame": [
-        30,
-        25
+        96,
+        80
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-afpd-wreck": {
       "source": "Factions/PHILIPPINES/Units/23.png",
-      "scale": 0.4444444444444444,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         135,
         112
       ],
       "displayFrame": [
-        30,
-        25
+        96,
+        80
       ],
       "minimumSizeFactor": 1
     },
@@ -15546,27 +15555,28 @@
     },
     "u.naval-warfare-republic-of-philippines": {
       "source": "Factions/PHILIPPINES/Units/389.png",
-      "scale": 0.8670520231213873,
+      "scale": 1.1098265895953758,
       "sourceFrame": [
         173,
         100
       ],
       "displayFrame": [
-        75,
-        43
+        96,
+        55
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.28
     },
     "dec.naval-warfare-820241ebcaa512962c": {
       "source": "Factions/PHILIPPINES/Units/200.png",
-      "scale": 0.8670520231213873,
+      "scale": 1.1098265895953758,
       "sourceFrame": [
         173,
         100
       ],
       "displayFrame": [
-        75,
-        43
+        96,
+        55
       ],
       "minimumSizeFactor": 1
     },
@@ -15724,7 +15734,8 @@
         14,
         36
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1
     },
     "dec.naval-warfare-nasams-mount-1": {
       "source": "Factions/PHILIPPINES/Units/1266A.png",
@@ -16014,42 +16025,43 @@
     },
     "u.naval-warfare-nasamsrue": {
       "source": "Factions/PHILIPPINES/Units/turret_base.png",
-      "scale": 0.2,
+      "scale": 0.888888888888889,
       "sourceFrame": [
         29,
         72
       ],
       "displayFrame": [
-        4,
-        10
+        13,
+        32
       ],
-      "minimumSizeFactor": 1.37931
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 4.44444
     },
     "dec.naval-warfare-nasamsrue-mount-1": {
       "source": "Factions/PHILIPPINES/Units/turret_sam_base.png",
-      "scale": 0.15789473684210525,
+      "scale": 0.7017543859649122,
       "sourceFrame": [
         19,
         35
       ],
       "displayFrame": [
         4,
-        7
+        8
       ],
-      "minimumSizeFactor": 4.16667
+      "minimumSizeFactor": 1
     },
     "dec.naval-warfare-nasamsrue-wreck": {
       "source": "Factions/PHILIPPINES/Units/turret_base_dead.png",
-      "scale": 0.2,
+      "scale": 0.888888888888889,
       "sourceFrame": [
         29,
         49
       ],
       "displayFrame": [
-        4,
-        7
+        13,
+        22
       ],
-      "minimumSizeFactor": 1.37931
+      "minimumSizeFactor": 1
     },
     "u.naval-warfare-a-50": {
       "source": "Factions/Russia/Air units/AWACS/A-50/1.png",
@@ -16833,29 +16845,30 @@
     },
     "u.naval-warfare-kortik": {
       "source": "Factions/Russia/Building/CIWS - Kortik/1.png",
-      "scale": 0.1,
+      "scale": 0.32000000000000006,
       "sourceFrame": [
         49,
         200
       ],
       "displayFrame": [
-        4,
-        16
+        8,
+        32
       ],
-      "minimumSizeFactor": 1.63265
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.55556
     },
     "dec.naval-warfare-kortik-mount-1": {
       "source": "Factions/Russia/Building/CIWS - Kortik/2.png",
-      "scale": 0.04,
+      "scale": 0.128,
       "sourceFrame": [
         200,
         174
       ],
       "displayFrame": [
-        5,
-        4
+        8,
+        7
       ],
-      "minimumSizeFactor": 1.79598
+      "minimumSizeFactor": 1
     },
     "prj.naval-warfare-kortik-1": {
       "source": "Factions/Russia/Building/CIWS - Kortik/机枪子弹.png",
@@ -16872,118 +16885,122 @@
     },
     "u.naval-warfare-rudck": {
       "source": "Factions/Russia/Building/Dock/RUdock.png",
-      "scale": 0.5825242718446602,
+      "scale": 1.8640776699029127,
       "sourceFrame": [
         103,
         112
       ],
       "displayFrame": [
-        30,
-        33
+        96,
+        104
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-rudck-wreck": {
       "source": "Factions/Russia/Building/Dock/2.png",
-      "scale": 0.5825242718446602,
+      "scale": 1.8640776699029127,
       "sourceFrame": [
         100,
         112
       ],
       "displayFrame": [
-        29,
-        33
+        93,
+        104
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-ruhq": {
       "source": "Factions/Russia/Building/HQ/hqrus.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         61,
         70
       ],
       "displayFrame": [
-        30,
-        34
+        96,
+        110
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-ruhq-wreck": {
       "source": "Factions/Russia/Building/HQ/2.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         61,
         70
       ],
       "displayFrame": [
-        30,
-        34
+        96,
+        110
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-ru-navaldepot": {
       "source": "Factions/Russia/Building/Naval Depot/RU_Sea_Top.png",
-      "scale": 1,
+      "scale": 1.0756302521008403,
       "sourceFrame": [
         119,
         160
       ],
       "displayFrame": [
-        60,
-        80
+        64,
+        86
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.07563
     },
     "dec.naval-warfare-ru-navaldepot-wreck": {
       "source": "Factions/Russia/Building/Naval Depot/RU_Sea_Dead.png",
-      "scale": 1,
+      "scale": 1.0756302521008403,
       "sourceFrame": [
         117,
         160
       ],
       "displayFrame": [
-        58,
-        80
+        63,
+        86
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-nasamsru": {
       "source": "Factions/Russia/Building/nasams RU/turret_base.png",
-      "scale": 0.4,
+      "scale": 1.3617021276595747,
       "sourceFrame": [
         47,
         42
       ],
       "displayFrame": [
-        9,
-        8
+        32,
+        29
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.40426
     },
     "dec.naval-warfare-nasamsru-mount-1": {
       "source": "Factions/Russia/Building/nasams RU/turret_sam_base.png",
-      "scale": 0.30303030303030304,
+      "scale": 1.0315925209542232,
       "sourceFrame": [
         33,
         30
       ],
       "displayFrame": [
-        4,
-        4
+        11,
+        10
       ],
-      "minimumSizeFactor": 1.375
+      "minimumSizeFactor": 1
     },
     "dec.naval-warfare-nasamsru-wreck": {
       "source": "Factions/Russia/Building/nasams RU/turret_base_dead.png",
-      "scale": 0.4,
+      "scale": 1.3617021276595747,
       "sourceFrame": [
         47,
         42
       ],
       "displayFrame": [
-        9,
-        8
+        32,
+        29
       ],
       "minimumSizeFactor": 1
     },
@@ -19290,72 +19307,75 @@
     },
     "dec.naval-warfare-882a6cedc93e8b3c03": {
       "source": "Factions/USA/building/CIWS/2.png",
-      "scale": 0.16326530612244897,
+      "scale": 0.5804988662131518,
       "sourceFrame": [
         49,
         200
       ],
       "displayFrame": [
-        4,
-        16
+        9,
+        37
       ],
-      "minimumSizeFactor": 1.5625
+      "minimumSizeFactor": 1
     },
     "u.naval-warfare-usdck": {
       "source": "Factions/USA/building/Dock/USdock.png",
-      "scale": 0.5825242718446602,
+      "scale": 1.8640776699029127,
       "sourceFrame": [
         103,
         112
       ],
       "displayFrame": [
-        30,
-        33
+        96,
+        104
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "dec.naval-warfare-usdck-wreck": {
       "source": "Factions/USA/building/Dock/2.png",
-      "scale": 0.5825242718446602,
+      "scale": 1.8640776699029127,
       "sourceFrame": [
         101,
         112
       ],
       "displayFrame": [
-        29,
-        33
+        94,
+        104
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-ushq": {
       "source": "Factions/USA/building/HQ/hqusa.png",
-      "scale": 0.9836065573770492,
+      "scale": 3.1475409836065573,
       "sourceFrame": [
         61,
         70
       ],
       "displayFrame": [
-        30,
-        34
+        96,
+        110
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 3.2
     },
     "u.naval-warfare-iron-dome": {
       "source": "Factions/USA/building/Iron dome/base.png",
-      "scale": 0.3,
+      "scale": 0.47407407407407404,
       "sourceFrame": [
         135,
         66
       ],
       "displayFrame": [
-        20,
-        10
+        32,
+        16
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.58025
     },
     "dec.naval-warfare-iron-dome-mount-main": {
       "source": "Factions/USA/building/Iron dome/turret.png",
-      "scale": 0.3,
+      "scale": 0.47407407407407404,
       "sourceFrame": [
         19,
         35
@@ -19364,7 +19384,7 @@
         4,
         7
       ],
-      "minimumSizeFactor": 2.19298
+      "minimumSizeFactor": 1.38775
     },
     "prj.naval-warfare-iron-dome-main": {
       "source": "Factions/USA/building/Iron dome/rocke.png",
@@ -19381,7 +19401,7 @@
     },
     "dec.naval-warfare-iron-dome-arm-1": {
       "source": "Factions/USA/building/Iron dome/Radar_disc_.png",
-      "scale": 0.3,
+      "scale": 0.47407407407407404,
       "sourceFrame": [
         45,
         13
@@ -19390,11 +19410,11 @@
         14,
         4
       ],
-      "minimumSizeFactor": 3.20513
+      "minimumSizeFactor": 2.02825
     },
     "dec.naval-warfare-iron-dome-arm-2": {
       "source": "Factions/USA/building/Iron dome/Radar_disc_q.png",
-      "scale": 0.3,
+      "scale": 0.47407407407407404,
       "sourceFrame": [
         45,
         13
@@ -19403,44 +19423,45 @@
         14,
         4
       ],
-      "minimumSizeFactor": 3.20513
+      "minimumSizeFactor": 2.02825
     },
     "dec.naval-warfare-iron-dome-wreck": {
       "source": "Factions/USA/building/Iron dome/dead.png",
-      "scale": 0.3,
+      "scale": 0.47407407407407404,
       "sourceFrame": [
         135,
         66
       ],
       "displayFrame": [
-        20,
-        10
+        32,
+        16
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-us-navaldepot": {
       "source": "Factions/USA/building/Naval Depot us/NATO_Sea_Top.png",
-      "scale": 1,
+      "scale": 1.0756302521008403,
       "sourceFrame": [
         119,
         160
       ],
       "displayFrame": [
-        60,
-        80
+        64,
+        86
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.07563
     },
     "dec.naval-warfare-us-navaldepot-wreck": {
       "source": "Factions/USA/building/Naval Depot us/NATO_Sea_Dead.png",
-      "scale": 1,
+      "scale": 1.0756302521008403,
       "sourceFrame": [
         113,
         152
       ],
       "displayFrame": [
-        56,
-        76
+        61,
+        82
       ],
       "minimumSizeFactor": 1
     },
@@ -19897,7 +19918,8 @@
         108,
         149
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1
     },
     "dec.naval-warfare-nuclear-factory-wreck": {
       "source": "Factions/units/ZBL-19/Dead.png",
@@ -19992,66 +20014,69 @@
     },
     "u.naval-warfare-oil-extract": {
       "source": "NATURAL BUILDING/American Extractor Oil/10.png",
-      "scale": 0.5303030303030303,
+      "scale": 0.9696969696969696,
       "sourceFrame": [
         132,
         131
       ],
       "displayFrame": [
-        35,
-        35
+        64,
+        64
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.82857
     },
     "dec.naval-warfare-oil-extract-wreck": {
       "source": "NATURAL BUILDING/American Extractor Oil/20.png",
-      "scale": 0.5303030303030303,
+      "scale": 0.9696969696969696,
       "sourceFrame": [
         200,
         131
       ],
       "displayFrame": [
-        53,
-        35
+        97,
+        64
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-steelextractor": {
       "source": "NATURAL BUILDING/American Extractor steel/1.png",
-      "scale": 0.5303030303030303,
+      "scale": 0.9696969696969696,
       "sourceFrame": [
         132,
         131
       ],
       "displayFrame": [
-        35,
-        35
+        64,
+        64
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.82857
     },
     "u.naval-warfare-jpasms": {
       "source": "NATURAL BUILDING/Anti Ship Missile Site/ASplt.png",
-      "scale": 0.3333333333333333,
+      "scale": 0.6400000000000001,
       "sourceFrame": [
         60,
         100
       ],
       "displayFrame": [
-        10,
-        17
+        19,
+        32
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.92
     },
     "dec.naval-warfare-jpasms-mount-1": {
       "source": "NATURAL BUILDING/Anti Ship Missile Site/ASsite.png",
-      "scale": 0.5,
+      "scale": 0.9600000000000002,
       "sourceFrame": [
         60,
         100
       ],
       "displayFrame": [
-        10,
-        16
+        18,
+        31
       ],
       "minimumSizeFactor": 1
     },
@@ -20070,79 +20095,82 @@
     },
     "u.naval-warfare-helipad-pla": {
       "source": "NATURAL BUILDING/Helipad/1.png",
-      "scale": 0.4444444444444444,
+      "scale": 0.7111111111111111,
       "sourceFrame": [
         180,
         180
       ],
       "displayFrame": [
-        40,
-        40
+        64,
+        64
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.6
     },
     "dec.naval-warfare-helipad-pla-wreck": {
       "source": "NATURAL BUILDING/Helipad/2.png",
-      "scale": 0.4444444444444444,
+      "scale": 0.7111111111111111,
       "sourceFrame": [
         180,
         180
       ],
       "displayFrame": [
-        40,
-        40
+        64,
+        64
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-oilextractor": {
       "source": "NATURAL BUILDING/Natural building/1.png",
-      "scale": 0.5303030303030303,
+      "scale": 0.9696969696969696,
       "sourceFrame": [
         132,
         131
       ],
       "displayFrame": [
-        35,
-        35
+        64,
+        64
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.82857
     },
     "u.naval-warfare-nukelauncher": {
       "source": "NATURAL BUILDING/Natural building/Nuclear Stuckture/osiloteorp.png",
-      "scale": 0.8,
+      "scale": 1.8285714285714285,
       "sourceFrame": [
         70,
         114
       ],
       "displayFrame": [
-        28,
-        46
+        64,
+        104
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 2.28571
     },
     "dec.naval-warfare-nukelauncher-arm-1": {
       "source": "NATURAL BUILDING/Natural building/Nuclear Stuckture/4f.png",
-      "scale": 0.8,
+      "scale": 1.8285714285714285,
       "sourceFrame": [
         70,
         114
       ],
       "displayFrame": [
-        18,
-        29
+        41,
+        67
       ],
       "minimumSizeFactor": 1
     },
     "dec.naval-warfare-nukelauncher-wreck": {
       "source": "NATURAL BUILDING/Natural building/Nuclear Stuckture/wreck.png",
-      "scale": 0.8,
+      "scale": 1.8285714285714285,
       "sourceFrame": [
         70,
         114
       ],
       "displayFrame": [
-        28,
-        46
+        64,
+        104
       ],
       "minimumSizeFactor": 1
     },
@@ -20235,7 +20263,8 @@
         80,
         32
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1
     },
     "dec.naval-warfare-oil-refinery-wreck": {
       "source": "NATURAL BUILDING/Oil refinery/2.png",
@@ -20252,79 +20281,83 @@
     },
     "u.naval-warfare-ruextractor": {
       "source": "NATURAL BUILDING/Russian Extractor/1.png",
-      "scale": 0.546875,
+      "scale": 1.0,
       "sourceFrame": [
         128,
         186
       ],
       "displayFrame": [
-        35,
-        51
+        64,
+        93
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.82857
     },
     "dec.naval-warfare-ruextractor-wreck": {
       "source": "NATURAL BUILDING/Russian Extractor/2.png",
-      "scale": 0.546875,
+      "scale": 1.0,
       "sourceFrame": [
         199,
         166
       ],
       "displayFrame": [
-        54,
-        45
+        100,
+        83
       ],
       "minimumSizeFactor": 1
     },
     "u.naval-warfare-oil-extract-ru": {
       "source": "NATURAL BUILDING/Russian extract oil/1.png",
-      "scale": 0.546875,
+      "scale": 1.0,
       "sourceFrame": [
         128,
         186
       ],
       "displayFrame": [
-        35,
-        51
+        64,
+        93
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.82857
     },
     "u.naval-warfare-steelextractor-ru": {
       "source": "NATURAL BUILDING/Russian extract steel/1.png",
-      "scale": 0.546875,
+      "scale": 1.0,
       "sourceFrame": [
         128,
         186
       ],
       "displayFrame": [
-        35,
-        51
+        64,
+        93
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.82857
     },
     "u.naval-warfare-steel-refinery": {
       "source": "NATURAL BUILDING/Steel Refinery/1.png",
-      "scale": 1.0666666666666667,
+      "scale": 1.7066666666666668,
       "sourceFrame": [
         75,
         74
       ],
       "displayFrame": [
-        40,
-        39
+        64,
+        63
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1.6
     },
     "dec.naval-warfare-steel-refinery-wreck": {
       "source": "NATURAL BUILDING/Steel Refinery/2.png",
-      "scale": 1.0666666666666667,
+      "scale": 1.7066666666666668,
       "sourceFrame": [
         105,
         74
       ],
       "displayFrame": [
-        56,
-        39
+        90,
+        63
       ],
       "minimumSizeFactor": 1
     },
@@ -20339,7 +20372,8 @@
         30,
         22
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1
     },
     "u.naval-warfare-wall-3-3": {
       "source": "NATURAL BUILDING/Wall's/Башня.png",
@@ -20352,7 +20386,8 @@
         10,
         20
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1
     },
     "u.naval-warfare-wall-3-1": {
       "source": "NATURAL BUILDING/Wall's/Wall 3x1.png",
@@ -20365,7 +20400,8 @@
         15,
         41
       ],
-      "minimumSizeFactor": 1
+      "minimumSizeFactor": 1,
+      "buildingScaleFactor": 1
     }
   },
   "sounds": {

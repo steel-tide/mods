@@ -4,7 +4,7 @@ import {resolve} from 'node:path';
 import {tmpdir} from 'node:os';
 import {pathToFileURL} from 'node:url';
 import {once} from 'node:events';
-const here=import.meta.dirname,game=resolve(here,'../../../steel-tide/game/core');
+const here=import.meta.dirname,game=resolve(here,'../../../steel-tide-game/game/core');
 const {launchChrome,Page}=await import(pathToFileURL(resolve(game,'scripts/lib/chrome.mjs')));
 const origin=process.env.GAME_ORIGIN??'http://127.0.0.1:5209';
 const profile=mkdtempSync(resolve(tmpdir(),'naval-warfare-browser-'));
@@ -20,9 +20,9 @@ try{
  await page.metrics(1600,1200,1);
  await page.onNewDocument(`localStorage.setItem('steeltide.settings',JSON.stringify({graphicsPreset:'high',lang:'en',musicVolume:0,voiceVolume:0}));localStorage.setItem('steeltide.guideShown','true');window.__nwErrors=[];addEventListener('error',e=>__nwErrors.push(e.error?.stack??e.message));addEventListener('unhandledrejection',e=>__nwErrors.push(String(e.reason)));`);
  await page.goto(origin);
- await page.waitFor('!!document.querySelector(".screen") || /PRESS ANY KEY/i.test(document.body.innerText)',120000);
- await page.send('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
- await page.send('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
+ await page.waitFor('!!document.querySelector(".screen") || !!document.querySelector("#boot-start")',120000);
+ await page.send('Input.dispatchKeyEvent',{type:'keyDown',key:' ',code:'Space',windowsVirtualKeyCode:32});
+ await page.send('Input.dispatchKeyEvent',{type:'keyUp',key:' ',code:'Space',windowsVirtualKeyCode:32});
  await page.waitFor('!!document.querySelector(".screen")',120000);
  await page.eval(`(async()=>{const {showScreen}=await import('/src/ui/screens.ts'),{SettingsScreen}=await import('/src/ui/settingsPage.ts');showScreen(new SettingsScreen('mods'));})()`);
  await page.waitFor('!!document.querySelector("input[webkitdirectory]")');
@@ -41,6 +41,16 @@ try{
  report.runtime=await page.eval(`(async()=>{const {DEFS}=await import('/src/game/defs.ts'),{contentRuntime}=await import('/src/game/contentGame.ts');__screen.paused=true;window.requestAnimationFrame=()=>0;__game.st.cfg.fog=false;__game.st.cfg.mode='campaign';__game.updateFog();return {missing:${JSON.stringify(manifest.defs.map(d=>d.id))}.filter(id=>!DEFS[id]),modules:contentRuntime(__game)?.modules.map(m=>m.id),renderer:__screen.renderer.constructor.name};})()`);
  check(!report.runtime.missing.length&&report.runtime.modules.includes('naval-warfare.systems-v1'),'All definitions and extension must load');
  console.log('Runtime loaded',JSON.stringify(report.runtime));
+ report.buildings=await page.eval(`(async()=>{
+   const {getDef}=await import('/src/game/defs.ts'),{getSprite}=await import('/src/gfx/atlas.ts');
+   return ${JSON.stringify(manifest.defs.filter(d=>d.kind==='building').map(d=>d.id))}.map(id=>{
+     const d=getDef(id),s=getSprite(d.sprite);return {id,footprint:[d.fw,d.fh],frame:s&&[s.fw,s.fh]};
+   });
+ })()`);
+ for(const building of report.buildings){
+   const d=manifest.defs.find(d=>d.id===building.id),s=manifest.sprites.find(s=>s.key===d.sprite);
+   check(JSON.stringify(building.frame)===JSON.stringify([s.fw,s.fh]),'Building must render at its declared size: '+building.id);
+ }
  report.fleet=await page.eval(`(async()=>{const g=__game,s=__screen,o=__orders;const {getDef}=await import('/src/game/defs.ts');o.cmdWorldRemove(g,[...g.st.ents.keys()],'removed');const at=(name,owner,x,y,a=-Math.PI/2)=>o.cmdWorldSpawn(g,{id:'nw-'+name,defId:name,owner,x:x*32,y:y*32,angle:a,holdPos:true,holdFire:true});const w=g.st.map.w,h=g.st.map.h;g.st.map.terrain.fill(1);g.st.map.deposits=[];g.st.map.overlays=undefined;g.st.map.decor=[];for(let y=0;y<h;y++)for(let x=0;x<18;x++)g.st.map.terrain[y*w+x]=3;s.renderer.invalidateTerrainArt();const ids=[at(${JSON.stringify(id('CVN-74'))},0,36,35),at(${JSON.stringify(id('DDG-105'))},0,28,35),at(${JSON.stringify(id('CG-72'))},0,45,36),at(${JSON.stringify(id('Admiral_Nakhimov'))},1,57,35),at(${JSON.stringify(id('F-35C'))},0,37,29),at(${JSON.stringify(id('F-18'))},0,40,29),at(${JSON.stringify(id('Borei'))},1,55,44)];for(let i=0;i<3;i++)__step(1);s.input.view.selection.clear();s.input.view.selection.add(ids[0]);s.cam.zoom=1.15*s.cam.scale;s.cam.centerOn(40*32,35*32);__step(0);return {ids,units:ids.map(id=>({id,definition:g.st.ents.get(id)?.defId,cargo:g.st.ents.get(id)?.cargo?.length})),pictures:ids.map(id=>{const e=g.st.ents.get(id),p=s.renderer.pictureOf(e,getDef(e.defId),1);return {id,body:!!p.body,mounts:p.rings.length};})};})()`);
  check(report.fleet.pictures.every(p=>p.body),'Every showcased body must render');
  await screenshot('fleet');
@@ -89,7 +99,7 @@ try{
  check(report.gallery.combat.projectiles>0,'Gallery engagement must contain actual firing');
  await screenshot('naval-engagement');
  report.gallery.harbor=await page.eval(`(()=>{
-   const scene=__nwGallery({x:40,y:33,zoom:3.2,shore:42,plaza:true,units:[
+   const scene=__nwGallery({x:40,y:33,zoom:2.6,shore:42,plaza:true,units:[
      ['USHQ',0,34,28],['USF',0,34,32],['USF',0,38.5,28],['C-Ram',0,40,29.5],
      ['Crane Us',0,38,32.5],['Helipad  US',0,34,36],['US_NavalDepot',0,39,36],
      ['USDCK',0,42,32],['Excavator US',0,36,30],['MBT1',0,36,35],

@@ -16,7 +16,7 @@ complete Rusted Warfare parity.
 | Replace vanilla `commandCenter` with `OT_factionSelector` | Ordinary mods are additive and cannot override vanilla definitions. | Five native setup factions replace this integration point. |
 | Ordinary definition weapon/card limit | Eight native weapons per definition; source ships can have many more. | Package owns all gun clocks, targeting and firing; native HUD lists eight. No gun is dropped solely for that limit. |
 | Native vision bound | Several source AWACS request 400–500 RW tiles of sight. | Native vision capped at 64 Steel Tide tiles. A larger authored sensor/vision policy would be further package work. |
-| Sheet dimensions and whole-tile building footprints | Source uses very small art and fractional physical dimensions. | Preserve source pixels; record four-pixel minimum adjustments and whole-tile rounding. |
+| Sheet dimensions and whole-tile building footprints | Source uses very small art and fractional physical dimensions. | Preserve source pixels; enlarge compact buildings with matching native footprints and attached-part geometry (see README). Record each building scale factor and four-pixel minimum adjustment. |
 
 The map-size limits and adds-only rule are confirmed limits. Original
 currencies, particle systems, scripted flight and other items below are **not

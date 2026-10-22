@@ -1,19 +1,19 @@
 import { beforeAll, expect, test } from 'bun:test';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { prepareContentSchema } from '../../../steel-tide/game/core/src/game/contentSchema';
-import { parseDefinitionPack } from '../../../steel-tide/game/core/src/game/contentDefs';
-import { applyContent } from '../../../steel-tide/game/core/src/game/content';
-import { prepareContentCapabilities } from '../../../steel-tide/game/core/src/game/contentCapabilities';
-import { contentRuntime, createContentGame } from '../../../steel-tide/game/core/src/game/contentGame';
-import { getDef } from '../../../steel-tide/game/core/src/game/defs';
-import { newEnt } from '../../../steel-tide/game/core/src/game/state';
-import { cmdContentAction, cmdProduce } from '../../../steel-tide/game/core/src/game/orders';
-import { cmdRuleButton } from '../../../steel-tide/game/core/src/game/modRules';
-import { serializeGame, deserializeGame } from '../../../steel-tide/game/core/src/game/save';
-import { arena, arenaMap } from '../../../steel-tide/game/core/server/testkit/game';
-import { Terrain } from '../../../steel-tide/game/core/src/core/types';
-import { buildGameMap } from '../../../steel-tide/game/core/src/game/mapdefs';
+import { prepareContentSchema } from '../../../steel-tide-game/game/core/src/game/contentSchema';
+import { parseDefinitionPack } from '../../../steel-tide-game/game/core/src/game/contentDefs';
+import { applyContent } from '../../../steel-tide-game/game/core/src/game/content';
+import { prepareContentCapabilities } from '../../../steel-tide-game/game/core/src/game/contentCapabilities';
+import { contentRuntime, createContentGame } from '../../../steel-tide-game/game/core/src/game/contentGame';
+import { getDef } from '../../../steel-tide-game/game/core/src/game/defs';
+import { newEnt } from '../../../steel-tide-game/game/core/src/game/state';
+import { cmdContentAction, cmdProduce } from '../../../steel-tide-game/game/core/src/game/orders';
+import { cmdRuleButton } from '../../../steel-tide-game/game/core/src/game/modRules';
+import { serializeGame, deserializeGame } from '../../../steel-tide-game/game/core/src/game/save';
+import { arena, arenaMap } from '../../../steel-tide-game/game/core/server/testkit/game';
+import { Terrain } from '../../../steel-tide-game/game/core/src/core/types';
+import { buildGameMap } from '../../../steel-tide-game/game/core/src/game/mapdefs';
 
 const ID='naval-warfare.systems-v1';
 const here=import.meta.dir;
@@ -100,6 +100,16 @@ test('ownership, insufficient funds and invalid strike coordinates leave state u
   g.st.players[0].metal=0;
   expect(cmdContentAction(g,ID,{owner:0,ids:[factory.id],action:'action_buildB'})).toBe(false);
   expect(JSON.stringify(module.snapshot())).toBe(before);
+});
+test('enlarged bases reserve their full footprint during crane construction',()=>{
+  const {g}=scene();newEnt(g.st,id('USHQ'),0,900,900);
+  const crane=newEnt(g.st,id('Crane Us'),0,1000,800);ticks(g,1);
+  const action='construct/'+id('USF'),before=g.st.players[0].metal;
+  // Two tiles between centers used to fit the one-tile bases, but overlaps 3×3 bases.
+  expect(cmdContentAction(g,ID,{owner:0,ids:[crane.id],action,x:960,y:960})).toBe(false);
+  expect(g.st.players[0].metal).toBe(before);
+  expect([...g.st.ents.values()].some(e=>e.defId===id('USF'))).toBe(false);
+  expect(cmdContentAction(g,ID,{owner:0,ids:[crane.id],action,x:1088,y:960})).toBe(true);
 });
 test('carrier starts with the source mixed aircraft, and launch/recovery retain ownership',()=>{
   const {g,module}=scene(true),carrier=newEnt(g.st,id('Admiral Kuznetsov Aircraft Carrier'),0,1700,1700);

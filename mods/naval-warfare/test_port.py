@@ -4,7 +4,7 @@ import json
 import unittest
 from pathlib import Path
 from PIL import Image
-from port import HERE, RW, load, EXCLUDED, CAP, seconds, resource, metal
+from port import HERE, RW, load, EXCLUDED, CAP, NATIONS, WORLD, seconds, resource, metal, num
 
 class SourcePort(unittest.TestCase):
     @classmethod
@@ -52,6 +52,47 @@ class SourcePort(unittest.TestCase):
             with Image.open(original) as a,Image.open(HERE/sheet['file']) as b:
                 self.assertEqual(a.convert('RGBA').size,b.size)
                 self.assertEqual(a.convert('RGBA').tobytes(),b.convert('RGBA').tobytes(),sheet['key'])
+
+    def test_national_bases_have_full_size_art_and_placement_footprints(self):
+        sheets={s['key']:s for s in self.mod['sprites']}
+        names=[name for _,hq,factory,_ in NATIONS.values() for name in (hq,factory)]
+        names+=['CHDCK','JPDCK','AFPD','RUDCK','USDCK']
+        for name in names:
+            d=self.defs[self.units[name]['id']];s=sheets[d['sprite']]
+            self.assertEqual((d['fw'],d['fh']),(3,3),name)
+            self.assertEqual(s['fw'],96,name)
+            self.assertFalse(s['fitFootprint'],name)
+            self.assertEqual(s['anchorY'],round(s['fh']/2),name)
+        for name in ('Helipad PLA','Helipad JSDF','Helipad  AFP','Helipad  US','Helipad RU'):
+            d=self.defs[self.units[name]['id']];s=sheets[d['sprite']]
+            self.assertEqual((d['fw'],d['fh']),(2,2),name)
+            self.assertEqual((s['fw'],s['fh']),(64,64),name)
+
+    def test_enlarged_building_parts_and_muzzles_keep_their_source_alignment(self):
+        for name in ('Crane Us','C-Ram','IRON DOME','JPASMS','nukeLauncher'):
+            e=self.units[name];d=self.defs[e['id']];ini=e['ini'];c=d['extensions'][CAP]
+            factor=self.report['images'][d['sprite']]['buildingScaleFactor']
+            self.assertGreater(factor,1,name)
+            for mount in c['mounts']:
+                source=ini.get('turret_'+mount['id'],ini.get(mount['id']))
+                for field,sign in (('x',1),('y',-1)):
+                    self.assertAlmostEqual(mount[field],sign*num(source.get(field))*WORLD*factor,places=3,msg=name)
+            for gun in c['guns']:
+                turret=ini['turret_'+gun['id']];attack=ini.get('attack',{})
+                muzzle=max(0,num(turret.get('barrelY',turret.get('size',attack.get('turretSize')))))
+                self.assertAlmostEqual(gun['muzzle'],muzzle*WORLD*factor,places=3,msg=name)
+            if c.get('wreck'):
+                body=self.report['images'][d['sprite']];wreck=self.report['images'][c['wreck']]
+                self.assertEqual(body['scale'],wreck['scale'],name)
+
+    def test_large_bases_and_mobile_units_keep_their_original_scale(self):
+        for d in self.mod['defs']:
+            art=self.report['images'][d['sprite']]
+            if d['kind']=='unit':
+                self.assertNotIn('buildingScaleFactor',art,d['id'])
+        for name in ('USAF Air Base','Nuclear_factory','Nuclear_factoryC'):
+            d=self.defs[self.units[name]['id']]
+            self.assertEqual(self.report['images'][d['sprite']]['buildingScaleFactor'],1,name)
 
     def test_package_hashes_match_reviewable_source(self):
         package=self.mod['extensionPackages'][0]

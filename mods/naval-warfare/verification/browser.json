@@ -1,13 +1,13 @@
 {
-  "packVersion": "0.1.0",
+  "packVersion": "0.1.2",
   "origin": "http://127.0.0.1:5209",
   "errors": [],
   "screenshots": [
-    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/fleet.jpg",
-    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/construction.jpg",
-    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/carrier-operations.jpg",
-    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/naval-engagement.jpg",
-    "/Users/rivertwilight/Developer/steel-tide-mods/mods/naval-warfare/screenshots/harbor-base.jpg"
+    "/Users/rivertwilight/Developer/steel-tide/steel-tide-mods/mods/naval-warfare/screenshots/fleet.jpg",
+    "/Users/rivertwilight/Developer/steel-tide/steel-tide-mods/mods/naval-warfare/screenshots/construction.jpg",
+    "/Users/rivertwilight/Developer/steel-tide/steel-tide-mods/mods/naval-warfare/screenshots/carrier-operations.jpg",
+    "/Users/rivertwilight/Developer/steel-tide/steel-tide-mods/mods/naval-warfare/screenshots/naval-engagement.jpg",
+    "/Users/rivertwilight/Developer/steel-tide/steel-tide-mods/mods/naval-warfare/screenshots/harbor-base.jpg"
   ],
   "import": {
     "enabled": true,
@@ -156,80 +156,753 @@
     ],
     "renderer": "NavalWarfareRenderer"
   },
+  "buildings": [
+    {
+      "id": "naval-warfare-pla-air-base",
+      "footprint": [
+        8,
+        4
+      ],
+      "frame": [
+        512,
+        159
+      ]
+    },
+    {
+      "id": "naval-warfare-cn-crane",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        48,
+        63
+      ]
+    },
+    {
+      "id": "naval-warfare-chdck",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        104
+      ]
+    },
+    {
+      "id": "naval-warfare-plaf",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-chhq",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-ch-navaldepot",
+      "footprint": [
+        2,
+        3
+      ],
+      "frame": [
+        64,
+        86
+      ]
+    },
+    {
+      "id": "naval-warfare-jsdf-air-base",
+      "footprint": [
+        8,
+        4
+      ],
+      "frame": [
+        512,
+        159
+      ]
+    },
+    {
+      "id": "naval-warfare-jsdf-crane",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        48,
+        63
+      ]
+    },
+    {
+      "id": "naval-warfare-jpdck",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        104
+      ]
+    },
+    {
+      "id": "naval-warfare-jsdff",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-jphq",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-jp-navaldepot",
+      "footprint": [
+        2,
+        3
+      ],
+      "frame": [
+        64,
+        86
+      ]
+    },
+    {
+      "id": "naval-warfare-afp-crane",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        48,
+        63
+      ]
+    },
+    {
+      "id": "naval-warfare-afpd",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        80
+      ]
+    },
+    {
+      "id": "naval-warfare-afpf",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-republic-of-philippines",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        55
+      ]
+    },
+    {
+      "id": "naval-warfare-afp-navaldepot",
+      "footprint": [
+        2,
+        3
+      ],
+      "frame": [
+        64,
+        86
+      ]
+    },
+    {
+      "id": "naval-warfare-nasams",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        14,
+        36
+      ]
+    },
+    {
+      "id": "naval-warfare-afp-air-base",
+      "footprint": [
+        8,
+        4
+      ],
+      "frame": [
+        512,
+        159
+      ]
+    },
+    {
+      "id": "naval-warfare-nasamsrue",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        13,
+        32
+      ]
+    },
+    {
+      "id": "naval-warfare-russian-federatio-11dff2fc",
+      "footprint": [
+        8,
+        4
+      ],
+      "frame": [
+        512,
+        159
+      ]
+    },
+    {
+      "id": "naval-warfare-kortik",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        8,
+        32
+      ]
+    },
+    {
+      "id": "naval-warfare-crane-ru",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        48,
+        63
+      ]
+    },
+    {
+      "id": "naval-warfare-rudck",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        104
+      ]
+    },
+    {
+      "id": "naval-warfare-ruf",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-ruhq",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-ru-navaldepot",
+      "footprint": [
+        2,
+        3
+      ],
+      "frame": [
+        64,
+        86
+      ]
+    },
+    {
+      "id": "naval-warfare-nasamsru",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        32,
+        29
+      ]
+    },
+    {
+      "id": "naval-warfare-usaf-air-base",
+      "footprint": [
+        8,
+        4
+      ],
+      "frame": [
+        512,
+        159
+      ]
+    },
+    {
+      "id": "naval-warfare-c-ram",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        8,
+        32
+      ]
+    },
+    {
+      "id": "naval-warfare-crane-us",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        48,
+        63
+      ]
+    },
+    {
+      "id": "naval-warfare-usdck",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        104
+      ]
+    },
+    {
+      "id": "naval-warfare-usf",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-ushq",
+      "footprint": [
+        3,
+        3
+      ],
+      "frame": [
+        96,
+        110
+      ]
+    },
+    {
+      "id": "naval-warfare-iron-dome",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        32,
+        16
+      ]
+    },
+    {
+      "id": "naval-warfare-us-navaldepot",
+      "footprint": [
+        2,
+        3
+      ],
+      "frame": [
+        64,
+        86
+      ]
+    },
+    {
+      "id": "naval-warfare-nuclear-factory",
+      "footprint": [
+        4,
+        3
+      ],
+      "frame": [
+        108,
+        149
+      ]
+    },
+    {
+      "id": "naval-warfare-nuclear-factory1",
+      "footprint": [
+        4,
+        3
+      ],
+      "frame": [
+        108,
+        149
+      ]
+    },
+    {
+      "id": "naval-warfare-nuclear-factory2",
+      "footprint": [
+        4,
+        3
+      ],
+      "frame": [
+        108,
+        149
+      ]
+    },
+    {
+      "id": "naval-warfare-nuclear-factory3",
+      "footprint": [
+        4,
+        3
+      ],
+      "frame": [
+        108,
+        149
+      ]
+    },
+    {
+      "id": "naval-warfare-nuclear-factoryc",
+      "footprint": [
+        4,
+        3
+      ],
+      "frame": [
+        108,
+        149
+      ]
+    },
+    {
+      "id": "naval-warfare-nuclear-factoryc1",
+      "footprint": [
+        4,
+        3
+      ],
+      "frame": [
+        108,
+        149
+      ]
+    },
+    {
+      "id": "naval-warfare-nuclear-factoryc2",
+      "footprint": [
+        4,
+        3
+      ],
+      "frame": [
+        108,
+        149
+      ]
+    },
+    {
+      "id": "naval-warfare-oil-extract",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "naval-warfare-steelextractor",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "naval-warfare-jpasms",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        19,
+        32
+      ]
+    },
+    {
+      "id": "naval-warfare-helipad-pla",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "naval-warfare-helipad-jsdf",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "naval-warfare-helipad-afp",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "naval-warfare-helipad-us",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "naval-warfare-helipad-ru",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "naval-warfare-oilextractor",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "naval-warfare-nukelauncher",
+      "footprint": [
+        2,
+        3
+      ],
+      "frame": [
+        64,
+        104
+      ]
+    },
+    {
+      "id": "naval-warfare-oil-refinery",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        80,
+        32
+      ]
+    },
+    {
+      "id": "naval-warfare-ruextractor",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        93
+      ]
+    },
+    {
+      "id": "naval-warfare-oil-extract-ru",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        93
+      ]
+    },
+    {
+      "id": "naval-warfare-steelextractor-ru",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        93
+      ]
+    },
+    {
+      "id": "naval-warfare-steel-refinery",
+      "footprint": [
+        2,
+        2
+      ],
+      "frame": [
+        64,
+        63
+      ]
+    },
+    {
+      "id": "naval-warfare-wall-1-3",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        30,
+        22
+      ]
+    },
+    {
+      "id": "naval-warfare-wall-3-3",
+      "footprint": [
+        1,
+        1
+      ],
+      "frame": [
+        10,
+        20
+      ]
+    },
+    {
+      "id": "naval-warfare-wall-3-1",
+      "footprint": [
+        1,
+        2
+      ],
+      "frame": [
+        15,
+        41
+      ]
+    }
+  ],
   "fleet": {
     "ids": [
+      265,
+      266,
       267,
       268,
       269,
       270,
-      271,
-      272,
-      273
+      271
     ],
     "units": [
       {
-        "id": 267,
+        "id": 265,
         "definition": "naval-warfare-cvn-74",
         "cargo": 5
       },
       {
-        "id": 268,
+        "id": 266,
         "definition": "naval-warfare-ddg-105"
       },
       {
-        "id": 269,
+        "id": 267,
         "definition": "naval-warfare-cg-72"
       },
       {
-        "id": 270,
+        "id": 268,
         "definition": "naval-warfare-admiral-nakhimov"
       },
       {
-        "id": 271,
+        "id": 269,
         "definition": "naval-warfare-f-35c"
       },
       {
-        "id": 272,
+        "id": 270,
         "definition": "naval-warfare-f-18"
       },
       {
-        "id": 273,
+        "id": 271,
         "definition": "naval-warfare-borei"
       }
     ],
     "pictures": [
       {
-        "id": 267,
+        "id": 265,
         "body": true,
         "mounts": 5
       },
       {
-        "id": 268,
+        "id": 266,
         "body": true,
         "mounts": 4
       },
       {
-        "id": 269,
+        "id": 267,
         "body": true,
         "mounts": 6
       },
       {
-        "id": 270,
+        "id": 268,
         "body": true,
         "mounts": 5
       },
       {
+        "id": 269,
+        "body": true,
+        "mounts": 0
+      },
+      {
+        "id": 270,
+        "body": true,
+        "mounts": 0
+      },
+      {
         "id": 271,
-        "body": true,
-        "mounts": 0
-      },
-      {
-        "id": 272,
-        "body": true,
-        "mounts": 0
-      },
-      {
-        "id": 273,
         "body": true,
         "mounts": 0
       }
@@ -297,9 +970,9 @@
     }
   },
   "construction": {
-    "hq": 279,
-    "crane": 280,
-    "builder": 281,
+    "hq": 277,
+    "crane": 278,
+    "builder": 279,
     "ok": true,
     "actions": [
       [
@@ -384,7 +1057,7 @@
       ]
     ],
     "site": {
-      "id": 282,
+      "id": 280,
       "building": "naval-warfare-usf",
       "underConstruction": true,
       "hp": 1.4
@@ -393,13 +1066,13 @@
   "gallery": {
     "carrier": {
       "spawned": [
+        281,
+        282,
         283,
         284,
         285,
         286,
-        287,
-        288,
-        289
+        287
       ],
       "units": [
         "Gerald R. Ford Aircraft Carrier",
@@ -414,12 +1087,12 @@
     },
     "combat": {
       "spawned": [
+        290,
+        291,
         292,
         293,
         294,
-        295,
-        296,
-        297
+        295
       ],
       "units": [
         "SimpleIowa",
@@ -434,6 +1107,8 @@
     },
     "harbor": {
       "spawned": [
+        296,
+        297,
         298,
         299,
         300,
@@ -445,9 +1120,7 @@
         306,
         307,
         308,
-        309,
-        310,
-        311
+        309
       ],
       "units": [
         "USHQ",

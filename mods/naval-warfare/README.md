@@ -82,9 +82,16 @@ converts RW's 20-pixel tiles to Steel Tide's 32-pixel tiles and is bounded by
 the native 64-tile limit. Converted gameplay stats use at most two decimal
 places, including matching weapon-card and package combat values. Internal
 angles, art geometry and small simulation coefficients retain their precision.
-HP and damage are not compressed. Very small art is
-enlarged only as required by the four-pixel sheet minimum; the exact factors
-are recorded per sheet in the report. Buildings snap to whole native tiles.
+HP and damage are not compressed. Buildings use larger native-scale layouts:
+headquarters, factories and shipyards occupy 3×3 tiles with 96-pixel-wide art;
+cranes and helipads occupy 2×2 tiles. Extractors and other support buildings
+fill their existing footprint width, and small defenses have at least a
+32-pixel-long silhouette. Airfields, reactors and walls keep their source
+scale. Each enlargement preserves the artwork's aspect ratio and scales its
+turrets, arms, muzzle offsets and wreck together; weapon ranges, damage and
+mobile units retain the original conversion. The per-sheet
+`buildingScaleFactor` records this adaptation. Other very small art is enlarged
+only as required by the four-pixel sheet minimum.
 
 This is a local review build. Read [COMPATIBILITY.md](COMPATIBILITY.md) for
 real engine limits, explicit adaptations, remaining package work and source
@@ -95,7 +102,7 @@ published or pushed.
 ## Rebuild and verify
 
 Run from the repository root, with Python/Pillow, FFmpeg, Node 22+ and Bun.
-The simulation/browser tests use the existing sibling `steel-tide` checkout
+The simulation/browser tests use the existing sibling `steel-tide-game` checkout
 read-only. No game source is copied into the embedded extension.
 
 ```sh
