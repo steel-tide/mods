@@ -8,7 +8,7 @@ import {once} from 'node:events';
 if (typeof Bun === 'undefined') throw Error('Run this standalone WebSocket verifier with Bun.');
 const args=process.argv.slice(2),arg=(name,fallback)=>{const i=args.indexOf(name);return i<0?fallback:args[i+1]};
 const binary=resolve(arg('--server','../steel-tide/game/core/release/steel-tide-server/steel-tide-server'));
-const packagePath=resolve(arg('--package','mods/usgr-re/mod.json'));
+const packagePath=resolve(arg('--package','mods/ucgr/mod.json'));
 const fixture=JSON.parse(readFileSync(arg('--world','dist/external-production/worker-world.json'),'utf8'));
 const out=arg('--out','docs/engine-compatibility/2026-10-16-external-packages/standalone-server.json');
 const data=mkdtempSync(resolve(tmpdir(),'steel-extension-server-'));

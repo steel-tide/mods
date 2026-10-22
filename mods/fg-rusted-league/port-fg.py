@@ -639,7 +639,10 @@ ROSTER = [
     ("固定火箭炮", "rocket-launcher-fixed", "Multiple Rocket Launcher (deployed)", "Dug in: a longer reach and a quicker salvo, and it cannot move.",
      dict(kind=U, tier=2, armor="light", trail="tire", arc=True, form=True, price_of="MRLS", turret_of="rocket-launcher", zh_name="固定火箭炮", zh="转化固定模式，射程更远、攻速更快，无法移动。")),
     ("edd", "minelayer", "Minelayer", "Lays mines that crawl after the enemy; ground only.",
-     dict(kind=U, tier=1, armor="medium", trail="tread")),
+     dict(kind=U, tier=1, armor="medium", trail="tread", manual_turrets=["b"])),
+    ("egg", "widow-mine", "Widow Mine", "Waits for a nearby surface enemy, then releases a homing explosive. Laid by the Minelayer.",
+     dict(kind=U, tier=1, domain="ground", form=True, pop=0, hp=6, armor="light", trail="none", zh_name="寡妇雷",
+          zh="由雷车部署。等待附近的地面或水下敌人，随后发射追踪爆弹；不会攻击飞机。")),
     ("hea", "tank-killer", "Tank Killer", "A mobile gun with a long reach and a long reload.",
      dict(kind=U, tier=2, armor="medium", trail="tread")),
     ("hjkl", "flame-tank", "Flame Tank", "Close-range fire over an area.",
@@ -1229,6 +1232,8 @@ def convert_weapons(ini, d, domain, ov, who, rings=False):
 
     groups = {}
     for s, kv in secs.items():
+        if s[len("turret_"):] in ov.get("manual_turrets", []):
+            continue  # fired by a paid action, never an automatic weapon
         if boolish(kv.get("canShoot"), True) is False:
             continue
         proj = (kv.get("projectile") or "").strip()
@@ -1927,7 +1932,7 @@ def main():
         "v": 2,
         "id": MOD_ID,
         "name": ["FG Rusted League", "FG 铁锈联盟"],
-        "version": "0.4.1",
+        "version": "0.5.0",
         "minGame": MIN_GAME,
         "author": "空中之主 (art by 有人, 基卡 and SS元首)",
         "description": [desc_en, desc_zh],

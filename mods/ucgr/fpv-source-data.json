@@ -1,0 +1,1392 @@
+{
+  "operator": {
+    "drones": [
+      "usgr-re-fpv",
+      "usgr-re-fpvpg7v",
+      "usgr-re-fpvrpom"
+    ],
+    "stock": 10,
+    "range": 600,
+    "deployTime": 2,
+    "check": 0.13333333333333333,
+    "cooldown": 1.0,
+    "reconDelay": 5,
+    "attackDelay": 10
+  },
+  "drones": [
+    {
+      "id": "usgr-re-fpv",
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 0,
+      "buildTime": 1,
+      "hp": 60.0,
+      "speed": 68.4,
+      "turnRate": 9.42477796076938,
+      "radius": 10.0,
+      "vision": 5.0,
+      "armor": "air",
+      "power": 0,
+      "pop": 0,
+      "trail": "none",
+      "producedBy": [],
+      "aiWeight": 0,
+      "hovers": true,
+      "altitude": 10.0,
+      "name": [
+        "FPV",
+        "FPV",
+        "FPV 정찰 드론"
+      ],
+      "desc": [
+        "FPV",
+        "FPV",
+        "FPV"
+      ],
+      "weapons": [
+        {
+          "id": "mark",
+          "cls": "cannon",
+          "range": 4.375,
+          "dmg": 0,
+          "reload": 3,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "_source": {
+            "turret": "turret_laser",
+            "projectile": "projectile_3"
+          },
+          "extensions": {
+            "components-v1": {
+              "family": "ordinary",
+              "penetration": 0,
+              "ordinary": {
+                "ignore": 0.0,
+                "multipliers": []
+              },
+              "hpPhases": []
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "components-v1": {
+          "parts": [],
+          "sourceMovement": {
+            "speed": 2.85,
+            "acceleration": 1.0,
+            "deceleration": 1.0,
+            "turn": 9.0,
+            "turnAcceleration": 9.0,
+            "yScale": 1.0
+          }
+        },
+        "sensors-v1": {
+          "fpvDrone": {
+            "role": "recon",
+            "energy": 300.0,
+            "regen": -6.0,
+            "linkDrain": 100,
+            "speed": 68.4,
+            "acceleration": 2030.3999999999999,
+            "deceleration": 2030.3999999999999,
+            "turnRate": 9.42477796076938,
+            "turnAcceleration": 565.4866776461628,
+            "height": 10.0,
+            "range": 140,
+            "reload": 3,
+            "payloads": []
+          },
+          "unmanned": true
+        },
+        "usgr-re.targeting-v1": {
+          "tags": [
+            "UAV"
+          ]
+        }
+      }
+    },
+    {
+      "id": "usgr-re-fpvpg7v",
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 0,
+      "buildTime": 1,
+      "hp": 60.0,
+      "speed": 78.0,
+      "turnRate": 9.42477796076938,
+      "radius": 10.0,
+      "vision": 2.5,
+      "armor": "air",
+      "power": 0,
+      "pop": 0,
+      "trail": "none",
+      "producedBy": [],
+      "aiWeight": 0,
+      "hovers": true,
+      "altitude": 10.0,
+      "name": [
+        "FPV-HEAT Warhead",
+        "FPV-破甲弹头",
+        "FPV 성형작약 드론"
+      ],
+      "desc": [
+        "FPV",
+        "FPV",
+        "FPV"
+      ],
+      "weapons": [
+        {
+          "id": "primary",
+          "cls": "cannon",
+          "range": 0.5,
+          "dmg": 0,
+          "reload": 20,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "_source": {
+            "turret": "turret_自爆",
+            "projectile": "projectile_弹药"
+          },
+          "extensions": {
+            "components-v1": {
+              "family": "ordinary",
+              "penetration": 0,
+              "ordinary": {
+                "ignore": 0.0,
+                "multipliers": []
+              },
+              "hpPhases": [
+                {
+                  "direct": 6.0,
+                  "area": 60.0,
+                  "radius": 20.0,
+                  "ignore": 0.0,
+                  "fromEdge": false,
+                  "noFalloff": false,
+                  "friendly": false,
+                  "targetGround": false,
+                  "mutators": []
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "payload-0",
+          "cls": "cannon",
+          "range": 0.5,
+          "dmg": 0,
+          "reload": 20,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "_source": {
+            "helper": {
+              "source": "弹药/步兵武器/PG-7VFPV.ini",
+              "projectile": "projectile_b"
+            }
+          },
+          "extensions": {
+            "components-v1": {
+              "family": "chemical",
+              "friendlyFire": false,
+              "strength": 25.0,
+              "sourceWeak": {
+                "roll": 80,
+                "multiplier": 0.25
+              },
+              "channels": {
+                "rack": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0,
+                    0
+                  ]
+                },
+                "crew": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.25,
+                    0.25
+                  ]
+                },
+                "drive": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.5,
+                    0.5
+                  ]
+                },
+                "reserve": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.25,
+                    0.25
+                  ]
+                }
+              },
+              "channelScale": {
+                "engine": 1.0,
+                "track": 10.0
+              },
+              "wear": 0.325,
+              "layerScale": {
+                "front": 0.828,
+                "side": 0.742,
+                "rear": 0.742,
+                "top": 1
+              },
+              "residual": {
+                "base": 0.5,
+                "scale": 1,
+                "max": 1
+              },
+              "blast": {
+                "yield": 0.98,
+                "radius": 12.4,
+                "poolCountOffset": 1,
+                "combined": true
+              },
+              "positiveArmor": true,
+              "penetration": 700.0,
+              "hullDamage": 0,
+              "diameter": 0.65,
+              "wearFaces": {
+                "rear": "side"
+              },
+              "collateralHullDamage": 0,
+              "experience": true,
+              "recipient": {
+                "range": 40,
+                "radiusSquared": 1.5
+              },
+              "sourceHelper": true,
+              "fragments": {
+                "penetrated": 2,
+                "blocked": 2,
+                "offset": 2,
+                "rounds": [
+                  {
+                    "motion": {
+                      "life": 0.5833333333333334,
+                      "speed": 72.0,
+                      "speedSpread": 48.0,
+                      "spread": 20.0,
+                      "vx": 0.0,
+                      "vy": 0.0,
+                      "vz": 24.0,
+                      "gravity": 12.0,
+                      "trueGravity": 0.0,
+                      "targetHeight": 4.0,
+                      "height": 0.0,
+                      "targetSpeed": 0.0,
+                      "acceleration": 144.0,
+                      "turn": -1.0471975511965976,
+                      "nearTurn": -1.0471975511965976,
+                      "delay": 0.0,
+                      "ground": true,
+                      "includeHeight": false,
+                      "noLead": false,
+                      "end": true
+                    },
+                    "hpPhases": [
+                      {
+                        "direct": 24.0,
+                        "area": 0.6,
+                        "radius": 0.4,
+                        "ignore": 0.0,
+                        "fromEdge": false,
+                        "noFalloff": false,
+                        "friendly": false,
+                        "targetGround": true,
+                        "mutators": []
+                      }
+                    ]
+                  },
+                  {
+                    "motion": {
+                      "life": 0.8333333333333334,
+                      "speed": 72.0,
+                      "speedSpread": 48.0,
+                      "spread": 20.0,
+                      "vx": 0.0,
+                      "vy": 0.0,
+                      "vz": 24.0,
+                      "gravity": 12.0,
+                      "trueGravity": 0.0,
+                      "targetHeight": 4.0,
+                      "height": 0.0,
+                      "targetSpeed": 0.0,
+                      "acceleration": 144.0,
+                      "turn": -1.0471975511965976,
+                      "nearTurn": -1.0471975511965976,
+                      "delay": 0.16666666666666666,
+                      "ground": true,
+                      "includeHeight": false,
+                      "noLead": false,
+                      "end": true
+                    },
+                    "hpPhases": [
+                      {
+                        "direct": 24.0,
+                        "area": 0.6,
+                        "radius": 0.4,
+                        "ignore": 0.0,
+                        "fromEdge": false,
+                        "noFalloff": false,
+                        "friendly": false,
+                        "targetGround": true,
+                        "mutators": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "ordinary": {
+                "ignore": 0.0,
+                "multipliers": [
+                  {
+                    "tag": "soldiers",
+                    "value": 5.0
+                  },
+                  {
+                    "tag": "FOB",
+                    "value": 2.0
+                  },
+                  {
+                    "tag": "装甲",
+                    "value": 10.0
+                  },
+                  {
+                    "tag": "轻装甲",
+                    "value": 10.0
+                  },
+                  {
+                    "tag": "战壕隐蔽",
+                    "value": 0.5
+                  }
+                ]
+              },
+              "hpPhases": [
+                {
+                  "direct": 0.0,
+                  "area": 3.0,
+                  "radius": 12.4,
+                  "ignore": 0.0,
+                  "fromEdge": false,
+                  "noFalloff": false,
+                  "friendly": false,
+                  "targetGround": false,
+                  "mutators": [
+                    {
+                      "with": [
+                        "soldiers"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 5.0
+                    },
+                    {
+                      "with": [
+                        "FOB"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 2.0
+                    },
+                    {
+                      "with": [
+                        "装甲"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 10.0
+                    },
+                    {
+                      "with": [
+                        "轻装甲"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 10.0
+                    },
+                    {
+                      "with": [
+                        "战壕隐蔽"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 0.5
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "payload-1",
+          "cls": "cannon",
+          "range": 0.5,
+          "dmg": 0,
+          "reload": 20,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "_source": {
+            "helper": {
+              "source": "弹药/步兵武器/PG-7V攻顶.ini",
+              "projectile": "projectile_b"
+            }
+          },
+          "extensions": {
+            "components-v1": {
+              "family": "chemical",
+              "penetration": 400.0,
+              "hullDamage": 0,
+              "strength": 30.0,
+              "diameter": 0.56,
+              "top": true,
+              "positiveArmor": true,
+              "exposureFace": "front",
+              "channels": {
+                "rack": {
+                  "strong": [
+                    0.5,
+                    1
+                  ],
+                  "weak": [
+                    0.1,
+                    0.1
+                  ]
+                },
+                "crew": {
+                  "strong": [
+                    0.5,
+                    1
+                  ],
+                  "weak": [
+                    0.1,
+                    0.1
+                  ]
+                },
+                "engine": {
+                  "strong": [
+                    0.5,
+                    1.0
+                  ],
+                  "weak": [
+                    0.5,
+                    0.5
+                  ]
+                },
+                "track": {
+                  "strong": [
+                    5.0,
+                    10.0
+                  ],
+                  "weak": [
+                    5.0,
+                    5.0
+                  ]
+                },
+                "reserve": {
+                  "strong": [
+                    1,
+                    1
+                  ],
+                  "weak": [
+                    1,
+                    1
+                  ]
+                }
+              },
+              "recipient": {
+                "range": 32,
+                "radiusSquared": 1.5
+              },
+              "collateralHullDamage": 0,
+              "sourceHelper": true,
+              "fragments": {
+                "penetrated": 2,
+                "blocked": 2,
+                "offset": 2,
+                "rounds": [
+                  {
+                    "motion": {
+                      "life": 0.5833333333333334,
+                      "speed": 72.0,
+                      "speedSpread": 48.0,
+                      "spread": 20.0,
+                      "vx": 0.0,
+                      "vy": 0.0,
+                      "vz": 24.0,
+                      "gravity": 12.0,
+                      "trueGravity": 0.0,
+                      "targetHeight": 4.0,
+                      "height": 0.0,
+                      "targetSpeed": 0.0,
+                      "acceleration": 144.0,
+                      "turn": -1.0471975511965976,
+                      "nearTurn": -1.0471975511965976,
+                      "delay": 0.0,
+                      "ground": true,
+                      "includeHeight": false,
+                      "noLead": false,
+                      "end": true
+                    },
+                    "hpPhases": [
+                      {
+                        "direct": 24.0,
+                        "area": 0.6,
+                        "radius": 0.4,
+                        "ignore": 0.0,
+                        "fromEdge": false,
+                        "noFalloff": false,
+                        "friendly": false,
+                        "targetGround": true,
+                        "mutators": []
+                      }
+                    ]
+                  },
+                  {
+                    "motion": {
+                      "life": 0.8333333333333334,
+                      "speed": 72.0,
+                      "speedSpread": 48.0,
+                      "spread": 20.0,
+                      "vx": 0.0,
+                      "vy": 0.0,
+                      "vz": 24.0,
+                      "gravity": 12.0,
+                      "trueGravity": 0.0,
+                      "targetHeight": 4.0,
+                      "height": 0.0,
+                      "targetSpeed": 0.0,
+                      "acceleration": 144.0,
+                      "turn": -1.0471975511965976,
+                      "nearTurn": -1.0471975511965976,
+                      "delay": 0.16666666666666666,
+                      "ground": true,
+                      "includeHeight": false,
+                      "noLead": false,
+                      "end": true
+                    },
+                    "hpPhases": [
+                      {
+                        "direct": 24.0,
+                        "area": 0.6,
+                        "radius": 0.4,
+                        "ignore": 0.0,
+                        "fromEdge": false,
+                        "noFalloff": false,
+                        "friendly": false,
+                        "targetGround": true,
+                        "mutators": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "ordinary": {
+                "ignore": 0.0,
+                "multipliers": [
+                  {
+                    "tag": "soldiers",
+                    "value": 5.0
+                  },
+                  {
+                    "tag": "FOB",
+                    "value": 2.0
+                  },
+                  {
+                    "tag": "装甲",
+                    "value": 10.0
+                  },
+                  {
+                    "tag": "轻装甲",
+                    "value": 10.0
+                  }
+                ]
+              },
+              "hpPhases": [
+                {
+                  "direct": 0.0,
+                  "area": 18.0,
+                  "radius": 20.0,
+                  "ignore": 0.0,
+                  "fromEdge": false,
+                  "noFalloff": false,
+                  "friendly": false,
+                  "targetGround": false,
+                  "mutators": [
+                    {
+                      "with": [
+                        "soldiers"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 5.0
+                    },
+                    {
+                      "with": [
+                        "FOB"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 2.0
+                    },
+                    {
+                      "with": [
+                        "装甲"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 10.0
+                    },
+                    {
+                      "with": [
+                        "轻装甲"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 10.0
+                    }
+                  ],
+                  "expand": 0.25
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "components-v1": {
+          "parts": [],
+          "sourceMovement": {
+            "speed": 3.25,
+            "acceleration": 1.0,
+            "deceleration": 0.0,
+            "turn": 9.0,
+            "turnAcceleration": 9.0,
+            "yScale": 1.0
+          }
+        },
+        "sensors-v1": {
+          "fpvDrone": {
+            "role": "attack",
+            "energy": 150.0,
+            "regen": -6.0,
+            "linkDrain": 50,
+            "speed": 78.0,
+            "acceleration": 2030.3999999999999,
+            "deceleration": 0.0,
+            "turnRate": 9.42477796076938,
+            "turnAcceleration": 565.4866776461628,
+            "height": 10.0,
+            "range": 10,
+            "reload": 20,
+            "payloads": [
+              {
+                "weapon": "payload-0",
+                "chance": 0.5,
+                "delay": 0.13333333333333333
+              },
+              {
+                "weapon": "payload-1",
+                "chance": 1.0,
+                "delay": 0.13333333333333333
+              }
+            ]
+          },
+          "unmanned": true
+        },
+        "usgr-re.targeting-v1": {
+          "tags": [
+            "UAV",
+            "巡飞弹"
+          ]
+        }
+      }
+    },
+    {
+      "id": "usgr-re-fpvrpom",
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 0,
+      "buildTime": 1,
+      "hp": 60.0,
+      "speed": 78.0,
+      "turnRate": 9.42477796076938,
+      "radius": 10.0,
+      "vision": 2.5,
+      "armor": "air",
+      "power": 0,
+      "pop": 0,
+      "trail": "none",
+      "producedBy": [],
+      "aiWeight": 0,
+      "hovers": true,
+      "altitude": 10.0,
+      "name": [
+        "FPV-Thermobaric Warhead",
+        "FPV-温压弹头",
+        "FPV 열압력 드론"
+      ],
+      "desc": [
+        "FPV",
+        "FPV",
+        "FPV"
+      ],
+      "weapons": [
+        {
+          "id": "primary",
+          "cls": "cannon",
+          "range": 0.5,
+          "dmg": 0,
+          "reload": 20,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "_source": {
+            "turret": "turret_自爆",
+            "projectile": "projectile_弹药"
+          },
+          "extensions": {
+            "components-v1": {
+              "family": "ordinary",
+              "penetration": 0,
+              "ordinary": {
+                "ignore": 0.0,
+                "multipliers": []
+              },
+              "hpPhases": [
+                {
+                  "direct": 6.0,
+                  "area": 60.0,
+                  "radius": 20.0,
+                  "ignore": 0.0,
+                  "fromEdge": false,
+                  "noFalloff": false,
+                  "friendly": false,
+                  "targetGround": false,
+                  "mutators": []
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "payload-0",
+          "cls": "cannon",
+          "range": 0.5,
+          "dmg": 0,
+          "reload": 20,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "_source": {
+            "helper": {
+              "source": "弹药/步兵武器/RPOMFPV.ini",
+              "projectile": "projectile_b"
+            }
+          },
+          "extensions": {
+            "components-v1": {
+              "family": "chemical",
+              "friendlyFire": false,
+              "strength": 40.0,
+              "sourceWeak": {
+                "roll": 80,
+                "multiplier": 0.25
+              },
+              "channels": {
+                "rack": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0,
+                    0
+                  ]
+                },
+                "crew": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.25,
+                    0.25
+                  ]
+                },
+                "drive": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.5,
+                    0.5
+                  ]
+                },
+                "reserve": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.25,
+                    0.25
+                  ]
+                }
+              },
+              "channelScale": {
+                "engine": 1.0,
+                "track": 10.0
+              },
+              "wear": 0.3,
+              "layerScale": {
+                "front": 0.9,
+                "side": 0.85,
+                "rear": 0.85,
+                "top": 1
+              },
+              "residual": {
+                "base": 0.5,
+                "scale": 1,
+                "max": 1
+              },
+              "blast": {
+                "yield": 1.78,
+                "radius": 24.8,
+                "poolCountOffset": 1,
+                "combined": true
+              },
+              "positiveArmor": true,
+              "penetration": 120.0,
+              "hullDamage": 0,
+              "diameter": 0.6,
+              "wearFaces": {
+                "rear": "side"
+              },
+              "collateralHullDamage": 0,
+              "experience": true,
+              "recipient": {
+                "range": 40,
+                "radiusSquared": 1.5
+              },
+              "sourceHelper": true,
+              "fragments": {
+                "penetrated": 2,
+                "blocked": 2,
+                "offset": 2,
+                "rounds": [
+                  {
+                    "motion": {
+                      "life": 0.5833333333333334,
+                      "speed": 72.0,
+                      "speedSpread": 48.0,
+                      "spread": 20.0,
+                      "vx": 0.0,
+                      "vy": 0.0,
+                      "vz": 24.0,
+                      "gravity": 12.0,
+                      "trueGravity": 0.0,
+                      "targetHeight": 4.0,
+                      "height": 0.0,
+                      "targetSpeed": 0.0,
+                      "acceleration": 144.0,
+                      "turn": -1.0471975511965976,
+                      "nearTurn": -1.0471975511965976,
+                      "delay": 0.0,
+                      "ground": true,
+                      "includeHeight": false,
+                      "noLead": false,
+                      "end": true
+                    },
+                    "hpPhases": [
+                      {
+                        "direct": 24.0,
+                        "area": 0.6,
+                        "radius": 0.4,
+                        "ignore": 0.0,
+                        "fromEdge": false,
+                        "noFalloff": false,
+                        "friendly": false,
+                        "targetGround": true,
+                        "mutators": []
+                      }
+                    ]
+                  },
+                  {
+                    "motion": {
+                      "life": 0.8333333333333334,
+                      "speed": 72.0,
+                      "speedSpread": 48.0,
+                      "spread": 20.0,
+                      "vx": 0.0,
+                      "vy": 0.0,
+                      "vz": 24.0,
+                      "gravity": 12.0,
+                      "trueGravity": 0.0,
+                      "targetHeight": 4.0,
+                      "height": 0.0,
+                      "targetSpeed": 0.0,
+                      "acceleration": 144.0,
+                      "turn": -1.0471975511965976,
+                      "nearTurn": -1.0471975511965976,
+                      "delay": 0.16666666666666666,
+                      "ground": true,
+                      "includeHeight": false,
+                      "noLead": false,
+                      "end": true
+                    },
+                    "hpPhases": [
+                      {
+                        "direct": 24.0,
+                        "area": 0.6,
+                        "radius": 0.4,
+                        "ignore": 0.0,
+                        "fromEdge": false,
+                        "noFalloff": false,
+                        "friendly": false,
+                        "targetGround": true,
+                        "mutators": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "ordinary": {
+                "ignore": 0.0,
+                "multipliers": [
+                  {
+                    "tag": "soldiers",
+                    "value": 5.0
+                  },
+                  {
+                    "tag": "FOB",
+                    "value": 2.0
+                  },
+                  {
+                    "tag": "装甲",
+                    "value": 10.0
+                  },
+                  {
+                    "tag": "轻装甲",
+                    "value": 10.0
+                  },
+                  {
+                    "tag": "战壕隐蔽",
+                    "value": 0.5
+                  }
+                ]
+              },
+              "hpPhases": [
+                {
+                  "direct": 0.0,
+                  "area": 60.0,
+                  "radius": 24.8,
+                  "ignore": 0.0,
+                  "fromEdge": false,
+                  "noFalloff": false,
+                  "friendly": false,
+                  "targetGround": false,
+                  "mutators": [
+                    {
+                      "with": [
+                        "soldiers"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 5.0
+                    },
+                    {
+                      "with": [
+                        "FOB"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 2.0
+                    },
+                    {
+                      "with": [
+                        "装甲"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 10.0
+                    },
+                    {
+                      "with": [
+                        "轻装甲"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 10.0
+                    },
+                    {
+                      "with": [
+                        "战壕隐蔽"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 0.5
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "payload-1",
+          "cls": "cannon",
+          "range": 0.5,
+          "dmg": 0,
+          "reload": 20,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "_source": {
+            "helper": {
+              "source": "弹药/步兵武器/RPOMFPV.ini",
+              "projectile": "projectile_b"
+            }
+          },
+          "extensions": {
+            "components-v1": {
+              "family": "chemical",
+              "friendlyFire": false,
+              "strength": 40.0,
+              "sourceWeak": {
+                "roll": 80,
+                "multiplier": 0.25
+              },
+              "channels": {
+                "rack": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0,
+                    0
+                  ]
+                },
+                "crew": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.25,
+                    0.25
+                  ]
+                },
+                "drive": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.5,
+                    0.5
+                  ]
+                },
+                "reserve": {
+                  "strong": [
+                    0.75,
+                    1
+                  ],
+                  "weak": [
+                    0.25,
+                    0.25
+                  ]
+                }
+              },
+              "channelScale": {
+                "engine": 1.0,
+                "track": 10.0
+              },
+              "wear": 0.3,
+              "layerScale": {
+                "front": 0.9,
+                "side": 0.85,
+                "rear": 0.85,
+                "top": 1
+              },
+              "residual": {
+                "base": 0.5,
+                "scale": 1,
+                "max": 1
+              },
+              "blast": {
+                "yield": 1.78,
+                "radius": 24.8,
+                "poolCountOffset": 1,
+                "combined": true
+              },
+              "positiveArmor": true,
+              "penetration": 120.0,
+              "hullDamage": 0,
+              "diameter": 0.6,
+              "wearFaces": {
+                "rear": "side"
+              },
+              "collateralHullDamage": 0,
+              "experience": true,
+              "recipient": {
+                "range": 40,
+                "radiusSquared": 1.5
+              },
+              "sourceHelper": true,
+              "fragments": {
+                "penetrated": 2,
+                "blocked": 2,
+                "offset": 2,
+                "rounds": [
+                  {
+                    "motion": {
+                      "life": 0.5833333333333334,
+                      "speed": 72.0,
+                      "speedSpread": 48.0,
+                      "spread": 20.0,
+                      "vx": 0.0,
+                      "vy": 0.0,
+                      "vz": 24.0,
+                      "gravity": 12.0,
+                      "trueGravity": 0.0,
+                      "targetHeight": 4.0,
+                      "height": 0.0,
+                      "targetSpeed": 0.0,
+                      "acceleration": 144.0,
+                      "turn": -1.0471975511965976,
+                      "nearTurn": -1.0471975511965976,
+                      "delay": 0.0,
+                      "ground": true,
+                      "includeHeight": false,
+                      "noLead": false,
+                      "end": true
+                    },
+                    "hpPhases": [
+                      {
+                        "direct": 24.0,
+                        "area": 0.6,
+                        "radius": 0.4,
+                        "ignore": 0.0,
+                        "fromEdge": false,
+                        "noFalloff": false,
+                        "friendly": false,
+                        "targetGround": true,
+                        "mutators": []
+                      }
+                    ]
+                  },
+                  {
+                    "motion": {
+                      "life": 0.8333333333333334,
+                      "speed": 72.0,
+                      "speedSpread": 48.0,
+                      "spread": 20.0,
+                      "vx": 0.0,
+                      "vy": 0.0,
+                      "vz": 24.0,
+                      "gravity": 12.0,
+                      "trueGravity": 0.0,
+                      "targetHeight": 4.0,
+                      "height": 0.0,
+                      "targetSpeed": 0.0,
+                      "acceleration": 144.0,
+                      "turn": -1.0471975511965976,
+                      "nearTurn": -1.0471975511965976,
+                      "delay": 0.16666666666666666,
+                      "ground": true,
+                      "includeHeight": false,
+                      "noLead": false,
+                      "end": true
+                    },
+                    "hpPhases": [
+                      {
+                        "direct": 24.0,
+                        "area": 0.6,
+                        "radius": 0.4,
+                        "ignore": 0.0,
+                        "fromEdge": false,
+                        "noFalloff": false,
+                        "friendly": false,
+                        "targetGround": true,
+                        "mutators": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "ordinary": {
+                "ignore": 0.0,
+                "multipliers": [
+                  {
+                    "tag": "soldiers",
+                    "value": 5.0
+                  },
+                  {
+                    "tag": "FOB",
+                    "value": 2.0
+                  },
+                  {
+                    "tag": "装甲",
+                    "value": 10.0
+                  },
+                  {
+                    "tag": "轻装甲",
+                    "value": 10.0
+                  },
+                  {
+                    "tag": "战壕隐蔽",
+                    "value": 0.5
+                  }
+                ]
+              },
+              "hpPhases": [
+                {
+                  "direct": 0.0,
+                  "area": 60.0,
+                  "radius": 24.8,
+                  "ignore": 0.0,
+                  "fromEdge": false,
+                  "noFalloff": false,
+                  "friendly": false,
+                  "targetGround": false,
+                  "mutators": [
+                    {
+                      "with": [
+                        "soldiers"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 5.0
+                    },
+                    {
+                      "with": [
+                        "FOB"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 2.0
+                    },
+                    {
+                      "with": [
+                        "装甲"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 10.0
+                    },
+                    {
+                      "with": [
+                        "轻装甲"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 10.0
+                    },
+                    {
+                      "with": [
+                        "战壕隐蔽"
+                      ],
+                      "without": [],
+                      "direct": 1.0,
+                      "area": 0.5
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "components-v1": {
+          "parts": [],
+          "sourceMovement": {
+            "speed": 3.25,
+            "acceleration": 1.0,
+            "deceleration": 0.0,
+            "turn": 9.0,
+            "turnAcceleration": 9.0,
+            "yScale": 1.0
+          }
+        },
+        "sensors-v1": {
+          "fpvDrone": {
+            "role": "attack",
+            "energy": 150.0,
+            "regen": -6.0,
+            "linkDrain": 50,
+            "speed": 78.0,
+            "acceleration": 2030.3999999999999,
+            "deceleration": 0.0,
+            "turnRate": 9.42477796076938,
+            "turnAcceleration": 565.4866776461628,
+            "height": 10.0,
+            "range": 10,
+            "reload": 20,
+            "payloads": [
+              {
+                "weapon": "payload-0",
+                "chance": 0.5,
+                "delay": 0.13333333333333333
+              },
+              {
+                "weapon": "payload-1",
+                "chance": 1.0,
+                "delay": 0.13333333333333333
+              }
+            ]
+          },
+          "unmanned": true
+        },
+        "usgr-re.targeting-v1": {
+          "tags": [
+            "UAV",
+            "巡飞弹"
+          ]
+        }
+      }
+    }
+  ]
+}

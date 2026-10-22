@@ -3087,7 +3087,9 @@
       "file": "assets/units/ GF/插件/陆地/edd/edd.ini",
       "definition": "fg-rusted-league-minelayer",
       "restored": [
-        "animation states"
+        "animation states",
+        "energy magazine",
+        "paid mine deployment / three rechargeable charges"
       ],
       "unresolvedTransforms": [],
       "sourceFeatures": {
@@ -3097,6 +3099,29 @@
         "decal": 0,
         "animation": 0,
         "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "egg",
+      "file": "assets/units/ GF/插件/炸弹之类/egg/egg.ini",
+      "definition": "fg-rusted-league-widow-mine",
+      "restored": [
+        "animation states",
+        "proximity mine / homing explosive / retarget on loss",
+        "source mine artwork"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
         "hiddenAction": 0,
         "attachment": 0,
         "arm": 0,
@@ -4728,11 +4753,6 @@
       "source": "custom_tank",
       "file": "assets/units/test_tank/tank.ini",
       "reason": "source template / disabled definition"
-    },
-    {
-      "source": "egg",
-      "file": "assets/units/ GF/插件/炸弹之类/egg/egg.ini",
-      "reason": "not represented as a standalone playable definition; requires source-specific integration"
     },
     {
       "source": "example_faction_picker",

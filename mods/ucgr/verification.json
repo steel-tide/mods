@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-19",
+  "version": "0.7.0",
+  "definitions": 366,
+  "sprites": 554,
+  "sounds": 50,
+  "gameRepository": {
+    "head": "847b3bc3338859320a7dfd1af29735e40eb9e615",
+    "dirty": true
+  },
+  "commands": [
+    "python3 -B mods/usgr-re/port.py --media",
+    "node tools/check.mjs mods/usgr-re",
+    "node <game>/node_modules/typescript/bin/tsc -p mods/usgr-re/extensions/combined-arms-v1/tsconfig.json",
+    "python3 -B -m unittest discover -s mods/usgr-re -p 'test_*.py'",
+    "node --test mods/usgr-re/pack.test.mjs",
+    "bun test <each file> (extension test/*.test.ts and mods/usgr-re/*.test.ts, one process each under a memory guard)"
+  ],
+  "results": {
+    "checker": "clean",
+    "tsc": true,
+    "python": {
+      "exit": 0,
+      "tests": 146
+    },
+    "packTest": true,
+    "bun": {
+      "appearance": {
+        "exit": 0,
+        "pass": 1,
+        "fail": 0
+      },
+      "cli-content-modules": {
+        "exit": 0,
+        "pass": 4,
+        "fail": 0
+      },
+      "content-network": {
+        "exit": 0,
+        "pass": 4,
+        "fail": 0
+      },
+      "content-renderer": {
+        "exit": 0,
+        "pass": 5,
+        "fail": 0
+      },
+      "content-runtime": {
+        "exit": 0,
+        "pass": 4,
+        "fail": 0
+      },
+      "content-sensor-network": {
+        "exit": 0,
+        "pass": 2,
+        "fail": 0
+      },
+      "content-sensors-articulation": {
+        "exit": 0,
+        "pass": 20,
+        "fail": 0
+      },
+      "content-signature-sensors": {
+        "exit": 0,
+        "pass": 3,
+        "fail": 0
+      },
+      "contentModulesCombat": {
+        "exit": 0,
+        "pass": 53,
+        "fail": 0
+      },
+      "flight-controls": {
+        "exit": 0,
+        "pass": 3,
+        "fail": 0
+      },
+      "fpv": {
+        "exit": 0,
+        "pass": 4,
+        "fail": 0
+      },
+      "fractional-sight": {
+        "exit": 0,
+        "pass": 1,
+        "fail": 0
+      },
+      "radar-battery": {
+        "exit": 0,
+        "pass": 6,
+        "fail": 0
+      },
+      "radar-controls": {
+        "exit": 0,
+        "pass": 2,
+        "fail": 0
+      },
+      "sead": {
+        "exit": 0,
+        "pass": 6,
+        "fail": 0
+      },
+      "source-concealment": {
+        "exit": 0,
+        "pass": 2,
+        "fail": 0
+      },
+      "source-ordnance": {
+        "exit": 0,
+        "pass": 8,
+        "fail": 0
+      },
+      "sourceParticles": {
+        "exit": 0,
+        "pass": 3,
+        "fail": 0
+      },
+      "artillery-game": {
+        "exit": 0,
+        "pass": 3,
+        "fail": 0
+      },
+      "components-game": {
+        "exit": 0,
+        "pass": 7,
+        "fail": 0
+      },
+      "feedback-game": {
+        "exit": 0,
+        "pass": 21,
+        "fail": 0
+      },
+      "game": {
+        "exit": 0,
+        "pass": 24,
+        "fail": 0
+      },
+      "muzzle-game": {
+        "exit": 0,
+        "pass": 4,
+        "fail": 0
+      },
+      "profiles-game": {
+        "exit": 0,
+        "pass": 2,
+        "fail": 0
+      },
+      "sensors-game": {
+        "exit": 0,
+        "pass": 3,
+        "fail": 0
+      },
+      "smoke-game": {
+        "exit": 0,
+        "pass": 3,
+        "fail": 0
+      },
+      "squads-game": {
+        "exit": 0,
+        "pass": 5,
+        "fail": 0
+      },
+      "targeting-game": {
+        "exit": 0,
+        "pass": 3,
+        "fail": 0
+      },
+      "transport-game": {
+        "exit": 0,
+        "pass": 4,
+        "fail": 0
+      }
+    },
+    "bunTotals": {
+      "files": 29,
+      "pass": 210,
+      "fail": 0
+    }
+  }
+}

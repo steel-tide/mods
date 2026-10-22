@@ -1,0 +1,44 @@
+LicenseRef-UCGR-RE — source-specific notices
+
+This identifier records the supplied UCGR-RE package's notices and the
+permission for this Steel Tide port. It is not an SPDX standard license.
+The original material is not relicensed under the repository's default CC-BY-4.0 terms.
+
+Original project: UCGR-RE v4.3 / 巨浪 v1.29.6 信息战 20261004
+Original credited developer: GY工作室 / GY Studio
+Current player group in the supplied title: 1106943912
+
+Permission record: on 2026-10-16 the maintainer confirmed, "We got the
+permission from the original studio." The Steel Tide port proceeds with
+that studio permission. Original ownership and source notices are retained.
+
+The supplied mod-info.txt contains this Chinese notice (verbatim):
+
+允许上传其他平台，但须标明群号，禁止使用模组进行误导性/混淆性宣传 模组为架空世界线，同现实政治不存在任何关联
+
+For reference, its meaning is: uploading to other platforms is permitted
+provided the group number is shown; misleading or confusing promotion is
+prohibited; the mod is set in a fictional world unrelated to real politics.
+The original Chinese wording and the complete original notice are retained
+in notices/mod-info.txt. The translation does not expand that notice.
+
+The supplied PUB and RES notices each state (verbatim):
+
+授权信息:TCS工作室已授权！
+2023.1.20
+
+These notices say TCS Studio authorization was given on 2023-01-20. They do
+not state its scope or onward reuse terms. Exact copies are retained in
+notices/PUB-copyright.info and notices/RES-copyright.info.
+
+The confirmed studio permission covers this port. It does not relicense
+the original material under CC-BY-4.0 or establish a general open-source
+license. The LicenseRef label preserves the source-specific terms and
+original ownership.
+
+The PPSH bonus units remain outside the MVP selection as deferred content,
+not as a hold for missing studio permission. Their source directory contains
+an empty file named 未经允许禁止使用.txt (use without permission prohibited);
+that filename is retained in the source audit.
+
+See CREDITS.md for attribution and COMPATIBILITY.md for source evidence.

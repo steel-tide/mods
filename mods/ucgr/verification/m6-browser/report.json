@@ -1,0 +1,1219 @@
+{
+  "origin": "http://127.0.0.1:5207",
+  "packVersion": "0.5.0",
+  "checkedAt": "2026-10-18T01:40:27.553Z",
+  "screenshots": [
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/usgr-re/verification/m6-browser/t90-component-icons.png",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/usgr-re/verification/m6-browser/t90-source-muzzle-rest-tip.png",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/usgr-re/verification/m6-browser/t90-muzzle-rest-detail.png",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/usgr-re/verification/m6-browser/t90-source-muzzle-native-recoil.png",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/usgr-re/verification/m6-browser/t90-muzzle-recoil-detail.png",
+    "/Users/rivertwilight/Developer/steel-tide-mods/mods/usgr-re/verification/m6-browser/vanilla-after-disable.png"
+  ],
+  "folderImport": {
+    "version": "0.5.0",
+    "enabled": true,
+    "source": {
+      "kind": "file",
+      "name": "usgr-re"
+    },
+    "capabilities": [
+      "articulation-v1",
+      "components-v1",
+      "logistics-v1",
+      "sensors-v1",
+      "usgr-re.feedback-v1"
+    ],
+    "resources": [
+      {
+        "id": "voice-a0cb1accd93f",
+        "file": "extensions/combined-arms-v1/assets/voice-a0cb1accd93f.wav",
+        "present": true
+      },
+      {
+        "id": "voice-5e7cfc90fa9b",
+        "file": "extensions/combined-arms-v1/assets/voice-5e7cfc90fa9b.wav",
+        "present": true
+      },
+      {
+        "id": "voice-00c743eaa731",
+        "file": "extensions/combined-arms-v1/assets/voice-00c743eaa731.wav",
+        "present": true
+      },
+      {
+        "id": "voice-5ed7f2bb7496",
+        "file": "extensions/combined-arms-v1/assets/voice-5ed7f2bb7496.wav",
+        "present": true
+      },
+      {
+        "id": "voice-4c8db89d8f37",
+        "file": "extensions/combined-arms-v1/assets/voice-4c8db89d8f37.wav",
+        "present": true
+      },
+      {
+        "id": "voice-5fcae240c354",
+        "file": "extensions/combined-arms-v1/assets/voice-5fcae240c354.wav",
+        "present": true
+      },
+      {
+        "id": "voice-6f7470479ea1",
+        "file": "extensions/combined-arms-v1/assets/voice-6f7470479ea1.wav",
+        "present": true
+      },
+      {
+        "id": "voice-4d3b2fdca0a1",
+        "file": "extensions/combined-arms-v1/assets/voice-4d3b2fdca0a1.wav",
+        "present": true
+      },
+      {
+        "id": "voice-c1896ccf48e3",
+        "file": "extensions/combined-arms-v1/assets/voice-c1896ccf48e3.wav",
+        "present": true
+      },
+      {
+        "id": "voice-6d86c9ce7895",
+        "file": "extensions/combined-arms-v1/assets/voice-6d86c9ce7895.wav",
+        "present": true
+      },
+      {
+        "id": "voice-150ac7eda7bf",
+        "file": "extensions/combined-arms-v1/assets/voice-150ac7eda7bf.wav",
+        "present": true
+      },
+      {
+        "id": "voice-077c11fa596d",
+        "file": "extensions/combined-arms-v1/assets/voice-077c11fa596d.wav",
+        "present": true
+      },
+      {
+        "id": "icon-0557ec6d74d4",
+        "file": "extensions/combined-arms-v1/assets/icon-0557ec6d74d4.png",
+        "present": true
+      },
+      {
+        "id": "icon-0a799e6c3645",
+        "file": "extensions/combined-arms-v1/assets/icon-0a799e6c3645.png",
+        "present": true
+      },
+      {
+        "id": "icon-a2b20b62ca86",
+        "file": "extensions/combined-arms-v1/assets/icon-a2b20b62ca86.png",
+        "present": true
+      },
+      {
+        "id": "icon-7539ae05e8c5",
+        "file": "extensions/combined-arms-v1/assets/icon-7539ae05e8c5.png",
+        "present": true
+      },
+      {
+        "id": "icon-cc2129fa881c",
+        "file": "extensions/combined-arms-v1/assets/icon-cc2129fa881c.png",
+        "present": true
+      },
+      {
+        "id": "icon-dc43307900cd",
+        "file": "extensions/combined-arms-v1/assets/icon-dc43307900cd.png",
+        "present": true
+      },
+      {
+        "id": "icon-2bbff2ec984a",
+        "file": "extensions/combined-arms-v1/assets/icon-2bbff2ec984a.png",
+        "present": true
+      },
+      {
+        "id": "icon-a5a8fb06fb86",
+        "file": "extensions/combined-arms-v1/assets/icon-a5a8fb06fb86.png",
+        "present": true
+      },
+      {
+        "id": "icon-3dc5560c3940",
+        "file": "extensions/combined-arms-v1/assets/icon-3dc5560c3940.png",
+        "present": true
+      },
+      {
+        "id": "icon-4a7e34a646a1",
+        "file": "extensions/combined-arms-v1/assets/icon-4a7e34a646a1.png",
+        "present": true
+      },
+      {
+        "id": "voice-207c6bd95cf2",
+        "file": "extensions/combined-arms-v1/assets/voice-207c6bd95cf2.wav",
+        "present": true
+      },
+      {
+        "id": "voice-3db2c38f1616",
+        "file": "extensions/combined-arms-v1/assets/voice-3db2c38f1616.wav",
+        "present": true
+      },
+      {
+        "id": "voice-9c23016c220b",
+        "file": "extensions/combined-arms-v1/assets/voice-9c23016c220b.wav",
+        "present": true
+      },
+      {
+        "id": "voice-02b469358aa6",
+        "file": "extensions/combined-arms-v1/assets/voice-02b469358aa6.wav",
+        "present": true
+      },
+      {
+        "id": "voice-b15bca0db252",
+        "file": "extensions/combined-arms-v1/assets/voice-b15bca0db252.wav",
+        "present": true
+      },
+      {
+        "id": "voice-2c1be1e64133",
+        "file": "extensions/combined-arms-v1/assets/voice-2c1be1e64133.wav",
+        "present": true
+      },
+      {
+        "id": "voice-3f9b83af0aac",
+        "file": "extensions/combined-arms-v1/assets/voice-3f9b83af0aac.wav",
+        "present": true
+      },
+      {
+        "id": "voice-e896fc4481b0",
+        "file": "extensions/combined-arms-v1/assets/voice-e896fc4481b0.wav",
+        "present": true
+      },
+      {
+        "id": "voice-037a87dc1c71",
+        "file": "extensions/combined-arms-v1/assets/voice-037a87dc1c71.wav",
+        "present": true
+      },
+      {
+        "id": "voice-cca6b75a76e0",
+        "file": "extensions/combined-arms-v1/assets/voice-cca6b75a76e0.wav",
+        "present": true
+      },
+      {
+        "id": "voice-10bd147e4e20",
+        "file": "extensions/combined-arms-v1/assets/voice-10bd147e4e20.wav",
+        "present": true
+      },
+      {
+        "id": "voice-159dbc595fa1",
+        "file": "extensions/combined-arms-v1/assets/voice-159dbc595fa1.wav",
+        "present": true
+      },
+      {
+        "id": "voice-dfb80360dbf0",
+        "file": "extensions/combined-arms-v1/assets/voice-dfb80360dbf0.wav",
+        "present": true
+      },
+      {
+        "id": "voice-23f1d8b0d7ca",
+        "file": "extensions/combined-arms-v1/assets/voice-23f1d8b0d7ca.wav",
+        "present": true
+      },
+      {
+        "id": "voice-ca08dfdb2200",
+        "file": "extensions/combined-arms-v1/assets/voice-ca08dfdb2200.wav",
+        "present": true
+      },
+      {
+        "id": "voice-74ac7bdaebde",
+        "file": "extensions/combined-arms-v1/assets/voice-74ac7bdaebde.wav",
+        "present": true
+      },
+      {
+        "id": "voice-e1dd590d18f0",
+        "file": "extensions/combined-arms-v1/assets/voice-e1dd590d18f0.wav",
+        "present": true
+      },
+      {
+        "id": "voice-49a9fdbcc7f6",
+        "file": "extensions/combined-arms-v1/assets/voice-49a9fdbcc7f6.wav",
+        "present": true
+      },
+      {
+        "id": "voice-1c3367f8fc79",
+        "file": "extensions/combined-arms-v1/assets/voice-1c3367f8fc79.wav",
+        "present": true
+      },
+      {
+        "id": "voice-f554966f0259",
+        "file": "extensions/combined-arms-v1/assets/voice-f554966f0259.wav",
+        "present": true
+      },
+      {
+        "id": "voice-c278ca33aa9a",
+        "file": "extensions/combined-arms-v1/assets/voice-c278ca33aa9a.wav",
+        "present": true
+      },
+      {
+        "id": "voice-accaf3030e79",
+        "file": "extensions/combined-arms-v1/assets/voice-accaf3030e79.wav",
+        "present": true
+      },
+      {
+        "id": "voice-fd05bd8b8aab",
+        "file": "extensions/combined-arms-v1/assets/voice-fd05bd8b8aab.wav",
+        "present": true
+      },
+      {
+        "id": "voice-95932fd276ce",
+        "file": "extensions/combined-arms-v1/assets/voice-95932fd276ce.wav",
+        "present": true
+      },
+      {
+        "id": "voice-c4473485b299",
+        "file": "extensions/combined-arms-v1/assets/voice-c4473485b299.wav",
+        "present": true
+      },
+      {
+        "id": "voice-940043afbf1d",
+        "file": "extensions/combined-arms-v1/assets/voice-940043afbf1d.wav",
+        "present": true
+      },
+      {
+        "id": "voice-6cb6028df1de",
+        "file": "extensions/combined-arms-v1/assets/voice-6cb6028df1de.wav",
+        "present": true
+      },
+      {
+        "id": "voice-83ba49c1b7eb",
+        "file": "extensions/combined-arms-v1/assets/voice-83ba49c1b7eb.wav",
+        "present": true
+      },
+      {
+        "id": "voice-146038d7e503",
+        "file": "extensions/combined-arms-v1/assets/voice-146038d7e503.wav",
+        "present": true
+      }
+    ]
+  },
+  "audioDecode": [
+    {
+      "id": "voice-a0cb1accd93f",
+      "file": "extensions/combined-arms-v1/assets/voice-a0cb1accd93f.wav",
+      "bytes": 258092,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 1.4628541666666666,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 70217
+    },
+    {
+      "id": "voice-5e7cfc90fa9b",
+      "file": "extensions/combined-arms-v1/assets/voice-5e7cfc90fa9b.wav",
+      "bytes": 174380,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 0.9882916666666667,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 47438
+    },
+    {
+      "id": "voice-00c743eaa731",
+      "file": "extensions/combined-arms-v1/assets/voice-00c743eaa731.wav",
+      "bytes": 69676,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.176,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 104448
+    },
+    {
+      "id": "voice-5ed7f2bb7496",
+      "file": "extensions/combined-arms-v1/assets/voice-5ed7f2bb7496.wav",
+      "bytes": 57388,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 1.792,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 86016
+    },
+    {
+      "id": "voice-4c8db89d8f37",
+      "file": "extensions/combined-arms-v1/assets/voice-4c8db89d8f37.wav",
+      "bytes": 118828,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.712,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 178176
+    },
+    {
+      "id": "voice-5fcae240c354",
+      "file": "extensions/combined-arms-v1/assets/voice-5fcae240c354.wav",
+      "bytes": 45100,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 1.408,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 67584
+    },
+    {
+      "id": "voice-6f7470479ea1",
+      "file": "extensions/combined-arms-v1/assets/voice-6f7470479ea1.wav",
+      "bytes": 41004,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 1.28,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 61440
+    },
+    {
+      "id": "voice-4d3b2fdca0a1",
+      "file": "extensions/combined-arms-v1/assets/voice-4d3b2fdca0a1.wav",
+      "bytes": 45100,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 1.408,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 67584
+    },
+    {
+      "id": "voice-c1896ccf48e3",
+      "file": "extensions/combined-arms-v1/assets/voice-c1896ccf48e3.wav",
+      "bytes": 53292,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 1.664,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 79872
+    },
+    {
+      "id": "voice-6d86c9ce7895",
+      "file": "extensions/combined-arms-v1/assets/voice-6d86c9ce7895.wav",
+      "bytes": 41004,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 1.28,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 61440
+    },
+    {
+      "id": "voice-150ac7eda7bf",
+      "file": "extensions/combined-arms-v1/assets/voice-150ac7eda7bf.wav",
+      "bytes": 36908,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 1.152,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 55296
+    },
+    {
+      "id": "voice-077c11fa596d",
+      "file": "extensions/combined-arms-v1/assets/voice-077c11fa596d.wav",
+      "bytes": 65580,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.048,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 98304
+    },
+    {
+      "id": "voice-207c6bd95cf2",
+      "file": "extensions/combined-arms-v1/assets/voice-207c6bd95cf2.wav",
+      "bytes": 127020,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.968,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 190464
+    },
+    {
+      "id": "voice-3db2c38f1616",
+      "file": "extensions/combined-arms-v1/assets/voice-3db2c38f1616.wav",
+      "bytes": 114732,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.584,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 172032
+    },
+    {
+      "id": "voice-9c23016c220b",
+      "file": "extensions/combined-arms-v1/assets/voice-9c23016c220b.wav",
+      "bytes": 127020,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.968,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 190464
+    },
+    {
+      "id": "voice-02b469358aa6",
+      "file": "extensions/combined-arms-v1/assets/voice-02b469358aa6.wav",
+      "bytes": 77868,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.432,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 116736
+    },
+    {
+      "id": "voice-b15bca0db252",
+      "file": "extensions/combined-arms-v1/assets/voice-b15bca0db252.wav",
+      "bytes": 127020,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.968,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 190464
+    },
+    {
+      "id": "voice-2c1be1e64133",
+      "file": "extensions/combined-arms-v1/assets/voice-2c1be1e64133.wav",
+      "bytes": 86060,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.688,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 129024
+    },
+    {
+      "id": "voice-3f9b83af0aac",
+      "file": "extensions/combined-arms-v1/assets/voice-3f9b83af0aac.wav",
+      "bytes": 86060,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.688,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 129024
+    },
+    {
+      "id": "voice-e896fc4481b0",
+      "file": "extensions/combined-arms-v1/assets/voice-e896fc4481b0.wav",
+      "bytes": 90156,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.816,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 135168
+    },
+    {
+      "id": "voice-037a87dc1c71",
+      "file": "extensions/combined-arms-v1/assets/voice-037a87dc1c71.wav",
+      "bytes": 114732,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.584,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 172032
+    },
+    {
+      "id": "voice-cca6b75a76e0",
+      "file": "extensions/combined-arms-v1/assets/voice-cca6b75a76e0.wav",
+      "bytes": 131116,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 4.096,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 196608
+    },
+    {
+      "id": "voice-10bd147e4e20",
+      "file": "extensions/combined-arms-v1/assets/voice-10bd147e4e20.wav",
+      "bytes": 159788,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 4.992,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 239616
+    },
+    {
+      "id": "voice-159dbc595fa1",
+      "file": "extensions/combined-arms-v1/assets/voice-159dbc595fa1.wav",
+      "bytes": 98348,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.072,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 147456
+    },
+    {
+      "id": "voice-dfb80360dbf0",
+      "file": "extensions/combined-arms-v1/assets/voice-dfb80360dbf0.wav",
+      "bytes": 77868,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.432,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 116736
+    },
+    {
+      "id": "voice-23f1d8b0d7ca",
+      "file": "extensions/combined-arms-v1/assets/voice-23f1d8b0d7ca.wav",
+      "bytes": 81964,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.56,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 122880
+    },
+    {
+      "id": "voice-ca08dfdb2200",
+      "file": "extensions/combined-arms-v1/assets/voice-ca08dfdb2200.wav",
+      "bytes": 102444,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.2,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 153600
+    },
+    {
+      "id": "voice-74ac7bdaebde",
+      "file": "extensions/combined-arms-v1/assets/voice-74ac7bdaebde.wav",
+      "bytes": 102444,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.2,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 153600
+    },
+    {
+      "id": "voice-e1dd590d18f0",
+      "file": "extensions/combined-arms-v1/assets/voice-e1dd590d18f0.wav",
+      "bytes": 94252,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.944,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 141312
+    },
+    {
+      "id": "voice-49a9fdbcc7f6",
+      "file": "extensions/combined-arms-v1/assets/voice-49a9fdbcc7f6.wav",
+      "bytes": 69676,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.176,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 104448
+    },
+    {
+      "id": "voice-1c3367f8fc79",
+      "file": "extensions/combined-arms-v1/assets/voice-1c3367f8fc79.wav",
+      "bytes": 90156,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.816,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 135168
+    },
+    {
+      "id": "voice-f554966f0259",
+      "file": "extensions/combined-arms-v1/assets/voice-f554966f0259.wav",
+      "bytes": 86060,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.688,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 129024
+    },
+    {
+      "id": "voice-c278ca33aa9a",
+      "file": "extensions/combined-arms-v1/assets/voice-c278ca33aa9a.wav",
+      "bytes": 81964,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.56,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 122880
+    },
+    {
+      "id": "voice-accaf3030e79",
+      "file": "extensions/combined-arms-v1/assets/voice-accaf3030e79.wav",
+      "bytes": 114732,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.584,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 172032
+    },
+    {
+      "id": "voice-fd05bd8b8aab",
+      "file": "extensions/combined-arms-v1/assets/voice-fd05bd8b8aab.wav",
+      "bytes": 73772,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.304,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 110592
+    },
+    {
+      "id": "voice-95932fd276ce",
+      "file": "extensions/combined-arms-v1/assets/voice-95932fd276ce.wav",
+      "bytes": 77868,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.432,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 116736
+    },
+    {
+      "id": "voice-c4473485b299",
+      "file": "extensions/combined-arms-v1/assets/voice-c4473485b299.wav",
+      "bytes": 102444,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.2,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 153600
+    },
+    {
+      "id": "voice-940043afbf1d",
+      "file": "extensions/combined-arms-v1/assets/voice-940043afbf1d.wav",
+      "bytes": 94252,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.944,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 141312
+    },
+    {
+      "id": "voice-6cb6028df1de",
+      "file": "extensions/combined-arms-v1/assets/voice-6cb6028df1de.wav",
+      "bytes": 77868,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.432,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 116736
+    },
+    {
+      "id": "voice-83ba49c1b7eb",
+      "file": "extensions/combined-arms-v1/assets/voice-83ba49c1b7eb.wav",
+      "bytes": 114732,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 3.584,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 172032
+    },
+    {
+      "id": "voice-146038d7e503",
+      "file": "extensions/combined-arms-v1/assets/voice-146038d7e503.wav",
+      "bytes": 86060,
+      "riff": true,
+      "pcm": true,
+      "bits": 16,
+      "duration": 2.688,
+      "channels": 2,
+      "sampleRate": 48000,
+      "frames": 129024
+    }
+  ],
+  "loaded": {
+    "missing": [],
+    "modules": [
+      "components-v1",
+      "logistics-v1",
+      "sensors-v1",
+      "articulation-v1",
+      "usgr-re.feedback-v1"
+    ],
+    "renderer": "",
+    "errors": [],
+    "warnings": [
+      "[sprites] \"egg.zeppelin\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)",
+      "[sprites] \"sunken.destroyer\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)",
+      "[sprites] \"sunken.destroyer.broken\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)"
+    ]
+  },
+  "icons": {
+    "ids": [
+      221,
+      222,
+      223
+    ],
+    "left": "healthy",
+    "middle": "warning",
+    "right": "destroyed",
+    "visuals": [
+      [],
+      [
+        {
+          "asset": "icon-0557ec6d74d4",
+          "x": 0,
+          "y": 25,
+          "scale": 0.25
+        },
+        {
+          "asset": "icon-a2b20b62ca86",
+          "x": -12.5,
+          "y": 25,
+          "scale": 0.25
+        },
+        {
+          "asset": "icon-cc2129fa881c",
+          "x": 12.5,
+          "y": 25,
+          "scale": 0.25
+        },
+        {
+          "asset": "icon-2bbff2ec984a",
+          "x": 25,
+          "y": 25,
+          "scale": 0.25
+        },
+        {
+          "asset": "icon-3dc5560c3940",
+          "x": -25,
+          "y": 25,
+          "scale": 0.25
+        }
+      ],
+      [
+        {
+          "asset": "icon-0a799e6c3645",
+          "x": 0,
+          "y": 25,
+          "scale": 0.25
+        },
+        {
+          "asset": "icon-7539ae05e8c5",
+          "x": -12.5,
+          "y": 25,
+          "scale": 0.25
+        },
+        {
+          "asset": "icon-dc43307900cd",
+          "x": 12.5,
+          "y": 25,
+          "scale": 0.25
+        },
+        {
+          "asset": "icon-a5a8fb06fb86",
+          "x": 25,
+          "y": 25,
+          "scale": 0.25
+        },
+        {
+          "asset": "icon-4a7e34a646a1",
+          "x": -25,
+          "y": 25,
+          "scale": 0.25
+        }
+      ]
+    ],
+    "componentState": [
+      {
+        "form": "usgr-re-t90m",
+        "parts": {
+          "rack": {
+            "damage": 0,
+            "failed": false
+          },
+          "track": {
+            "damage": 0,
+            "failed": false
+          },
+          "driver": {
+            "damage": 0,
+            "failed": false,
+            "occupant": "221:driver"
+          },
+          "engine": {
+            "damage": 0,
+            "failed": false
+          },
+          "gunner": {
+            "damage": 0,
+            "failed": false,
+            "occupant": "221:gunner"
+          }
+        },
+        "layers": {
+          "kinetic": {
+            "front": 300,
+            "side": 200,
+            "rear": 0,
+            "top": 0
+          },
+          "chemical": {
+            "front": 700,
+            "side": 700,
+            "rear": 0,
+            "top": 0
+          }
+        },
+        "reserve": {
+          "count": 1,
+          "health": 100,
+          "progress": 0,
+          "serial": 0
+        },
+        "group": {
+          "manual": false,
+          "progress": 0,
+          "remainder": 0.03333333333333333
+        }
+      },
+      {
+        "form": "usgr-re-t90m",
+        "parts": {
+          "rack": {
+            "damage": 120,
+            "failed": false
+          },
+          "track": {
+            "damage": 70,
+            "failed": false
+          },
+          "driver": {
+            "damage": 70,
+            "failed": false,
+            "occupant": "222:driver"
+          },
+          "engine": {
+            "damage": 70,
+            "failed": false
+          },
+          "gunner": {
+            "damage": 70,
+            "failed": false,
+            "occupant": "222:gunner"
+          }
+        },
+        "layers": {
+          "kinetic": {
+            "front": 300,
+            "side": 200,
+            "rear": 0,
+            "top": 0
+          },
+          "chemical": {
+            "front": 700,
+            "side": 700,
+            "rear": 0,
+            "top": 0
+          }
+        },
+        "reserve": {
+          "count": 1,
+          "health": 100,
+          "progress": 0,
+          "serial": 0
+        },
+        "group": {
+          "manual": false,
+          "progress": 0,
+          "remainder": 0.03333333333333333
+        }
+      },
+      {
+        "form": "usgr-re-t90m",
+        "parts": {
+          "rack": {
+            "damage": 175,
+            "failed": false
+          },
+          "track": {
+            "damage": 100,
+            "failed": true
+          },
+          "driver": {
+            "damage": 100,
+            "failed": true
+          },
+          "engine": {
+            "damage": 100,
+            "failed": true
+          },
+          "gunner": {
+            "damage": 100,
+            "failed": true
+          }
+        },
+        "layers": {
+          "kinetic": {
+            "front": 300,
+            "side": 200,
+            "rear": 0,
+            "top": 0
+          },
+          "chemical": {
+            "front": 700,
+            "side": 700,
+            "rear": 0,
+            "top": 0
+          }
+        },
+        "reserve": {
+          "count": 1,
+          "health": 100,
+          "progress": 0,
+          "serial": 0
+        },
+        "group": {
+          "manual": false,
+          "progress": 0,
+          "remainder": 0.03333333333333333
+        }
+      }
+    ]
+  },
+  "selectVoice": {
+    "voice": {
+      "now": "crew.usgr-re-hq17.select",
+      "entityId": 224,
+      "queue": [],
+      "ctx": "running",
+      "t": 0.13,
+      "endsAt": 2.66,
+      "lastEnd": ""
+    },
+    "selected": [
+      224
+    ]
+  },
+  "silentSelect": {
+    "voice": {
+      "now": null,
+      "entityId": null,
+      "queue": [],
+      "ctx": "running",
+      "t": 0.14,
+      "endsAt": null,
+      "lastEnd": ""
+    },
+    "selected": [
+      221
+    ]
+  },
+  "moveVoice": {
+    "now": "crew.usgr-re-t90m.move",
+    "entityId": 221,
+    "queue": [],
+    "ctx": "running",
+    "t": 0.27,
+    "endsAt": 1.89,
+    "lastEnd": ""
+  },
+  "repeatVoice": {
+    "now": "crew.usgr-re-t90m.move",
+    "entityId": 221,
+    "queue": [],
+    "ctx": "running",
+    "t": 0.27,
+    "endsAt": 1.89,
+    "lastEnd": ""
+  },
+  "muzzle": {
+    "entity": {
+      "x": 1536,
+      "y": 1280,
+      "angle": 0,
+      "turretAngle": 0
+    },
+    "camera": {
+      "zoom": 4.800000000000001,
+      "scale": 1.5
+    },
+    "flash": {
+      "x": 1581.3364,
+      "y": 1280.390625,
+      "key": "fx.muzzle",
+      "age": 0.03333333333333333,
+      "recoil": {
+        "src": 225,
+        "barrel": 0,
+        "stroke": 6,
+        "mount": 0
+      }
+    },
+    "projectile": {
+      "x": 1604.4030089809264,
+      "y": 1280.3390378683184,
+      "px": 1581.3364,
+      "py": 1280.390625,
+      "gun": "usgr-re-t90m/w1"
+    },
+    "muzzlePoints": [
+      {
+        "forward": 42.8364,
+        "lateral": 0.390625
+      }
+    ],
+    "restFrame": {
+      "alpha": 0,
+      "gunArt": "tur.usgr-re-t90m",
+      "barrelRegion": [
+        42,
+        3,
+        48,
+        96
+      ],
+      "firstOpaqueRow": 3,
+      "sprite": {
+        "fw": 22,
+        "fh": 48,
+        "ss": 4,
+        "ay": 28.165295999999998
+      },
+      "unitDisplayScale": 1.5625,
+      "ring": {
+        "x": 1538.5,
+        "y": 1280,
+        "bearing": 0
+      },
+      "regionForward": 42.8364,
+      "opaqueFront": [
+        42,
+        3,
+        48
+      ],
+      "forward": 42.8364,
+      "lateral": 0.390625,
+      "visualTip": {
+        "x": 1581.3364,
+        "y": 1280.390625
+      },
+      "flashTipDistance": 0
+    },
+    "recoilFrame": {
+      "alpha": 1,
+      "gunArt": "recoil/1",
+      "rings": [
+        {
+          "x": 1538.5,
+          "y": 1280,
+          "bearing": 0,
+          "recoilArt": "recoil/1",
+          "shifts": [
+            {
+              "x0": -0.5,
+              "x1": 1,
+              "y0": -27.415295999999998,
+              "y1": -4.165295999999998,
+              "offset": 6
+            }
+          ]
+        },
+        {
+          "x": 1536,
+          "y": 1282.8125,
+          "bearing": 0,
+          "recoilArt": "tur.usgr-re-t90m-nsvt",
+          "shifts": []
+        }
+      ]
+    }
+  },
+  "disposal": {
+    "before": {
+      "now": null,
+      "entityId": null,
+      "queue": [],
+      "ctx": "running",
+      "t": 0.95,
+      "endsAt": null,
+      "lastEnd": ""
+    },
+    "after": {
+      "now": null,
+      "entityId": null,
+      "queue": [],
+      "ctx": "running",
+      "t": 0.95,
+      "endsAt": null,
+      "lastEnd": ""
+    },
+    "storedEnabled": false,
+    "runtimeDisposed": true,
+    "enabled": false,
+    "modDefsRemaining": 0
+  },
+  "vanilla": {
+    "runtime": false,
+    "nativeGame": true,
+    "nativeRenderer": true,
+    "nativeHud": true,
+    "installed": [
+      {
+        "id": "usgr-re",
+        "enabled": false
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      "[sprites] \"egg.zeppelin\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)",
+      "[sprites] \"sunken.destroyer\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)",
+      "[sprites] \"sunken.destroyer.broken\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)"
+    ]
+  },
+  "passed": true
+}

@@ -1,0 +1,10 @@
+Use case: ads-marketing.
+Asset type: 4:3 landscape cover image for the Steel Tide mod UCGR, ideally 1600×1200.
+Primary request: Turn the provided UCGR gameplay screenshot (image 1, edit target) into a polished game-mod cover. Image 2 (FG Rusted League cover) is a layout/style reference only; do not copy its eagle emblem, text, or sci-fi units.
+Preserve the actual top-down pixel-art modern tanks, helicopters, roads and terrain in image 1 as the photographic/gameplay base; the cover should clearly belong to this RTS game. Remove the game HUD, status bars, selection circles, minimap and panels. Use the visible existing tanks and helicopters at a readable scale, with natural cropping/reframing. Add restrained dark olive/charcoal grading with a little warm amber light and subtle smoke near the battlefield, fine tactical grid lines and understated corner marks. Keep units recognizable, no photorealistic replacement tanks.
+Design the title with strong typographic hierarchy in the top third, leaving the battlefield visible below: very large bold condensed ivory text "UCGR" (exactly U C G R, no hyphen and no RE); smaller widely tracked text underneath "MODERN WARFARE". A small bottom footer reads "A STEEL TIDE MOD". No other text. Title must stay readable when reduced to a small thumbnail. Generous safe margins, deliberate editorial spacing, highly finished but restrained. Do not copy the FG branding. No flags, no invented badge, no watermark. Full bleed landscape image, 4:3 aspect ratio. Opaque background.
+
+Generation: built-in image_gen tool.
+Edit target: screenshots/combined-arms.jpg
+Style reference: ../fg-rusted-league/screenshots/cover.jpg (layout only).
+Delivery: screenshots/cover.jpg, JPEG, 1600x1200.

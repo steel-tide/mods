@@ -635,11 +635,11 @@ def main():
     media.music_tracks()
     manifest={'format':'steel-tide-mod','v':4,'capacity':'large','id':'naval-warfare',
               'name':'Naval Warfare',
-              'version':'0.1.0','author':'Naval Warfare original creators',
+              'version':'0.1.1','author':'Naval Warfare original creators',
               'description':localization['modDescription'], 'license':'LicenseRef-Naval-Warfare-Upstream', 'minGame':'0.8.16',
               'requiredCapabilities':[CAP],'extensionPackages':[package],'defs':defs,'factions':factions,
               'sprites':media.sprites,'sounds':media.sounds,
-              'screenshots':['screenshots/carrier-operations.jpg','screenshots/fleet.jpg','screenshots/construction.jpg',
+              'screenshots':['screenshots/cover.png','screenshots/carrier-operations.jpg','screenshots/fleet.jpg','screenshots/construction.jpg',
                              'screenshots/naval-engagement.jpg','screenshots/harbor-base.jpg'],
               'music':{'tracks':media.music,'battle':[t['id'] for t in media.music]},
               'maps':['maps/naval-review.steel-tide-map']}

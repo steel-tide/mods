@@ -1,0 +1,5 @@
+[mod]
+title:UCGR-RE v4.3 巨浪v1.29.6 信息战 20261004 玩家群:1106943912
+description:"""主要内容：英文翻译补全 高难度AI现在会呼叫空袭了 大量性能优化 实装烟雾与林区的射线阻挡机制(实验性机制) 思路源自@ForgottenCommunity(TOxS)\n-感谢所有参与呼号编写的UC群友\n-房主禁止核武器即可关闭步兵班组\n-全频带模式具有独立的音乐播放器\n TURN OFF the NukeWeapon to dismiss squad\n本模组是以2023(?)年发生的局部现代战争为背景的架空模组\n-制作团体:GY工作室\n策划:直升机\n画师:Fszzrt.263,FEB,水月,zhrqf,VVVVV,ManKasu(图标)\n代码整理:SU25,DOGE,直升机,风影\n地图:FEB,小布尔乔亚\n-特别鸣谢:古迹(方位甲模板),屌神,寒陌,查德,周家,Rcpxl,图哈,DDR,小九尾(整理单位型号描述)\n-感谢来自GMbox的雷达思路\n-感谢车长伊吕波(189639906)提供的沙盒模式判断思路\n感谢TOxS\n-玩家群:626984971 失效请加入qq频道 代码pd05710756\n玩法详情请见游戏内——基地选择——玩法介绍\n-允许上传其他平台，但须标明群号，禁止使用模组进行误导性/混淆性宣传 模组为架空世界线，同现实政治不存在任何关联\nThanks @ForgottenCommunity(TOxS) for DynamicLoS 0.5\nThis mod is a fictional mod set against the backdrop of a localized modern war that occurred in 2023.Development: GY Studio\n Welcome to Join our QQ group:626984971\n Do not misuse mod materials for inappropriate promotion \n Feel free to contact us if you are intrested in localisition\nOur server:https://discord.gg/sHVADnnh69"""
+minVersion:1.15
+#知道你在看哦

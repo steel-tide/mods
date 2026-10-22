@@ -301,3 +301,32 @@ Single shot from a small patrol boat's light deck gun: a crisp, high, snappy gun
 ```text
 Single battleship turret gun firing: a bright, sharp report with a heavy low boom underneath and a short rolling decay, dry and close-miked, no distant echo tail, no music. One-shot naval military game weapon sound.
 ```
+
+## Registry cover
+
+The first gallery image, `screenshots/cover.jpg`, is promotional artwork
+created with the built-in image generation tool from this mod's own art.
+The remaining gallery images are gameplay captures. Delivered as a
+1600 × 1200 JPEG under the registry's 2 MB limit.
+
+### Initial composition prompt
+
+```text
+Use case: ads-marketing.
+Asset type: 4:3 landscape registry cover for the Steel Tide mod "Rusted Expansion", ideally 1600x1200.
+Primary request: Recompose the supplied mod's land and naval screenshots (images 1 and 2) and bomber sprite (image 3) into an exuberant nostalgic pixel-art RTS title screen / game-box cover. Preserve the recognizable original unit shapes while developing a single coherent hand-crafted pixel-art illustration. The fourth image is the heavy tank's twin-barrel turret with red missile racks for shape accuracy.
+Design direction: affectionate classic PC/mobile real-time strategy nostalgia. Crisp richly detailed pixel art, visible intentional pixel clusters, hard outlined silhouettes, saturated grass green and bright blue water, warm ochre sand and tiny orange shell bursts. It should feel like the army the player remembers commanding. Daylight, spirited and colorful, not gloomy modern military key art.
+Composition: an overhead/slightly tilted pixel-art coastal battlefield curving in a broad diagonal, land and tanks at bottom left, blue sea and two ships to the right, bomber and stubby helicopter crossing the scene. A chunky heavy tank with two parallel barrels and red missile racks is the lower-left foreground hero, with a couple of smaller boxy single-gun tanks behind it. Long dark narrow battleship with one big twin turret amidships, plus small teardrop gunboat on the sea. Include the reference's swept-wing bomber, its dark steel fuselage and blue cockpit. Change the source blue/magenta faction panels on our army to saturated classic bright green. Preserve the heavy tank's red missile racks as red. Ground vehicles must have clear tank tracks, aircraft have wings or rotors, ships have wakes. No modern real-world replacements, people, flags, or extra unit types.
+Title: in the upper LEFT within a calm area of terrain/sky-like pale mist, two compact lines reading exactly "RUSTED" then "EXPANSION", both prominent and readable. Use original chunky beveled PIXEL lettering: rusty copper/orange faces with cream highlight pixels, dark brown extruded edge, playful old RTS character. The title block occupies about 45% of image width and 28% of height, not a full-width header. Keep action composed around it. Tiny clean text "A STEEL TIDE MOD" in the lower right over the sea.
+No photo-realism, no distressed white UCGR stencil lettering, no modern tactical grids, no corner framing, no sepia grading, no centered title over a dark screenshot, no panelled engineering layout. This is a single colorful pixel-art scene with an integrated vintage pixel logo. Avoid blurry or airbrushed texture. No other text or watermark. Full bleed 4:3 opaque landscape canvas.
+```
+
+### Final refinement prompt
+
+```text
+Use case: lighting-weather. Edit the provided finished RUSTED EXPANSION cover. The user says it is too vivid and does not match a war game's mood. Transform it into a sober, gritty, battle-worn pixel-art war-game cover. Preserve the existing distinctive composition, perspective, readable title and all six recognizable unit TYPES: heavy twin-barrel tank with red missile racks, smaller single-gun tanks, helicopter, swept-wing bomber, long twin-turret-barrel battleship, gunboat. Preserve crisp pixel clusters and the exact text "RUSTED EXPANSION" and "A STEEL TIDE MOD".
+PALETTE AND MOOD: substantially desaturate the whole image to muted olive drab, charcoal, cold gunmetal, weathered earth and slate-blue sea. Change sunny daylight to overcast combat weather with gray low cloud and drifting dense charcoal smoke. Change bright tropical cyan surf to dark cold slate-blue water with dirty gray-white small wakes. Change jewel-green foliage to worn olive and gray-green scrub, add visible scorched earth and brown track ruts. Vehicles should look like heavy dark steel, with restrained dull olive-green faction markings instead of neon green.
+TITLE: retain the exact lettering shape and placement, but replace the bright arcade orange with weathered dark oxidized iron and dark brown rust, a muted light steel highlight along letter faces/edges, strong dark depth. Keep the words readable against their backing. No glowing gold or saturated orange.
+COMBAT EFFECTS: remove most of the repetitive bright yellow tracer lines, bright fiery explosions, and the big fire blossoms at every muzzle. Keep just one or two small realistic restrained amber muzzle flashes and distant smoldering fires; use smoke and worn terrain to suggest battle fatigue and weight. The bomber should fly through low smoke, not spray arcade bullets from its wings. No vivid confetti-like bright particles.
+This should feel like grounded classic military RTS box art, not a cheerful arcade/action toy game. Keep adequate tonal separation and visual legibility; don't simply crush every shadow to black. Do not adopt the UCGR military stencil/grid template. Keep this composition and pixel-art treatment, but make its atmosphere somber and martial. No new labels, flags, emblems, panel borders or text. Preserve full-bleed 4:3 landscape canvas, opaque background.
+```

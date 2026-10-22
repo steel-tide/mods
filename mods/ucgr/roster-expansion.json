@@ -1,0 +1,213 @@
+{
+  "added": [
+    "2S25M",
+    "T62",
+    "T62M",
+    "T62MV",
+    "T72A",
+    "T72AV",
+    "T72B",
+    "T72B1989",
+    "T72B3M",
+    "T72BA",
+    "T72BU",
+    "T80B",
+    "T80BV",
+    "T80BVM",
+    "T80U",
+    "T80UK",
+    "T90A",
+    "PTZ89",
+    "ZBL19_105",
+    "ZLT11",
+    "ZTQ62",
+    "ZTZ59",
+    "ZTZ59D",
+    "ZTZ88A",
+    "ZTZ88B",
+    "ZTZ96",
+    "ZTZ96B",
+    "ZTZ99",
+    "ZTZ99I",
+    "ZTZ99II",
+    "M1128",
+    "M1A1HA",
+    "M1A2SEPV1",
+    "M1A2SEPV2",
+    "M60A3",
+    "M60A3TTS",
+    "半人马",
+    "L1A5",
+    "L2A4",
+    "L2A5",
+    "L2A7",
+    "L2PL",
+    "C1公羊",
+    "AMX30B2",
+    "AMX30B2布雷努斯",
+    "勒克莱尔AZUR",
+    "勒克莱尔S1",
+    "勒克莱尔S2",
+    "PT91",
+    "T64BV",
+    "T84",
+    "PT85",
+    "T3485",
+    "天马214",
+    "天马215",
+    "天马216",
+    "K1",
+    "K1附加",
+    "K1A1附加",
+    "M48A3",
+    "M48A5",
+    "PT76",
+    "PTL02"
+  ],
+  "blockedCompilers": [],
+  "basis": "Shared closed-tank AP/HE/HEAT, finite inventory and component compiler preflight. Other source mechanics are separately audited.",
+  "batches": [
+    {
+      "date": "2026-10-19",
+      "basis": "National spawn-point decks (出生点俄/中/美/欧) that reach the unit, compiled by the existing reviewed compilers with their documented omissions; live damage acceptance in game.test.ts.",
+      "added": {
+        "ru": [
+          "MI28NM",
+          "MI35M",
+          "MI8TV",
+          "SU25T",
+          "SU34",
+          "TOS1A"
+        ],
+        "cn": [
+          "Z19",
+          "Z8",
+          "Z9",
+          "Q5L",
+          "JH7A",
+          "J-16"
+        ],
+        "us": [
+          "复仇者",
+          "AH1Z",
+          "F-15E",
+          "F-15EX",
+          "T80BV_U"
+        ],
+        "eu": [
+          "JAS39E",
+          "狂风",
+          "阵风"
+        ],
+        "kp": [
+          "MIG23"
+        ],
+        "jp": [
+          "F-1"
+        ]
+      },
+      "excluded": {
+        "unreachableInSource": [
+          "Obj490M",
+          "T80U圣诞",
+          "Mi24P",
+          "PLAPOWER",
+          "泠峰",
+          "MQ9",
+          "双尾蝎",
+          "猎户座",
+          "扫描鹰",
+          "EUFPVFOB",
+          "三人班组",
+          "五人班组",
+          "战壕三人班组",
+          "战壕五人班组"
+        ],
+        "airCombatModeOnly (M5 mode)": [
+          "MIG35",
+          "SU27SM",
+          "J11B",
+          "J6",
+          "J7D",
+          "J-8",
+          "F-16C空战测试",
+          "F-18",
+          "F-14",
+          "F-14IR",
+          "F-22",
+          "F-4S",
+          "J-15",
+          "J-20",
+          "SU-57"
+        ],
+        "capturePointOrFobDispatch (M5)": [
+          "RUSFPVFOB",
+          "PLAFPVFOB",
+          "USFPVFOB",
+          "FH901",
+          "乌克兰之鹰",
+          "弹簧刀300",
+          "弹簧刀600",
+          "柳叶刀",
+          "63火",
+          "63火部署"
+        ],
+        "platoonPreloadOnly (M5 flags)": [
+          "AGS17架设班",
+          "HKGMG架设班",
+          "MK17架设班",
+          "QLZ04架设班"
+        ],
+        "trenchAttachmentOnly (capture-point trench, M5)": [
+          "红箭73架设组",
+          "陶氏架设组",
+          "短号架设组",
+          "长钉架设组"
+        ],
+        "paidSupLaunchOnly (M5 currency)": [
+          "大疆"
+        ],
+        "spawnPointParadropCall (M5)": [
+          "AN2"
+        ],
+        "spawnPointStructures (M5)": [
+          "BASE",
+          "BASE_C",
+          "BASEF",
+          "BASE_AIR",
+          "出生点中",
+          "出生点俄",
+          "出生点欧",
+          "出生点美",
+          "出生点防御HJ8",
+          "出生点防御标枪",
+          "出生点防御混血儿",
+          "出生点防御长钉",
+          "战壕",
+          "战壕右向",
+          "空战模式基地"
+        ],
+        "deckCommandVehicles (M5)": [
+          "CNHEAVY_C",
+          "CNMEDIUM_C",
+          "CN_C",
+          "全频段阻塞干扰指挥车",
+          "全频段阻塞干扰指挥车_红龙",
+          "全频段阻塞干扰指挥车_重装",
+          "RUGUARD_C",
+          "RUS_C",
+          "RUVDV_C",
+          "EU_C",
+          "EU快反_C",
+          "EU装甲_C",
+          "北约蓝龙指挥车",
+          "北约重型指挥车",
+          "北约指挥车",
+          "USARMOUR_C",
+          "USMARINE_C",
+          "US_C"
+        ]
+      }
+    }
+  ]
+}

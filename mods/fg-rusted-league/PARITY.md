@@ -1,4 +1,4 @@
-# Original-source comparison — FG Rusted League 0.4.1
+# Original-source comparison — FG Rusted League 0.5.0
 
 Compared against `rusted-warfare-mods/fg-rusted-league`: the packaged stock-unit
 counterparts, custom GF plugin definitions, copyFrom chains, art, animations,
@@ -17,10 +17,23 @@ without a standalone definition. Hard-coded units use the existing extracted
 - Four through eight real interceptors on the Aircraft Carrier's five levels,
   with faster replenishment on the final level. Aircraft use the source's
   third, armed phase; a real-engine test checks that they inflict damage.
-- 15 source energy pools, consumed per emitted projectile and recharged at
+- 16 source energy pools, consumed per emitted projectile or mine deployment and recharged at
   source rates. Firing and burst continuations stop while energy is unavailable;
   saves retain charge and recharge state, and enemy views hide this state.
   The ASW plane returns when empty and refills on its carrier deck.
+- Minelayer (`edd`) paid **Widow Mine** action and its `egg` entity. The
+  disabled placement turret is no longer an automatic gun. The action costs
+  80 metal (source 100 credits through the port's price scale), consumes one
+  of three source charges, and quietly lays an unselectable,
+  passable mine. The source's 0.0005 energy/tick recharge and full-refill lock
+  are retained. Mines acquire nearby visible ground/naval targets, launch once,
+  accelerate toward their target, retarget nearby enemies on target loss,
+  and apply separate direct and area damage. Allies and aircraft are spared.
+  Original `egg.png` frames represent the waiting mine and travelling charge.
+  Mines, projectiles and charge state survive save/load; blast clearing does
+  not launch a payload.
+  Placement itself has no explosion, muzzle flash, gunshot, scorch or damage;
+  explosion effects occur only when the seeker detonates.
 - Original negative hull regeneration for Kirov and Teleporter.
 - Mirage movement no longer reveals its disguise. Firing reveals it, and the
   tank returns to its tree form after the source delay.
@@ -41,9 +54,16 @@ simulation. Helicopters retain native rotors. Native weapon sounds stand in for
 Rusted Warfare's built-in sound IDs; the examined GF INIs do not reference
 separate authored firing recordings to import.
 
+Widow mines use the native land-mine base for passability, concealment and
+spent-charge accounting. Their seeker uses a one-second acceleration ramp,
+reacquires within the trigger radius, and uses native HE armor multipliers,
+blast falloff, effects and sounds. The source's underground aircraft placeholder
+is represented as a stationary charge. Carrier projectile helpers whose source
+IDs also contain `地雷` remain part of the separate carrier-script gaps below.
+
 ## Remaining differences
 
-This is not complete emulation of the original scripts. Paid ammunition and
+This is not complete emulation of the original scripts. Other paid ammunition and
 money actions, Lord of the Sky's scripted superweapon entities, heterogeneous
 independent gun mounts, Hero Tower's targeted healing, helper-unit destruction
 spawns, animated limbs/arms, custom particles and some projectile chains still
@@ -67,6 +87,11 @@ starts, recharge, carrier launch/damage and saves. Browser checks exercise
 both packed mods, aircraft frames and actual wreck pixels. No game source was
 modified. The validator's “nothing can build it” warning for the landed
 Floating Array is intentional: it is reached through Land/Fly, not a builder.
+The same warning for Widow Mine is intentional: only its Minelayer deploys it.
+`bun test mods/fg-rusted-league/mines.test.ts` covers paid deployment, charge
+recovery, target filtering, homing, retargeting, clearing and deterministic saves.
+`node mods/fg-rusted-league/verify-mines.mjs http://127.0.0.1:5173` verifies the
+real HUD action and both mine phases with both mods installed.
 
 ## Combat canvas fix
 
@@ -75,7 +100,7 @@ definitions. The source wreck hook now checks the definition table before
 looking for mod-owned wreck art and delegates prop debris to the native
 renderer. Its canvas save/restore is also protected by `try/finally`. This fixes
 the frame interruption and accumulated canvas transforms during showcase
-combat. Both mod copies carry extension package 1.0.1.
+combat. The fix shipped in both packages at 1.0.1 and is retained in FG's 1.1.0.
 
 Regression checks: `node --test mods/fg-rusted-league/presentation.test.mjs`.
 With a game dev server running, `node mods/fg-rusted-league/verify-combat.mjs

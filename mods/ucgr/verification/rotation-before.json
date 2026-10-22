@@ -1,0 +1,1515 @@
+{
+  "phase": "before",
+  "method": "Loaded real sprites through normal mod URL; renderer hullPose feeds atlas.drawSpriteFrame at up-facing0–14 degrees in1-degree increments; SHA-256 of RGBA pixels.",
+  "tanks": [
+    {
+      "id": "usgr-re-t72b3",
+      "key": "u.usgr-re-t72b3",
+      "manifestPivotX": 0.489362,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 42,
+      "fh": 42,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "59ec58ebd0b5ca68d1df1f79bd153b96ea5930ca3ae743c00c9b52081a35139e",
+        "59ec58ebd0b5ca68d1df1f79bd153b96ea5930ca3ae743c00c9b52081a35139e",
+        "59ec58ebd0b5ca68d1df1f79bd153b96ea5930ca3ae743c00c9b52081a35139e",
+        "59ec58ebd0b5ca68d1df1f79bd153b96ea5930ca3ae743c00c9b52081a35139e",
+        "59ec58ebd0b5ca68d1df1f79bd153b96ea5930ca3ae743c00c9b52081a35139e",
+        "59ec58ebd0b5ca68d1df1f79bd153b96ea5930ca3ae743c00c9b52081a35139e",
+        "59ec58ebd0b5ca68d1df1f79bd153b96ea5930ca3ae743c00c9b52081a35139e",
+        "59ec58ebd0b5ca68d1df1f79bd153b96ea5930ca3ae743c00c9b52081a35139e",
+        "18c1f63a0f98f59c013db807caa197e7c3591fdee0ae4479f471ac4db90d64fc",
+        "18c1f63a0f98f59c013db807caa197e7c3591fdee0ae4479f471ac4db90d64fc",
+        "18c1f63a0f98f59c013db807caa197e7c3591fdee0ae4479f471ac4db90d64fc",
+        "18c1f63a0f98f59c013db807caa197e7c3591fdee0ae4479f471ac4db90d64fc",
+        "18c1f63a0f98f59c013db807caa197e7c3591fdee0ae4479f471ac4db90d64fc",
+        "18c1f63a0f98f59c013db807caa197e7c3591fdee0ae4479f471ac4db90d64fc",
+        "18c1f63a0f98f59c013db807caa197e7c3591fdee0ae4479f471ac4db90d64fc"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    },
+    {
+      "id": "usgr-re-t90m",
+      "key": "u.usgr-re-t90m",
+      "manifestPivotX": 0.489796,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 42,
+      "fh": 42,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "f7a46fce0e5746cde8a9b33297f75c9d969992f7dc850869cbd84291fa6170af",
+        "f7a46fce0e5746cde8a9b33297f75c9d969992f7dc850869cbd84291fa6170af",
+        "f7a46fce0e5746cde8a9b33297f75c9d969992f7dc850869cbd84291fa6170af",
+        "f7a46fce0e5746cde8a9b33297f75c9d969992f7dc850869cbd84291fa6170af",
+        "f7a46fce0e5746cde8a9b33297f75c9d969992f7dc850869cbd84291fa6170af",
+        "f7a46fce0e5746cde8a9b33297f75c9d969992f7dc850869cbd84291fa6170af",
+        "f7a46fce0e5746cde8a9b33297f75c9d969992f7dc850869cbd84291fa6170af",
+        "f7a46fce0e5746cde8a9b33297f75c9d969992f7dc850869cbd84291fa6170af",
+        "020fe1ac60e5b5b5ec0e302fc9018e63a08f07c0197ca6e34533db6cb5cf88a8",
+        "020fe1ac60e5b5b5ec0e302fc9018e63a08f07c0197ca6e34533db6cb5cf88a8",
+        "020fe1ac60e5b5b5ec0e302fc9018e63a08f07c0197ca6e34533db6cb5cf88a8",
+        "020fe1ac60e5b5b5ec0e302fc9018e63a08f07c0197ca6e34533db6cb5cf88a8",
+        "020fe1ac60e5b5b5ec0e302fc9018e63a08f07c0197ca6e34533db6cb5cf88a8",
+        "020fe1ac60e5b5b5ec0e302fc9018e63a08f07c0197ca6e34533db6cb5cf88a8",
+        "020fe1ac60e5b5b5ec0e302fc9018e63a08f07c0197ca6e34533db6cb5cf88a8"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    },
+    {
+      "id": "usgr-re-t14",
+      "key": "u.usgr-re-t14",
+      "manifestPivotX": 0.509804,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 49,
+      "fh": 49,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "abfbc620ae001bf070c9551a16ce7c1fa5aed5a59905a8ef9204d5546c0ca8db",
+        "abfbc620ae001bf070c9551a16ce7c1fa5aed5a59905a8ef9204d5546c0ca8db",
+        "abfbc620ae001bf070c9551a16ce7c1fa5aed5a59905a8ef9204d5546c0ca8db",
+        "abfbc620ae001bf070c9551a16ce7c1fa5aed5a59905a8ef9204d5546c0ca8db",
+        "abfbc620ae001bf070c9551a16ce7c1fa5aed5a59905a8ef9204d5546c0ca8db",
+        "abfbc620ae001bf070c9551a16ce7c1fa5aed5a59905a8ef9204d5546c0ca8db",
+        "abfbc620ae001bf070c9551a16ce7c1fa5aed5a59905a8ef9204d5546c0ca8db",
+        "abfbc620ae001bf070c9551a16ce7c1fa5aed5a59905a8ef9204d5546c0ca8db",
+        "b857a29dc5da650e1b1376549b300595af276ecf70ee3b152e4784f400e4eefb",
+        "b857a29dc5da650e1b1376549b300595af276ecf70ee3b152e4784f400e4eefb",
+        "b857a29dc5da650e1b1376549b300595af276ecf70ee3b152e4784f400e4eefb",
+        "b857a29dc5da650e1b1376549b300595af276ecf70ee3b152e4784f400e4eefb",
+        "b857a29dc5da650e1b1376549b300595af276ecf70ee3b152e4784f400e4eefb",
+        "b857a29dc5da650e1b1376549b300595af276ecf70ee3b152e4784f400e4eefb",
+        "b857a29dc5da650e1b1376549b300595af276ecf70ee3b152e4784f400e4eefb"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    },
+    {
+      "id": "usgr-re-ztz96a",
+      "key": "u.usgr-re-ztz96a",
+      "manifestPivotX": 0.5,
+      "directionFrames": false,
+      "frames": 1,
+      "fw": 15,
+      "fh": 30,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0.01745329251994332
+        },
+        {
+          "frame": 0,
+          "rot": 0.03490658503988664
+        },
+        {
+          "frame": 0,
+          "rot": 0.05235987755982996
+        },
+        {
+          "frame": 0,
+          "rot": 0.06981317007977328
+        },
+        {
+          "frame": 0,
+          "rot": 0.08726646259971638
+        },
+        {
+          "frame": 0,
+          "rot": 0.1047197551196597
+        },
+        {
+          "frame": 0,
+          "rot": 0.12217304763960302
+        },
+        {
+          "frame": 0,
+          "rot": 0.13962634015954634
+        },
+        {
+          "frame": 0,
+          "rot": 0.15707963267948966
+        },
+        {
+          "frame": 0,
+          "rot": 0.17453292519943298
+        },
+        {
+          "frame": 0,
+          "rot": 0.1919862177193763
+        },
+        {
+          "frame": 0,
+          "rot": 0.20943951023931962
+        },
+        {
+          "frame": 0,
+          "rot": 0.22689280275926293
+        },
+        {
+          "frame": 0,
+          "rot": 0.24434609527920603
+        }
+      ],
+      "hashes": [
+        "6b54e4ac04e230794aef05e4ead4ba438d2649672db01ddce917f256e54cbfbf",
+        "6b3ab5af87ae126aceaec225138bf95c5499c911ee8dc2a227621b988b8abaa3",
+        "3c9be3a67f3787d2213747f02a1c3ed0bc9255c6a7d723fd5512cb6a2dfe247c",
+        "67736641e5ab0dd07c74b9792d73ecb594636ce7263eda6343bdc7c30b126e90",
+        "202a8e6a1c9d26798504ebdf5365d96194573a4c321a5b0a3037240953987439",
+        "c971dc65141fc78d6148394d75fab26190d3a1f91a3827bf9884570fa3c473b3",
+        "6d82444642b19ec1cbfe15f1e42ff550be700ec4ecef8095fd55115f71c6e60e",
+        "7812399e54eff5a59725975a6c6ea0fa349ce916c92fb3ad4c55be204db7e074",
+        "6b20af7077f2b1b11cff1005e47f9fb7fd4221fb0cdc493e1f9f365a3f139892",
+        "30679a522efd3d7d1bbff8b9b41993269796764f9909be9c653297dc41e09f51",
+        "3c63793cafe319884613cfffaa9dbb5168af2a094af7305e337444935b1d0530",
+        "63fb0c2abc9d82737c77d085e8c86af272afe2b65fa4086aa6058c87bb4d78bb",
+        "38bd9ec515aeacadc76149cb9c3fcf3731b58be7a19c3ff7866d0c07bfd2880a",
+        "3b6a869117545ba05c5a8f0579450e8281df832cd5d017dcf014feeac2186132",
+        "8ada8d2efb6261383f19bf4be9ae899e2d8724360c1a14f18850cc975a4a859b"
+      ],
+      "uniqueHeadings": 15,
+      "adjacentDistinct": true
+    },
+    {
+      "id": "usgr-re-ztz99a",
+      "key": "u.usgr-re-ztz99a",
+      "manifestPivotX": 0.5,
+      "directionFrames": false,
+      "frames": 1,
+      "fw": 15,
+      "fh": 34,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0.01745329251994332
+        },
+        {
+          "frame": 0,
+          "rot": 0.03490658503988664
+        },
+        {
+          "frame": 0,
+          "rot": 0.05235987755982996
+        },
+        {
+          "frame": 0,
+          "rot": 0.06981317007977328
+        },
+        {
+          "frame": 0,
+          "rot": 0.08726646259971638
+        },
+        {
+          "frame": 0,
+          "rot": 0.1047197551196597
+        },
+        {
+          "frame": 0,
+          "rot": 0.12217304763960302
+        },
+        {
+          "frame": 0,
+          "rot": 0.13962634015954634
+        },
+        {
+          "frame": 0,
+          "rot": 0.15707963267948966
+        },
+        {
+          "frame": 0,
+          "rot": 0.17453292519943298
+        },
+        {
+          "frame": 0,
+          "rot": 0.1919862177193763
+        },
+        {
+          "frame": 0,
+          "rot": 0.20943951023931962
+        },
+        {
+          "frame": 0,
+          "rot": 0.22689280275926293
+        },
+        {
+          "frame": 0,
+          "rot": 0.24434609527920603
+        }
+      ],
+      "hashes": [
+        "e5fecfd587a8c009cb3e8953000627f515bbcf2d9bef2f3a17904e348b2ff679",
+        "ddb9996483edf24d370cfb4f499d003a9c1ec910850c0b67811bb6ea27459972",
+        "870e6b247594a850ab7034770cb26c4a7808d8d62ea4e4190cf04bbd3f212a35",
+        "7b4611f8657a278130bdb3538eab6472f1b6dac6280d9f73b11bb12f6fc53765",
+        "300f139fca51d4b582270aafb6013051793530cec418559158aca740455ddacd",
+        "0335004e0f3bed32c55cbcdf4b6f596a0ce28c44dfb7c124e4d887e0763ee3fe",
+        "59a5988411373e1a82f982fb836deea2455d9f70398f4bd577849dd5ee015f27",
+        "23e2d39477b50b3e2fcd1b459a25b3365ab9a26df299b31ff8540e72824ff975",
+        "8282c4db2d39502d754d85cb9bea14ef408864591506110559573f49e4011bce",
+        "21877ae32090472bd5907e8fadb530c294ea47a532c19d385b7c30fe867b6fd6",
+        "6bb866d3f8396603f4e8fa6358a4310cf22615d823f229c3afe0bf281d9266a5",
+        "54895cb6e61956c60a35782faa6513f909c43c10df11bf2686ff078d22ddce86",
+        "a6445608aa51d9d40716ce82b512e935a46dc55f77249740802d05e5b2a8b0c8",
+        "be702bd5730625c27fc7eb9911e3bd13a19f24e8ba0ebcc49948d05f01a754f1",
+        "b25f0d705623a6143a3024534d72a016f64dc77aad71cd940afc46e54d6e92da"
+      ],
+      "uniqueHeadings": 15,
+      "adjacentDistinct": true
+    },
+    {
+      "id": "usgr-re-ztq15",
+      "key": "u.usgr-re-ztq15",
+      "manifestPivotX": 0.513514,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 39,
+      "fh": 39,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "d070e0eb0bd266b48bf8d5f842bf64934e47f27eae6ea46394280b7e37c7d893",
+        "d070e0eb0bd266b48bf8d5f842bf64934e47f27eae6ea46394280b7e37c7d893",
+        "d070e0eb0bd266b48bf8d5f842bf64934e47f27eae6ea46394280b7e37c7d893",
+        "d070e0eb0bd266b48bf8d5f842bf64934e47f27eae6ea46394280b7e37c7d893",
+        "d070e0eb0bd266b48bf8d5f842bf64934e47f27eae6ea46394280b7e37c7d893",
+        "d070e0eb0bd266b48bf8d5f842bf64934e47f27eae6ea46394280b7e37c7d893",
+        "d070e0eb0bd266b48bf8d5f842bf64934e47f27eae6ea46394280b7e37c7d893",
+        "d070e0eb0bd266b48bf8d5f842bf64934e47f27eae6ea46394280b7e37c7d893",
+        "2a94e3dea7ae386a72d6eb0f2de28248fc85f4759825fb26e10419ce7278b2b0",
+        "2a94e3dea7ae386a72d6eb0f2de28248fc85f4759825fb26e10419ce7278b2b0",
+        "2a94e3dea7ae386a72d6eb0f2de28248fc85f4759825fb26e10419ce7278b2b0",
+        "2a94e3dea7ae386a72d6eb0f2de28248fc85f4759825fb26e10419ce7278b2b0",
+        "2a94e3dea7ae386a72d6eb0f2de28248fc85f4759825fb26e10419ce7278b2b0",
+        "2a94e3dea7ae386a72d6eb0f2de28248fc85f4759825fb26e10419ce7278b2b0",
+        "2a94e3dea7ae386a72d6eb0f2de28248fc85f4759825fb26e10419ce7278b2b0"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    },
+    {
+      "id": "usgr-re-m1a1hc",
+      "key": "u.usgr-re-m1a1hc",
+      "manifestPivotX": 0.512195,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 40,
+      "fh": 40,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "26956d3ca6619521b743e5f9f48950698c15be52b0c9276fa572de52076880af",
+        "26956d3ca6619521b743e5f9f48950698c15be52b0c9276fa572de52076880af",
+        "26956d3ca6619521b743e5f9f48950698c15be52b0c9276fa572de52076880af",
+        "26956d3ca6619521b743e5f9f48950698c15be52b0c9276fa572de52076880af",
+        "26956d3ca6619521b743e5f9f48950698c15be52b0c9276fa572de52076880af",
+        "26956d3ca6619521b743e5f9f48950698c15be52b0c9276fa572de52076880af",
+        "26956d3ca6619521b743e5f9f48950698c15be52b0c9276fa572de52076880af",
+        "26956d3ca6619521b743e5f9f48950698c15be52b0c9276fa572de52076880af",
+        "768b7ff2abd562ba3ef48dbaa41cf6b14190fb6657230275338129e11cad7d21",
+        "768b7ff2abd562ba3ef48dbaa41cf6b14190fb6657230275338129e11cad7d21",
+        "768b7ff2abd562ba3ef48dbaa41cf6b14190fb6657230275338129e11cad7d21",
+        "768b7ff2abd562ba3ef48dbaa41cf6b14190fb6657230275338129e11cad7d21",
+        "768b7ff2abd562ba3ef48dbaa41cf6b14190fb6657230275338129e11cad7d21",
+        "768b7ff2abd562ba3ef48dbaa41cf6b14190fb6657230275338129e11cad7d21",
+        "768b7ff2abd562ba3ef48dbaa41cf6b14190fb6657230275338129e11cad7d21"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    },
+    {
+      "id": "usgr-re-m1a2sepv3",
+      "key": "u.usgr-re-m1a2sepv3",
+      "manifestPivotX": 0.509804,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 42,
+      "fh": 42,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "658757ffde5901ed879a2883562c55edd1d9ac8af849f52524cd0a25a1c4029c",
+        "658757ffde5901ed879a2883562c55edd1d9ac8af849f52524cd0a25a1c4029c",
+        "658757ffde5901ed879a2883562c55edd1d9ac8af849f52524cd0a25a1c4029c",
+        "658757ffde5901ed879a2883562c55edd1d9ac8af849f52524cd0a25a1c4029c",
+        "658757ffde5901ed879a2883562c55edd1d9ac8af849f52524cd0a25a1c4029c",
+        "658757ffde5901ed879a2883562c55edd1d9ac8af849f52524cd0a25a1c4029c",
+        "658757ffde5901ed879a2883562c55edd1d9ac8af849f52524cd0a25a1c4029c",
+        "658757ffde5901ed879a2883562c55edd1d9ac8af849f52524cd0a25a1c4029c",
+        "76a93bbd2938ec927d6788d14e6e4d903989da36c1b1820b305d4f8e9cbefd24",
+        "76a93bbd2938ec927d6788d14e6e4d903989da36c1b1820b305d4f8e9cbefd24",
+        "76a93bbd2938ec927d6788d14e6e4d903989da36c1b1820b305d4f8e9cbefd24",
+        "76a93bbd2938ec927d6788d14e6e4d903989da36c1b1820b305d4f8e9cbefd24",
+        "76a93bbd2938ec927d6788d14e6e4d903989da36c1b1820b305d4f8e9cbefd24",
+        "76a93bbd2938ec927d6788d14e6e4d903989da36c1b1820b305d4f8e9cbefd24",
+        "76a93bbd2938ec927d6788d14e6e4d903989da36c1b1820b305d4f8e9cbefd24"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    },
+    {
+      "id": "usgr-re-l2a6",
+      "key": "u.usgr-re-l2a6",
+      "manifestPivotX": 0.5,
+      "directionFrames": false,
+      "frames": 1,
+      "fw": 16,
+      "fh": 32,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0.01745329251994332
+        },
+        {
+          "frame": 0,
+          "rot": 0.03490658503988664
+        },
+        {
+          "frame": 0,
+          "rot": 0.05235987755982996
+        },
+        {
+          "frame": 0,
+          "rot": 0.06981317007977328
+        },
+        {
+          "frame": 0,
+          "rot": 0.08726646259971638
+        },
+        {
+          "frame": 0,
+          "rot": 0.1047197551196597
+        },
+        {
+          "frame": 0,
+          "rot": 0.12217304763960302
+        },
+        {
+          "frame": 0,
+          "rot": 0.13962634015954634
+        },
+        {
+          "frame": 0,
+          "rot": 0.15707963267948966
+        },
+        {
+          "frame": 0,
+          "rot": 0.17453292519943298
+        },
+        {
+          "frame": 0,
+          "rot": 0.1919862177193763
+        },
+        {
+          "frame": 0,
+          "rot": 0.20943951023931962
+        },
+        {
+          "frame": 0,
+          "rot": 0.22689280275926293
+        },
+        {
+          "frame": 0,
+          "rot": 0.24434609527920603
+        }
+      ],
+      "hashes": [
+        "1dde4dd97c7d9eef188064c4107dce8b31d6c8ace916225856fe6905dde425c1",
+        "2795eaf4da4daaf78edb4027c6dfe91bfe1cca8fde17193883ee18f26c3e9a7c",
+        "e2bcccbc2e1e796f1b48dbdb95ea43694febb64ada11c80b95f993e65223ab1a",
+        "b98515c2eb0cb53e95735dec1d7896d51c1385ae9018de0c52cca64fec385a47",
+        "58d6f20c1f817004c7b265d94104a7f4208ac3cc0a2f66a4a5a0ebd81b11ee18",
+        "4f5f888ffe445cd338f598f71f687cd67f632eec4e4efd77d9386258ec4af71d",
+        "e27f9d970d3edfd40c1dcafc8fd5288714e995327ec469cf9a41bf0c44a8ff8f",
+        "e46ca5f848b99c2e982fbb61506f22ed7d218f75046df72b5828dccc7e7bd4d2",
+        "08451278390e518df0880df978cc2361b3095959e48eb67baf6913c713e2bd63",
+        "fa52edd6d2f8866d383e57ee67c8ef9c0685b06242cf7d59f4293b942d8bd46e",
+        "ff37daeaff18dc1aa485602c6afa55ea5d641da40be2253237aa53655604cb39",
+        "d68fe8d535d6604fe3957cac908e1e21de613954cfdad3289c5ddef061d34a97",
+        "f5554ca2f04e59b6382e492687fccea4c30d964e0e3fc453ca0aa74aaefad2d1",
+        "4755a77cf911ecbe7747203b16bfc1ccec6024ba9cf4ebbe05b0776b4cba2725",
+        "a982a96915bcd376a91b857b4511fc2d60befd45e95a06d4eed02f812b460011"
+      ],
+      "uniqueHeadings": 15,
+      "adjacentDistinct": true
+    },
+    {
+      "id": "usgr-re-sxxi",
+      "key": "u.usgr-re-sxxi",
+      "manifestPivotX": 0.5,
+      "directionFrames": false,
+      "frames": 1,
+      "fw": 18,
+      "fh": 34,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0.01745329251994332
+        },
+        {
+          "frame": 0,
+          "rot": 0.03490658503988664
+        },
+        {
+          "frame": 0,
+          "rot": 0.05235987755982996
+        },
+        {
+          "frame": 0,
+          "rot": 0.06981317007977328
+        },
+        {
+          "frame": 0,
+          "rot": 0.08726646259971638
+        },
+        {
+          "frame": 0,
+          "rot": 0.1047197551196597
+        },
+        {
+          "frame": 0,
+          "rot": 0.12217304763960302
+        },
+        {
+          "frame": 0,
+          "rot": 0.13962634015954634
+        },
+        {
+          "frame": 0,
+          "rot": 0.15707963267948966
+        },
+        {
+          "frame": 0,
+          "rot": 0.17453292519943298
+        },
+        {
+          "frame": 0,
+          "rot": 0.1919862177193763
+        },
+        {
+          "frame": 0,
+          "rot": 0.20943951023931962
+        },
+        {
+          "frame": 0,
+          "rot": 0.22689280275926293
+        },
+        {
+          "frame": 0,
+          "rot": 0.24434609527920603
+        }
+      ],
+      "hashes": [
+        "f5e756ae1fa0491962dcc200860a2247a60112857d618ee7b6f6ecc36adbd8b5",
+        "0e5f09146918bbc6320d77e5526aeab4a757e7628590324878ef2e6c50cad286",
+        "8971dbd4a2d80c0e611c4bb2fa8c625dc382fba0a99de22a404d79cab081efa8",
+        "73623e1c5ceec511dacbc111cacdc1a1262167a787b2b0e4f6ee093972766f8b",
+        "c26da47b40061777349a7ed95727954042b8b6c9fb2f5ccb2280c7a48d2f594f",
+        "86d2160bbce3297f0323af94989581acb050da8bf7027a75ca447c97d8b17b64",
+        "fd132efed02956011e503cd18e45043987931a9efcdd744d18014fe79a9792de",
+        "ef581870d276190660cf0fd2c2ec274a8a12456defdf5e462710f90b0d98f0c2",
+        "be85a8d1b55a77d95f0f1bc56f054a5b3196f8e0dcce451893ee0dcba5d2c5ef",
+        "b217a46ccadb5df458a1154f53dc59f5ba9b42261b51231a9c553705602d6e1c",
+        "77f67b4271c7c9778bf73afde62a88bd4b9d8d9610c9aba7fbb70cb8b77ffe18",
+        "34a6835449230c52e7e096e6765da979117fb5ff854d3a5a8545214c865535cc",
+        "e617bb18970819330e831af1cf2568356697ea601d0c0104491a2838a1e5322f",
+        "13bc48ffcbf4d762e52b68f932741b1dcacbe13d64b9d231c32f87c42dddac80",
+        "b04b0f9fcfdfc89ec920c5088a5e4c3931ce60a5b9cd13cb520853191a42f9d5"
+      ],
+      "uniqueHeadings": 15,
+      "adjacentDistinct": true
+    },
+    {
+      "id": "usgr-re-915",
+      "key": "u.usgr-re-915",
+      "manifestPivotX": 0.5,
+      "directionFrames": false,
+      "frames": 1,
+      "fw": 16,
+      "fh": 29,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0.01745329251994332
+        },
+        {
+          "frame": 0,
+          "rot": 0.03490658503988664
+        },
+        {
+          "frame": 0,
+          "rot": 0.05235987755982996
+        },
+        {
+          "frame": 0,
+          "rot": 0.06981317007977328
+        },
+        {
+          "frame": 0,
+          "rot": 0.08726646259971638
+        },
+        {
+          "frame": 0,
+          "rot": 0.1047197551196597
+        },
+        {
+          "frame": 0,
+          "rot": 0.12217304763960302
+        },
+        {
+          "frame": 0,
+          "rot": 0.13962634015954634
+        },
+        {
+          "frame": 0,
+          "rot": 0.15707963267948966
+        },
+        {
+          "frame": 0,
+          "rot": 0.17453292519943298
+        },
+        {
+          "frame": 0,
+          "rot": 0.1919862177193763
+        },
+        {
+          "frame": 0,
+          "rot": 0.20943951023931962
+        },
+        {
+          "frame": 0,
+          "rot": 0.22689280275926293
+        },
+        {
+          "frame": 0,
+          "rot": 0.24434609527920603
+        }
+      ],
+      "hashes": [
+        "720d5b7595c93e673f7da368368c2f1c07eb94988c92b686803439bf11b1a5a9",
+        "f7f44a9890c6ac144c9b253fbcf98b084b61c9f92df118d00ecd8b38e08ad113",
+        "9a65394c92da981595a929c0b04c2b4bc7e13bf6b4babaf54d7dd8abdd02cb2b",
+        "0ddfe8ec706547bad7c569c1dc57fefc404fb11f4386029c375e77c2e9b3fc10",
+        "7be838c89006da5d7266dfe7f64f7ac6c421273da4bd2cb2c8feb877f1fd8665",
+        "1c317ffd5dbbfa3a5868ba58277d2d3071e7c0efa62bdadaa437cbbc3bf8d3d0",
+        "263920af0314c633f0e320ea31244b1d5ce56466dbaecd46b9356c49c5b400f7",
+        "a6e50ff6d3eb659aafa27b2aa1c84d2355809dfbde141ce25772e79a8b010ac0",
+        "43613059fc2ec518da1cf0cbdb6fdfa14b2ac87975f4635f01ada8a8831edc27",
+        "96a631d42c28f958a62e7aaf6fd13715008bd234dca6a0e70b23f591247d8d08",
+        "4d41524c38b6d5dc998e1a03416f041280f56df85df06fbb116643d2af148ce9",
+        "e9a73aff9020c525156081d11724995cc5311017a472046c0e70fba5af886294",
+        "1e6a1be7c3386cc7cb80d90859621555c507b8070f523054a1442840e4bec20b",
+        "0dd7b1ee98ca78b1a89d95bd3d4bbe0d345b0e3e0297dfc2a17f0435f51386e7",
+        "d926c365a0cf8f397243c61f543823d98122f59950291c59219b7bfdf746f7b9"
+      ],
+      "uniqueHeadings": 15,
+      "adjacentDistinct": true
+    },
+    {
+      "id": "usgr-re-k1a1-e17a7bf0",
+      "key": "u.usgr-re-k1a1-e17a7bf0",
+      "manifestPivotX": 0.488889,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 43,
+      "fh": 43,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "49acf3813ba7a85c0506875494d0a5f238c440fd4d4c6fe4e3de89790104cd01",
+        "49acf3813ba7a85c0506875494d0a5f238c440fd4d4c6fe4e3de89790104cd01",
+        "49acf3813ba7a85c0506875494d0a5f238c440fd4d4c6fe4e3de89790104cd01",
+        "49acf3813ba7a85c0506875494d0a5f238c440fd4d4c6fe4e3de89790104cd01",
+        "49acf3813ba7a85c0506875494d0a5f238c440fd4d4c6fe4e3de89790104cd01",
+        "49acf3813ba7a85c0506875494d0a5f238c440fd4d4c6fe4e3de89790104cd01",
+        "49acf3813ba7a85c0506875494d0a5f238c440fd4d4c6fe4e3de89790104cd01",
+        "49acf3813ba7a85c0506875494d0a5f238c440fd4d4c6fe4e3de89790104cd01",
+        "80181e16b57f5794c0f13e7a93567250ef5a5114b96e5b2f1c85560246cb0d3e",
+        "80181e16b57f5794c0f13e7a93567250ef5a5114b96e5b2f1c85560246cb0d3e",
+        "80181e16b57f5794c0f13e7a93567250ef5a5114b96e5b2f1c85560246cb0d3e",
+        "80181e16b57f5794c0f13e7a93567250ef5a5114b96e5b2f1c85560246cb0d3e",
+        "80181e16b57f5794c0f13e7a93567250ef5a5114b96e5b2f1c85560246cb0d3e",
+        "80181e16b57f5794c0f13e7a93567250ef5a5114b96e5b2f1c85560246cb0d3e",
+        "80181e16b57f5794c0f13e7a93567250ef5a5114b96e5b2f1c85560246cb0d3e"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    },
+    {
+      "id": "usgr-re-74e",
+      "key": "u.usgr-re-74e",
+      "manifestPivotX": 0.486486,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 36,
+      "fh": 36,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "c17fbc109935743ec10acfec07196143eb5b17ac8ceb2c92658490e9a5320e6e",
+        "c17fbc109935743ec10acfec07196143eb5b17ac8ceb2c92658490e9a5320e6e",
+        "c17fbc109935743ec10acfec07196143eb5b17ac8ceb2c92658490e9a5320e6e",
+        "c17fbc109935743ec10acfec07196143eb5b17ac8ceb2c92658490e9a5320e6e",
+        "c17fbc109935743ec10acfec07196143eb5b17ac8ceb2c92658490e9a5320e6e",
+        "c17fbc109935743ec10acfec07196143eb5b17ac8ceb2c92658490e9a5320e6e",
+        "c17fbc109935743ec10acfec07196143eb5b17ac8ceb2c92658490e9a5320e6e",
+        "c17fbc109935743ec10acfec07196143eb5b17ac8ceb2c92658490e9a5320e6e",
+        "e72920ff40c450cc4bc8abe28e280da17c9536311ebb14830bc13d64d1a7ed20",
+        "e72920ff40c450cc4bc8abe28e280da17c9536311ebb14830bc13d64d1a7ed20",
+        "e72920ff40c450cc4bc8abe28e280da17c9536311ebb14830bc13d64d1a7ed20",
+        "e72920ff40c450cc4bc8abe28e280da17c9536311ebb14830bc13d64d1a7ed20",
+        "e72920ff40c450cc4bc8abe28e280da17c9536311ebb14830bc13d64d1a7ed20",
+        "e72920ff40c450cc4bc8abe28e280da17c9536311ebb14830bc13d64d1a7ed20",
+        "e72920ff40c450cc4bc8abe28e280da17c9536311ebb14830bc13d64d1a7ed20"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    },
+    {
+      "id": "usgr-re-90b",
+      "key": "u.usgr-re-90b",
+      "manifestPivotX": 0.487805,
+      "directionFrames": true,
+      "frames": 24,
+      "fw": 42,
+      "fh": 42,
+      "angles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "poses": [
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 0,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        },
+        {
+          "frame": 1,
+          "rot": 0
+        }
+      ],
+      "hashes": [
+        "79f1c9bd7bba662f8432e933e42b415764e49c0a0ac9017174c04a486676315d",
+        "79f1c9bd7bba662f8432e933e42b415764e49c0a0ac9017174c04a486676315d",
+        "79f1c9bd7bba662f8432e933e42b415764e49c0a0ac9017174c04a486676315d",
+        "79f1c9bd7bba662f8432e933e42b415764e49c0a0ac9017174c04a486676315d",
+        "79f1c9bd7bba662f8432e933e42b415764e49c0a0ac9017174c04a486676315d",
+        "79f1c9bd7bba662f8432e933e42b415764e49c0a0ac9017174c04a486676315d",
+        "79f1c9bd7bba662f8432e933e42b415764e49c0a0ac9017174c04a486676315d",
+        "79f1c9bd7bba662f8432e933e42b415764e49c0a0ac9017174c04a486676315d",
+        "777b90cb9c88ccc5962fb59eda32394bdbb18ef37ccb46a0c89eac6a8c9b6e3e",
+        "777b90cb9c88ccc5962fb59eda32394bdbb18ef37ccb46a0c89eac6a8c9b6e3e",
+        "777b90cb9c88ccc5962fb59eda32394bdbb18ef37ccb46a0c89eac6a8c9b6e3e",
+        "777b90cb9c88ccc5962fb59eda32394bdbb18ef37ccb46a0c89eac6a8c9b6e3e",
+        "777b90cb9c88ccc5962fb59eda32394bdbb18ef37ccb46a0c89eac6a8c9b6e3e",
+        "777b90cb9c88ccc5962fb59eda32394bdbb18ef37ccb46a0c89eac6a8c9b6e3e",
+        "777b90cb9c88ccc5962fb59eda32394bdbb18ef37ccb46a0c89eac6a8c9b6e3e"
+      ],
+      "uniqueHeadings": 2,
+      "adjacentDistinct": false
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "[sprites] \"egg.zeppelin\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)",
+    "[sprites] \"sunken.destroyer\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)",
+    "[sprites] \"sunken.destroyer.broken\" matches no existing atlas key — check the manifest (see docs/SPRITE-PROMPTS.md for the key list)"
+  ],
+  "summary": {
+    "heavyTanks": 14,
+    "live": 5,
+    "fifteenDistinctHeadings": 5
+  }
+}

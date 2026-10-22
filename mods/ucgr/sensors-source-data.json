@@ -1,0 +1,186 @@
+{
+  "format": "ucgr-source-sensor-audit",
+  "v": 1,
+  "unit": "usgr-re-mig29",
+  "status": "source radar ranges, fixed signatures, infrared helper flight and finite countermeasure energy pulses",
+  "candidate": {
+    "fixedWing": true,
+    "airSuperiority": true,
+    "altitude": "high",
+    "flightControls": {
+      "initial": "high",
+      "initialHeight": 80.0,
+      "lowHeight": 40.0,
+      "highHeight": 80.0,
+      "heightSpread": 8.0,
+      "heightRate": 2376.0,
+      "altitudeTime": 0.1,
+      "altitudeCooldown": 5,
+      "thrust": 0.2,
+      "thrustDuration": 15,
+      "thrustCooldown": 20,
+      "brake": 0.2,
+      "brakeTurn": 0.4188790204786391,
+      "damageThresholds": [
+        0.75,
+        0.5,
+        0.25
+      ],
+      "damageSpeed": 0.05
+    },
+    "ecm": 10.0,
+    "countermeasures": {
+      "charges": 5,
+      "reload": 0.5,
+      "range": 180.0,
+      "x": 0.0,
+      "y": 18.0,
+      "life": 0.5,
+      "speed": 192.0,
+      "radius": 80.0,
+      "energy": 60
+    },
+    "signatures": [
+      {
+        "channel": "usgr-re-radar",
+        "strength": 2.0
+      }
+    ],
+    "sensors": [
+      {
+        "id": "air-search",
+        "label": [
+          "Air-search radar contacts",
+          "空中搜索雷达接触",
+          "공중 수색 레이더 접촉"
+        ],
+        "channel": "usgr-re-radar",
+        "mode": "signature",
+        "minimumSignature": 1,
+        "reveal": "contact",
+        "range": 37.5,
+        "cone": 0.6108652381980153,
+        "basis": "body",
+        "x": 40.0,
+        "y": -0.0,
+        "interval": 0.13333333333333333,
+        "scanLimit": 100,
+        "maxTracks": 100,
+        "targets": [
+          "air"
+        ],
+        "acquire": 0,
+        "retain": 0,
+        "forest": false,
+        "smoke": false
+      }
+    ],
+    "seadHits": [
+      {
+        "id": "w3",
+        "missile": true,
+        "ahead": false,
+        "energy": 0
+      },
+      {
+        "id": "w4",
+        "missile": true,
+        "ahead": false,
+        "energy": 0
+      }
+    ]
+  },
+  "notes": [
+    "Source fixed-wing high/low altitude actions, additive afterburner/speed-brake controls and persistent movement damage flags.",
+    "Source finite automatic countermeasure rounds, half-second ready-round refill, traveling area energy pulses; no probability-based decoy substitution.",
+    "Source RADAR resource 2 retained as a passive signature; this does not emit radar or reveal the entity.",
+    "RADAR_AIR: source range/35-degree search, RADAR>=1 threshold, 100 pre-cone candidates and sampled private contacts. Radar forwarding, warning display and radio-guided seekers are separate source systems; contacts do not reveal entities."
+  ],
+  "infrared": {
+    "weapon": "w3",
+    "status": "implemented-source-helper",
+    "radarDependency": false,
+    "illuminationDependency": false,
+    "ecmDependency": false,
+    "source": {
+      "helper": "彩蛋/捣蛋/R73.ini",
+      "template": "模板/红外弹模板.key",
+      "launchArcDegrees": 60.0,
+      "launchRangePixels": 800.0,
+      "reloadSeconds": 2.0,
+      "seekerConeDegrees": 120.0,
+      "fovLossStartsSeconds": 2,
+      "reacquire": false,
+      "launchLegPixels": 25.0,
+      "launchLegMaxSeconds": 0.25,
+      "steeringCheckFrames": 8,
+      "steering": "target velocity lead",
+      "speed": 9.5,
+      "speedInheritance": 0.25,
+      "turnDegreesPerTick": 5.0,
+      "accelerationPerTick": 0.15833333333333333,
+      "turnAccelerationPerTick": 0.1388888888888889,
+      "actualLifetimeSeconds": 5,
+      "unusedFuelTimeGlobal": 3.0,
+      "countermeasureResistance": 180.0,
+      "proximityRadiusPixels": 30.0
+    },
+    "missingContracts": [],
+    "implementedPolicy": {
+      "mode": "self",
+      "channel": "usgr-re-infrared",
+      "range": 10.0,
+      "cone": 2.0943951023931953,
+      "launchArc": 1.0471975511965976,
+      "turnRate": 5.235987755982989,
+      "maxLife": 5,
+      "sourceFlight": {
+        "speed": 228.0,
+        "heightRate": 86400.0,
+        "acceleration": 228.0,
+        "turnRate": 5.235987755982989,
+        "turnAcceleration": 8.726646259971648,
+        "inheritSpeed": 0.25,
+        "launchLeg": 10.0,
+        "launchTime": 0.25,
+        "sample": 0.13333333333333333,
+        "lossDelay": 2,
+        "fovDegrees": 120.0,
+        "life": 5,
+        "resistance": 180.0,
+        "proximity": 12.0,
+        "blastRadius": 50.0
+      }
+    }
+  },
+  "sourceFiles": [
+    {
+      "path": "阵营单位/5.朝鲜/6.固定翼/MIG29.ini",
+      "sha256": "9136bb566f65f0b15ffe7a4a17f9924fd1603b9c4f1d4392c85e8ce0c284bc51"
+    },
+    {
+      "path": "阵营单位/3.美利坚合众国/6.固定翼/RADAR_AIR.ini",
+      "sha256": "51c5099b5d5b77d31bca8e649d618574733197c5a6997da8d937160998d2610f"
+    },
+    {
+      "path": "彩蛋/捣蛋/R73.ini",
+      "sha256": "58162d7d649254049e4414406936b09796060229af1fff7fe13569202bfc8ec4"
+    },
+    {
+      "path": "模板/空战雷达模板.key",
+      "sha256": "2e5d33b39a7a098d63e6b2fc165ec803568fdc24040219710d68fd059ac62fb2"
+    },
+    {
+      "path": "模板/红外弹模板.key",
+      "sha256": "eaf8b540f89b8932cc245dca4ae5368e83e7a98b8f17797a0df0b39804de601a"
+    },
+    {
+      "path": "模板/固定翼模板.key",
+      "sha256": "ef11c912a93d60a8f52ad8e04d15bebfaee3d790ea4682c0e308e9a581a5a718"
+    },
+    {
+      "path": "tem/干扰物.ini",
+      "sha256": "b760cfa0385b8f8a02ae7e7b6d9517b31490d046e51bffb1aecf93ca47847432"
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "carrier": {
+    "family": "AGM88",
+    "helper": "usgr-re-agm88-1585e86b",
+    "rounds": 4,
+    "range": 1000.0,
+    "scanLimit": 200,
+    "scanInterval": 0.75,
+    "scanCone": 1.0471975511965976,
+    "queueTime": 0.25,
+    "waypointTime": 0.5,
+    "warmup": 0.3333333333333333,
+    "reload": 1.0,
+    "launchCone": 0.7853981633974483,
+    "lateral": [
+      12.0,
+      -12.0
+    ],
+    "alternate": false,
+    "energy": 16.0,
+    "energyRegen": 0.0,
+    "severeDamage": 0.5,
+    "speedReset": -0.05
+  },
+  "helper": {
+    "id": "usgr-re-agm88-1585e86b",
+    "kind": "unit",
+    "domain": "air",
+    "tier": 1,
+    "cost": 0,
+    "buildTime": 1,
+    "hp": 1,
+    "speed": 180.0,
+    "turnRate": 26.179938779914945,
+    "radius": 20.0,
+    "vision": 0,
+    "armor": "air",
+    "power": 0,
+    "pop": 0,
+    "trail": "none",
+    "producedBy": [],
+    "aiWeight": 0,
+    "hovers": true,
+    "altitude": 30.0,
+    "name": [
+      "AGM88 anti-radiation missile",
+      "AGM88反辐射导弹",
+      "AGM88 대레이더 미사일"
+    ],
+    "desc": [
+      "Radar-seeking missile.",
+      "追踪雷达辐射源的导弹。",
+      "레이더 방사원을 추적하는 미사일."
+    ],
+    "weapons": [
+      {
+        "id": "primary",
+        "cls": "cannon",
+        "range": 1,
+        "dmg": 6.0,
+        "reload": 20,
+        "projectile": "missile",
+        "targets": [
+          "ground",
+          "ship"
+        ],
+        "extensions": {
+          "components-v1": {
+            "family": "ordinary",
+            "penetration": 0,
+            "ordinary": {
+              "ignore": 0.0,
+              "multipliers": []
+            },
+            "hpPhases": [
+              {
+                "direct": 6.0,
+                "area": 480.0,
+                "radius": 48.0,
+                "ignore": 0.0,
+                "fromEdge": false,
+                "noFalloff": false,
+                "friendly": false,
+                "targetGround": false,
+                "mutators": []
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "payload",
+        "cls": "cannon",
+        "range": 1,
+        "dmg": 300.0,
+        "reload": 20,
+        "projectile": "missile",
+        "targets": [
+          "ground",
+          "ship"
+        ],
+        "extensions": {
+          "components-v1": {
+            "family": "chemical",
+            "penetration": 400.0,
+            "hullDamage": 0,
+            "strength": 500.0,
+            "diameter": 2.8,
+            "top": true,
+            "positiveArmor": true,
+            "exposureFace": "front",
+            "channels": {
+              "rack": {
+                "strong": [
+                  0.5,
+                  1
+                ],
+                "weak": [
+                  0.1,
+                  0.1
+                ]
+              },
+              "crew": {
+                "strong": [
+                  0.5,
+                  1
+                ],
+                "weak": [
+                  0.1,
+                  0.1
+                ]
+              },
+              "engine": {
+                "strong": [
+                  0.5,
+                  1.0
+                ],
+                "weak": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "track": {
+                "strong": [
+                  0.5,
+                  1.0
+                ],
+                "weak": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "reserve": {
+                "strong": [
+                  1,
+                  1
+                ],
+                "weak": [
+                  1,
+                  1
+                ]
+              }
+            },
+            "recipient": {
+              "range": 32,
+              "radiusSquared": 1.5
+            },
+            "collateralHullDamage": 0,
+            "sourceHelper": true,
+            "fragments": {
+              "penetrated": 2,
+              "blocked": 2,
+              "offset": 2,
+              "rounds": [
+                {
+                  "motion": {
+                    "life": 0.5833333333333334,
+                    "speed": 72.0,
+                    "speedSpread": 48.0,
+                    "spread": 20.0,
+                    "vx": 0.0,
+                    "vy": 0.0,
+                    "vz": 24.0,
+                    "gravity": 12.0,
+                    "trueGravity": 0.0,
+                    "targetHeight": 4.0,
+                    "height": 0.0,
+                    "targetSpeed": 0.0,
+                    "acceleration": 144.0,
+                    "turn": -1.0471975511965976,
+                    "nearTurn": -1.0471975511965976,
+                    "delay": 0.0,
+                    "ground": true,
+                    "includeHeight": false,
+                    "noLead": false,
+                    "end": true
+                  },
+                  "hpPhases": [
+                    {
+                      "direct": 24.0,
+                      "area": 0.6,
+                      "radius": 0.4,
+                      "ignore": 0.0,
+                      "fromEdge": false,
+                      "noFalloff": false,
+                      "friendly": false,
+                      "targetGround": true,
+                      "mutators": []
+                    }
+                  ]
+                },
+                {
+                  "motion": {
+                    "life": 0.8333333333333334,
+                    "speed": 72.0,
+                    "speedSpread": 48.0,
+                    "spread": 20.0,
+                    "vx": 0.0,
+                    "vy": 0.0,
+                    "vz": 24.0,
+                    "gravity": 12.0,
+                    "trueGravity": 0.0,
+                    "targetHeight": 4.0,
+                    "height": 0.0,
+                    "targetSpeed": 0.0,
+                    "acceleration": 144.0,
+                    "turn": -1.0471975511965976,
+                    "nearTurn": -1.0471975511965976,
+                    "delay": 0.16666666666666666,
+                    "ground": true,
+                    "includeHeight": false,
+                    "noLead": false,
+                    "end": true
+                  },
+                  "hpPhases": [
+                    {
+                      "direct": 24.0,
+                      "area": 0.6,
+                      "radius": 0.4,
+                      "ignore": 0.0,
+                      "fromEdge": false,
+                      "noFalloff": false,
+                      "friendly": false,
+                      "targetGround": true,
+                      "mutators": []
+                    }
+                  ]
+                }
+              ]
+            },
+            "ordinary": {
+              "ignore": 0.0,
+              "multipliers": [
+                {
+                  "tag": "soldiers",
+                  "value": 5.0
+                },
+                {
+                  "tag": "FOB",
+                  "value": 2.0
+                },
+                {
+                  "tag": "装甲",
+                  "value": 10.0
+                },
+                {
+                  "tag": "轻装甲",
+                  "value": 10.0
+                }
+              ]
+            },
+            "hpPhases": [
+              {
+                "direct": 0.0,
+                "area": 300.0,
+                "radius": 20.0,
+                "ignore": 0.0,
+                "fromEdge": false,
+                "noFalloff": false,
+                "friendly": false,
+                "targetGround": false,
+                "mutators": [
+                  {
+                    "with": [
+                      "soldiers"
+                    ],
+                    "without": [],
+                    "direct": 1.0,
+                    "area": 5.0
+                  },
+                  {
+                    "with": [
+                      "FOB"
+                    ],
+                    "without": [],
+                    "direct": 1.0,
+                    "area": 2.0
+                  },
+                  {
+                    "with": [
+                      "装甲"
+                    ],
+                    "without": [],
+                    "direct": 1.0,
+                    "area": 10.0
+                  },
+                  {
+                    "with": [
+                      "轻装甲"
+                    ],
+                    "without": [],
+                    "direct": 1.0,
+                    "area": 10.0
+                  }
+                ],
+                "expand": 0.25
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "extensions": {
+      "sensors-v1": {
+        "seadMissile": {
+          "family": "AGM88",
+          "speed": 180.0,
+          "acceleration": 72.0,
+          "turnRate": 26.179938779914945,
+          "turnAcceleration": 1047.1975511965977,
+          "inheritSpeed": 0.3333333333333333,
+          "heightRate": 1800.0,
+          "initialHeight": 30.0,
+          "energy": 300.0,
+          "interval": 0.25,
+          "lostDrain": 50,
+          "proximity": 48.0,
+          "primaryDamage": 480.0,
+          "primaryRadius": 48.0,
+          "payloadDamage": 300.0,
+          "payloadRadius": 20.0,
+          "payloadExpand": 0.25,
+          "payloadDelay": 0.13333333333333333,
+          "primaryWeapon": "primary",
+          "payloadWeapon": "payload",
+          "interceptionRange": 12.0
+        },
+        "ecm": 10.0
+      },
+      "usgr-re.targeting-v1": {
+        "tags": [
+          "反辐射",
+          "AGM88"
+        ]
+      }
+    }
+  },
+  "entry": {
+    "source": "阵营单位/4.欧盟/6.固定翼/AGM88反辐射弹药.ini",
+    "rwName": "AGM88反辐射弹药",
+    "id": "usgr-re-agm88-1585e86b",
+    "name": [
+      "Placeholder Name",
+      "占位名称"
+    ],
+    "desc": [
+      "占位描述",
+      "占位描述"
+    ],
+    "class": "CustomUnitMetadata",
+    "template": false,
+    "kind": "unit",
+    "category": "6.固定翼",
+    "nation": "4.欧盟",
+    "movement": "AIR",
+    "tags": "反辐射,AGM88",
+    "warnings": [],
+    "sections": {
+      "turret_": 2,
+      "projectile_": 3,
+      "action_": 9,
+      "hiddenAction_": 18,
+      "decal_": 0
+    },
+    "hp": "1",
+    "image": "AIM-9X.png"
+  }
+}

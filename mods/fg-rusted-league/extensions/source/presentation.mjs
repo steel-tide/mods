@@ -29,7 +29,27 @@ export default function (sdk) {
       };
     },
     presentation(base) {
-      return {...base,Renderer:class SourceRenderer extends base.Renderer {
+      const isMine=e=>!!(e&&sdk.DEFS[e.defId]?.extensions?.[ID]?.mine);
+      return {...base,Input:class SourceInput extends base.Input {
+        pick(...args) {const e=super.pick(...args);return isMine(e)?null:e;}
+        setSelection(ids,add) {super.setSelection(ids.filter(id=>!isMine(this.game.st.ents.get(id))),add);}
+      },Renderer:class SourceRenderer extends base.Renderer {
+        loopedBuildingFrame(e,def,...args) {
+          return isMine(e)?1:super.loopedBuildingFrame(e,def,...args);
+        }
+        drawContentProjectile(g,p,alpha,bounds) {
+          const d=sdk.DEFS[p.gun.split('/')[0]];
+          if(!d?.extensions?.[ID]?.mine)return super.drawContentProjectile?.(g,p,alpha,bounds)??false;
+          const sp=sdk.getSprite(d.sprite);if(!sp)return false;
+          const x=p.px+(p.x-p.px)*alpha,y=p.py+(p.y-p.py)*alpha,ss=sp.ss??1;
+          if(x<bounds.x0-sp.fw||x>bounds.x1+sp.fw||y<bounds.y0-sp.fh||y>bounds.y1+sp.fh)return true;
+          g.save();
+          try {
+            g.translate(x,y);g.rotate(p.angle+Math.PI/2);
+            g.drawImage(sp.cv,0,0,sp.fw*ss,sp.fh*ss,-sp.fw/2,-sp.fh/2,sp.fw,sp.fh);
+          } finally {g.restore();}
+          return true;
+        }
         pictureOf(e,def,alpha) {
           const p=super.pictureOf(e,def,alpha);
           if(!def.extensions?.[ID]||def.domain!=='air'||!p.body||p.body.dirs||p.body.frames<2)return p;

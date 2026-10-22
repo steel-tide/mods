@@ -6,7 +6,7 @@
     "Ironworks",
     "铁工厂"
   ],
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Steel Tide",
   "description": [
     "Skimmer hover tanks, Orca destroyers, autocannon bunkers and a fusion power upgrade.",
@@ -272,6 +272,7 @@
     }
   ],
   "screenshots": [
+    "screenshots/cover.jpg",
     "screenshots/skimmers.webp",
     "screenshots/bunker.webp"
   ]

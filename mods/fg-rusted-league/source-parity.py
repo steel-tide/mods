@@ -70,7 +70,7 @@ def apply(port, manifest):
                 if wid and wid==w['id']:candidates.append(kv)
             costs=[port.num(t.get('energyUsage')) or 0 for t in candidates]
             if costs and max(costs)>0 and max(costs)<=energy_max:usage[w['id']]=max(costs)
-        if energy_max>0 and usage:
+        if energy_max>0 and (usage or source=='edd'):
             regen=port.num(core.get('energyRegen')) or 0
             recharge=port.num(core.get('energyRegenWhenRecharging'))
             start=port.num(core.get('energyStartingPercentage'))
@@ -88,6 +88,31 @@ def apply(port, manifest):
             if override.get('wing_plane') and any(a.get('autoTrigger','').strip()=='if self.hasParent()' and re.search(r'energy\s*=\s*[1-9]',a.get('addResources','')) for a in ini.values()):
                 cfg['dockRecharge']=True;features.append('carrier deck rearm')
             features.append('energy magazine'+(' / manual reload' if cfg.get('reloadTime') else ''))
+        if source=='edd':
+            action=ini['action_a']
+            price=dict(re.findall(r'(credits|energy)\s*=\s*([\d.]+)',action['price']))
+            projectile=ini['projectile_'+ini['turret_'+action['fireTurretXAtGround']]['projectile']]
+            cfg['mineLayer']={'unit':source_to_id[projectile['spawnUnit']],
+                'cost':port.cost_of(float(price['credits'])),'energy':float(price['energy'])}
+            features.append('paid mine deployment / three rechargeable charges')
+        if source=='egg':
+            # The native mine base supplies passability, blast clearing and spent-charge
+            # accounting. This package owns the source proximity trigger and seeker.
+            p=ini['projectile_1'];sprite=d['sprite'];did=d['id'];name=d['name'];desc=d['desc']
+            d.clear();d.update(id=did,extends='landmine',kind='building',name=name,desc=desc,
+                cost=port.cost_of(port.num(core['price'])),hp=6,buildTime=0,pop=0,power=0,
+                armor='light',vision=2,radius=1,fw=1,fh=1,shadow=False,untargetable=True,
+                builtBy=[],sprite=sprite,
+                weapons=[{'id':'seeker','cls':'he','dmg':float(p['areaDamage'])*port.DMG,
+                    'reload':port.seconds(ini['attack']['shootDelay']),
+                    'range':float(ini['attack']['maxAttackRange'])*port.RANGE,
+                    'targets':['ground','ship','sub'],'projectile':'shell',
+                    'speed':float(p['speed'])*96,'homing':True,'turret':False,
+                    'splash':round(float(p['areaRadius'])*port.ART*port.DISPLAY*.6),
+                    'look':{'impact':'fx.expl.l','impactScale':1.2}}])
+            cfg['mine']={'speed':float(p['speed'])*96,'targetSpeed':float(p['targetSpeed'])*96,
+                'life':port.seconds(p['life']),'directDamage':float(p['directDamage'])*port.DMG}
+            features+=['proximity mine / homing explosive / retarget on loss','source mine artwork']
         mend=port.num(core.get('selfRegenRate')) or 0
         if mend<0:
             cfg['decay']=round(-mend*60*d['hp']/max(1,port.num(core.get('maxHp')) or 1),6);features.append('source hull decay')
@@ -136,7 +161,7 @@ def apply(port, manifest):
         # This form is reached through Land/Fly, not placed as an extra free building.
         defs[port.MOD_ID+'-floating-array-landed']['builtBy']=[]
 
-    descriptor={'id':port.MOD_ID+'.source','version':'1.0.1','api':2,'capabilities':[cap],'assets':assets}
+    descriptor={'id':port.MOD_ID+'.source','version':'1.1.0','api':2,'capabilities':[cap],'assets':assets}
     for part in ['schema','runtime','presentation']:
         code=(folder/'extensions/source'/(part+'.mjs')).read_text()
         descriptor[part]={'source':code,'sha256':hashlib.sha256(code.encode()).hexdigest()}

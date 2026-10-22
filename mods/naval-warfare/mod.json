@@ -4,7 +4,7 @@
   "capacity": "large",
   "id": "naval-warfare",
   "name": "Naval Warfare",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Naval Warfare original creators",
   "description": [
     "My enemies are many. My equals are none. In the shade of olive trees, they said Italy could never be conquered. In the land of pharaohs and kings, they said Egypt could never be humbled.",
@@ -128547,6 +128547,7 @@
     }
   ],
   "screenshots": [
+    "screenshots/cover.png",
     "screenshots/carrier-operations.jpg",
     "screenshots/fleet.jpg",
     "screenshots/construction.jpg",

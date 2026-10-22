@@ -12,7 +12,7 @@ hero tank that ranks up.
 What comes across is the roster, the art, and the behaviour the game's mod
 rules can carry: units that change shape or dig in, a hero that ranks itself
 up, a tank that hides as a tree, carriers that fly their own planes, shields,
-beams and bases that go up like bombs. What stays behind is the rest of the
+beams, deployable Widow mines and bases that go up like bombs. What stays behind is the rest of the
 original's scripting: the money buttons, and the bug faction the command
 centre could be switched to (its art is Rusted Warfare's own).
 
@@ -100,6 +100,21 @@ of its own closes to its planes' reach and waits there.
 The Mirage tank turns into a tree after 0.8 seconds and stays disguised while
 moving, as in the source. Firing reveals it briefly. As a tree it is seen only
 from three tiles away and cannot be targeted directly; blasts can still hit it.
+
+The **Minelayer** has a **Deploy Widow Mine (80 metal)** button. Each press
+spends one of three charges and quietly lays a mine at the vehicle's position.
+The explosion happens when its seeker detonates. Charges recover at 0.03 per second; after
+emptying the pool, it must refill completely (100 seconds) before deployment
+resumes. Its ordinary gun stays usable while mine charges recover.
+
+A Widow Mine waits until a visible enemy is within 1.75 tiles, then consumes
+itself to launch a slow, accelerating homing explosive. The explosive follows
+its target and can reacquire a nearby enemy if that target dies. Its direct
+hit and area blast spare allies and aircraft. Mines use the original two-frame
+art, do not block movement or consume population, and cannot be selected or
+directly targeted. Splash damage can clear them before they trigger. Idle
+mines, travelling explosives and charge recovery persist in saves. The mine is
+deployed from its Minelayer in the showcase; it is not a separate factory unit.
 
 Units with a shield in the original have one here, drawn over the health bar,
 which recharges a little after the last hit. Units that mend themselves in the
@@ -193,3 +208,8 @@ those exact modules and hashes on every regeneration. Magazines now consume
 energy per shot, source hull decay is active, aircraft animation states play,
 and original wreck art is used where present. Building front/back composition
 preserves every frame instead of flattening animated factories.
+
+Mine regression checks: `bun test mods/fg-rusted-league/mines.test.ts` with the
+sibling game checkout present. `node mods/fg-rusted-league/verify-mines.mjs
+http://127.0.0.1:5173` checks the actual deployment button and rendering with
+both mods installed, against a running game dev server.

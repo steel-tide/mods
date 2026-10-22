@@ -84,3 +84,28 @@ of 6, both copies bake the same number of pixels and retain the same world
 size. The turret pivot remains 0.6 and its muzzle offset remains 25.3125
 world pixels. Torpedoes explicitly use the hull rather than the rotating
 gun, because mod weapons otherwise default to the available turret.
+
+## Registry cover
+
+The first gallery image, `screenshots/cover.jpg`, is promotional artwork
+created with the built-in image generation tool from this mod's own art.
+The remaining gallery images are gameplay captures. Delivered as a
+1600 × 1200 JPEG under the registry's 2 MB limit.
+
+### Initial composition prompt
+
+```text
+Use case: ads-marketing.
+Asset type: 4:3 landscape registry cover for the Steel Tide mod "Ironworks", ideally 1600x1200.
+Primary request: Transform and compose the supplied mod artwork into a distinctive illustrated engineering-catalogue cover. Image 1 is the Skimmer hover tank to feature; image 2 is the Orca hull to show in a smaller technical drawing; image 3 shows the mod's circular concrete autocannon bunker and the pixel-art world. These are source artwork for the composition.
+Design direction: an elegant industrial equipment catalogue printed on warm ivory stock, with deep cobalt-blue technical linework, restrained safety-orange geometric blocks, fine stipple and slightly imperfect screen-print texture. Lots of paper showing. Asymmetric editorial layout. Strong, purposeful industrial design.
+Hero: a large top-down drawing of the Skimmer in the upper right two-thirds, with the reference's distinctive wedge-shaped gray armored hull, broad rubber hover skirt, cyan canopy, two FIXED forward rocket pods, and two round rear nozzles accurately retained. Convert source magenta faction accents to cobalt blue. Draw it as a beautiful detailed screen-printed technical illustration with selected color-filled panels, subtle ghosted construction lines, no invented central turret. Secondary small orthographic Orca ship and circular concrete twin-autocannon bunker drawings down the left side above the title. Ship may be represented as the referenced hull plan without extra weapon inventions. Do not include fusion plant artwork since no reference is supplied.
+Typography: title "IRONWORKS" large in deep cobalt at the LOWER LEFT across the bottom third, custom bold geometric letterforms with clean industrial character, fully readable at thumbnail size. A small line directly below reads "A STEEL TIDE MOD". Minimal small labels beside the three drawings read "SKIMMER", "ORCA", and "BUNKER". These are the ONLY words; no fake specifications or numbers. Use a slim orange rule and a few purposeful registration details.
+This must feel like an authored retro-futurist engineering print. No dark battlefield background, no oversized cream stencil title at the top, no HUD corner brackets, no sparks, no explosions, no military badge, no photocollage, no UCGR layout. The entire cover is the print itself, not a photograph of a book or sheet on a desk. Opaque warm ivory background, full 4:3 canvas, safe title margins.
+```
+
+### Final refinement prompt
+
+```text
+Use case: precise-object-edit. Edit image 1, the finished IRONWORKS engineering-catalogue cover. Change ONLY the bunker illustration in the small lower-left technical drawing, above the word BUNKER. Replace its current two separate oppositely-facing gun assemblies with ONE compact central rotating turret carrying exactly TWO adjacent PARALLEL autocannon barrels aimed together toward the upper left. Use image 2, the turret sprite, as reference for the single mount and twin parallel barrel design, and integrate it into the same cobalt screen-print technical illustration style. Keep the concrete circular pit and four corner sandbag stacks. Everything else must remain unchanged: all text, layout, Skimmer, Orca, colors, paper, orange shapes, crop and 4:3 aspect ratio. Opaque background.
+```

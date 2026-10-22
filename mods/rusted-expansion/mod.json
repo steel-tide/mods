@@ -6,7 +6,7 @@
     "Rusted Expansion",
     "铁锈扩展包"
   ],
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Steel Tide",
   "description": [
     "An official tribute to a certain rusty little RTS a lot of us played on the bus before this one — the one where the money came in dollars and your side was green. Six of its classics, Tank, Heavy Tank, Helicopter, Bomber, Gun Boat and Battle Ship, repainted from memory, with their numbers brought across as near as the counter web allows.",
@@ -451,6 +451,7 @@
     }
   ],
   "screenshots": [
+    "screenshots/cover.jpg",
     "screenshots/armour.webp",
     "screenshots/fleet.webp"
   ]

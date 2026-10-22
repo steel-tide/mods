@@ -1,0 +1,13 @@
+{
+  "name": "@ucgr/combined-arms",
+  "version": "1.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node ../../../../../steel-tide/game/core/node_modules/typescript/bin/tsc -p tsconfig.json",
+    "test": "bun test ./test"
+  },
+  "description": "UCGR-owned component combat, logistics, sensors and articulated vehicles.",
+  "license": "PolyForm-Noncommercial-1.0.0"
+}

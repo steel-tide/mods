@@ -1,0 +1,5930 @@
+{
+  "作弊器": {
+    "name": [
+      "Cheat",
+      "作弊器",
+      "치트"
+    ],
+    "desc": [
+      "。",
+      "。",
+      "。"
+    ]
+  },
+  "集结点": {
+    "name": [
+      "Rally Point",
+      "集结点",
+      "집결지"
+    ],
+    "desc": [
+      "Rally Point",
+      "集结点",
+      "집결지"
+    ]
+  },
+  "倍率计算器": {
+    "name": [
+      "Multiplier Calculator",
+      "倍率计算器",
+      "배율 계산기"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "卫星视野单位": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "呼号存储器": {
+    "name": [
+      "Callsign Storage",
+      "呼号存储器",
+      "호출부호 저장소"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "BASE_C": {
+    "name": [
+      "Frontline Point - Contested",
+      "前线据点-争夺",
+      "전선 거점 - 경합"
+    ],
+    "desc": [
+      "Give resources\n Capture with infantry",
+      "-每30秒提供60支援点与0.2调配点\n使用步兵占领",
+      "자원 제공\n 보병으로 점령"
+    ]
+  },
+  "出生点中": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "出生点俄": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "出生点欧": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "出生点美": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "BASEF": {
+    "name": [
+      "Frontline Point - Capture",
+      "前线据点-占领",
+      "전선 거점 - 점령"
+    ],
+    "desc": [
+      "Give resources\n Capture with infantry",
+      "-每30秒提供60支援点与0.2调配点\n使用步兵占领",
+      "자원 제공\n 보병으로 점령"
+    ]
+  },
+  "出生点防御HJ8": {
+    "name": [
+      "HJ-8",
+      "HJ-8",
+      "HJ-8"
+    ],
+    "desc": [
+      "-Equipped with HJ-8 ATGM\n-Fires after deployment",
+      "-装备红箭8反坦克导弹\n-部署后开火",
+      "-HJ-8 대전차 미사일 장비\n-전개 후 사격"
+    ]
+  },
+  "出生点防御标枪": {
+    "name": [
+      "Javelin",
+      "标枪",
+      "재블린"
+    ],
+    "desc": [
+      "-Equipped with Javelin ATGM\n-Fires after deployment",
+      "-装备标枪反坦克导弹\n-部署后开火",
+      "-재블린 대전차 미사일 장비\n-전개 후 사격"
+    ]
+  },
+  "出生点防御混血儿": {
+    "name": [
+      "Metis",
+      "混血儿",
+      "메티스"
+    ],
+    "desc": [
+      "-Equipped with Metis ATGM\n-Fires after deployment",
+      "-装备混血儿反坦克导弹\n-部署后开火",
+      "-메티스 대전차 미사일 장비\n-전개 후 사격"
+    ]
+  },
+  "出生点防御长钉": {
+    "name": [
+      "Spike",
+      "长钉",
+      "스파이크"
+    ],
+    "desc": [
+      "-Equipped with Spike ATGM\n-Fires after deployment",
+      "-装备长钉反坦克导弹\n-部署后开火",
+      "-스파이크 대전차 미사일 장비\n-전개 후 사격"
+    ]
+  },
+  "战壕": {
+    "name": [
+      "Trench",
+      "战壕",
+      "참호"
+    ],
+    "desc": [
+      "Holds 10",
+      "容纳10人",
+      "10 명 수용"
+    ]
+  },
+  "战壕右向": {
+    "name": [
+      "Trench",
+      "战壕",
+      "참호"
+    ],
+    "desc": [
+      "Holds 10",
+      "容纳10人",
+      "10 명 수용"
+    ]
+  },
+  "BASE": {
+    "name": [
+      "Frontline Point",
+      "前线据点",
+      "전선 거점"
+    ],
+    "desc": [
+      "Give resources\n Capture with infantry",
+      "-每30秒提供60支援点与0.2调配点\n使用步兵占领",
+      "자원 제공\n 보병으로 점령"
+    ]
+  },
+  "BASE_AIR": {
+    "name": [
+      "Frontline Zone",
+      "前线战区",
+      "전선 전투구역"
+    ],
+    "desc": [
+      "Bombing enemy battle zones reliably earns spawn points",
+      "针对敌对战区进行轰炸可以稳定获取出生点",
+      "적 전투구역을 폭격하면 안정적으로 출격 점수 획득"
+    ]
+  },
+  "林区": {
+    "name": [
+      "Forest",
+      "林区",
+      "숲"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "清除": {
+    "name": [
+      "Replace Builder",
+      "替换建造者",
+      "건설 유닛 교체"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "smokeG": {
+    "name": [
+      "_",
+      "_",
+      "_"
+    ],
+    "desc": [
+      "_",
+      "_",
+      "_"
+    ]
+  },
+  "玩家计时器": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "班组计算器": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "计时器": {
+    "name": [
+      "Timer",
+      "计时器",
+      "타이머"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "音乐播放器": {
+    "name": [
+      "Music Player",
+      "音乐播放器",
+      "음악 재생기"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "ATACMS": {
+    "name": [
+      "ATACMS",
+      "ATACMS",
+      "ATACMS"
+    ],
+    "desc": [
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "ATACMS标记": {
+    "name": [
+      "ATACMS Missile Strike Marker",
+      "ATACMS导弹打击点",
+      "ATACMS 미사일 타격 표지"
+    ],
+    "desc": [
+      "-Call in rear missile support",
+      "-呼叫后方导弹支援",
+      "-후방 미사일 지원 요청"
+    ]
+  },
+  "DF15": {
+    "name": [
+      "DF15",
+      "DF15",
+      "DF15"
+    ],
+    "desc": [
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "DF15标记": {
+    "name": [
+      "DF15 Missile Strike Marker",
+      "DF15导弹打击点",
+      "DF15 미사일 타격 표지"
+    ],
+    "desc": [
+      "-Call in rear missile support",
+      "-呼叫后方导弹支援",
+      "-후방 미사일 지원 요청"
+    ]
+  },
+  "伊斯坎德尔": {
+    "name": [
+      "Iskander",
+      "伊斯坎德尔",
+      "이스칸데르"
+    ],
+    "desc": [
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "伊斯坎德尔标记": {
+    "name": [
+      "Iskander Missile Strike Marker",
+      "伊斯坎德尔导弹打击点",
+      "이스칸데르 미사일 타격 표지"
+    ],
+    "desc": [
+      "-Call in rear missile support",
+      "-呼叫后方导弹支援",
+      "-후방 미사일 지원 요청"
+    ]
+  },
+  "弹道导弹": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "122炮弹": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "122炮弹TAM": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "152炮弹": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "152炮弹TAM": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "155炮弹": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "155炮弹TAM": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "300mmRoc": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "AFlare": {
+    "name": [
+      "Call in rear 155 Artillery Support",
+      "呼叫后方155火炮支援",
+      "후방 155mm 포병 지원 요청"
+    ],
+    "desc": [
+      "-Call in rear artillery support",
+      "-呼叫后方火炮支援",
+      "-후방 포병 지원 요청"
+    ]
+  },
+  "AFlare122": {
+    "name": [
+      "Call in rear 122 Artillery Support",
+      "呼叫后方122火炮支援",
+      "후방 122mm 포병 지원 요청"
+    ],
+    "desc": [
+      "-Call in rear 122mm artillery support",
+      "-呼叫后方122火炮支援",
+      "-후방 122mm 포병 지원 요청"
+    ]
+  },
+  "AFlare152": {
+    "name": [
+      "Call in rear 152 Artillery Support",
+      "呼叫后方152火炮支援",
+      "후방 152mm 포병 지원 요청"
+    ],
+    "desc": [
+      "-Call in rear artillery support",
+      "-呼叫后方火炮支援",
+      "-후방 포병 지원 요청"
+    ]
+  },
+  "PCH-191落弹": {
+    "name": [
+      "PCH-191 Support",
+      "PCH-191支援",
+      "PCH-191 지원"
+    ],
+    "desc": [
+      "Long-range rocket artillery",
+      "远火",
+      "장거리 로켓포"
+    ]
+  },
+  "AF": {
+    "name": [
+      "155mm Artillery Support",
+      "155mm火炮支援",
+      "155mm 포병 지원"
+    ],
+    "desc": [
+      "-artillery support",
+      "-火炮支援",
+      "-포병 지원"
+    ]
+  },
+  "AF122": {
+    "name": [
+      "122mm Artillery Support",
+      "122mm火炮支援",
+      "122mm 포병 지원"
+    ],
+    "desc": [
+      "-artillery support",
+      "-火炮支援",
+      "-포병 지원"
+    ]
+  },
+  "AF152": {
+    "name": [
+      "152mm Artillery Support",
+      "152mm火炮支援",
+      "152mm 포병 지원"
+    ],
+    "desc": [
+      "-artillery support",
+      "-火炮支援",
+      "-포병 지원"
+    ]
+  },
+  "集束弹药": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "RUSSSO": {
+    "name": [
+      "SSO Infantry",
+      "SSO步兵",
+      "SSO 보병"
+    ],
+    "desc": [
+      "Russian Special Forces Infantry\n-Medium armor\n-Default: AK-12Assault Rifle\n-Texture Artist: Fszzrt263",
+      "俄军特种步兵\n-中甲\n-默认装备AK-12突击步枪\n-贴图作者：Fszzrt263",
+      "러시아 특수부대 보병\n-중간 수준의 장갑\n-기본 무장: AK-12 돌격소총\n-텍스처: Fszzrt263"
+    ]
+  },
+  "RUSSSO混血儿M": {
+    "name": [
+      "Metis-M Team",
+      "混血儿-M发射小组",
+      "메티스-M 운용반"
+    ],
+    "desc": [
+      "Russian Special Forces Infantry\n-Medium armor\n-Equipped with Metis-MATGM\n-Fires while stationary\n-Tandem HEAT\n-Texture Artist: Fszzrt263",
+      "俄军特种步兵\n-中甲\n-装备混血儿-M反坦克导弹\n-静止状态射击\n-串联破甲弹\n-贴图作者：Fszzrt263",
+      "러시아 특수부대 보병\n-중간 수준의 장갑\n-메티스-M 대전차 미사일 장비\n-정지 상태에서 사격\n-탠덤 성형작약탄\n-텍스처: Fszzrt263"
+    ]
+  },
+  "RUSVDV": {
+    "name": [
+      "VDV Infantry",
+      "VDV步兵",
+      "공수군 보병"
+    ],
+    "desc": [
+      "Russian Elite Infantry\n-Medium armor\n-Default: AK-12Assault Rifle\n-Texture Artist: Fszzrt263",
+      "俄军精锐步兵\n-中甲\n-默认装备AK-12突击步枪\n-贴图作者：Fszzrt263",
+      "러시아 정예 보병\n-중간 수준의 장갑\n-기본 무장: AK-12 돌격소총\n-텍스처: Fszzrt263"
+    ]
+  },
+  "RUSRECON": {
+    "name": [
+      "Recon Infantry",
+      "侦察步兵",
+      "정찰 보병"
+    ],
+    "desc": [
+      "Russian Forward Recon Team\n-Medium armor\n-Default: ASVALSpecial Assault Rifle\n-Good concealment\n-Texture Artist: Fszzrt263",
+      "俄军先遣侦察队\n-中甲\n-默认装备ASVAL特种突击步枪\n-隐蔽良好\n-贴图作者：Fszzrt263",
+      "러시아 전방 정찰대\n-중간 수준의 장갑\n-기본 무장: ASVAL 특수 돌격소총\n-우수한 은폐력\n-텍스처: Fszzrt263"
+    ]
+  },
+  "RUSGUD": {
+    "name": [
+      "Guards Infantry",
+      "近卫军步兵",
+      "근위 보병"
+    ],
+    "desc": [
+      "Russian Regular Infantry\n-Medium armor\n-Default: AK-74MAssault Rifle\n-Texture Artist: Fszzrt263",
+      "俄军常规步兵\n-中甲\n-默认装备AK-74M突击步枪\n-贴图作者：Fszzrt263",
+      "러시아 정규 보병\n-중간 수준의 장갑\n-기본 무장: AK-74M 돌격소총\n-텍스처: Fszzrt263"
+    ]
+  },
+  "RUSRE": {
+    "name": [
+      "Reserve Infantry",
+      "预备役步兵",
+      "예비 보병"
+    ],
+    "desc": [
+      "Russian Reserve Infantry\n-Medium armor\n-Default: AK-74Assault Rifle\n-Texture Artist: Fszzrt263",
+      "俄军预备役步兵\n-中甲\n-默认装备AK-74突击步枪\n-贴图作者：Fszzrt263",
+      "러시아 예비 보병\n-중간 수준의 장갑\n-기본 무장: AK-74 돌격소총\n-텍스처: Fszzrt263"
+    ]
+  },
+  "2S23": {
+    "name": [
+      "🇷🇺2S23 \"Nona-SVK\"",
+      "🇷🇺2S23“诺娜-SVK”",
+      "🇷🇺2S23 \"노나-SVK\""
+    ],
+    "desc": [
+      "Self-Propelled Mortar\n[Protection:D Firepower:A Mobility:D]\n[Equipment:Standard]\n[Main Gun:120mm 2A60][MG:7.62mm PKT]\n[Engine:KAMAZ-7403 diesel 260HP]",
+      "自行迫击炮\n[防护:D 火力:A 机动:D]\n[设备:标准]\n[主炮:120mm 2A60][机枪:7.62mm PKT]\n[发动机:KAMAZ-7403 柴油机 260HP]",
+      "자주박격포\n[방호:D 화력:A 기동:D]\n[장비:표준]\n[주포:120mm 2A60][기관총:7.62mm PKT]\n[엔진:KAMAZ-7403 디젤 260HP]"
+    ]
+  },
+  "2S25M": {
+    "name": [
+      "🇷🇺2S25M \"Octopus-SDM1\"",
+      "🇷🇺2S25M“章鱼-SDM1”",
+      "🇷🇺2S25M \"스프루트-SDM1\""
+    ],
+    "desc": [
+      "Airborne Self-Propelled AT Gun\n[Protection:D Firepower:A Mobility:A]\n[Equipment:Excellent]\n[Main Gun:125mm 2A75][MG:2x7.62mm PKTM]\n[Engine:UTD-29 diesel 500HP]",
+      "空降自行反坦克炮\n[防护:D 火力:A 机动:A]\n[设备:优秀]\n[主炮:125mm 2A75][机枪:2x7.62mm PKTM]\n[发动机:UTD-29 柴油机 500HP]",
+      "공수 자주 대전차포\n[방호:D 화력:A 기동:A]\n[장비:우수]\n[주포:125mm 2A75][기관총:2x7.62mm PKTM]\n[엔진:UTD-29 디젤 500HP]"
+    ]
+  },
+  "9P148": {
+    "name": [
+      "🇷🇺9P148 \"Konkurs\"",
+      "🇷🇺9P148“竞赛”",
+      "🇷🇺9P148 \"콘쿠르스\""
+    ],
+    "desc": [
+      "ATGM Carrier\n[Protection:D Firepower:A Mobility:B]\n[Equipment:Standard]\n[Missile:5x9M113]\n[Engine:GAZ-41 diesel 140HP]",
+      "反坦克导弹运载车\n[防护:D 火力:A 机动:B]\n[设备:标准]\n[导弹:5x9M113]\n[发动机:GAZ-41 柴油机 140HP]",
+      "대전차 미사일 운반차량\n[방호:D 화력:A 기동:B]\n[장비:표준]\n[미사일:5x9M113]\n[엔진:GAZ-41 디젤 140HP]"
+    ]
+  },
+  "BMD4M": {
+    "name": [
+      "🇷🇺BMD-4M",
+      "🇷🇺BMD-4M",
+      "🇷🇺BMD-4M"
+    ],
+    "desc": [
+      "Airborne IFV\n[Protection:C Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Gun:100mm 2A70 30mm 2A72][MG:7.62mm PKTM]\n[Engine:UTD-29 diesel 500HP]",
+      "空降步兵战车\n[防护:C 火力:S 机动:A]\n[设备:优秀]\n[主炮:100mm 2A70 30mm 2A72][机枪:7.62mm PKTM]\n[发动机:UTD-29 柴油机 500HP]",
+      "공수 보병전투차\n[방호:C 화력:S 기동:A]\n[장비:우수]\n[주포:100mm 2A70 30mm 2A72][기관총:7.62mm PKTM]\n[엔진:UTD-29 디젤 500HP]"
+    ]
+  },
+  "BMP1AM": {
+    "name": [
+      "🇷🇺BMP-1AM",
+      "🇷🇺BMP-1AM",
+      "🇷🇺BMP-1AM"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Gun:30mm 2A72][MG:1x7.62mm PKT]\n[Engine:UTD-20 diesel 300HP]",
+      "步兵战车\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主炮:30mm 2A72][机枪:1x7.62mm PKT]\n[发动机:UTD-20 柴油机 300HP]",
+      "보병전투차\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주포:30mm 2A72][기관총:1x7.62mm PKT]\n[엔진:UTD-20 디젤 300HP]"
+    ]
+  },
+  "BMP1P": {
+    "name": [
+      "🇷🇺BMP-1P",
+      "🇷🇺BMP-1P",
+      "🇷🇺BMP-1P"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Gun:73mm 2A28][MG:1x7.62mm PKT][Missile:9M113]\n[Engine:UTD-20 diesel 300HP]",
+      "步兵战车\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主炮:73mm 2A28][机枪:1x7.62mm PKT][导弹:9M113]\n[发动机:UTD-20 柴油机 300HP]",
+      "보병전투차\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주포:73mm 2A28][기관총:1x7.62mm PKT][미사일:9M113]\n[엔진:UTD-20 디젤 300HP]"
+    ]
+  },
+  "BMP2": {
+    "name": [
+      "🇷🇺BMP-2",
+      "🇷🇺BMP-2",
+      "🇷🇺BMP-2"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:B+ Mobility:B]\n[Equipment:Standard]\n[Main Gun:30mm 2A42][MG:1x7.62mm PKT][Missile:9M113]\n[Engine:UTD-20/3 diesel 300HP]",
+      "步兵战车\n[防护:C 火力:B+ 机动:B]\n[设备:标准]\n[主炮:30mm 2A42][机枪:1x7.62mm PKT][导弹:9M113]\n[发动机:UTD-20/3 柴油机 300HP]",
+      "보병전투차\n[방호:C 화력:B+ 기동:B]\n[장비:표준]\n[주포:30mm 2A42][기관총:1x7.62mm PKT][미사일:9M113]\n[엔진:UTD-20/3 디젤 300HP]"
+    ]
+  },
+  "BMP2M": {
+    "name": [
+      "🇷🇺BMP-2M",
+      "🇷🇺BMP-2M",
+      "🇷🇺BMP-2M"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:S Mobility:B]\n[Equipment:Excellent]\n[Main Gun:30mm 2A42][Secondary:30mm AGS-30 1x7.62mm PKT 4x9M133]\n[Engine:UTD-20/3 diesel 300HP]",
+      "步兵战车\n[防护:C 火力:S 机动:B]\n[设备:优秀]\n[主炮:30mm 2A42][副武器:30mm AGS-30 1x7.62mm PKT 4x9M133]\n[发动机:UTD-20/3 柴油机 300HP]",
+      "보병전투차\n[방호:C 화력:S 기동:B]\n[장비:우수]\n[주포:30mm 2A42][부무장:30mm AGS-30 1x7.62mm PKT 4x9M133]\n[엔진:UTD-20/3 디젤 300HP]"
+    ]
+  },
+  "BMP3": {
+    "name": [
+      "🇷🇺BMP-3",
+      "🇷🇺BMP-3",
+      "🇷🇺BMP-3"
+    ],
+    "desc": [
+      "IFV\n[Protection:B Firepower:S Mobility:B]\n[Equipment:Excellent]\n[Main Gun:100mm 2A70 30mm 2A72][MG:3x7.62mm PKT]\n[Engine:UTD-29M diesel 500HP]",
+      "步兵战车\n[防护:B 火力:S 机动:B]\n[设备:优秀]\n[主炮:100mm 2A70 30mm 2A72][机枪:3x7.62mm PKT]\n[发动机:UTD-29M 柴油机 500HP]",
+      "보병전투차\n[방호:B 화력:S 기동:B]\n[장비:우수]\n[주포:100mm 2A70 30mm 2A72][기관총:3x7.62mm PKT]\n[엔진:UTD-29M 디젤 500HP]"
+    ]
+  },
+  "BRDM": {
+    "name": [
+      "🇷🇺BRDM-2M",
+      "🇷🇺BRDM-2M",
+      "🇷🇺BRDM-2M"
+    ],
+    "desc": [
+      "Armored Recon Vehicle\n[Protection:D Firepower:D Mobility:S]\n[Equipment:Standard]\n[Main Weapon:14.5mm KPVT][Secondary:7.62mm PKT]\n[Engine:GAZ-41 petrol 140HP]",
+      "装甲侦察车\n[防护:D 火力:D 机动:S]\n[设备:标准]\n[主武器:14.5mm KPVT][副武器:7.62mm PKT]\n[发动机:GAZ-41 汽油机 140HP]",
+      "장갑 정찰차량\n[방호:D 화력:D 기동:S]\n[장비:표준]\n[주무장:14.5mm KPVT][부무장:7.62mm PKT]\n[엔진:GAZ-41 가솔린 140HP]"
+    ]
+  },
+  "BREM-1装甲牵引车": {
+    "name": [
+      "🇷🇺BREM-1",
+      "🇷🇺BREM-1",
+      "🇷🇺BREM-1"
+    ],
+    "desc": [
+      "Armored Recovery Vehicle\n[Protection:C Firepower:- Mobility:C]n[Engine:V-46 diesel 780HP]",
+      "装甲抢修车\n[防护:C 火力:- 机动:C]n[发动机:V-46 柴油机 780HP]",
+      "구난장갑차\n[방호:C 화력:- 기동:C]\n[엔진:V-46 디젤 780HP]"
+    ]
+  },
+  "K-17": {
+    "name": [
+      "🇷🇺BTR K-17 \"Boomerang\"",
+      "🇷🇺BTR K-17“回旋镖”",
+      "🇷🇺BTR K-17 \"부메랑\""
+    ],
+    "desc": [
+      "IFV\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Excellent APS:Afghanit]\n[Main Weapon:30mm 2A42][Secondary:7.62mm PKTM 4x9M133]\n[Engine:YAMZ-780 diesel 780HP]",
+      "步兵战车\n[防护:B 火力:A 机动:B]\n[设备:优秀 主动防御:阿富汗石]\n[主武器:30mm 2A42][副武器:7.62mm PKTM 4x9M133]\n[发动机:YAMZ-780 柴油机 780HP]",
+      "보병전투차\n[방호:B 화력:A 기동:B]\n[장비:우수 능동방호체계:아프가니트]\n[주무장:30mm 2A42][부무장:7.62mm PKTM 4x9M133]\n[엔진:YAMZ-780 디젤 780HP]"
+    ]
+  },
+  "BTR82": {
+    "name": [
+      "🇷🇺BTR-80",
+      "🇷🇺BTR-80",
+      "🇷🇺BTR-80"
+    ],
+    "desc": [
+      "APC\n[Protection:D Firepower:D Mobility:S]\n[Equipment:Standard]\n[Main Weapon:14.5mm KPVT][Secondary:7.62mm PKTM]\n[Engine:KAMAZ-7403 diesel 260HP]",
+      "装甲运兵车\n[防护:D 火力:D 机动:S]\n[设备:标准]\n[主武器:14.5mm KPVT][副武器:7.62mm PKTM]\n[发动机:KAMAZ-7403 柴油机 260HP]",
+      "병력 수송 장갑차\n[방호:D 화력:D 기동:S]\n[장비:표준]\n[주무장:14.5mm KPVT][부무장:7.62mm PKTM]\n[엔진:KAMAZ-7403 디젤 260HP]"
+    ]
+  },
+  "BTR82A": {
+    "name": [
+      "🇷🇺BTR-82A",
+      "🇷🇺BTR-82A",
+      "🇷🇺BTR-82A"
+    ],
+    "desc": [
+      "IFV\n[Protection:D Firepower:C Mobility:S]\n[Equipment:Standard]\n[Main Weapon:30mm 2A72][Secondary:7.62mm PKTM]\n[Engine:KAMAZ-7403 diesel 260HP]",
+      "步兵战车\n[防护:D 火力:C 机动:S]\n[设备:标准]\n[主武器:30mm 2A72][副武器:7.62mm PKTM]\n[发动机:KAMAZ-7403 柴油机 260HP]",
+      "보병전투차\n[방호:D 화력:C 기동:S]\n[장비:표준]\n[주무장:30mm 2A72][부무장:7.62mm PKTM]\n[엔진:KAMAZ-7403 디젤 260HP]"
+    ]
+  },
+  "BMD2": {
+    "name": [
+      "🇷🇺BMD-2",
+      "🇷🇺BMD-2",
+      "🇷🇺BMD-2"
+    ],
+    "desc": [
+      "BMD2Airborne IFV",
+      "BMD2伞降步兵战车",
+      "BMD2 공수 보병전투차"
+    ]
+  },
+  "BMD2M": {
+    "name": [
+      "🇷🇺BMD-2M",
+      "🇷🇺BMD-2M",
+      "🇷🇺BMD-2M"
+    ],
+    "desc": [
+      "BMD2MAirborne IFV",
+      "BMD2M伞降步兵战车",
+      "BMD2M 공수 보병전투차"
+    ]
+  },
+  "BTRD": {
+    "name": [
+      "🇷🇺BTR-D",
+      "🇷🇺BTR-D",
+      "🇷🇺BTR-D"
+    ],
+    "desc": [
+      "APC\nCan be airdropped",
+      "装甲运兵车\n可空降部署",
+      "병력 수송 장갑차\n공중 투하 가능"
+    ]
+  },
+  "BTR-MDMZD": {
+    "name": [
+      "🇷🇺BTR-MDMAA Vehicle",
+      "🇷🇺BTR-MDM防空车",
+      "🇷🇺BTR-MDM 방공차량"
+    ],
+    "desc": [
+      "Self-Propelled AA Gun\n[Protection:D Firepower:C Mobility:C]\n[Equipment:Standard]\n[Main Weapon:23mm ZU-23-2][Secondary:2x7.62mm PKTM]\n[Engine:UTD-29 diesel 500HP]",
+      "自行防空炮\n[防护:D 火力:C 机动:C]\n[设备:标准]\n[主武器:23mm ZU-23-2][副武器:2x7.62mm PKTM]\n[发动机:UTD-29 柴油机 500HP]",
+      "자주대공포\n[방호:D 화력:C 기동:C]\n[장비:표준]\n[주무장:23mm ZU-23-2][부무장:2x7.62mm PKTM]\n[엔진:UTD-29 디젤 500HP]"
+    ]
+  },
+  "BTR-MDM": {
+    "name": [
+      "🇷🇺BTR-MDM \"Shell\"",
+      "🇷🇺BTR-MDM“贝壳”",
+      "🇷🇺BTR-MDM \"라쿠시카\""
+    ],
+    "desc": [
+      "\"Shell\"APC\nCan be airdropped",
+      "\"贝壳\"装甲运兵车\n可空降部署",
+      "\"라쿠시카\" 장갑차\n공중 투하 가능"
+    ]
+  },
+  "BTR-ZD": {
+    "name": [
+      "🇷🇺BTR-ZDAA Vehicle",
+      "🇷🇺BTR-ZD防空车",
+      "🇷🇺BTR-ZD 방공차량"
+    ],
+    "desc": [
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "PT76": {
+    "name": [
+      "🇷🇺PT-76 Amphibious Tank",
+      "🇷🇺PT-76两栖坦克",
+      "🇷🇺PT-76 수륙양용전차"
+    ],
+    "desc": [
+      "PT-76Amphibious Tank",
+      "PT-76两栖坦克",
+      "PT-76 수륙양용전차"
+    ]
+  },
+  "PT7657": {
+    "name": [
+      "🇷🇺PT-76-57",
+      "🇷🇺PT-76-57",
+      "🇷🇺PT-76-57"
+    ],
+    "desc": [
+      "\n-Texture Artist: VVVVV",
+      "\n-贴图画师:VVVVV",
+      "\n-텍스처: VVVVV"
+    ]
+  },
+  "SPM_短号": {
+    "name": [
+      "🇷🇺\"Tigr\" Assault Vehicle/\"Kornet\"",
+      "🇷🇺“虎”式突击车/“短号”",
+      "🇷🇺\"티그르\" 돌격차량/\"코르넷\""
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility\n Fires while stationary",
+      "\n-轻型装甲突击车\n 机动性能优异\n 静止开火",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성\n 정지 상태에서 사격"
+    ]
+  },
+  "SPM_运兵_1": {
+    "name": [
+      "🇷🇺\"Tigr\" Assault Vehicle",
+      "🇷🇺“虎”式突击车",
+      "🇷🇺\"티그르\" 돌격차량"
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "Kamaz_1": {
+    "name": [
+      "🇷🇺KAMAZ Truck",
+      "🇷🇺卡玛兹卡车",
+      "🇷🇺KAMAZ 트럭"
+    ],
+    "desc": [
+      "\n-Russian Federation Heavy Transport Truck",
+      "\n-俄联邦重型运输卡车",
+      "\n-러시아 연방 대형 수송 트럭"
+    ]
+  },
+  "Kamaz_AT": {
+    "name": [
+      "🇷🇺KAMAZ Truck",
+      "🇷🇺卡玛兹卡车",
+      "🇷🇺KAMAZ 트럭"
+    ],
+    "desc": [
+      "\n-Russian Federation Heavy Transport Truck",
+      "\n-俄联邦重型运输卡车",
+      "\n-러시아 연방 대형 수송 트럭"
+    ]
+  },
+  "Ural_1": {
+    "name": [
+      "🇷🇺Ural Truck",
+      "🇷🇺乌拉尔卡车",
+      "🇷🇺우랄 트럭"
+    ],
+    "desc": [
+      "\n-Russian Federation Heavy Transport Truck",
+      "\n-俄联邦重型运输卡车",
+      "\n-러시아 연방 대형 수송 트럭"
+    ]
+  },
+  "TyphoonK_AT": {
+    "name": [
+      "🇷🇺\"Typhoon-K\" Transport Truck",
+      "🇷🇺\"台风-K\"运输车",
+      "🇷🇺\"타이푼-K\" 수송 트럭"
+    ],
+    "desc": [
+      "\n-Russian Federation Heavy Transport Truck",
+      "\n-俄联邦重型运输卡车",
+      "\n-러시아 연방 대형 수송 트럭"
+    ]
+  },
+  "库尔干人25": {
+    "name": [
+      "🇷🇺Kurganets-25",
+      "🇷🇺库尔干人-25",
+      "🇷🇺쿠르가네츠-25"
+    ],
+    "desc": [
+      "IFV\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Standard APS:Afghanit ERA:Bedrock]\n[Main Weapon:30mm 2A42][Secondary:7.62mm PKT 4x9M133]\n[Engine:YAMZ-780 diesel 780HP]",
+      "步兵战车\n[防护:A 火力:S 机动:A]\n[设备:标准 主动防御:阿富汗石 反应装甲:磐石]\n[主武器:30mm 2A42][副武器:7.62mm PKT 4x9M133]\n[发动机:YAMZ-780 柴油机 780HP]",
+      "보병전투차\n[방호:A 화력:S 기동:A]\n[장비:표준 능동방호체계:아프가니트 폭발반응장갑:반석]\n[주무장:30mm 2A42][부무장:7.62mm PKT 4x9M133]\n[엔진:YAMZ-780 디젤 780HP]"
+    ]
+  },
+  "BMPT": {
+    "name": [
+      "🇷🇺BMPT \"Terminator\"",
+      "🇷🇺BMPT“终结者”",
+      "🇷🇺BMPT \"터미네이터\""
+    ],
+    "desc": [
+      "Heavy Fire Support Vehicle\n[Protection:A Firepower:A Mobility:B]\n[Equipment:Excellent ERA:Relikt]\n[Main Weapon:30mm 2A42×2] [Secondary:1x7.62mm PKTM 4x9M120 2x30mmAG-30]\n [Engine:V-92S2 diesel 1000HP]",
+      "重型火力支援车\n[防护:A 火力:A 机动:B]\n[设备:优秀 反应装甲:化石]\n[主武器:30mm 2A42×2] [副武器:1x7.62mm PKTM 4x9M120 2x30mmAG-30]\n [发动机:V-92S2 柴油机 1000HP]",
+      "중화력 지원차량\n[방호:A 화력:A 기동:B]\n[장비:우수 폭발반응장갑:렐릭트]\n[주무장:30mm 2A42×2] [부무장:1x7.62mm PKTM 4x9M120 2x30mmAG-30]\n [엔진:V-92S2 디젤 1000HP]"
+    ]
+  },
+  "T14": {
+    "name": [
+      "🇷🇺T-14 \"Armata\"",
+      "🇷🇺T-14“阿玛塔”",
+      "🇷🇺T-14 \"아르마타\""
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:S Firepower:S Mobility:A]\n [Equipment:Elite ERA:Bedrock APS:Afghanit]\n[Main Gun:125mm 2A82-1M] [MG:1x7.62mm PKTM 1x12.7mm Kord]\n [Engine:12N360 diesel 1500HP]",
+      "主战坦克\n[防护:S 火力:S 机动:A]\n [设备:翘楚 反应装甲:磐石 主动防御:阿富汗石]\n[主炮:125mm 2A82-1M] [机枪:1x7.62mm PKTM 1x12.7mm Kord]\n [发动机:12N360 柴油机 1500HP]",
+      "주력전차\n[방호:S 화력:S 기동:A]\n [장비:최상급 폭발반응장갑:반석 능동방호체계:아프가니트]\n[주포:125mm 2A82-1M] [기관총:1x7.62mm PKTM 1x12.7mm Kord]\n [엔진:12N360 디젤 1500HP]"
+    ]
+  },
+  "T15": {
+    "name": [
+      "🇷🇺T-15 \"Fleet\"",
+      "🇷🇺T-15“舰队”",
+      "🇷🇺T-15 \"플리트\""
+    ],
+    "desc": [
+      "Heavy IFV\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Elite ERA:Bedrock APS:Afghanit]\n[Main Weapon:57mm 2A91]\n[Secondary:9M120×2 1x7.62mm PKTM]\n[Engine:12N360 diesel 1500HP]\n-Texture Artist: FEB",
+      "重型步兵战车\n[防护:A 火力:S 机动:B]\n[设备:翘楚 反应装甲:磐石 主动防御:阿富汗石]\n[主武器:57mm 2A91]\n[副武器:9M120×2 1x7.62mm PKTM]\n[发动机:12N360 柴油机 1500HP]\n-贴图画师:FEB",
+      "중보병전투차\n[방호:A 화력:S 기동:B]\n[장비:최상급 폭발반응장갑:반석 능동방호체계:아프가니트]\n[주무장:57mm 2A91]\n[부무장:9M120×2 1x7.62mm PKTM]\n[엔진:12N360 디젤 1500HP]\n-텍스처: FEB"
+    ]
+  },
+  "T62": {
+    "name": [
+      "T-62",
+      "T-62",
+      "T-62"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Poor]\n[Main Gun:115mm U-5TS] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:V-55V diesel 580HP]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:B 火力:A 机动:B]\n[设备:较差]\n[主炮:115mm U-5TS] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:V-55V 柴油机 580HP]\n-贴图画师:Fsszrt263",
+      "주력전차\n[방호:B 화력:A 기동:B]\n[장비:낮음]\n[주포:115mm U-5TS] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:V-55V 디젤 580HP]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "T62M": {
+    "name": [
+      "🇷🇺T-62M",
+      "🇷🇺T-62M",
+      "🇷🇺T-62M"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:C Mobility:C]\n[Equipment:Average]\n[Main Gun:115mm U-5TS] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:V-46-5M diesel 780HP]",
+      "主战坦克\n[防护:C 火力:C 机动:C]\n[设备:一般]\n[主炮:115mm U-5TS] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:V-46-5M 柴油机 780HP]",
+      "주력전차\n[방호:C 화력:C 기동:C]\n[장비:보통]\n[주포:115mm U-5TS] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:V-46-5M 디젤 780HP]"
+    ]
+  },
+  "T62MV": {
+    "name": [
+      "🇷🇺T-62MV",
+      "🇷🇺T-62MV",
+      "🇷🇺T-62MV"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:B Mobility:C]\n[Equipment:Average ERA:Kontakt-1]\n[Main Gun:115mm U-5TS] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:V-46-5M diesel 780HP]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:C 火力:B 机动:C]\n[设备:一般 反应装甲:接触-1]\n[主炮:115mm U-5TS] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:V-46-5M 柴油机 780HP]\n-贴图画师:Fsszrt263",
+      "주력전차\n[방호:C 화력:B 기동:C]\n[장비:보통 폭발반응장갑:콘탁트-1]\n[주포:115mm U-5TS] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:V-46-5M 디젤 780HP]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "T72A": {
+    "name": [
+      "🇷🇺T-72A",
+      "🇷🇺T-72A",
+      "🇷🇺T-72A"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Gun:125mm 2A46] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:V-46 diesel 780HP]\n-Texture Artist: Feb",
+      "主战坦克\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主炮:125mm 2A46] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:V-46 柴油机 780HP]\n-贴图作者:Feb",
+      "주력전차\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주포:125mm 2A46] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:V-46 디젤 780HP]\n-텍스처: Feb"
+    ]
+  },
+  "T72AV": {
+    "name": [
+      "T-72AV",
+      "T-72AV",
+      "T-72AV"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:A Mobility:B]\n[Equipment:Standard ERA:Kontakt-1]\n[Main Gun:125mm 2A46] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:V-46 diesel 780HP]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:C 火力:A 机动:B]\n[设备:标准 反应装甲:接触-1]\n[主炮:125mm 2A46] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:V-46 柴油机 780HP]\n-贴图作者:Fsszrt263",
+      "주력전차\n[방호:C 화력:A 기동:B]\n[장비:표준 폭발반응장갑:콘탁트-1]\n[주포:125mm 2A46] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:V-46 디젤 780HP]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "T72B": {
+    "name": [
+      "🇷🇺T-72B1",
+      "🇷🇺T-72B1",
+      "🇷🇺T-72B1"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Standard ERA:Kontakt-1]\n[Main Gun:125mm 2A46M] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:V-84-1 diesel 840HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:B 火力:A 机动:B]\n[设备:标准 反应装甲:接触-1]\n[主炮:125mm 2A46M] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:V-84-1 柴油机 840HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:B 화력:A 기동:B]\n[장비:표준 폭발반응장갑:콘탁트-1]\n[주포:125mm 2A46M] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:V-84-1 디젤 840HP]\n-텍스처: FEB"
+    ]
+  },
+  "T72B1989": {
+    "name": [
+      "T-72B Obr.1989",
+      "T-72B Obr.1989",
+      "T-72B 1989 년형"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:A Mobility:B]\n[Equipment:Excellent ERA:Kontakt-5]\n[Main Gun:125mm 2A46M] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:V-84-1 diesel 840HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:A 机动:B]\n[设备:优秀 反应装甲:接触-5]\n[主炮:125mm 2A46M] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:V-84-1 柴油机 840HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:A 기동:B]\n[장비:우수 폭발반응장갑:콘탁트-5]\n[주포:125mm 2A46M] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:V-84-1 디젤 840HP]\n-텍스처: FEB"
+    ]
+  },
+  "T72B3": {
+    "name": [
+      "🇷🇺T-72B3",
+      "🇷🇺T-72B3",
+      "🇷🇺T-72B3"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:B Mobility:B]\n[Equipment:Excellent ERA:Kontakt-5]\n[Main Gun:125mm 2A46M-5] [MG:1x7.62mm PKT 1x12.7mm Kord]\n[Engine:V-84-1 diesel 840HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:B 机动:B]\n[设备:优秀 反应装甲:接触-5]\n[主炮:125mm 2A46M-5] [机枪:1x7.62mm PKT 1x12.7mm Kord]\n[发动机:V-84-1 柴油机 840HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:B 기동:B]\n[장비:우수 폭발반응장갑:콘탁트-5]\n[주포:125mm 2A46M-5] [기관총:1x7.62mm PKT 1x12.7mm Kord]\n[엔진:V-84-1 디젤 840HP]\n-텍스처: FEB"
+    ]
+  },
+  "T72B3M": {
+    "name": [
+      "🇷🇺T-72B3M",
+      "🇷🇺T-72B3M",
+      "🇷🇺T-72B3M"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:A Mobility:A]\n[Equipment:Elite ERA:Relikt]\n[Main Gun:125mm 2A46M-5] [MG:1x7.62mm PKT 1x12.7mm Kord]\n[Engine:V-92S2F diesel 1130HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:A 机动:A]\n[设备:翘楚 反应装甲:化石]\n[主炮:125mm 2A46M-5] [机枪:1x7.62mm PKT 1x12.7mm Kord]\n[发动机:V-92S2F 柴油机 1130HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:A 기동:A]\n[장비:최상급 폭발반응장갑:렐릭트]\n[주포:125mm 2A46M-5] [기관총:1x7.62mm PKT 1x12.7mm Kord]\n[엔진:V-92S2F 디젤 1130HP]\n-텍스처: FEB"
+    ]
+  },
+  "T72BA": {
+    "name": [
+      "🇷🇺T-72BA",
+      "🇷🇺T-72BA",
+      "🇷🇺T-72BA"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:A Mobility:B]\n[Equipment:Excellent ERA:Kontakt-5]\n[Main Gun:125mm 2A46M] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:V-84-1 diesel 840HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:A 机动:B]\n[设备:优秀 反应装甲:接触-5]\n[主炮:125mm 2A46M] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:V-84-1 柴油机 840HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:A 기동:B]\n[장비:우수 폭발반응장갑:콘탁트-5]\n[주포:125mm 2A46M] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:V-84-1 디젤 840HP]\n-텍스처: FEB"
+    ]
+  },
+  "T72BU": {
+    "name": [
+      "🇷🇺T-90 1992",
+      "🇷🇺T-90 1992型",
+      "🇷🇺T-90 1992"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:A Mobility:B]\n[Equipment:Excellent ERA:Kontakt-5 APS:Shtora-1]\n[Main Gun:125mm 2A46M] [MG:1x7.62mm PKTM 1x12.7mm Kord]\n[Engine:V-84MS diesel 840HP]",
+      "主战坦克\n[防护:A 火力:A 机动:B]\n[设备:优秀 反应装甲:接触-5 主动防御:窗帘-1]\n[主炮:125mm 2A46M] [机枪:1x7.62mm PKTM 1x12.7mm Kord]\n[发动机:V-84MS 柴油机 840HP]",
+      "주력전차\n[방호:A 화력:A 기동:B]\n[장비:우수 폭발반응장갑:콘탁트-5 능동방호체계:슈토라-1]\n[주포:125mm 2A46M] [기관총:1x7.62mm PKTM 1x12.7mm Kord]\n[엔진:V-84MS 디젤 840HP]"
+    ]
+  },
+  "T80B": {
+    "name": [
+      "🇷🇺T-80B",
+      "🇷🇺T-80B",
+      "🇷🇺T-80B"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:B Mobility:S]\n[Equipment:Standard]\n[Main Gun:125mm 2A46M-1] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:GTD-1000TF gas turbine 1100HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:B 火力:B 机动:S]\n[设备:标准]\n[主炮:125mm 2A46M-1] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:GTD-1000TF 燃气轮机 1100HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:B 화력:B 기동:S]\n[장비:표준]\n[주포:125mm 2A46M-1] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:GTD-1000TF 가스터빈 1100HP]\n-텍스처: FEB"
+    ]
+  },
+  "T80BV": {
+    "name": [
+      "🇷🇺T-80BV",
+      "🇷🇺T-80BV",
+      "🇷🇺T-80BV"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:A Mobility:S]\n[Equipment:Standard ERA:Kontakt-1]\n[Main Gun:125mm 2A46M-1] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:GTD-1000TF gas turbine 1100HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:B 火力:A 机动:S]\n[设备:标准 反应装甲:接触-1]\n[主炮:125mm 2A46M-1] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:GTD-1000TF 燃气轮机 1100HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:B 화력:A 기동:S]\n[장비:표준 폭발반응장갑:콘탁트-1]\n[주포:125mm 2A46M-1] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:GTD-1000TF 가스터빈 1100HP]\n-텍스처: FEB"
+    ]
+  },
+  "T80BVM": {
+    "name": [
+      "🇷🇺T-80BVM",
+      "🇷🇺T-80BVM",
+      "🇷🇺T-80BVM"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:A Mobility:S]\n[Equipment:Elite ERA:Relikt]\n[Main Gun:125mm 2A46M-4] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:GTD-1250TF gas turbine 1250HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:A 机动:S]\n[设备:翘楚 反应装甲:化石]\n[主炮:125mm 2A46M-4] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:GTD-1250TF 燃气轮机 1250HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:A 기동:S]\n[장비:최상급 폭발반응장갑:렐릭트]\n[주포:125mm 2A46M-4] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:GTD-1250TF 가스터빈 1250HP]\n-텍스처: FEB"
+    ]
+  },
+  "T80U": {
+    "name": [
+      "🇷🇺T-80U",
+      "🇷🇺T-80U",
+      "🇷🇺T-80U"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:S Firepower:A Mobility:S]\n[Equipment:Excellent ERA:Kontakt-5]\n[Main Gun:125mm 2A46M-1] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:GTD-1250 gas turbine 1250HP]",
+      "主战坦克\n[防护:S 火力:A 机动:S]\n[设备:优秀 反应装甲:接触-5]\n[主炮:125mm 2A46M-1] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:GTD-1250 燃气轮机 1250HP]",
+      "주력전차\n[방호:S 화력:A 기동:S]\n[장비:우수 폭발반응장갑:콘탁트-5]\n[주포:125mm 2A46M-1] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:GTD-1250 가스터빈 1250HP]"
+    ]
+  },
+  "T80UK": {
+    "name": [
+      "🇷🇺T-80UK",
+      "🇷🇺T-80UK",
+      "🇷🇺T-80UK"
+    ],
+    "desc": [
+      ":Main Battle Tank\n[Protection:S Firepower:A Mobility:S]\n[Equipment:Excellent ERA:Kontakt-5 APS:Shtora-1]\n[Main Gun:125mm 2A46M-1] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:GTD-1250TF gas turbine 1250HP]\n-Texture Artist: FEB",
+      ":主战坦克\n[防护:S 火力:A 机动:S]\n[设备:优秀 反应装甲:接触-5 主动防御:窗帘-1]\n[主炮:125mm 2A46M-1] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:GTD-1250TF 燃气轮机 1250HP]\n-贴图画师:FEB",
+      ":주력전차\n[방호:S 화력:A 기동:S]\n[장비:우수 폭발반응장갑:콘탁트-5 능동방호체계:슈토라-1]\n[주포:125mm 2A46M-1] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:GTD-1250TF 가스터빈 1250HP]\n-텍스처: FEB"
+    ]
+  },
+  "T80UM2": {
+    "name": [
+      "T-80UM2",
+      "T-80UM2",
+      "T-80UM2"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:S Firepower:A Mobility:S]\n[Equipment:Elite ERA:Kontakt-5 APS:Drozd-2]\n[Main Gun:125mm 2A46M-1] [MG:1x7.62mm PKT 1x12.7mm NSVT]\n[Engine:GTD-1250TF gas turbine 1250HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:S 火力:A 机动:S]\n[设备:翘楚 反应装甲:接触-5 主动防御:鸫-2]\n[主炮:125mm 2A46M-1] [机枪:1x7.62mm PKT 1x12.7mm NSVT]\n[发动机:GTD-1250TF 燃气轮机 1250HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:S 화력:A 기동:S]\n[장비:최상급 폭발반응장갑:콘탁트-5 능동방호체계:드로즈드-2]\n[주포:125mm 2A46M-1] [기관총:1x7.62mm PKT 1x12.7mm NSVT]\n[엔진:GTD-1250TF 가스터빈 1250HP]\n-텍스처: FEB"
+    ]
+  },
+  "T90A": {
+    "name": [
+      "🇷🇺T-90A",
+      "🇷🇺T-90A",
+      "🇷🇺T-90A"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:S Firepower:S Mobility:A]\n[Equipment:Excellent ERA:Kontakt-5 APS:Shtora-1]\n[Main Gun:125mm 2A46M-5] [MG:1x7.62mm PKTM 1x12.7mm Kord]\n[Engine:V-92S2 diesel 1000HP]",
+      "主战坦克\n[防护:S 火力:S 机动:A]\n[设备:优秀 反应装甲:接触-5 主动防御:窗帘-1]\n[主炮:125mm 2A46M-5] [机枪:1x7.62mm PKTM 1x12.7mm Kord]\n[发动机:V-92S2 柴油机 1000HP]",
+      "주력전차\n[방호:S 화력:S 기동:A]\n[장비:우수 폭발반응장갑:콘탁트-5 능동방호체계:슈토라-1]\n[주포:125mm 2A46M-5] [기관총:1x7.62mm PKTM 1x12.7mm Kord]\n[엔진:V-92S2 디젤 1000HP]"
+    ]
+  },
+  "T90M": {
+    "name": [
+      "🇷🇺T-90M \"Proryv-3\"",
+      "🇷🇺T-90M \"突破3\"",
+      "🇷🇺T-90M \"프러리프-3\""
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:S Firepower:S Mobility:A]\n[Equipment:Elite ERA:Relikt]\n[Main Gun:125mm 2A46M-5] [MG:1x7.62mm PKTM 1x30mm AGS-30]\n[Engine:V-92S2F diesel 1130HP]",
+      "主战坦克\n[防护:S 火力:S 机动:A]\n[设备:翘楚 反应装甲:化石]\n[主炮:125mm 2A46M-5] [机枪:1x7.62mm PKTM 1x30mm AGS-30]\n[发动机:V-92S2F 柴油机 1130HP]",
+      "주력전차\n[방호:S 화력:S 기동:A]\n[장비:최상급 폭발반응장갑:렐릭트]\n[주포:125mm 2A46M-5] [기관총:1x7.62mm PKTM 1x30mm AGS-30]\n[엔진:V-92S2F 디젤 1130HP]"
+    ]
+  },
+  "T90MArenaM": {
+    "name": [
+      "🇷🇺T-90M \"Proryv-3\" Arena-M",
+      "🇷🇺T-90M \"突破3\" Arena-M",
+      "🇷🇺T-90M \"프러리프-3\" 아레나-M"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:S Firepower:S Mobility:A]\n[Equipment:Elite ERA:Relikt APS:Arena-M]\n[Main Gun:125mm 2A46M-5] [MG:1x7.62mm PKTM 1x30mm AGS-30]\n[Engine:V-92S2F diesel 1130HP]",
+      "主战坦克\n[防护:S 火力:S 机动:A]\n[设备:翘楚 反应装甲:化石 主动防御:竞技场-M]\n[主炮:125mm 2A46M-5] [机枪:1x7.62mm PKTM 1x30mm AGS-30]\n[发动机:V-92S2F 柴油机 1130HP]",
+      "주력전차\n[방호:S 화력:S 기동:A]\n[장비:최상급 폭발반응장갑:렐릭트 능동방호체계:아레나-M]\n[주포:125mm 2A46M-5] [기관총:1x7.62mm PKTM 1x30mm AGS-30]\n[엔진:V-92S2F 디젤 1130HP]"
+    ]
+  },
+  "2S38": {
+    "name": [
+      "🇷🇺2S38 \"Derivatsiya-PVO\"",
+      "🇷🇺2S38“偏流-PVO”",
+      "🇷🇺2S38 \"데리바치야-PVO\""
+    ],
+    "desc": [
+      "SPAAG\n[Protection:C Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:57mm 2A90][Secondary:7.62mm PKTM]\n[Engine:UTD-29M diesel 500HP]",
+      "自行高炮\n[防护:C 火力:A 机动:B]\n[设备:优秀]\n[主武器:57mm 2A90][副武器:7.62mm PKTM]\n[发动机:UTD-29M 柴油机 500HP]",
+      "자주대공포\n[방호:C 화력:A 기동:B]\n[장비:우수]\n[주무장:57mm 2A90][부무장:7.62mm PKTM]\n[엔진:UTD-29M 디젤 500HP]"
+    ]
+  },
+  "2S6": {
+    "name": [
+      "🇷🇺2K22 \"Tunguska-M\"",
+      "🇷🇺2K22“通古斯卡-M”",
+      "🇷🇺2K22 \"퉁구스카-M\""
+    ],
+    "desc": [
+      "Gun-Missile AA System\n[Protection:D Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:30mm 2A38M×2][Secondary:9M311M×8]\n[Engine:V-46 diesel 710HP]\n[Radar Scan Range:2400]",
+      "弹炮合一防空系统\n[防护:D 火力:A 机动:B]\n[设备:优秀]\n[主武器:30mm 2A38M×2][副武器:9M311M×8]\n[发动机:V-46 柴油机 710HP]\n[雷达扫描距离:2400]",
+      "대공포·미사일 복합 방공 체계\n[방호:D 화력:A 기동:B]\n[장비:우수]\n[주무장:30mm 2A38M×2][부무장:9M311M×8]\n[엔진:V-46 디젤 710HP]\n[레이더 탐지 거리:2400]"
+    ]
+  },
+  "9M311": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "9M332": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "道尔2M": {
+    "name": [
+      "🇷🇺9K332 \"Tor-M2\"",
+      "🇷🇺9K332“道尔-M2”",
+      "🇷🇺9K332 \"토르-M2\""
+    ],
+    "desc": [
+      "SAM Launcher\n[Protection:D Firepower:S Mobility:B]\n[Equipment:Elite]\n[Missile:9M332×8]\n[Engine:V-12 diesel 830HP]\n[Radar Scan Range:2400]",
+      "地空导弹发射车\n[防护:D 火力:S 机动:B]\n[设备:翘楚]\n[导弹:9M332×8]\n[发动机:V-12 柴油机 830HP]\n[雷达扫描距离:2400]",
+      "지대공 미사일 발사차량\n[방호:D 화력:S 기동:B]\n[장비:최상급]\n[미사일:9M332×8]\n[엔진:V-12 디젤 830HP]\n[레이더 탐지 거리:2400]"
+    ]
+  },
+  "9K35M3": {
+    "name": [
+      "🇷🇺9K35M3 \"Strela-10-M3\"",
+      "🇷🇺9K35M3“箭10-M3”",
+      "🇷🇺9K35M3 \"스트렐라-10-M3\""
+    ],
+    "desc": [
+      "SAM Launcher\n[Protection:D Firepower:B Mobility:C]\n[Equipment:Standard]\n[Missile:9M333×4][MG:7.62mm PKMB]\n[Engine:YAMZ-238 diesel 240HP]",
+      "地空导弹发射车\n[防护:D 火力:B 机动:C]\n[设备:标准]\n[导弹:9M333×4][机枪:7.62mm PKMB]\n[发动机:YAMZ-238 柴油机 240HP]",
+      "지대공 미사일 발사차량\n[방호:D 화력:B 기동:C]\n[장비:표준]\n[미사일:9M333×4][기관총:7.62mm PKMB]\n[엔진:YAMZ-238 디젤 240HP]"
+    ]
+  },
+  "9K37M2": {
+    "name": [
+      "🇷🇺Buk-M2 \"Buk-M2\"",
+      "🇷🇺Buk-M2“山毛榉-M2”",
+      "🇷🇺부크-M2 \"부크-M2\""
+    ],
+    "desc": [
+      "Medium-Range SAM System\n-[Main Weapon :9M317 ×4]\n[Engine :V-46 diesel 710HP]\nRadar Range 2400",
+      "中程防空导弹系统\n-[主武器:9M317 ×4]\n[发动机:V-46 柴油机 710HP]\n雷达距离2400",
+      "중거리 지대공 미사일 체계\n-[주무장 :9M317 ×4]\n[엔진 :V-46 디젤 710HP]\n레이더 거리 2400"
+    ]
+  },
+  "9M37": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "9S18M3": {
+    "name": [
+      "9S18M1-3 Radar Vehicle",
+      "9S18M1-3雷达车",
+      "9S18M1-3 레이더 차량"
+    ],
+    "desc": [
+      "Radar Range 4800\nCan control up to 2 launchers simultaneously\nPainter: MDWT华北",
+      "雷达距离4800\n最多同时指挥2辆发射车\n画师:MDWT华北",
+      "레이더 거리 4800\n최대 2 대의 발사차량 동시 통제\n원화: MDWT华北"
+    ]
+  },
+  "BUK_RADAR": {
+    "name": [
+      "Radar",
+      "雷达",
+      "레이더"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "ZSU234": {
+    "name": [
+      "🇷🇺ZSU-23-4 \"Shilka\"",
+      "🇷🇺ZSU-23-4“石勒喀河”",
+      "🇷🇺ZSU-23-4 \"실카\""
+    ],
+    "desc": [
+      "SPAAG\n[Protection:D Firepower:B Mobility:C]\n[Equipment:Standard]\n[Main Weapon:23mm AZP-23×4]\n[Engine:V-6R diesel 280HP]\n[Radar Scan Range:1200]",
+      "自行高炮\n[防护:D 火力:B 机动:C]\n[设备:标准]\n[主武器:23mm AZP-23×4]\n[发动机:V-6R 柴油机 280HP]\n[雷达扫描距离:1200]",
+      "자주대공포\n[방호:D 화력:B 기동:C]\n[장비:표준]\n[주무장:23mm AZP-23×4]\n[엔진:V-6R 디젤 280HP]\n[레이더 탐지 거리:1200]"
+    ]
+  },
+  "57E6": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "铠甲S1": {
+    "name": [
+      "🇷🇺96K6 \"Pantsir-S1\"",
+      "🇷🇺96K6\"铠甲-S1\"",
+      "🇷🇺96K6 \"판치르-S1\""
+    ],
+    "desc": [
+      "Gun-Missile AA System\n[Protection:D Firepower:A Mobility:C]\n[Equipment:Elite]\n[Main Weapon:30mm 2A38M×2][Secondary:57E6-E×12]\n[Engine:KAMAZ-740 diesel 400HP]\n[Radar Scan Range:2400]",
+      "弹炮合一防空系统\n[防护:D 火力:A 机动:C]\n[设备:翘楚]\n[主武器:30mm 2A38M×2][副武器:57E6-E×12]\n[发动机:KAMAZ-740 柴油机 400HP]\n[雷达扫描距离:2400]",
+      "대공포·미사일 복합 방공 체계\n[방호:D 화력:A 기동:C]\n[장비:최상급]\n[주무장:30mm 2A38M×2][부무장:57E6-E×12]\n[엔진:KAMAZ-740 디젤 400HP]\n[레이더 탐지 거리:2400]"
+    ]
+  },
+  "KA52": {
+    "name": [
+      "🇷🇺Ka-52M \"Alligator\"",
+      "🇷🇺卡-52M“短吻鳄”",
+      "🇷🇺Ka-52M \"앨리게이터\""
+    ],
+    "desc": [
+      "Heavy twin-engine single-seat helicopter\n-Equipped with one Shipunov 2A42 30MMAutocannon\n-9M127 Vikhr air-to-ground missiles\n-Flares to counter MANPADS\n-Heavy armor\n-High mobility\n-Advanced ground attack",
+      "重型双发单座直升机\n-装备一门希普诺夫2A42 30MM机炮\n-9M127涡流空对地导弹\n-反制单兵防空的热诱弹\n-装甲厚重\n-机动性强\n-先进对地",
+      "대형 쌍발 단좌 헬기\n-시푸노프 2A42 30mm 기관포 1 문 장비\n-9M127 비흐리 공대지 미사일\n-휴대용 대공 미사일에 대응하는 플레어\n-중장갑\n-높은 기동성\n-첨단 지상 공격 능력"
+    ]
+  },
+  "Mi24P": {
+    "name": [
+      "🇷🇺Mi-24P",
+      "🇷🇺米-24P",
+      "🇷🇺Mi-24P"
+    ],
+    "desc": [
+      "Medium Attack Helicopter\n The final upgrade of the Mi-24 Hind\n Carries 10x S13OF and 8x 9M39",
+      "中型武装直升机\n 米24雌鹿的最终升级版\n 挂载10发S13OF与8发9M39",
+      "중형 공격헬기\n Mi-24 하인드의 최종 개량형\n S13OF 10 발과 9M39 8 발 탑재"
+    ]
+  },
+  "MI28NM": {
+    "name": [
+      "🇷🇺Mi-28NM \"Night Hunter\"",
+      "🇷🇺米-28NM“夜间猎人”",
+      "🇷🇺Mi-28NM \"나이트 헌터\""
+    ],
+    "desc": [
+      "Heavy Attack Helicopter\n Selectable loadout\n Heavy armor\n-Good situational awareness",
+      "重型武装直升机\n 挂载可选\n 装甲厚重\n-感知能力较好",
+      "대형 공격헬기\n 무장 구성 선택 가능\n 중장갑\n-우수한 상황 인식 능력"
+    ]
+  },
+  "MI35M": {
+    "name": [
+      "🇷🇺Mi-35M",
+      "🇷🇺米-35M",
+      "🇷🇺Mi-35M"
+    ],
+    "desc": [
+      "Medium Attack Helicopter\n The final upgrade of the Mi-24 Hind\n Carries 10x S13OF and 8x 9M39",
+      "中型武装直升机\n 米24雌鹿的最终升级版\n 挂载10发S13OF与8发9M39",
+      "중형 공격헬기\n Mi-24 하인드의 최종 개량형\n S13OF 10 발과 9M39 8 발 탑재"
+    ]
+  },
+  "MI8TV": {
+    "name": [
+      "🇷🇺Mi-8TV",
+      "🇷🇺米-8TV",
+      "🇷🇺Mi-8TV"
+    ],
+    "desc": [
+      "Utility Helicopter\n-Can carry 12 infantry\n-Carries 4x UV-16-57 Rocket pods\n-23mm Autocannon",
+      "通用直升机\n-可搭载12名步兵\n-挂载4个UV-16-57火箭巢\n-23mm机炮",
+      "다목적 헬기\n-보병 12 명 수송 가능\n-UV-16-57 로켓 포드 4 개 탑재\n-23mm 기관포"
+    ]
+  },
+  "Mi8": {
+    "name": [
+      "🇷🇺Mi-8T",
+      "🇷🇺米-8T",
+      "🇷🇺Mi-8T"
+    ],
+    "desc": [
+      "Utility Helicopter\n-Can carry 12 infantry",
+      "通用直升机\n-可搭载12名步兵",
+      "다목적 헬기\n-보병 12 명 수송 가능"
+    ]
+  },
+  "KH31P反辐射弹药": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "KH31P导引头": {
+    "name": [
+      "-",
+      "-",
+      "-"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "KH38弹药": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "KH38导引头": {
+    "name": [
+      "SU34",
+      "SU34",
+      "SU34"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "MIG35": {
+    "name": [
+      "🇷🇺MiG-35",
+      "🇷🇺米格-35",
+      "🇷🇺MiG-35"
+    ],
+    "desc": [
+      "-Air Superiority Fighter\n-High-altitude\n-Radar Range 4800\n-150s endurance\n-ECM:20%\n-Painter: Fsszrt263",
+      "-制空战斗机\n-高空作战\n-雷达距离4800\n-150s滞空时间\n-ECM:20%\n-画师:Fsszrt263",
+      "-제공 전투기\n-고고도 작전\n-레이더 거리 4800\n-체공 시간 150 초\n-ECM:20%\n-원화: Fsszrt263"
+    ]
+  },
+  "SU34": {
+    "name": [
+      "🇷🇺Su-34",
+      "🇷🇺苏-34",
+      "🇷🇺Su-34"
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-High-altitude\n-Radar Range 6000\n-180s endurance\n-ECM:20%\n-Mark strike positions with march waypoints\n-Painter: zhrqf",
+      "-多用途飞机\n-高空作战\n-雷达距离6000\n-180s滞空时间\n-ECM:20%\n-使用行军目标点标记打击位置\n-画师:zhrqf",
+      "-다목적 항공기\n-고고도 작전\n-레이더 거리 6000\n-체공 시간 180 초\n-ECM:20%\n-이동 경유점으로 타격 위치 지정\n-원화: zhrqf"
+    ]
+  },
+  "SU25T": {
+    "name": [
+      "🇷🇺Su-25T",
+      "🇷🇺苏-25T",
+      "🇷🇺Su-25T"
+    ],
+    "desc": [
+      "-Ground Attack Aircraft\n-Low-altitude\n-No radar\n-180s endurance\n-ECM:10%\n-Mark strike positions with march waypoints\n-Painter: Fsszrt263",
+      "-对地支援机\n-低空作战\n-无雷达\n-180s滞空时间\n-ECM:10%\n-使用行军目标点标记打击位置\n-画师:Fsszrt263",
+      "-지상 공격기\n-저고도 작전\n-레이더 없음\n-체공 시간 180 초\n-ECM:10%\n-이동 경유점으로 타격 위치 지정\n-원화: Fsszrt263"
+    ]
+  },
+  "SU27SM": {
+    "name": [
+      "SU-27SM",
+      "SU-27SM",
+      "SU-27SM"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 4800\n-120s endurance\n-ECM:20%\n-Painter: VVVVV",
+      "-战斗机\n-高空作战\n-雷达距离4800\n-120s滞空时间\n-ECM:20%\n-画师:VVVVV",
+      "-전투기\n-고고도 작전\n-레이더 거리 4800\n-체공 시간 120 초\n-ECM:20%\n-원화: VVVVV"
+    ]
+  },
+  "SU35S": {
+    "name": [
+      "🇷🇺Su-35S",
+      "🇷🇺苏-35S",
+      "🇷🇺Su-35S"
+    ],
+    "desc": [
+      "-Air Superiority Fighter\n-High-altitude\n-Radar Range 8000\n-240s endurance\n-ECM:30%\nThe sharpest sword of the Broken Arrow aerospace force Painter: VVVVV",
+      "-制空战斗机\n-高空作战\n-雷达距离8000\n-240s滞空时间\n-ECM:30%\n断箭空天军最锋利的剑 画师:VVVVV",
+      "-제공 전투기\n-고고도 작전\n-레이더 거리 8000\n-체공 시간 240 초\n-ECM:30%\n브로큰 애로 항공우주군의 가장 날카로운 검. 원화: VVVVV"
+    ]
+  },
+  "PLAHJ8TEAM": {
+    "name": [
+      "HJ-8 Missile Team",
+      "HJ-8导弹小队",
+      "HJ-8 미사일 운용반"
+    ],
+    "desc": [
+      "-Equipped with HJ-8 ATGM\n-Fires after deployment",
+      "-装备红箭8反坦克导弹\n-部署后开火",
+      "-HJ-8 대전차 미사일 장비\n-전개 후 사격"
+    ]
+  },
+  "PLAINF": {
+    "name": [
+      "PLA Light Infantry",
+      "解放军轻装步兵",
+      "인민해방군 경보병"
+    ],
+    "desc": [
+      "PLA Light Infantry\n-Medium armor\n-Default: QBZ95Assault Rifle\n-Texture Artist: Fsszrt263",
+      "解放军轻装步兵\n-中甲\n-默认装备QBZ95突击步枪\n-贴图作者：Fsszrt263",
+      "중국 인민해방군 경보병\n-중간 수준의 장갑\n-기본 무장: QBZ95 돌격소총\n-텍스처: Fsszrt263"
+    ]
+  },
+  "PLASCOUT": {
+    "name": [
+      "PLA Recon Infantry",
+      "解放军侦察步兵",
+      "인민해방군 정찰 보병"
+    ],
+    "desc": [
+      "PLA Light Infantry\n-Medium armor\n-Default: QBZ95Assault Rifle\n-Texture Artist: Fsszrt263",
+      "解放军轻装步兵\n-中甲\n-默认装备QBZ95突击步枪\n-贴图作者：Fsszrt263",
+      "중국 인민해방군 경보병\n-중간 수준의 장갑\n-기본 무장: QBZ95 돌격소총\n-텍스처: Fsszrt263"
+    ]
+  },
+  "PLA预备役56": {
+    "name": [
+      "🇨🇳Reserve Rifleman",
+      "🇨🇳预备役步枪手",
+      "🇨🇳예비군 소총수"
+    ],
+    "desc": [
+      "Reserve unit\n-Unarmored\n-Equipped with Type 56 Assault Rifle",
+      "预备役部队\n-无甲\n-装备56式突击步枪",
+      "예비 부대\n-비장갑\n-56식 돌격소총 장비"
+    ]
+  },
+  "PLA预备役81": {
+    "name": [
+      "🇨🇳Reserve Rifleman",
+      "🇨🇳预备役步枪手",
+      "🇨🇳예비군 소총수"
+    ],
+    "desc": [
+      "Reserve unit\n-Unarmored\n-Equipped with Type 81 Assault Rifle",
+      "预备役部队\n-无甲\n-装备81式突击步枪",
+      "예비 부대\n-비장갑\n-81식 돌격소총 장비"
+    ]
+  },
+  "PLA预备役81班": {
+    "name": [
+      "🇨🇳Reserve LMG Gunner",
+      "🇨🇳预备役轻机枪手",
+      "🇨🇳예비군 경기관총 사수"
+    ],
+    "desc": [
+      "Reserve unit\n-Unarmored\n-Equipped with 81 LMG",
+      "预备役部队\n-无甲\n-装备81班机",
+      "예비 부대\n-비장갑\n-81 경기관총 장비"
+    ]
+  },
+  "PLA预备役AT": {
+    "name": [
+      "🇨🇳Reserve AT Gunner",
+      "🇨🇳预备役反坦克手",
+      "🇨🇳예비군 대전차 사수"
+    ],
+    "desc": [
+      "Reserve unit\n-Unarmored\n-Equipped with various anti-tank weapons",
+      "预备役部队\n-无甲\n-装备不同反坦克武器",
+      "예비 부대\n-비장갑\n-다양한 대전차 무기 장비"
+    ]
+  },
+  "PLA迷彩AT": {
+    "name": [
+      "🇨🇳AT Gunner",
+      "🇨🇳反坦克手",
+      "🇨🇳대전차 사수"
+    ],
+    "desc": [
+      "Regular unit\n-Unarmored\n-Equipped with various anti-tank weapons",
+      "正规部队\n-无甲\n-装备不同反坦克武器",
+      "정규 부대\n-비장갑\n-다양한 대전차 무기 장비"
+    ]
+  },
+  "PLA精锐AT": {
+    "name": [
+      "🇨🇳Elite AT Gunner",
+      "🇨🇳精锐反坦克手",
+      "🇨🇳정예 대전차 사수"
+    ],
+    "desc": [
+      "Elite unit\n-Unarmored\n-Equipped with various anti-tank weapons",
+      "精锐部队\n-无甲\n-装备不同反坦克武器",
+      "정예 부대\n-비장갑\n-다양한 대전차 무기 장비"
+    ]
+  },
+  "PLA迷彩79狙": {
+    "name": [
+      "🇨🇳PLA Sniper",
+      "🇨🇳解放军狙击手",
+      "🇨🇳인민해방군 저격수"
+    ],
+    "desc": [
+      "Regular unit\n-Unarmored\n-Equipped with Type 79 Sniper Rifle",
+      "正规部队\n-无甲\n-装备79式狙击步枪",
+      "정규 부대\n-비장갑\n-79식 저격소총 장비"
+    ]
+  },
+  "PLA迷彩81": {
+    "name": [
+      "🇨🇳PLA Rifleman",
+      "🇨🇳解放军步枪手",
+      "🇨🇳인민해방군 소총수"
+    ],
+    "desc": [
+      "Regular unit\n-Medium armor\n-Equipped with Type 81 Assault Rifle",
+      "正规部队\n-中甲\n-装备81式突击步枪",
+      "정규 부대\n-중간 수준의 장갑\n-81식 돌격소총 장비"
+    ]
+  },
+  "PLA迷彩81班": {
+    "name": [
+      "🇨🇳PLA LMG Gunner",
+      "🇨🇳解放军轻机枪手",
+      "🇨🇳인민해방군 경기관총 사수"
+    ],
+    "desc": [
+      "Regular unit\n-Medium armor\n-Equipped with 81 LMG",
+      "正规部队\n-中甲\n-装备81班机",
+      "정규 부대\n-중간 수준의 장갑\n-81 경기관총 장비"
+    ]
+  },
+  "PLA迷彩95": {
+    "name": [
+      "PLA Rifleman",
+      "解放军步枪手",
+      "인민해방군 소총수"
+    ],
+    "desc": [
+      "\n-Medium armor\n-Equipped with Type 95 Assault Rifle",
+      "\n-中甲\n-装备95式突击步枪",
+      "\n-중간 수준의 장갑\n-95식 돌격소총 장비"
+    ]
+  },
+  "PLAQW2": {
+    "name": [
+      "PLA MANPADS Gunner",
+      "解放军防空手",
+      "인민해방군 휴대용 대공 미사일 사수"
+    ],
+    "desc": [
+      "-Medium armor\n-Equipped with QW2MANPADS",
+      "-中甲\n-装备QW2单兵防空导弹",
+      "-중간 수준의 장갑\n-QW2 휴대용 대공 미사일 장비"
+    ]
+  },
+  "LIJIAN喷火": {
+    "name": [
+      "🇨🇳Li Jian Flamethrower",
+      "🇨🇳利剑火焰喷射器",
+      "🇨🇳리젠 화염방사수"
+    ],
+    "desc": [
+      "Elite unit\n-Medium armor\n-Equipped with Type 02 Flamethrower",
+      "精锐部队\n-中甲\n-装备02式火焰喷射器",
+      "정예 부대\n-중간 수준의 장갑\n-02식 화염방사기 장비"
+    ]
+  },
+  "LIJIAN56": {
+    "name": [
+      "🇨🇳Li Jian Rifleman",
+      "🇨🇳利剑步枪手",
+      "🇨🇳리젠 소총수"
+    ],
+    "desc": [
+      "Elite unit\n-Medium armor\n-Equipped with Type 56 Assault Rifle",
+      "精锐部队\n-中甲\n-装备56式突击步枪",
+      "정예 부대\n-중간 수준의 장갑\n-56식 돌격소총 장비"
+    ]
+  },
+  "LIJIAN81": {
+    "name": [
+      "🇨🇳Li Jian Rifleman",
+      "🇨🇳利剑步枪手",
+      "🇨🇳리젠 소총수"
+    ],
+    "desc": [
+      "Elite unit\n-Medium armor\n-Equipped with Type 81 Assault Rifle",
+      "精锐部队\n-中甲\n-装备81式突击步枪",
+      "정예 부대\n-중간 수준의 장갑\n-81식 돌격소총 장비"
+    ]
+  },
+  "PLALJ": {
+    "name": [
+      "🇨🇳Li Jian Special Forces Special Operations Unit",
+      "🇨🇳利剑特战特种单位",
+      "🇨🇳리젠 특수부대 특수작전팀"
+    ],
+    "desc": [
+      "PLA Special Forces Infantry\n-Medium armor\n-High mobility\n-Can switch between multiple weapons\n-Texture Artist: Fsszrt263",
+      "解放军特种步兵\n-中甲\n-高机动性\n-可切换多种武器\n-贴图作者：Fsszrt263",
+      "중국 인민해방군 특수부대 보병\n-중간 수준의 장갑\n-높은 기동성\n-여러 무기로 전환 가능\n-텍스처: Fsszrt263"
+    ]
+  },
+  "三人班组": {
+    "name": [
+      "Special Forces Squad",
+      "特战班组",
+      "특수부대 분대"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "五人班组": {
+    "name": [
+      "Squad",
+      "班组",
+      "분대"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "战壕三人班组": {
+    "name": [
+      "Trench",
+      "战壕",
+      "참호"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "战壕五人班组": {
+    "name": [
+      "Trench",
+      "战壕",
+      "참호"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "PLALS": {
+    "name": [
+      "🇨🇳Thunder God Assault Team",
+      "🇨🇳雷神突击队",
+      "🇨🇳뇌신 돌격대"
+    ],
+    "desc": [
+      "PLA Airborne Special Assault Unit\n-Heavy armor\n-Equipped with an advanced recon system\n-Texture Artist: Fsszrt263",
+      "解放军空中特种突击单位\n-重甲\n-配备先进侦察系统\n-贴图作者：Fsszrt263",
+      "중국 인민해방군 공수 특수돌격대\n-중장갑\n-첨단 정찰 체계 장비\n-텍스처: Fsszrt263"
+    ]
+  },
+  "96装甲牵引车": {
+    "name": [
+      "🇨🇳Type 96 Armored Tractor",
+      "🇨🇳96式装甲牵引车",
+      "🇨🇳96식 장갑 견인차"
+    ],
+    "desc": [
+      "Armored tractor that can tow immobile tanks to a capture point",
+      "装甲牵引车，可以将无法移动的坦克拖曳至据点",
+      "이동 불능 전차를 점령 지점까지 견인하는 장갑 견인차"
+    ]
+  },
+  "运输槽位": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "AFT10": {
+    "name": [
+      "🇨🇳AFT-10",
+      "🇨🇳AFT-10",
+      "🇨🇳AFT-10"
+    ],
+    "desc": [
+      "ATGM Launcher\n-Equipped with octuple “HJ-10”Fiber-optic guided ATGM\n-Based on the ZBD-04A chassis\n-Extremely long range\n-Average mobility\n-Average armor\nFires while stationary\nTexture Artist: Fsszrt263",
+      "反坦克导弹发射车\n-装备八连装“红箭-10”光纤制导反坦克导弹\n-采用ZBD-04A的底盘\n-射程极远\n-机动性一般\n-装甲一般\n静止开火\n贴图作者:Fsszrt263",
+      "대전차 미사일 발사차량\n-8 연장 \"홍전-10\" 광섬유 유도 대전차 미사일 장비\n-ZBD-04A 차체 기반\n-매우 긴 사거리\n-보통 기동성\n-보통 장갑\n정지 상태에서 사격\n텍스처: Fsszrt263"
+    ]
+  },
+  "AFT9": {
+    "name": [
+      "🇨🇳AFT-9",
+      "🇨🇳AFT-9",
+      "🇨🇳AFT-9"
+    ],
+    "desc": [
+      "ATGM Launcher\n-Equipped with quadruple “HJ-9”Laser-guided ATGM\nTexture Artist: FEB\nFires while stationary",
+      "反坦克导弹发射车\n-装备四连装“红箭-9”激光制导反坦克导弹\n贴图作者:FEB\n静止开火",
+      "대전차 미사일 발사차량\n-4 연장 \"홍전-9\" 레이저 유도 대전차 미사일 장비\n텍스처: FEB\n정지 상태에서 사격"
+    ]
+  },
+  "CSK181_1": {
+    "name": [
+      "🇨🇳CSK-181 \"Mengshi III\"",
+      "🇨🇳CSK-181“猛士III”",
+      "🇨🇳CSK-181 \"멍스 III\""
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility\nTexture Artist: Fsszrt263",
+      "\n-轻型装甲突击车\n 机动性能优异\n贴图作者:Fsszrt263",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성\n텍스처: Fsszrt263"
+    ]
+  },
+  "CSK181_2": {
+    "name": [
+      "🇨🇳CSK-181 \"Mengshi III\"",
+      "🇨🇳CSK-181“猛士III”",
+      "🇨🇳CSK-181 \"멍스 III\""
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Light armor\n 12.7mmremote-controlled MG\n Excellent mobility\nTexture Artist: Fsszrt263",
+      "\n-轻型装甲突击车\n 轻装甲\n 12.7mm遥控机枪\n 机动性能优异\n贴图作者:Fsszrt263",
+      "\n-경장갑 돌격차량\n 경장갑\n 12.7mm 원격 조종 기관총\n 뛰어난 기동성\n텍스처: Fsszrt263"
+    ]
+  },
+  "DFMS1_HJ8": {
+    "name": [
+      "🇨🇳EQ2050 \"Mengshi I\"/HJ-8",
+      "🇨🇳EQ2050“猛士I”/红箭-8",
+      "🇨🇳EQ2050 \"멍스 I\"/HJ-8"
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "DFMS1": {
+    "name": [
+      "🇨🇳EQ2050 \"Mengshi I\"",
+      "🇨🇳EQ2050“猛士I”",
+      "🇨🇳EQ2050 \"멍스 I\""
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "EQ240": {
+    "name": [
+      "🇨🇳EQ240 Transport Truck",
+      "🇨🇳EQ240运输车",
+      "🇨🇳EQ240 수송 트럭"
+    ],
+    "desc": [
+      "\n-Transport Truck\n Good mobility",
+      "\n-运输车\n 机动性能良好",
+      "\n-수송 트럭\n 우수한 기동성"
+    ]
+  },
+  "PLL05": {
+    "name": [
+      "🇨🇳PLL-05",
+      "🇨🇳PLL-05",
+      "🇨🇳PLL-05"
+    ],
+    "desc": [
+      "Wheeled Self-Propelled Mortar-Howitzer\n[Protection:C Firepower:A Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm Mortar-Howitzer][Secondary:12.7mm QJC-88]\n[Engine:BF8L413F diesel 350HP]",
+      "轮式自行迫榴炮\n[防护:C 火力:A 机动:A]\n[设备:优秀]\n[主武器:120mm迫榴炮][副武器:12.7mm QJC-88]\n[发动机:BF8L413F 柴油机 350HP]",
+      "차륜형 자주 박격포·곡사포\n[방호:C 화력:A 기동:A]\n[장비:우수]\n[주무장:120mm 박격포·곡사포][부무장:12.7mm QJC-88]\n[엔진:BF8L413F 디젤 350HP]"
+    ]
+  },
+  "PTL02": {
+    "name": [
+      "🇨🇳PTL-02",
+      "🇨🇳PTL-02",
+      "🇨🇳PTL-02"
+    ],
+    "desc": [
+      "Wheeled Assault Gun\n[Protection:C Firepower:B Mobility:A]\n[Equipment:Standard]\n[Main Weapon:100mm ][Secondary:7.62mm Type 86][MG:12.7mm QJC-88]\n[Engine:BF8L413F diesel 350HP]\n-Texture Artist: FEB",
+      "轮式突击炮\n[防护:C 火力:B 机动:A]\n[设备:标准]\n[主武器:100mm ][副武器:7.62mm 86式][机枪:12.7mm QJC-88]\n[发动机:BF8L413F 柴油机 350HP]\n-贴图画师:FEB",
+      "차륜형 돌격포\n[방호:C 화력:B 기동:A]\n[장비:표준]\n[주무장:100mm ][부무장:7.62mm 86식][기관총:12.7mm QJC-88]\n[엔진:BF8L413F 디젤 350HP]\n-텍스처: FEB"
+    ]
+  },
+  "PTZ89": {
+    "name": [
+      "🇨🇳PTZ-89",
+      "🇨🇳PTZ-89",
+      "🇨🇳PTZ-89"
+    ],
+    "desc": [
+      "Self-Propelled AT Gun\n[Protection:C Firepower:S Mobility:B]\n[Equipment:Standard]\n[Main Weapon:120mm ][Secondary:12.7mm QJC-88]\n[Engine:12150LB diesel 520HP]\n-Texture Artist: FEB",
+      "自行反坦克炮\n[防护:C 火力:S 机动:B]\n[设备:标准]\n[主武器:120mm ][副武器:12.7mm QJC-88]\n[发动机:12150LB 柴油机 520HP]\n-贴图画师:FEB",
+      "자주 대전차포\n[방호:C 화력:S 기동:B]\n[장비:표준]\n[주무장:120mm ][부무장:12.7mm QJC-88]\n[엔진:12150LB 디젤 520HP]\n-텍스처: FEB"
+    ]
+  },
+  "VP22": {
+    "name": [
+      "🇨🇳VP22",
+      "🇨🇳VP22",
+      "🇨🇳VP22"
+    ],
+    "desc": [
+      "\n-Chinese Medium Transport Truck\n-Texture Artist: Fsszrt263",
+      "\n-中国中型运输卡车\n-贴图画师:Fsszrt263",
+      "\n-중국 중형 수송 트럭\n-텍스처: Fsszrt263"
+    ]
+  },
+  "VP23": {
+    "name": [
+      "🇨🇳VP23",
+      "🇨🇳VP23",
+      "🇨🇳VP23"
+    ],
+    "desc": [
+      "\n-Chinese Heavy Transport Truck",
+      "\n-中国重型运输卡车",
+      "\n-중국 대형 수송 트럭"
+    ]
+  },
+  "ZBD04": {
+    "name": [
+      "🇨🇳ZBD-04",
+      "🇨🇳ZBD-04",
+      "🇨🇳ZBD-04"
+    ],
+    "desc": [
+      "IFV\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:100mm ZPL04][Secondary:30mm ZPL99][MG:7.62mm Type 86]\n[Engine: diesel 550HP]",
+      "步兵战车\n[防护:B 火力:A 机动:B]\n[设备:优秀]\n[主武器:100mm ZPL04][副武器:30mm ZPL99][机枪:7.62mm 86式]\n[发动机: 柴油机 550HP]",
+      "보병전투차\n[방호:B 화력:A 기동:B]\n[장비:우수]\n[주무장:100mm ZPL04][부무장:30mm ZPL99][기관총:7.62mm 86식]\n[엔진: 디젤 550HP]"
+    ]
+  },
+  "ZBD04A": {
+    "name": [
+      "🇨🇳ZBD-04A",
+      "🇨🇳ZBD-04A",
+      "🇨🇳ZBD-04A"
+    ],
+    "desc": [
+      "IFV\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:100mm ZPL04][Secondary:30mm ZPL02][MG:5.8mm QJT]\n[Engine: diesel 550HP]",
+      "步兵战车\n[防护:B 火力:A 机动:B]\n[设备:优秀]\n[主武器:100mm ZPL04][副武器:30mm ZPL02][机枪:5.8mm QJT]\n[发动机: 柴油机 550HP]",
+      "보병전투차\n[방호:B 화력:A 기동:B]\n[장비:우수]\n[주무장:100mm ZPL04][부무장:30mm ZPL02][기관총:5.8mm QJT]\n[엔진: 디젤 550HP]"
+    ]
+  },
+  "ZBD86": {
+    "name": [
+      "🇨🇳ZBD-86",
+      "🇨🇳ZBD-86",
+      "🇨🇳ZBD-86"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Weapon:73mm 86-73TC][Secondary:7.62mm Type 86][Missile:HJ-73E]\n[Engine:6V150 diesel 290HP]",
+      "步兵战车\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主武器:73mm 86-73TC][副武器:7.62mm 86式][导弹:HJ-73E]\n[发动机:6V150 柴油机 290HP]",
+      "보병전투차\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주무장:73mm 86-73TC][부무장:7.62mm 86식][미사일:HJ-73E]\n[엔진:6V150 디젤 290HP]"
+    ]
+  },
+  "ZBD86B": {
+    "name": [
+      "🇨🇳ZBD-86B",
+      "🇨🇳ZBD-86B",
+      "🇨🇳ZBD-86B"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Weapon:30mm ZPT-99][Missile:HJ-73E]\n[Engine:6V150 diesel 290HP]",
+      "步兵战车\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主武器:30mm ZPT-99][导弹:HJ-73E]\n[发动机:6V150 柴油机 290HP]",
+      "보병전투차\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주무장:30mm ZPT-99][미사일:HJ-73E]\n[엔진:6V150 디젤 290HP]"
+    ]
+  },
+  "ZBL08": {
+    "name": [
+      "🇨🇳ZBL-08",
+      "🇨🇳ZBL-08",
+      "🇨🇳ZBL-08"
+    ],
+    "desc": [
+      "Wheeled IFV\n[Protection:C Firepower:B Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:30mm ZPT-99][Secondary:7.62mm Type 86][Missile:HJ-73E ×2]\n[Engine:BF6M1015C diesel 440HP]\nPainter: Fsszrt263",
+      "轮式步兵战车\n[防护:C 火力:B 机动:A]\n[设备:优秀]\n[主武器:30mm ZPT-99][副武器:7.62mm 86式][导弹:HJ-73E ×2]\n[发动机:BF6M1015C 柴油机 440HP]\n画师:Fsszrt263",
+      "차륜형 보병전투차\n[방호:C 화력:B 기동:A]\n[장비:우수]\n[주무장:30mm ZPT-99][부무장:7.62mm 86식][미사일:HJ-73E ×2]\n[엔진:BF6M1015C 디젤 440HP]\n원화: Fsszrt263"
+    ]
+  },
+  "ZBL19_105": {
+    "name": [
+      "🇨🇳ZLT-19",
+      "🇨🇳ZLT-19",
+      "🇨🇳ZLT-19"
+    ],
+    "desc": [
+      "Wheeled Assault Gun\n[Protection:B Firepower:S Mobility:A]\n[Equipment:Elite]\n[Main Weapon:105mm ZPL-94][Secondary:7.62mm QJY-201][MG:12.7mm QJC-88A]\n[Engine:BF6M1015FC diesel 440HP]\n-Texture Artist: FEB",
+      "轮式突击炮\n[防护:B 火力:S 机动:A]\n[设备:翘楚]\n[主武器:105mm ZPL-94][副武器:7.62mm QJY-201][机枪:12.7mm QJC-88A]\n[发动机:BF6M1015FC 柴油机 440HP]\n-贴图画师:FEB",
+      "차륜형 돌격포\n[방호:B 화력:S 기동:A]\n[장비:최상급]\n[주무장:105mm ZPL-94][부무장:7.62mm QJY-201][기관총:12.7mm QJC-88A]\n[엔진:BF6M1015FC 디젤 440HP]\n-텍스처: FEB"
+    ]
+  },
+  "ZBL19_30": {
+    "name": [
+      "🇨🇳ZBL-19",
+      "🇨🇳ZBL-19",
+      "🇨🇳ZBL-19"
+    ],
+    "desc": [
+      "Wheeled IFV\n[Protection:B Firepower:A Mobility:A]\n[Equipment:Elite]\n[Main Weapon:30mm ZPT-99][Secondary:7.62mm QJY-201][Missile:HJ-16 ×4]\n[Engine:BF6M1015FC diesel 440HP]\nPainter: FEB",
+      "轮式步兵战车\n[防护:B 火力:A 机动:A]\n[设备:翘楚]\n[主武器:30mm ZPT-99][副武器:7.62mm QJY-201][导弹:HJ-16 ×4]\n[发动机:BF6M1015FC 柴油机 440HP]\n画师：FEB",
+      "차륜형 보병전투차\n[방호:B 화력:A 기동:A]\n[장비:최상급]\n[주무장:30mm ZPT-99][부무장:7.62mm QJY-201][미사일:HJ-16 ×4]\n[엔진:BF6M1015FC 디젤 440HP]\n원화: FEB"
+    ]
+  },
+  "ZBL19_T": {
+    "name": [
+      "🇨🇳ZSL-19",
+      "🇨🇳ZSL-19",
+      "🇨🇳ZSL-19"
+    ],
+    "desc": [
+      "Wheeled APC\n[Protection:C Firepower:C Mobility:A]\n[Equipment:Standard]\n[Weapon:12.7mm QJC-88A]\n[Engine:BF6M1015FC diesel 440HP]\n-Texture Artist: FEB",
+      "轮式装甲输送车\n[防护:C 火力:C 机动:A]\n[设备:标准]\n[武器:12.7mm QJC-88A]\n[发动机:BF6M1015FC 柴油机 440HP]\n-贴图画师:FEB",
+      "차륜형 병력 수송 장갑차\n[방호:C 화력:C 기동:A]\n[장비:표준]\n[무장:12.7mm QJC-88A]\n[엔진:BF6M1015FC 디젤 440HP]\n-텍스처: FEB"
+    ]
+  },
+  "ZLT11": {
+    "name": [
+      "🇨🇳ZLT-11",
+      "🇨🇳ZLT-11",
+      "🇨🇳ZLT-11"
+    ],
+    "desc": [
+      "Wheeled Assault Gun\n[Protection:B Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:105mm ZPL-98A][Secondary:5.8mm QJT][MG:12.7mm QJC-88A]\n[Engine:BF6M1015C diesel 440HP]\n-Texture Artist: Fsszrt263",
+      "轮式突击炮\n[防护:B 火力:S 机动:A]\n[设备:优秀]\n[主武器:105mm ZPL-98A][副武器:5.8mm QJT][机枪:12.7mm QJC-88A]\n[发动机:BF6M1015C 柴油机 440HP]\n-贴图画师:Fsszrt263",
+      "차륜형 돌격포\n[방호:B 화력:S 기동:A]\n[장비:우수]\n[주무장:105mm ZPL-98A][부무장:5.8mm QJT][기관총:12.7mm QJC-88A]\n[엔진:BF6M1015C 디젤 440HP]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "ZSD63": {
+    "name": [
+      "🇨🇳ZSD-63",
+      "🇨🇳ZSD-63",
+      "🇨🇳ZSD-63"
+    ],
+    "desc": [
+      "APC\n[Protection:D Firepower:D Mobility:C]\n[Equipment:Basic]\n[Weapon:12.7mm Type 54]\n[Engine:BF8L413F diesel 320HP]\nPainter: VVVVV",
+      "装甲输送车\n[防护:D 火力:D 机动:C]\n[设备:基础]\n[武器:12.7mm 54式]\n[发动机:BF8L413F 柴油机 320HP]\n画师：VVVVV",
+      "병력 수송 장갑차\n[방호:D 화력:D 기동:C]\n[장비:기초]\n[무장:12.7mm 54식]\n[엔진:BF8L413F 디젤 320HP]\n원화: VVVVV"
+    ]
+  },
+  "ZSL10": {
+    "name": [
+      "🇨🇳ZSL-10",
+      "🇨🇳ZSL-10",
+      "🇨🇳ZSL-10"
+    ],
+    "desc": [
+      "Wheeled APC\n[Protection:C Firepower:C Mobility:A]\n[Equipment:Standard]\n[Weapon:12.7mm QJC-88A]\n[Engine:BF6M1015C diesel 440HP]\nPainter: Fsszrt263",
+      "轮式装甲输送车\n[防护:C 火力:C 机动:A]\n[设备:标准]\n[武器:12.7mm QJC-88A]\n[发动机:BF6M1015C 柴油机 440HP]\n画师：Fsszrt263",
+      "차륜형 병력 수송 장갑차\n[방호:C 화력:C 기동:A]\n[장비:표준]\n[무장:12.7mm QJC-88A]\n[엔진:BF6M1015C 디젤 440HP]\n원화: Fsszrt263"
+    ]
+  },
+  "ZSL56": {
+    "name": [
+      "🇨🇳ZSL-56",
+      "🇨🇳ZSL-56",
+      "🇨🇳ZSL-56"
+    ],
+    "desc": [
+      "\n-APC\n Good mobility",
+      "\n-装甲输送车\n 机动性能良好",
+      "\n-병력 수송 장갑차\n 우수한 기동성"
+    ]
+  },
+  "ZSL92": {
+    "name": [
+      "🇨🇳ZSL-92",
+      "🇨🇳ZSL-92",
+      "🇨🇳ZSL-92"
+    ],
+    "desc": [
+      "Wheeled APC\n[Protection:C Firepower:C Mobility:A]\n[Equipment:Standard]\n[Main Weapon:25mm ZPT-90][Secondary:7.62mm Type 86]\n[Engine:BF8L413F diesel 320HP]\nPainter: Fsszrt263",
+      "轮式装甲输送车\n[防护:C 火力:C 机动:A]\n[设备:标准]\n[主武器:25mm ZPT-90][副武器:7.62mm 86式]\n[发动机:BF8L413F 柴油机 320HP]\n画师：Fsszrt263",
+      "차륜형 병력 수송 장갑차\n[방호:C 화력:C 기동:A]\n[장비:표준]\n[주무장:25mm ZPT-90][부무장:7.62mm 86식]\n[엔진:BF8L413F 디젤 320HP]\n원화: Fsszrt263"
+    ]
+  },
+  "ZTQ15": {
+    "name": [
+      "🇨🇳ZTQ-15 \"Black Panther\"",
+      "🇨🇳ZTQ-15\"黑豹\"",
+      "🇨🇳ZTQ-15 \"흑표\""
+    ],
+    "desc": [
+      "Light Tank\n[Protection:C Firepower:A Mobility:S]\n[Equipment:Excellent]\n[Main Gun:105mm Rifled Gun][MG:7.62mm][Secondary:35mm QLZ-04]\n[Engine:8V132 diesel 880HP][Protection:FY-4 ERA]\n-Texture Artist: FEB",
+      "轻型坦克\n[防护:C 火力:A 机动:S]\n[设备:优秀]\n[主炮:105mm线膛炮][机枪:7.62mm][副武器:35mm QLZ-04]\n[发动机:8V132 柴油机 880HP][防护:FY-4 ERA]\n-贴图画师:FEB",
+      "경전차\n[방호:C 화력:A 기동:S]\n[장비:우수]\n[주포:105mm 강선포][기관총:7.62mm][부무장:35mm QLZ-04]\n[엔진:8V132 디젤 880HP][방호:FY-4 폭발반응장갑]\n-텍스처: FEB"
+    ]
+  },
+  "ZTQ62": {
+    "name": [
+      "🇨🇳ZTQ-62",
+      "🇨🇳ZTQ-62",
+      "🇨🇳ZTQ-62"
+    ],
+    "desc": [
+      "Light Tank\n[Protection:D Firepower:C Mobility:C]\n[Equipment:Standard]\n[Main Weapon:85mm 62-85TC][Secondary:7.62mm Type 59][MG:12.7mm Type 54]\n[Engine:12150L-3 diesel 430HP]\n-Texture Artist: VVVVV",
+      "轻型坦克\n[防护:D 火力:C 机动:C]\n[设备:标准]\n[主武器:85mm 62-85TC][副武器:7.62mm 59式][机枪:12.7mm 54式]\n[发动机:12150L-3 柴油机 430HP]\n-贴图画师:VVVVV",
+      "경전차\n[방호:D 화력:C 기동:C]\n[장비:표준]\n[주무장:85mm 62-85TC][부무장:7.62mm 59식][기관총:12.7mm 54식]\n[엔진:12150L-3 디젤 430HP]\n-텍스처: VVVVV"
+    ]
+  },
+  "ZTZ59": {
+    "name": [
+      "🇨🇳ZTZ-59",
+      "🇨🇳ZTZ-59",
+      "🇨🇳ZTZ-59"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:D Firepower:B Mobility:C]\n[Equipment:Standard]\n[Main Weapon:100mm 59-100][Secondary:7.62mm Type 59][MG:12.7mm Type 54]\n[Engine:12150L diesel 520HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:D 火力:B 机动:C]\n[设备:标准]\n[主武器:100mm 59-100][副武器:7.62mm 59式][机枪:12.7mm 54式]\n[发动机:12150L 柴油机 520HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:D 화력:B 기동:C]\n[장비:표준]\n[주무장:100mm 59-100][부무장:7.62mm 59식][기관총:12.7mm 54식]\n[엔진:12150L 디젤 520HP]\n-텍스처: FEB"
+    ]
+  },
+  "ZTZ59D": {
+    "name": [
+      "🇨🇳ZTZ-59D",
+      "🇨🇳ZTZ-59D",
+      "🇨🇳ZTZ-59D"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:D Firepower:B Mobility:C]\n[Equipment:Standard]\n[Main Weapon:105mm ZPL-94][Secondary:7.62mm Type 59][MG:12.7mm Type 54]\n[Engine:12150L-7 diesel 580HP][Protection:FY-2 ERA]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:D 火力:B 机动:C]\n[设备:标准]\n[主武器:105mm ZPL-94][副武器:7.62mm 59式][机枪:12.7mm 54式]\n[发动机:12150L-7 柴油机 580HP][防护:FY-2 ERA]\n-贴图画师:FEB",
+      "주력전차\n[방호:D 화력:B 기동:C]\n[장비:표준]\n[주무장:105mm ZPL-94][부무장:7.62mm 59식][기관총:12.7mm 54식]\n[엔진:12150L-7 디젤 580HP][방호:FY-2 폭발반응장갑]\n-텍스처: FEB"
+    ]
+  },
+  "ZTZ88A": {
+    "name": [
+      "🇨🇳ZTZ-88A",
+      "🇨🇳ZTZ-88A",
+      "🇨🇳ZTZ-88A"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:B Mobility:C]\n[Equipment:Standard]\n[Main Weapon:105mm ZPL-94][Secondary:7.62mm Type 59][MG:12.7mm Type 54]\n[Engine:12150ZL diesel 730HP]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:C 火力:B 机动:C]\n[设备:标准]\n[主武器:105mm ZPL-94][副武器:7.62mm 59式][机枪:12.7mm 54式]\n[发动机:12150ZL 柴油机 730HP]\n-贴图画师:FEB",
+      "주력전차\n[방호:C 화력:B 기동:C]\n[장비:표준]\n[주무장:105mm ZPL-94][부무장:7.62mm 59식][기관총:12.7mm 54식]\n[엔진:12150ZL 디젤 730HP]\n-텍스처: FEB"
+    ]
+  },
+  "ZTZ88B": {
+    "name": [
+      "🇨🇳ZTZ-88B",
+      "🇨🇳ZTZ-88B",
+      "🇨🇳ZTZ-88B"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:B Mobility:C]\n[Equipment:Standard]\n[Main Weapon:100mm ZPL-83A][Secondary:7.62mm Type 59][MG:12.7mm Type 54]\n[Engine:12150ZL diesel 730HP]\n-Texture Artist: VVVVV",
+      "主战坦克\n[防护:C 火力:B 机动:C]\n[设备:标准]\n[主武器:100mm ZPL-83A][副武器:7.62mm 59式][机枪:12.7mm 54式]\n[发动机:12150ZL 柴油机 730HP]\n-贴图画师:VVVVV",
+      "주력전차\n[방호:C 화력:B 기동:C]\n[장비:표준]\n[주무장:100mm ZPL-83A][부무장:7.62mm 59식][기관총:12.7mm 54식]\n[엔진:12150ZL 디젤 730HP]\n-텍스처: VVVVV"
+    ]
+  },
+  "ZTZ96": {
+    "name": [
+      "🇨🇳ZTZ-96",
+      "🇨🇳ZTZ-96",
+      "🇨🇳ZTZ-96"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:125mm ZPT-88C][Secondary:7.62mm Type 86][MG:12.7mm QJC-88]\n[Engine:12V150ZLC diesel 730HP]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:B 火力:A 机动:B]\n[设备:优秀]\n[主武器:125mm ZPT-88C][副武器:7.62mm 86式][机枪:12.7mm QJC-88]\n[发动机:12V150ZLC 柴油机 730HP]\n-贴图画师:Fsszrt263",
+      "주력전차\n[방호:B 화력:A 기동:B]\n[장비:우수]\n[주무장:125mm ZPT-88C][부무장:7.62mm 86식][기관총:12.7mm QJC-88]\n[엔진:12V150ZLC 디젤 730HP]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "ZTZ96A": {
+    "name": [
+      "🇨🇳ZTZ-96A",
+      "🇨🇳ZTZ-96A",
+      "🇨🇳ZTZ-96A"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:125mm ZPT-88][Secondary:7.62mm Type 86][MG:12.7mm QJC-88]\n[Engine:12V150ZLD diesel 780HP][Protection:FY-4 ERA]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:B 火力:A 机动:B]\n[设备:优秀]\n[主武器:125mm ZPT-88][副武器:7.62mm 86式][机枪:12.7mm QJC-88]\n[发动机:12V150ZLD 柴油机 780HP][防护:FY-4 ERA]\n-贴图画师:Fsszrt263",
+      "주력전차\n[방호:B 화력:A 기동:B]\n[장비:우수]\n[주무장:125mm ZPT-88][부무장:7.62mm 86식][기관총:12.7mm QJC-88]\n[엔진:12V150ZLD 디젤 780HP][방호:FY-4 폭발반응장갑]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "ZTZ96B": {
+    "name": [
+      "🇨🇳ZTZ-96B",
+      "🇨🇳ZTZ-96B",
+      "🇨🇳ZTZ-96B"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:S Mobility:B]\n[Equipment:Elite]\n[Main Weapon:125mm ZPT-98][Secondary:7.62mm QJY-201][MG:12.7mm QJC-88A]\n[Engine:8V150HB diesel 1000HP][Protection:FY-4 ERA]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:B 火力:S 机动:B]\n[设备:翘楚]\n[主武器:125mm ZPT-98][副武器:7.62mm QJY-201][机枪:12.7mm QJC-88A]\n[发动机:8V150HB 柴油机 1000HP][防护:FY-4 ERA]\n-贴图画师:Fsszrt263",
+      "주력전차\n[방호:B 화력:S 기동:B]\n[장비:최상급]\n[주무장:125mm ZPT-98][부무장:7.62mm QJY-201][기관총:12.7mm QJC-88A]\n[엔진:8V150HB 디젤 1000HP][방호:FY-4 폭발반응장갑]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "ZTZ99": {
+    "name": [
+      "🇨🇳ZTZ-99 (Type I)",
+      "🇨🇳ZTZ-99(I类定型状态)",
+      "🇨🇳ZTZ-99 (I 형)"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:125mm ZPT-98][Secondary:7.62mm Type 86][MG:12.7mm QJC-88]\n[Engine:150HB diesel 1500HP]\n-Texture Artist: VVVVV",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:优秀]\n[主武器:125mm ZPT-98][副武器:7.62mm 86式][机枪:12.7mm QJC-88]\n[发动机:150HB 柴油机 1500HP]\n-贴图画师:VVVVV",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:우수]\n[주무장:125mm ZPT-98][부무장:7.62mm 86식][기관총:12.7mm QJC-88]\n[엔진:150HB 디젤 1500HP]\n-텍스처: VVVVV"
+    ]
+  },
+  "ZTZ99A": {
+    "name": [
+      "🇨🇳ZTZ-99A",
+      "🇨🇳ZTZ-99A",
+      "🇨🇳ZTZ-99A"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Elite]\n[Main Weapon:125mm ZPT-98][Secondary:5.8mm QJT][MG:12.7mm QJC-88A]\n[Engine:150HB diesel 1500HP][Protection:FY-5 ERA GL6 APS]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:翘楚]\n[主武器:125mm ZPT-98][副武器:5.8mm QJT][机枪:12.7mm QJC-88A]\n[发动机:150HB 柴油机 1500HP][防护:FY-5 ERA GL6 APS]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:최상급]\n[주무장:125mm ZPT-98][부무장:5.8mm QJT][기관총:12.7mm QJC-88A]\n[엔진:150HB 디젤 1500HP][방호:FY-5 폭발반응장갑 GL6 능동방호체계]\n-텍스처: FEB"
+    ]
+  },
+  "ZTZ99Acommander": {
+    "name": [
+      "🇨🇳ZTZ-99A Command Vehicle",
+      "🇨🇳ZTZ-99A 指挥车",
+      "🇨🇳ZTZ-99A 지휘차량"
+    ],
+    "desc": [
+      "Command Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Elite]\n[Main Weapon:125mm ZPT-98][Secondary:5.8mm QJT][MG:12.7mm QJC-88A]\n[Engine:150HB diesel 1500HP][Protection:FY-5 ERA GL6 APS]\n-Texture Artist: FEB",
+      "指挥坦克\n[防护:A 火力:S 机动:B]\n[设备:翘楚]\n[主武器:125mm ZPT-98][副武器:5.8mm QJT][机枪:12.7mm QJC-88A]\n[发动机:150HB 柴油机 1500HP][防护:FY-5 ERA GL6 APS]\n-贴图画师:FEB",
+      "지휘 전차\n[방호:A 화력:S 기동:B]\n[장비:최상급]\n[주무장:125mm ZPT-98][부무장:5.8mm QJT][기관총:12.7mm QJC-88A]\n[엔진:150HB 디젤 1500HP][방호:FY-5 폭발반응장갑 GL6 능동방호체계]\n-텍스처: FEB"
+    ]
+  },
+  "ZTZ99B": {
+    "name": [
+      "🇨🇳ZTZ-99B.mod2025",
+      "🇨🇳ZTZ-99B.mod2025",
+      "🇨🇳ZTZ-99B.2025 년형"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Elite]\n[Main Weapon:125mm ZPT-98][Secondary:5.8mm QJT][MG:12.7mm QJC-88A]\n[Engine:150HB diesel 1500HP][Protection:FY-5 ERA GL6 APS]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:翘楚]\n[主武器:125mm ZPT-98][副武器:5.8mm QJT][机枪:12.7mm QJC-88A]\n[发动机:150HB 柴油机 1500HP][防护:FY-5 ERA GL6 APS]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:최상급]\n[주무장:125mm ZPT-98][부무장:5.8mm QJT][기관총:12.7mm QJC-88A]\n[엔진:150HB 디젤 1500HP][방호:FY-5 폭발반응장갑 GL6 능동방호체계]\n-텍스처: FEB"
+    ]
+  },
+  "ZTZ99I": {
+    "name": [
+      "🇨🇳ZTZ-99 (Type II)",
+      "🇨🇳ZTZ-99(II类定型状态)",
+      "🇨🇳ZTZ-99 (II 형)"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:125mm ZPT-98][Secondary:7.62mm Type 86][MG:12.7mm QJC-88]\n[Engine:150HB diesel 1500HP][Protection:FY-4 ERA]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:优秀]\n[主武器:125mm ZPT-98][副武器:7.62mm 86式][机枪:12.7mm QJC-88]\n[发动机:150HB 柴油机 1500HP][防护:FY-4 ERA]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:우수]\n[주무장:125mm ZPT-98][부무장:7.62mm 86식][기관총:12.7mm QJC-88]\n[엔진:150HB 디젤 1500HP][방호:FY-4 폭발반응장갑]\n-텍스처: FEB"
+    ]
+  },
+  "ZTZ99II": {
+    "name": [
+      "🇨🇳ZTZ-99 (Type III)",
+      "🇨🇳ZTZ-99(III类定型状态)",
+      "🇨🇳ZTZ-99 (III 형)"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:125mm ZPT-98][Secondary:7.62mm Type 86][MG:12.7mm QJC-88A]\n[Engine:150HB diesel 1500HP][Protection:FY-4 ERA]\n-Texture Artist: FEB",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:优秀]\n[主武器:125mm ZPT-98][副武器:7.62mm 86式][机枪:12.7mm QJC-88A]\n[发动机:150HB 柴油机 1500HP][防护:FY-4 ERA]\n-贴图画师:FEB",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:우수]\n[주무장:125mm ZPT-98][부무장:7.62mm 86식][기관총:12.7mm QJC-88A]\n[엔진:150HB 디젤 1500HP][방호:FY-4 폭발반응장갑]\n-텍스처: FEB"
+    ]
+  },
+  "PGZ04A": {
+    "name": [
+      "🇨🇳PGZ-04A",
+      "🇨🇳PGZ-04A",
+      "🇨🇳PGZ-04A"
+    ],
+    "desc": [
+      "SPAAG\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Weapon:25mm PG87 ×4][Missile:FN-6 ×4]\n[Engine:F12L412 diesel 380HP]\nPainter: FEB",
+      "自行高炮\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主武器:25mm PG87 ×4][导弹:FN-6 ×4]\n[发动机:F12L412 柴油机 380HP]\n画师：FEB",
+      "자주대공포\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주무장:25mm PG87 ×4][미사일:FN-6 ×4]\n[엔진:F12L412 디젤 380HP]\n원화: FEB"
+    ]
+  },
+  "PGZ09": {
+    "name": [
+      "🇨🇳PGZ-09",
+      "🇨🇳PGZ-09",
+      "🇨🇳PGZ-09"
+    ],
+    "desc": [
+      "SPAAG\n[Protection:C Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:35mm PG99 ×2]\n[Engine:8V150 diesel 800HP]c\nPainter: FEB",
+      "自行高炮\n[防护:C 火力:A 机动:B]\n[设备:优秀]\n[主武器:35mm PG99 ×2]\n[发动机:8V150 柴油机 800HP]c\n画师：FEB",
+      "자주대공포\n[방호:C 화력:A 기동:B]\n[장비:우수]\n[주무장:35mm PG99 ×2]\n[엔진:8V150 디젤 800HP]\n원화: FEB"
+    ]
+  },
+  "RADAR": {
+    "name": [
+      "Radar",
+      "雷达",
+      "레이더"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "PGZ625": {
+    "name": [
+      "🇨🇳PGZ-625",
+      "🇨🇳PGZ-625",
+      "🇨🇳PGZ-625"
+    ],
+    "desc": [
+      "Wheeled SPAAG\n[Protection:C Firepower:B Mobility:A]\n[Equipment:Standard]\n[Main Weapon:25mm Revolver Cannon][Missile:FN-10A ×4]\n[Engine:BF6M1015C diesel 440HP]\nPainter: 镜水月",
+      "轮式自行高炮\n[防护:C 火力:B 机动:A]\n[设备:标准]\n[主武器:25mm转膛炮][导弹:FN-10A ×4]\n[发动机:BF6M1015C 柴油机 440HP]\n画师：镜水月",
+      "차륜형 자주대공포\n[방호:C 화력:B 기동:A]\n[장비:표준]\n[주무장:25mm 리볼버 기관포][미사일:FN-10A ×4]\n[엔진:BF6M1015C 디젤 440HP]\n원화: 镜水月"
+    ]
+  },
+  "PGZ88": {
+    "name": [
+      "🇨🇳PGZ-88",
+      "🇨🇳PGZ-88",
+      "🇨🇳PGZ-88"
+    ],
+    "desc": [
+      "SPAAG\n[Protection:D Firepower:B Mobility:C]\n[Equipment:Standard]\n[Main Weapon:37mm H/PJ-76 ×2]\n[Engine:12150L-7 diesel 580HP]\nRadar Range 1200\nPainter: VVVVV",
+      "自行高炮\n[防护:D 火力:B 机动:C]\n[设备:标准]\n[主武器:37mm H/PJ-76 ×2]\n[发动机:12150L-7 柴油机 580HP]\n雷达范围1200\n画师：VVVVV",
+      "자주대공포\n[방호:D 화력:B 기동:C]\n[장비:표준]\n[주무장:37mm H/PJ-76 ×2]\n[엔진:12150L-7 디젤 580HP]\n레이더 거리 1200\n원화: VVVVV"
+    ]
+  },
+  "WZ305": {
+    "name": [
+      "🇨🇳WZ305",
+      "🇨🇳WZ305",
+      "🇨🇳WZ305"
+    ],
+    "desc": [
+      "SPAAG\n[Protection:D Firepower:B Mobility:C]\n[Equipment:Standard]\n[Main Weapon:57mm PG59 ×2]\n[Engine:12150L-7 diesel 580HP]\nPainter: VVVVV",
+      "自行高炮\n[防护:D 火力:B 机动:C]\n[设备:标准]\n[主武器:57mm PG59 ×2]\n[发动机:12150L-7 柴油机 580HP]\n画师：VVVVV",
+      "자주대공포\n[방호:D 화력:B 기동:C]\n[장비:표준]\n[주무장:57mm PG59 ×2]\n[엔진:12150L-7 디젤 580HP]\n원화: VVVVV"
+    ]
+  },
+  "HQ-11": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "HQ11": {
+    "name": [
+      "🇨🇳HQ-11",
+      "🇨🇳红旗-11",
+      "🇨🇳HQ-11"
+    ],
+    "desc": [
+      "HQ-11Air Defense System\nRadar Range 3000\nPainter: VVVVV",
+      "HQ-11防空系统\n雷达距离3000\n画师：VVVVV",
+      "HQ-11 방공 체계\n레이더 거리 3000\n원화: VVVVV"
+    ]
+  },
+  "LD3000": {
+    "name": [
+      "🇨🇳LD3000",
+      "🇨🇳LD3000",
+      "🇨🇳LD3000"
+    ],
+    "desc": [
+      "LD-3000 short-range air defense system\nFires while stationary\nOnly attack low-alt enemy&Ammunitions\nPainter: VVVVV",
+      "陆盾3000近程防空系统\n静止开火\n仅攻击低空目标及弹药\n画师：VVVVV",
+      "LD-3000 근거리 방공 체계\n정지 상태에서 사격\n저고도 적과 비행 중인 탄약만 공격\n원화: VVVVV"
+    ]
+  },
+  "HQ-17": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "HQ17": {
+    "name": [
+      "🇨🇳HQ-17",
+      "🇨🇳红旗-17",
+      "🇨🇳HQ-17"
+    ],
+    "desc": [
+      "SAM Launcher\n[Protection:D Firepower:A Mobility:C]\n[Equipment:Standard]\n[Missile:HQ-17 ×8]\n[Engine: diesel ]\nRadar Range 2400\nPainter: Fsszrt263",
+      "地空导弹发射车\n[防护:D 火力:A 机动:C]\n[设备:标准]\n[导弹:HQ-17 ×8]\n[发动机: 柴油机 ]\n雷达距离2400\n画师：Fsszrt263",
+      "지대공 미사일 발사차량\n[방호:D 화력:A 기동:C]\n[장비:표준]\n[미사일:HQ-17 ×8]\n[엔진: 디젤 ]\n레이더 거리 2400\n원화: Fsszrt263"
+    ]
+  },
+  "HQ7": {
+    "name": [
+      "🇨🇳HQ-7B",
+      "🇨🇳红旗-7B",
+      "🇨🇳HQ-7B"
+    ],
+    "desc": [
+      "SAM Launcher\n[Protection:D Firepower:B Mobility:C]\n[Equipment:Standard]\n[Missile:HQ-7 ×4]\n[Engine: diesel ]\nPainter: Fsszrt263",
+      "地空导弹发射车\n[防护:D 火力:B 机动:C]\n[设备:标准]\n[导弹:HQ-7 ×4]\n[发动机: 柴油机 ]\n画师：Fsszrt263",
+      "지대공 미사일 발사차량\n[방호:D 화력:B 기동:C]\n[장비:표준]\n[미사일:HQ-7 ×4]\n[엔진: 디젤 ]\n원화: Fsszrt263"
+    ]
+  },
+  "HQ-7": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "Z19": {
+    "name": [
+      "🇨🇳Z-19 \"Black Whirlwind\"",
+      "🇨🇳直-19“黑旋风”",
+      "🇨🇳Z-19 \"흑선풍\""
+    ],
+    "desc": [
+      "Light Attack Helicopter",
+      "轻型武装直升机",
+      "소형 공격헬기"
+    ]
+  },
+  "Z10": {
+    "name": [
+      "🇨🇳Z-10 \"Thunderbolt\"",
+      "🇨🇳直-10“霹雳火”",
+      "🇨🇳Z-10 \"벽력\""
+    ],
+    "desc": [
+      "Medium Attack Helicopter",
+      "中型武装直升机",
+      "중형 공격헬기"
+    ]
+  },
+  "Z20": {
+    "name": [
+      "🇨🇳Z-20",
+      "🇨🇳直-20",
+      "🇨🇳Z-20"
+    ],
+    "desc": [
+      "Utility Helicopter",
+      "通用直升机",
+      "다목적 헬기"
+    ]
+  },
+  "Z8": {
+    "name": [
+      "🇨🇳Z-8",
+      "🇨🇳直-8",
+      "🇨🇳Z-8"
+    ],
+    "desc": [
+      "Utility Helicopter\n-Can carry 15 infantry",
+      "通用直升机\n-可搭载15名步兵",
+      "다목적 헬기\n-보병 15 명 수송 가능"
+    ]
+  },
+  "Z9": {
+    "name": [
+      "🇨🇳Z-9WA",
+      "🇨🇳直-9WA",
+      "🇨🇳Z-9WA"
+    ],
+    "desc": [
+      "Light Utility Helicopter",
+      "轻型通用直升机",
+      "소형 다목적 헬기"
+    ]
+  },
+  "J-10": {
+    "name": [
+      "🇨🇳J-10C \"Vigorous Dragon\"",
+      "🇨🇳歼-10C“猛龙”",
+      "🇨🇳J-10C \"멍룽\""
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 6000\n-120s endurance\n-ECM:20%\n-Painter: Fsszrt263",
+      "-战斗机\n-高空作战\n-雷达距离6000\n-120s滞空时间\n-ECM:20%\n-画师:Fsszrt263",
+      "-전투기\n-고고도 작전\n-레이더 거리 6000\n-체공 시간 120 초\n-ECM:20%\n-원화: Fsszrt263"
+    ]
+  },
+  "J11B": {
+    "name": [
+      "🇨🇳J-11B",
+      "🇨🇳歼-11B",
+      "🇨🇳J-11B"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 6000\n-120s endurance\n-ECM:25%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离6000\n-120s滞空时间\n-ECM:25%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 6000\n-체공 시간 120 초\n-ECM:25%\n-원화: zhrqf"
+    ]
+  },
+  "J-16": {
+    "name": [
+      "🇨🇳J-16",
+      "🇨🇳歼-16",
+      "🇨🇳J-16"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 8000\n-200s endurance\n-ECM:30%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离8000\n-200s滞空时间\n-ECM:30%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 8000\n-체공 시간 200 초\n-ECM:30%\n-원화: zhrqf"
+    ]
+  },
+  "J6": {
+    "name": [
+      "🇨🇳J-6",
+      "🇨🇳歼-6",
+      "🇨🇳J-6"
+    ],
+    "desc": [
+      "-Fighter\n-Low-altitude\n-Radar Range 1200\n-120s endurance\n-ECM:0%\n-Painter: VVVVV",
+      "-战斗机\n-低空作战\n-雷达距离1200\n-120s滞空时间\n-ECM:0%\n-画师:VVVVV",
+      "-전투기\n-저고도 작전\n-레이더 거리 1200\n-체공 시간 120 초\n-ECM:0%\n-원화: VVVVV"
+    ]
+  },
+  "J7D": {
+    "name": [
+      "🇨🇳J-7D",
+      "🇨🇳歼-7D",
+      "🇨🇳J-7D"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 2400\n-120s endurance\n-ECM:0%\n-Painter: VVVVV",
+      "-战斗机\n-高空作战\n-雷达距离2400\n-120s滞空时间\n-ECM:0%\n-画师:VVVVV",
+      "-전투기\n-고고도 작전\n-레이더 거리 2400\n-체공 시간 120 초\n-ECM:0%\n-원화: VVVVV"
+    ]
+  },
+  "J-8": {
+    "name": [
+      "🇨🇳J-8",
+      "🇨🇳歼-8",
+      "🇨🇳J-8"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 4800\n-180s endurance\n-ECM:10%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离4800\n-180s滞空时间\n-ECM:10%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 4800\n-체공 시간 180 초\n-ECM:10%\n-원화: zhrqf"
+    ]
+  },
+  "JH7A": {
+    "name": [
+      "🇨🇳JH-7A \"Flying Leopard\"",
+      "🇨🇳歼轰-7A“飞豹”",
+      "🇨🇳JH-7A \"페이바오\""
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-High-altitude\n-Radar Range 6000\n-150s endurance\n-ECM:20%\n-Painter: Fsszrt263",
+      "-多用途飞机\n-高空作战\n-雷达距离6000\n-150s滞空时间\n-ECM:20%\n-画师:Fsszrt263",
+      "-다목적 항공기\n-고고도 작전\n-레이더 거리 6000\n-체공 시간 150 초\n-ECM:20%\n-원화: Fsszrt263"
+    ]
+  },
+  "KD88弹药": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "KD88导引头": {
+    "name": [
+      "JH7",
+      "JH7",
+      "JH7"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "Q5L": {
+    "name": [
+      "🇨🇳Q-5L",
+      "🇨🇳强-5L",
+      "🇨🇳Q-5L"
+    ],
+    "desc": [
+      "-Ground Attack Aircraft\n-Low-altitude\n-No radar\n-120s endurance\n-ECM:5%\n-Painter: VVVVV",
+      "-对地支援机\n-低空作战\n-无雷达\n-120s滞空时间\n-ECM:5%\n-画师:VVVVV",
+      "-지상 공격기\n-저고도 작전\n-레이더 없음\n-체공 시간 120 초\n-ECM:5%\n-원화: VVVVV"
+    ]
+  },
+  "YJ91反辐射弹药": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "YJ91导引头": {
+    "name": [
+      "JH7",
+      "JH7",
+      "JH7"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "63火": {
+    "name": [
+      "🇨🇳Type 63 Rocket Artillery",
+      "🇨🇳63式火箭炮",
+      "🇨🇳63식 로켓포"
+    ],
+    "desc": [
+      "107 MMMLRS\n-Requires setup=\n-Good mobility\n-Low HP\n-Fast setup",
+      "107 MM多管火箭炮\n-需要架设=\n-机动性好\n-血量薄弱\n-架设速度快",
+      "107mm 다연장 로켓포\n-방열 필요=\n-우수한 기동성\n-낮은 내구도\n-신속한 방열"
+    ]
+  },
+  "63火部署": {
+    "name": [
+      "🇨🇳Type 63 Rocket Artillery[Deploy]",
+      "🇨🇳63式火箭炮[部署]",
+      "🇨🇳63식 로켓포[전개]"
+    ],
+    "desc": [
+      "107 MMMLRS\n-Requires setup\n-Fires 12 rockets in one salvo, three per burst\n-Long reload once the rockets are expended\n-Good mobility\n-Low HP\n-Fast setup",
+      "107 MM多管火箭炮\n-需要架设\n-一次性发射12枚火箭弹，每个短点发射三枚\n-火箭发射完后需要较长时间装填\n-机动性好\n-血量薄弱\n-架设速度快",
+      "107mm 다연장 로켓포\n-방열 필요\n-한 번의 일제사격에 로켓 12 발 발사, 점사당 3 발\n-로켓을 모두 소진하면 재장전 시간이 김\n-우수한 기동성\n-낮은 내구도\n-신속한 방열"
+    ]
+  },
+  "USMARSOCM47": {
+    "name": [
+      "Marsoc Anti-Tank Team",
+      "Marsoc反坦克小组",
+      "해병특수전사령부 대전차반"
+    ],
+    "desc": [
+      "US Special Forces Infantry\n-Medium armor\n-Equipped with M47Dragon ATGM\n-Fires while stationary\n-Tandem HEAT",
+      "美军特种步兵\n-中甲\n-装备M47龙式反坦克导弹\n-静止状态射击\n-串联破甲弹",
+      "미군 특수부대 보병\n-중간 수준의 장갑\n-M47 드래곤 대전차 미사일 장비\n-정지 상태에서 사격\n-탠덤 성형작약탄"
+    ]
+  },
+  "USCAG": {
+    "name": [
+      "CAG Special Forces",
+      "CAG特种部队",
+      "CAG 특수부대"
+    ],
+    "desc": [
+      "CAGSpecial Forces Soldier\n-Light armor\n-Can switch between multiple weapons",
+      "CAG特种部队士兵\n-轻甲\n-可切换多种武器",
+      "CAG 특수부대원\n-경장갑\n-여러 무기로 전환 가능"
+    ]
+  },
+  "USLAND": {
+    "name": [
+      "US Army Infantry",
+      "美国陆军步兵",
+      "미 육군 보병"
+    ],
+    "desc": [
+      "US Army Infantry\n-Heavy armor\n-Can switch between multiple weapons",
+      "美国陆军步兵\n-重甲\n-可切换多种武器",
+      "미 육군 보병\n-중장갑\n-여러 무기로 전환 가능"
+    ]
+  },
+  "USMARINE": {
+    "name": [
+      "US Marine Corps",
+      "美国海军陆战队",
+      "미 해병대"
+    ],
+    "desc": [
+      "US Marine\n-Light armor\n-Default: M4Assault Rifle",
+      "美国海军陆战队员\n-轻甲\n-默认配备M4突击步枪",
+      "미 해병대원\n-경장갑\n-기본 무장: M4 돌격소총"
+    ]
+  },
+  "USMARSOC": {
+    "name": [
+      "MARSOC Special Forces",
+      "MARSOC特种部队",
+      "미 해병특수전사령부 특수부대"
+    ],
+    "desc": [
+      "MARSOCSpecial Forces Soldier\n-Heavy armor\n-Can switch between multiple weapons",
+      "MARSOC特种部队士兵\n-重甲\n-可切换多种武器",
+      "미 해병특수전사령부 특수부대원\n-중장갑\n-여러 무기로 전환 가능"
+    ]
+  },
+  "USMARINEM47": {
+    "name": [
+      "M47 Anti-Tank Team",
+      "M47反坦克小组",
+      "M47 대전차반"
+    ],
+    "desc": [
+      "US Infantry\n-Medium armor\n-Equipped with M47Dragon ATGM\n-Fires while stationary\n-Tandem HEAT",
+      "美军步兵\n-中甲\n-装备M47龙式反坦克导弹\n-静止状态射击\n-串联破甲弹",
+      "미군 보병\n-중간 수준의 장갑\n-M47 드래곤 대전차 미사일 장비\n-정지 상태에서 사격\n-탠덤 성형작약탄"
+    ]
+  },
+  "AAVP-7A1": {
+    "name": [
+      "🇺🇸AAVP-7A1",
+      "🇺🇸AAVP-7A1",
+      "🇺🇸AAVP-7A1"
+    ],
+    "desc": [
+      "Amphibious Assault Vehicle\n[Protection:D Firepower:C Mobility:C]\n[Equipment:Standard]\n[Main Weapon:40mm MK19][MG:12.7mm M2HB]\n[Engine:VT400 903 diesel 400HP]",
+      "两栖突击车\n[防护:D 火力:C 机动:C]\n[设备:标准]\n[主武器:40mm MK19][机枪:12.7mm M2HB]\n[发动机:VT400 903 柴油机 400HP]",
+      "상륙돌격장갑차\n[방호:D 화력:C 기동:C]\n[장비:표준]\n[주무장:40mm MK19][기관총:12.7mm M2HB]\n[엔진:VT400 903 디젤 400HP]"
+    ]
+  },
+  "AAVP-7A2": {
+    "name": [
+      "🇺🇸AAVP-7A1 AAK",
+      "🇺🇸AAVP-7A1 AAK",
+      "🇺🇸AAVP-7A1 AAK"
+    ],
+    "desc": [
+      "Amphibious Assault Vehicle\n[Protection:D Firepower:C Mobility:C]\n[Equipment:Standard]\n[Main Weapon:40mm MK19][MG:12.7mm M2HB]\n[Engine:VT400 903 diesel 400HP]",
+      "两栖突击车\n[防护:D 火力:C 机动:C]\n[设备:标准]\n[主武器:40mm MK19][机枪:12.7mm M2HB]\n[发动机:VT400 903 柴油机 400HP]",
+      "상륙돌격장갑차\n[방호:D 화력:C 기동:C]\n[장비:표준]\n[주무장:40mm MK19][기관총:12.7mm M2HB]\n[엔진:VT400 903 디젤 400HP]"
+    ]
+  },
+  "HMMV": {
+    "name": [
+      "🇺🇸M998A1 HMMWV",
+      "🇺🇸M998A1 HMMWV",
+      "🇺🇸M998A1 HMMWV"
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "HMMV_TOW2": {
+    "name": [
+      "🇺🇸M1036 TOW",
+      "🇺🇸M1036 TOW",
+      "🇺🇸M1036 TOW"
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "HMMV_MG": {
+    "name": [
+      "🇺🇸M1025/M2HB",
+      "🇺🇸M1025/M2HB",
+      "🇺🇸M1025/M2HB"
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "LAVAT": {
+    "name": [
+      "🇺🇸LAV-AT",
+      "🇺🇸LAV-AT",
+      "🇺🇸LAV-AT"
+    ],
+    "desc": [
+      "ATGM Vehicle\n[Protection:D Firepower:B Mobility:A]\n[Equipment:Standard]\n[Main Weapon:BGM-71 TOW ×2]\n[Engine:6V53T diesel 275HP]",
+      "反坦克导弹车\n[防护:D 火力:B 机动:A]\n[设备:标准]\n[主武器:BGM-71 TOW ×2]\n[发动机:6V53T 柴油机 275HP]",
+      "대전차 미사일 차량\n[방호:D 화력:B 기동:A]\n[장비:표준]\n[주무장:BGM-71 TOW ×2]\n[엔진:6V53T 디젤 275HP]"
+    ]
+  },
+  "LAV25": {
+    "name": [
+      "🇺🇸LAV-25",
+      "🇺🇸LAV-25",
+      "🇺🇸LAV-25"
+    ],
+    "desc": [
+      "Wheeled Armored Vehicle\n[Protection:D Firepower:C Mobility:B]\n[Equipment:Standard]\n[Main Weapon:25mm M242][Secondary:7.62mm M240E1+M240]\n[Engine:6V53T diesel 275HP]",
+      "轮式装甲车\n[防护:D 火力:C 机动:B]\n[设备:标准]\n[主武器:25mm M242][副武器:7.62mm M240E1+M240]\n[发动机:6V53T 柴油机 275HP]",
+      "차륜형 장갑차량\n[방호:D 화력:C 기동:B]\n[장비:표준]\n[주무장:25mm M242][부무장:7.62mm M240E1+M240]\n[엔진:6V53T 디젤 275HP]"
+    ]
+  },
+  "M1128": {
+    "name": [
+      "🇺🇸M1128 MGS",
+      "🇺🇸M1128 MGS",
+      "🇺🇸M1128 MGS"
+    ],
+    "desc": [
+      "Wheeled Assault Gun\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:105mm M68A1E4][Secondary:7.62mm M240C][MG:12.7mm M2HB]\n[Engine:Caterpillar C7 diesel 350HP]\n-Texture Artist: 263",
+      "轮式突击炮\n[防护:C 火力:B 机动:B]\n[设备:优秀]\n[主武器:105mm M68A1E4][副武器:7.62mm M240C][机枪:12.7mm M2HB]\n[发动机:Caterpillar C7 柴油机 350HP]\n-贴图画师:263",
+      "차륜형 돌격포\n[방호:C 화력:B 기동:B]\n[장비:우수]\n[주무장:105mm M68A1E4][부무장:7.62mm M240C][기관총:12.7mm M2HB]\n[엔진:Caterpillar C7 디젤 350HP]\n-텍스처: 263"
+    ]
+  },
+  "M1129": {
+    "name": [
+      "🇺🇸M1129 MC",
+      "🇺🇸M1129 MC",
+      "🇺🇸M1129 MC"
+    ],
+    "desc": [
+      "Mortar Carrier\n[Protection:C Firepower:A Mobility:B]\n[Equipment:Standard]\n[Main Weapon:120mm M121]\n[Engine:Caterpillar C7 diesel 350HP]",
+      "迫击炮车\n[防护:C 火力:A 机动:B]\n[设备:标准]\n[主武器:120mm M121]\n[发动机:Caterpillar C7 柴油机 350HP]",
+      "자주박격포 차량\n[방호:C 화력:A 기동:B]\n[장비:표준]\n[주무장:120mm M121]\n[엔진:Caterpillar C7 디젤 350HP]"
+    ]
+  },
+  "M1134": {
+    "name": [
+      "🇺🇸M1134 ATGM",
+      "🇺🇸M1134 ATGM",
+      "🇺🇸M1134 ATGM"
+    ],
+    "desc": [
+      "ATGM Vehicle\n[Protection:C Firepower:B Mobility:A]\n[Equipment:Standard]\n[Main Weapon:BGM-71 TOW ×2]\n[Engine:Caterpillar C7 diesel 350HP]",
+      "反坦克导弹车\n[防护:C 火力:B 机动:A]\n[设备:标准]\n[主武器:BGM-71 TOW ×2]\n[发动机:Caterpillar C7 柴油机 350HP]",
+      "대전차 미사일 차량\n[방호:C 화력:B 기동:A]\n[장비:표준]\n[주무장:BGM-71 TOW ×2]\n[엔진:Caterpillar C7 디젤 350HP]"
+    ]
+  },
+  "M1296": {
+    "name": [
+      "🇺🇸M1296 \"Dragoon\"",
+      "🇺🇸M1296\"龙骑兵\"",
+      "🇺🇸M1296 \"드라군\""
+    ],
+    "desc": [
+      "Wheeled IFV\n[Protection:B Firepower:A Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:30mm XM813][Secondary:7.62mm M240C]\n[Engine:Caterpillar C7 diesel 350HP]",
+      "轮式步兵战车\n[防护:B 火力:A 机动:A]\n[设备:优秀]\n[主武器:30mm XM813][副武器:7.62mm M240C]\n[发动机:Caterpillar C7 柴油机 350HP]",
+      "차륜형 보병전투차\n[방호:B 화력:A 기동:A]\n[장비:우수]\n[주무장:30mm XM813][부무장:7.62mm M240C]\n[엔진:Caterpillar C7 디젤 350HP]"
+    ]
+  },
+  "M1296火力增强型": {
+    "name": [
+      "🇺🇸M1296 \"Dragoon\"/\"Javelin\"",
+      "🇺🇸M1296\"龙骑兵\"/“标枪”",
+      "🇺🇸M1296 \"드라군\"/\"재블린\""
+    ],
+    "desc": [
+      "Wheeled IFV\n[Protection:B Firepower:A Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:30mm XM813][Secondary:7.62mm M240C]\n[Engine:Caterpillar C7 diesel 350HP]\n-Adds two Javelins",
+      "轮式步兵战车\n[防护:B 火力:A 机动:A]\n[设备:优秀]\n[主武器:30mm XM813][副武器:7.62mm M240C]\n[发动机:Caterpillar C7 柴油机 350HP]\n-加装两发标枪",
+      "차륜형 보병전투차\n[방호:B 화력:A 기동:A]\n[장비:우수]\n[주무장:30mm XM813][부무장:7.62mm M240C]\n[엔진:Caterpillar C7 디젤 350HP]\n-재블린 2 발 추가"
+    ]
+  },
+  "M2A3": {
+    "name": [
+      "🇺🇸M2A3 \"Bradley\"",
+      "🇺🇸M2A3“布雷德利”",
+      "🇺🇸M2A3 \"브래들리\""
+    ],
+    "desc": [
+      "IFV\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:25mm M242][Secondary:7.62mm M240C][Missile:BGM-71 TOW ×2]\n[Engine:VTA-903T diesel 600HP][Protection:BRAT A2 ERA]",
+      "步兵战车\n[防护:B 火力:A 机动:B]\n[设备:优秀]\n[主武器:25mm M242][副武器:7.62mm M240C][导弹:BGM-71 TOW ×2]\n[发动机:VTA-903T 柴油机 600HP][防护:BRAT A2 ERA]",
+      "보병전투차\n[방호:B 화력:A 기동:B]\n[장비:우수]\n[주무장:25mm M242][부무장:7.62mm M240C][미사일:BGM-71 TOW ×2]\n[엔진:VTA-903T 디젤 600HP][방호:BRAT A2 폭발반응장갑]"
+    ]
+  },
+  "M939": {
+    "name": [
+      "🇺🇸M939 Truck",
+      "🇺🇸M939卡车",
+      "🇺🇸M939 트럭"
+    ],
+    "desc": [
+      "\n-Medium Transport Truck",
+      "\n-中型运输卡车",
+      "\n-중형 수송 트럭"
+    ]
+  },
+  "MRAP": {
+    "name": [
+      "🇺🇸MRAP",
+      "🇺🇸MRAP",
+      "🇺🇸MRAP"
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "M1A1FEP": {
+    "name": [
+      "🇺🇸M1A1FEP",
+      "🇺🇸M1A1FEP",
+      "🇺🇸M1A1FEP"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Elite]\n[Main Weapon:120mm M256A1][Secondary:7.62mm M240C ×2][MG:12.7mm M2HB]\n[Engine:AGT-1500 gas turbine 1500HP][Protection:Trophy APS]",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:翘楚]\n[主武器:120mm M256A1][副武器:7.62mm M240C ×2][机枪:12.7mm M2HB]\n[发动机:AGT-1500 燃气轮机 1500HP][防护:战利品 APS]",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:최상급]\n[주무장:120mm M256A1][부무장:7.62mm M240C ×2][기관총:12.7mm M2HB]\n[엔진:AGT-1500 가스터빈 1500HP][방호:트로피 능동방호체계]"
+    ]
+  },
+  "M1A1HA": {
+    "name": [
+      "🇺🇸M1A1HA",
+      "🇺🇸M1A1HA",
+      "🇺🇸M1A1HA"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:120mm M256][Secondary:7.62mm M240C ×2][MG:12.7mm M2HB]\n[Engine:AGT-1500 gas turbine 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:优秀]\n[主武器:120mm M256][副武器:7.62mm M240C ×2][机枪:12.7mm M2HB]\n[发动机:AGT-1500 燃气轮机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:우수]\n[주무장:120mm M256][부무장:7.62mm M240C ×2][기관총:12.7mm M2HB]\n[엔진:AGT-1500 가스터빈 1500HP]"
+    ]
+  },
+  "M1A1HC": {
+    "name": [
+      "🇺🇸M1A1HC",
+      "🇺🇸M1A1HC",
+      "🇺🇸M1A1HC"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:120mm M256][Secondary:7.62mm M240C ×2][MG:12.7mm M2HB]\n[Engine:AGT-1500 gas turbine 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:优秀]\n[主武器:120mm M256][副武器:7.62mm M240C ×2][机枪:12.7mm M2HB]\n[发动机:AGT-1500 燃气轮机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:우수]\n[주무장:120mm M256][부무장:7.62mm M240C ×2][기관총:12.7mm M2HB]\n[엔진:AGT-1500 가스터빈 1500HP]"
+    ]
+  },
+  "M1A2SEPV1": {
+    "name": [
+      "🇺🇸M1A2SEPv1",
+      "🇺🇸M1A2SEPv1",
+      "🇺🇸M1A2SEPv1"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Elite]\n[Main Weapon:120mm M256A1][Secondary:7.62mm M240C ×2][MG:12.7mm M2HB ×2]\n[Engine:AGT-1500 gas turbine 1500HP][Protection:M19 ERA]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:翘楚]\n[主武器:120mm M256A1][副武器:7.62mm M240C ×2][机枪:12.7mm M2HB ×2]\n[发动机:AGT-1500 燃气轮机 1500HP][防护:M19 ERA]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:최상급]\n[주무장:120mm M256A1][부무장:7.62mm M240C ×2][기관총:12.7mm M2HB ×2]\n[엔진:AGT-1500 가스터빈 1500HP][방호:M19 폭발반응장갑]"
+    ]
+  },
+  "M1A2SEPV2": {
+    "name": [
+      "🇺🇸M1A2SEPv2",
+      "🇺🇸M1A2SEPv2",
+      "🇺🇸M1A2SEPv2"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Elite]\n[Main Weapon:120mm M256A1][Secondary:7.62mm M240C ×2][MG:12.7mm M2HB]\n[Engine:AGT-1500 gas turbine 1500HP][Protection:M32+ARAT II ERA]",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:翘楚]\n[主武器:120mm M256A1][副武器:7.62mm M240C ×2][机枪:12.7mm M2HB]\n[发动机:AGT-1500 燃气轮机 1500HP][防护:M32+ARAT II ERA]",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:최상급]\n[주무장:120mm M256A1][부무장:7.62mm M240C ×2][기관총:12.7mm M2HB]\n[엔진:AGT-1500 가스터빈 1500HP][방호:M32+ARAT II 폭발반응장갑]"
+    ]
+  },
+  "M1A2SEPV3": {
+    "name": [
+      "🇺🇸M1A2SEPv3",
+      "🇺🇸M1A2SEPv3",
+      "🇺🇸M1A2SEPv3"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:B]\n[Equipment:Elite]\n[Main Weapon:120mm M256A1][Secondary:7.62mm M240C ×2][MG:12.7mm M2HB ×2]\n[Engine:AGT-1500 gas turbine 1500HP][Protection:M32+ARAT II ERA]",
+      "主战坦克\n[防护:A 火力:S 机动:B]\n[设备:翘楚]\n[主武器:120mm M256A1][副武器:7.62mm M240C ×2][机枪:12.7mm M2HB ×2]\n[发动机:AGT-1500 燃气轮机 1500HP][防护:M32+ARAT II ERA]",
+      "주력전차\n[방호:A 화력:S 기동:B]\n[장비:최상급]\n[주무장:120mm M256A1][부무장:7.62mm M240C ×2][기관총:12.7mm M2HB ×2]\n[엔진:AGT-1500 가스터빈 1500HP][방호:M32+ARAT II 폭발반응장갑]"
+    ]
+  },
+  "M1A2SEPV4": {
+    "name": [
+      "🇺🇸M1A2SEPv4",
+      "🇺🇸M1A2SEPv4",
+      "🇺🇸M1A2SEPv4"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:S Firepower:S Mobility:B]\n[Equipment:Elite]\n[Main Weapon:120mm M256A1][Secondary:7.62mm M240C ×2][MG:12.7mm M2HB ×2]\n[Engine:AGT-1500 gas turbine 1500HP][Protection:M32+ARAT II ERA Trophy APS]",
+      "主战坦克\n[防护:S 火力:S 机动:B]\n[设备:翘楚]\n[主武器:120mm M256A1][副武器:7.62mm M240C ×2][机枪:12.7mm M2HB ×2]\n[发动机:AGT-1500 燃气轮机 1500HP][防护:M32+ARAT II ERA 战利品 APS]",
+      "주력전차\n[방호:S 화력:S 기동:B]\n[장비:최상급]\n[주무장:120mm M256A1][부무장:7.62mm M240C ×2][기관총:12.7mm M2HB ×2]\n[엔진:AGT-1500 가스터빈 1500HP][방호:M32+ARAT II 폭발반응장갑 트로피 능동방호체계]"
+    ]
+  },
+  "M60A3": {
+    "name": [
+      "🇺🇸M60A3",
+      "🇺🇸M60A3",
+      "🇺🇸M60A3"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:C Mobility:C]\n[Equipment:Standard]\n[Main Weapon:105mm M68E1][Secondary:7.62mm M240][MG:12.7mm M85]\n[Engine:AVDS-1790-2C diesel 750HP]",
+      "主战坦克\n[防护:C 火力:C 机动:C]\n[设备:标准]\n[主武器:105mm M68E1][副武器:7.62mm M240][机枪:12.7mm M85]\n[发动机:AVDS-1790-2C 柴油机 750HP]",
+      "주력전차\n[방호:C 화력:C 기동:C]\n[장비:표준]\n[주무장:105mm M68E1][부무장:7.62mm M240][기관총:12.7mm M85]\n[엔진:AVDS-1790-2C 디젤 750HP]"
+    ]
+  },
+  "M60A3TTS": {
+    "name": [
+      "🇺🇸M60A3 TTS",
+      "🇺🇸M60A3 TTS",
+      "🇺🇸M60A3 TTS"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:C Mobility:C]\n[Equipment:Standard]\n[Main Weapon:105mm M68E1][Secondary:7.62mm M240][MG:12.7mm M85]\n[Engine:AVDS-1790-2C diesel 750HP][Protection:ERA]",
+      "主战坦克\n[防护:B 火力:C 机动:C]\n[设备:标准]\n[主武器:105mm M68E1][副武器:7.62mm M240][机枪:12.7mm M85]\n[发动机:AVDS-1790-2C 柴油机 750HP][防护:ERA]",
+      "주력전차\n[방호:B 화력:C 기동:C]\n[장비:표준]\n[주무장:105mm M68E1][부무장:7.62mm M240][기관총:12.7mm M85]\n[엔진:AVDS-1790-2C 디젤 750HP][방호:폭발반응장갑]"
+    ]
+  },
+  "LAVAD": {
+    "name": [
+      "🇺🇸LAV-AD",
+      "🇺🇸LAV-AD",
+      "🇺🇸LAV-AD"
+    ],
+    "desc": [
+      "Wheeled AA Vehicle\n[Protection:C Firepower:A Mobility:A]\n[Equipment:Standard]\n[Main Weapon:25mm GAU-12][Missile:FIM-92K ×2][Rocket:Hydra 70]\n[Engine:6V53T diesel 275HP]",
+      "轮式防空车\n[防护:C 火力:A 机动:A]\n[设备:标准]\n[主武器:25mm GAU-12][导弹:FIM-92K ×2][火箭:Hydra 70]\n[发动机:6V53T 柴油机 275HP]",
+      "차륜형 방공차량\n[방호:C 화력:A 기동:A]\n[장비:표준]\n[주무장:25mm GAU-12][미사일:FIM-92K ×2][로켓:Hydra 70]\n[엔진:6V53T 디젤 275HP]"
+    ]
+  },
+  "M163": {
+    "name": [
+      "🇺🇸M163A1",
+      "🇺🇸M163A1",
+      "🇺🇸M163A1"
+    ],
+    "desc": [
+      "SPAAG\n[Protection:D Firepower:B Mobility:C]\n[Equipment:Standard]\n[Main Weapon:20mm M168]\n[Engine:6V53 diesel 210HP]\nRadar Range 1200\nPainter: 263",
+      "自行高炮\n[防护:D 火力:B 机动:C]\n[设备:标准]\n[主武器:20mm M168]\n[发动机:6V53 柴油机 210HP]\n雷达距离1200\n画师：263",
+      "자주대공포\n[방호:D 화력:B 기동:C]\n[장비:표준]\n[주무장:20mm M168]\n[엔진:6V53 디젤 210HP]\n레이더 거리 1200\n원화: 263"
+    ]
+  },
+  "复仇者": {
+    "name": [
+      "🇺🇸AN/TWQ-1 \"Avenger\"",
+      "🇺🇸AN/TWQ-1“复仇者”",
+      "🇺🇸AN/TWQ-1 \"어벤저\""
+    ],
+    "desc": [
+      "SAM Vehicle\n[Protection:D Firepower:A Mobility:A]\n[Equipment:Standard]\n[Missile:FIM-92K ×8]\n[Engine:V-8 diesel 135HP]",
+      "防空导弹车\n[防护:D 火力:A 机动:A]\n[设备:标准]\n[导弹:FIM-92K ×8]\n[发动机:V-8 柴油机 135HP]",
+      "지대공 미사일 차량\n[방호:D 화력:A 기동:A]\n[장비:표준]\n[미사일:FIM-92K ×8]\n[엔진:V-8 디젤 135HP]"
+    ]
+  },
+  "ADATZ": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "ADATS_M2A3": {
+    "name": [
+      "ADATS Air Defense System",
+      "ADATS防空系统",
+      "ADATS 방공 체계"
+    ],
+    "desc": [
+      "Self-Propelled SAM System\n[Protection:C Firepower:S Mobility:B]\n[Equipment:Excellent]\n[Missile:MIM-146 ×8]\n[Engine:VTA-903T diesel 600HP]\nPainter: Fsszrt263",
+      "自行防空导弹系统\n[防护:C 火力:S 机动:B]\n[设备:优秀]\n[导弹:MIM-146 ×8]\n[发动机:VTA-903T 柴油机 600HP]\n画师：Fsszrt263",
+      "자주식 지대공 미사일 체계\n[방호:C 화력:S 기동:B]\n[장비:우수]\n[미사일:MIM-146 ×8]\n[엔진:VTA-903T 디젤 600HP]\n원화: Fsszrt263"
+    ]
+  },
+  "ADATS_STR": {
+    "name": [
+      "ADATS Air Defense System",
+      "ADATS防空系统",
+      "ADATS 방공 체계"
+    ],
+    "desc": [
+      "Wheeled SAM System\n[Protection:C Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Missile:MIM-146 ×8]\n[Engine:Caterpillar C7 diesel 350HP]\nPainter: Fsszrt263",
+      "轮式防空导弹系统\n[防护:C 火力:S 机动:A]\n[设备:优秀]\n[导弹:MIM-146 ×8]\n[发动机:Caterpillar C7 柴油机 350HP]\n画师：Fsszrt263",
+      "차륜형 지대공 미사일 체계\n[방호:C 화력:S 기동:A]\n[장비:우수]\n[미사일:MIM-146 ×8]\n[엔진:Caterpillar C7 디젤 350HP]\n원화: Fsszrt263"
+    ]
+  },
+  "HAWK发射车": {
+    "name": [
+      "HAWK Launcher",
+      "HAWK发射架",
+      "HAWK 발사차량"
+    ],
+    "desc": [
+      "Transport / Deploy toggle\nPainter: ElanceHyper",
+      "运输/部署切换\n画师:ElanceHyper",
+      "수송 / 전개 전환\n원화: ElanceHyper"
+    ]
+  },
+  "HAWK雷达车": {
+    "name": [
+      "HAWK Radar",
+      "HAWK雷达架",
+      "HAWK 레이더"
+    ],
+    "desc": [
+      "Transport / Deploy toggle\nRadar Range 3600\nCan control up to 3 launchers simultaneously\nPainter: ElanceHyper",
+      "运输/部署切换\n雷达距离3600\n最多同时指挥3辆发射车\n画师:ElanceHyper",
+      "수송 / 전개 전환\n레이더 거리 3600\n최대 3 대의 발사차량 동시 통제\n원화: ElanceHyper"
+    ]
+  },
+  "MIM23B": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "AH1Z": {
+    "name": [
+      "🇺🇸AH-1Z \"Viper\"",
+      "🇺🇸AH-1Z“蝰蛇”",
+      "🇺🇸AH-1Z \"바이퍼\""
+    ],
+    "desc": [
+      "Light Attack Helicopter\n-Equipped with Hydra 70 Aircraft Rocket\n-25mmM163A2 Rotary Cannon\n-AGM-114C\"Hellfire\"ATGM",
+      "轻型武装直升机\n-装备火蛇70航空火箭弹\n-25mmM163A2转管机炮\n-AGM-114C\"地狱火\"反坦克导弹",
+      "소형 공격헬기\n-Hydra 70 항공 로켓 장비\n-25mm M163A2 회전식 기관포\n-AGM-114C \"헬파이어\" 대전차 미사일"
+    ]
+  },
+  "AH64D": {
+    "name": [
+      "🇺🇸AH-64D \"Longbow Apache\"",
+      "🇺🇸AH-64D“长弓阿帕奇”",
+      "🇺🇸AH-64D \"롱보우 아파치\""
+    ],
+    "desc": [
+      "Heavy Attack Helicopter\n-Carries 16x AGM-114K“Hellfire”ATGM\n-30mmM230EAutocannon, Poor anti-armor capability\n-Carries large numbers of Flares",
+      "重型武装直升机\n-挂载16枚AGM-114K“地狱火”反坦克导弹\n-30mmM230E机炮，反装甲能力较差\n-携带大量热诱弹",
+      "대형 공격헬기\n-AGM-114K \"헬파이어\" 대전차 미사일 16 발 탑재\n-30mm M230E 기관포, 낮은 대장갑 능력\n-다량의 플레어 탑재"
+    ]
+  },
+  "UH60M": {
+    "name": [
+      "🇺🇸UH-60M \"Black Hawk\"",
+      "🇺🇸UH-60M\"黑鹰\"",
+      "🇺🇸UH-60M \"블랙 호크\""
+    ],
+    "desc": [
+      "Utility Helicopter",
+      "通用直升机",
+      "다목적 헬기"
+    ]
+  },
+  "A10": {
+    "name": [
+      "🇺🇸A-10C",
+      "🇺🇸A-10C",
+      "🇺🇸A-10C"
+    ],
+    "desc": [
+      "-Ground Attack Aircraft\n-No radar\n-90s endurance\n-ECM:10%\n-Painter: Fsszrt263",
+      "-对地支援机\n-无雷达\n-90s滞空时间\n-ECM:10%\n-画师:Fsszrt263",
+      "-지상 공격기\n-레이더 없음\n-체공 시간 90 초\n-ECM:10%\n-원화: Fsszrt263"
+    ]
+  },
+  "AGM65弹药": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "AGM65导引头": {
+    "name": [
+      "AGM65",
+      "AGM65",
+      "AGM65"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "F-15E": {
+    "name": [
+      "🇺🇸F-15E \"Strike Eagle\"",
+      "🇺🇸F-15E“攻击鹰”",
+      "🇺🇸F-15E \"스트라이크 이글\""
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-High-altitude\n-Radar Range 6000\n-200s endurance\n-ECM:15%\n-Painter: zhrqf",
+      "-多用途飞机\n-高空作战\n-雷达距离6000\n-200s滞空时间\n-ECM:15%\n-画师:zhrqf",
+      "-다목적 항공기\n-고고도 작전\n-레이더 거리 6000\n-체공 시간 200 초\n-ECM:15%\n-원화: zhrqf"
+    ]
+  },
+  "F-15EX": {
+    "name": [
+      "🇺🇸F-15EX",
+      "🇺🇸F-15EX",
+      "🇺🇸F-15EX"
+    ],
+    "desc": [
+      "-Heavy Fighter\n-High-altitude\n-Radar Range 6000\n-200s endurance\n-ECM:20%\n-Painter: zhrqf",
+      "-重型战斗机\n-高空作战\n-雷达距离6000\n-200s滞空时间\n-ECM:20%\n-画师:zhrqf",
+      "-중전투기\n-고고도 작전\n-레이더 거리 6000\n-체공 시간 200 초\n-ECM:20%\n-원화: zhrqf"
+    ]
+  },
+  "F-16C": {
+    "name": [
+      "🇺🇸F-16C \"Fighting Falcon\"",
+      "🇺🇸F-16C“战隼”",
+      "🇺🇸F-16C \"파이팅 팰컨\""
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-High-altitude\n-Radar Range 4800\n-150s endurance\n-ECM:20%\n-Painter: CRH",
+      "-多用途飞机\n-高空作战\n-雷达距离4800\n-150s滞空时间\n-ECM:20%\n-画师:CRH",
+      "-다목적 항공기\n-고고도 작전\n-레이더 거리 4800\n-체공 시간 150 초\n-ECM:20%\n-원화: CRH"
+    ]
+  },
+  "F-16C空战测试": {
+    "name": [
+      "🇺🇸F-16C \"Fighting Falcon\"",
+      "🇺🇸F-16C“战隼”",
+      "🇺🇸F-16C \"파이팅 팰컨\""
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-High-altitude\n-Radar Range 4800\n-150s endurance\n-ECM:20%\n-Painter: CRH",
+      "-多用途飞机\n-高空作战\n-雷达距离4800\n-150s滞空时间\n-ECM:20%\n-画师:CRH",
+      "-다목적 항공기\n-고고도 작전\n-레이더 거리 4800\n-체공 시간 150 초\n-ECM:20%\n-원화: CRH"
+    ]
+  },
+  "F-18": {
+    "name": [
+      "🇺🇸F-18 \"Hornet\"",
+      "🇺🇸F-18“大黄蜂”",
+      "🇺🇸F-18 \"호넷\""
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-High-altitude\n-Radar Range 6000\n-120+60s endurance\n-ECM:25%\n-Painter: CRH",
+      "-多用途飞机\n-高空作战\n-雷达距离6000\n-120+60s滞空时间\n-ECM:25%\n-画师:CRH",
+      "-다목적 항공기\n-고고도 작전\n-레이더 거리 6000\n-체공 시간 120+60 초\n-ECM:25%\n-원화: CRH"
+    ]
+  },
+  "RADAR_AIR": {
+    "name": [
+      "Radar",
+      "雷达",
+      "레이더"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "RWR_AIR": {
+    "name": [
+      "RWR",
+      "RWR",
+      "레이더 경보 수신기"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "导弹告警": {
+    "name": [
+      "Missile Warning",
+      "导弹告警",
+      "미사일 경보"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "UKRSSO": {
+    "name": [
+      "Ukrainian SSO Special Forces Operator",
+      "乌克兰SSO特战队员",
+      "우크라이나 SSO 특수부대원"
+    ],
+    "desc": [
+      "Ukrainian SSOSpecial Forces Operator\n-Light armor\n-Can switch between multiple weapons",
+      "乌克兰SSO特战队员\n-轻甲\n-可切换多种武器",
+      "우크라이나 SSO 특수부대원\n-경장갑\n-여러 무기로 전환 가능"
+    ]
+  },
+  "UKRLAND": {
+    "name": [
+      "Ukrainian Army Soldier",
+      "乌克兰陆军士兵",
+      "우크라이나 육군 병사"
+    ],
+    "desc": [
+      "Ukrainian Army Soldier\n-Light armor\n-Can switch between multiple weapons",
+      "乌克兰陆军士兵\n-轻甲\n-可切换多种武器",
+      "우크라이나 육군 병사\n-경장갑\n-여러 무기로 전환 가능"
+    ]
+  },
+  "UKRCD": {
+    "name": [
+      "Ukrainian Territorial Defense",
+      "乌克兰国土防卫队",
+      "우크라이나 국토방위군"
+    ],
+    "desc": [
+      "Ukrainian Territorial Defense Infantry\n-Light armor\n-Can switch between multiple weapons\n-Uses different ammunition against different target types",
+      "乌克兰国土防卫步兵\n-轻甲\n-可切换多种武器\n-使用不同弹药对付不同类型目标",
+      "우크라이나 국토방위군 보병\n-경장갑\n-여러 무기로 전환 가능\n-표적 종류에 따라 다른 탄약 사용"
+    ]
+  },
+  "GERINF": {
+    "name": [
+      "German Infantry",
+      "德国步兵",
+      "독일 보병"
+    ],
+    "desc": [
+      "German Infantry\n-Light armor\n-Can switch between multiple weapons\n-Uses different ammunition against different target types",
+      "德国步兵\n-轻甲\n-可切换多种武器\n-使用不同弹药对付不同类型目标",
+      "독일 보병\n-경장갑\n-여러 무기로 전환 가능\n-표적 종류에 따라 다른 탄약 사용"
+    ]
+  },
+  "FRIF": {
+    "name": [
+      "French Infantry",
+      "法国步兵",
+      "프랑스 보병"
+    ],
+    "desc": [
+      "French Infantry\n-Light armor\n-Can switch between multiple weapons\n-Uses different ammunition against different target types",
+      "法国步兵\n-轻甲\n-可切换多种武器\n-使用不同弹药对付不同类型目标",
+      "프랑스 보병\n-경장갑\n-여러 무기로 전환 가능\n-표적 종류에 따라 다른 탄약 사용"
+    ]
+  },
+  "MANHX": {
+    "name": [
+      "🇪🇺MAN-HX Truck",
+      "🇪🇺MAN-HX卡车",
+      "🇪🇺MAN-HX 트럭"
+    ],
+    "desc": [
+      "\n-EU Heavy Transport Truck",
+      "\n-欧盟重型运输卡车",
+      "\n-유럽연합 대형 수송 트럭"
+    ]
+  },
+  "PUMAVJTF": {
+    "name": [
+      "🇪🇺Puma-VJTF",
+      "🇪🇺美洲狮-VJTF",
+      "🇪🇺푸마-VJTF"
+    ],
+    "desc": [
+      "IFV\n[Protection:A Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:30mm MK30-2/ABM][Secondary:5.56mm MG4][ATGM:Spike-LR ×2]\n[Engine:MTU V10 892 diesel 1100HP]",
+      "步兵战车\n[防护:A 火力:A 机动:B]\n[设备:优秀]\n[主武器:30mm MK30-2/ABM][副武器:5.56mm MG4][反坦克导弹:Spike-LR ×2]\n[发动机:MTU V10 892 柴油机 1100HP]",
+      "보병전투차\n[방호:A 화력:A 기동:B]\n[장비:우수]\n[주무장:30mm MK30-2/ABM][부무장:5.56mm MG4][대전차 미사일:Spike-LR ×2]\n[엔진:MTU V10 892 디젤 1100HP]"
+    ]
+  },
+  "PUMA": {
+    "name": [
+      "🇪🇺Puma",
+      "🇪🇺美洲狮",
+      "🇪🇺푸마"
+    ],
+    "desc": [
+      "IFV\n[Protection:A Firepower:B Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:30mm MK30-2/ABM][Secondary:5.56mm MG4]\n[Engine:MTU V10 892 diesel 1100HP]",
+      "步兵战车\n[防护:A 火力:B 机动:B]\n[设备:优秀]\n[主武器:30mm MK30-2/ABM][副武器:5.56mm MG4]\n[发动机:MTU V10 892 柴油机 1100HP]",
+      "보병전투차\n[방호:A 화력:B 기동:B]\n[장비:우수]\n[주무장:30mm MK30-2/ABM][부무장:5.56mm MG4]\n[엔진:MTU V10 892 디젤 1100HP]"
+    ]
+  },
+  "黄鼠狼1A3": {
+    "name": [
+      "🇪🇺Marder 1A3",
+      "🇪🇺黄鼠狼1A3",
+      "🇪🇺마르더 1A3"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Weapon:20mm MK20 Rh-202][Secondary:7.62mm MG3][ATGM:MILAN]\n[Engine:MTU MB833 Ea-500 diesel 660HP]",
+      "步兵战车\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主武器:20mm MK20 Rh-202][副武器:7.62mm MG3][反坦克导弹:MILAN]\n[发动机:MTU MB833 Ea-500 柴油机 660HP]",
+      "보병전투차\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주무장:20mm MK20 Rh-202][부무장:7.62mm MG3][대전차 미사일:MILAN]\n[엔진:MTU MB833 Ea-500 디젤 660HP]"
+    ]
+  },
+  "箭式": {
+    "name": [
+      "🇪🇺VBM-Freccia",
+      "🇪🇺VBM-箭式",
+      "🇪🇺VBM-프레차"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:C Mobility:A]\n[Equipment:Standard]\n[Main Weapon:25mm KBA25][ATGM:Spike LR ×2]\n[Engine:IVECO V6 diesel 520HP]",
+      "步兵战车\n[防护:C 火力:C 机动:A]\n[设备:标准]\n[主武器:25mm KBA25][反坦克导弹:Spike LR ×2]\n[发动机:IVECO V6 柴油机 520HP]",
+      "보병전투차\n[방호:C 화력:C 기동:A]\n[장비:표준]\n[주무장:25mm KBA25][대전차 미사일:Spike LR ×2]\n[엔진:IVECO V6 디젤 520HP]"
+    ]
+  },
+  "AMX10RC": {
+    "name": [
+      "🇪🇺AMX-10RC",
+      "🇪🇺AMX-10RC",
+      "🇪🇺AMX-10RC"
+    ],
+    "desc": [
+      "AMX-10RC",
+      "AMX-10RC",
+      "AMX-10RC"
+    ]
+  },
+  "EBRC": {
+    "name": [
+      "EBRC Recon Vehicle",
+      "EBRC侦察车",
+      "EBRC 정찰차량"
+    ],
+    "desc": [
+      "Recon Vehicle\n[Protection:C Firepower:A Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:40mm CT40][Secondary:7.62mm NF-1][ATGM:Akeron MP]\n[Engine:Volvo D11 diesel 500HP]",
+      "侦察车\n[防护:C 火力:A 机动:A]\n[设备:优秀]\n[主武器:40mm CT40][副武器:7.62mm NF-1][反坦克导弹:Akeron MP]\n[发动机:Volvo D11 柴油机 500HP]",
+      "정찰차량\n[방호:C 화력:A 기동:A]\n[장비:우수]\n[주무장:40mm CT40][부무장:7.62mm NF-1][대전차 미사일:Akeron MP]\n[엔진:Volvo D11 디젤 500HP]"
+    ]
+  },
+  "VAB": {
+    "name": [
+      "VABAPC",
+      "VAB装甲车",
+      "VAB 병력 수송 장갑차"
+    ],
+    "desc": [
+      "APC\n-Carries 10",
+      "装甲输送车\n-载员10人",
+      "병력 수송 장갑차\n-10 명 수송"
+    ]
+  },
+  "VCAC": {
+    "name": [
+      "VCAC",
+      "VCAC",
+      "VCAC"
+    ],
+    "desc": [
+      "ATGM Vehicle\n[Protection:D Firepower:B Mobility:B]\n[Equipment:Standard]\n[ATGM:HOT ×4]\n[Engine:MIDR 06-20-45 diesel 220HP]\nTexture Artist: RCP",
+      "反坦克导弹车\n[防护:D 火力:B 机动:B]\n[设备:标准]\n[反坦克导弹:HOT ×4]\n[发动机:MIDR 06-20-45 柴油机 220HP]\n贴图作者:RCP",
+      "대전차 미사일 차량\n[방호:D 화력:B 기동:B]\n[장비:표준]\n[대전차 미사일:HOT ×4]\n[엔진:MIDR 06-20-45 디젤 220HP]\n텍스처: RCP"
+    ]
+  },
+  "VBCI": {
+    "name": [
+      "VBCI",
+      "VBCI",
+      "VBCI"
+    ],
+    "desc": [
+      "IFV\n[Protection:C Firepower:C Mobility:B]\n[Equipment:Standard]\n[Main Weapon:25mm M811][Secondary:7.62mm NF1]\n[Engine:Renault diesel 550HP]",
+      "步兵战车\n[防护:C 火力:C 机动:B]\n[设备:标准]\n[主武器:25mm M811][副武器:7.62mm NF1]\n[发动机:Renault 柴油机 550HP]",
+      "보병전투차\n[방호:C 화력:C 기동:B]\n[장비:표준]\n[주무장:25mm M811][부무장:7.62mm NF1]\n[엔진:Renault 디젤 550HP]"
+    ]
+  },
+  "VBL": {
+    "name": [
+      "VBL",
+      "VBL",
+      "VBL"
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "VBL_MG": {
+    "name": [
+      "VBL MG",
+      "VBL-机枪",
+      "VBL MG"
+    ],
+    "desc": [
+      "\n-Light Armored Assault Vehicle\n Excellent mobility",
+      "\n-轻型装甲突击车\n 机动性能优异",
+      "\n-경장갑 돌격차량\n 뛰어난 기동성"
+    ]
+  },
+  "鼬鼠1A2": {
+    "name": [
+      "🇪🇺Wiesel 1A2",
+      "🇪🇺鼬鼠1A2",
+      "🇪🇺비젤 1A2"
+    ],
+    "desc": [
+      "Airborne Fighting Vehicle\n[Protection:D Firepower:C Mobility:A]\n[Equipment:Standard]\n[ATGM:TOW]\n[Engine:Audi 2.0L diesel 86HP]",
+      "空降战车\n[防护:D 火力:C 机动:A]\n[设备:标准]\n[反坦克导弹:TOW]\n[发动机:Audi 2.0L 柴油机 86HP]",
+      "공수 전투차량\n[방호:D 화력:C 기동:A]\n[장비:표준]\n[대전차 미사일:TOW]\n[엔진:Audi 2.0L 디젤 86HP]"
+    ]
+  },
+  "鼬鼠1A4": {
+    "name": [
+      "🇪🇺Wiesel 1A4",
+      "🇪🇺鼬鼠1A4",
+      "🇪🇺비젤 1A4"
+    ],
+    "desc": [
+      "Airborne Fighting Vehicle\n[Protection:D Firepower:C Mobility:A]\n[Equipment:Standard]\n[Main Weapon:20mm MK20]\n[Engine:Audi 2.0L diesel 86HP]",
+      "空降战车\n[防护:D 火力:C 机动:A]\n[设备:标准]\n[主武器:20mm MK20]\n[发动机:Audi 2.0L 柴油机 86HP]",
+      "공수 전투차량\n[방호:D 화력:C 기동:A]\n[장비:표준]\n[주무장:20mm MK20]\n[엔진:Audi 2.0L 디젤 86HP]"
+    ]
+  },
+  "半人马": {
+    "name": [
+      "🇪🇺\"Centauro\" B2",
+      "🇪🇺“半人马座”B2",
+      "🇪🇺\"첸타우로\" B2"
+    ],
+    "desc": [
+      "Wheeled Assault Gun\n[Protection:C Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm OTO Melara 120/L45][Secondary:7.62mm MG42/59 ×2]\n[Engine:IVECO V6 diesel 520HP]",
+      "轮式突击炮\n[防护:C 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm OTO Melara 120/L45][副武器:7.62mm MG42/59 ×2]\n[发动机:IVECO V6 柴油机 520HP]",
+      "차륜형 돌격포\n[방호:C 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm OTO Melara 120/L45][부무장:7.62mm MG42/59 ×2]\n[엔진:IVECO V6 디젤 520HP]"
+    ]
+  },
+  "标枪": {
+    "name": [
+      "🇪🇺VCC-80 \"Javelin\"",
+      "🇪🇺VCC-80“标枪”",
+      "🇪🇺VCC-80 \"재블린\""
+    ],
+    "desc": [
+      "Wheeled Fighting Vehicle\n[Protection:C Firepower:C Mobility:A]\n[Equipment:Standard]\n[Main Weapon:25mm KBA25][ATGM:TOW ×2]\n[Engine:IVECO diesel 520HP]",
+      "轮式战车\n[防护:C 火力:C 机动:A]\n[设备:标准]\n[主武器:25mm KBA25][反坦克导弹:TOW ×2]\n[发动机:IVECO 柴油机 520HP]",
+      "차륜형 전투차량\n[방호:C 화력:C 기동:A]\n[장비:표준]\n[주무장:25mm KBA25][대전차 미사일:TOW ×2]\n[엔진:IVECO 디젤 520HP]"
+    ]
+  },
+  "L1A5": {
+    "name": [
+      "🇪🇺Leopard 1A5",
+      "🇪🇺豹1A5",
+      "🇪🇺레오파르트 1A5"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Weapon:105mm L7A3][Secondary:7.62mm MG3 ×2]\n[Engine:MTC MB838 diesel 830HP]",
+      "主战坦克\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主武器:105mm L7A3][副武器:7.62mm MG3 ×2]\n[发动机:MTC MB838 柴油机 830HP]",
+      "주력전차\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주무장:105mm L7A3][부무장:7.62mm MG3 ×2]\n[엔진:MTC MB838 디젤 830HP]"
+    ]
+  },
+  "L2A4": {
+    "name": [
+      "🇪🇺Leopard 2A4",
+      "🇪🇺豹2A4",
+      "🇪🇺레오파르트 2A4"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm Rh120/L44][Secondary:7.62mm MG3 ×2]\n[Engine:MTU MB873 diesel 1500HP]",
+      "主战坦克\n[防护:B 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm Rh120/L44][副武器:7.62mm MG3 ×2]\n[发动机:MTU MB873 柴油机 1500HP]",
+      "주력전차\n[방호:B 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm Rh120/L44][부무장:7.62mm MG3 ×2]\n[엔진:MTU MB873 디젤 1500HP]"
+    ]
+  },
+  "L2A5": {
+    "name": [
+      "🇪🇺Leopard 2A5",
+      "🇪🇺豹2A5",
+      "🇪🇺레오파르트 2A5"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm Rh120/L44][Secondary:7.62mm MG3 ×2]\n[Engine:MTU MB873 diesel 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm Rh120/L44][副武器:7.62mm MG3 ×2]\n[发动机:MTU MB873 柴油机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm Rh120/L44][부무장:7.62mm MG3 ×2]\n[엔진:MTU MB873 디젤 1500HP]"
+    ]
+  },
+  "L2A6": {
+    "name": [
+      "🇪🇺Leopard 2A6",
+      "🇪🇺豹2A6",
+      "🇪🇺레오파르트 2A6"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm Rh120/L55][Secondary:7.62mm MG3 ×2]\n[Engine:MTU MB873 diesel 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm Rh120/L55][副武器:7.62mm MG3 ×2]\n[发动机:MTU MB873 柴油机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm Rh120/L55][부무장:7.62mm MG3 ×2]\n[엔진:MTU MB873 디젤 1500HP]"
+    ]
+  },
+  "L2A7": {
+    "name": [
+      "🇪🇺Leopard 2A7V",
+      "🇪🇺豹2A7V",
+      "🇪🇺레오파르트 2A7V"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Elite]\n[Main Weapon:120mm Rh120/L55][Secondary:7.62mm MG3 ×2]\n[Engine:MTU MB873 diesel 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:翘楚]\n[主武器:120mm Rh120/L55][副武器:7.62mm MG3 ×2]\n[发动机:MTU MB873 柴油机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:최상급]\n[주무장:120mm Rh120/L55][부무장:7.62mm MG3 ×2]\n[엔진:MTU MB873 디젤 1500HP]"
+    ]
+  },
+  "L2A8": {
+    "name": [
+      "🇪🇺Leopard 2A8",
+      "🇪🇺豹2A8",
+      "🇪🇺레오파르트 2A8"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:S Firepower:S Mobility:A]\n[Equipment:Elite]\n[Main Weapon:120mm Rh120/L55][Secondary:7.62mm MG3 ×2]\n[Engine:MTU MB873 diesel 1500HP][Protection:Trophy APS]",
+      "主战坦克\n[防护:S 火力:S 机动:A]\n[设备:翘楚]\n[主武器:120mm Rh120/L55][副武器:7.62mm MG3 ×2]\n[发动机:MTU MB873 柴油机 1500HP][防护:战利品 APS]",
+      "주력전차\n[방호:S 화력:S 기동:A]\n[장비:최상급]\n[주무장:120mm Rh120/L55][부무장:7.62mm MG3 ×2]\n[엔진:MTU MB873 디젤 1500HP][방호:트로피 능동방호체계]"
+    ]
+  },
+  "L2PL": {
+    "name": [
+      "Leopard 2PL",
+      "豹2PL",
+      "레오파르트 2PL"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm Rh120/L44][Secondary:7.62mm MG3 ×2]\n[Engine:MTU MB873 diesel 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm Rh120/L44][副武器:7.62mm MG3 ×2]\n[发动机:MTU MB873 柴油机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm Rh120/L44][부무장:7.62mm MG3 ×2]\n[엔진:MTU MB873 디젤 1500HP]"
+    ]
+  },
+  "C1公羊": {
+    "name": [
+      "🇪🇺C1 \"Ariete\"",
+      "🇪🇺C1“公羊”",
+      "🇪🇺C1 \"아리에테\""
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:A Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm OTO Melara 120/L44][Secondary:7.62mm MG42/59 ×2]\n[Engine:MTCA 12V diesel 1300HP]",
+      "主战坦克\n[防护:C 火力:A 机动:A]\n[设备:优秀]\n[主武器:120mm OTO Melara 120/L44][副武器:7.62mm MG42/59 ×2]\n[发动机:MTCA 12V 柴油机 1300HP]",
+      "주력전차\n[방호:C 화력:A 기동:A]\n[장비:우수]\n[주무장:120mm OTO Melara 120/L44][부무장:7.62mm MG42/59 ×2]\n[엔진:MTCA 12V 디젤 1300HP]"
+    ]
+  },
+  "AMX30B2": {
+    "name": [
+      "🇪🇺AMX-30B2",
+      "🇪🇺AMX-30B2",
+      "🇪🇺AMX-30B2"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:C Firepower:B Mobility:A]\n[Equipment:Standard]\n[Main Weapon:105mm F1][Secondary:20mm M963 7.62mm NF1]\n[Engine:MACK E9-750 diesel 720HP]",
+      "主战坦克\n[防护:C 火力:B 机动:A]\n[设备:标准]\n[主武器:105mm F1][副武器:20mm M963 7.62mm NF1]\n[发动机:MACK E9-750 柴油机 720HP]",
+      "주력전차\n[방호:C 화력:B 기동:A]\n[장비:표준]\n[주무장:105mm F1][부무장:20mm M963 7.62mm NF1]\n[엔진:MACK E9-750 디젤 720HP]"
+    ]
+  },
+  "AMX30B2布雷努斯": {
+    "name": [
+      "🇪🇺AMX-30B2 \"Brenus\"",
+      "🇪🇺AMX-30B2“布雷努斯”",
+      "🇪🇺AMX-30B2 \"브레누스\""
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:B Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:105mm F1][Secondary:20mm M963 7.62mm NF1]\n[Engine:MACK E9-750 diesel 720HP][Protection:G2 ERA]",
+      "主战坦克\n[防护:B 火力:B 机动:A]\n[设备:优秀]\n[主武器:105mm F1][副武器:20mm M963 7.62mm NF1]\n[发动机:MACK E9-750 柴油机 720HP][防护:G2 ERA]",
+      "주력전차\n[방호:B 화력:B 기동:A]\n[장비:우수]\n[주무장:105mm F1][부무장:20mm M963 7.62mm NF1]\n[엔진:MACK E9-750 디젤 720HP][방호:G2 폭발반응장갑]"
+    ]
+  },
+  "勒克莱尔AZUR": {
+    "name": [
+      "🇪🇺AMX56 AZUR",
+      "🇪🇺AMX56 AZUR",
+      "🇪🇺AMX56 AZUR"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm CN120-26/52][Secondary:12.7mm CRC F1 7.62mm F1N]\n[Engine:V8X-1500 diesel 1500HP][Protection:NERA ERA]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm CN120-26/52][副武器:12.7mm CRC F1 7.62mm F1N]\n[发动机:V8X-1500 柴油机 1500HP][防护:NERA ERA]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm CN120-26/52][부무장:12.7mm CRC F1 7.62mm F1N]\n[엔진:V8X-1500 디젤 1500HP][방호:N 폭발반응장갑 폭발반응장갑]"
+    ]
+  },
+  "勒克莱尔S1": {
+    "name": [
+      "🇪🇺AMX56 S1",
+      "🇪🇺AMX56 S1",
+      "🇪🇺AMX56 S1"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm CN120-26/52][Secondary:12.7mm CRC F1]\n[Engine:V8X-1500 diesel 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm CN120-26/52][副武器:12.7mm CRC F1]\n[发动机:V8X-1500 柴油机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm CN120-26/52][부무장:12.7mm CRC F1]\n[엔진:V8X-1500 디젤 1500HP]"
+    ]
+  },
+  "勒克莱尔S2": {
+    "name": [
+      "🇪🇺AMX56 S2",
+      "🇪🇺AMX56 S2",
+      "🇪🇺AMX56 S2"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm CN120-26/52][Secondary:12.7mm CRC F1]\n[Engine:V8X-1500 diesel 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm CN120-26/52][副武器:12.7mm CRC F1]\n[发动机:V8X-1500 柴油机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm CN120-26/52][부무장:12.7mm CRC F1]\n[엔진:V8X-1500 디젤 1500HP]"
+    ]
+  },
+  "勒克莱尔SXXI": {
+    "name": [
+      "🇪🇺AMX56 SXXI",
+      "🇪🇺AMX56 SXXI",
+      "🇪🇺AMX56 SXXI"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:S Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:120mm CN120-26/52][Secondary:12.7mm CRC F1 7.62mm FN1]\n[Engine:V8X-1500 diesel 1500HP]",
+      "主战坦克\n[防护:A 火力:S 机动:A]\n[设备:优秀]\n[主武器:120mm CN120-26/52][副武器:12.7mm CRC F1 7.62mm FN1]\n[发动机:V8X-1500 柴油机 1500HP]",
+      "주력전차\n[방호:A 화력:S 기동:A]\n[장비:우수]\n[주무장:120mm CN120-26/52][부무장:12.7mm CRC F1 7.62mm FN1]\n[엔진:V8X-1500 디젤 1500HP]"
+    ]
+  },
+  "PT91": {
+    "name": [
+      "PT-91",
+      "PT-91",
+      "PT-91"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Excellent]\n[Main Weapon:125mm 2A46M][Secondary:7.62mm PKT][MG:12.7mm NSVT]\n[Engine:PZL-Wole S-12U diesel 850HP][Protection:Erawa-1/2 ERA]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:B 火力:A 机动:B]\n[设备:优秀]\n[主武器:125mm 2A46M][副武器:7.62mm PKT][机枪:12.7mm NSVT]\n[发动机:PZL-Wole S-12U 柴油机 850HP][防护:Erawa-1/2 ERA]\n-贴图作者:Fsszrt263",
+      "주력전차\n[방호:B 화력:A 기동:B]\n[장비:우수]\n[주무장:125mm 2A46M][부무장:7.62mm PKT][기관총:12.7mm NSVT]\n[엔진:PZL-Wole S-12U 디젤 850HP][방호:Erawa-1/2 폭발반응장갑]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "T64BV": {
+    "name": [
+      "T-64BV",
+      "T-64BV",
+      "T-64BV"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:B Firepower:A Mobility:B]\n[Equipment:Standard]\n[Main Weapon:125mm 2A46M-1][Secondary:7.62mm PKT][MG:12.7mm NSVT]\n[Engine:5DTF diesel 700HP][Protection:K1 ERA]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:B 火力:A 机动:B]\n[设备:标准]\n[主武器:125mm 2A46M-1][副武器:7.62mm PKT][机枪:12.7mm NSVT]\n[发动机:5DTF 柴油机 700HP][防护:K1 ERA]\n-贴图作者:Fsszrt263",
+      "주력전차\n[방호:B 화력:A 기동:B]\n[장비:표준]\n[주무장:125mm 2A46M-1][부무장:7.62mm PKT][기관총:12.7mm NSVT]\n[엔진:5DTF 디젤 700HP][방호:K1 폭발반응장갑]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "T84": {
+    "name": [
+      "T-84 Oplot-M",
+      "T-84 Oplot-M",
+      "T-84 오플로트-M"
+    ],
+    "desc": [
+      "Main Battle Tank\n[Protection:A Firepower:A Mobility:A]\n[Equipment:Excellent]\n[Main Weapon:125mm KBA-3][Secondary:7.62mm KT-7.62][MG:12.7mm KT-12.7]\n[Engine:6TD-2 diesel 1200HP][Protection:Blade ERA Shtora-1 APS]\n-Texture Artist: Fsszrt263",
+      "主战坦克\n[防护:A 火力:A 机动:A]\n[设备:优秀]\n[主武器:125mm KBA-3][副武器:7.62mm KT-7.62][机枪:12.7mm KT-12.7]\n[发动机:6TD-2 柴油机 1200HP][防护:利刃 ERA 窗帘-1 APS]\n-贴图作者:Fsszrt263",
+      "주력전차\n[방호:A 화력:A 기동:A]\n[장비:우수]\n[주무장:125mm KBA-3][부무장:7.62mm KT-7.62][기관총:12.7mm KT-12.7]\n[엔진:6TD-2 디젤 1200HP][방호:블레이드 폭발반응장갑 슈토라-1 능동방호체계]\n-텍스처: Fsszrt263"
+    ]
+  },
+  "猎豹": {
+    "name": [
+      "🇪🇺Gepard 1A2",
+      "🇪🇺猎豹1A2",
+      "🇪🇺게파르트 1A2"
+    ],
+    "desc": [
+      "SPAAG\n[Protection:C Firepower:A Mobility:B]\n[Equipment:Standard]\n[Main Weapon:KDA35 ×2]\n[Engine:MTU MB838 diesel 820HP]\nRadar Range:1800\nPainter: 263",
+      "自行高炮\n[防护:C 火力:A 机动:B]\n[设备:标准]\n[主武器:KDA35 ×2]\n[发动机:MTU MB838 柴油机 820HP]\n雷达距离:1800\n画师:263",
+      "자주대공포\n[방호:C 화력:A 기동:B]\n[장비:표준]\n[주무장:KDA35 ×2]\n[엔진:MTU MB838 디젤 820HP]\n레이더 거리:1800\n원화: 263"
+    ]
+  },
+  "VT1": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "罗兰": {
+    "name": [
+      "🇪🇺MAN/Roland",
+      "🇪🇺MAN/罗兰",
+      "🇪🇺MAN/롤란트"
+    ],
+    "desc": [
+      "AA Vehicle\n[Protection:C Firepower:A Mobility:A]\n[Equipment:Standard]\n[Missile:VT-1 ×2]\n[Engine:MAN]\nRadar Range 2400\nPainter: Fsszrt263",
+      "防空车\n[防护:C 火力:A 机动:A]\n[设备:标准]\n[导弹:VT-1 ×2]\n[发动机:MAN]\n雷达距离2400\n画师：Fsszrt263",
+      "방공차량\n[방호:C 화력:A 기동:A]\n[장비:표준]\n[미사일:VT-1 ×2]\n[엔진:MAN]\n레이더 거리 2400\n원화: Fsszrt263"
+    ]
+  },
+  "豹猫": {
+    "name": [
+      "🇪🇺Ozelot",
+      "🇪🇺豹猫",
+      "🇪🇺오젤롯"
+    ],
+    "desc": [
+      "AA Vehicle\n[Protection:D Firepower:A Mobility:B]\n[Equipment:Standard]\n[Missile:FIM92 ×2]\n[Engine:Volkswage 1.9L diesel 109HP]",
+      "防空车\n[防护:D 火力:A 机动:B]\n[设备:标准]\n[导弹:FIM92 ×2]\n[发动机:Volkswage 1.9L 柴油机 109HP]",
+      "방공차량\n[방호:D 화력:A 기동:B]\n[장비:표준]\n[미사일:FIM92 ×2]\n[엔진:Volkswage 1.9L 디젤 109HP]"
+    ]
+  },
+  "OTO76": {
+    "name": [
+      "🇪🇺Oto76",
+      "🇪🇺奥托76",
+      "🇪🇺Oto76"
+    ],
+    "desc": [
+      "SPAAG\n[Protection:C Firepower:B Mobility:B]\n[Equipment:Standard]\n[Main Weapon:76mm OTO Mleara 76]\n[Engine:MTU MB 838 diesel 820HP]\nRadar Range:1800",
+      "自行高炮\n[防护:C 火力:B 机动:B]\n[设备:标准]\n[主武器:76mm OTO Mleara 76]\n[发动机:MTU MB 838 柴油机 820HP]\n雷达距离:1800",
+      "자주대공포\n[방호:C 화력:B 기동:B]\n[장비:표준]\n[주무장:76mm OTO Mleara 76]\n[엔진:MTU MB 838 디젤 820HP]\n레이더 거리:1800"
+    ]
+  },
+  "IRIS-T SLM": {
+    "name": [
+      "🇪🇺IRIS-T SLMAD Launcher",
+      "🇪🇺IRIS-T SLM防空系统发射车",
+      "🇪🇺IRIS-T SLMAD 발사차량"
+    ],
+    "desc": [
+      "AA Launcher\n[Protection:D Firepower:A Mobility:C]\n[Equipment:Excellent]\n[Missile:IRIS-T SL ×4]\nPainter: Fsszrt263",
+      "防空发射车\n[防护:D 火力:A 机动:C]\n[设备:优秀]\n[导弹:IRIS-T SL ×4]\n画师:Fsszrt263",
+      "방공 발사차량\n[방호:D 화력:A 기동:C]\n[장비:우수]\n[미사일:IRIS-T SL ×4]\n원화: Fsszrt263"
+    ]
+  },
+  "IRIS-T SLM_RADAR": {
+    "name": [
+      "🇪🇺IRIS-T SLMAD Radar",
+      "🇪🇺IRIS-T SLM防空系统雷达车",
+      "🇪🇺IRIS-T SLMAD 레이더"
+    ],
+    "desc": [
+      "AA Radar Vehicle\n[Protection:D Firepower:- Mobility:C]\n[Equipment:Excellent]\nRadar Range 3000\nControls up to 5 launchers at once\nPainter: Fsszrt263",
+      "防空雷达车\n[防护:D 火力:- 机动:C]\n[设备:优秀]\n雷达距离3000\n最多同时指挥五辆发射车\n画师:Fsszrt263",
+      "방공 레이더 차량\n[방호:D 화력:- 기동:C]\n[장비:우수]\n레이더 거리 3000\n최대 5 대의 발사차량 동시 통제\n원화: Fsszrt263"
+    ]
+  },
+  "西北风": {
+    "name": [
+      "🇪🇺VAB/SANTAL",
+      "🇪🇺VAB/SANTAL",
+      "🇪🇺VAB/SANTAL"
+    ],
+    "desc": [
+      "AA Vehicle\n[Protection:D Firepower:A Mobility:B]\n[Equipment:Standard]\n[Missile:SATCP ×6]\n[Engine:MIDR 06-20-45 diesel 220HP]\nRadar Range 1200\nPainter: VVVVV",
+      "防空车\n[防护:D 火力:A 机动:B]\n[设备:标准]\n[导弹:SATCP ×6]\n[发动机:MIDR 06-20-45 柴油机 220HP]\n雷达距离1200\n画师：VVVVV",
+      "방공차량\n[방호:D 화력:A 기동:B]\n[장비:표준]\n[미사일:SATCP ×6]\n[엔진:MIDR 06-20-45 디젤 220HP]\n레이더 거리 1200\n원화: VVVVV"
+    ]
+  },
+  "EC556HAD": {
+    "name": [
+      "EC556 Tigr HAD Block2",
+      "EC556 虎 HAD Block2",
+      "EC556 티그르 HAD 블록2"
+    ],
+    "desc": [
+      "Light Utility Helicopter",
+      "轻型通用直升机",
+      "소형 다목적 헬기"
+    ]
+  },
+  "AGM88反辐射弹药": {
+    "name": [
+      "Placeholder Name",
+      "占位名称",
+      "임시 이름"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "AGM88导引头": {
+    "name": [
+      "Tornado",
+      "狂风",
+      "토네이도"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "JAS39E": {
+    "name": [
+      "JAS39E",
+      "JAS39E",
+      "JAS39E"
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-High-altitude\n-Radar Range 4800\n-150s endurance\n-ECM:20%\n-Painter: VVVVV",
+      "-多用途飞机\n-高空作战\n-雷达距离4800\n-150s滞空时间\n-ECM:20%\n-画师:VVVVV",
+      "-다목적 항공기\n-고고도 작전\n-레이더 거리 4800\n-체공 시간 150 초\n-ECM:20%\n-원화: VVVVV"
+    ]
+  },
+  "台风": {
+    "name": [
+      "🇪🇺Typhoon",
+      "🇪🇺台风",
+      "🇪🇺타이푼"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 6000\n-120s endurance\n-ECM:20%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离6000\n-120s滞空时间\n-ECM:20%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 6000\n-체공 시간 120 초\n-ECM:20%\n-원화: zhrqf"
+    ]
+  },
+  "狂风": {
+    "name": [
+      "🇪🇺Tornado",
+      "🇪🇺狂风",
+      "🇪🇺토네이도"
+    ],
+    "desc": [
+      "-Ground Attack Aircraft\n-Low-altitude\n-Radar Range 2400\n-180s endurance\n-ECM:10%\n-Painter: VVVVV",
+      "-对地支援机\n-低空作战\n-雷达距离2400\n-180s滞空时间\n-ECM:10%\n-画师:VVVVV",
+      "-지상 공격기\n-저고도 작전\n-레이더 거리 2400\n-체공 시간 180 초\n-ECM:10%\n-원화: VVVVV"
+    ]
+  },
+  "阵风": {
+    "name": [
+      "🇪🇺Rafale",
+      "🇪🇺阵风",
+      "🇪🇺라팔"
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-Low-altitude\n-Radar Range 2400\n-180s endurance\n-ECM:20%\n-Painter: zhrqf",
+      "-多用途飞机\n-低空作战\n-雷达距离2400\n-180s滞空时间\n-ECM:20%\n-画师:zhrqf",
+      "-다목적 항공기\n-저고도 작전\n-레이더 거리 2400\n-체공 시간 180 초\n-ECM:20%\n-원화: zhrqf"
+    ]
+  },
+  "人民军_68突": {
+    "name": [
+      "KPA Rifleman",
+      "人民军步枪手",
+      "조선인민군 소총수"
+    ],
+    "desc": [
+      "KPA Regular Infantry\n-Medium armor\n-Equipped with Type 68 Assault Rifle",
+      "人民军常规步兵\n-中甲\n-装备68突击步枪",
+      "조선인민군 정규 보병\n-중간 수준의 장갑\n-68식 돌격소총 장비"
+    ]
+  },
+  "人民军_68突_枪榴弹": {
+    "name": [
+      "KPA Rifleman",
+      "人民军步枪手",
+      "조선인민군 소총수"
+    ],
+    "desc": [
+      "KPA Regular Infantry\n-Medium armor\n-Equipped with Type 68 Assault Rifle(Grenade Launcher)",
+      "人民军常规步兵\n-中甲\n-装备68突击步枪(枪榴弹)",
+      "조선인민군 정규 보병\n-중간 수준의 장갑\n-68식 돌격소총(유탄발사기) 장비"
+    ]
+  },
+  "人民军_73通机": {
+    "name": [
+      "KPA Machine Gunner",
+      "人民军机枪手",
+      "조선인민군 기관총 사수"
+    ],
+    "desc": [
+      "KPA Regular Infantry\n-Light armor\n-Equipped with Type 73 GPMG",
+      "人民军常规步兵\n-轻甲\n-装备73式通用机枪",
+      "조선인민군 정규 보병\n-경장갑\n-73식 다목적기관총 장비"
+    ]
+  },
+  "人民军_78狙": {
+    "name": [
+      "KPA Sniper",
+      "人民军狙击手",
+      "조선인민군 저격수"
+    ],
+    "desc": [
+      "KPA Regular Infantry\n-Medium armor\n-Equipped with Type 78 Sniper Rifle",
+      "人民军常规步兵\n-中甲\n-装备78式狙击枪",
+      "조선인민군 정규 보병\n-중간 수준의 장갑\n-78식 저격소총 장비"
+    ]
+  },
+  "人民军_88突": {
+    "name": [
+      "KPA Rifleman",
+      "人民军步枪手",
+      "조선인민군 소총수"
+    ],
+    "desc": [
+      "KPA Regular Infantry\n-Medium armor\n-Equipped with Type 88 Assault Rifle",
+      "人民军常规步兵\n-中甲\n-装备88突击步枪",
+      "조선인민군 정규 보병\n-중간 수준의 장갑\n-88식 돌격소총 장비"
+    ]
+  },
+  "人民军_88突_枪榴弹": {
+    "name": [
+      "KPA Rifleman",
+      "人民军步枪手",
+      "조선인민군 소총수"
+    ],
+    "desc": [
+      "KPA Regular Infantry\n-Medium armor\n-Equipped with Type 88 Assault Rifle(Grenade Launcher)",
+      "人民军常规步兵\n-中甲\n-装备88突击步枪(枪榴弹)",
+      "조선인민군 정규 보병\n-중간 수준의 장갑\n-88식 돌격소총(유탄발사기) 장비"
+    ]
+  },
+  "人民军反坦克手": {
+    "name": [
+      "KPA AT Gunner",
+      "人民军反坦克手",
+      "조선인민군 대전차 사수"
+    ],
+    "desc": [
+      "KPA Regular Infantry\n-Unarmored\n-Equipped with various anti-tank weapons",
+      "人民军常规步兵\n-无甲\n-装备不同反坦克武器",
+      "조선인민군 정규 보병\n-비장갑\n-다양한 대전차 무기 장비"
+    ]
+  },
+  "人民军防空手": {
+    "name": [
+      "KPA MANPADS Gunner",
+      "人民军防空手",
+      "조선인민군 휴대용 대공 미사일 사수"
+    ],
+    "desc": [
+      "KPA Regular Infantry\n-Medium armor\n-Equipped with Arrow-1MANPADS",
+      "人民军常规步兵\n-中甲\n-装备箭-1单兵防空导弹",
+      "조선인민군 정규 보병\n-중간 수준의 장갑\n-화살-1 휴대용 대공 미사일 장비"
+    ]
+  },
+  "人民军特战_M16": {
+    "name": [
+      "KPA Special Forces Rifleman",
+      "人民军特战步枪手",
+      "조선인민군 특수부대 소총수"
+    ],
+    "desc": [
+      "KPA Special Operations Infantry\n-Medium armor\n-Equipped with M16Assault Rifle",
+      "人民军特战步兵\n-中甲\n-装备M16突击步枪",
+      "조선인민군 특수작전 보병\n-중간 수준의 장갑\n-M16 돌격소총 장비"
+    ]
+  },
+  "人民军特战_M60": {
+    "name": [
+      "KPA Special Forces Machine Gunner",
+      "人民军特战机枪手",
+      "조선인민군 특수부대 기관총 사수"
+    ],
+    "desc": [
+      "KPA Special Operations Infantry\n-Light armor\n-Equipped with M60 GPMG",
+      "人民军特战步兵\n-轻甲\n-装备M60通用机枪",
+      "조선인민군 특수작전 보병\n-경장갑\n-M60 다목적기관총 장비"
+    ]
+  },
+  "人民军特战_R700": {
+    "name": [
+      "KPA Special Forces Sniper",
+      "人民军特战狙击手",
+      "조선인민군 특수부대 저격수"
+    ],
+    "desc": [
+      "KPA Special Operations Infantry\n-Medium armor\n-Equipped with R700 Sniper Rifle",
+      "人民军特战步兵\n-中甲\n-装备R700式狙击枪",
+      "조선인민군 특수작전 보병\n-중간 수준의 장갑\n-R700 저격소총 장비"
+    ]
+  },
+  "人民军特战反坦克手": {
+    "name": [
+      "KPA Special Forces Anti-Tank",
+      "人民军特战反坦克",
+      "조선인민군 특수부대 대전차병"
+    ],
+    "desc": [
+      "KPA Special Operations Infantry\n-Unarmored\n-Equipped with various anti-tank weapons",
+      "人民军特战步兵\n-无甲\n-装备不同反坦克武器",
+      "조선인민군 특수작전 보병\n-비장갑\n-다양한 대전차 무기 장비"
+    ]
+  },
+  "人民军特战防空手": {
+    "name": [
+      "KPA Special Forces MANPADS Gunner",
+      "人民军特战防空手",
+      "조선인민군 특수부대 휴대용 대공 미사일 사수"
+    ],
+    "desc": [
+      "KPA Special Operations Infantry\n-Medium armor\n-Equipped with Arrow-1MANPADS",
+      "人民军特战步兵\n-中甲\n-装备箭-1单兵防空导弹",
+      "조선인민군 특수작전 보병\n-중간 수준의 장갑\n-화살-1 휴대용 대공 미사일 장비"
+    ]
+  },
+  "人民军轻步兵_88班": {
+    "name": [
+      "KPA Light Infantry Machine Gunner",
+      "人民军轻步兵机枪手",
+      "조선인민군 경보병 기관총 사수"
+    ],
+    "desc": [
+      "KPA Light Infantry\n-Light armor\n-Equipped with Type 88 LMG",
+      "人民军轻步兵\n-轻甲\n-装备88班通用机枪",
+      "조선인민군 경보병\n-경장갑\n-88식 경기관총 장비"
+    ]
+  },
+  "人民军轻步兵_88突": {
+    "name": [
+      "KPA Light Infantry Rifleman",
+      "人民军轻步兵步枪手",
+      "조선인민군 경보병 소총수"
+    ],
+    "desc": [
+      "KPA Light Infantry\n-Medium armor\n-Equipped with Type 88 Assault Rifle",
+      "人民军轻步兵\n-中甲\n-装备88突击步枪",
+      "조선인민군 경보병\n-중간 수준의 장갑\n-88식 돌격소총 장비"
+    ]
+  },
+  "人民军轻步兵_88突_枪榴弹": {
+    "name": [
+      "KPA Light Infantry Rifleman",
+      "人民军轻步兵步枪手",
+      "조선인민군 경보병 소총수"
+    ],
+    "desc": [
+      "KPA Light Infantry\n-Medium armor\n-Equipped with Type 88 Assault Rifle(Grenade Launcher)",
+      "人民军轻步兵\n-中甲\n-装备88突击步枪(枪榴弹)",
+      "조선인민군 경보병\n-중간 수준의 장갑\n-88식 돌격소총(유탄발사기) 장비"
+    ]
+  },
+  "人民军轻步兵_SVD": {
+    "name": [
+      "KPA Light Infantry Sniper",
+      "人民军轻步兵狙击手",
+      "조선인민군 경보병 저격수"
+    ],
+    "desc": [
+      "KPA Light Infantry\n-Medium armor\n-Equipped with SVDSniper Rifle",
+      "人民军轻步兵\n-中甲\n-装备SVD狙击枪",
+      "조선인민군 경보병\n-중간 수준의 장갑\n-SVD 저격소총 장비"
+    ]
+  },
+  "人民军轻步兵反坦克手": {
+    "name": [
+      "KPA Light Infantry AT Gunner",
+      "人民军轻步兵反坦克手",
+      "조선인민군 경보병 대전차 사수"
+    ],
+    "desc": [
+      "KPA Light Infantry\n-Unarmored\n-Equipped with various anti-tank weapons",
+      "人民军轻步兵\n-无甲\n-装备不同反坦克武器",
+      "조선인민군 경보병\n-비장갑\n-다양한 대전차 무기 장비"
+    ]
+  },
+  "人民军轻步兵防空手": {
+    "name": [
+      "KPA Light Infantry MANPADS Gunner",
+      "人民军轻步兵防空手",
+      "조선인민군 경보병 휴대용 대공 미사일 사수"
+    ],
+    "desc": [
+      "KPA Light Infantry\n-Medium armor\n-Equipped with Arrow-1MANPADS",
+      "人民军轻步兵\n-中甲\n-装备箭-1单兵防空导弹",
+      "조선인민군 경보병\n-중간 수준의 장갑\n-화살-1 휴대용 대공 미사일 장비"
+    ]
+  },
+  "工农赤卫军_49冲": {
+    "name": [
+      "Worker-Peasant Red Guards SMG Gunner",
+      "工农赤卫军冲锋枪手",
+      "노농적위군 기관단총 사수"
+    ],
+    "desc": [
+      "Reserve unit\n-Unarmored\n-Equipped with Type 49 SMG",
+      "预备役部队\n-无甲\n-装备49式冲锋枪",
+      "예비 부대\n-비장갑\n-49식 기관단총 장비"
+    ]
+  },
+  "工农赤卫军_63半": {
+    "name": [
+      "Worker-Peasant Red Guards Rifleman",
+      "工农赤卫军步枪手",
+      "노농적위군 소총수"
+    ],
+    "desc": [
+      "KPA Reserve\n-Unarmored\n-Equipped with Type 63 Semi-Auto Rifle",
+      "人民军预备役\n-无甲\n-装备63式半自动步枪",
+      "조선인민군 예비군\n-비장갑\n-63식 반자동소총 장비"
+    ]
+  },
+  "工农赤卫军_莫辛": {
+    "name": [
+      "Worker-Peasant Red Guards Rifleman",
+      "工农赤卫军步枪手",
+      "노농적위군 소총수"
+    ],
+    "desc": [
+      "KPA Reserve\n-Unarmored\n-Equipped with Mosin-Nagant Rifle",
+      "人民军预备役\n-无甲\n-装备莫辛纳甘步枪",
+      "조선인민군 예비군\n-비장갑\n-모신나강 소총 장비"
+    ]
+  },
+  "BTR60": {
+    "name": [
+      "🇰🇵BTR-60",
+      "🇰🇵BTR-60",
+      "🇰🇵BTR-60"
+    ],
+    "desc": [
+      "APC\n Equipped with twin 14.5mm MG\nCarries 8 infantry",
+      "装甲运兵车\n 装备双联14.5mm机枪\n携带8名步兵",
+      "병력 수송 장갑차\n 14.5mm 쌍열 기관총 장비\n보병 8 명 수송"
+    ]
+  },
+  "PT85": {
+    "name": [
+      "PT-85",
+      "PT-85",
+      "PT-85"
+    ],
+    "desc": [
+      "PT-85Light Tank\n-Armed with 85mm Tank Gun\n-Equipped with Type 56 APFSDS and Type 56 HEAT\n-Texture Artist: VVVVV",
+      "PT-85轻型坦克\n-装载85mm坦克炮\n-装备56式穿甲弹与56式破甲弹\n-贴图画师:VVVVV",
+      "PT-85 경전차\n-85mm 전차포 무장\n-56식 날개안정분리철갑탄 and 56식 대전차고폭탄 장비\n-텍스처: VVVVV"
+    ]
+  },
+  "VTT323": {
+    "name": [
+      "🇰🇵VTT323",
+      "🇰🇵VTT323",
+      "🇰🇵VTT323"
+    ],
+    "desc": [
+      "APC\n Equipped with twin 14.5mm MG",
+      "装甲运兵车\n 装备双联14.5mm机枪",
+      "병력 수송 장갑차\n 14.5mm 쌍열 기관총 장비"
+    ]
+  },
+  "VTT323导弹": {
+    "name": [
+      "🇰🇵VTT323(Missile)",
+      "🇰🇵VTT323(导弹)",
+      "🇰🇵VTT323(미사일)"
+    ],
+    "desc": [
+      "APC\n Equipped with twin 14.5mm MG",
+      "装甲运兵车\n 装备双联14.5mm机枪",
+      "병력 수송 장갑차\n 14.5mm 쌍열 기관총 장비"
+    ]
+  },
+  "T3485": {
+    "name": [
+      "T-34-85 Tank",
+      "T-34-85坦克",
+      "T-34-85 전차"
+    ],
+    "desc": [
+      "Korean People's Army Tank\nType 56 APCBC,Type 56 HE,Type 56 HEAT",
+      "朝鲜人民军坦克\n56式被帽穿甲弹,56式榴弹,56式气缸破甲弹",
+      "조선인민군 전차\n56식 피모철갑탄, 56식 고폭탄, 56식 대전차고폭탄"
+    ]
+  },
+  "先军915": {
+    "name": [
+      "🇰🇵Songun-915",
+      "🇰🇵先军-915",
+      "🇰🇵선군-915"
+    ],
+    "desc": [
+      "Korean People's Army MBT\nEquipped with 3BM42+3BK18M\nCarries 2 SAM launch tubes and 2 Bulsae-2 launchers\n Missiles require stationary fire",
+      "朝鲜人民军主战坦克\n装备3BM42+3BK18M\n配备2具防空导弹发射筒,2具火鸟2导弹发射器\n导弹需要静止开火",
+      "조선인민군 주력전차\n3BM42+3BK18M 장비\n지대공 미사일 발사관 2 개와 불새-2 발사기 2 개 탑재\n 미사일은 정지 상태에서 발사"
+    ]
+  },
+  "天马214": {
+    "name": [
+      "🇰🇵Chonma-214",
+      "🇰🇵天马虎-214",
+      "🇰🇵천마-214"
+    ],
+    "desc": [
+      "Korean People's Army MBT\nEquipped with 3BM28+3BK15M",
+      "朝鲜人民军主战坦克\n装备3BM28+3BK15M",
+      "조선인민군 주력전차\n3BM28+3BK15M 장비"
+    ]
+  },
+  "天马215": {
+    "name": [
+      "🇰🇵Chonma-215",
+      "🇰🇵天马虎-215",
+      "🇰🇵천마-215"
+    ],
+    "desc": [
+      "Korean People's Army MBT\nEquipped with 3BM28+3BK15M",
+      "朝鲜人民军主战坦克\n装备3BM28+3BK15M",
+      "조선인민군 주력전차\n3BM28+3BK15M 장비"
+    ]
+  },
+  "天马216": {
+    "name": [
+      "🇰🇵Chonma-216",
+      "🇰🇵天马虎-216",
+      "🇰🇵천마-216"
+    ],
+    "desc": [
+      "Korean People's Army MBT\nEquipped with 3BM28+3BK15M",
+      "朝鲜人民军主战坦克\n装备3BM28+3BK15M",
+      "조선인민군 주력전차\n3BM28+3BK15M 장비"
+    ]
+  },
+  "MTLB": {
+    "name": [
+      "🇷🇺MTLB",
+      "🇷🇺MTLB",
+      "🇷🇺MTLB"
+    ],
+    "desc": [
+      "MTLBAPC",
+      "MTLB装甲运兵车",
+      "MTLB 병력 수송 장갑차"
+    ]
+  },
+  "箭-1": {
+    "name": [
+      "Arrow-1",
+      "箭-1",
+      "화살-1"
+    ],
+    "desc": [
+      "Equipped with Arrow-1MANPADS\n[Protection:D][Firepower:C][Mobility:B]\n [Equipment:Average][Reaction time:Fast]",
+      "装备箭-1单兵防空导弹\n【防护:D】【火力:C】【机动:B】\n 【设备:一般】【反应时间:快】",
+      "화살-1 휴대용 대공 미사일 장비\n[방호:D][화력:C][기동:B]\n [장비:보통][반응 속도:빠름]"
+    ]
+  },
+  "MI4": {
+    "name": [
+      "MI4",
+      "MI4",
+      "MI4"
+    ],
+    "desc": [
+      "Medium Utility Helicopter",
+      "中型通用直升机",
+      "중형 다목적 헬기"
+    ]
+  },
+  "AN2": {
+    "name": [
+      "AN-2",
+      "AN-2",
+      "AN-2"
+    ],
+    "desc": [
+      "-Transport Aircraft\n-ECM:0%\n-Painter: VVVVV",
+      "-运输机\n-ECM:0%\n-画师:VVVVV",
+      "-수송기\n-ECM:0%\n-원화: VVVVV"
+    ]
+  },
+  "MIG23": {
+    "name": [
+      "MIG23",
+      "MIG23",
+      "MIG23"
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-Low-altitude\n-Radar Range 2400\n-90s endurance\n-ECM:0%\n-Painter: VVVVV",
+      "-多用途飞机\n-低空作战\n-雷达距离2400\n-90s滞空时间\n-ECM:0%\n-画师:VVVVV",
+      "-다목적 항공기\n-저고도 작전\n-레이더 거리 2400\n-체공 시간 90 초\n-ECM:0%\n-원화: VVVVV"
+    ]
+  },
+  "MIG29": {
+    "name": [
+      "MIG29",
+      "MIG29",
+      "MIG29"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 3000\n-90s endurance\n-ECM:10%\n-Painter: VVVVV",
+      "-战斗机\n-高空作战\n-雷达距离3000\n-90s滞空时间\n-ECM:10%\n-画师:VVVVV",
+      "-전투기\n-고고도 작전\n-레이더 거리 3000\n-체공 시간 90 초\n-ECM:10%\n-원화: VVVVV"
+    ]
+  },
+  "韩军反坦克手": {
+    "name": [
+      "ROK AT Gunner",
+      "韩军反坦克手",
+      "한국군 대전차 사수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with Panzerfaust 3",
+      "韩军步兵\n-中甲\n-装备铁拳3",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-판처파우스트 3 장비"
+    ]
+  },
+  "韩军_K2": {
+    "name": [
+      "ROK Rifleman",
+      "韩军步枪手",
+      "한국군 소총수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with K2Assault Rifle",
+      "韩军步兵\n-中甲\n-装备K2突击步枪",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-K2 돌격소총 장비"
+    ]
+  },
+  "韩军_K2_枪榴弹": {
+    "name": [
+      "ROK Rifleman",
+      "韩军步枪手",
+      "한국군 소총수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with K2Assault Rifle(Grenade Launcher)",
+      "韩军步兵\n-中甲\n-装备K2突击步枪(枪榴弹)",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-K2 돌격소총(유탄발사기) 장비"
+    ]
+  },
+  "韩军_K3班机": {
+    "name": [
+      "ROK Machine Gunner",
+      "韩军机枪手",
+      "한국군 기관총 사수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with K3 LMG",
+      "韩军步兵\n-中甲\n-装备K3班机",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-K3 경기관총 장비"
+    ]
+  },
+  "韩军防空手": {
+    "name": [
+      "ROK MANPADS Gunner",
+      "韩军防空手",
+      "한국군 휴대용 대공 미사일 사수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with StingerMANPADS",
+      "韩军步兵\n-中甲\n-装备毒刺单兵防空导弹",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-스팅어휴대용 대공 미사일 장비"
+    ]
+  },
+  "韩军精确射手K2": {
+    "name": [
+      "ROK Marksman",
+      "韩军精确射手",
+      "한국군 지정사수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Unarmored\n-Equipped with K2 Marksman Rifle",
+      "韩军步兵\n-无甲\n-装备精确射手K2步枪",
+      "대한민국 육군 보병\n-비장갑\n-K2 지정사수소총 장비"
+    ]
+  },
+  "战斗工兵K2": {
+    "name": [
+      "ROK Combat Engineer Rifleman",
+      "韩军战斗工兵步枪手",
+      "한국군 전투공병 소총수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Heavy armor\n-Equipped with K2Assault Rifle",
+      "韩军步兵\n-重甲\n-装备K2突击步枪",
+      "대한민국 육군 보병\n-중장갑\n-K2 돌격소총 장비"
+    ]
+  },
+  "战斗工兵M202火箭筒": {
+    "name": [
+      "ROK Combat Engineer Rocket Launcher",
+      "韩军战斗工兵火箭筒",
+      "한국군 전투공병 로켓 사수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with M202 Rocket Launcher",
+      "韩军步兵\n-中甲\n-装备M202火箭筒",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-M202 로켓발사기 장비"
+    ]
+  },
+  "战斗工兵M870霰弹枪": {
+    "name": [
+      "ROK Combat Engineer Shotgunner",
+      "韩军战斗工兵霰弹枪手",
+      "한국군 전투공병 산탄총 사수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Heavy armor\n-Equipped with M870Shotgun",
+      "韩军步兵\n-重甲\n-装备M870霰弹枪",
+      "대한민국 육군 보병\n-중장갑\n-M870 산탄총 장비"
+    ]
+  },
+  "韩特K3": {
+    "name": [
+      "ROK Special Forces Machine Gunner",
+      "韩军特战机枪手",
+      "한국군 특수부대 기관총 사수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with K3 LMG",
+      "韩军步兵\n-中甲\n-装备K3班机",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-K3 경기관총 장비"
+    ]
+  },
+  "韩特M16A3": {
+    "name": [
+      "ROK Special Forces Rifleman",
+      "韩军特战步枪手",
+      "한국군 특수부대 소총수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with M16Assault Rifle",
+      "韩军步兵\n-中甲\n-装备M16突击步枪",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-M16 돌격소총 장비"
+    ]
+  },
+  "韩特M16榴弹": {
+    "name": [
+      "ROK Special Forces Rifleman",
+      "韩军特战步枪手",
+      "한국군 특수부대 소총수"
+    ],
+    "desc": [
+      "ROK Army Infantry\n-Medium armor\n-Equipped with M16Assault Rifle(Grenade Launcher)",
+      "韩军步兵\n-中甲\n-装备M16突击步枪(枪榴弹)",
+      "대한민국 육군 보병\n-중간 수준의 장갑\n-M16 돌격소총(유탄발사기) 장비"
+    ]
+  },
+  "K200": {
+    "name": [
+      "🇰🇷K200",
+      "🇰🇷K200",
+      "🇰🇷K200"
+    ],
+    "desc": [
+      "APC\n-Main weapon: 12.7mm MG\n-Carries 10\nPainter: VVVVV",
+      "装甲输送车\n-主要武器为12.7mm机关枪\n-载员10人\n画师：VVVVV",
+      "병력 수송 장갑차\n-주무장: 12.7mm 기관총\n-10 명 수송\n원화: VVVVV"
+    ]
+  },
+  "K242A1": {
+    "name": [
+      "K242A1",
+      "K242A1",
+      "K242A1"
+    ],
+    "desc": [
+      "Self-Propelled Mortar\n-Armed with 120mmMortar",
+      "自行迫击炮\n-装载120mm迫击炮",
+      "자주박격포\n-120mm 박격포 무장"
+    ]
+  },
+  "K111": {
+    "name": [
+      "K111-Recoilless Rifle",
+      "K111-无后坐力炮",
+      "K111-무반동총"
+    ],
+    "desc": [
+      "ROK Recoilless Rifle Carrier",
+      "韩军无后坐力炮运载车",
+      "대한민국 무반동총 탑재차량"
+    ]
+  },
+  "K1": {
+    "name": [
+      "🇰🇷K1",
+      "🇰🇷K1",
+      "🇰🇷K1"
+    ],
+    "desc": [
+      "ROK Army MBT\nEquipped with M774+M456A2",
+      "韩军主战坦克\n装备M774+M456A2",
+      "대한민국 육군 주력전차\nM774+M456A2 장비"
+    ]
+  },
+  "K1附加": {
+    "name": [
+      "🇰🇷K1(Add-on Armor)",
+      "🇰🇷K1(附加装甲)",
+      "🇰🇷K1(추가장갑)"
+    ],
+    "desc": [
+      "ROK Army MBT\nEquipped with M774+M456A2",
+      "韩军主战坦克\n装备M774+M456A2",
+      "대한민국 육군 주력전차\nM774+M456A2 장비"
+    ]
+  },
+  "K1A1": {
+    "name": [
+      "🇰🇷K1A1",
+      "🇰🇷K1A1",
+      "🇰🇷K1A1"
+    ],
+    "desc": [
+      "ROK Army MBT\nEquipped with M829+M830",
+      "韩军主战坦克\n装备M829+M830",
+      "대한민국 육군 주력전차\nM829+M830 장비"
+    ]
+  },
+  "K1A1附加": {
+    "name": [
+      "🇰🇷K1A1(Add-on Armor)",
+      "🇰🇷K1A1(附加装甲)",
+      "🇰🇷K1A1(추가장갑)"
+    ],
+    "desc": [
+      "ROK Army MBT\nEquipped with K276+K277",
+      "韩军主战坦克\n装备K276+K277",
+      "대한민국 육군 주력전차\nK276+K277 장비"
+    ]
+  },
+  "M48A3": {
+    "name": [
+      "🇰🇷M48A3K",
+      "🇰🇷M48A3K",
+      "🇰🇷M48A3K"
+    ],
+    "desc": [
+      "ROK Army MBT\nEquipped with M304+M431",
+      "韩军主战坦克\n装备M304+M431",
+      "대한민국 육군 주력전차\nM304+M431 장비"
+    ]
+  },
+  "M48A5": {
+    "name": [
+      "🇰🇷M48A5K",
+      "🇰🇷M48A5K",
+      "🇰🇷M48A5K"
+    ],
+    "desc": [
+      "ROK Army MBT\nEquipped with M774+M456A2",
+      "韩军主战坦克\n装备M774+M456A2",
+      "대한민국 육군 주력전차\nM774+M456A2 장비"
+    ]
+  },
+  "K263": {
+    "name": [
+      "🇰🇷K263",
+      "🇰🇷K263",
+      "🇰🇷K263"
+    ],
+    "desc": [
+      "SPAAG\n-Equipped with one 25mm Rotary Cannon\n-Extremely high rate of fire\nRadar Range 1200\nPainter: VVVVV",
+      "自行高射炮\n-装备一门25mm转管机炮\n-极高射速\n雷达距离1200\n画师：VVVVV",
+      "자주대공포\n-25mm 회전식 기관포 1 문 장비\n-매우 높은 발사 속도\n레이더 거리 1200\n원화: VVVVV"
+    ]
+  },
+  "UH1": {
+    "name": [
+      "UH1",
+      "UH1",
+      "UH1"
+    ],
+    "desc": [
+      "Medium Utility Helicopter",
+      "中型通用直升机",
+      "중형 다목적 헬기"
+    ]
+  },
+  "F-5E": {
+    "name": [
+      "F-5E",
+      "F-5E",
+      "F-5E"
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-Low-altitude\n-Radar Range 2400\n-120s endurance\n-ECM:5%\n-Painter: VVVVV",
+      "-多用途飞机\n-低空作战\n-雷达距离2400\n-120s滞空时间\n-ECM:5%\n-画师:VVVVV",
+      "-다목적 항공기\n-저고도 작전\n-레이더 거리 2400\n-체공 시간 120 초\n-ECM:5%\n-원화: VVVVV"
+    ]
+  },
+  "87侦": {
+    "name": [
+      "🇯🇵Type 87 Recon Vehicle",
+      "🇯🇵87式侦察警戒车",
+      "🇯🇵87식 정찰차량"
+    ],
+    "desc": [
+      "Wheeled Armored Recon Vehicle\n-Equipped with APDS\nHigh mobility\nPainter: VVVVV",
+      "轮式装甲侦察车\n-装备脱壳穿甲弹\n机动性强\n画师：VVVVV",
+      "차륜형 장갑 정찰차량\n-분리철갑탄 장비\n높은 기동성\n원화: VVVVV"
+    ]
+  },
+  "89式步战车": {
+    "name": [
+      "🇯🇵Type 89 IFV",
+      "🇯🇵89式步兵战斗车",
+      "🇯🇵89식 보병전투차"
+    ],
+    "desc": [
+      "IFV\n-Can carry 8 infantry\n-Can fire smoke grenades\n-Armed with 35mm Autocannon\n-Type 79 ATGM\n-Average armor",
+      "步兵战车\n-可以携带8名步兵\n-可发射烟雾弹\n-装载35mm机炮\n-79式反坦克导弹\n-装甲一般",
+      "보병전투차\n-보병 8 명 수송 가능\n-연막탄 발사 가능\n-35mm 기관포 무장\n-79식 대전차 미사일\n-보통 장갑"
+    ]
+  },
+  "74E": {
+    "name": [
+      "🇯🇵Type 74 Tank E",
+      "🇯🇵74式战车E型",
+      "🇯🇵74식 전차 E"
+    ],
+    "desc": [
+      "JSDF MBT\nEquipped with Type 93 APFSDS+Type 91 HEAT",
+      "自卫队主战坦克\n装备93式穿甲弹+91式破甲弹",
+      "일본 자위대 주력전차\n93식 날개안정분리철갑탄+91식 대전차고폭탄 장비"
+    ]
+  },
+  "90B": {
+    "name": [
+      "🇯🇵Type 90 Tank B",
+      "🇯🇵90式战车B型",
+      "🇯🇵90식 전차 B"
+    ],
+    "desc": [
+      "JSDF MBT\nEquipped with JM33+JM12A1",
+      "自卫队主战坦克\n装备JM33+JM12A1",
+      "일본 자위대 주력전차\nJM33+JM12A1 장비"
+    ]
+  },
+  "F-2": {
+    "name": [
+      "F-2",
+      "F-2",
+      "F-2"
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-High-altitude\n-Radar Range 4800\n-120s endurance\n-ECM:20%\n-Painter: CRH",
+      "-多用途飞机\n-高空作战\n-雷达距离4800\n-120s滞空时间\n-ECM:20%\n-画师:CRH",
+      "-다목적 항공기\n-고고도 작전\n-레이더 거리 4800\n-체공 시간 120 초\n-ECM:20%\n-원화: CRH"
+    ]
+  },
+  "F-1": {
+    "name": [
+      "F-1",
+      "F-1",
+      "F-1"
+    ],
+    "desc": [
+      "-Multi-role Aircraft\n-Low-altitude\n-Radar Range 2400\n-120s endurance\n-ECM:5%\n-Painter: VVVVV",
+      "-多用途飞机\n-低空作战\n-雷达距离2400\n-120s滞空时间\n-ECM:5%\n-画师:VVVVV",
+      "-다목적 항공기\n-저고도 작전\n-레이더 거리 2400\n-체공 시간 120 초\n-ECM:5%\n-원화: VVVVV"
+    ]
+  },
+  "F-14": {
+    "name": [
+      "F-14",
+      "F-14",
+      "F-14"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 8000\n-120s endurance\n-ECM:15%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离8000\n-120s滞空时间\n-ECM:15%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 8000\n-체공 시간 120 초\n-ECM:15%\n-원화: zhrqf"
+    ]
+  },
+  "F-14IR": {
+    "name": [
+      "F-14(Iran)",
+      "F-14(伊朗)",
+      "F-14(이란)"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 8000\n-120s endurance\n-ECM:15%\n-Painter: VVVVV",
+      "-战斗机\n-高空作战\n-雷达距离8000\n-120s滞空时间\n-ECM:15%\n-画师:VVVVV",
+      "-전투기\n-고고도 작전\n-레이더 거리 8000\n-체공 시간 120 초\n-ECM:15%\n-원화: VVVVV"
+    ]
+  },
+  "F-22": {
+    "name": [
+      "F-22",
+      "F-22",
+      "F-22"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 8000\n-240s endurance\n-ECM:50%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离8000\n-240s滞空时间\n-ECM:50%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 8000\n-체공 시간 240 초\n-ECM:50%\n-원화: zhrqf"
+    ]
+  },
+  "F-4S": {
+    "name": [
+      "F-4S",
+      "F-4S",
+      "F-4S"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 2400\n-120s endurance\n-ECM:10%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离2400\n-120s滞空时间\n-ECM:10%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 2400\n-체공 시간 120 초\n-ECM:10%\n-원화: zhrqf"
+    ]
+  },
+  "J-15": {
+    "name": [
+      "🇨🇳J-15T",
+      "🇨🇳歼-15T",
+      "🇨🇳J-15T"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 8000\n-180s endurance\n-ECM:25%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离8000\n-180s滞空时间\n-ECM:25%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 8000\n-체공 시간 180 초\n-ECM:25%\n-원화: zhrqf"
+    ]
+  },
+  "J-20": {
+    "name": [
+      "🇨🇳J-20",
+      "🇨🇳歼-20",
+      "🇨🇳J-20"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 10000\n-240s endurance\n-ECM:60%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离10000\n-240s滞空时间\n-ECM:60%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 10000\n-체공 시간 240 초\n-ECM:60%\n-원화: zhrqf"
+    ]
+  },
+  "SU-57": {
+    "name": [
+      "SU-57",
+      "SU-57",
+      "SU-57"
+    ],
+    "desc": [
+      "-Fighter\n-High-altitude\n-Radar Range 8000\n-240s endurance\n-ECM:35%\n-Painter: zhrqf",
+      "-战斗机\n-高空作战\n-雷达距离8000\n-240s滞空时间\n-ECM:35%\n-画师:zhrqf",
+      "-전투기\n-고고도 작전\n-레이더 거리 8000\n-체공 시간 240 초\n-ECM:35%\n-원화: zhrqf"
+    ]
+  },
+  "EUFPVFOB": {
+    "name": [
+      "FPV Base",
+      "FPV基地",
+      "FPV 기지"
+    ],
+    "desc": [
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "FH901": {
+    "name": [
+      "FH901 Loitering Munition",
+      "FH901巡飞弹",
+      "FH901 배회탄"
+    ],
+    "desc": [
+      "Loitering Munition",
+      "巡飞弹",
+      "배회탄"
+    ]
+  },
+  "PLAFPVFOB": {
+    "name": [
+      "FPV Base",
+      "FPV基地",
+      "FPV 기지"
+    ],
+    "desc": [
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "RUSFPVFOB": {
+    "name": [
+      "FPV Base",
+      "FPV基地",
+      "FPV 기지"
+    ],
+    "desc": [
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "USFPVFOB": {
+    "name": [
+      "FPV Base",
+      "FPV基地",
+      "FPV 기지"
+    ],
+    "desc": [
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "乌克兰之鹰": {
+    "name": [
+      "Ukrainian Falcon(Easter Egg)",
+      "乌克兰之鹰(彩蛋)",
+      "우크라이나 매(이스터 에그)"
+    ],
+    "desc": [
+      "Loitering Munition",
+      "巡飞弹",
+      "배회탄"
+    ]
+  },
+  "弹簧刀300": {
+    "name": [
+      "Switchblade300 Loitering Munition",
+      "弹簧刀300巡飞弹",
+      "스위치블레이드300 배회탄"
+    ],
+    "desc": [
+      "Loitering Munition",
+      "巡飞弹",
+      "배회탄"
+    ]
+  },
+  "弹簧刀600": {
+    "name": [
+      "Switchblade600 Loitering Munition",
+      "弹簧刀600巡飞弹",
+      "스위치블레이드600 배회탄"
+    ],
+    "desc": [
+      "Loitering Munition",
+      "巡飞弹",
+      "배회탄"
+    ]
+  },
+  "柳叶刀": {
+    "name": [
+      "Lancet Loitering Munition",
+      "柳叶刀巡飞弹",
+      "란쳇 배회탄"
+    ],
+    "desc": [
+      "Loitering Munition",
+      "巡飞弹",
+      "배회탄"
+    ]
+  },
+  "FPV": {
+    "name": [
+      "FPV",
+      "FPV",
+      "FPV"
+    ],
+    "desc": [
+      "FPV",
+      "FPV",
+      "FPV"
+    ]
+  },
+  "FPVPG7V": {
+    "name": [
+      "FPV-HEAT Warhead",
+      "FPV-破甲弹头",
+      "FPV-성형작약탄두"
+    ],
+    "desc": [
+      "FPV",
+      "FPV",
+      "FPV"
+    ]
+  },
+  "FPVRPOM": {
+    "name": [
+      "FPV-Thermobaric Warhead",
+      "FPV-温压弹头",
+      "FPV-열압력탄두"
+    ],
+    "desc": [
+      "FPV",
+      "FPV",
+      "FPV"
+    ]
+  },
+  "EUFPVSQUAD": {
+    "name": [
+      "FPV Squad",
+      "FPV小队",
+      "FPV 분대"
+    ],
+    "desc": [
+      "-Carries various FPVs\n-Calls in loitering munition strikes\nOperates up to three UAVs at once\n-Requires deployment",
+      "-携带各种FPV\n-呼叫巡飞弹打击\n最多同时操作三架无人机\n-需要部署",
+      "-다양한 FPV 드론 탑재\n-배회탄 공격 요청\n최대 3 대의 무인기 동시 운용\n-전개 필요"
+    ]
+  },
+  "PLAFPVSQUAD": {
+    "name": [
+      "FPV Squad",
+      "FPV小队",
+      "FPV 분대"
+    ],
+    "desc": [
+      "-Carries various FPVs\n-Calls in loitering munition strikes\nOperates up to three UAVs at once\n-Requires deployment",
+      "-携带各种FPV\n-呼叫巡飞弹打击\n最多同时操作三架无人机\n-需要部署",
+      "-다양한 FPV 드론 탑재\n-배회탄 공격 요청\n최대 3 대의 무인기 동시 운용\n-전개 필요"
+    ]
+  },
+  "RUSFPVSQUAD": {
+    "name": [
+      "FPV Squad",
+      "FPV小队",
+      "FPV 분대"
+    ],
+    "desc": [
+      "-Carries various FPVs\n-Calls in loitering munition strikes\nOperates up to three UAVs at once\n-Requires deployment",
+      "-携带各种FPV\n-呼叫巡飞弹打击\n最多同时操作三架无人机\n-需要部署",
+      "-다양한 FPV 드론 탑재\n-배회탄 공격 요청\n최대 3 대의 무인기 동시 운용\n-전개 필요"
+    ]
+  },
+  "USFPVSQUAD": {
+    "name": [
+      "FPV Squad",
+      "FPV小队",
+      "FPV 분대"
+    ],
+    "desc": [
+      "-Carries various FPVs\n-Calls in loitering munition strikes\nOperates up to three UAVs at once\n-Requires deployment",
+      "-携带各种FPV\n-呼叫巡飞弹打击\n最多同时操作三架无人机\n-需要部署",
+      "-다양한 FPV 드론 탑재\n-배회탄 공격 요청\n최대 3 대의 무인기 동시 운용\n-전개 필요"
+    ]
+  },
+  "MQ9": {
+    "name": [
+      "🇺🇸MQ-9 \"Reaper\"",
+      "🇺🇸MQ-9“死神”",
+      "🇺🇸MQ-9 \"리퍼\""
+    ],
+    "desc": [
+      "Continuous patrol\n Carries 2x ATGM\n Requires target designation\n-Texture Artist: FEB",
+      "持续巡航\n 携带2发反坦克导弹\n 需要指示目标\n-贴图画师:FEB",
+      "지속 순찰\n 대전차 미사일 2 발 탑재\n 표적 지정 필요\n-텍스처: FEB"
+    ]
+  },
+  "双尾蝎": {
+    "name": [
+      "🇨🇳TB-001A \"Twin-tailed Scorpion\"",
+      "🇨🇳TB-001A“双尾蝎”",
+      "🇨🇳TB-001A \"쌍미갈\""
+    ],
+    "desc": [
+      "Continuous patrol\n Carries 2x ATGM\n Requires target designation\n-Texture Artist: FEB",
+      "持续巡航\n 携带2发反坦克导弹\n 需要指示目标\n-贴图画师:FEB",
+      "지속 순찰\n 대전차 미사일 2 발 탑재\n 표적 지정 필요\n-텍스처: FEB"
+    ]
+  },
+  "猎户座": {
+    "name": [
+      "🇷🇺\"Orion\"",
+      "🇷🇺“猎户座”",
+      "🇷🇺\"오리온\""
+    ],
+    "desc": [
+      "Continuous patrol\n Carries 2x ATGM\n Requires target designation\n-Texture Artist: FEB",
+      "持续巡航\n 携带2发反坦克导弹\n 需要指示目标\n-贴图画师:FEB",
+      "지속 순찰\n 대전차 미사일 2 발 탑재\n 표적 지정 필요\n-텍스처: FEB"
+    ]
+  },
+  "大疆": {
+    "name": [
+      "DJIMAVIC3",
+      "大疆MAVIC3",
+      "DJIMAVIC3"
+    ],
+    "desc": [
+      "UAV",
+      "无人机",
+      "무인기"
+    ]
+  },
+  "UAV": {
+    "name": [
+      "Recon UAV",
+      "侦察无人机",
+      "정찰 무인기"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "扫描鹰": {
+    "name": [
+      "🇺🇸\"Scan Eagle\"",
+      "🇺🇸“扫描鹰”",
+      "🇺🇸\"스캔 이글\""
+    ],
+    "desc": [
+      "Recon UAV",
+      "侦查无人机",
+      "정찰 무인기"
+    ]
+  },
+  "红箭73架设组": {
+    "name": [
+      "HJ-73 Team",
+      "红箭73发射小组",
+      "HJ-73 운용반"
+    ],
+    "desc": [
+      "Emplacement team\n-Medium armor\n-Equipped with HJ-73EATGM\n-Trench deployment\n-Tandem HEAT\n-Texture Artist: VVVVV",
+      "架设班组\n-中甲\n-装备红箭73E反坦克导弹\n-战壕部署\n-串联破甲弹\n-贴图作者：VVVVV",
+      "진지 배치 분대\n-중간 수준의 장갑\n-HJ-73E 대전차 미사일 장비\n-참호 배치\n-탠덤 성형작약탄\n-텍스처: VVVVV"
+    ]
+  },
+  "陶氏架设组": {
+    "name": [
+      "TOW Team",
+      "陶氏发射小组",
+      "TOW 운용반"
+    ],
+    "desc": [
+      "Emplacement team\n-Medium armor\n-Equipped with TOWATGM\n-Trench deployment\n-Tandem HEAT\n-Texture Artist: VVVVV",
+      "架设班组\n-中甲\n-装备陶氏反坦克导弹\n-战壕部署\n-串联破甲弹\n-贴图作者：VVVVV",
+      "진지 배치 분대\n-중간 수준의 장갑\n-TOW 대전차 미사일 장비\n-참호 배치\n-탠덤 성형작약탄\n-텍스처: VVVVV"
+    ]
+  },
+  "AGS17架设班": {
+    "name": [
+      "AGS17 Emplacement Team",
+      "AGS17架设班",
+      "AGS17 진지 배치반"
+    ],
+    "desc": [
+      "-Equipped with AGS17Grenade Launcher\n-Deploys automatically",
+      "-装备AGS17榴弹发射器\n-自动部署",
+      "-AGS17 유탄발사기 장비\n-자동 전개"
+    ]
+  },
+  "HKGMG架设班": {
+    "name": [
+      "HKGMG Emplacement Team",
+      "HKGMG架设班",
+      "HKGMG 진지 배치반"
+    ],
+    "desc": [
+      "-Equipped with HKGMGGrenade Launcher\n-Deploys automatically",
+      "-装备HKGMG榴弹发射器\n-自动部署",
+      "-HKGMG 유탄발사기 장비\n-자동 전개"
+    ]
+  },
+  "MK17架设班": {
+    "name": [
+      "MK17 Emplacement Team",
+      "MK17架设班",
+      "MK17 진지 배치반"
+    ],
+    "desc": [
+      "-Equipped with MK17Grenade Launcher\n-Deploys automatically",
+      "-装备MK17榴弹发射器\n-自动部署",
+      "-MK17 유탄발사기 장비\n-자동 전개"
+    ]
+  },
+  "QLZ04架设班": {
+    "name": [
+      "QLZ04 Grenade Launcher",
+      "QLZ04榴弹发射器",
+      "QLZ04 유탄발사기"
+    ],
+    "desc": [
+      "-Equipped with QLZ04Grenade Launcher\n-Deploys automatically",
+      "-装备QLZ04榴弹发射器\n-自动部署",
+      "-QLZ04 유탄발사기 장비\n-자동 전개"
+    ]
+  },
+  "短号架设组": {
+    "name": [
+      "Kornet Team",
+      "短号发射小组",
+      "코르넷 운용반"
+    ],
+    "desc": [
+      "Emplacement team\n-Medium armor\n-Equipped with Kornet ATGM\n-Trench deployment\n-Tandem HEAT\n-Texture Artist: VVVVV",
+      "架设班组\n-中甲\n-装备短号反坦克导弹\n-战壕部署\n-串联破甲弹\n-贴图作者：VVVVV",
+      "진지 배치 분대\n-중간 수준의 장갑\n-코르넷 대전차 미사일 장비\n-참호 배치\n-탠덤 성형작약탄\n-텍스처: VVVVV"
+    ]
+  },
+  "长钉架设组": {
+    "name": [
+      "Spike Team",
+      "长钉发射小组",
+      "스파이크 운용반"
+    ],
+    "desc": [
+      "Emplacement team\n-Medium armor\n-Equipped with Spike ATGM\n-Trench deployment\n-Tandem HEAT\n-Texture Artist: VVVVV",
+      "架设班组\n-中甲\n-装备长钉反坦克导弹\n-战壕部署\n-串联破甲弹\n-贴图作者：VVVVV",
+      "진지 배치 분대\n-중간 수준의 장갑\n-스파이크 대전차 미사일 장비\n-참호 배치\n-탠덤 성형작약탄\n-텍스처: VVVVV"
+    ]
+  },
+  "CNHEAVY_C": {
+    "name": [
+      "★🇨🇳VP23 [Heavy Bde]",
+      "★🇨🇳VP23 [重旅专精]",
+      "★🇨🇳VP23 [중여단]"
+    ],
+    "desc": [
+      "PLA Command Truck\n-Key to victory",
+      "解放军指挥卡车\n-游戏胜负的关键",
+      "중국 인민해방군 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "CNMEDIUM_C": {
+    "name": [
+      "★🇨🇳VP23 [Medium Bde]",
+      "★🇨🇳VP23 [中旅专精]",
+      "★🇨🇳VP23 [중형여단]"
+    ],
+    "desc": [
+      "PLA Command Truck\n-Key to victory",
+      "解放军指挥卡车\n-游戏胜负的关键",
+      "중국 인민해방군 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "CN_C": {
+    "name": [
+      "VP23 Command Vehicle",
+      "VP23指挥车",
+      "VP23 지휘차량"
+    ],
+    "desc": [
+      "PLA Command Truck\n-Key to victory",
+      "解放军指挥卡车\n-游戏胜负的关键",
+      "중국 인민해방군 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "全频段阻塞干扰指挥车": {
+    "name": [
+      "★🇨🇳Dongfeng EQ240",
+      "★🇨🇳东风EQ240",
+      "★🇨🇳둥펑 EQ240"
+    ],
+    "desc": [
+      "PLA Command Truck\n-For the Party and the people!",
+      "解放军指挥卡车\n-为了党和人民！",
+      "중국 인민해방군 지휘 트럭\n-당과 인민을 위하여!"
+    ]
+  },
+  "全频段阻塞干扰指挥车_红龙": {
+    "name": [
+      "★🇨🇳Dongfeng EQ240",
+      "★🇨🇳东风EQ240",
+      "★🇨🇳둥펑 EQ240"
+    ],
+    "desc": [
+      "PLA Command Truck\n-For the Party and the people!",
+      "解放军指挥卡车\n-为了党和人民！",
+      "중국 인민해방군 지휘 트럭\n-당과 인민을 위하여!"
+    ]
+  },
+  "全频段阻塞干扰指挥车_重装": {
+    "name": [
+      "★🇨🇳Dongfeng EQ240",
+      "★🇨🇳东风EQ240",
+      "★🇨🇳둥펑 EQ240"
+    ],
+    "desc": [
+      "PLA Command Truck\n-For the Party and the people!",
+      "解放军指挥卡车\n-为了党和人民！",
+      "중국 인민해방군 지휘 트럭\n-당과 인민을 위하여!"
+    ]
+  },
+  "介绍": {
+    "name": [
+      "Tutorial",
+      "新手教程",
+      "튜토리얼"
+    ],
+    "desc": [
+      "Unit introduction",
+      "介绍单位",
+      "유닛 소개"
+    ]
+  },
+  "RUGUARD_C": {
+    "name": [
+      "✮🇷🇺KAMAZ [Gds Tank]",
+      "✮🇷🇺KAMAZ [近坦专精]",
+      "✮🇷🇺KAMAZ [근위전차]"
+    ],
+    "desc": [
+      "Russian Command Truck\n-Key to victory",
+      "俄罗斯指挥卡车\n-游戏胜负的关键",
+      "러시아 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "RUS_C": {
+    "name": [
+      "KAMAZ",
+      "KAMAZ",
+      "KAMAZ"
+    ],
+    "desc": [
+      "Russian Command Truck\n-Key to victory",
+      "俄罗斯指挥卡车\n-游戏胜负的关键",
+      "러시아 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "RUVDV_C": {
+    "name": [
+      "✮🇷🇺KAMAZ [VDV]",
+      "✮🇷🇺KAMAZ [VDV专精]",
+      "✮🇷🇺KAMAZ [공수군]"
+    ],
+    "desc": [
+      "Russian Command Truck\n-Key to victory",
+      "俄罗斯指挥卡车\n-游戏胜负的关键",
+      "러시아 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "EU_C": {
+    "name": [
+      "✵🇪🇺MAN-HX",
+      "✵🇪🇺MAN-HX",
+      "✵🇪🇺MAN-HX"
+    ],
+    "desc": [
+      "European Corps Command Truck\n-Key to victory",
+      "欧洲军团指挥卡车\n-游戏胜负的关键",
+      "유럽 군단 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "EU快反_C": {
+    "name": [
+      "✵🇪🇺MAN-HX [QRF]",
+      "✵🇪🇺MAN-HX [快反专精]",
+      "✵🇪🇺MAN-HX [신속대응군]"
+    ],
+    "desc": [
+      "European Corps Command Truck\n-Key to victory",
+      "欧洲军团指挥卡车\n-游戏胜负的关键",
+      "유럽 군단 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "EU装甲_C": {
+    "name": [
+      "✵🇪🇺MAN-HX [PzGren]",
+      "✵🇪🇺MAN-HX [装掷专精]",
+      "✵🇪🇺MAN-HX [기갑척탄병]"
+    ],
+    "desc": [
+      "European Corps Command Truck\n-Key to victory",
+      "欧洲军团指挥卡车\n-游戏胜负的关键",
+      "유럽 군단 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "空战模式基地": {
+    "name": [
+      "Air Combat Base",
+      "空战模式基地",
+      "공중전 기지"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "北约蓝龙指挥车": {
+    "name": [
+      "✪🇺🇸M939 [JP/KR]",
+      "✪🇺🇸M939 [日韩专精]",
+      "✪🇺🇸M939 [일본/한국]"
+    ],
+    "desc": [
+      "US Command Truck\n-Key to victory",
+      "美军指挥卡车\n-游戏胜负的关键",
+      "미국 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "北约重型指挥车": {
+    "name": [
+      "✪🇺🇸M939 [Heavy Armor]",
+      "✪🇺🇸M939 [重装专精]",
+      "✪🇺🇸M939 [중기갑]"
+    ],
+    "desc": [
+      "US Command Truck\n-Key to victory",
+      "美军指挥卡车\n-游戏胜负的关键",
+      "미국 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "北约指挥车": {
+    "name": [
+      "✪🇺🇸M939",
+      "✪🇺🇸M939",
+      "✪🇺🇸M939"
+    ],
+    "desc": [
+      "NATO Command Truck\n-Key to victory",
+      "北约指挥卡车\n-游戏胜负的关键",
+      "NATO 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "USARMOUR_C": {
+    "name": [
+      "✪🇺🇸M939 [Armd Cav]",
+      "✪🇺🇸M939 [装骑专精]",
+      "✪🇺🇸M939 [기갑기병]"
+    ],
+    "desc": [
+      "US Command Truck\n-Key to victory",
+      "美军指挥卡车\n-游戏胜负的关键",
+      "미국 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "USMARINE_C": {
+    "name": [
+      "✪🇺🇸M939 [Marines]",
+      "✪🇺🇸M939 [马润专精]",
+      "✪🇺🇸M939 [해병대]"
+    ],
+    "desc": [
+      "US Command Truck\n-Key to victory",
+      "美军指挥卡车\n-游戏胜负的关键",
+      "미국 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "US_C": {
+    "name": [
+      "✪🇺🇸M939",
+      "✪🇺🇸M939",
+      "✪🇺🇸M939"
+    ],
+    "desc": [
+      "US Command Truck\n-Key to victory",
+      "美军指挥卡车\n-游戏胜负的关键",
+      "미국 지휘 트럭\n-승패를 좌우하는 핵심"
+    ]
+  },
+  "UCGR_RE": {
+    "name": [
+      "Faction Selector",
+      "阵营选择器",
+      "진영 선택"
+    ],
+    "desc": [
+      "Placeholder description",
+      "占位描述",
+      "임시 설명"
+    ]
+  },
+  "adaptation-field-supply-depot": {
+    "name": [
+      "Field Supply Depot",
+      "前线补给站",
+      "야전 보급소"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-combat-engineer": {
+    "name": [
+      "Combat Engineer",
+      "战斗工兵",
+      "전투공병"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-deploy-command-post": {
+    "name": [
+      "Deploy command post",
+      "展开指挥所",
+      "지휘소 전개"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-pack-command-post": {
+    "name": [
+      "Pack up command post",
+      "收起指挥所",
+      "지휘소 철수"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-command-post": {
+    "name": [
+      "Command Post",
+      "指挥所",
+      "지휘소"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-deploy": {
+    "name": [
+      "Deploy",
+      "部署",
+      "전개"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-pack-up": {
+    "name": [
+      "Pack up",
+      "收起",
+      "철수"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-russian-federation": {
+    "name": [
+      "Russian Federation",
+      "俄罗斯联邦",
+      "러시아 연방"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-china": {
+    "name": [
+      "People’s Republic of China",
+      "中华人民共和国",
+      "중화인민공화국"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-united-states": {
+    "name": [
+      "United States",
+      "美国",
+      "미국"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-european-union": {
+    "name": [
+      "European Union",
+      "欧盟",
+      "유럽연합"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-north-korea": {
+    "name": [
+      "North Korea",
+      "朝鲜",
+      "조선민주주의인민공화국"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-south-korea": {
+    "name": [
+      "South Korea",
+      "韩国",
+      "대한민국"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "adaptation-japan": {
+    "name": [
+      "Japan",
+      "日本",
+      "일본"
+    ],
+    "desc": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "2S35": {
+    "name": [
+      "2S35-1 Self-Propelled Artillery",
+      "2S35-1自行火炮",
+      "2S35-1 자주포"
+    ],
+    "desc": [
+      "Truck-mounted SPG\nNow playing: ELB artillery march",
+      "卡车自行火炮\n正在播放elb炮兵进行曲",
+      "트럭 탑재 자주포\n재생 중: ELB 포병 행진곡"
+    ]
+  },
+  "M109A7": {
+    "name": [
+      "M109A7 Self-Propelled Artillery",
+      "M109A7自行火炮",
+      "M109A7 자주포"
+    ],
+    "desc": [
+      "Self-Propelled Artillery\nOverclocking the autoloader.gif",
+      "自行火炮\n正在超频黑叔叔装弹机.gif",
+      "자주포\n자동장전장치 오버클럭 중.gif"
+    ]
+  },
+  "Obj490M": {
+    "name": [
+      "🇷🇺Obj490M",
+      "🇷🇺Obj490M",
+      "🇷🇺Obj490M"
+    ],
+    "desc": [
+      "4th-generation MBT\n-Equipped with 152mm2A73 Smoothbore Gun\n-Coaxial 30mm2A42 Autocannon\n-“Malachite”ERA\n-“Afghanit”APS\n-Automatic Weapon Station\n-Easter egg unit\n-Commissioned by: SU25 Painter: 263",
+      "第四代主战坦克\n-装备152mm2A73滑膛炮\n-并列30mm2A42机炮\n-“孔雀石”爆炸反应装甲\n-“阿富汗石”主动防御系统\n-自动武器站\n-彩蛋单位\n-约稿:SU25 画师:263",
+      "4세대 주력전차\n-152mm 2A73 활강포 장비\n-동축 30mm 2A42 기관포\n-말라히트 반응장갑\n-아프가니트 능동방호체계\n-자동 무장 스테이션\n-이스터 에그 유닛\n-의뢰: SU25 / 원화: 263"
+    ]
+  },
+  "PCL181": {
+    "name": [
+      "🇨🇳PCL-181",
+      "🇨🇳PCL-181",
+      "🇨🇳PCL-181"
+    ],
+    "desc": [
+      "High-mobility truck SPG",
+      "高机动卡车自行火炮",
+      "고기동 트럭 탑재 자주포"
+    ]
+  },
+  "PCL181未架设": {
+    "name": [
+      "🇨🇳PCL-181",
+      "🇨🇳PCL-181",
+      "🇨🇳PCL-181"
+    ],
+    "desc": [
+      "High-mobility truck SPG\nLet the cannons roar",
+      "高机动卡车自行火炮\n大炮开兮轰他娘",
+      "고기동 트럭 탑재 자주포\n대포여, 힘껏 포효하라"
+    ]
+  },
+  "PLAPOWER": {
+    "name": [
+      "🇨🇳PLA Astartes",
+      "🇨🇳PLA阿斯塔特",
+      "🇨🇳인민해방군 아스타르테스"
+    ],
+    "desc": [
+      "\n-Powerful exoskeleton armor!\n Sharp welded steel blade\n Infantry thermal sight that sees through fog\n 2K-era Astartes!",
+      "\n-强大的外骨骼装甲口牙\n 锋利的焊接钢刀\n 看透迷雾的单兵热像\n 2K时代阿斯塔特口牙!",
+      "\n-강력한 외골격 장갑!\n 날카로운 용접 강철 칼날\n 안개를 꿰뚫는 개인용 열영상 조준경\n 2K 시대의 아스타르테스!"
+    ]
+  },
+  "PLZ05": {
+    "name": [
+      "🇨🇳PLZ05",
+      "🇨🇳PLZ05",
+      "🇨🇳PLZ05"
+    ],
+    "desc": [
+      "Self-Propelled Artillery",
+      "自行火炮",
+      "자주포"
+    ]
+  },
+  "Pzh2000": {
+    "name": [
+      "Pzh2000 Self-Propelled Artillery",
+      "Pzh2000自行火炮",
+      "Pzh2000 자주포"
+    ],
+    "desc": [
+      "Self-Propelled Artillery\nOld Germany stands at attention",
+      "自行火炮\n老德国立正了",
+      "자주포\n옛 독일, 차렷!"
+    ]
+  },
+  "T80U圣诞": {
+    "name": [
+      "🇷🇺T-80U Christmas",
+      "🇷🇺T-80U圣诞",
+      "🇷🇺T-80U 크리스마스"
+    ],
+    "desc": [
+      "3.5-generation MBT\n-T-80 improved version\n-\n-\n-\n-Fires Gift-type APFSDS",
+      "三代半主战坦克\n-T-80的改进版本\n-\n-\n-\n-发射礼物型穿甲弹",
+      "3.5세대 주력전차\n-T-80 개량형\n-\n-\n-\n-선물형 날개안정분리철갑탄 발사"
+    ]
+  },
+  "T80BV_U": {
+    "name": [
+      "T-80BV",
+      "T-80BV",
+      "T-80BV"
+    ],
+    "desc": [
+      "3rd-generation MBT\n-Easter egg: Ukrainian Has Not Yet Perished (big cope)\n-T-80B improved version(Ukrainian paint scheme)\n-Fitted with “Kontakt-1”ERA\n-1250hp gas turbine\n-3BM42+3OF26+9M119\n-Texture Artist: Fsszrt263",
+      "第三代主战坦克\n-彩蛋：乌克兰仍在人间（大嘘\n-T-80B的改进版本(乌克兰涂装)\n-加装“接触-1”爆炸反应装甲\n-1250hp燃气轮机\n-3BM42+3OF26+9M119\n-贴图画师:Fsszrt263",
+      "3세대 주력전차\n-이스터 에그: 우크라이나는 아직 사라지지 않았다 (정신승리)\n-T-80B 개량형 (우크라이나 도색)\n-콘탁트-1 반응장갑 장착\n-1250마력 가스터빈\n-3BM42+3OF26+9M119\n-텍스처: Fsszrt263"
+    ]
+  },
+  "TOS1A": {
+    "name": [
+      "🇷🇺TOS-1A",
+      "🇷🇺TOS-1A",
+      "🇷🇺TOS-1A"
+    ],
+    "desc": [
+      "TOS-1ARocket Artillery",
+      "TOS-1A火箭炮",
+      "TOS-1A 다연장로켓"
+    ]
+  },
+  "凯撒": {
+    "name": [
+      "CAESAR Truck Howitzer",
+      "凯撒卡车炮",
+      "CAESAR 차륜형 자주포"
+    ],
+    "desc": [
+      "High-mobility truck SPG",
+      "高机动卡车自行火炮",
+      "고기동 트럭 탑재 자주포"
+    ]
+  },
+  "凯撒未架设": {
+    "name": [
+      "CAESAR",
+      "凯撒",
+      "CAESAR"
+    ],
+    "desc": [
+      "High-mobility truck SPG",
+      "高机动卡车自行火炮",
+      "고기동 트럭 탑재 자주포"
+    ]
+  },
+  "泠峰": {
+    "name": [
+      "🇨🇳Haojing",
+      "🇨🇳昊京",
+      "🇨🇳하오징"
+    ],
+    "desc": [
+      "Chongguo Wolf Warrior",
+      "冲国战狠",
+      "중국의 늑대 전사"
+    ]
+  },
+  "2S35未架设": {
+    "name": [
+      "2S35-1 Self-Propelled Artillery",
+      "2S35-1自行火炮",
+      "2S35-1 자주포"
+    ],
+    "desc": [
+      "Truck-mounted SPG\nNow playing: ELB artillery march",
+      "卡车自行火炮\n正在播放elb炮兵进行曲",
+      "트럭 탑재 자주포\n재생 중: ELB 포병 행진곡"
+    ]
+  },
+  "M109A7未架设": {
+    "name": [
+      "M109A7 Self-Propelled Artillery",
+      "M109A7自行火炮",
+      "M109A7 자주포"
+    ],
+    "desc": [
+      "Self-Propelled Artillery\nOverclocking the autoloader.gif",
+      "自行火炮\n正在超频黑叔叔装弹机.gif",
+      "자주포\n자동장전장치 오버클럭 중.gif"
+    ]
+  },
+  "PLZ05未架设": {
+    "name": [
+      "🇨🇳PLZ05",
+      "🇨🇳PLZ05",
+      "🇨🇳PLZ05"
+    ],
+    "desc": [
+      "Self-Propelled Artillery",
+      "自行火炮",
+      "자주포"
+    ]
+  },
+  "Pzh2000未架设": {
+    "name": [
+      "Pzh2000 Self-Propelled Artillery",
+      "Pzh2000自行火炮",
+      "Pzh2000 자주포"
+    ],
+    "desc": [
+      "Self-Propelled Artillery\nOld Germany stands at attention",
+      "自行火炮\n老德国立正了",
+      "자주포\n옛 독일, 차렷!"
+    ]
+  }
+}
