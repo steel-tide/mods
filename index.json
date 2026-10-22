@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-22T02:46:45.554Z",
+  "generated": "2026-10-22T08:27:27.619Z",
   "mods": [
     {
       "id": "adolence",
@@ -12147,7 +12147,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-08T12:34:52+08:00",
       "bytes": 3228772,
-      "downloads": 159,
+      "downloads": 160,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -12281,7 +12281,7 @@
         "Naval Warfare",
         "Naval Warfare"
       ],
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": "Naval Warfare original creators",
       "description": [
         "My enemies are many. My equals are none. In the shade of olive trees, they said Italy could never be conquered. In the land of pharaohs and kings, they said Egypt could never be humbled.",
@@ -12292,10 +12292,10 @@
       "minGame": "0.8.16",
       "path": "mods/naval-warfare",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/naval-warfare/",
-      "updated": "2026-10-22T10:19:43+08:00",
+      "updated": "2026-10-22T16:26:04+08:00",
       "published": "2026-10-19T12:25:54+08:00",
-      "bytes": 43892146,
-      "downloads": 13,
+      "bytes": 43893759,
+      "downloads": 15,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -21074,7 +21074,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-08T22:53:58+08:00",
       "bytes": 15799328,
-      "downloads": 125,
+      "downloads": 126,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
