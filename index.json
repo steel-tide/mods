@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-21T15:32:54.824Z",
+  "generated": "2026-10-22T01:16:10.666Z",
   "mods": [
     {
       "id": "adolence",
@@ -10,7 +10,7 @@
         "Adolence·罪恶之都",
         "Adolence: City of Sin"
       ],
-      "version": "1.3.1",
+      "version": "1.4.1",
       "author": "自然常数也有人用? and the Adolence team",
       "description": [
         "The city police and the troops that come to their aid, their cruisers, tanks and helicopters, and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill.",
@@ -22,10 +22,10 @@
       "minGame": "0.8.16",
       "path": "mods/adolence",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/adolence/",
-      "updated": "2026-10-21T23:32:05+08:00",
+      "updated": "2026-10-22T09:15:32+08:00",
       "published": "2026-09-20T15:16:26+08:00",
-      "bytes": 834673,
-      "downloads": 362,
+      "bytes": 1174305,
+      "downloads": 367,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -302,6 +302,32 @@
             "Sin of Sloth"
           ],
           "sprite": "u.adolence-sloth-nest"
+        },
+        {
+          "id": "adolence-guard-post",
+          "kind": "building",
+          "domain": "none",
+          "tier": 1,
+          "cost": 150,
+          "name": [
+            "Police Guard Post",
+            "警用卫所",
+            "Police Guard Post"
+          ],
+          "sprite": "u.adolence-guard-post"
+        },
+        {
+          "id": "adolence-fuel-depot",
+          "kind": "building",
+          "domain": "none",
+          "tier": 1,
+          "cost": 250,
+          "name": [
+            "Police Fuel Depot",
+            "警用油所",
+            "Police Fuel Depot"
+          ],
+          "sprite": "u.adolence-fuel-depot"
         },
         {
           "id": "adolence-officer-pistol",
@@ -849,7 +875,7 @@
           "kind": "unit",
           "domain": "ground",
           "tier": 2,
-          "cost": 150,
+          "cost": 240,
           "name": [
             "Military Scout Car",
             "军用侦查车",
@@ -862,7 +888,7 @@
           "kind": "unit",
           "domain": "ground",
           "tier": 2,
-          "cost": 240,
+          "cost": 330,
           "name": [
             "Military Assault Car",
             "军用突击车",
@@ -875,7 +901,7 @@
           "kind": "unit",
           "domain": "ground",
           "tier": 2,
-          "cost": 240,
+          "cost": 330,
           "name": [
             "Light Utility Vehicle",
             "多用途轻型车辆",
@@ -901,7 +927,7 @@
           "kind": "unit",
           "domain": "ground",
           "tier": 2,
-          "cost": 310,
+          "cost": 400,
           "name": [
             "Military Transport Truck",
             "军用运输卡车-B",
@@ -1078,7 +1104,7 @@
           "kind": "unit",
           "domain": "air",
           "tier": 2,
-          "cost": 940,
+          "cost": 965,
           "name": [
             "Military Bomber",
             "军用轰炸机",
@@ -1371,6 +1397,566 @@
             "Sin of Gluttony"
           ],
           "sprite": "u.adolence-sin-of-gluttony"
+        },
+        {
+          "id": "adolence-guard-rifle",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 25,
+          "name": [
+            "Guard Rifleman",
+            "卫警-步枪",
+            "Guard Rifleman"
+          ],
+          "sprite": "u.adolence-guard-rifle"
+        },
+        {
+          "id": "adolence-zhongzhou-at",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 55,
+          "name": [
+            "Zhongzhou Anti-Tank",
+            "中州反坦克",
+            "Zhongzhou Anti-Tank"
+          ],
+          "sprite": "u.adolence-zhongzhou-at"
+        },
+        {
+          "id": "adolence-zhongzhou-mg",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 60,
+          "name": [
+            "Zhongzhou Machine Gunner",
+            "中州武装机枪",
+            "Zhongzhou Machine Gunner"
+          ],
+          "sprite": "u.adolence-zhongzhou-mg"
+        },
+        {
+          "id": "adolence-zhongzhou-special-at",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 55,
+          "name": [
+            "Zhongzhou Special Anti-Tank",
+            "中州特战反坦克",
+            "Zhongzhou Special Anti-Tank"
+          ],
+          "sprite": "u.adolence-zhongzhou-special-at"
+        },
+        {
+          "id": "adolence-zhongzhou-special-mg",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 60,
+          "name": [
+            "Zhongzhou Special Machine Gunner",
+            "中州特战机枪",
+            "Zhongzhou Special Machine Gunner"
+          ],
+          "sprite": "u.adolence-zhongzhou-special-mg"
+        },
+        {
+          "id": "adolence-zhongzhou-special",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 55,
+          "name": [
+            "Zhongzhou Special Forces",
+            "中州特战步枪",
+            "Zhongzhou Special Forces"
+          ],
+          "sprite": "u.adolence-zhongzhou-special"
+        },
+        {
+          "id": "adolence-guard-armored",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 45,
+          "name": [
+            "Armored National Guard",
+            "警卫队-加强防护",
+            "Armored National Guard"
+          ],
+          "sprite": "u.adolence-guard-armored"
+        },
+        {
+          "id": "adolence-desert-pistol",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 15,
+          "name": [
+            "Desert Pistol Trooper",
+            "沙漠部队-手枪",
+            "Desert Pistol Trooper"
+          ],
+          "sprite": "u.adolence-desert-pistol"
+        },
+        {
+          "id": "adolence-hazmat-pistol",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 15,
+          "name": [
+            "Hazmat Pistol Trooper",
+            "防化部队-手枪",
+            "Hazmat Pistol Trooper"
+          ],
+          "sprite": "u.adolence-hazmat-pistol"
+        },
+        {
+          "id": "adolence-hazmat-rifle",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 15,
+          "name": [
+            "Hazmat Rifleman",
+            "防化部队-步枪",
+            "Hazmat Rifleman"
+          ],
+          "sprite": "u.adolence-hazmat-rifle"
+        },
+        {
+          "id": "adolence-hazmat-red",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 15,
+          "name": [
+            "Red Hazmat Rifleman",
+            "防化部队-红-步枪",
+            "Red Hazmat Rifleman"
+          ],
+          "sprite": "u.adolence-hazmat-red"
+        },
+        {
+          "id": "adolence-hazmat-green",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 15,
+          "name": [
+            "Green Hazmat Rifleman",
+            "防化部队-绿-步枪",
+            "Green Hazmat Rifleman"
+          ],
+          "sprite": "u.adolence-hazmat-green"
+        },
+        {
+          "id": "adolence-marine-scout",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 45,
+          "name": [
+            "Marine Scout",
+            "侦察兵",
+            "Marine Scout"
+          ],
+          "sprite": "u.adolence-marine-scout"
+        },
+        {
+          "id": "adolence-soldier-a",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 50,
+          "name": [
+            "Rifle Soldier A",
+            "士兵-步枪",
+            "Rifle Soldier A"
+          ],
+          "sprite": "u.adolence-soldier-a"
+        },
+        {
+          "id": "adolence-soldier-b",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 50,
+          "name": [
+            "Rifle Soldier B",
+            "士兵-步枪",
+            "Rifle Soldier B"
+          ],
+          "sprite": "u.adolence-soldier-b"
+        },
+        {
+          "id": "adolence-civilian-pistol",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 15,
+          "name": [
+            "Armed Civilian",
+            "平民",
+            "Armed Civilian"
+          ],
+          "sprite": "u.adolence-civilian-pistol"
+        },
+        {
+          "id": "adolence-civilian-pistol-2",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 15,
+          "name": [
+            "Civilian Pistol II",
+            "平民",
+            "Civilian Pistol II"
+          ],
+          "sprite": "u.adolence-civilian-pistol-2"
+        },
+        {
+          "id": "adolence-civilian-rifle",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 20,
+          "name": [
+            "Civilian Rifleman",
+            "平民",
+            "Civilian Rifleman"
+          ],
+          "sprite": "u.adolence-civilian-rifle"
+        },
+        {
+          "id": "adolence-civilian-rifle-2",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 20,
+          "name": [
+            "Civilian Rifleman II",
+            "平民",
+            "Civilian Rifleman II"
+          ],
+          "sprite": "u.adolence-civilian-rifle-2"
+        },
+        {
+          "id": "adolence-civilian-rifle-3",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 20,
+          "name": [
+            "Civilian Rifleman III",
+            "平民",
+            "Civilian Rifleman III"
+          ],
+          "sprite": "u.adolence-civilian-rifle-3"
+        },
+        {
+          "id": "adolence-civilian-rifle-4",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 20,
+          "name": [
+            "Civilian Rifleman IV",
+            "平民",
+            "Civilian Rifleman IV"
+          ],
+          "sprite": "u.adolence-civilian-rifle-4"
+        },
+        {
+          "id": "adolence-raincoat",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 20,
+          "name": [
+            "Raincoat Rifleman",
+            "雨衣",
+            "Raincoat Rifleman"
+          ],
+          "sprite": "u.adolence-raincoat"
+        },
+        {
+          "id": "adolence-military-assault-car",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 2,
+          "cost": 330,
+          "name": [
+            "Military Assault Car",
+            "军用冲锋车",
+            "Military Assault Car"
+          ],
+          "sprite": "u.adolence-military-assault-car"
+        },
+        {
+          "id": "adolence-guard-assault-car",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 2,
+          "cost": 600,
+          "name": [
+            "National Guard Assault Car",
+            "国民冲锋车",
+            "National Guard Assault Car"
+          ],
+          "sprite": "u.adolence-guard-assault-car"
+        },
+        {
+          "id": "adolence-utility-a",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 2,
+          "cost": 285,
+          "name": [
+            "Light Utility Vehicle A",
+            "轻型多用途车辆",
+            "Light Utility Vehicle A"
+          ],
+          "sprite": "u.adolence-utility-a"
+        },
+        {
+          "id": "adolence-utility-b",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 2,
+          "cost": 465,
+          "name": [
+            "Light Utility Vehicle B",
+            "轻型多用途车辆",
+            "Light Utility Vehicle B"
+          ],
+          "sprite": "u.adolence-utility-b"
+        },
+        {
+          "id": "adolence-command-car-0",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 185,
+          "name": [
+            "Police Command Car A0",
+            "警用指挥车-A0",
+            "Police Command Car A0"
+          ],
+          "sprite": "u.adolence-command-car-0"
+        },
+        {
+          "id": "adolence-command-car-1",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 230,
+          "name": [
+            "Police Command Car A1",
+            "警用指挥车-A1",
+            "Police Command Car A1"
+          ],
+          "sprite": "u.adolence-command-car-1"
+        },
+        {
+          "id": "adolence-command-car-2",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 250,
+          "name": [
+            "Police Command Car A2",
+            "警用指挥车-A2",
+            "Police Command Car A2"
+          ],
+          "sprite": "u.adolence-command-car-2"
+        },
+        {
+          "id": "adolence-cruiser-d1",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 130,
+          "name": [
+            "Police Cruiser D1",
+            "警车-D1",
+            "Police Cruiser D1"
+          ],
+          "sprite": "u.adolence-cruiser-d1"
+        },
+        {
+          "id": "adolence-sedan-x0rx",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 130,
+          "name": [
+            "X0rX Sedan",
+            "轿车-(X0rX)",
+            "X0rX Sedan"
+          ],
+          "sprite": "u.adolence-sedan-x0rx"
+        },
+        {
+          "id": "adolence-sedan-white",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 120,
+          "name": [
+            "White Sedan",
+            "轿车-白色",
+            "White Sedan"
+          ],
+          "sprite": "u.adolence-sedan-white"
+        },
+        {
+          "id": "adolence-white-steel-a",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 160,
+          "name": [
+            "White Steel Sedan A",
+            "轿车-白钢A",
+            "White Steel Sedan A"
+          ],
+          "sprite": "u.adolence-white-steel-a"
+        },
+        {
+          "id": "adolence-white-steel-b",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 150,
+          "name": [
+            "White Steel Sedan B",
+            "轿车-白钢B",
+            "White Steel Sedan B"
+          ],
+          "sprite": "u.adolence-white-steel-b"
+        },
+        {
+          "id": "adolence-sedan-yellow",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 105,
+          "name": [
+            "Yellow Sedan",
+            "轿车-黄色",
+            "Yellow Sedan"
+          ],
+          "sprite": "u.adolence-sedan-yellow"
+        },
+        {
+          "id": "adolence-sedan-black-matte",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 1,
+          "cost": 130,
+          "name": [
+            "Matte Black Sedan",
+            "轿车-黑-低高光",
+            "Matte Black Sedan"
+          ],
+          "sprite": "u.adolence-sedan-black-matte"
+        },
+        {
+          "id": "adolence-armed-drone",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 1,
+          "cost": 20,
+          "name": [
+            "Armed Recon Drone",
+            "武装无人机",
+            "Armed Recon Drone"
+          ],
+          "sprite": "u.adolence-armed-drone"
+        },
+        {
+          "id": "adolence-attack-drone",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 1,
+          "cost": 30,
+          "name": [
+            "Attack Drone",
+            "武装攻击机",
+            "Attack Drone"
+          ],
+          "sprite": "u.adolence-attack-drone"
+        },
+        {
+          "id": "adolence-k4968",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 1,
+          "cost": 700,
+          "name": [
+            "K-4968",
+            "K-4968",
+            "K-4968"
+          ],
+          "sprite": "u.adolence-k4968"
+        },
+        {
+          "id": "adolence-eagle-a3",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 1,
+          "cost": 515,
+          "name": [
+            "Eagle A3",
+            "鹰击-A3",
+            "Eagle A3"
+          ],
+          "sprite": "u.adolence-eagle-a3"
+        },
+        {
+          "id": "adolence-eagle-a4",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 1,
+          "cost": 515,
+          "name": [
+            "Eagle A4",
+            "鹰击-A4",
+            "Eagle A4"
+          ],
+          "sprite": "u.adolence-eagle-a4"
+        },
+        {
+          "id": "adolence-navigator",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 1,
+          "cost": 1735,
+          "name": [
+            "Navigator Transport",
+            "领航员",
+            "Navigator Transport"
+          ],
+          "sprite": "u.adolence-navigator"
+        },
+        {
+          "id": "adolence-m1a2-sepv2",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 3,
+          "cost": 1430,
+          "name": [
+            "M1A2 SEPv2",
+            "M1A2 SEPV2",
+            "M1A2 SEPv2"
+          ],
+          "sprite": "u.adolence-m1a2-tusk",
+          "turretSprite": "tur.adolence-m1a2-sepv2"
         },
         {
           "id": "adolence-spk-colony",
@@ -2373,6 +2959,407 @@
           "rotated": true,
           "w": 40,
           "h": 70
+        },
+        {
+          "key": "u.adolence-guard-rifle",
+          "file": "sprites/u.adolence-guard-rifle.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 19,
+          "h": 31
+        },
+        {
+          "key": "u.adolence-zhongzhou-at",
+          "file": "sprites/u.adolence-zhongzhou-at.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 43,
+          "h": 31
+        },
+        {
+          "key": "u.adolence-zhongzhou-mg",
+          "file": "sprites/u.adolence-zhongzhou-mg.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 20,
+          "h": 32
+        },
+        {
+          "key": "u.adolence-zhongzhou-special-at",
+          "file": "sprites/u.adolence-zhongzhou-special-at.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 21,
+          "h": 28
+        },
+        {
+          "key": "u.adolence-zhongzhou-special-mg",
+          "file": "sprites/u.adolence-zhongzhou-special-mg.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 20,
+          "h": 29
+        },
+        {
+          "key": "u.adolence-zhongzhou-special",
+          "file": "sprites/u.adolence-zhongzhou-special.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 20,
+          "h": 26
+        },
+        {
+          "key": "u.adolence-guard-armored",
+          "file": "sprites/u.adolence-guard-armored.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 20,
+          "h": 28
+        },
+        {
+          "key": "u.adolence-desert-pistol",
+          "file": "sprites/u.adolence-desert-pistol.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 20,
+          "h": 22
+        },
+        {
+          "key": "u.adolence-hazmat-pistol",
+          "file": "sprites/u.adolence-hazmat-pistol.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 21,
+          "h": 23
+        },
+        {
+          "key": "u.adolence-hazmat-rifle",
+          "file": "sprites/u.adolence-hazmat-rifle.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 21,
+          "h": 34
+        },
+        {
+          "key": "u.adolence-hazmat-red",
+          "file": "sprites/u.adolence-hazmat-red.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 21,
+          "h": 34
+        },
+        {
+          "key": "u.adolence-hazmat-green",
+          "file": "sprites/u.adolence-hazmat-green.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 21,
+          "h": 34
+        },
+        {
+          "key": "u.adolence-marine-scout",
+          "file": "sprites/u.adolence-marine-scout.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 19,
+          "h": 33
+        },
+        {
+          "key": "u.adolence-soldier-a",
+          "file": "sprites/u.adolence-soldier-a.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 18,
+          "h": 32
+        },
+        {
+          "key": "u.adolence-soldier-b",
+          "file": "sprites/u.adolence-soldier-b.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 18,
+          "h": 32
+        },
+        {
+          "key": "u.adolence-civilian-pistol",
+          "file": "sprites/u.adolence-civilian-pistol.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 18,
+          "h": 21
+        },
+        {
+          "key": "u.adolence-civilian-pistol-2",
+          "file": "sprites/u.adolence-civilian-pistol-2.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 19,
+          "h": 21
+        },
+        {
+          "key": "u.adolence-civilian-rifle",
+          "file": "sprites/u.adolence-civilian-rifle.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 18,
+          "h": 29
+        },
+        {
+          "key": "u.adolence-civilian-rifle-2",
+          "file": "sprites/u.adolence-civilian-rifle-2.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 18,
+          "h": 29
+        },
+        {
+          "key": "u.adolence-civilian-rifle-3",
+          "file": "sprites/u.adolence-civilian-rifle-3.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 18,
+          "h": 29
+        },
+        {
+          "key": "u.adolence-civilian-rifle-4",
+          "file": "sprites/u.adolence-civilian-rifle-4.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 18,
+          "h": 29
+        },
+        {
+          "key": "u.adolence-raincoat",
+          "file": "sprites/u.adolence-raincoat.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 18,
+          "h": 29
+        },
+        {
+          "key": "u.adolence-military-assault-car",
+          "file": "sprites/u.adolence-military-assault-car.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 54
+        },
+        {
+          "key": "u.adolence-guard-assault-car",
+          "file": "sprites/u.adolence-guard-assault-car.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 31,
+          "h": 56
+        },
+        {
+          "key": "u.adolence-utility-a",
+          "file": "sprites/u.adolence-utility-a.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 46
+        },
+        {
+          "key": "u.adolence-utility-b",
+          "file": "sprites/u.adolence-utility-b.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 47
+        },
+        {
+          "key": "u.adolence-command-car-0",
+          "file": "sprites/u.adolence-command-car-0.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 68
+        },
+        {
+          "key": "u.adolence-command-car-1",
+          "file": "sprites/u.adolence-command-car-1.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 68
+        },
+        {
+          "key": "u.adolence-command-car-2",
+          "file": "sprites/u.adolence-command-car-2.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 68
+        },
+        {
+          "key": "u.adolence-cruiser-d1",
+          "file": "sprites/u.adolence-cruiser-d1.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 55
+        },
+        {
+          "key": "u.adolence-sedan-x0rx",
+          "file": "sprites/u.adolence-sedan-x0rx.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 55
+        },
+        {
+          "key": "u.adolence-sedan-white",
+          "file": "sprites/u.adolence-sedan-white.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 27,
+          "h": 55
+        },
+        {
+          "key": "u.adolence-white-steel-a",
+          "file": "sprites/u.adolence-white-steel-a.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 28,
+          "h": 59
+        },
+        {
+          "key": "u.adolence-white-steel-b",
+          "file": "sprites/u.adolence-white-steel-b.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 28,
+          "h": 59
+        },
+        {
+          "key": "u.adolence-sedan-yellow",
+          "file": "sprites/u.adolence-sedan-yellow.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 27,
+          "h": 55
+        },
+        {
+          "key": "u.adolence-sedan-black-matte",
+          "file": "sprites/u.adolence-sedan-black-matte.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 26,
+          "h": 55
+        },
+        {
+          "key": "u.adolence-armed-drone",
+          "file": "sprites/u.adolence-armed-drone.png",
+          "frames": 2,
+          "rotated": true,
+          "w": 44,
+          "h": 20
+        },
+        {
+          "key": "u.adolence-attack-drone",
+          "file": "sprites/u.adolence-attack-drone.png",
+          "frames": 2,
+          "rotated": true,
+          "w": 44,
+          "h": 17
+        },
+        {
+          "key": "u.adolence-k4968",
+          "file": "sprites/u.adolence-k4968.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 200,
+          "h": 200
+        },
+        {
+          "key": "u.adolence-eagle-a3",
+          "file": "sprites/u.adolence-eagle-a3.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 59,
+          "h": 82
+        },
+        {
+          "key": "u.adolence-eagle-a4",
+          "file": "sprites/u.adolence-eagle-a4.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 59,
+          "h": 86
+        },
+        {
+          "key": "u.adolence-navigator",
+          "file": "sprites/u.adolence-navigator.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 52,
+          "h": 124
+        },
+        {
+          "key": "u.adolence-guard-post",
+          "file": "sprites/u.adolence-guard-post.png",
+          "frames": 1,
+          "w": 62,
+          "h": 70
+        },
+        {
+          "key": "u.adolence-fuel-depot",
+          "file": "sprites/u.adolence-fuel-depot.png",
+          "frames": 1,
+          "w": 62,
+          "h": 74
+        },
+        {
+          "key": "tur.adolence-m1a2-sepv2",
+          "file": "sprites/tur.adolence-m1a2-sepv2.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 57,
+          "h": 152
+        },
+        {
+          "key": "dec.adolence-sepv2-outline",
+          "file": "sprites/dec.adolence-sepv2-outline.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 55,
+          "h": 84
+        },
+        {
+          "key": "dec.adolence-wreck-0f6703d2",
+          "file": "sprites/dec.adolence-wreck-0f6703d2.png",
+          "frames": 1,
+          "w": 62,
+          "h": 86
+        },
+        {
+          "key": "dec.adolence-wreck-35b8406c",
+          "file": "sprites/dec.adolence-wreck-35b8406c.png",
+          "frames": 1,
+          "w": 62,
+          "h": 86
+        },
+        {
+          "key": "dec.adolence-wreck-0edc31eb",
+          "file": "sprites/dec.adolence-wreck-0edc31eb.png",
+          "frames": 1,
+          "w": 78,
+          "h": 134
+        },
+        {
+          "key": "dec.adolence-wreck-a5b29f48",
+          "file": "sprites/dec.adolence-wreck-a5b29f48.png",
+          "frames": 1,
+          "w": 24,
+          "h": 21
+        },
+        {
+          "key": "dec.adolence-wreck-e34f0b8b",
+          "file": "sprites/dec.adolence-wreck-e34f0b8b.png",
+          "frames": 1,
+          "w": 24,
+          "h": 21
         }
       ],
       "sounds": [
@@ -2463,6 +3450,14 @@
         {
           "key": "adolence-husk-beam",
           "file": "sounds/husk-beam.mp3"
+        },
+        {
+          "key": "adolence-m4",
+          "file": "sounds/m4.mp3"
+        },
+        {
+          "key": "adolence-shotgun",
+          "file": "sounds/shotgun.mp3"
         }
       ]
     },
@@ -2488,7 +3483,7 @@
       "updated": "2026-10-18T16:02:28+08:00",
       "published": "2026-09-28T15:17:15+08:00",
       "bytes": 9628083,
-      "downloads": 103,
+      "downloads": 104,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -5737,7 +6732,7 @@
       "updated": "2026-10-16T14:58:07+08:00",
       "published": "2026-10-14T19:00:56+08:00",
       "bytes": 11709377,
-      "downloads": 54,
+      "downloads": 55,
       "screenshots": [
         {
           "file": "covers/blackout-card.webp",
@@ -7279,7 +8274,7 @@
         "FG 铁锈联盟",
         "FG Rusted League"
       ],
-      "version": "0.3.1",
+      "version": "0.4.1",
       "author": "空中之主 (art by 有人, 基卡 and SS元首)",
       "description": [
         "The whole army redrawn in black and acid green — Grizzly and Prism tanks, Kirov airships, Patriot batteries — and the GF plugin's carriers, dreadnoughts, sky fortresses, a Mirage tank that hides as a tree and a hero tank that ranks itself up.",
@@ -7288,13 +8283,13 @@
       ],
       "license": "LicenseRef-FG-Rusted-League",
       "homepage": "https://github.com/steel-tide/mods/tree/main/mods/fg-rusted-league",
-      "minGame": "0.8.14",
+      "minGame": "0.8.16",
       "path": "mods/fg-rusted-league",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/fg-rusted-league/",
-      "updated": "2026-10-18T16:02:28+08:00",
+      "updated": "2026-10-22T09:15:32+08:00",
       "published": "2026-09-28T08:53:21+08:00",
-      "bytes": 741061,
-      "downloads": 153,
+      "bytes": 1053797,
+      "downloads": 155,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -7771,6 +8766,19 @@
             "Hero Tower"
           ],
           "sprite": "u.fg-rusted-league-hero-tower"
+        },
+        {
+          "id": "fg-rusted-league-floating-array-landed",
+          "kind": "building",
+          "domain": "none",
+          "tier": 2,
+          "cost": 1900,
+          "name": [
+            "Landed Floating Array",
+            "浮空阵列",
+            "Landed Floating Array"
+          ],
+          "sprite": "u.fg-rusted-league-floating-array"
         },
         {
           "id": "fg-rusted-league-builder",
@@ -8775,6 +9783,60 @@
           "sprite": "u.fg-rusted-league-skyshaker"
         },
         {
+          "id": "fg-rusted-league-sky-support-carrier",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 3,
+          "cost": 5060,
+          "name": [
+            "Sky Support Carrier",
+            "空中之王",
+            "Sky Support Carrier"
+          ],
+          "sprite": "u.fg-rusted-league-sky-support-carrier"
+        },
+        {
+          "id": "fg-rusted-league-flying-battle-carrier",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 3,
+          "cost": 4380,
+          "name": [
+            "Flying Battle Carrier",
+            "实验航母",
+            "Flying Battle Carrier"
+          ],
+          "sprite": "u.fg-rusted-league-flying-battle-carrier",
+          "turretSprite": "tur.fg-rusted-league-flying-battle-carrier"
+        },
+        {
+          "id": "fg-rusted-league-battle-carrier-deployed",
+          "kind": "unit",
+          "domain": "ground",
+          "tier": 3,
+          "cost": 4380,
+          "name": [
+            "Deployed Battle Carrier",
+            "实验航母",
+            "Deployed Battle Carrier"
+          ],
+          "sprite": "u.fg-rusted-league-flying-battle-carrier",
+          "turretSprite": "tur.fg-rusted-league-flying-battle-carrier"
+        },
+        {
+          "id": "fg-rusted-league-carrier-interceptor",
+          "kind": "unit",
+          "domain": "air",
+          "tier": 1,
+          "cost": 40,
+          "name": [
+            "Carrier Interceptor",
+            "拦截机3",
+            "Carrier Interceptor"
+          ],
+          "sprite": "u.fg-rusted-league-carrier-interceptor"
+        },
+        {
           "id": "fg-rusted-league-aircraft-carrier-2",
           "kind": "unit",
           "domain": "air",
@@ -9143,9 +10205,9 @@
         {
           "key": "u.fg-rusted-league-command",
           "file": "sprites/u.fg-rusted-league-command.png",
-          "frames": 1,
-          "w": 49,
-          "h": 58
+          "frames": 4,
+          "w": 212,
+          "h": 68
         },
         {
           "key": "u.fg-rusted-league-army-base",
@@ -9341,9 +10403,9 @@
         {
           "key": "u.fg-rusted-league-t3-factory",
           "file": "sprites/u.fg-rusted-league-t3-factory.png",
-          "frames": 1,
-          "w": 40,
-          "h": 71
+          "frames": 8,
+          "w": 320,
+          "h": 100
         },
         {
           "key": "u.fg-rusted-league-colossus-gun",
@@ -10187,6 +11249,38 @@
           "h": 15
         },
         {
+          "key": "u.fg-rusted-league-sky-support-carrier",
+          "file": "sprites/u.fg-rusted-league-sky-support-carrier.png",
+          "frames": 2,
+          "rotated": true,
+          "w": 164,
+          "h": 111
+        },
+        {
+          "key": "u.fg-rusted-league-flying-battle-carrier",
+          "file": "sprites/u.fg-rusted-league-flying-battle-carrier.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 98,
+          "h": 160
+        },
+        {
+          "key": "tur.fg-rusted-league-flying-battle-carrier",
+          "file": "sprites/tur.fg-rusted-league-flying-battle-carrier.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 22,
+          "h": 20
+        },
+        {
+          "key": "u.fg-rusted-league-carrier-interceptor",
+          "file": "sprites/u.fg-rusted-league-carrier-interceptor.png",
+          "frames": 1,
+          "rotated": true,
+          "w": 22,
+          "h": 20
+        },
+        {
           "key": "u.fg-rusted-league-hero-1",
           "file": "sprites/u.fg-rusted-league-hero-1.png",
           "frames": 2,
@@ -10393,6 +11487,328 @@
           "rotated": true,
           "w": 16,
           "h": 30
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-83635843",
+          "file": "sprites/dec.fg-rusted-league-wreck-83635843.png",
+          "frames": 1,
+          "w": 35,
+          "h": 44
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-33691f24",
+          "file": "sprites/dec.fg-rusted-league-wreck-33691f24.png",
+          "frames": 1,
+          "w": 35,
+          "h": 44
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-56ae8808",
+          "file": "sprites/dec.fg-rusted-league-wreck-56ae8808.png",
+          "frames": 1,
+          "w": 35,
+          "h": 44
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-3806aa52",
+          "file": "sprites/dec.fg-rusted-league-wreck-3806aa52.png",
+          "frames": 1,
+          "w": 35,
+          "h": 44
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-0641b633",
+          "file": "sprites/dec.fg-rusted-league-wreck-0641b633.png",
+          "frames": 1,
+          "w": 63,
+          "h": 96
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-4779d311",
+          "file": "sprites/dec.fg-rusted-league-wreck-4779d311.png",
+          "frames": 1,
+          "w": 40,
+          "h": 61
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-3a6fd985",
+          "file": "sprites/dec.fg-rusted-league-wreck-3a6fd985.png",
+          "frames": 1,
+          "w": 62,
+          "h": 58
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-2bf891de",
+          "file": "sprites/dec.fg-rusted-league-wreck-2bf891de.png",
+          "frames": 1,
+          "w": 36,
+          "h": 57
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-c4e02a4d",
+          "file": "sprites/dec.fg-rusted-league-wreck-c4e02a4d.png",
+          "frames": 1,
+          "w": 60,
+          "h": 76
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-d3cb041e",
+          "file": "sprites/dec.fg-rusted-league-wreck-d3cb041e.png",
+          "frames": 1,
+          "w": 26,
+          "h": 15
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-31abfc97",
+          "file": "sprites/dec.fg-rusted-league-wreck-31abfc97.png",
+          "frames": 1,
+          "w": 26,
+          "h": 15
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-f04497ae",
+          "file": "sprites/dec.fg-rusted-league-wreck-f04497ae.png",
+          "frames": 1,
+          "w": 30,
+          "h": 39
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-dde1aa35",
+          "file": "sprites/dec.fg-rusted-league-wreck-dde1aa35.png",
+          "frames": 1,
+          "w": 56,
+          "h": 114
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-6c95d990",
+          "file": "sprites/dec.fg-rusted-league-wreck-6c95d990.png",
+          "frames": 1,
+          "w": 28,
+          "h": 45
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-54091dc3",
+          "file": "sprites/dec.fg-rusted-league-wreck-54091dc3.png",
+          "frames": 1,
+          "w": 21,
+          "h": 67
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-a08c41a7",
+          "file": "sprites/dec.fg-rusted-league-wreck-a08c41a7.png",
+          "frames": 1,
+          "w": 29,
+          "h": 58
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-25413eb0",
+          "file": "sprites/dec.fg-rusted-league-wreck-25413eb0.png",
+          "frames": 1,
+          "w": 29,
+          "h": 58
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-8884e9e2",
+          "file": "sprites/dec.fg-rusted-league-wreck-8884e9e2.png",
+          "frames": 1,
+          "w": 22,
+          "h": 36
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-ccbbabd0",
+          "file": "sprites/dec.fg-rusted-league-wreck-ccbbabd0.png",
+          "frames": 1,
+          "w": 22,
+          "h": 36
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-5a543f03",
+          "file": "sprites/dec.fg-rusted-league-wreck-5a543f03.png",
+          "frames": 1,
+          "w": 30,
+          "h": 39
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-c9087117",
+          "file": "sprites/dec.fg-rusted-league-wreck-c9087117.png",
+          "frames": 1,
+          "w": 164,
+          "h": 157
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-003bbd98",
+          "file": "sprites/dec.fg-rusted-league-wreck-003bbd98.png",
+          "frames": 1,
+          "w": 152,
+          "h": 141
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-8de0bcc5",
+          "file": "sprites/dec.fg-rusted-league-wreck-8de0bcc5.png",
+          "frames": 1,
+          "w": 45,
+          "h": 47
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-14aa9c02",
+          "file": "sprites/dec.fg-rusted-league-wreck-14aa9c02.png",
+          "frames": 1,
+          "w": 75,
+          "h": 72
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-2551ac6e",
+          "file": "sprites/dec.fg-rusted-league-wreck-2551ac6e.png",
+          "frames": 1,
+          "w": 45,
+          "h": 47
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-b30e28ac",
+          "file": "sprites/dec.fg-rusted-league-wreck-b30e28ac.png",
+          "frames": 1,
+          "w": 180,
+          "h": 160
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-6f2ec117",
+          "file": "sprites/dec.fg-rusted-league-wreck-6f2ec117.png",
+          "frames": 1,
+          "w": 80,
+          "h": 111
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-c1e1f099",
+          "file": "sprites/dec.fg-rusted-league-wreck-c1e1f099.png",
+          "frames": 1,
+          "w": 131,
+          "h": 120
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-65cdb7c1",
+          "file": "sprites/dec.fg-rusted-league-wreck-65cdb7c1.png",
+          "frames": 1,
+          "w": 26,
+          "h": 15
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-93fce830",
+          "file": "sprites/dec.fg-rusted-league-wreck-93fce830.png",
+          "frames": 1,
+          "w": 5,
+          "h": 12
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-54b917d2",
+          "file": "sprites/dec.fg-rusted-league-wreck-54b917d2.png",
+          "frames": 1,
+          "w": 27,
+          "h": 30
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-d714d4f7",
+          "file": "sprites/dec.fg-rusted-league-wreck-d714d4f7.png",
+          "frames": 1,
+          "w": 27,
+          "h": 30
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-f3c15d54",
+          "file": "sprites/dec.fg-rusted-league-wreck-f3c15d54.png",
+          "frames": 1,
+          "w": 31,
+          "h": 65
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-6860d6d6",
+          "file": "sprites/dec.fg-rusted-league-wreck-6860d6d6.png",
+          "frames": 1,
+          "w": 25,
+          "h": 56
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-aa5c4d54",
+          "file": "sprites/dec.fg-rusted-league-wreck-aa5c4d54.png",
+          "frames": 1,
+          "w": 30,
+          "h": 105
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-c1ce4443",
+          "file": "sprites/dec.fg-rusted-league-wreck-c1ce4443.png",
+          "frames": 1,
+          "w": 17,
+          "h": 76
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-c0198666",
+          "file": "sprites/dec.fg-rusted-league-wreck-c0198666.png",
+          "frames": 1,
+          "w": 29,
+          "h": 60
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-26df19b7",
+          "file": "sprites/dec.fg-rusted-league-wreck-26df19b7.png",
+          "frames": 1,
+          "w": 29,
+          "h": 60
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-1a3ca29e",
+          "file": "sprites/dec.fg-rusted-league-wreck-1a3ca29e.png",
+          "frames": 1,
+          "w": 80,
+          "h": 130
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-a573b69d",
+          "file": "sprites/dec.fg-rusted-league-wreck-a573b69d.png",
+          "frames": 1,
+          "w": 41,
+          "h": 164
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-c1d25f6e",
+          "file": "sprites/dec.fg-rusted-league-wreck-c1d25f6e.png",
+          "frames": 1,
+          "w": 128,
+          "h": 210
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-bf2e7075",
+          "file": "sprites/dec.fg-rusted-league-wreck-bf2e7075.png",
+          "frames": 1,
+          "w": 100,
+          "h": 160
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-9ee8889e",
+          "file": "sprites/dec.fg-rusted-league-wreck-9ee8889e.png",
+          "frames": 1,
+          "w": 26,
+          "h": 15
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-bafe0435",
+          "file": "sprites/dec.fg-rusted-league-wreck-bafe0435.png",
+          "frames": 1,
+          "w": 80,
+          "h": 111
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-43a301c0",
+          "file": "sprites/dec.fg-rusted-league-wreck-43a301c0.png",
+          "frames": 1,
+          "w": 100,
+          "h": 160
+        },
+        {
+          "key": "dec.fg-rusted-league-wreck-d0bf40c9",
+          "file": "sprites/dec.fg-rusted-league-wreck-d0bf40c9.png",
+          "frames": 1,
+          "w": 100,
+          "h": 160
         }
       ]
     },
@@ -10417,7 +11833,7 @@
       "updated": "2026-10-09T20:42:04+08:00",
       "published": "2026-09-27T14:59:28+08:00",
       "bytes": 579557,
-      "downloads": 177,
+      "downloads": 179,
       "screenshots": [
         {
           "file": "screenshots/cover.webp",
@@ -10709,7 +12125,7 @@
       "updated": "2026-10-16T14:58:07+08:00",
       "published": "2026-09-08T12:34:52+08:00",
       "bytes": 3228743,
-      "downloads": 156,
+      "downloads": 158,
       "screenshots": [
         {
           "file": "screenshots/skimmers.webp",
@@ -10852,7 +12268,7 @@
       "updated": "2026-10-19T12:25:54+08:00",
       "published": "2026-10-19T12:25:54+08:00",
       "bytes": 43892117,
-      "downloads": 12,
+      "downloads": 13,
       "screenshots": [
         {
           "file": "screenshots/carrier-operations.jpg",
