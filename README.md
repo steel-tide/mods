@@ -104,6 +104,15 @@ the official registry, game, website and mirrors, while preserving credits
 and licences. Submission does not transfer copyright or give Steel Tide
 blanket permission to relicense or sell a creator's mod.
 
+## Listing visibility
+
+Mods are listed by default. Set `"hideFromListing": true` in `mod.json` to hide a
+mod from the website and in-game lists and search. Its direct page at
+`https://steelti.de/mod/<id>` still offers **Add to Game**, which opens its install
+action in the game. Installed copies can still be enabled, disabled and updated.
+Hidden mods remain in `catalog.json` for direct lookup and keep their detail
+files and downloads; the legacy `index.json` omits them.
+
 ## Catalogue and details
 
 Generated files are never edited by hand. Detail URLs include a content hash;

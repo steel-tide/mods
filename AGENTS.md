@@ -231,6 +231,7 @@ Unknown ordinary fields produce a warning. Each extension package defines and va
 | `id` | id | yes |  | the mod's id: lower case, letters, digits, `-`; also its folder in the registry |
 | `name` | text | yes |  | the name shown in the mod list |
 | `version` | string | yes |  | e.g. `1.0.0`; the game offers an update when the registry's is newer |
+| `hideFromListing` | boolean |  | false | hide from website and in-game discovery lists; the direct mod page and Add to Game remain available |
 | `author` | string |  |  | who made it |
 | `description` | text |  |  | one or two sentences for the list |
 | `homepage` | string |  |  | a link: a repository, a thread |
@@ -362,9 +363,11 @@ The optional kit changes visible building forms, storeys, lot coverage, planting
 | `needsDeposit` | boolean | buildings only |  | must stand on a deposit |
 | `offshore` | boolean | buildings only |  | stands in open water on its own legs: every footprint tile sea, no shore needed; with needsDeposit, an ore field at sea, which only a builder on the water (the engineer boat) can reach |
 | `wall` | boolean | buildings only |  | a wall: one tile that joins its neighbours of the same def (its sheet is sixteen frames, one per set of neighbours: north 1, east 2, south 4, west 8), the last thing a gun shoots at, untouched by a pulse, and it falls without a charge |
-| `repairRange` | number 0–64 | buildings only |  | a repair aura, tiles |
-| `repairRate` | number 0–10000 | buildings only |  | hp per second per target |
-| `repairTargets` | integer 1–50 | buildings only |  | targets served at once |
+| `repairRange` | number 0–64 |  |  | a repair aura, tiles; a unit repairs ground and naval units, a building also repairs aircraft and buildings |
+| `repairAirRange` | number 0–64 |  | repairRange | repair reach for aircraft, tiles; does not change which targets the source can repair |
+| `repairNavalRange` | number 0–64 |  | repairRange | repair reach for ships, submarines and swimming amphibians, tiles |
+| `repairRate` | number 0–10000 |  |  | hp per second per target |
+| `repairTargets` | integer 1–50 |  |  | targets served at once |
 | `upgradeOf` | id | buildings only |  | the building this is the next level of; that one gains the upgrade button |
 | `upgradeCost` | number 0–99999 | buildings only | cost − the source's cost | with `upgradeOf`: the upgrade's price |
 | `upgradeTime` | number 0–3600 | buildings only | buildTime | with `upgradeOf`: seconds |
@@ -910,7 +913,7 @@ A mod may carry maps: files the game's Scenario Editor exports (`.steel-tide-map
 
 ## Units of measure
 
-- A tile is 32 world pixels. `speed` and projectile `speed` are world px/s; `range`, `minRange`, `vision`, `sonar`, `stealth`, `detect`, `repairRange` and `interceptRange` are tiles; `radius`, `body.r`, `body.len`, `splash`, `spread`, `muzzleOffset` are world px.
+- A tile is 32 world pixels. `speed` and projectile `speed` are world px/s; `range`, `minRange`, `vision`, `sonar`, `stealth`, `detect`, `repairRange`, `repairAirRange`, `repairNavalRange` and `interceptRange` are tiles; `radius`, `body.r`, `body.len`, `splash`, `spread`, `muzzleOffset` are world px.
 - Times are seconds: `buildTime`, `reload`, `burstDelay`, `upgradeTime`, `interceptReload`, `nukeTime`.
 - For scale: the Bison main battle tank is cost 280, hp 620, speed 60, radius 10, body `{ r: 13, len: 12 }`, a cannon of dmg 60 every 1.8 s at range 4.6; a scout car is cost 60, hp 150, speed 120; a war factory is 3×3 tiles, hp 1500, power −8.
 
@@ -946,7 +949,7 @@ A mod may carry maps: files the game's Scenario Editor exports (`.steel-tide-map
 1. Fork https://github.com/steel-tide/mods, add your folder as `mods/<id>/` (the folder name is the mod's `id`), run `node tools/check.mjs mods/<id>`, open a pull request.
 2. A published mod carries at least one screenshot of it in play, named under `screenshots` in mod.json: 4:3 (1600×1200 is a good size), at least 640 px wide, PNG, JPEG or WebP under 2 MB, up to 8 of them. The game's Settings → Mods page and https://steelti.de/mods show them; the first is the mod's card. Take them in a match with the mod's units on screen (the console's `give` puts them there) and crop to 4:3.
 3. CI runs the same check on the whole registry: ids must be unique across every published mod, so prefix a generic word with your mod's id (`ironworks-bunker`, not `bunker`).
-4. Once merged, the index is rebuilt and the mod appears in the game's registry list and at https://steelti.de/mods, where its installs are counted. Bump `version` for every change; the game offers the update.
+4. Once merged, the index is rebuilt and the mod appears in the game's registry list and at https://steelti.de/mods, where its installs are counted. Set `hideFromListing: true` to omit it from both lists and search while keeping its direct https://steelti.de/mod/<id> page and Add to Game link. Bump `version` for every change; the game offers the update.
 
 ## Rules
 

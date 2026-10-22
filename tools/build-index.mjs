@@ -17,7 +17,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { applyMods, imageSize, indexEntryFor, modFiles, modRegistryBase, modSummaryFor, parseCustomMap, parseMod, parseModIndex } from './steel-tide-mod.mjs';
+import { applyMods, imageSize, indexEntryFor, modFiles, listedMods, modRegistryBase, modSummaryFor, parseCustomMap, parseMod, parseModCatalog, parseModIndex } from './steel-tide-mod.mjs';
 import { prepareContentSchema } from './steel-tide-mod.mjs';
 import { registryModFolders } from './registry-folders.mjs';
 
@@ -45,8 +45,11 @@ function firstPublication(path) {
 // the counts: the sync's file, else what the last index said
 let counts = {};
 if (countsFile && existsSync(countsFile)) counts = JSON.parse(readFileSync(countsFile, 'utf8'));
-else if (existsSync(join(root, 'index.json'))) {
-  const last = parseModIndex(readFileSync(join(root, 'index.json'), 'utf8'));
+else if (existsSync(join(root, 'catalog.json')) || existsSync(join(root, 'index.json'))) {
+  // The catalogue also retains counts for hidden mods omitted from the legacy list.
+  const last = existsSync(join(root, 'catalog.json'))
+    ? parseModCatalog(readFileSync(join(root, 'catalog.json'), 'utf8'))
+    : parseModIndex(readFileSync(join(root, 'index.json'), 'utf8'));
   for (const m of last?.mods ?? []) if (m.downloads !== undefined) counts[m.id] = m.downloads;
 }
 
@@ -114,6 +117,7 @@ for (const name of readdirSync(detailDir)) {
 }
 const catalog = { format: 'steel-tide-mod-catalog', v: 1, generated, mods: summaries };
 writeFileSync(join(root, 'catalog.json'), JSON.stringify(catalog) + '\n');
-const index = { format: 'steel-tide-mod-index', v: 1, generated, mods };
+// Released legacy clients do not understand the visibility flag.
+const index = { format: 'steel-tide-mod-index', v: 1, generated, mods: listedMods(mods) };
 writeFileSync(join(root, 'index.json'), JSON.stringify(index, null, 2) + '\n');
 console.log(`catalog.json + details/ + legacy index.json: ${mods.length} mod${mods.length === 1 ? '' : 's'}`);

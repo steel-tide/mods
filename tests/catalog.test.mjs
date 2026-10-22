@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
-import { exampleFull, parseModCatalog, parseModDetail, parseModIndex } from '../tools/steel-tide-mod.mjs';
+import { exampleFull, listedMods, parseModCatalog, parseModDetail, parseModIndex } from '../tools/steel-tide-mod.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -80,6 +80,27 @@ test('the generator publishes summaries, matching details and a compatible legac
     assert.equal(readFileSync(detailPath, 'utf8'), detailRaw);
     assert.ok(parseModDetail(detailRaw, summary));
     assert.equal(readdirSync(join(fixture, 'details', 'ironworks')).length, 2);
+
+    // Unlisted mods keep their direct page/detail and counts, but legacy clients
+    // must not discover them because they do not understand the visibility flag.
+    mod.hideFromListing = true;
+    writeFileSync(join(folder, 'mod.json'), JSON.stringify(mod));
+    build(31);
+    const hidden = parseModCatalog(readFileSync(join(fixture, 'catalog.json'), 'utf8')).mods[0];
+    assert.equal(hidden.hideFromListing, true);
+    assert.deepEqual(listedMods([hidden]), []);
+    assert.deepEqual(parseModIndex(readFileSync(join(fixture, 'index.json'), 'utf8')).mods, []);
+    const hiddenPath = join(fixture, new URL(hidden.details).pathname.replace('/steel-tide/mods/main/', ''));
+    assert.equal(parseModDetail(readFileSync(hiddenPath, 'utf8'), hidden).hideFromListing, true);
+    assert.equal(readFileSync(detailPath, 'utf8'), detailRaw);
+    execFileSync(process.execPath, [join(fixture, 'tools', 'build-index.mjs')], { cwd: fixture, stdio: 'pipe' });
+    assert.equal(parseModCatalog(readFileSync(join(fixture, 'catalog.json'), 'utf8')).mods[0].downloads, 31);
+    mod.hideFromListing = false;
+    writeFileSync(join(folder, 'mod.json'), JSON.stringify(mod));
+    build(32);
+    const listed = parseModIndex(readFileSync(join(fixture, 'index.json'), 'utf8')).mods;
+    assert.equal(listed.length, 1);
+    assert.equal(listed[0].hideFromListing, false);
   } finally {
     rmSync(fixture, { recursive: true, force: true });
   }

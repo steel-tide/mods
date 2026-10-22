@@ -8,7 +8,9 @@ The ordinary game version string alone does not establish compatibility.
 The pack ID and folder are `ucgr`; existing unit, sprite and extension IDs
 retain their `usgr-re` namespace for authored content references.
 
-This port is included in the Git repository and registry tooling. It remains
+This port is included in the Git repository and registry tooling. It sets
+`hideFromListing: true`, so it is available through its direct mod page’s
+**Add to Game** button and omitted from public discovery lists. It remains
 unfinished: M5 is excluded;
 other source gaps are listed in [LEDGER.md](LEDGER.md) and [the current coverage record](non-m5-status.json).
 The available host APIs do not by themselves establish original-mod parity.

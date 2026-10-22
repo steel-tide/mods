@@ -4,6 +4,7 @@
   "capacity": "large",
   "id": "ucgr",
   "version": "0.0.1",
+  "hideFromListing": true,
   "minGame": "0.8.15",
   "requiredCapabilities": [
     "articulation-v1",

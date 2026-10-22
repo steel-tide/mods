@@ -1032,9 +1032,6 @@ const STRINGS = {
   "boot.ready": ["Opening command center…", "正在开启指挥中心…", "지휘 본부 여는 중…"],
   // the single-line author credit before the loading screen
   "boot.gameBy": ["A game by {0}", "由 {0} 呈现", "{0}이 선보입니다"],
-  // the loading screen's prompt once everything is in, by the way the player answers it
-  "boot.pressAnyKey": ["Press any key to continue", "按任意键继续", "아무 키나 눌러 계속"],
-  "boot.tapToContinue": ["Tap to continue", "点击继续", "탭하여 계속"],
   // Inlined into index.html: the compatibility notice must work even when
   // the device cannot parse the game bundle or load its translations.
   "boot.unsupported.browser.title": ["Unsupported browser", "浏览器版本过低", "지원되지 않는 브라우저"],
@@ -1158,12 +1155,15 @@ const STRINGS = {
   "mode.campaign": ["Campaign", "战役", "캠페인"],
   "mode.sandbox": ["Conquest", "征服", "정복"],
   "mode.breakthrough": ["Breakthrough", "突破", "돌파"],
+  "mode.frontline": ["Frontline", "前线", "전선"],
   // ------------------------------------------------------------- menu
   "menu.campaign": ["Campaign", "战役", "캠페인"],
   "menu.sandbox": ["Conquest", "征服", "정복"],
   "menu.conquest.subtitle": ["Build and conquer", "建设与征服", "건설과 정복"],
   "menu.breakthrough": ["Breakthrough", "突破", "돌파"],
   "menu.bt.subtitle": ["Attack or defend", "进攻或防守", "공격 또는 방어"],
+  "menu.frontline": ["Frontline", "前线", "전선"],
+  "menu.fl.subtitle": ["Take and hold ground", "攻城略地", "땅을 빼앗고 지켜라"],
   "menu.multiplayer": ["Multiplayer", "多人游戏", "멀티플레이어"],
   "menu.load": ["Load Game", "载入存档", "게임 불러오기"],
   "menu.editor": ["Editor", "编辑器", "에디터"],
@@ -1192,14 +1192,15 @@ const STRINGS = {
   "menu.fact.players": ["{0}–{1} players", "{0}–{1} 名玩家", "플레이어 {0}–{1}명"],
   "menu.fact.checkpoints": ["{0}–{1} checkpoints", "{0}–{1} 个检查点", "검문소 {0}–{1}개"],
   "menu.fact.clock": ["{0}–{1} min opening clock", "初始时限 {0}–{1} 分钟", "초기 제한 시간 {0}–{1}분"],
+  "menu.fact.tickets": ["{0}–{1} reserve", "储备 {0}–{1}", "예비 {0}–{1}"],
   "menu.fact.missions": ["{0} missions", "{0} 个任务", "임무 {0}개"],
   "menu.fact.online": ["Online", "在线", "온라인"],
   "menu.fact.onlineLan": ["Online · LAN", "在线 · 局域网", "온라인 · LAN"],
   "menu.desc.continue": ["Back into your last saved match, where you left it.", "回到你最近保存的对局，从离开的地方继续。", "마지막으로 저장한 대전으로 돌아가 멈춘 곳부터 이어 갑니다."],
   "menu.desc.multiplayer": [
-    "Play against people: pick an open room, join a server by its address, or host a game of your own.",
-    "与真人对战：挑选一个开放的房间，按地址加入服务器，或自己主持一局。",
-    "사람과 대전합니다. 열린 방을 고르거나, 주소로 서버에 참가하거나, 직접 게임을 엽니다."
+    "Play with people, as allies or opponents: pick an open room, join a server by its address, or host a game of your own.",
+    "与真人一起游戏，并肩作战或彼此交锋：挑选一个开放的房间，按地址加入服务器，或自己主持一局。",
+    "사람들과 함께 플레이합니다. 아군으로 함께 싸우거나 서로 맞붙습니다. 열린 방을 고르거나, 주소로 서버에 참가하거나, 직접 게임을 엽니다."
   ],
   "menu.desc.breakthrough": [
     "Lead an assault with a finite budget and ready production lines, or build defenses around working bases. Fight over checkpoints in order; each one taken moves the front forward.",
@@ -1368,10 +1369,11 @@ const STRINGS = {
   "save.invalidHQContacts": ["Invalid HQ contact data.", "总部失守位置标记数据无效。", "본부 상실 위치 표시 데이터가 올바르지 않습니다."],
   "save.needsMods": ["This save needs mods", "该存档需要模组", "이 저장에는 모드가 필요합니다"],
   "save.needsMods.body": [
-    "It was played with these mods on. Install them, or switch them on, to load it.",
+    "It uses these mods. Install them, or switch them on, to load it.",
     "该存档使用了以下模组。请安装或启用它们后再读取。",
-    "이 모드들을 켠 채로 플레이한 저장입니다. 불러오려면 설치하거나 켜 주세요."
+    "이 저장은 다음 모드를 사용합니다. 불러오려면 설치하거나 켜 주세요."
   ],
+  "replay.needsMods": ["This replay needs these mods switched on: {0}.", "该回放需要启用以下模组：{0}。", "이 리플레이를 보려면 다음 모드를 켜야 합니다: {0}."],
   "save.needsMods.off": ["installed, switched off", "已安装，未启用", "설치됨, 꺼짐"],
   "save.needsMods.missing": ["not installed", "未安装", "설치 안 됨"],
   "save.openMods": ["Open Mods", "打开模组", "모드 열기"],
@@ -1386,7 +1388,8 @@ const STRINGS = {
   "diff.veteran.desc": ["Aggressive, expands fast, counters your army, and sees through the fog of war.", "扩张迅速、针对性极强的凶猛对手，能看穿战争迷雾。", "공격적이고, 빠르게 확장하며, 당신의 군대에 맞춰 대응하고, 전장의 안개를 꿰뚫어 봅니다."],
   // ------------------------------------------------------------- sandbox setup
   "setup.title": ["Conquest", "征服", "정복"],
-  // ---- the mode, the strip above the lobby's maps: the open match, or the front line
+  // ---- the mode dropdown in the lobby's Game config
+  "setup.mode": ["Game mode", "游戏模式", "게임 모드"],
   "mode.sandbox.desc": [
     "Every faction opens with a headquarters and builds. Win by eliminating the opposition, or hold the most metal when the time limit runs out.",
     "每个阵营都从一座总部起步、自由建设。消灭敌对势力，或在时限到达时存有最多金属，即可获胜。",
@@ -1397,6 +1400,31 @@ const STRINGS = {
     "一方进攻，一方防守。守方在每个检查点建立基地；攻方没有基地，只靠一笔战争基金作战，按顺序夺取检查点。攻下最后一个检查点则攻方胜；时间耗尽或基金花光则守方胜。",
     "한쪽은 공격하고 한쪽은 지킵니다. 수비측은 검문소마다 기지를 세우고, 공격측은 기지 없이 군자금만으로 싸우며 검문소를 차례로 점령합니다. 마지막 검문소가 떨어지면 공격측이, 시계가 다 돌거나 군자금이 바닥나면 수비측이 이깁니다."
   ],
+  "mode.frontline.desc": [
+    "The map is divided into sectors. Stand armed units on a sector’s point to take it, build only on ground your headquarters can supply, and hold more victory points than the enemy to drain their reserve. A side whose reserve runs out loses.",
+    "地图被划分为若干区域。让武装单位站在区域据点上即可夺取它；只能在总部可补给的区域内建造；占据比敌方更多的胜利点即可消耗其储备。储备耗尽的一方落败。",
+    "지도는 여러 구역으로 나뉩니다. 무장 유닛을 구역 거점에 세워 점령하고, 사령부가 보급할 수 있는 땅에만 건설하며, 적보다 많은 승리 지점을 지켜 적의 예비를 깎으세요. 예비가 바닥난 쪽이 패배합니다."
+  ],
+  "setup.tickets": ["Reserve", "储备", "예비"],
+  "setup.tickets.desc": [
+    "Each side’s starting reserve. Every three seconds a side loses one for each victory point the enemy holds beyond its own count.",
+    "每方的初始储备。每三秒，敌方比己方多占几个胜利点，己方就失去几点储备。",
+    "각 진영의 시작 예비입니다. 3초마다 적이 아군보다 더 많이 가진 승리 지점 수만큼 예비가 줄어듭니다."
+  ],
+  "setup.frontlineTimeLimit.desc": [
+    "At the time limit, the team with the most reserve left wins. A tie is a draw. Set 0 for no limit.",
+    "时限到达时，剩余储备最多的队伍获胜。并列则平局。设为 0 表示不限时。",
+    "제한 시간이 되면 남은 예비가 가장 많은 팀이 승리합니다. 동률이면 무승부입니다. 0은 시간 제한 없음입니다."
+  ],
+  "guide.fl.title": ["Fighting for ground", "争夺领土", "땅을 두고 싸우기"],
+  "guide.fl.points": ["Hold the victory points", "占据胜利点", "승리 지점 확보"],
+  "guide.fl.points.body": ["The lettered points are victory points. Every {1} seconds, a side loses one reserve for each victory point the enemy holds beyond its own count. Run the enemy’s reserve to zero to win.", "带字母的据点是胜利点。每 {1} 秒，敌方比己方多占几个胜利点，己方就失去几点储备。把敌方储备耗尽即可获胜。", "알파벳이 붙은 거점이 승리 지점입니다. {1}초마다 적이 아군보다 더 많이 가진 승리 지점 수만큼 예비가 줄어듭니다. 적의 예비를 0으로 만들면 승리합니다."],
+  "guide.fl.capture": ["Stand on a point to take it", "站上据点即可夺取", "거점에 서서 점령"],
+  "guide.fl.capture.body": ["Armed ground, amphibious and naval units at a sector’s point neutralize an enemy sector in {0} seconds, then capture it in {0} more. An enemy unit at the point stops the count. You can capture only sectors that border your supplied ground. Attack-move ({2}) takes a squad there fighting.", "武装的地面、两栖和海上单位站在区域据点上，{0} 秒可使敌方区域中立，再过 {0} 秒即可占领。据点上有敌方单位时计时暂停。只能占领与己方受补给区域相邻的区域。用攻击移动（{2}）让小队边打边进。", "무장한 지상·수륙양용·해상 유닛이 구역 거점에 있으면 {0}초 만에 적 구역을 중립으로 만들고, {0}초 더 지나면 점령합니다. 거점에 적 유닛이 있으면 진행이 멈춥니다. 아군의 보급 구역과 맞닿은 구역만 점령할 수 있습니다. 공격 이동({2})으로 분대를 싸우며 보내세요."],
+  "guide.fl.supply": ["Keep your supply lines", "保住补给线", "보급선 유지"],
+  "guide.fl.supply.body": ["A sector is supplied while a chain of your sectors links it to a headquarters. You build only on supplied ground. A building cut off from supply mines nothing, feeds no power and works at minimum power.", "只要一串己方区域把某个区域连到总部，它就受到补给。只能在受补给的区域内建造。被切断补给的建筑不采矿、不供电，并以最低功率运转。", "아군 구역이 사령부까지 이어져 있으면 그 구역은 보급을 받습니다. 보급 받는 땅에만 건설할 수 있습니다. 보급이 끊긴 건물은 채굴하지 않고 전력도 공급하지 않으며 최저 출력으로 작동합니다."],
+  "guide.fl.expand": ["Expand with the front", "随前线扩张", "전선과 함께 확장"],
+  "guide.fl.expand.body": ["Ore in a sector is yours to mine once the sector is. A headquarters can be built on any sector you hold, which restores supply to the sectors around it.", "区域被你占领后，其中的矿才能开采。总部可以建在你占据的任何区域上，从而恢复周边区域的补给。", "구역을 점령해야 그 안의 광석을 채굴할 수 있습니다. 사령부는 점령한 어느 구역에나 지을 수 있으며, 주변 구역의 보급을 되살립니다."],
   "setup.checkpoints": ["Checkpoints", "检查点", "검문소"],
   "setup.checkpoints.desc": [
     "Headquarters in the chain, front to rear. A map seats one fewer than its spawns.",
@@ -1459,6 +1487,9 @@ const STRINGS = {
     "전쟁 연구소: 진영마다 교리를 고르고, 교리가 해금하는 유닛과 능력, 경제 향상을 연구합니다."
   ],
   "setup.reset": ["Reset to default", "恢复默认", "기본값으로 되돌리기"],
+  /** a stepper's two glyphs, named for a screen reader and the hover tip */
+  "setup.stepDown": ["Decrease", "减少", "줄이기"],
+  "setup.stepUp": ["Increase", "增加", "늘리기"],
   "settings.resetAll": ["Reset to default", "恢复默认", "기본값으로 되돌리기"],
   "settings.resetAll.confirm": [
     "Every setting goes back to its default, and every notice you chose not to be reminded of will show again. Your commander name and developer mode are kept.",
@@ -1470,6 +1501,13 @@ const STRINGS = {
     "A side builds only within a ring round its Headquarters. Extractors and offshore rigs stand anywhere. Off: build anywhere.",
     "各方只能在己方总部周围的范围内建造，采矿场和海上钻井平台不受限制。关闭后可在任意位置建造。",
     "각 진영은 사령부 주변 반경 안에서만 건설할 수 있습니다. 금속 채굴장과 해상 시추 플랫폼은 어디에나 지을 수 있습니다. 끄면 어디에나 건설할 수 있습니다."
+  ],
+  // Conquest's Director Mode switch (`GameConfig.director`, ui/directorPanel.ts)
+  "setup.director": ["Director Mode", "导演模式", "감독 모드"],
+  "setup.director.desc": [
+    "Stage the match from the Director panel: command any faction, put down any building, set the weather and the hour, and freeze or wake any AI. The match pays no merit.",
+    "在导演面板中编排对局：指挥任意阵营、放置任意建筑、设定天气与时间，并随时冻结或唤醒任意 AI。本局不计军功。",
+    "감독 패널에서 대전을 연출합니다. 어느 진영이든 지휘하고, 어떤 건물이든 세우고, 날씨와 시간을 정하고, 어떤 AI든 멈추거나 다시 깨웁니다. 이 대전은 공훈을 주지 않습니다."
   ],
   // ---- weather. The name is a word, the sentence beneath it is the whole
   // rule: what it takes off sight, and what it takes off speed.
@@ -1582,6 +1620,14 @@ const STRINGS = {
   "setup.maps.official": ["Official", "官方", "공식"],
   "setup.maps.my": ["My", "我的", "내 지도"],
   "setup.maps.community": ["Community", "社区", "커뮤니티"],
+  // the Official tab's filter (`MAP_TAGS`, ui/mapPicker.ts): every map, or the kind picked
+  "setup.mapTag.all": ["All", "全部", "전체"],
+  "setup.mapTag.large": ["Large scale", "大型战场", "대규모"],
+  "setup.mapTag.naval": ["Naval battle", "海战", "해전"],
+  "setup.mapTag.realPlace": ["Real place", "真实地点", "실제 장소"],
+  "setup.mapTag.duel": ["Duel", "对决", "1대1"],
+  "setup.mapTag.party": ["Party", "娱乐", "파티"],
+  "setup.mapTags": ["Map kinds", "地图类型", "지도 종류"],
   "setup.mapInvalid": ["Could not read that map: {0}", "无法读取该地图：{0}", "지도를 읽을 수 없습니다: {0}"],
   "setup.mapLoaded": ["Map loaded: {0}", "已载入地图：{0}", "지도를 불러왔습니다: {0}"],
   "map.custom.style": ["Your own map, played exactly as it was painted in the editor.", "你自己的地图，与编辑器中绘制的完全一致。", "직접 만든 지도를 에디터에서 그린 그대로 플레이합니다."],
@@ -1590,6 +1636,42 @@ const STRINGS = {
     "A coastal proving ground that starts you with the whole army: a garrison, an airfield, a harbour, and a firing line looking downrange at the impact area.",
     "海边的靶场，开局就把全部部队交给你：营区、机场、军港，以及正对靶区的射击线。",
     "군대 전체를 갖추고 시작하는 해안의 시험장입니다. 주둔지, 비행장, 항구, 그리고 탄착 지역을 내려다보는 사선이 있습니다."
+  ],
+  "map.ironCitadel": ["Iron Citadel", "钢铁要塞", "강철 요새"],
+  "map.ironCitadel.style": [
+    "One against many: a citadel of three walled terraces in a lava moat, built and garrisoned for the first seat, and seven outposts round it, each opening with a war factory and a strike force.",
+    "以一敌众：熔岩护城河中一座三层崖壁台地的要塞，为第一个席位建好并驻满守军；四周七座前哨，各自开局便有一座战车工厂和一支突击部队。",
+    "하나 대 다수: 용암 해자 안, 절벽으로 둘러싸인 세 단의 대지 위 요새가 첫 번째 자리를 위해 지어져 수비대까지 갖추고 있고, 그 둘레의 일곱 전초기지는 저마다 전차 공장 하나와 돌격 부대를 갖추고 시작합니다."
+  ],
+  "map.phoneBooth": ["Phone Booth", "电话亭", "공중전화 부스"],
+  "map.phoneBooth.style": [
+    "Eight bases in a walled square barely big enough for them, each opening with its war factory, extractors, two turrets and two light tanks already up, round a paved plaza with ore at its hub.",
+    "八座基地挤在一个勉强容得下它们的围墙方场里，各自开局就已建好战车工厂、采矿场和两座炮塔，并有两辆轻型坦克，围着一片中心有矿的铺装广场。",
+    "겨우 들어찰 만한 벽으로 둘러싸인 광장에 기지 여덟 개가 모여 있습니다. 저마다 전차 공장과 금속 채굴장, 포탑 둘, 경전차 두 대를 이미 갖추고 시작하며, 한가운데에는 광석이 있는 포장 광장이 있습니다."
+  ],
+  "map.skyIslands": ["Sky Islands", "天空群岛", "하늘 군도"],
+  "map.skyIslands.style": [
+    "Eight islands in a sea of lava that no tank or ship crosses, each opening with an airbase, flak and a Pelican; islets of ore between them and an old airstrip on the plateau in the middle.",
+    "八座岛屿浮于熔岩之海，坦克与舰船都无法跨越；每座岛开局便有空军基地、防空炮塔和一架鹈鹕，岛间散布着产矿小岛，中央高地上有一条旧跑道。",
+    "전차도 배도 건널 수 없는 용암 바다 위의 여덟 섬. 섬마다 공군 기지와 대공 포탑, 펠리컨 한 대를 갖추고 시작하며, 섬 사이에는 광석이 나는 작은 섬들이, 한가운데 고원에는 낡은 활주로가 있습니다."
+  ],
+  "map.chessboard": ["Chessboard", "国际象棋盘", "체스판"],
+  "map.chessboard.style": [
+    "A duel on a board of eight by eight, light squares of grass and dark ones of mud, both armies standing on it as chess pieces: heavy tanks for rooks, buggies for knights, howitzers for bishops, a Salamander for the queen and the headquarters for the king.",
+    "一场在八乘八棋盘上的对决，浅色格是草地，深色格是泥地，双方部队按国际象棋的棋子摆在盘上：重型坦克为车，侦察车为马，榴弹炮为象，火蜥蜴为后，总部为王。",
+    "여덟 칸씩 여덟 줄의 판 위에서 벌어지는 1대1. 밝은 칸은 풀밭, 어두운 칸은 진흙이며, 양쪽 군대가 체스 말처럼 판 위에 서 있습니다. 중전차가 룩, 버기가 나이트, 곡사포가 비숍, 샐러맨더가 퀸, 사령부가 킹입니다."
+  ],
+  "map.hedgeMaze": ["Hedge Maze", "树篱迷宫", "산울타리 미로"],
+  "map.hedgeMaze.style": [
+    "Four corners of a maze of hedgerows too thick for any tank, round a plaza of ore in the middle; fields wait at the ends of its blind alleys, and pairs of bunkers wall the gaps between lanes that run side by side.",
+    "四角之间是一座任何坦克都穿不过的树篱迷宫，中央是一片产矿的广场；死胡同的尽头各有矿点，并排的通道之间的缺口由成对的碉堡封住。",
+    "어떤 전차도 뚫지 못할 만큼 두꺼운 산울타리 미로의 네 모서리, 그리고 한가운데 광석이 있는 광장. 막다른 골목 끝마다 광석이 있고, 나란히 달리는 통로 사이의 틈은 벙커 두 개씩이 막고 있습니다."
+  ],
+  "map.shipGraveyard": ["Ship Graveyard", "沉船墓场", "난파선 묘지"],
+  "map.shipGraveyard.style": [
+    "Two coasts across a bay crowded with sunken freighters, a reef of shallows across its middle with two channels through it and a bridge over each; every seat opens with a naval yard, gunboats, a missile boat and an engineer boat.",
+    "两道海岸隔着一片挤满沉没货轮的海湾，湾心横着一道浅滩礁带，礁上开了两条水道，各有一座桥；每个席位开局都有造船厂、炮艇、导弹艇和一艘工程船。",
+    "가라앉은 화물선으로 가득한 만을 사이에 둔 두 해안. 만 한가운데를 여울 암초가 가로지르고, 그 사이로 난 수로 둘 위에는 각각 다리가 놓여 있습니다. 모든 자리는 조선소와 포함, 미사일정, 공병정 한 척을 갖추고 시작합니다."
   ],
   // ------------------------------------------------------------- multiplayer
   "mp.title": ["Multiplayer", "多人游戏", "멀티플레이어"],
@@ -1801,12 +1883,7 @@ const STRINGS = {
     "对局正在进行中。对局结束后大厅将重新开放。",
     "대전이 진행 중입니다. 대전이 끝나면 로비가 다시 열립니다."
   ],
-  // the server settings plate, behind the gear in the lobby's title strip
-  // (`ui/serverSettings.ts`): the mods the room requires, the leader's to
-  // set between matches, and the invite page beside it
-  "mp.serverSettings": ["Server settings", "服务器设置", "서버 설정"],
-  // the plate's second page, beside Mods (`mods.title`)
-  "mp.tab.invite": ["Invite", "邀请", "초대"],
+  // the lobby's Mods dialog, reached from its Game config field
   "mp.mods.title": ["Required mods", "所需模组", "필요한 모드"],
   "mp.mods.intro": [
     "Pick the mods this server plays with. Everyone who joins must have them installed.",
@@ -1839,7 +1916,7 @@ const STRINGS = {
   "mp.mods.apply": ["Apply", "应用", "적용"],
   "mp.mods.applied.toast": ["Required mods updated", "所需模组已更新", "필요한 모드를 갱신했습니다"],
   "mp.mods.manage": ["Manage mods…", "管理模组…", "모드 관리…"],
-  // the read-only row in the lobby's rules pane
+  // the row in the lobby's rules pane, with an entry to the Mods dialog
   "mp.mods.row": ["Mods", "模组", "모드"],
   // the plate a player meets at the door of a server that requires mods (`ui/requiredMods.ts`)
   "mp.modsRequired.title": ["Mods required", "需要模组", "모드 필요"],
@@ -1866,7 +1943,7 @@ const STRINGS = {
   "mp.modsRequired.checking": ["Checking the registry…", "正在查询模组仓库…", "레지스트리 확인 중…"],
   // the LAN page's badge on a game that requires mods
   "mp.lanMods": ["{0} mods", "{0} 个模组", "모드 {0}개"],
-  // the invite section of the server settings plate: everything somebody
+  // the lobby's Share dialog: everything somebody
   // needs to join this room, each line with its copy button, and the whole
   // of it as one text to share
   "mp.invite": ["Invite players", "邀请玩家", "플레이어 초대"],
@@ -1908,9 +1985,10 @@ const STRINGS = {
   "mp.chatPlaceholder": ["Say something… (/t for team only)", "说点什么…（/t 仅队伍可见）", "메시지 입력… (/t 는 팀에게만)"],
   "mp.chatSend": ["Send", "发送", "보내기"],
   "chat.teamTag": ["[Team]", "[队伍]", "[팀]"],
-  // the console's channel switch, where the prompt stood (a desktop's chat line)
-  "chat.channel.all": ["To everyone. Click or press Tab to talk to your team", "发给所有人。点击或按 Tab 改为只发给队伍", "모두에게. 클릭하거나 Tab을 누르면 팀에게만"],
-  "chat.channel.team": ["To your team only. Click or press Tab to talk to everyone", "只发给队伍。点击或按 Tab 改为发给所有人", "팀에게만. 클릭하거나 Tab을 누르면 모두에게"],
+  // Channel tabs at the top of the desktop chat box.
+  "chat.channel.label": ["Chat channel", "聊天频道", "채팅 채널"],
+  "chat.channel.all": ["All", "所有人", "전체"],
+  "chat.channel.team": ["Team", "队伍", "팀"],
   "mp.spectating": ["SPECTATING", "观战中", "관전 중"],
   "spec.commentaryOn": ["Commentary On", "解说已开启", "해설 켜짐"],
   "spec.commentaryFailed": ["Live commentary stopped. The voice service could not respond; toggle commentary to try again.", "实时解说已停止。语音服务未能响应；请重新开启解说重试。", "실시간 해설이 중단되었습니다. 음성 서비스가 응답하지 못했습니다. 해설을 다시 켜서 재시도하세요."],
@@ -2257,7 +2335,7 @@ const STRINGS = {
   "campaign.objectives": ["Objectives", "任务目标", "목표"],
   "campaign.progress.reset": ["Reset progress", "重置进度", "진행 초기화"],
   "campaign.progress.resetConfirm": ["Reset all campaign progress?", "确定重置全部战役进度？", "캠페인 진행을 모두 초기화할까요?"],
-  // ---- the campaign: the Gulf War of 1990–91 under other flags (docs/CAMPAIGN.md).
+  // ---- the campaign: the Gulf War of 1990–91 under other flags (docs/modes/campaign/README.md).
   // Each mission carries a name, a dateline, a background card (paragraphs
   // apart by a blank line, read in silence) and Command's orders (read by the
   // narrator: `briefing.mN` in core/voice.ts).
@@ -2450,6 +2528,15 @@ const STRINGS = {
   "hud.bt.front": ["the front", "前线", "전선"],
   "hud.bt.fallen": ["fallen", "已失守", "함락"],
   "hud.bt.locked": ["locked until the one before it falls", "前一个失守后才会开放", "앞 검문소가 떨어져야 열립니다"],
+  "hud.fl.reserve": ["Reserve", "储备", "예비"],
+  "hud.fl.points": ["Victory points", "胜利点", "승리 지점"],
+  "hud.fl.point": ["Victory point {0}", "胜利点 {0}", "승리 지점 {0}"],
+  "hud.fl.neutral": ["neutral", "中立", "중립"],
+  "hud.fl.yours": ["held by your team", "己方占据", "아군 점령"],
+  "hud.fl.enemy": ["held by {0}", "{0} 占据", "{0} 점령"],
+  "hud.fl.taking": ["being taken", "正在被夺取", "점령 진행 중"],
+  "hud.fl.contested": ["contested", "争夺中", "교전 중"],
+  "hud.fl.cut": ["{0} cut off", "{0} 处断补", "{0}곳 보급 차단"],
   "hud.offGrid": ["off grid", "无需电力", "전력 불필요"],
   "hud.queue": ["Queue", "生产队列", "대기열"],
   "hud.queueEmpty": ["Queue is empty", "队列为空", "대기열이 비어 있습니다"],
@@ -2504,8 +2591,7 @@ const STRINGS = {
   "hud.chatEmpty": ["Press Enter to say something.", "按 Enter 发言。", "Enter를 눌러 말하세요."],
   "hud.chatPlaceholder": ["Message… (/t = team)", "输入消息…（/t = 队伍）", "메시지… (/t = 팀)"],
   // the desktop's chat box, which is the console too: a slash makes a line a command
-  "hud.talk.placeholder": ["Message (/t = team), or /command", "输入消息（/t = 队伍），或以 / 开头输入命令", "메시지 (/t = 팀), 명령은 /로 시작"],
-  "hud.talk.placeholderSolo": ["Type /help for the commands", "输入 /help 查看命令", "/help를 입력하면 명령 목록"],
+  "hud.talk.placeholder": ["Message…", "输入消息…", "메시지…"],
   "hud.groups": ["Army Groups", "编队", "부대 편성"],
   "hud.groupsAdd": ["Add to Group", "加入编队", "부대에 추가"],
   "hud.groupsHint": ["Select units, then put them in a group.", "选中单位后将其加入编队。", "유닛을 선택한 뒤 부대에 넣으세요."],
@@ -3154,6 +3240,19 @@ const STRINGS = {
   "alert.playerSurrendered": ["{0} has surrendered", "{0} 已投降", "{0}이(가) 항복했습니다"],
   "alert.cannotBuildHere": ["Cannot build here", "无法在此建造", "여기에는 지을 수 없습니다"],
   "alert.farFromHq": ["Too far from a friendly Headquarters to build here", "离己方总部太远，无法在此建造", "아군 사령부에서 너무 멀어 여기에는 지을 수 없습니다"],
+  "alert.outsideTerritory": ["Build only on your supplied sectors", "只能在己方受补给的区域内建造", "아군 보급 구역에만 건설할 수 있습니다"],
+  "alert.flVpUnderAttack": ["Victory point {0} is being taken", "胜利点 {0} 正被夺取", "승리 지점 {0}이(가) 점령당하고 있습니다"],
+  "alert.flSectorUnderAttack": ["Sector {0} is being taken", "区域 {0} 正被夺取", "구역 {0}이(가) 점령당하고 있습니다"],
+  "alert.flVpLost": ["Victory point {0} lost", "失去胜利点 {0}", "승리 지점 {0} 상실"],
+  "alert.flSectorLost": ["Sector {0} lost", "失去区域 {0}", "구역 {0} 상실"],
+  "alert.flSectorNeutralized": ["Sector {0} neutralized", "区域 {0} 已中立", "구역 {0} 중립화"],
+  "alert.flVpTaken": ["Victory point {0} taken", "夺取胜利点 {0}", "승리 지점 {0} 점령"],
+  "alert.flVpTakenByEnemy": ["The enemy took victory point {0}", "敌方夺取了胜利点 {0}", "적이 승리 지점 {0}을(를) 점령했습니다"],
+  "alert.flSectorTaken": ["Sector {0} taken", "夺取区域 {0}", "구역 {0} 점령"],
+  "alert.flCutOff": ["Sector {0} is cut off from supply", "区域 {0} 的补给被切断", "구역 {0}의 보급이 끊겼습니다"],
+  "alert.flResupplied": ["Sector {0} is back in supply", "区域 {0} 恢复补给", "구역 {0}의 보급이 회복되었습니다"],
+  "alert.flTicketsLow": ["Our reserve is running low", "我方储备即将耗尽", "아군 예비가 바닥나고 있습니다"],
+  "alert.flReserveSpentBy": ["{0} has run out of reserve", "{0} 的储备已耗尽", "{0}의 예비가 바닥났습니다"],
   "alert.onlyOne": ["Only one of these per faction", "每个阵营只能拥有一座", "진영마다 하나만 지을 수 있습니다"],
   // a unit a faction may hold only so many of (`UnitDef.limit`, the Hornet): {0} out now, counting those queued, of {1}
   "hud.limit": ["{0} of {1} in service", "在役 {0}/{1}", "운용 중 {0}/{1}"],
@@ -3226,6 +3325,21 @@ const STRINGS = {
     "已到时限。敌对阵营的最高金属储备并列。",
     "제한 시간이 되었습니다. 서로 다른 팀의 진영이 보유 금속 공동 1위입니다."
   ],
+  "end.timeLimitTickets": [
+    "Time limit reached. The team with the most reserve left wins.",
+    "已到时限。剩余储备最多的队伍获胜。",
+    "제한 시간이 되었습니다. 남은 예비가 가장 많은 팀이 승리합니다."
+  ],
+  "end.timeLimitTicketsDraw": [
+    "Time limit reached. Opposing teams are tied for the most reserve.",
+    "已到时限。敌对队伍的剩余储备并列。",
+    "제한 시간이 되었습니다. 서로 다른 팀의 남은 예비가 같습니다."
+  ],
+  "end.ticketsOut": [
+    "A reserve has run out.",
+    "一方储备已耗尽。",
+    "한쪽의 예비가 바닥났습니다."
+  ],
   "end.defeat": ["DEFEAT", "战败", "패배"],
   "end.time": ["Time", "用时", "시간"],
   "end.unitsBuilt": ["Units built", "生产单位", "생산한 유닛"],
@@ -3279,7 +3393,7 @@ const STRINGS = {
   "ach.tier.gold": ["Gold", "金", "금"],
   "ach.tier.black": ["Blackened", "玄铁", "흑철"],
   "ach.unlocked": ["{0} unlocked", "解锁成就：{0}", "{0} 달성"],
-  // the nods to other games (docs/EASTER-EGGS.md): one's own warhead on one's own headquarters
+  // the nods to other games (docs/internal/easter-eggs.md): one's own warhead on one's own headquarters
   "egg.wasted": ["WASTED", "WASTED", "WASTED"],
   // the defeat plate's F (a wreath is laid)
   "egg.respects": ["Respects paid.", "已致敬。", "경의를 표했습니다."],
@@ -3291,7 +3405,7 @@ const STRINGS = {
   "egg.zeppelin": ["Airship inbound.", "飞艇正在接近。", "비행선 접근 중."],
   // the campaign screen's tenth card, before its door is open: a bare stone
   "egg.door.stone": ["Stone", "石", "돌"],
-  // 愚公移山, the long haul (docs/EASTER-EGGS.md, section 1): the map, and the card's one line
+  // 愚公移山, the long haul (docs/internal/easter-eggs.md, section 1): the map, and the card's one line
   "egg.yugong.map": ["Taihang · Wangwu", "太行 · 王屋", "태항 · 왕옥"],
   "egg.yugong.question": [
     "Shall we level the heights with all our strength, and open a road straight south to the Han?",
@@ -3453,6 +3567,7 @@ const STRINGS = {
   "store.wearAll": ["Equip on all", "全部装备", "모두 장착"],
   "store.takeOff": ["Unequip all", "全部卸下", "모두 해제"],
   // a look or a decal held, pressed in the Arsenal: {0} the line's name
+  "store.previewTip": ["Preview it on the {0}", "在{0}上预览", "{0}에 미리 보기"],
   "store.wearTip": ["Equip it on the {0}", "装备到{0}", "{0}에 장착"],
   "store.unmountTip": ["Unequip it from the {0}", "从{0}上卸下", "{0}에서 해제"],
   // a skin a medal also hands over: {0} the medal
@@ -3544,6 +3659,7 @@ const STRINGS = {
   "merit.duplicate": ["No merit: this match was already recorded", "不计军功：本局已结算", "공훈 없음: 이미 기록된 대전"],
   "merit.ineligible": ["No merit: Open Range, custom map or mods", "不计军功：靶场、自定义地图或模组", "공훈 없음: 사격장, 사용자 지도 또는 모드"],
   "merit.customGame": ["No merit: custom game", "不计军功：自定义游戏", "공훈 없음: 사용자 게임"],
+  "merit.director": ["No merit: Director Mode", "不计军功：导演模式", "공훈 없음: 감독 모드"],
   // the Field manual: one sheet a def, the wiki's figures in the wiki's words
   "profile.manual.weapons": ["Weapons", "武器", "무기"],
   // a line's levels over its sheet, by number (the level's own name in the tip)
@@ -3708,6 +3824,7 @@ const STRINGS = {
   "stat.elites": ["Units promoted to Elite", "晋升精英单位", "정예로 진급한 유닛"],
   "stat.sandbox": ["Conquest", "征服", "정복"],
   "stat.breakthrough": ["Breakthrough", "突破", "돌파"],
+  "stat.frontline": ["Frontline", "前线", "전선"],
   "stat.multiplayer": ["Multiplayer", "多人对战", "멀티플레이어"],
   "stat.never": ["—", "—", "—"],
   // bronze
@@ -3803,7 +3920,7 @@ const STRINGS = {
   "settings.explain.keys": ["The keys, the mouse and, on a touch screen, how orders are given.", "按键、鼠标，以及触屏上的下令方式。", "키, 마우스, 그리고 터치 화면에서 명령을 내리는 방식입니다."],
   "settings.explain.graphics": ["How the battlefield is drawn, and what that asks of your device.", "战场的绘制方式，以及对设备性能的要求。", "전장을 그리는 방식과 그에 드는 기기 부담입니다."],
   "settings.explain.pad": ["The controller's glyphs, stick, rumble and buttons.", "手柄的按键图标、摇杆、震动与按键分配。", "컨트롤러의 버튼 표시, 스틱, 진동, 버튼 배치입니다."],
-  "settings.explain.mods": ["Mods add units and buildings to the game. Install them here and switch them on or off.", "模组为游戏添加单位与建筑。在这里安装，并启用或停用。", "모드는 게임에 유닛과 건물을 더합니다. 여기서 설치하고 켜거나 끌 수 있습니다."],
+  "settings.explain.mods": ["Customize the game experience with mods.", "通过模组自定义游戏体验。", "모드로 게임 경험을 맞춤 설정하세요."],
   "settings.explain.dev": ["Developer mode's tools and switches.", "开发者模式的工具与开关。", "개발자 모드의 도구와 스위치입니다."],
   "settings.explain.about": ["The game's version, what it is built with and the people who made it.", "游戏的版本、所用的技术，以及制作者。", "게임 버전, 사용한 기술, 그리고 만든 사람들입니다."],
   "settings.language.desc": ["The language of the interface. Automatic follows the device.", "界面的语言。选择自动时跟随设备设置。", "인터페이스 언어입니다. 자동은 기기 설정을 따릅니다."],
@@ -3853,11 +3970,6 @@ const STRINGS = {
   "settings.paths.desc": ["Draw the route every moving unit is taking.", "绘制每个移动中单位的路线。", "움직이는 모든 유닛의 경로를 그립니다."],
   "settings.language": ["Language", "语言 / Language", "언어 / Language"],
   "settings.lang.auto": ["Auto", "自动", "자동"],
-  "settings.downloadRegistry": ["Download registry", "下载源", "다운로드 소스"],
-  "settings.downloadRegistry.desc": ["Where mods and community maps are downloaded from.", "模组与社区地图的下载来源。", "모드와 커뮤니티 지도를 다운로드할 소스입니다."],
-  "settings.downloadRegistry.auto": ["Auto", "自动", "자동"],
-  "settings.downloadRegistry.github": ["GitHub", "GitHub", "GitHub"],
-  "settings.downloadRegistry.cloudflare": ["Cloudflare", "Cloudflare", "Cloudflare"],
   "settings.music": ["Music volume", "音乐音量", "음악 음량"],
   "settings.sfx": ["Sound effects", "音效音量", "효과음"],
   "settings.voice": ["Voice", "语音音量", "음성"],
@@ -3905,7 +4017,6 @@ const STRINGS = {
   ],
   "backup.restore": ["Restore", "恢复", "복원"],
   "backup.restoreFailed": ["There was no room to restore the backup. Nothing was changed.", "存储空间不足，无法恢复备份。数据未作任何更改。", "공간이 부족해 백업을 복원하지 못했습니다. 아무것도 바뀌지 않았습니다."],
-  "settings.uiScale": ["UI scale", "界面缩放", "UI 크기"],
   "settings.section.graphics": ["Graphics", "画面", "그래픽"],
   "settings.touchUi": ["Touch controls", "触屏操作", "터치 조작"],
   "settings.touchUi.auto": ["Auto", "自动", "자동"],
@@ -3975,6 +4086,7 @@ const STRINGS = {
   "mods.source.file": ["from {0}", "来自文件 {0}", "{0}에서"],
   "mods.source.folder": ["from the folder {0}", "来自文件夹 {0}", "폴더 {0}에서"],
   "mods.failed": ["Not loaded", "未加载", "불러오지 못함"],
+  "mods.failedTip": ["Not loaded: see why", "未加载：查看原因", "불러오지 못함: 이유 보기"],
   "mods.newerGame": ["Needs game {0} or newer", "需要游戏版本 {0} 或更新", "게임 {0} 이상 필요"],
   "mods.reload": ["Reload", "重新读取", "다시 읽기"],
   "mods.reloadTip": ["Read the mod again from where it came", "从来源重新读取模组", "모드를 원래 위치에서 다시 읽습니다"],
@@ -4011,7 +4123,8 @@ const STRINGS = {
   "mods.installed.toast": ["{0} installed", "已安装 {0}", "{0} 설치됨"],
   "mods.updated.toast": ["{0} reloaded", "已重新读取 {0}", "{0} 다시 읽음"],
   "mods.error.title": ["The mod could not be loaded", "模组无法加载", "모드를 불러올 수 없습니다"],
-  "mods.warnings": ["Notes", "提示", "참고"],
+  "mods.warnings": ["Notes on this mod", "该模组的提示", "이 모드에 대한 참고"],
+  "mods.enable": ["Enable", "启用", "사용"],
   "mods.enabled": ["Enabled", "启用", "사용"],
   "mods.badge": ["Mod", "模组", "모드"],
   // the mod's own plate (ui/modDetail.ts): the pictures and metadata
@@ -4027,14 +4140,13 @@ const STRINGS = {
   "mods.source": ["Source on GitHub", "GitHub 源码", "GitHub 소스"],
   "mods.homepage": ["Homepage", "主页", "홈페이지"],
   "mods.creator": ["Creator", "创作者", "제작자"],
+  "mods.version": ["Version", "版本", "버전"],
   "mods.size": ["Size", "大小", "크기"],
   "mods.size.bytes": ["{0} B", "{0} B", "{0} B"],
   "mods.size.kb": ["{0} KB", "{0} KB", "{0} KB"],
   "mods.size.mb": ["{0} MB", "{0} MB", "{0} MB"],
   "mods.updated": ["Updated at", "更新时间", "업데이트 날짜"],
   "mods.published": ["Published at", "发布时间", "공개 날짜"],
-  "mods.unitCount": ["Unit count", "单位数量", "유닛 수"],
-  "mods.buildingCount": ["Building count", "建筑数量", "건물 수"],
   "mods.detail.unknown": ["Unknown", "未知", "알 수 없음"],
   // ------------------------------------------------------------- the beginner guide (ui/guide.ts)
   "guide.title": ["Getting started", "新手上路", "시작하기"],
@@ -4505,6 +4617,12 @@ const STRINGS = {
   // ------------------------------------------------------------- PWA updates
   "pwa.updateReady": ["A new version is ready.", "新版本已就绪。", "새 버전이 준비되었습니다."],
   "pwa.reload": ["Reload", "重新载入", "다시 불러오기"],
+  // a browser with mouse gestures on out of the box (`core/platform.ts`, `hasMouseGestures`), told once
+  "browser.gestures": [
+    "This browser's mouse gestures can close the game: holding the right button and drawing down, then right, closes the tab. Turn mouse gestures off in the browser's settings before playing.",
+    "此浏览器的鼠标手势可能会关闭游戏：按住右键先向下再向右划动会关闭标签页。请先在浏览器设置中关闭鼠标手势再开始游戏。",
+    "이 브라우저의 마우스 제스처 때문에 게임이 닫힐 수 있습니다. 오른쪽 버튼을 누른 채 아래로, 이어서 오른쪽으로 그으면 탭이 닫힙니다. 플레이하기 전에 브라우저 설정에서 마우스 제스처를 꺼 주세요."
+  ],
   // a screen's code that would not load (`ui/missingFiles.ts`), offered the same Reload
   "files.missing": ["Part of the game did not load.", "部分游戏内容未能载入。", "게임 일부를 불러오지 못했습니다."],
   // the store apps' own updater: Settings → General → Update (`ui/updateField.ts`)
@@ -4697,6 +4815,8 @@ const STRINGS = {
   "stat.speed": ["Speed", "速度", "속도"],
   "stat.pop": ["Unit cap", "人口", "유닛 상한"],
   "stat.power": ["Power", "电力", "전력"],
+  "stat.cutOff": ["Cut off", "补给中断", "보급 차단"],
+  "stat.cutOff.desc": ["Off its side’s supplied ground: no power, minimum work rate", "不在己方受补给区域内：不供电，以最低功率运转", "아군 보급 구역 밖: 전력 없음, 최저 출력으로 작동"],
   "stat.productionSlots": ["Production slots: {0} of {1} in use", "生产席位：已用 {0} / 共 {1}", "생산 슬롯: {1}개 중 {0}개 사용 중"],
   "hud.slotsFull": [
     "Production slots {0}/{1}; build another Headquarters for more",
@@ -4778,6 +4898,24 @@ const STRINGS = {
     'AI 正在指挥你的阵营。你可以旁观，或用 "play {0}" 收回指挥权。',
     'AI가 당신의 진영을 몰고 있습니다. 지켜보거나 "play {0}"으로 되찾으세요.'
   ],
+  "console.localOnly": ["That command is for a local game.", "该命令仅适用于本地对局。", "로컬 게임에서만 쓸 수 있는 명령입니다."],
+  // ------------------------------------------------------------- Director Mode's panel (ui/directorPanel.ts)
+  "director.title": ["Director", "导演", "감독"],
+  "director.factions": ["Factions", "阵营", "진영"],
+  "director.command": ["Command", "指挥", "지휘"],
+  "director.watch": ["Watch every faction", "观看全部阵营", "모든 진영 관전"],
+  "director.you": ["Player", "玩家", "플레이어"],
+  "director.brain": ["Player, on the AI brain", "玩家，由 AI 代管", "플레이어, AI 위임"],
+  "director.out": ["Out", "已出局", "탈락"],
+  "director.frozen": ["Frozen", "已冻结", "정지됨"],
+  "director.freeze": ["Freeze its AI", "冻结其 AI", "AI 정지"],
+  "director.thaw": ["Wake its AI", "唤醒其 AI", "AI 재개"],
+  "director.freezeAll": ["Freeze all", "全部冻结", "모두 정지"],
+  "director.thawAll": ["Wake all", "全部唤醒", "모두 재개"],
+  "director.build": ["Buildings", "建筑", "건물"],
+  "director.buildNone": ["Command a faction to put down its buildings.", "先指挥一个阵营，才能放置它的建筑。", "진영을 지휘해야 그 진영의 건물을 세울 수 있습니다."],
+  "director.sky": ["Sky", "天空", "하늘"],
+  "director.now": ["Now: {0}", "现在：{0}", "현재: {0}"],
   // Short names keep the kill feed compact; full names remain on cards and tooltips.
   // ------------------------------------------------------------- units: land
   "unit.engineer.name": ["Engineer", "工程车", "공병차"],
@@ -5447,6 +5585,7 @@ const STRINGS = {
   "voice.unit.ready.1": ["Unit ready.", "单位就绪。", "유닛 준비 완료."],
   "voice.unit.ready.2": ["New unit rolling out.", "新单位已出厂。", "새 유닛 출고."],
   "voice.unit.ready.3": ["Reinforcements ready.", "增援就绪。", "증원 준비 완료."],
+  "voice.upgrade.start": ["Upgrade started.", "开始升级。", "업그레이드 시작."],
   "voice.upgrade.done": ["Upgrade complete.", "升级完成。", "업그레이드 완료."],
   "voice.power.low": ["Power shortage. Production is slowing.", "电力短缺，生产减速。", "전력 부족. 생산이 느려집니다."],
   "voice.power.restored": ["Power restored.", "电力已恢复。", "전력 복구."],
@@ -5467,6 +5606,16 @@ const STRINGS = {
   "voice.relief": ["Reinforcements have arrived.", "援军已到。", "증원이 도착했습니다."],
   "voice.checkpoint.fell": ["Checkpoint lost. The front has moved.", "检查点失守。前线已经移动。", "검문소 상실. 전선이 이동했습니다."],
   "voice.whistle": ["The assault begins. Hold the line.", "进攻开始。守住防线。", "공세 시작. 전선을 사수하십시오."],
+  "voice.fl.vp.taken": ["Victory point secured.", "胜利点已夺取。", "승리 지점 확보."],
+  "voice.fl.vp.enemy": ["The enemy has taken a victory point.", "敌军夺取了一个胜利点。", "적이 승리 지점을 점령했습니다."],
+  "voice.fl.vp.lost": ["We have lost a victory point.", "我们失去了一个胜利点。", "승리 지점을 잃었습니다."],
+  "voice.fl.vp.underAttack": ["The enemy is taking our victory point.", "敌军正在夺取我方胜利点。", "적이 아군 승리 지점을 점령하고 있습니다."],
+  "voice.fl.sector.taken": ["Sector secured.", "区域已占领。", "구역 확보."],
+  "voice.fl.sector.lost": ["Sector lost.", "区域失守。", "구역 상실."],
+  "voice.fl.sector.underAttack": ["The enemy is moving into our sector.", "敌军正在进入我方区域。", "적이 아군 구역에 진입하고 있습니다."],
+  "voice.fl.cutOff": ["Supply line cut. A sector is cut off.", "补给线被切断，一个区域失去补给。", "보급선 차단. 구역 하나가 고립되었습니다."],
+  "voice.fl.resupplied": ["Supply line restored.", "补给线已恢复。", "보급선 복구."],
+  "voice.fl.reserve.low": ["Our reserve is running low.", "我方储备即将耗尽。", "아군 예비가 바닥나고 있습니다."],
   "voice.enemy.sighted": ["Enemy sighted.", "发现敌军。", "적 발견."],
   "voice.unit.lost": ["Unit lost.", "单位损失。", "유닛 손실."],
   "voice.structure.lost": ["Structure destroyed.", "建筑被摧毁。", "건물 파괴됨."],
@@ -6724,6 +6873,7 @@ const DEFS = {
     body: { r: 13, len: 12 },
     weapons: [],
     repairRange: 4,
+    repairNavalRange: 6,
     repairRate: 12,
     repairTargets: 2,
     trail: "tread",
@@ -8945,6 +9095,8 @@ const DEFS = {
     weapons: [],
     power: -8,
     repairRange: 5.5,
+    repairAirRange: 8,
+    repairNavalRange: 8,
     repairRate: 20,
     repairTargets: 3,
     sprite: "u.repairtower"
@@ -10267,6 +10419,7 @@ const MANIFEST_SPECS = [
   { name: "id", type: "id", required: true, doc: ["the mod's id: lower case, letters, digits, `-`; also its folder in the registry", "模组 id：小写字母、数字和 `-`，也是它在仓库中的文件夹名"] },
   { name: "name", type: "text", required: true, doc: ["the name shown in the mod list", "模组列表中显示的名称"] },
   { name: "version", type: "string", required: true, max: 32, doc: ["e.g. `1.0.0`; the game offers an update when the registry's is newer", "如 `1.0.0`；仓库版本更新时游戏会提示更新"] },
+  { name: "hideFromListing", type: "bool", def: "false", doc: ["hide from website and in-game discovery lists; the direct mod page and Add to Game remain available", "从网站和游戏内的模组列表中隐藏；仍可通过模组页面直达链接添加到游戏"] },
   { name: "author", type: "string", max: 80, doc: ["who made it", "作者"] },
   { name: "description", type: "text", doc: ["one or two sentences for the list", "一两句话的介绍"] },
   { name: "homepage", type: "string", max: 200, doc: ["a link: a repository, a thread", "主页链接"] },
@@ -10319,9 +10472,11 @@ const DEF_SPECS = [
   { name: "needsDeposit", type: "bool", only: "building", doc: ["must stand on a deposit", "必须建在矿点上"] },
   { name: "offshore", type: "bool", only: "building", doc: ["stands in open water on its own legs: every footprint tile sea, no shore needed; with needsDeposit, an ore field at sea, which only a builder on the water (the engineer boat) can reach", "立于开阔海面：占地全为海水，无需岸边；配合 needsDeposit 即为海上矿点，只有水上的建造者（工程船）够得到"] },
   { name: "wall", type: "bool", only: "building", doc: ["a wall: one tile that joins its neighbours of the same def (its sheet is sixteen frames, one per set of neighbours: north 1, east 2, south 4, west 8), the last thing a gun shoots at, untouched by a pulse, and it falls without a charge", "墙：单格建筑，与相邻的同种建筑连成一体（精灵图为 16 帧，按相邻方向的掩码取帧：北 1、东 2、南 4、西 8），是火炮最后才会射击的目标，不受电磁脉冲影响，倒塌时没有爆炸"] },
-  { name: "repairRange", type: "number", only: "building", min: 0, max: 64, doc: ["a repair aura, tiles", "维修光环范围（格）"] },
-  { name: "repairRate", type: "number", only: "building", min: 0, max: 1e4, doc: ["hp per second per target", "每目标每秒维修量"] },
-  { name: "repairTargets", type: "int", only: "building", min: 1, max: 50, doc: ["targets served at once", "同时维修的目标数"] },
+  { name: "repairRange", type: "number", min: 0, max: 64, doc: ["a repair aura, tiles; a unit repairs ground and naval units, a building also repairs aircraft and buildings", "维修光环范围（格）；单位维修地面与海军单位，建筑还可维修飞机与建筑"] },
+  { name: "repairAirRange", type: "number", min: 0, max: 64, def: "repairRange", doc: ["repair reach for aircraft, tiles; does not change which targets the source can repair", "飞机维修范围（格）；不改变维修来源可维修的目标类型"] },
+  { name: "repairNavalRange", type: "number", min: 0, max: 64, def: "repairRange", doc: ["repair reach for ships, submarines and swimming amphibians, tiles", "舰船、潜艇与泅渡中两栖单位的维修范围（格）"] },
+  { name: "repairRate", type: "number", min: 0, max: 1e4, doc: ["hp per second per target", "每目标每秒维修量"] },
+  { name: "repairTargets", type: "int", min: 1, max: 50, doc: ["targets served at once", "同时维修的目标数"] },
   { name: "upgradeOf", type: "id", only: "building", doc: ["the building this is the next level of; that one gains the upgrade button", "作为哪座建筑的下一等级；那座建筑获得升级按钮"] },
   { name: "upgradeCost", type: "number", only: "building", min: 0, max: 99999, def: "cost − the source's cost", doc: ["with `upgradeOf`: the upgrade's price", "配合 `upgradeOf`：升级价格"] },
   { name: "upgradeTime", type: "number", only: "building", min: 0, max: 3600, def: "buildTime", doc: ["with `upgradeOf`: seconds", "配合 `upgradeOf`：升级秒数"] },
@@ -11738,6 +11893,9 @@ function modFileUrl(entry, file) {
   const base = entry.base || modRegistryBase(entry.id);
   return (base.endsWith("/") ? base : base + "/") + file;
 }
+function listedMods(mods) {
+  return mods.filter((mod) => mod.hideFromListing !== true);
+}
 function modSummaryFor(entry, details) {
   const { defs, sprites: _sprites, sounds: _sounds, ...summary } = entry;
   const buildings = defs.filter((d) => d.kind === "building").length;
@@ -11782,6 +11940,7 @@ function indexEntryFor(mod, path, base, extra = {}) {
     name: contentText(mod.name, mod.id),
     version: mod.version,
     ...mod.author ? { author: mod.author } : {},
+    ...mod.hideFromListing !== void 0 ? { hideFromListing: mod.hideFromListing } : {},
     description: contentText(mod.description, ""),
     ...mod.license ? { license: mod.license } : {},
     ...mod.homepage ? { homepage: mod.homepage } : {},
@@ -11836,6 +11995,7 @@ function parseModIndex(json) {
       name: contentText(m.name, m.id),
       version: m.version,
       ...typeof m.author === "string" ? { author: m.author } : {},
+      ...typeof m.hideFromListing === "boolean" ? { hideFromListing: m.hideFromListing } : {},
       description: contentText(m.description, ""),
       ...typeof m.license === "string" ? { license: m.license } : {},
       ...typeof m.homepage === "string" ? { homepage: m.homepage } : {},
@@ -12255,7 +12415,7 @@ function agentPrompt() {
   p();
   p("## Units of measure");
   p();
-  p("- A tile is 32 world pixels. `speed` and projectile `speed` are world px/s; `range`, `minRange`, `vision`, `sonar`, `stealth`, `detect`, `repairRange` and `interceptRange` are tiles; `radius`, `body.r`, `body.len`, `splash`, `spread`, `muzzleOffset` are world px.");
+  p("- A tile is 32 world pixels. `speed` and projectile `speed` are world px/s; `range`, `minRange`, `vision`, `sonar`, `stealth`, `detect`, `repairRange`, `repairAirRange`, `repairNavalRange` and `interceptRange` are tiles; `radius`, `body.r`, `body.len`, `splash`, `spread`, `muzzleOffset` are world px.");
   p("- Times are seconds: `buildTime`, `reload`, `burstDelay`, `upgradeTime`, `interceptReload`, `nukeTime`.");
   p("- For scale: the Bison main battle tank is cost 280, hp 620, speed 60, radius 10, body `{ r: 13, len: 12 }`, a cannon of dmg 60 every 1.8 s at range 4.6; a scout car is cost 60, hp 150, speed 120; a war factory is 3×3 tiles, hp 1500, power −8.");
   p();
@@ -12287,7 +12447,7 @@ function agentPrompt() {
   p(`1. Fork ${MOD_REGISTRY_WEB}, add your folder as \`mods/<id>/\` (the folder name is the mod's \`id\`), run \`node tools/check.mjs mods/<id>\`, open a pull request.`);
   p(`2. A published mod carries at least one screenshot of it in play, named under \`screenshots\` in mod.json: 4:3 (1600×1200 is a good size), at least ${MIN_SCREENSHOT_WIDTH} px wide, PNG, JPEG or WebP under ${MAX_SCREENSHOT_BYTES / 1048576} MB, up to ${MAX_MOD_SCREENSHOTS} of them. The game's Settings → Mods page and https://steelti.de/mods show them; the first is the mod's card. Take them in a match with the mod's units on screen (the console's \`give\` puts them there) and crop to 4:3.`);
   p("3. CI runs the same check on the whole registry: ids must be unique across every published mod, so prefix a generic word with your mod's id (`ironworks-bunker`, not `bunker`).");
-  p("4. Once merged, the index is rebuilt and the mod appears in the game's registry list and at https://steelti.de/mods, where its installs are counted. Bump `version` for every change; the game offers the update.");
+  p("4. Once merged, the index is rebuilt and the mod appears in the game's registry list and at https://steelti.de/mods, where its installs are counted. Set `hideFromListing: true` to omit it from both lists and search while keeping its direct https://steelti.de/mod/<id> page and Add to Game link. Bump `version` for every change; the game offers the update.");
   p();
   p("## Rules");
   p();
@@ -12525,6 +12685,7 @@ export {
   indexEntryFor,
   isContentStamp,
   isContentStamp as isModStamp,
+  listedMods,
   menuCutMapError,
   missingContent,
   missingContent as missingMods,
