@@ -34,6 +34,7 @@ the Rusted Expansion mod uses for Rusted Warfare's stock roster (prices ×0.8, h
 plugin's giants compressed at the top so a 75 000-credit ship is not 60 000 metal.
 """
 import hashlib
+import importlib.util
 import json
 import math
 import os
@@ -49,10 +50,10 @@ SKY = os.path.join(REPO, "rusted-warfare-mods", "fg-rusted-league")
 UNITS = os.path.join(SKY, "assets", "units")
 GF = os.path.join(UNITS, " GF")
 RES = os.path.join(SKY, "res", "drawable")
-STOCK = os.path.join(REPO, "rusted-warfare")
+STOCK = os.path.join(REPO, "rusted-warfare-mods", "rusted-warfare")
 TRANS = os.path.join(SKY, "assets", "translations", "Strings_zh_cn.properties")
 MOD_ID = "fg-rusted-league"
-MIN_GAME = "0.8.14"  # format 2: selectable factions and mod headquarters
+MIN_GAME = "0.8.16"  # executable format 4 also requires host API 2
 DRY = "--dry" in sys.argv
 NO_MEDIA = "--no-media" in sys.argv
 OUT = os.path.abspath(sys.argv[sys.argv.index("--out") + 1]) if "--out" in sys.argv else HERE
@@ -733,6 +734,15 @@ ROSTER = [
      dict(kind=U, tier=3, zh_name="蛟龙")),
 ]
 
+# Authored GF units and deployment forms missing from the initial roster.
+ROSTER += [
+    ("kongmu2", "sky-support-carrier", "Sky Support Carrier", "Mobile aircraft factory with a rapidly regenerating shield.", dict(kind=U, tier=3)),
+    ("hangmu2", "flying-battle-carrier", "Flying Battle Carrier", "An airborne factory that deploys as a ground base.", dict(kind=U, tier=3)),
+    ("hangmu3", "battle-carrier-deployed", "Deployed Battle Carrier", "The carrier landed as a forward production base.", dict(kind=U, tier=3, domain="ground", form=True, extra={"speed":0})),
+    ("prop2", "floating-array-landed", "Landed Floating Array", "The floating defence array in its landed form.", dict(kind=B, tier=2, power=-6, tower=True)),
+    ("拦截机3", "carrier-interceptor", "Carrier Interceptor", "An interceptor launched by the flying carrier.", dict(kind=U, tier=1, domain="air", wing_plane=True, extra={"pop":0}, untargetable=False)),
+]
+
 # the aircraft carrier's levels (`航空母舰1`…`4`): a form each, reached from its card
 CARRIER_LEVELS = {n: f"aircraft-carrier-{n + 1}" for n in range(1, 5)}
 for n, suffix in CARRIER_LEVELS.items():
@@ -788,7 +798,7 @@ PRODUCTION = {
                    "shield-tank", "kirov", "lord-of-the-sky"],
     "black-tech-factory": ["experimental-tank", "star-warship", "battlecruiser", "hover-escort", "b52", "laser-ufo",
                            "teleporter", "land-cruiser"],
-    "airfield": ["vanguard-gunship", "heavy-gunship", "shield-tank", "skyshaker"],
+    "airfield": ["vanguard-gunship", "heavy-gunship", "shield-tank", "skyshaker", "sky-support-carrier", "flying-battle-carrier"],
     # the hero tank ranks itself up from its card (`morph` buttons), as the original's does
     "hero-barracks": ["hero-1"],
 }
@@ -1255,13 +1265,6 @@ def convert_weapons(ini, d, domain, ov, who, rings=False):
         kv = turrets[0][1]
         # a turret waits out its warmup before every shot, and fires at most once a tick
         reload = max(1 / 60, seconds(kv.get("delay")) or delay_default) + (seconds(kv.get("warmup")) or 0)
-        usage = num(kv.get("energyUsage")) or 0
-        emax = num(core.get("energyMax")) or 0
-        regen = num(core.get("energyRegenWhenRecharging")) or num(core.get("energyRegen")) or 0
-        if usage > 0 and emax > 0 and regen > 0:
-            shots = max(1, emax / usage)
-            recharge = emax / regen / 60
-            reload = min(30.0, reload + recharge / shots)
         snd = (kv.get("shoot_sound") or "").lower()
         homing = (num(p.get("turnSpeed")) or 0) > 0 or "missile" in snd or "rocket" in snd
         arc = boolish(p.get("ballistic")) or (num(p.get("initialUnguidedSpeedHeight")) or 0) > 0 or ov.get("arc", False)
@@ -1574,7 +1577,7 @@ def convert():
             if regen >= 0.5:
                 df["regen"] = round(regen, 1)
         elif mend < 0:
-            note(did, f"loses {-mend} hp a tick in the original (a Kirov's leak); not ported")
+            note(did, f"loses {-mend} hp a tick; restored by the source extension")
         if boolish(core.get("canNotBeDirectlyAttacked")) or ov.get("untargetable"):
             df["untargetable"] = True
         df["_actions"] = rw_actions(ini)
@@ -1614,15 +1617,17 @@ def convert():
             if is_building:
                 back = resolve(gfx.get("image_back", ""), d)
                 b = open_art(back, did) if back else None
-                first = im.crop((0, 0, pw, im.height)) if frames > 1 else im
                 if b is not None:
                     b = clean_alpha(b)
-                    cv = Image.new("RGBA", (max(b.width, first.width), max(b.height, first.height)), (0, 0, 0, 0))
-                    cv.alpha_composite(b, ((cv.width - b.width) // 2, cv.height - b.height))
-                    cv.alpha_composite(first, ((cv.width - first.width) // 2, cv.height - first.height))
-                    first = cv
-                    frames = 1
-                    im = first
+                    width, height = max(b.width, pw), max(b.height, im.height)
+                    strip = Image.new("RGBA", (width * frames, height))
+                    for frame in range(frames):
+                        cv = Image.new("RGBA", (width, height))
+                        cv.alpha_composite(b, ((width-b.width)//2, height-b.height))
+                        part = im.crop((frame*pw, 0, (frame+1)*pw, im.height))
+                        cv.alpha_composite(part, ((width-pw)//2, height-part.height))
+                        strip.alpha_composite(cv, (frame*width, 0))
+                    im = strip
                 bb = im.getbbox()
                 if bb:
                     # a building's art stands in a big blank frame in some cases; the game fits the footprint
@@ -1922,7 +1927,7 @@ def main():
         "v": 2,
         "id": MOD_ID,
         "name": ["FG Rusted League", "FG 铁锈联盟"],
-        "version": "0.3.1",
+        "version": "0.4.1",
         "minGame": MIN_GAME,
         "author": "空中之主 (art by 有人, 基卡 and SS元首)",
         "description": [desc_en, desc_zh],
@@ -1952,6 +1957,11 @@ def main():
         found = [f"maps/{f}" for f in sorted(os.listdir(maps_dir)) if f.endswith(".steel-tide-map")]
         if found:
             manifest["maps"] = found
+    spec = importlib.util.spec_from_file_location("source_parity", os.path.join(HERE, "source-parity.py"))
+    parity = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(parity)
+    from types import SimpleNamespace
+    parity.apply(SimpleNamespace(**globals()), manifest)
     if DRY:
         art = "--art" in sys.argv
         for d in defs:

@@ -1,0 +1,5334 @@
+{
+  "original": "rusted-warfare-mods/adolence",
+  "sourceInventory": [
+    {
+      "file": "all-units.template",
+      "sha256": "42bf8e01090b39c4685a80bd5ca78fa54a7447eaac51c9d2f748410017f4b75a"
+    },
+    {
+      "file": "maps/(10P)危险的市区.tmx",
+      "sha256": "64d572c4b03c806e96c4b1a528c5c7d8d11684cc49accd6170a6142a9a7c3c0b"
+    },
+    {
+      "file": "maps/(10P)洛杉矶郊区之战等待陆战一师马奇空军基地支援 .tmx",
+      "sha256": "bdfaf443dfa7f7b5b61d494518a4c349c64a66c21149abaec5131f8bd21cba67"
+    },
+    {
+      "file": "maps/(1v2)绿色生活-城镇住宅小区.tmx",
+      "sha256": "8ad0ef7c948d06a3c4b475437a51274d40b8e82ca10ecb37dc15014c9b4fb792"
+    },
+    {
+      "file": "maps/(4p)港口城镇-沙漏倒计.tmx",
+      "sha256": "e52ec58a8fd532ee79a3a6f3b5f78929a547ee320bf60bf8305233de67d1a25f"
+    },
+    {
+      "file": "maps/(4p)灰色城市-铁路网络.tmx",
+      "sha256": "1c54b9c0256b51ecd8b0df57e30e10afd8dd7f408f4a27599ed6029a96ce02d2"
+    },
+    {
+      "file": "maps/(4p)遗失文明-断桥商业街.tmx",
+      "sha256": "ad4ea3bdfd5e176e0b3550cc9c084e41c13f475c44f443a252ab95748287ea1a"
+    },
+    {
+      "file": "maps/10P沙漠公路.tmx",
+      "sha256": "d214604b8b1cfc2385a1736c023b2fd19225c7ffbeb6f58380d697e98488056a"
+    },
+    {
+      "file": "maps/4p长桥久战.tmx",
+      "sha256": "6c3ee1ac5c0d8d8559e352c3023e56b9490d2470daae96b201ab3ba365f9d0d6"
+    },
+    {
+      "file": "maps/8p_industrial_zone_mini_bySeCtAnT_ft.Teoshebo.tmx",
+      "sha256": "485d010acc07ba861e7b53f7ae5991f02762aee8b0368e54407bf014a4859122"
+    },
+    {
+      "file": "maps/大城市平原战争超大地图.tmx",
+      "sha256": "6673db99f841b7bc032fe6f87a68179899998033e370d9021454788c99e1a8f3"
+    },
+    {
+      "file": "maps/好多入😍😍😍.tmx",
+      "sha256": "7a32828da2fdf766d6587f02c23a8b342df319422c5a3b8a9efddca5ba2b7e30"
+    },
+    {
+      "file": "maps/尸城.tmx",
+      "sha256": "7064b66215374888941517a20431e5c9470887ed99fe44cc08014754b51b2d6a"
+    },
+    {
+      "file": "maps/森林湖郊区[8p].tmx",
+      "sha256": "8f954fb1cc08b71427ded540216c8e64bd51f77dffba1bf1882bf4e69ffff5d4"
+    },
+    {
+      "file": "maps/森林湖郊区官方重置版.tmx",
+      "sha256": "af8f8f0a93646e932c0fd8f22e70ef263ab5c3cfcb66f5064d95252172c9869e"
+    },
+    {
+      "file": "maps/隔岸.tmx",
+      "sha256": "ff32fc3ddfef590b22c6935754f4f3fbe9e9923e88ec700adc31245b8685f4fa"
+    },
+    {
+      "file": "police/A-空警/all-units.template",
+      "sha256": "09c7e2e0be6fb19b327b9e5cae954406f52173345d051b1a4afae35d897db100"
+    },
+    {
+      "file": "police/A-空警/战斗机/PEK.ini",
+      "sha256": "9a8a6143e65eeec5b1fff21bc79ab5ed0b2a7a6d2a891c206236cc1cb2621fcf"
+    },
+    {
+      "file": "police/A-空警/战斗机/战机.ini",
+      "sha256": "6e70e47dbf0f3029f12a0d3073d439b18c676a76b2ddfe5f3128e67b38f9622a"
+    },
+    {
+      "file": "police/A-空警/战斗机/战机A.ini",
+      "sha256": "0f929b716c1ee87956973dcb52be2baea2989b57ef039cd1b124447b7cc85b0b"
+    },
+    {
+      "file": "police/A-空警/战斗机/战机B.ini",
+      "sha256": "b4ae80f1b240e98a29f1cb10c54028b6fafcaabca694511c5697a83e88b03b06"
+    },
+    {
+      "file": "police/A-空警/战斗机/战机C.ini",
+      "sha256": "30d4fa33bf5c537ec090556eb68d447328c9103a1b9a9313264bc0c7a6b8d836"
+    },
+    {
+      "file": "police/A-空警/战斗机/战机K.ini",
+      "sha256": "e581c066f6117a5b011ecde324ed80e7e99b75ab8197b817e05b105ae6d21fe5"
+    },
+    {
+      "file": "police/A-空警/战斗机/（彩蛋单位）小丑-自然常数.ini",
+      "sha256": "06a3e3ebbbc00d96fddd7d48f3c5d5712347ecbae3b629173d34d0814254ef86"
+    },
+    {
+      "file": "police/A-空警/直升机/武装直升机/all-units.template",
+      "sha256": "2294a03c8d0250111537527280b77867d68bc21a333674b32962ff586bd80ed0"
+    },
+    {
+      "file": "police/A-空警/直升机/武装直升机/武陟.ini",
+      "sha256": "a8944a6be575de085fa7298eb80f23f510f07bae2dd924771ff8955721d1a4ad"
+    },
+    {
+      "file": "police/A-空警/直升机/武装直升机/重型武直.ini",
+      "sha256": "47bbd072e6938aa0e12bef15b831d60f7519ea6bc8ce9227d25d0f6c8a44149b"
+    },
+    {
+      "file": "police/A-空警/直升机/武装直升机/重武坠毁动画.ini",
+      "sha256": "ce030d876196f5a416d905cfd0eb0f2bd88c164b2c634673f4d8c788e423b39d"
+    },
+    {
+      "file": "police/A-空警/直升机/警用直升机/helicopter.ini",
+      "sha256": "f1360ee243efd054b0b72ecc9855492df7f0600b6000d3b861fda5ea81b2982b"
+    },
+    {
+      "file": "police/A-空警/轰炸机/bomber.ini",
+      "sha256": "2201021d501d3edaa4d84747feb58bb89b29167b546b1e9906a0778d1a69c0a6"
+    },
+    {
+      "file": "police/A-空警/轰炸机/塔切换.key",
+      "sha256": "d837195316abf21aec8526e078c1da8a56d03353e20bedba6536681792489e94"
+    },
+    {
+      "file": "police/A-空警/轻武直/武装攻击机.ini",
+      "sha256": "9b7003d750647b78597aeb6d3bec284a297f67b703faca8638fe062e6c209a4a"
+    },
+    {
+      "file": "police/A-空警/轻武直/武装无人机.ini",
+      "sha256": "9fd81766583c4b66c165091620499b3c5578d610a65088210798426beefef41a"
+    },
+    {
+      "file": "police/A-空警/运输机/PEKK.ini",
+      "sha256": "c6c9f5045e970e9b3cb58c9311a624c5080cc7dfc0b964a49e81fb7b8e60e260"
+    },
+    {
+      "file": "police/A-空警/运输机/all-units.template",
+      "sha256": "3a526e8643ce13ccbfcfce30e00268d7f94d3ccc07815f1c83a66132fb19d0fe"
+    },
+    {
+      "file": "police/A-空警/运输机/运输.ini",
+      "sha256": "9e5428de1c7d5e7430779e645441a624b50368a2bbc2a92c823c598a88a39745"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/无用堆积/Simplified.ini",
+      "sha256": "77de906b6349ed4d9cbca455a46c20929c6230ec808ecf041bf01a8d1d17a5f1"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/无用堆积/daynNight.ini",
+      "sha256": "35925df3318947b7e99f58c529d24fe002e032699dcfc5dea332c99132f5cd2c"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/无用堆积/daynNight_clone.ini",
+      "sha256": "9de9ef862197f3eab1aa1d4aac52403df0384b64d3ba506d55823339f96dd639"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/警用研究-A.ini",
+      "sha256": "263ea3860ae92179f4612257c3d11b7e278ce158bc788e3dce7984cd4de65d18"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/警用研究-B.ini",
+      "sha256": "2754732ebb758e2ae9e0eb1748c550195959ed82e9d0af89c5d98c559afaf07b"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/警用研究-C.ini",
+      "sha256": "36e1aa4f2ca85ae2dee8f2be67d80bf15b45dda75df3e42f7bb7a0bc35be49d3"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/警用研究-D.ini",
+      "sha256": "243636d93976bbb108ba836254321887ceb5c6b7126a4df4fa70315ea374f382"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/阵营选择-AI.ini",
+      "sha256": "1c95bfe462b49492a9d25cda5287f64469f803b577b95c9e7c709ab1d546bdc6"
+    },
+    {
+      "file": "police/B-建筑/0.警用研究所/阵营选择.ini",
+      "sha256": "eabf9da239531d1c63238e3cfdb4a4af493a69209f563d732691cf59351fbaeb"
+    },
+    {
+      "file": "police/B-建筑/1.警戒中心/k.ini",
+      "sha256": "dec156f2bb6c2b79d953991c88451256cfa5dfcb6a5b6a93779b1448890f5292"
+    },
+    {
+      "file": "police/B-建筑/1.警戒中心/kk.ini",
+      "sha256": "6992e6b6667f503028b4f4c8c005b894203b5241444046e97fee28c1535de4af"
+    },
+    {
+      "file": "police/B-建筑/2.警用哨所/mechFactory.ini",
+      "sha256": "dc408a2616276194a4bf0aa2b6cf64244e249d64eecd3fea4b467933e4764d89"
+    },
+    {
+      "file": "police/B-建筑/2.警用哨所/中难度.ini",
+      "sha256": "87aa072b3e86b6473775ac5ff6bfa12e3747d2a0e1c55c6140e26d3cfc35ea7f"
+    },
+    {
+      "file": "police/B-建筑/2.警用哨所/高难度.ini",
+      "sha256": "ec902fb794f9ba24d445f6ada4b014dd5579757543a51647cee81a73c30b4ac0"
+    },
+    {
+      "file": "police/B-建筑/3.警用卫所/mechFactory.ini",
+      "sha256": "04b7d84b5c8fdab7d493675ace6547237307c8764f458590cb4f26e51f6d197a"
+    },
+    {
+      "file": "police/B-建筑/4.警用油所/mechFactory.ini",
+      "sha256": "f5be58377691eaead5ef3284e7684610fcdaeca3afe2c1893ca3880c2ab2d1d7"
+    },
+    {
+      "file": "police/B-建筑/5.警用车库/k.ini",
+      "sha256": "97884292dc8d1e7afd71b368aab2025b1efd1cb2c22d84638b07b896225e3073"
+    },
+    {
+      "file": "police/B-建筑/5.警用车库/kk.ini",
+      "sha256": "a973141958b5d8e0b148867b1aeede01a2812796337405d80369d9b08556c0a7"
+    },
+    {
+      "file": "police/B-建筑/6.警用机坪/k.ini",
+      "sha256": "d40b00cf919596438b5af193518d585f2f364065ebc924a2bede2fe02f26c3c9"
+    },
+    {
+      "file": "police/B-建筑/6.警用机坪/kk.ini",
+      "sha256": "8285143309c3b5a3a4c3005b11eb99cbdc568f0ef056e3a06d60964d41e49e8f"
+    },
+    {
+      "file": "police/B-建筑/7.海警基地/船场.ini",
+      "sha256": "51143d8297bdf1205e78c3cb74097bdc7e5dabf10f7dde364027b9716339b8b3"
+    },
+    {
+      "file": "police/B-建筑/中型塔座/all-units.template",
+      "sha256": "2e26009c455dc34c3f059ce5c2b121a3ac896e52914ba47503483ed0087fae51"
+    },
+    {
+      "file": "police/B-建筑/中型塔座/中型塔座.ini",
+      "sha256": "dfcd47bc1cc3e97d06a692fff2955de309f0abc71ec818c959a4de3a87e393cf"
+    },
+    {
+      "file": "police/B-建筑/中型塔座/机枪塔位.ini",
+      "sha256": "3083160db7db4149c14db799a40f5d29a9b3bc31ed1a944ae483754a5d528b39"
+    },
+    {
+      "file": "police/B-建筑/地雷/普通地雷/普通地雷.ini",
+      "sha256": "971288f759d24c4f650db71c800abf2a13fbd601f35e3d2f67042ad5b78c6a5b"
+    },
+    {
+      "file": "police/B-建筑/地雷/燃烧地雷/燃烧地雷.ini",
+      "sha256": "3f52bf05922890b5dfa7655bac87536880cdadec407c053e6db8ce62cec7833f"
+    },
+    {
+      "file": "police/B-建筑/基础扭机/简易拒马.ini",
+      "sha256": "d76e8353d937121ee2a0dfff73fe4ba9e2ea040bd93530bb9d22cb45db18c50e"
+    },
+    {
+      "file": "police/B-建筑/太阳能板/供应站.ini",
+      "sha256": "3f9b19a83e95576b1e34af9f3b25deb53f137ebdc7123e7b8782dca91886e75c"
+    },
+    {
+      "file": "police/B-建筑/太阳能板/供应站T2.ini",
+      "sha256": "25b581ef04f1766918ba186513cd2533b66afd01a72d79f28b7dff6649bed1e9"
+    },
+    {
+      "file": "police/B-建筑/武器架横/基础架台.ini",
+      "sha256": "432d787c66e1fd1a37c385d7d23dcde12ce2bc738591a549f50f1e28e6d9a403"
+    },
+    {
+      "file": "police/B-建筑/武器架横/武器架台.ini",
+      "sha256": "92665af4eb5069d515637bfc254a1efdadea430d675fca03a593cf928821f3a2"
+    },
+    {
+      "file": "police/B-建筑/武器架横/物资架台.ini",
+      "sha256": "d8e926b6e634f08bde29a9c527dd569b074e448e7db0fcac420506240df0ce76"
+    },
+    {
+      "file": "police/B-建筑/武器架竖/基础架台.ini",
+      "sha256": "fa3d9a8d711458cfebd86c27683aaed3d61de18061143ea5a038436c0f37f4eb"
+    },
+    {
+      "file": "police/B-建筑/武器架竖/武器架台.ini",
+      "sha256": "830c1e9d12afb012e810c602c4f45945fe943e8a3e318cff3698973e0fc6ea14"
+    },
+    {
+      "file": "police/B-建筑/武器架竖/物资架台.ini",
+      "sha256": "44535a299e6a8bd1a0892b79e4075fcaabe756d7b44d0cba1615517e78dcd9a2"
+    },
+    {
+      "file": "police/B-建筑/物资储藏点/物资储藏点-Ⅱ.ini",
+      "sha256": "57806a22aee24dc8f824c9114d66da93dbd944dcbc98fb2b9e633032a525f0a2"
+    },
+    {
+      "file": "police/B-建筑/物资储藏点/物资储藏点.ini",
+      "sha256": "62ebca165d4f10e3f7e397a70c67a20c5064e4cb3c7cdc871de676c327f2f025"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/all-units.template",
+      "sha256": "64353cc291a66d97a1e2dfcfbfc815badce19102fa4cc6ab51a233f5adb5c84a"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/平民2/平民.ini",
+      "sha256": "7e3233863d55a652fec6d87ccb8b3a4a6f59a94d7c6daf7926838dbc92ddab2c"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/平民2/平民2.ini",
+      "sha256": "d0b106578009d96dbad0afb7929f2c3f568891db875ec5d328e237916142474a"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/平民2/随机.template",
+      "sha256": "3c6d298ae3fad6e5e30558263b4de951040fa4e9d6237ad8fd94a4a714682f25"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/武警.ini",
+      "sha256": "69976fd41b317d2331bd8f14fb26214066efed86a794e351c1823214d2c4158b"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/民警.ini",
+      "sha256": "1e8801c29e22eaf6430133457b21a4140ff18f20e4b0ba5b43ac8dd926f03d06"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/沙漠.ini",
+      "sha256": "9f6db07fdbc787b9b4a656a784063aad5457296d50466c8f8d9a1f91dc727a1c"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/防化.ini",
+      "sha256": "757d032e20b320da605e011834948aedd801cc7fe87711f4ad1291f800763fe4"
+    },
+    {
+      "file": "police/L-陆警/1.手枪/随机.template",
+      "sha256": "ec5442f8221664564381535d7beee688ba1ad298f42c1ec18bfa4aa3ce5d231c"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/all-units.template",
+      "sha256": "694067b1773c7d47d9cf8540d013a41e9e5245a9f24ebcdec1974b8d7fa88b82"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州武装_反坦克.ini",
+      "sha256": "37816e54a3cdb7ca46d37527c241e23dccaed6df92011526734f5e4558dec9a2"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州武装_机枪.ini",
+      "sha256": "dc7cdfa804131bddd213fc8bdb1b55883570ab4672ad3c6bc90b7700a7861f2d"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州武装_步枪.ini",
+      "sha256": "561a7dfad593173d3d616e6e4be10be4ffd97d249ae2de9b5f2576869bfc103d"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州特战_反坦克.ini",
+      "sha256": "9d5b6f7453e39c161168f0701e9bd09bee293b6ae644fce7a0309183f1bfb3a6"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州特战_机枪.ini",
+      "sha256": "a6b0f2c2a38276229c4ab8bdbbc68fe201c1a9d345c1b7344cfa30dcbdb1a7fd"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州特战_步枪.ini",
+      "sha256": "a7bd28338c1485dd2a989eb9fa43f6ad0cf4e8b2bb604d2ddfe7b7dc64c8faff"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州特战_狙击.ini",
+      "sha256": "6d49f5c9c0deecfee0b70bf97135914e90742a99f3b9cfd0d304ea385cad6819"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/榴弹模板.template",
+      "sha256": "1e5701a5b118527b27d52d253ce76f7cec8ad0785cfdd9a5d643bc7bc673fb97"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/激光模板.template",
+      "sha256": "bb05448354ad8aa0619b9d1c4efa26ef54b34e4233b277600ae728995ca08e75"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/火箭弹模板.template",
+      "sha256": "38108eed3f308df7f40ef5a1f48fa533202648038670a0fa93df3af3d655ed65"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-陆战迷彩-MG.ini",
+      "sha256": "abb5c62f5beba336577cf1a69dbd1e6d99e8354e802df905f69ab41350e3d854"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-陆战迷彩-宪兵.ini",
+      "sha256": "f332645f4f061d955999811fd92fa42862004d81e05768829fa58051a00e7a0a"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-陆战迷彩-面罩关.ini",
+      "sha256": "2b9eb0f7958b6cd8a5d31cb7b7ff641ab563c66e366b4d4c87885be0167e4e6d"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-陆战迷彩-面罩开.ini",
+      "sha256": "14fffee98842027c3b11efedf15b225353617540e766709ec7cc3bb1e922f15d"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-饿了么.ini",
+      "sha256": "651dcf02943d3ef70ca99d17747e66c1bccdadf7d086029873a9755a4112172a"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/肃清协议-MG.ini",
+      "sha256": "78e15960351b8944746eb4b18b8f5c13cb06e262e5c86bd44c7cecd8d4005df7"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆军/军队-草地迷彩.ini",
+      "sha256": "31ee23f7f9b48b9b1745c58c5af85f90a747a54bcb680c5abf23e6ab56c812a6"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆军/军队-陆战迷彩.ini",
+      "sha256": "810e8d3d6300b11f36c8cfe855745fbc40674d87320be3dd6bd95368e23f218d"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/士兵-步枪.ini",
+      "sha256": "def018cb390367fe74742fd5d2f174130665b9569a0046a83e6108acde068a92"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/士兵-步枪B.ini",
+      "sha256": "e0a6be246cd35e28c1758908d50f6cb93ac5daa70c5b9a4b0afc1914593c1844"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/榴弹模板.template",
+      "sha256": "1e5701a5b118527b27d52d253ce76f7cec8ad0785cfdd9a5d643bc7bc673fb97"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_侦察兵.ini",
+      "sha256": "295ae756d328504b5248dc02d3fdf5dfbc978a5e7e1a13154750cf27801f355e"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_反器材.ini",
+      "sha256": "5d3995239c297072b4ca307638946fbfccb395b62a7e82371a569af69eabcae9"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_反坦克A.ini",
+      "sha256": "65571da9c1aec0e174941a077b74adcb2b08a231ea6cd707661d7d1624c9d6c9"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_机枪A.ini",
+      "sha256": "e983ecb78b7e39fc4945fc62124a2bfb2ea9876eb3d88a07f1603793c8a28b37"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_步枪A.ini",
+      "sha256": "db2254b43e2a6e12589a527d3bd7b939947601d7ae253a88310d005319935144"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_步枪B.ini",
+      "sha256": "9f18b044f07c11a529aac33e426b2954662baf7a0ec653caf2b8a6d850007302"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_霰弹枪A.ini",
+      "sha256": "a3a50d2e3f067b946198c5ba600f08cc94b06081b7c9b97c5dcf13c4db5406ed"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/激光模板.template",
+      "sha256": "bb05448354ad8aa0619b9d1c4efa26ef54b34e4233b277600ae728995ca08e75"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/火箭弹模板.template",
+      "sha256": "81e3cedad02e3d5f7e28cf2dd8def58f12c9d0ae1d9164e1b48b0aefd9243974"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/军事单位/随机.template",
+      "sha256": "e8291eb82736d95758ac1cef3e397d1c135cdae9e0c7d69836702403c9625c68"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/喷火单位/all-units.template",
+      "sha256": "12fe0eb45bf1de87175830b684cd02bac7ac70356f1a89fe3372a44dc6518c14"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/喷火单位/喷火.template",
+      "sha256": "2b269f4a79b37ee33313912cbd258a9a6364979934bd1b233f74e635287058fb"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/喷火单位/国民警卫队-陆战迷彩-面罩开.ini",
+      "sha256": "7a97159c9df856fee8d6b0cbc3665445f80e0576426c5eea27e3addf2ed8507f"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/喷火单位/随机.template",
+      "sha256": "6f9da63f3c3e915d036de54264471dc31ee59f710f3eaae2ebb0a008f67f2ee3"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/all-units.template",
+      "sha256": "a96e4c040c3d593ebb81f94359ab4e37d4b708fb43f8cb92203cbfee281d1590"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民-补给.ini",
+      "sha256": "74b232acf6c929e2eec0ad271d88efbdfca1128b89e1b95d20e1020cc3c2ef6e"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民-资金.ini",
+      "sha256": "ee8e28cdd04ebcfbce381257e0a58bd034bbbe9775f34659eab3becd4753edba"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民.ini",
+      "sha256": "a62245b80b39f47a59b52e6f323c81cdf31e9c70d611b5614b114312a7a1b71a"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民1.ini",
+      "sha256": "4eabba3764d8b149db903493a1431235f4b30e37e03bd4b3d8c9f82d5e461ec1"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民2.ini",
+      "sha256": "c06ebea6d4f8df9ada201007a77737c3c5d8c951888a319eb2c50ae0159a8d6f"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民3.ini",
+      "sha256": "d990a2ae2839c35290fc45c01a21ef05979f59cdcb672dbe988d653cbfee64ac"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民4.ini",
+      "sha256": "4e67f45a771f9fb925402fa4a9f14208a2017be127f7ab73df7b3a7098405c3b"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民5.ini",
+      "sha256": "e45beec3a0215320c553e87e30b3144970d289c7694b777c5cd031ca7c4b665a"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/平民慌张.ini",
+      "sha256": "b7a162c4c0a812f9c4398fb0a7b9f5a59e0e7189c835009953d01db4cbacf6ba"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/平民单位/随机.template",
+      "sha256": "6f9da63f3c3e915d036de54264471dc31ee59f710f3eaae2ebb0a008f67f2ee3"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/all-units.template",
+      "sha256": "72b8bd2c5aeb614c2008695cc55a30ac56093a51402f476445db75c55adae795"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/民警/交警.ini",
+      "sha256": "3e8fb4cbf5f5850989c78916559d434e4fcac62a69d1b54807802b183694933d"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/民警/卫警.ini",
+      "sha256": "b4af4f78856c9a01232f760440face38237dcc6f8cf55e3393147b869494d697"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/民警/民警.ini",
+      "sha256": "24a1c9dfbbf43614c949cb3a2baaf8eb1befd3886b710c752fcef5eb1ffe8bd3"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/特警/军队-沙漠迷彩.ini",
+      "sha256": "2c671b432088187d2aced5ab086a389fda256d0b493644fab2ce497683a819af"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/特警/军队-海战迷彩.ini",
+      "sha256": "52cbd4f009825747c151bc94385b9cc82a77b8d095deaa5c0dfc9dba9e482ca1"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/特警/武警.ini",
+      "sha256": "bb250be1684114ed3a6f9622cd0c2aeddbc1e641fbb879da386b39859db1f76e"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/防化/防化 (红).ini",
+      "sha256": "1e3156b7993a02916bb0c8fde4f2bfebddc0d24800758bc3076daf3bdadd977f"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/防化/防化 (绿).ini",
+      "sha256": "2b97e7cf9ba98557b4f92f93db07eecef8e7d8a0faccf5e0721c82be7fddab65"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/防化/防化.ini",
+      "sha256": "5286398742665c5e681c877d85d45e89da2d87402d7bfa436a77a4cd9edb36ab"
+    },
+    {
+      "file": "police/L-陆警/2.非手枪/警务单位/随机.template",
+      "sha256": "6f9da63f3c3e915d036de54264471dc31ee59f710f3eaae2ebb0a008f67f2ee3"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/all-units.template",
+      "sha256": "bebc76401b73ae079eb1ac8ad0254eeaf8018e2a3cd9c8334aad27910cf54360"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用两栖车-3p/警用装甲车-C.ini",
+      "sha256": "3e4a078495156a66312dd381a17fce4521e1cb2a0974b144506f3f4997117c3f"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用伏击车-17p/装甲车.ini",
+      "sha256": "17b8b8ab3ba9c913315972b356a6cd988788960aca58ce435c8d61b6b0c3f67b"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用伏击车-17p/装甲车后部.ini",
+      "sha256": "fb684b9bab9130795ade57c9597f6170ed32f2cdb2405f5390bdc287b4a93db5"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用指挥车-6p/警车-1.ini",
+      "sha256": "be9a98683ab33b2f9c87f0da49e303dd36c22ec3d94893344d57531c71bf3021"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用指挥车-6p/警车-2.ini",
+      "sha256": "e410bd181c16dd9851706b55c969dac329739f35f6b66f8042a7b39bc96b7e7f"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用指挥车-6p/警车-3.ini",
+      "sha256": "c35af791bd9b5336ddc8700288536eca0f225e33c4d70b1e8e47ba55ccae9f89"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用指挥车-6p/警车.ini",
+      "sha256": "ab4f14d7d88cc30922adac2c558c750048325d91196c5363c66d8f91f332ee4d"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用装甲车-5p/警用装甲车-B.ini",
+      "sha256": "764e201d015dcc10b07da4c937a158260ea757af1bd1c2eee7028b973659a15a"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警用重卫车-9p/警车2.ini",
+      "sha256": "d0ab6d842319a06007200c77728b792a21715c1c11257dbe682f51bbcc43277f"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警车-3.ini",
+      "sha256": "86d554f06fdf1148b68ada819103b9863ad2a83183342926eb977e06632632ab"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警车-4p/警车-K.ini",
+      "sha256": "78a206aa53cfe7ac6a1f9237bd5f351742fc44f3a99e87bfeeaae7db07c7bb04"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警车-4p/警车-P.ini",
+      "sha256": "34c8ddbe7ec9bb84f905328c534b32b0d6b04e21e6d8fe2fb7f2bc542ee8a18a"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警车-4p/警车.ini",
+      "sha256": "6b4d6d266ba8a5b81ea73e88ad2629e0a647fab2d4e76c4c11d41f01d1aaf606"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警车-4p/轿车 (X0rX).ini",
+      "sha256": "9cc603bda57b622208596211ec397bbec4f230853101da4dd0e7f601d41231fe"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警车-4p/轿车2.ini",
+      "sha256": "277270f70089c9e40348d376a5690f86fca54d13013df101494c53b7d7baae20"
+    },
+    {
+      "file": "police/L-陆警/3.警车组/警车-4p/轿车3.ini",
+      "sha256": "ab975bb487c5ca7f4cc9b5593687e1897f97f68ceb68f6b4769fe5fda4beb9c9"
+    },
+    {
+      "file": "police/L-陆警/4.白钢车组/all-units.template",
+      "sha256": "458a257af6aa9c79600b1adab0c873211f272643c2f8f613297aef52b8ecf38a"
+    },
+    {
+      "file": "police/L-陆警/4.白钢车组/轿车-4p/实验.ini",
+      "sha256": "67b11e0b9a5caa27f775e4d37b2be4d82047375f1639ab09c19218e6250b9c43"
+    },
+    {
+      "file": "police/L-陆警/4.白钢车组/轿车-4p/白钢A.ini",
+      "sha256": "b670b94a200a1d0c392db307f135550b85e5d51cce7b37099ecc4723a90c1e4e"
+    },
+    {
+      "file": "police/L-陆警/4.白钢车组/轿车-4p/白钢B.ini",
+      "sha256": "8ddf8468f0bf3d528ec71b2b0e27b9c314e8ce3fced343aab2fcacde3be7ec00"
+    },
+    {
+      "file": "police/L-陆警/4.白钢车组/轿车-4p/轿车.ini",
+      "sha256": "4e73c3da66b8408a03aa42ce4e1fbf0976e60a45d34971baef6edf6aafc69e8e"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M1074-A卡车/B卡.ini",
+      "sha256": "9df9e5607718b48e3656f82e1b304f8cf179dab8aa486d2177ce6787d33738e6"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M1074-A卡车/损坏的B卡.ini",
+      "sha256": "bc8e63c97e02cbd70af974bce476b3dccf4c39086b6e1b5a41ee6b994f838d41"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/K3698.ini",
+      "sha256": "8715210b2730819b80d7f3733bd70e9ab34f80beb33032a8a10c511b764c4c42"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/K3998.ini",
+      "sha256": "6b58208d1a2ddc6062f62af5050c53639ff642e97bae7b5c57e9bd798ab554ae"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/K4998.ini",
+      "sha256": "77bf96ba6969bf041e773fa0a824d97d0ba39dd8f1def97cecd9a8053cfc7b96"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M113.ini",
+      "sha256": "d76a346f34df119ebf81bb4418fe534ab0e12ef97da0f603305008e5ef2e9f1c"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M921.ini",
+      "sha256": "f7a050987f5f3e73ff2004b2c4271b3df39b4a2671fdc5f882dfa9a317d0ced1"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M921A.ini",
+      "sha256": "93134d014c938987e9d1a0f0d64836f3a595f6c6629add0216610201176ae6ef"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M921MP.ini",
+      "sha256": "385ef9f2a135d187bceb53ecaa6e05b35e9aaec7ae06d37fb80474ac91b920bb"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M923.ini",
+      "sha256": "f0a2a9e5012cc0301002833829abe0c89c17156328c9344f5b1c8ff79927f391"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的113n.ini",
+      "sha256": "b260f85f25688f0affeedc7111f9b2cd5206c524079336605470cbfab19bf557"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的M921.ini",
+      "sha256": "edbddb364d188ba7d9b39df96806e58c872ad9fb622d4227c480757900929ce8"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的M921A.ini",
+      "sha256": "d36d90810a496f92d6b63e038697d67dddcb85eb40a9c8d123c3345a76686c3a"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的M921MP.ini",
+      "sha256": "6847a16088c0d1dfa35fe6c3070df54c9b7f0c590a3f513af6293811dfd7d5d8"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的M923.ini",
+      "sha256": "b6bdc4b6108688f3e97864dd12a508e00cec3a119ec6202668f8c2e4cbf58d29"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/M977战术卡车/M977.ini",
+      "sha256": "7b256004b44d07a32852ab733caf1fee129b012fe7a148fcafcb1434da6badb4"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/T-1-4P运输/hovercraft.ini",
+      "sha256": "63f8497d78adea44262addd205142705cfa098239783920278e7c8fe21dcbe93"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/T-1-8P运输/hovercraft.ini",
+      "sha256": "477e39c76bd4ce50f1b7411d7439ac37e26e7e7175f7966d5346c166b4db4b36"
+    },
+    {
+      "file": "police/L-陆警/5.沙漠运输/all-units.template",
+      "sha256": "ec0e432344a02dfbe313e701604341ea3e949eeeec9f6ef653b3fd9dcbc34cee"
+    },
+    {
+      "file": "police/L-陆警/6.轻迫击炮/artillery.ini",
+      "sha256": "0cd7badada2b9f878d8decec5f0b2f41a9fb94857296911d4bc02e18404f6b74"
+    },
+    {
+      "file": "police/L-陆警/7.重机枪/artillery.ini",
+      "sha256": "8614686a1b069375b98d14d709bfe70063b0abd898ed2fa5d04f2a90c8e9c826"
+    },
+    {
+      "file": "police/L-陆警/实验坦克/experimental_tank.ini",
+      "sha256": "9462770a5d89cd1374f3eae4229bd347a0a4459019c62cb469c0886733a06d79"
+    },
+    {
+      "file": "police/L-陆警/榴弹机甲/榴弹机甲.ini",
+      "sha256": "ceb26a62ebe0e5e99c6435a67789f840bb963dbd2713505315b3eb63d8ab315e"
+    },
+    {
+      "file": "police/L-陆警/连射机甲/连射机甲.ini",
+      "sha256": "66166e40aa746cb1eb976484630e6fe37c155d862bb94fa79cef1cd4cd4b7bf0"
+    },
+    {
+      "file": "police/L-陆警/重型坦克/experimental_tank.ini",
+      "sha256": "ec9a632b546c28a529e3a13a28e05d45a51a802b843c25eb91223ef619422455"
+    },
+    {
+      "file": "police/L-陆警/黑钢坦克/T-2-A-机枪坦克/机枪坦克.ini",
+      "sha256": "1d4462d4098b69041d42b5bd92883520a8fc6dce9b90f988d87bff218951848e"
+    },
+    {
+      "file": "police/L-陆警/黑钢坦克/T-2喷火坦克/喷火坦克.ini",
+      "sha256": "2e8815852bff4280e33947dab30d43986fff9931ece30007ce736fa52ea9d576"
+    },
+    {
+      "file": "police/L-陆警/黑钢坦克/T-2机枪坦克/机枪坦克.ini",
+      "sha256": "669f428c5e47584ba4bb3931a039a3426773451d41021369a2e91c6f259b4bcc"
+    },
+    {
+      "file": "police/L-陆警/黑钢坦克/T-2狙击坦克/狙击坦克.ini",
+      "sha256": "433609c7646aee5b3b714a625377e64dfc3ae264aa29bdddf3c5ae120a9485b1"
+    },
+    {
+      "file": "police/L-陆警/黑钢坦克/T-2记忆合金/记忆合金坦克.ini",
+      "sha256": "5aaaa479b9815351c74a34cfbac3cc678b17619e924731a183c116f73d1dd3fd"
+    },
+    {
+      "file": "police/L-陆警/黑钢坦克/T-2铁拳坦克/铁拳导弹车.ini",
+      "sha256": "28882d3b579f59554063604fa8bc621fc3b2d6d0e2ab4b513dedb188069bd2ad"
+    },
+    {
+      "file": "police/L-陆警/黑钢坦克/all-units.template",
+      "sha256": "ae3128ad7c1585a73991e40e9c073a8498b97e1e90e8a871875d2e29ed238827"
+    },
+    {
+      "file": "police/O-海警/导弹舰/b.ini",
+      "sha256": "ffdc112b85ca2104a8a29179280a3995097ce6496820d08c8eb249ac852741b7"
+    },
+    {
+      "file": "police/O-海警/无人机航母/Experiemental_carrier.ini",
+      "sha256": "2f2c94c4dca5acaee405e02fdb25facfcd36248b2d24e2feb0c38c4e272f3496"
+    },
+    {
+      "file": "police/S-特殊/图标/0.生化.ini",
+      "sha256": "475ef431f84b1925bf96070aa9912918f1b1e727b3fd0fe79ffb6b02e6456e70"
+    },
+    {
+      "file": "police/S-特殊/图标/0.都市.ini",
+      "sha256": "30e6311d909746146c8e98742ec00e2436752c732c1406c7c603771dd1777653"
+    },
+    {
+      "file": "police/S-特殊/图标/ADFSDS.ini",
+      "sha256": "f356a39e9e3181d22f2171291d481fe1820acd906a5d19abc68dea822d86e679"
+    },
+    {
+      "file": "police/S-特殊/图标/APERS.ini",
+      "sha256": "e75aa7f82ec8d8012a35b867de5fd650a91050266462642dabafa3c9a86d0da8"
+    },
+    {
+      "file": "police/S-特殊/图标/HEAT.ini",
+      "sha256": "b878cf4cec38b07c5bf26b344bb7385bd7956b30d4164c21fca3bbb2f3b28829"
+    },
+    {
+      "file": "police/S-特殊/图标/HEATMPT.ini",
+      "sha256": "6fc96f6a085a66c299c1455a38ea33294621c937161a0155efc230131ecc3442"
+    },
+    {
+      "file": "police/S-特殊/图标/all-units.template",
+      "sha256": "4bb1a1f0689777fc0b473e6cf2250352b11f0781176d2a64a02103ca6f031511"
+    },
+    {
+      "file": "police/S-特殊/图标/icon.ini",
+      "sha256": "05d2fa1e838465e073338c9ed82baba3fc23e0c9b916d4e61ed1699509222f9c"
+    },
+    {
+      "file": "police/S-特殊/图标/一档.ini",
+      "sha256": "42d5948eb5c93ca3f74e61985f5776fd1b3faad0f7da60fa42f6b3ac44801bef"
+    },
+    {
+      "file": "police/S-特殊/图标/三档.ini",
+      "sha256": "a6447d0aa5b0399f12f6a1d5a130143d13994c6ece5883bafa7a3f07a14f61fe"
+    },
+    {
+      "file": "police/S-特殊/图标/不拉扯.ini",
+      "sha256": "1223aadda1326f08c261e6b360893b5c17ccb75a029bc8676403af67080c9996"
+    },
+    {
+      "file": "police/S-特殊/图标/二档.ini",
+      "sha256": "f4704f4c6ef986e30bd1155337cb14d56aaf4e4e47b06e309b669590483f818a"
+    },
+    {
+      "file": "police/S-特殊/图标/人员.ini",
+      "sha256": "8cadbe21eee4a2143de39ff0f79438d30846c538897a55a33245ea8e0ff2c07c"
+    },
+    {
+      "file": "police/S-特殊/图标/停车.ini",
+      "sha256": "0c3808ee96fdea3f3b20584b305ac1b1ae3ba568717e7163e7fb1c9fcad58759"
+    },
+    {
+      "file": "police/S-特殊/图标/关前灯.ini",
+      "sha256": "15185a3fb4167d18160603721756a767d2d403cd1f9582d07efd4a1e08286320"
+    },
+    {
+      "file": "police/S-特殊/图标/关火.ini",
+      "sha256": "754536d4f03d9d2f20d32fbd3b5ff3d98e1bf2a19e6963aee9b7c8a2323e518e"
+    },
+    {
+      "file": "police/S-特殊/图标/困难.ini",
+      "sha256": "67fd9c28a43dabe37263f04fb3bb3b7e1985cff2a14dcb28c816ede9e8b62030"
+    },
+    {
+      "file": "police/S-特殊/图标/建造.ini",
+      "sha256": "0abf45cf57cbb972f1ad712d47e150c88f6599b488bfbebd2ca009cb95b7517b"
+    },
+    {
+      "file": "police/S-特殊/图标/开前灯.ini",
+      "sha256": "6193438cd0dd3b0bdf28286ca2332d8bfe7e2cc754d9f05d2cc3511f915cdac7"
+    },
+    {
+      "file": "police/S-特殊/图标/开火.ini",
+      "sha256": "2d8a975d7ea53f509be4c67c16ee8de755d53e6d2ee64ad83ad2f0ec2406bcc4"
+    },
+    {
+      "file": "police/S-特殊/图标/弹夹.ini",
+      "sha256": "272dd89986b4fe87c66bcb69510cef92740736d77895a73e6f85226e8e8df242"
+    },
+    {
+      "file": "police/S-特殊/图标/手枪.ini",
+      "sha256": "6d3b9c990bb06f0756b10251b354b6f8226897a80f627225d7722e736e6e325f"
+    },
+    {
+      "file": "police/S-特殊/图标/拉扯.ini",
+      "sha256": "6a0da04995d5360e2b700fca6748e839e7764d816417059336eeca23f38c398b"
+    },
+    {
+      "file": "police/S-特殊/图标/指向性.ini",
+      "sha256": "58272d3a7d434c21ad1829d4635f63f115f9ca9238f2fb3baa16c29ede4b1f05"
+    },
+    {
+      "file": "police/S-特殊/图标/旋转炮塔.ini",
+      "sha256": "9e5e3841c56a5c1f0fb54d7f6db9a3197905c81ee272061def8fa3052f5e3ac8"
+    },
+    {
+      "file": "police/S-特殊/图标/时间.ini",
+      "sha256": "a2f838574a0d00aaf3893381a551c14cbb6b0df79aa87a32912d3ac78fca0cc0"
+    },
+    {
+      "file": "police/S-特殊/图标/核武.ini",
+      "sha256": "27c1fef8db772c7806bac1c7ca4eec0b1569aa970d4ab4177471e2f3daf16fc7"
+    },
+    {
+      "file": "police/S-特殊/图标/步枪.ini",
+      "sha256": "4e19ab22c7c96b78152cda3589f034c4828ab139ccb0753d03459c8804323c41"
+    },
+    {
+      "file": "police/S-特殊/图标/空.ini",
+      "sha256": "460aa2f025f6d678d57c189d8988eeb51e07696889fd16e0b103a0179fe56d93"
+    },
+    {
+      "file": "police/S-特殊/图标/简单.ini",
+      "sha256": "e8cb395b91761c8484fa3f07d781af76c7dfc229537c56c9621bc7c14b26802e"
+    },
+    {
+      "file": "police/S-特殊/图标/花费.ini",
+      "sha256": "a8a90d2c2f640f7bdf36348570a8ba6119143e5974e44a80da80253a047567fe"
+    },
+    {
+      "file": "police/S-特殊/图标/补充弹药.ini",
+      "sha256": "d7dd4bb5155935a9e90e8c64bc0ddc60b9cc557088a3c03e597cb84e17b2a71e"
+    },
+    {
+      "file": "police/S-特殊/图标/警告.ini",
+      "sha256": "4657bad707164bc5cea7c3728d4e19e2c65eb917e3c3975c71355bdd274679d1"
+    },
+    {
+      "file": "police/S-特殊/图标/设置.ini",
+      "sha256": "c4e25dd510692262abba746bb4e3c83bf26597fa0148192f47014ad03779bb1e"
+    },
+    {
+      "file": "police/S-特殊/图标/轰炸.ini",
+      "sha256": "ec7e7972801b6eb977155581b402723cfd0a3170b1e67dc3b9c9e7e9652a676b"
+    },
+    {
+      "file": "police/S-特殊/图标/返回.ini",
+      "sha256": "e8934af6454fd0c2d19408d80888c74d2062df9bf5e752225a9bda53d40a08c2"
+    },
+    {
+      "file": "police/S-特殊/图标/阵营.ini",
+      "sha256": "988b211f85de445cbd5c1bd2625804b0f79b4ee566ed05b1f0c223270692d37a"
+    },
+    {
+      "file": "police/S-特殊/测试/微型坦克/tank.ini",
+      "sha256": "d8d5416ebe925e6d9c5d166c8b6717ed210182139a8a2db593b1eb2f2acbb212"
+    },
+    {
+      "file": "police/S-特殊/烟火/all-units.template",
+      "sha256": "bae6f8d6a9113f96ffc5098d5fd29226efdd6a6cb2a6d25f8c1813ab595f301d"
+    },
+    {
+      "file": "police/S-特殊/烟火/flare_10s.ini",
+      "sha256": "aabedc034a5dd3dae773df1092e595671d7cb6449ae51d38480ffcc5c2f45b96"
+    },
+    {
+      "file": "police/S-特殊/烟火/红色_10s.ini",
+      "sha256": "4c58042964b7942e640983f8087d2e44c8878ac2002342647ba46b4f29c7763b"
+    },
+    {
+      "file": "police/S-特殊/烟火/绿色_10s.ini",
+      "sha256": "04997ffcc1a3b4e6d518a38e9ae09acde278dc1b4ffe1165fe4b8a16b81cedde"
+    },
+    {
+      "file": "police/S-特殊/烟火/蓝色_10s.ini",
+      "sha256": "e52b11baf3de35ed7ecd190a1076ad4ebbbf34c0cb4f766c51c4ec30e4d9cef2"
+    },
+    {
+      "file": "police/S-特殊/烟火/黄色_10s.ini",
+      "sha256": "e448c9938017eec31564e153b1e83b35a76202a387f3a7ff7405fd3a669a47b5"
+    },
+    {
+      "file": "police/S-特殊/特殊/air.ini",
+      "sha256": "467153b49a1742e8a858148cad5377a2d616c733776e1fc97c3da6fda21c228d"
+    },
+    {
+      "file": "police/S-特殊/特殊/bui.ini",
+      "sha256": "db9c12cbb7a6de355f6757512c6882f4352589436723b6e4ee83f6448d01e657"
+    },
+    {
+      "file": "police/S-特殊/特殊/under.ini",
+      "sha256": "0ac3da4e170e59764466009286d4f9aaf2e298d5b5f1a6b84e681d5241d9bfc0"
+    },
+    {
+      "file": "police/S-特殊/特殊/伤害测量器.ini",
+      "sha256": "28fbc80bb6796df2e1969d2cd9ff656585c26f98a16370b5e82b56f8c153ee9e"
+    },
+    {
+      "file": "police/S-特殊/装饰/all-units.template",
+      "sha256": "0eafabf30a60142f8c66ff4e2a1c962b0dda0047aee98d74a9908b62d5c32f27"
+    },
+    {
+      "file": "police/S-特殊/装饰/块.ini",
+      "sha256": "2e6464b219993d4576fddac2a1e60ab9a81833bd768361dd2d5d9f28b62b457b"
+    },
+    {
+      "file": "police/S-特殊/装饰/垃圾.ini",
+      "sha256": "771368d05a739b7af56950a8099bbe36ed94630c128709faa6ae0f94f4491fed"
+    },
+    {
+      "file": "police/S-特殊/装饰/桶.ini",
+      "sha256": "a2d8a043d00cea762dbb970d8c47bdd69815a10aa2dc845afd24bd2dbcbfff7b"
+    },
+    {
+      "file": "police/S-特殊/装饰/灯.ini",
+      "sha256": "1c52fd4ea6a6654d55295f3ab2c20eefe137a23f0f0bba053887327647c5d520"
+    },
+    {
+      "file": "police/S-特殊/装饰/灯1.ini",
+      "sha256": "ddc4cf15f7a7921970195d817223a63a78b2e2eda16875bcf1f73890c70da65a"
+    },
+    {
+      "file": "police/S-特殊/装饰/箱.ini",
+      "sha256": "21f4705fe1d69f9d7b105518a7357b96224702bfddedddd11e5aa2b1f3557f2c"
+    },
+    {
+      "file": "police/S-特殊/装饰/铁.ini",
+      "sha256": "da2acc9f3fbaf7e4c327e861e0b0e002592779cee3a6255c484777a09d6ea1fa"
+    },
+    {
+      "file": "police/S-特殊/覆盖.ini",
+      "sha256": "78ed7bbc718f002edb8fb2325d32800427943f8729cd0d831cab60df5269e06d"
+    },
+    {
+      "file": "shared/AI强制移动.key",
+      "sha256": "6f076bfe117c575a5c7771869115ac6dd8dbc3bda647063ed096641c8362721c"
+    },
+    {
+      "file": "shared/explosions.template",
+      "sha256": "628b840b5a518942b4d5406a6183bfd42d182563ac5791238c0c916084952ace"
+    },
+    {
+      "file": "shared/flares.template",
+      "sha256": "690560dc52237b5c4828823634ea2f61d27e5c0d6e226f5f41a0cbf4471c58c9"
+    },
+    {
+      "file": "shared/muzzle.template",
+      "sha256": "2e376d37c1a7ee36d0db70bb98266f17c3c8726afd01df36c7966f2727f67e49"
+    },
+    {
+      "file": "shared/plasma.template",
+      "sha256": "7fbae90846f0b6cb50106fc99a29c0780304f25219adfd597119a73dfc1fb195"
+    },
+    {
+      "file": "shared/trails.template",
+      "sha256": "ecc7f5ff297f95b2f1f227370f5dfdfc510cf4fe9e29cdddd36be7a8ee24e71e"
+    },
+    {
+      "file": "shared/water.template",
+      "sha256": "e50eb3023f6db093d4024a015be2b1b1fa285ec780eb168bc2db658cad11a7dd"
+    },
+    {
+      "file": "shared/z+bh.template",
+      "sha256": "0105ef4c726ca790c1a33a23299640c63a397f0184177983942741adc7a872b8"
+    },
+    {
+      "file": "shared/丧尸.key",
+      "sha256": "85f09c08a5d86dadd157062ce6561075a5ed38ff824bcaef6d6ccaea47be9b54"
+    },
+    {
+      "file": "shared/丧尸修复.key",
+      "sha256": "57de79fcfbd753efd4167ac74d851ff158c8e8b00b05349cf567d82a50bdbf7b"
+    },
+    {
+      "file": "shared/丧尸狂暴.key",
+      "sha256": "4b8a14479932b003edc949c6635c63d7c14f17f48d9be42814a5a0daab06f8da"
+    },
+    {
+      "file": "shared/刚性.template",
+      "sha256": "8fec9a16f9b57e6207f649d1b84010c8e39212887e1e6d6f50088391f910c358"
+    },
+    {
+      "file": "shared/升级.key",
+      "sha256": "52dab530c812deea2641748aafd4d58ff1e1c32b4973e1ce1d4a14e522ba8b3e"
+    },
+    {
+      "file": "shared/卸载.key",
+      "sha256": "906283de485e2144cd4460f863cef9dc4a904c0cfa80b612f1ef95144228533e"
+    },
+    {
+      "file": "shared/反器材.key",
+      "sha256": "cfe3e3bf7df43ebf0b1b1e876d9f85d48ce2ea755c288d8d3392ba89695fbca9"
+    },
+    {
+      "file": "shared/国民掩护.key",
+      "sha256": "ee3619cc03b23a2f5d4fa9e1b2f90e52a92d1012323d7af1a8d85c39b17ad6f5"
+    },
+    {
+      "file": "shared/地雷模板.key",
+      "sha256": "0db546abcee5c1bfab9bb09079573f34517513e3d967d9555139d8e50ae95a57"
+    },
+    {
+      "file": "shared/壳.key",
+      "sha256": "22cfee8ba8eb8ee615abbdb0cc389f704d917bfc173f826a780bc8f117012f2d"
+    },
+    {
+      "file": "shared/寻敌.key",
+      "sha256": "a7a6c28f79c7d1b27cdb31a20d699c36a06ef1d0ee775a798a5956a451fc3280"
+    },
+    {
+      "file": "shared/小甲.key",
+      "sha256": "eaae91c2ef6b7fdc3abc4cff48503e3100d445cff1555d1c0fb975e94f1cdf8b"
+    },
+    {
+      "file": "shared/手枪.key",
+      "sha256": "10c7f9752ce78eb0a0501cb928ad6db03f96b797e1aacf8025e88a15076395ca"
+    },
+    {
+      "file": "shared/拉扯.key",
+      "sha256": "0f987d0b30634215b9141e1b5dfe3730fa694208b9fa8d4af1fa6b3e199b2a57"
+    },
+    {
+      "file": "shared/柔性.key",
+      "sha256": "aa11e6859cf1663e4c7e7e2b9c2656560424dd743f8deeb59de704d4f240e6c7"
+    },
+    {
+      "file": "shared/框选.key",
+      "sha256": "dd6ef91f996f7a83a390ebef462c3b3294f0f569d01bcfb92bc8a5fb56420926"
+    },
+    {
+      "file": "shared/步枪.key",
+      "sha256": "d0de6be4b8cd4577821b0f25abfdbf8300bdb90ef59ef525893822ea2af488cf"
+    },
+    {
+      "file": "shared/死亡.key",
+      "sha256": "13803935706521416996431a2a191616f298a24dab20928716c522c877c3b567"
+    },
+    {
+      "file": "shared/水.key",
+      "sha256": "3588d23821a12ad6380935c69014b30410e197155c690d253165ed9e02289795"
+    },
+    {
+      "file": "shared/特效.key",
+      "sha256": "5b66f0957e59d70ab810cc5a1b57d0a05399f6af5911cc0c9de7ff6e1019dfb9"
+    },
+    {
+      "file": "shared/直升机AI智能系统.key",
+      "sha256": "9eac11f16155d4755e330d8d51cbaec5aa804cdaf9b19d394c93a6c31920432a"
+    },
+    {
+      "file": "shared/老兵.key",
+      "sha256": "3df2518fd14c6a42db6957dadcae21f74c3011c789568152d6db4d5ff1d28e5c"
+    },
+    {
+      "file": "shared/艇弹拖尾.key",
+      "sha256": "57ef7468d482fb5e55fa0a0527faf7edd16c99a38d57d94257bdf56a3d08517e"
+    },
+    {
+      "file": "shared/车辆.key",
+      "sha256": "c247c1dc0a569f5004557311125a2676a606e1faceadc1774da14cf9ed9bc814"
+    },
+    {
+      "file": "shared/部署.key",
+      "sha256": "df58c391516cb495aed0db2fe65d08ac4b9ebadec52b5628ca606abf6c437328"
+    },
+    {
+      "file": "shared/附属.key",
+      "sha256": "05cb53ea0d677ab67a8e957b5c78155cac3e7459b8bfa07d16b913fde61e9277"
+    },
+    {
+      "file": "zombies/z+i/all-units.template",
+      "sha256": "b51ee3da1a5872d0deda511b3de0d229fa23b4fbb34bafbd77d8a43365c5fa37"
+    },
+    {
+      "file": "zombies/z+i/z+i.ini",
+      "sha256": "04176f552141dd1013ee1ee7ae4e3d7b0c78a644993e7a44abc8ee5f063dca4a"
+    },
+    {
+      "file": "zombies/人间失格/all-units.template",
+      "sha256": "0398d922925037b28c56df4a68e8af27fa0e54a3828168e3aa2f0b9d88c0c94b"
+    },
+    {
+      "file": "zombies/人间失格/壮汉.ini",
+      "sha256": "decd951acf2cdf54d09e8b836362a1868304e15356a8d772bc1501a270ee8069"
+    },
+    {
+      "file": "zombies/反载具/all-units.template",
+      "sha256": "1e1829ef457c74a85389552c96a7f9a03bf1ce93806aa09f7b21b9452c538259"
+    },
+    {
+      "file": "zombies/反载具/路怒症.ini",
+      "sha256": "deca7d3da1129f428a1c32d25d34e845f832b5898afc37f01a3e075c536b1088"
+    },
+    {
+      "file": "zombies/反载具1/all-units.template",
+      "sha256": "53d0bdc4a234681112b5e939bf679670f7c889aa9ab533416aef77122f001668"
+    },
+    {
+      "file": "zombies/反载具1/血肉酸稠.ini",
+      "sha256": "fc3a21a58bf6ea96d3c281147fa884a2afd0b36083f5c579b3a94fd4213d9e80"
+    },
+    {
+      "file": "zombies/变异步兵/all-units.template",
+      "sha256": "9743a79899a19e45523217abaa3b7fd3983fef76a17ac987b5d7e20126f554d4"
+    },
+    {
+      "file": "zombies/变异步兵/变异反器材.ini",
+      "sha256": "700fbdc4da2319ea93e1a87333531c537119e9ad536e63936d427cc54c208d06"
+    },
+    {
+      "file": "zombies/变异步兵/变异武警.ini",
+      "sha256": "50a3980512f53275d8f80592e5fd880006340508289407b1581c9c0af931a6c3"
+    },
+    {
+      "file": "zombies/变异步兵/变异民警.ini",
+      "sha256": "c291e5e3acf6aa5540092308db1bb8f25f98a460eb5fb568d960fdd22bcc21a4"
+    },
+    {
+      "file": "zombies/大卫·戴/all-units.template",
+      "sha256": "76cc3619766084b3a0267346b9ff5b4eb3155419930096ab4196d4af6ffab456"
+    },
+    {
+      "file": "zombies/大卫·戴/大卫·戴.ini",
+      "sha256": "b495e94455f0002adc83e9cf9f9910de11e2e953933954c26dcb78c43aeaa572"
+    },
+    {
+      "file": "zombies/大猩猩/all-units.template",
+      "sha256": "38484c481a4594813543ca0a09bc366f9cc996b5f37d0688e7aab5e6165a98f9"
+    },
+    {
+      "file": "zombies/大猩猩/壮汉.ini",
+      "sha256": "7ea7949e8cf099a5e367dfcd1bd4f96030e3258f2de4a5e5d67cebcd52f86cc1"
+    },
+    {
+      "file": "zombies/小型变异体/all-units.template",
+      "sha256": "ccdb7831d82ed704dc2ca8c3d5de085d7bac8051a57908458480292f0268e277"
+    },
+    {
+      "file": "zombies/小型变异体/变异M.ini",
+      "sha256": "9d170890df72465bbe18c94f97a36639ec5652f8cee908c96e65753cd29b6bb0"
+    },
+    {
+      "file": "zombies/小型变异体/囚徒.ini",
+      "sha256": "523a9d9ba24b344187bd1d5951166c7cb30596912b0f05def2f24712492c4286"
+    },
+    {
+      "file": "zombies/小型变异体/壮汉.ini",
+      "sha256": "750c8eddabad4c374334f9653cbc6fa50f75d2692f409c7f1002317c97b60a97"
+    },
+    {
+      "file": "zombies/小型变异体/暴躁.ini",
+      "sha256": "0ad0aaf1ebc4a9b16cc9d10ddd437b5cdea1b76084a2bbe65e58d9c9c22c84ce"
+    },
+    {
+      "file": "zombies/小型变异体/爆裂者.ini",
+      "sha256": "4a5e1bfb6b29aa2bab3e9657f276cddafedc2c12278788a20b2bfabff21dc705"
+    },
+    {
+      "file": "zombies/小型变异体/聚爆者.ini",
+      "sha256": "fde5855bc3312401de61f968d28451111ebe029cc9aad357ac13cb93c88551c1"
+    },
+    {
+      "file": "zombies/小型变异体/胖子.ini",
+      "sha256": "76eee7164a2540eef89b4ef60d75cea9efc7a858ae41f1f2df69b325fb640a5f"
+    },
+    {
+      "file": "zombies/懒惰之罪/懒惰之罪.ini",
+      "sha256": "c9b54315f5583534199d956dd910f00acc068d9927a6bd40174410ac9d353123"
+    },
+    {
+      "file": "zombies/暴虐之罪/all-units.template",
+      "sha256": "1d34fe12c106956d7180868d88246e95767f37b60dc85a73d97ea6e62bf1777b"
+    },
+    {
+      "file": "zombies/暴虐之罪/壮汉.ini",
+      "sha256": "50faaa65807ff71c96e2db71bd70e9a863f41dc731b550c6476a34d871f9fa2a"
+    },
+    {
+      "file": "zombies/暴食之罪/all-units.template",
+      "sha256": "87a911956d994fcfe10351d0666a8e9d9244c939a703a873a15867dfcda63afc"
+    },
+    {
+      "file": "zombies/暴食之罪/eater.ini",
+      "sha256": "bec7521e6a485238eedba6a58df1a5be822a84c1977d72a0efc2eb0450f00db4"
+    },
+    {
+      "file": "zombies/水生变异体/all-units.template",
+      "sha256": "c9f2690004d2e9d8d3fba99b59febad84965b088b1b8803c6f9dca308a899e37"
+    },
+    {
+      "file": "zombies/水生变异体/幸灾乐祸.ini",
+      "sha256": "a61dfdd674f646f4cfe23a9e6a6f304ecb9471e7e4a3d1cb74ec69fb0a243c85"
+    },
+    {
+      "file": "zombies/飞骸/飞骸.ini",
+      "sha256": "4dc0d62feffbb8db3c918b3d0bd9f33900a28f82e07daad19eacd9a99f89d590"
+    },
+    {
+      "file": "全局辅助/路径点辅助.ini",
+      "sha256": "b1c8a241537b51f99245fe46db30e71f4ff7bd35a05b2817a7be28d8cd610d5c"
+    },
+    {
+      "file": "单位/装甲/M1/M1 装填.ini",
+      "sha256": "af34dd129e6269286da3cd4f304483152ef3bf67b5702f5aa006b695b56f3f29"
+    },
+    {
+      "file": "单位/装甲/M1/M1 装填1.ini",
+      "sha256": "fd01bf34d1a689988c29501849dad55c5db60104c5427fcec6f1e220aa0839aa"
+    },
+    {
+      "file": "单位/装甲/M1/M1 车长.ini",
+      "sha256": "82d9c5967ceb203e60812d7c5814e722e4286a756f2dace5f57ecb7618deab31"
+    },
+    {
+      "file": "单位/装甲/M1/M1 车长1.ini",
+      "sha256": "bd701a9d408262e62df69f17219329c2ef07903ddfbb07f5d3d3819e1d34189b"
+    },
+    {
+      "file": "单位/装甲/M1/M1A1 HC 标题党 1.ini",
+      "sha256": "c370ff208938f060b9551f48189603ebdade545db4475ad1cbfc85b172131f1d"
+    },
+    {
+      "file": "单位/装甲/M1/M1A1 HC 标题党 2.ini",
+      "sha256": "baa3c70a9a9be2fbfb585549f8589c45a44cdbf0c8e80e042747e46c00e6c612"
+    },
+    {
+      "file": "单位/装甲/M1/M1A1 HC 标题党 3.ini",
+      "sha256": "eb5b23d6afc570b80a55b1f54d04344c11ffa3f4149477af7c41c9b7f7713d9c"
+    },
+    {
+      "file": "单位/装甲/M1/M1A1 HC 标题党 T 1.ini",
+      "sha256": "4151b81f236cfeb730cb11a7e914c52ab9ab1563e77d30f5927b2e64037ede7b"
+    },
+    {
+      "file": "单位/装甲/M1/M1A1 HC 标题党 T 2.ini",
+      "sha256": "2d46e0b68ffef5b9b5527506244ce2565ec93b5104eaa0e5ec2f5e640d6101db"
+    },
+    {
+      "file": "单位/装甲/M1/M1A1 HC 标题党 T.ini",
+      "sha256": "00aef94263a3db78242decd79ef85561867c77fd09e9e6c9c1102ca6ae8506f9"
+    },
+    {
+      "file": "单位/装甲/M1/M1A1 HC 标题党.ini",
+      "sha256": "7b383b24365a1bf1a434d979dfd2c94269b777326f8a9e02797f59cdd84d7b24"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 1.ini",
+      "sha256": "dcae76a42de49fcd356187a42a689eadad8e7bd39b27bd9ad18bb09c0504d734"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 2.ini",
+      "sha256": "531e31ce5e7402346ed45bd7a452bc472ce3d3920362d2a9e2260278296b87a1"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 3.ini",
+      "sha256": "a457142db3d1b2c8c12cb549865a0d5f3a0d6647051aa1a14b955614e880ff2d"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV2 1.ini",
+      "sha256": "a0f17e28e9d89ee72c5f597761065a8f759e988805b10ec4016d65c42e132a3a"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV2 2.ini",
+      "sha256": "a15429e2663df5f3e3caa2c9677ba462a712edb7f60387a64a0e7599f237d67c"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV2 3.ini",
+      "sha256": "7ea79805d5b65e5a0af8ef56b05662cd10ec47455480927bdea1466b15aaf4a3"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV2 T 1.ini",
+      "sha256": "457069d648be31e1b4db3aeaf6efb41ed1904db73f1c63a3b8901e58f8f045ab"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV2 T 2.ini",
+      "sha256": "f45ecfd4f9a1fc8d00605761ac7467475263d4fd5d057d04bc7050d398ee6e5d"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV2 T.ini",
+      "sha256": "5f59bee5a77f0615faa162c4add139f4f9c1259f05935fbadaeba003e545ce77"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV2.ini",
+      "sha256": "c67fdda7a1837f30173392a2c613bd34cd5c1154f43536328fd0e97dc951be2b"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV3 1.ini",
+      "sha256": "b9d23be5a296d9293daeb130ad7da2d3e70c0f98185814fd53252d6b4f91ce61"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV3 2.ini",
+      "sha256": "d1d87bf3122ab7adecb95d534fa051403e9e5bc9745f8831044287260f2944c1"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV3 3.ini",
+      "sha256": "5b350a03d13dcc9b132ea7619af1d67a73251413f75fe1353f6d15885fc1115a"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV3 T 1.ini",
+      "sha256": "3749735edb5bd07adb02c51d8b695433db176ea760001783c08972430a7f318a"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV3 T 2.ini",
+      "sha256": "14ed1861ddc37ef122dbd7768199279f191ebe5575d0d30031b35a255db74d98"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV3 T.ini",
+      "sha256": "1568fcc40f29a81e461fcb103651ea7f4dcd5ffca606dc35c2d1404cb234f363"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 SEPV3.ini",
+      "sha256": "64c7898d5f08d7f76322f880a99ee91bb00eb9138597c8c3815d67f3b44d745a"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 T 1.ini",
+      "sha256": "3e2eb11763e8c142fa944488515ed2ba851e9e260fd0560d5eb7263a61f7b996"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 T 2.ini",
+      "sha256": "8e44c59d97c78fc0614be6aa36fc0a7b058a7813f6506a11abcc92281acbe06f"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 T.ini",
+      "sha256": "20bbf92dc0caf854952317c84d5a28c043d2289ecd6fd3a13b17a2f1c3b99332"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 TUSK II 1.ini",
+      "sha256": "75e5d54ab30912f587b96b349b0e7dfff8aef7d52e6c357778bffa24b8dae0d6"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 TUSK II 2.ini",
+      "sha256": "c8dd05bf524a9f04e794a65e31351b8d42aaf4eba7b739150d9cea3068bb26e4"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 TUSK II 3.ini",
+      "sha256": "e09bfc83bbb805556ad6656cbbfee8a99725dddb2c1a7f238876946eeea841e3"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 TUSK II T 1.ini",
+      "sha256": "cf13989f1091cd6dbe6d42c2441f526a63761eb87f47033115b1cf126db96f93"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 TUSK II T 2.ini",
+      "sha256": "206f4319c7b0a883d1f57509024bf3e22637436500cb7d3aa58e7101263e9d17"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 TUSK II T.ini",
+      "sha256": "717f7dc7fed0976115c238e9c7f789cc635726f3966a888e75cd89fde45c3aad"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2 TUSK II.ini",
+      "sha256": "227ab3f27df5734dd11434ac7262f6ee14c4fd10dee17cdb50952dec3f292e0d"
+    },
+    {
+      "file": "单位/装甲/M1/M1A2.ini",
+      "sha256": "76d876199949d49eed9e0d29ae04547872ba52ad56fd3b2b690de8e5830d2851"
+    },
+    {
+      "file": "单位/装甲/M1/装填 机枪.ini",
+      "sha256": "e990f55bbc352c8a8b7cc436b108db66af68707de0d1aaeec033f459b62516c0"
+    },
+    {
+      "file": "单位/装甲/M1/装填 机枪1.ini",
+      "sha256": "285007b397f6ef5f05860e1a2b26736d57e7db042080097a70021d3a61b1ec2c"
+    },
+    {
+      "file": "单位/装甲/M1/装填 机枪2.ini",
+      "sha256": "8ed28ce298eedff34d6ab0097342f3b986f9fe1632ba5cd37d7afa8bbf2124f6"
+    },
+    {
+      "file": "单位/装甲/M1/车长M2 1.ini",
+      "sha256": "eb83dc47800020854f372567f8efb6397eebf9822ddb862691220e25f30c0360"
+    },
+    {
+      "file": "单位/装甲/M1/车长M2 2.ini",
+      "sha256": "a26933c0c308621de07df623cdadf2df87d40a3926b47b937e29e80fa575ab71"
+    },
+    {
+      "file": "单位/装甲/M1/车长M2.ini",
+      "sha256": "6585e5eaf24a1168560000a97ab2f6ad59940d569763fe11168857c228f5fbc1"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 1.ini",
+      "sha256": "9a38af69f2aec45aecfa8a9603d73d50bdbcc5bf3850638cb4526e22e47fb449"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 2.ini",
+      "sha256": "bb10553d7c1495e4d3ef427a47c0eda33d341723115ac4b0975c46a60f25b2b2"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 3.ini",
+      "sha256": "19b980fae7985de1182a23ca08fc95c0ed5febe0e690b8c9acdf5406f5decc40"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 T 1.ini",
+      "sha256": "7cf81eefac9ce233873d49910a20bec06486724c73d8164ad8f5fa4e78a9390d"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 T 2.ini",
+      "sha256": "c3575e3d93d9839c0c813473d08855e7c92ebfb596bf79abb2d969998613cea1"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 T 3.ini",
+      "sha256": "847a6658fda2b6ce7d2fa2f4fd884a7fdd98b59183b48c4b6b0bd361fd48cd55"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 T.ini",
+      "sha256": "78f8d64bf622972fb325382499406093c211969f45eb5b1dcefed5a4c72ac232"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 炮手.ini",
+      "sha256": "05b96e7c229d5816a8b76c30ea6919532670ff7220c38f313658d257d1c4a2c5"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128 车长.ini",
+      "sha256": "c82c06f7f64d2fee1739a500fd55ae4a978f48ccd5af299b6c177308c8e76492"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128.ini",
+      "sha256": "36f4b995d4d58e179b2068f40782c5636a7aa8d083e54a2c769c2fa02b35859f"
+    },
+    {
+      "file": "单位/装甲/M1128/M1128车长M2.ini",
+      "sha256": "76c3dfce8fa66c31ec585454a5adc7325a41a0f9c43322929a4ab720e5a0e5a1"
+    }
+  ],
+  "definitions": [
+    {
+      "source": "AD-联合警戒中心",
+      "file": "police/B-建筑/1.警戒中心/k.ini",
+      "definition": "adolence-precinct",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 4,
+        "hiddenAction": 8,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "VD-联合警戒中心",
+      "file": "police/B-建筑/1.警戒中心/kk.ini",
+      "definition": "adolence-precinct-2",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 4,
+        "hiddenAction": 8,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用哨所",
+      "file": "police/B-建筑/2.警用哨所/mechFactory.ini",
+      "definition": "adolence-outpost",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 6,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用车库",
+      "file": "police/B-建筑/5.警用车库/k.ini",
+      "definition": "adolence-garage",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 5,
+        "hiddenAction": 10,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用军库",
+      "file": "police/B-建筑/5.警用车库/kk.ini",
+      "definition": "adolence-arsenal",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 5,
+        "hiddenAction": 11,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用机坪",
+      "file": "police/B-建筑/6.警用机坪/k.ini",
+      "definition": "adolence-helipad",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 8,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "军用机坪",
+      "file": "police/B-建筑/6.警用机坪/kk.ini",
+      "definition": "adolence-airfield",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 8,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "海警基地",
+      "file": "police/B-建筑/7.海警基地/船场.ini",
+      "definition": "adolence-coast-guard-base",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 41,
+        "decal": 6,
+        "animation": 1,
+        "action": 7,
+        "hiddenAction": 7,
+        "attachment": 1,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "太阳能板",
+      "file": "police/B-建筑/太阳能板/供应站.ini",
+      "definition": "adolence-solar",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "太阳能板-T2",
+      "file": "police/B-建筑/太阳能板/供应站T2.ini",
+      "definition": "adolence-solar-2",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "物资储藏点",
+      "file": "police/B-建筑/物资储藏点/物资储藏点.ini",
+      "definition": "adolence-supply-cache",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "物资储藏点-Ⅱ",
+      "file": "police/B-建筑/物资储藏点/物资储藏点-Ⅱ.ini",
+      "definition": "adolence-supply-cache-2",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "机枪塔位",
+      "file": "police/B-建筑/中型塔座/机枪塔位.ini",
+      "definition": "adolence-mg-tower",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 49,
+        "decal": 8,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 6,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "基础扭机",
+      "file": "police/B-建筑/基础扭机/简易拒马.ini",
+      "definition": "adolence-barricade",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 0,
+        "action": 17,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "懒惰之罪",
+      "file": "zombies/懒惰之罪/懒惰之罪.ini",
+      "definition": "adolence-sloth-nest",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 42,
+        "decal": 6,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "民警-手枪",
+      "file": "police/L-陆警/1.手枪/民警.ini",
+      "definition": "adolence-officer-pistol",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "民警-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/民警/民警.ini",
+      "definition": "adolence-officer-rifle",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "交警-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/民警/交警.ini",
+      "definition": "adolence-traffic-officer",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "武警-手枪",
+      "file": "police/L-陆警/1.手枪/武警.ini",
+      "definition": "adolence-armed-police-pistol",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "武警-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/特警/武警.ini",
+      "definition": "adolence-armed-police-rifle",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "海战-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/特警/军队-海战迷彩.ini",
+      "definition": "adolence-swat-sea",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "野战-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/特警/军队-沙漠迷彩.ini",
+      "definition": "adolence-swat-field",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "草地-步枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆军/军队-草地迷彩.ini",
+      "definition": "adolence-army-woodland",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "陆战-步枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆军/军队-陆战迷彩.ini",
+      "definition": "adolence-army-marksman",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "民兵-步枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-陆战迷彩-面罩开.ini",
+      "definition": "adolence-guard-rifleman",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 19,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "民兵-轻机枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-陆战迷彩-MG.ini",
+      "definition": "adolence-guard-gunner",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 19,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "民兵-火焰喷射器",
+      "file": "police/L-陆警/2.非手枪/喷火单位/国民警卫队-陆战迷彩-面罩开.ini",
+      "definition": "adolence-guard-flamethrower",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 56,
+        "decal": 4,
+        "animation": 0,
+        "action": 9,
+        "hiddenAction": 12,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "宪兵-步枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-陆战迷彩-宪兵.ini",
+      "definition": "adolence-military-police",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 19,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "陆战队-步枪A",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_步枪A.ini",
+      "definition": "adolence-taskforce-rifleman",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "陆战队-掷弹兵",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_步枪B.ini",
+      "definition": "adolence-taskforce-grenadier",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 55,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "陆战队-反器材",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_反器材.ini",
+      "definition": "adolence-taskforce-anti-materiel",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 57,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "陆战队-火箭筒A",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_反坦克A.ini",
+      "definition": "adolence-taskforce-rocketeer",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 55,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "陆战队-机枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_机枪A.ini",
+      "definition": "adolence-taskforce-gunner",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "陆战队-霰弹枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_霰弹枪A.ini",
+      "definition": "adolence-taskforce-shotgunner",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "中州武装步枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州武装_步枪.ini",
+      "definition": "adolence-zhongzhou-rifleman",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "中州特战狙击",
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州特战_狙击.ini",
+      "definition": "adolence-zhongzhou-sniper",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 57,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "肃清协议-MG",
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/肃清协议-MG.ini",
+      "definition": "adolence-purge-gunner",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 57,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 18,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轿车-黑",
+      "file": "police/L-陆警/3.警车组/警车-4p/轿车2.ini",
+      "definition": "adolence-sedan-black",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警车",
+      "file": "police/L-陆警/3.警车组/警车-4p/警车-K.ini",
+      "definition": "adolence-cruiser",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用装甲车-B",
+      "file": "police/L-陆警/3.警车组/警用装甲车-5p/警用装甲车-B.ini",
+      "definition": "adolence-armoured-car",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用两栖车-A",
+      "file": "police/L-陆警/3.警车组/警用两栖车-3p/警用装甲车-C.ini",
+      "definition": "adolence-amphibious-car",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用指挥车-A3",
+      "file": "police/L-陆警/3.警车组/警用指挥车-6p/警车-3.ini",
+      "definition": "adolence-command-van",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 16,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用通讯车",
+      "file": "police/L-陆警/3.警车组/警车-3.ini",
+      "definition": "adolence-comms-van",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [
+        {
+          "action": "action_建立卫星通讯频道",
+          "target": "大信号烟-红色-20S",
+          "status": "requires integration"
+        }
+      ],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 9,
+        "animation": 0,
+        "action": 18,
+        "hiddenAction": 18,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用重卫车-U0",
+      "file": "police/L-陆警/3.警车组/警用重卫车-9p/警车2.ini",
+      "definition": "adolence-heavy-escort",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 17,
+        "hiddenAction": 16,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "装甲车",
+      "file": "police/L-陆警/3.警车组/警用伏击车-17p/装甲车.ini",
+      "definition": "adolence-ambush-car",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 3,
+        "effect": 42,
+        "decal": 13,
+        "animation": 4,
+        "action": 14,
+        "hiddenAction": 21,
+        "attachment": 1,
+        "arm": 5,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用迫击炮",
+      "file": "police/L-陆警/6.轻迫击炮/artillery.ini",
+      "definition": "adolence-mortar",
+      "restored": [
+        "animation states",
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 46,
+        "decal": 5,
+        "animation": 0,
+        "action": 4,
+        "hiddenAction": 7,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "重机枪",
+      "file": "police/L-陆警/7.重机枪/artillery.ini",
+      "definition": "adolence-heavy-mg",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 53,
+        "decal": 5,
+        "animation": 0,
+        "action": 5,
+        "hiddenAction": 7,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫步械-步枪",
+      "file": "police/L-陆警/连射机甲/连射机甲.ini",
+      "definition": "adolence-walker-rifle",
+      "restored": [
+        "animation states",
+        "selection audio",
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 51,
+        "decal": 4,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫步械-榴弹",
+      "file": "police/L-陆警/榴弹机甲/榴弹机甲.ini",
+      "definition": "adolence-walker-grenade",
+      "restored": [
+        "animation states",
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 45,
+        "decal": 4,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫轻坦-轻机枪",
+      "file": "police/L-陆警/黑钢坦克/T-2机枪坦克/机枪坦克.ini",
+      "definition": "adolence-light-tank-lmg",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 48,
+        "decal": 7,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫轻坦-机枪",
+      "file": "police/L-陆警/黑钢坦克/T-2-A-机枪坦克/机枪坦克.ini",
+      "definition": "adolence-light-tank-mg",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 48,
+        "decal": 7,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫轻坦-常规",
+      "file": "police/L-陆警/黑钢坦克/T-2记忆合金/记忆合金坦克.ini",
+      "definition": "adolence-light-tank",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 48,
+        "decal": 6,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫轻坦-导弹",
+      "file": "police/L-陆警/黑钢坦克/T-2铁拳坦克/铁拳导弹车.ini",
+      "definition": "adolence-light-tank-missile",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 1,
+        "effect": 48,
+        "decal": 5,
+        "animation": 0,
+        "action": 4,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫轻坦-喷火",
+      "file": "police/L-陆警/黑钢坦克/T-2喷火坦克/喷火坦克.ini",
+      "definition": "adolence-light-tank-flame",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 53,
+        "decal": 6,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫轻坦-狙击",
+      "file": "police/L-陆警/黑钢坦克/T-2狙击坦克/狙击坦克.ini",
+      "definition": "adolence-light-tank-sniper",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 48,
+        "decal": 6,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警卫重坦-常规",
+      "file": "police/L-陆警/重型坦克/experimental_tank.ini",
+      "definition": "adolence-heavy-tank",
+      "restored": [
+        "selection audio",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 46,
+        "decal": 6,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "军用侦查车",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/K4998.ini",
+      "definition": "adolence-scout-car",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "军用突击车",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/K3698.ini",
+      "definition": "adolence-assault-car",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 16,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "多用途轻型车辆",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M921.ini",
+      "definition": "adolence-utility-vehicle",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 3,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 20,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "多用途轻型车辆-MP",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M921MP.ini",
+      "definition": "adolence-utility-vehicle-mp",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 3,
+        "effect": 50,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 20,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "军用运输卡车-B",
+      "file": "police/L-陆警/5.沙漠运输/M1074-A卡车/B卡.ini",
+      "definition": "adolence-transport-truck",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 3,
+        "effect": 50,
+        "decal": 8,
+        "animation": 0,
+        "action": 16,
+        "hiddenAction": 20,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "M977",
+      "file": "police/L-陆警/5.沙漠运输/M977战术卡车/M977.ini",
+      "definition": "adolence-m977",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 2,
+        "effect": 43,
+        "decal": 19,
+        "animation": 2,
+        "action": 15,
+        "hiddenAction": 21,
+        "attachment": 0,
+        "arm": 3,
+        "leg": 0
+      }
+    },
+    {
+      "source": "M1128",
+      "file": "单位/装甲/M1128/M1128.ini",
+      "definition": "adolence-m1128",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [
+        {
+          "action": "action_3档",
+          "target": "M1128 1",
+          "status": "disabled in original"
+        },
+        {
+          "action": "action_1档",
+          "target": "M1128 2",
+          "status": "disabled in original"
+        }
+      ],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 62,
+        "decal": 26,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 12,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "M1A2",
+      "file": "单位/装甲/M1/M1A2.ini",
+      "definition": "adolence-m1a2",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [
+        {
+          "action": "action_3档",
+          "target": "M1A2 1",
+          "status": "disabled in original"
+        },
+        {
+          "action": "action_1档",
+          "target": "M1A2 2",
+          "status": "disabled in original"
+        }
+      ],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 62,
+        "decal": 19,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 11,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "M1A2 TUSK II",
+      "file": "单位/装甲/M1/M1A2 TUSK II.ini",
+      "definition": "adolence-m1a2-tusk",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [
+        {
+          "action": "action_3档",
+          "target": "M1A2 TUSK II 1",
+          "status": "disabled in original"
+        },
+        {
+          "action": "action_1档",
+          "target": "M1A2 TUSK II 2",
+          "status": "disabled in original"
+        }
+      ],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 62,
+        "decal": 19,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 11,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "M1A2 SEPV3",
+      "file": "单位/装甲/M1/M1A2 SEPV3.ini",
+      "definition": "adolence-m1a2-sepv3",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [
+        {
+          "action": "action_3档",
+          "target": "M1A2 SEPV3 1",
+          "status": "disabled in original"
+        },
+        {
+          "action": "action_1档",
+          "target": "M1A2 SEPV3 2",
+          "status": "disabled in original"
+        }
+      ],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 62,
+        "decal": 19,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 11,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "M1A1 HC 标题党",
+      "file": "单位/装甲/M1/M1A1 HC 标题党.ini",
+      "definition": "adolence-m1a1-clickbait",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [
+        {
+          "action": "action_3档",
+          "target": "M1A1 HC 标题党 1",
+          "status": "disabled in original"
+        },
+        {
+          "action": "action_1档",
+          "target": "M1A1 HC 标题党 2",
+          "status": "disabled in original"
+        }
+      ],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 62,
+        "decal": 19,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 11,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轻型两栖步战",
+      "file": "police/L-陆警/5.沙漠运输/T-1-4P运输/hovercraft.ini",
+      "definition": "adolence-light-ifv",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 3,
+        "effect": 50,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 18,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "重型两栖步战",
+      "file": "police/L-陆警/5.沙漠运输/T-1-8P运输/hovercraft.ini",
+      "definition": "adolence-heavy-ifv",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 3,
+        "effect": 50,
+        "decal": 8,
+        "animation": 0,
+        "action": 18,
+        "hiddenAction": 18,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "极征主义",
+      "file": "police/L-陆警/实验坦克/experimental_tank.ini",
+      "definition": "adolence-extremism",
+      "restored": [
+        "selection audio",
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 6,
+        "projectile": 3,
+        "effect": 42,
+        "decal": 12,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 5,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用直升机-A",
+      "file": "police/A-空警/直升机/警用直升机/helicopter.ini",
+      "definition": "adolence-police-heli",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 47,
+        "decal": 5,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轻型武装直升机",
+      "file": "police/A-空警/直升机/武装直升机/武陟.ini",
+      "definition": "adolence-light-gunship",
+      "restored": [
+        "selection audio",
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 10,
+        "projectile": 4,
+        "effect": 49,
+        "decal": 6,
+        "animation": 0,
+        "action": 9,
+        "hiddenAction": 24,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "重型武装直升机",
+      "file": "police/A-空警/直升机/武装直升机/重型武直.ini",
+      "definition": "adolence-heavy-gunship",
+      "restored": [
+        "selection audio",
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 10,
+        "projectile": 4,
+        "effect": 49,
+        "decal": 6,
+        "animation": 0,
+        "action": 9,
+        "hiddenAction": 11,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "军用轰炸机",
+      "file": "police/A-空警/轰炸机/bomber.ini",
+      "definition": "adolence-bomber",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 9,
+        "effect": 57,
+        "decal": 6,
+        "animation": 0,
+        "action": 10,
+        "hiddenAction": 13,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "特区运输机",
+      "file": "police/A-空警/运输机/运输.ini",
+      "definition": "adolence-transport-heli",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 3,
+        "effect": 47,
+        "decal": 6,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 11,
+        "attachment": 0,
+        "arm": 1,
+        "leg": 0
+      }
+    },
+    {
+      "source": "鹰击-U9战斗机",
+      "file": "police/A-空警/战斗机/战机.ini",
+      "definition": "adolence-fighter-u9",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 6,
+        "projectile": 4,
+        "effect": 55,
+        "decal": 4,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "鹰击-A2",
+      "file": "police/A-空警/战斗机/战机A.ini",
+      "definition": "adolence-fighter-a2",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 3,
+        "effect": 55,
+        "decal": 4,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "海警侦船",
+      "file": "police/O-海警/导弹舰/b.ini",
+      "definition": "adolence-scout-boat",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 42,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "溃北",
+      "file": "police/O-海警/无人机航母/Experiemental_carrier.ini",
+      "definition": "adolence-drone-carrier",
+      "restored": [
+        "selection audio",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 6,
+        "projectile": 4,
+        "effect": 46,
+        "decal": 8,
+        "animation": 2,
+        "action": 25,
+        "hiddenAction": 7,
+        "attachment": 12,
+        "arm": 3,
+        "leg": 0
+      }
+    },
+    {
+      "source": "丧尸-M",
+      "file": "zombies/小型变异体/变异M.ini",
+      "definition": "adolence-zombie",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 52,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "丧尸-壮汉",
+      "file": "zombies/小型变异体/壮汉.ini",
+      "definition": "adolence-brute",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 52,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "丧尸-胖子",
+      "file": "zombies/小型变异体/胖子.ini",
+      "definition": "adolence-bloater",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 52,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "丧尸-囚徒",
+      "file": "zombies/小型变异体/囚徒.ini",
+      "definition": "adolence-prisoner",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 52,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "丧尸-愤怒",
+      "file": "zombies/小型变异体/暴躁.ini",
+      "definition": "adolence-rager",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 52,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "丧尸-爆裂者",
+      "file": "zombies/小型变异体/爆裂者.ini",
+      "definition": "adolence-burster",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 53,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "丧尸-聚爆者",
+      "file": "zombies/小型变异体/聚爆者.ini",
+      "definition": "adolence-imploder",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 53,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "异常民警-手枪",
+      "file": "zombies/变异步兵/变异民警.ini",
+      "definition": "adolence-turned-officer",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 59,
+        "decal": 4,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "异常陆战队-反器材",
+      "file": "zombies/变异步兵/变异反器材.ini",
+      "definition": "adolence-turned-anti-materiel",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 59,
+        "decal": 5,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "路怒症",
+      "file": "zombies/反载具/路怒症.ini",
+      "definition": "adolence-road-rage",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 52,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "血肉酸稠",
+      "file": "zombies/反载具1/血肉酸稠.ini",
+      "definition": "adolence-acid-mass",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 53,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "幸灾乐祸",
+      "file": "zombies/水生变异体/幸灾乐祸.ini",
+      "definition": "adolence-gloater",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 4,
+        "animation": 0,
+        "action": 5,
+        "hiddenAction": 22,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "飞骸",
+      "file": "zombies/飞骸/飞骸.ini",
+      "definition": "adolence-flying-husk",
+      "restored": [
+        "selection audio",
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 53,
+        "decal": 4,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 36,
+        "attachment": 0,
+        "arm": 2,
+        "leg": 0
+      }
+    },
+    {
+      "source": "大猩猩",
+      "file": "zombies/大猩猩/壮汉.ini",
+      "definition": "adolence-gorilla",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 59,
+        "decal": 8,
+        "animation": 2,
+        "action": 3,
+        "hiddenAction": 30,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 2
+      }
+    },
+    {
+      "source": "人间失格",
+      "file": "zombies/人间失格/壮汉.ini",
+      "definition": "adolence-no-longer-human",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 59,
+        "decal": 8,
+        "animation": 1,
+        "action": 3,
+        "hiddenAction": 23,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 2
+      }
+    },
+    {
+      "source": "暴虐之罪",
+      "file": "zombies/暴虐之罪/壮汉.ini",
+      "definition": "adolence-sin-of-wrath",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 59,
+        "decal": 4,
+        "animation": 2,
+        "action": 3,
+        "hiddenAction": 30,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 2
+      }
+    },
+    {
+      "source": "暴食之罪",
+      "file": "zombies/暴食之罪/eater.ini",
+      "definition": "adolence-sin-of-gluttony",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 57,
+        "decal": 4,
+        "animation": 0,
+        "action": 4,
+        "hiddenAction": 50,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 4
+      }
+    },
+    {
+      "source": "卫警-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/民警/卫警.ini",
+      "definition": "adolence-guard-rifle",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "中州反坦克",
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州武装_反坦克.ini",
+      "definition": "adolence-zhongzhou-at",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 55,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "中州武装机枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州武装_机枪.ini",
+      "definition": "adolence-zhongzhou-mg",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "中州特战反坦克",
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州特战_反坦克.ini",
+      "definition": "adolence-zhongzhou-special-at",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 55,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "中州特战机枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州特战_机枪.ini",
+      "definition": "adolence-zhongzhou-special-mg",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "中州特战步兵",
+      "file": "police/L-陆警/2.非手枪/军事单位/中州武装力量/中州特战_步枪.ini",
+      "definition": "adolence-zhongzhou-special",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 55,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "民兵-步枪2",
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-陆战迷彩-面罩关.ini",
+      "definition": "adolence-guard-armored",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 19,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "沙漠部队-手枪",
+      "file": "police/L-陆警/1.手枪/沙漠.ini",
+      "definition": "adolence-desert-pistol",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "防化部队-手枪",
+      "file": "police/L-陆警/1.手枪/防化.ini",
+      "definition": "adolence-hazmat-pistol",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "防化部队-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/防化/防化.ini",
+      "definition": "adolence-hazmat-rifle",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "防化部队-红-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/防化/防化 (红).ini",
+      "definition": "adolence-hazmat-red",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "防化部队-绿-步枪",
+      "file": "police/L-陆警/2.非手枪/警务单位/防化/防化 (绿).ini",
+      "definition": "adolence-hazmat-green",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "陆战队-侦察兵",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/海军陆战队_T-BLOCK_侦察兵.ini",
+      "definition": "adolence-marine-scout",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 2,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "士兵-步枪A",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/士兵-步枪.ini",
+      "definition": "adolence-soldier-a",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "士兵-步枪B",
+      "file": "police/L-陆警/2.非手枪/军事单位/陆战队/士兵-步枪B.ini",
+      "definition": "adolence-soldier-b",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "平民-手枪",
+      "file": "police/L-陆警/1.手枪/平民2/平民.ini",
+      "definition": "adolence-civilian-pistol",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "平民-手枪2",
+      "file": "police/L-陆警/1.手枪/平民2/平民2.ini",
+      "definition": "adolence-civilian-pistol-2",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 15,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "平民-步枪",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民1.ini",
+      "definition": "adolence-civilian-rifle",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "平民-步枪2",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民2.ini",
+      "definition": "adolence-civilian-rifle-2",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "平民-步枪3",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民3.ini",
+      "definition": "adolence-civilian-rifle-3",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "平民-步枪4",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民4.ini",
+      "definition": "adolence-civilian-rifle-4",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "平民-步枪5",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民5.ini",
+      "definition": "adolence-raincoat",
+      "restored": [
+        "selection audio",
+        "energy magazine / manual reload"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 54,
+        "decal": 5,
+        "animation": 0,
+        "action": 11,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "军用冲锋车",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/K3998.ini",
+      "definition": "adolence-military-assault-car",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 16,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "国民冲锋车",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M113.ini",
+      "definition": "adolence-guard-assault-car",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 3,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 20,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "多用途轻型车辆-A",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M921A.ini",
+      "definition": "adolence-utility-a",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 3,
+        "effect": 50,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 20,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "多用途轻型车辆-B",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/M923.ini",
+      "definition": "adolence-utility-b",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 3,
+        "effect": 50,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 20,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用指挥车-A0",
+      "file": "police/L-陆警/3.警车组/警用指挥车-6p/警车.ini",
+      "definition": "adolence-command-car-0",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 16,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用指挥车-A1",
+      "file": "police/L-陆警/3.警车组/警用指挥车-6p/警车-1.ini",
+      "definition": "adolence-command-car-1",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 16,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用指挥车-A2",
+      "file": "police/L-陆警/3.警车组/警用指挥车-6p/警车-2.ini",
+      "definition": "adolence-command-car-2",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 15,
+        "hiddenAction": 16,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警车-D1",
+      "file": "police/L-陆警/3.警车组/警车-4p/警车.ini",
+      "definition": "adolence-cruiser-d1",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轿车-(X0rX)",
+      "file": "police/L-陆警/3.警车组/警车-4p/轿车 (X0rX).ini",
+      "definition": "adolence-sedan-x0rx",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 17,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轿车-白色",
+      "file": "police/L-陆警/4.白钢车组/轿车-4p/轿车.ini",
+      "definition": "adolence-sedan-white",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轿车-白钢A",
+      "file": "police/L-陆警/4.白钢车组/轿车-4p/白钢A.ini",
+      "definition": "adolence-white-steel-a",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轿车-白钢B",
+      "file": "police/L-陆警/4.白钢车组/轿车-4p/白钢B.ini",
+      "definition": "adolence-white-steel-b",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轿车-黄色",
+      "file": "police/L-陆警/4.白钢车组/轿车-4p/实验.ini",
+      "definition": "adolence-sedan-yellow",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轿车-黑-低高光",
+      "file": "police/L-陆警/3.警车组/警车-4p/轿车3.ini",
+      "definition": "adolence-sedan-black-matte",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 42,
+        "decal": 8,
+        "animation": 0,
+        "action": 14,
+        "hiddenAction": 16,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "武装无人机",
+      "file": "police/A-空警/轻武直/武装无人机.ini",
+      "definition": "adolence-armed-drone",
+      "restored": [
+        "animation states",
+        "selection audio",
+        "source wreck",
+        "source transformation"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 50,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "武装攻击机",
+      "file": "police/A-空警/轻武直/武装攻击机.ini",
+      "definition": "adolence-attack-drone",
+      "restored": [
+        "animation states",
+        "selection audio",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 50,
+        "decal": 4,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "K-4968",
+      "file": "police/A-空警/战斗机/战机K.ini",
+      "definition": "adolence-k4968",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 2,
+        "effect": 48,
+        "decal": 4,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "鹰击-A3",
+      "file": "police/A-空警/战斗机/战机B.ini",
+      "definition": "adolence-eagle-a3",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 2,
+        "effect": 48,
+        "decal": 4,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "鹰击-A4",
+      "file": "police/A-空警/战斗机/战机C.ini",
+      "definition": "adolence-eagle-a4",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 2,
+        "effect": 48,
+        "decal": 4,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 7,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "领航员",
+      "file": "police/A-空警/运输机/PEKK.ini",
+      "definition": "adolence-navigator",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 3,
+        "effect": 47,
+        "decal": 6,
+        "animation": 0,
+        "action": 13,
+        "hiddenAction": 11,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用卫所",
+      "file": "police/B-建筑/3.警用卫所/mechFactory.ini",
+      "definition": "adolence-guard-post",
+      "restored": [
+        "selection audio",
+        "folded source resource income",
+        "source reinforcement squad",
+        "source reinforcement squad"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 0,
+        "action": 4,
+        "hiddenAction": 6,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "警用油所",
+      "file": "police/B-建筑/4.警用油所/mechFactory.ini",
+      "definition": "adolence-fuel-depot",
+      "restored": [
+        "selection audio",
+        "folded source resource income"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 40,
+        "decal": 4,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 6,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "M1A2 SEPV2",
+      "file": "单位/装甲/M1/M1A2 SEPV2.ini",
+      "definition": "adolence-m1a2-sepv2",
+      "restored": [
+        "selection audio"
+      ],
+      "unresolvedTransforms": [
+        {
+          "action": "action_3档",
+          "target": "M1A2 SEPV2 1",
+          "status": "disabled in original"
+        },
+        {
+          "action": "action_1档",
+          "target": "M1A2 SEPV2 2",
+          "status": "disabled in original"
+        }
+      ],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 62,
+        "decal": 19,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 11,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    }
+  ],
+  "unrepresented": [
+    {
+      "source": "1",
+      "file": "police/B-建筑/0.警用研究所/无用堆积/Simplified.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "113nsh",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的113n.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "AD-阵营选择",
+      "file": "police/B-建筑/0.警用研究所/阵营选择.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "ADFSDS",
+      "file": "police/S-特殊/图标/ADFSDS.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "APERS",
+      "file": "police/S-特殊/图标/APERS.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "Bsh",
+      "file": "police/L-陆警/5.沙漠运输/M1074-A卡车/损坏的B卡.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "HEAT",
+      "file": "police/S-特殊/图标/HEAT.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "HEATMPT",
+      "file": "police/S-特殊/图标/HEATMPT.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "M1 装填",
+      "file": "单位/装甲/M1/M1 装填.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1 装填1",
+      "file": "单位/装甲/M1/M1 装填1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1 车长",
+      "file": "单位/装甲/M1/M1 车长.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1 车长1",
+      "file": "单位/装甲/M1/M1 车长1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 1",
+      "file": "单位/装甲/M1128/M1128 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 2",
+      "file": "单位/装甲/M1128/M1128 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 3",
+      "file": "单位/装甲/M1128/M1128 3.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 T",
+      "file": "单位/装甲/M1128/M1128 T.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 T 1",
+      "file": "单位/装甲/M1128/M1128 T 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 T 2",
+      "file": "单位/装甲/M1128/M1128 T 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 T 3",
+      "file": "单位/装甲/M1128/M1128 T 3.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 炮手",
+      "file": "单位/装甲/M1128/M1128 炮手.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128 车长",
+      "file": "单位/装甲/M1128/M1128 车长.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1128车长M2",
+      "file": "单位/装甲/M1128/M1128车长M2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A1 HC 标题党 1",
+      "file": "单位/装甲/M1/M1A1 HC 标题党 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A1 HC 标题党 2",
+      "file": "单位/装甲/M1/M1A1 HC 标题党 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A1 HC 标题党 3",
+      "file": "单位/装甲/M1/M1A1 HC 标题党 3.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A1 HC 标题党 T",
+      "file": "单位/装甲/M1/M1A1 HC 标题党 T.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A1 HC 标题党 T 1",
+      "file": "单位/装甲/M1/M1A1 HC 标题党 T 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A1 HC 标题党 T 2",
+      "file": "单位/装甲/M1/M1A1 HC 标题党 T 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 1",
+      "file": "单位/装甲/M1/M1A2 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 2",
+      "file": "单位/装甲/M1/M1A2 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 3",
+      "file": "单位/装甲/M1/M1A2 3.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV2 1",
+      "file": "单位/装甲/M1/M1A2 SEPV2 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV2 2",
+      "file": "单位/装甲/M1/M1A2 SEPV2 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV2 3",
+      "file": "单位/装甲/M1/M1A2 SEPV2 3.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV2 T",
+      "file": "单位/装甲/M1/M1A2 SEPV2 T.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV2 T 1",
+      "file": "单位/装甲/M1/M1A2 SEPV2 T 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV2 T 2",
+      "file": "单位/装甲/M1/M1A2 SEPV2 T 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV3 1",
+      "file": "单位/装甲/M1/M1A2 SEPV3 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV3 2",
+      "file": "单位/装甲/M1/M1A2 SEPV3 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV3 3",
+      "file": "单位/装甲/M1/M1A2 SEPV3 3.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV3 T",
+      "file": "单位/装甲/M1/M1A2 SEPV3 T.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV3 T 1",
+      "file": "单位/装甲/M1/M1A2 SEPV3 T 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 SEPV3 T 2",
+      "file": "单位/装甲/M1/M1A2 SEPV3 T 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 T",
+      "file": "单位/装甲/M1/M1A2 T.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 T 1",
+      "file": "单位/装甲/M1/M1A2 T 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 T 2",
+      "file": "单位/装甲/M1/M1A2 T 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 TUSK II 1",
+      "file": "单位/装甲/M1/M1A2 TUSK II 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 TUSK II 2",
+      "file": "单位/装甲/M1/M1A2 TUSK II 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 TUSK II 3",
+      "file": "单位/装甲/M1/M1A2 TUSK II 3.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 TUSK II T",
+      "file": "单位/装甲/M1/M1A2 TUSK II T.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 TUSK II T 1",
+      "file": "单位/装甲/M1/M1A2 TUSK II T 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M1A2 TUSK II T 2",
+      "file": "单位/装甲/M1/M1A2 TUSK II T 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M921Ash",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的M921A.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M921MPsh",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的M921MP.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M921sh",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的M921.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "M923sh",
+      "file": "police/L-陆警/5.沙漠运输/M921多功能车辆/损坏的M923.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "center_zd",
+      "file": "全局辅助/路径点辅助.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "daynNight_hawko'sEdition",
+      "file": "police/B-建筑/0.警用研究所/无用堆积/daynNight.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "daynNight_hawko'sEdition_clone",
+      "file": "police/B-建筑/0.警用研究所/无用堆积/daynNight_clone.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "icon",
+      "file": "police/S-特殊/图标/icon.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "z+i",
+      "file": "zombies/z+i/z+i.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "一档",
+      "file": "police/S-特殊/图标/一档.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "三档",
+      "file": "police/S-特殊/图标/三档.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "不拉扯",
+      "file": "police/S-特殊/图标/不拉扯.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "中型塔座",
+      "file": "police/B-建筑/中型塔座/中型塔座.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "二档",
+      "file": "police/S-特殊/图标/二档.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "人员",
+      "file": "police/S-特殊/图标/人员.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "伤害测量器",
+      "file": "police/S-特殊/特殊/伤害测量器.ini",
+      "reason": "scenery / developer helper"
+    },
+    {
+      "source": "伤害测量器建",
+      "file": "police/S-特殊/特殊/bui.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "伤害测量器潜",
+      "file": "police/S-特殊/特殊/under.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "伤害测量器空",
+      "file": "police/S-特殊/特殊/air.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "停车",
+      "file": "police/S-特殊/图标/停车.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "光速",
+      "file": "police/A-空警/战斗机/PEK.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "关前灯",
+      "file": "police/S-特殊/图标/关前灯.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "关火",
+      "file": "police/S-特殊/图标/关火.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "困难",
+      "file": "police/S-特殊/图标/困难.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "垃圾",
+      "file": "police/S-特殊/装饰/垃圾.ini",
+      "reason": "scenery / developer helper"
+    },
+    {
+      "source": "基础架台-横",
+      "file": "police/B-建筑/武器架横/基础架台.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "基础架台-竖",
+      "file": "police/B-建筑/武器架竖/基础架台.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "大信号烟-红色-20S",
+      "file": "police/S-特殊/烟火/红色_10s.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "大信号烟-绿色-10S",
+      "file": "police/S-特殊/烟火/绿色_10s.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "大信号烟-蓝色-10S",
+      "file": "police/S-特殊/烟火/蓝色_10s.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "大信号烟-黄色-10S",
+      "file": "police/S-特殊/烟火/黄色_10s.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "大卫·戴",
+      "file": "zombies/大卫·戴/大卫·戴.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "小信号烟-黄色-10S",
+      "file": "police/S-特殊/烟火/flare_10s.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "尸块",
+      "file": "police/S-特殊/装饰/块.ini",
+      "reason": "scenery / developer helper"
+    },
+    {
+      "source": "平民",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "平民-补给",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民-补给.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "平民-资金",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民-资金.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "平民慌张",
+      "file": "police/L-陆警/2.非手枪/平民单位/平民慌张.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "建造",
+      "file": "police/S-特殊/图标/建造.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "开前灯",
+      "file": "police/S-特殊/图标/开前灯.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "开火",
+      "file": "police/S-特殊/图标/开火.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "异常武警-手枪",
+      "file": "zombies/变异步兵/变异武警.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "弹夹",
+      "file": "police/S-特殊/图标/弹夹.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "彩蛋：自然常数",
+      "file": "police/A-空警/战斗机/（彩蛋单位）小丑-自然常数.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "手枪",
+      "file": "police/S-特殊/图标/手枪.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "拉扯",
+      "file": "police/S-特殊/图标/拉扯.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "指向性",
+      "file": "police/S-特殊/图标/指向性.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "旋转炮塔",
+      "file": "police/S-特殊/图标/旋转炮塔.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "时间",
+      "file": "police/S-特殊/图标/时间.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "普通地雷",
+      "file": "police/B-建筑/地雷/普通地雷/普通地雷.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "核武",
+      "file": "police/S-特殊/图标/核武.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "桶",
+      "file": "police/S-特殊/装饰/桶.ini",
+      "reason": "scenery / developer helper"
+    },
+    {
+      "source": "步枪",
+      "file": "police/S-特殊/图标/步枪.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "武器架台-横",
+      "file": "police/B-建筑/武器架横/武器架台.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "武器架台-竖",
+      "file": "police/B-建筑/武器架竖/武器架台.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "灯",
+      "file": "police/S-特殊/装饰/灯1.ini",
+      "reason": "scenery / developer helper"
+    },
+    {
+      "source": "燃烧地雷",
+      "file": "police/B-建筑/地雷/燃烧地雷/燃烧地雷.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "物资架台-横",
+      "file": "police/B-建筑/武器架横/物资架台.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "物资架台-竖",
+      "file": "police/B-建筑/武器架竖/物资架台.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "生化",
+      "file": "police/S-特殊/图标/0.生化.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "空",
+      "file": "police/S-特殊/图标/空.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "简单",
+      "file": "police/S-特殊/图标/简单.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "箱",
+      "file": "police/S-特殊/装饰/箱.ini",
+      "reason": "scenery / developer helper"
+    },
+    {
+      "source": "花费",
+      "file": "police/S-特殊/图标/花费.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "补充弹药",
+      "file": "police/S-特殊/图标/补充弹药.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "装填 机枪",
+      "file": "单位/装甲/M1/装填 机枪.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "装填 机枪1",
+      "file": "单位/装甲/M1/装填 机枪1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "装填 机枪2",
+      "file": "单位/装甲/M1/装填 机枪2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "装甲车后部",
+      "file": "police/L-陆警/3.警车组/警用伏击车-17p/装甲车后部.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "覆盖",
+      "file": "police/S-特殊/覆盖.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "警告",
+      "file": "police/S-特殊/图标/警告.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "警用哨所1",
+      "file": "police/B-建筑/2.警用哨所/中难度.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "警用哨所2",
+      "file": "police/B-建筑/2.警用哨所/高难度.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "警用研究所-A",
+      "file": "police/B-建筑/0.警用研究所/警用研究-A.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "警用研究所-B",
+      "file": "police/B-建筑/0.警用研究所/警用研究-B.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "警用研究所-C",
+      "file": "police/B-建筑/0.警用研究所/警用研究-C.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "警用研究所-D",
+      "file": "police/B-建筑/0.警用研究所/警用研究-D.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "设置",
+      "file": "police/S-特殊/图标/设置.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "车长M2",
+      "file": "单位/装甲/M1/车长M2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "车长M2 1",
+      "file": "单位/装甲/M1/车长M2 1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "车长M2 2",
+      "file": "单位/装甲/M1/车长M2 2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "轰炸",
+      "file": "police/S-特殊/图标/轰炸.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "轻型坦克",
+      "file": "police/S-特殊/测试/微型坦克/tank.ini",
+      "reason": "scenery / developer helper"
+    },
+    {
+      "source": "返回",
+      "file": "police/S-特殊/图标/返回.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "都市",
+      "file": "police/S-特殊/图标/0.都市.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "重武坠毁",
+      "file": "police/A-空警/直升机/武装直升机/重武坠毁动画.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "铁",
+      "file": "police/S-特殊/装饰/铁.ini",
+      "reason": "scenery / developer helper"
+    },
+    {
+      "source": "阵营",
+      "file": "police/S-特殊/图标/阵营.ini",
+      "reason": "source UI icon helper"
+    },
+    {
+      "source": "阵营选择-AI",
+      "file": "police/B-建筑/0.警用研究所/阵营选择-AI.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "霸王",
+      "file": "police/L-陆警/3.警车组/警车-4p/警车-P.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "饿了么-步枪",
+      "file": "police/L-陆警/2.非手枪/军事单位/民兵/国民警卫队-饿了么.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    }
+  ],
+  "recordings": {
+    "recording-ef2a1774c6b68e73": "shared/选.ogg",
+    "recording-450d92d8185aaf7d": "shared/对讲机.ogg",
+    "recording-2e2b77d832f06063": "shared/步枪换弹.wav"
+  },
+  "scope": "Source-derived fidelity improvements; not a claim of full RW script emulation. See PARITY.md for remaining behavior gaps."
+}

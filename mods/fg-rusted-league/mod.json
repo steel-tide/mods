@@ -1,13 +1,13 @@
 {
   "format": "steel-tide-mod",
-  "v": 2,
+  "v": 4,
   "id": "fg-rusted-league",
   "name": [
     "FG Rusted League",
     "FG 铁锈联盟"
   ],
-  "version": "0.3.1",
-  "minGame": "0.8.14",
+  "version": "0.4.1",
+  "minGame": "0.8.16",
   "author": "空中之主 (art by 有人, 基卡 and SS元首)",
   "description": [
     "The whole army redrawn in black and acid green — Grizzly and Prism tanks, Kirov airships, Patriot batteries — and the GF plugin's carriers, dreadnoughts, sky fortresses, a Mirage tank that hides as a tree and a hero tank that ranks itself up.",
@@ -638,6 +638,27 @@
         "fg-rusted-league-builder",
         "fg-rusted-league-construction-ship",
         "fg-rusted-league-supply-ship"
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-83635843"
+        }
+      },
+      "rules": [
+        {
+          "button": {
+            "name": [
+              "Flak Cannon",
+              "高射炮"
+            ],
+            "cost": 1790,
+            "time": 33.333333,
+            "ai": false
+          },
+          "do": {
+            "morph": "fg-rusted-league-flak"
+          }
+        }
       ]
     },
     {
@@ -683,7 +704,12 @@
         }
       ],
       "sprite": "u.fg-rusted-league-patriot",
-      "turretSprite": "tur.fg-rusted-league-patriot-2"
+      "turretSprite": "tur.fg-rusted-league-patriot-2",
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-33691f24"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-absolute-domain",
@@ -731,7 +757,12 @@
         }
       ],
       "sprite": "u.fg-rusted-league-patriot",
-      "turretSprite": "tur.fg-rusted-league-absolute-domain"
+      "turretSprite": "tur.fg-rusted-league-absolute-domain",
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-56ae8808"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-flak",
@@ -782,7 +813,12 @@
       "builtBy": [
         "fg-rusted-league-builder",
         "fg-rusted-league-construction-ship"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-3806aa52"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-prism-tower",
@@ -996,7 +1032,12 @@
       ],
       "builtBy": [
         "fg-rusted-league-builder"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-0641b633"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-t3-factory",
@@ -1035,7 +1076,12 @@
       ],
       "builtBy": [
         "fg-rusted-league-builder"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-4779d311"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-colossus-gun",
@@ -1110,7 +1156,7 @@
           "id": "w1",
           "cls": "he",
           "dmg": 500,
-          "reload": 30.0,
+          "reload": 18.33,
           "range": 60,
           "targets": [
             "ground",
@@ -1147,7 +1193,21 @@
       ],
       "builtBy": [
         "fg-rusted-league-builder"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 5.0,
+            "start": 1,
+            "regen": 0.06,
+            "recharge": 0.06,
+            "full": true,
+            "usage": {
+              "w1": 1.0
+            }
+          }
+        }
+      }
     },
     {
       "id": "fg-rusted-league-floating-array",
@@ -1243,6 +1303,22 @@
         "fg-rusted-league-builder",
         "fg-rusted-league-construction-ship",
         "fg-rusted-league-supply-ship"
+      ],
+      "rules": [
+        {
+          "button": {
+            "name": [
+              "Landed Floating Array",
+              "浮空阵列"
+            ],
+            "cost": 0,
+            "time": 0.016667,
+            "ai": false
+          },
+          "do": {
+            "morph": "fg-rusted-league-floating-array-landed"
+          }
+        }
       ]
     },
     {
@@ -1308,11 +1384,18 @@
         "fg-rusted-league-vanguard-gunship",
         "fg-rusted-league-heavy-gunship",
         "fg-rusted-league-shield-tank",
-        "fg-rusted-league-skyshaker"
+        "fg-rusted-league-skyshaker",
+        "fg-rusted-league-sky-support-carrier",
+        "fg-rusted-league-flying-battle-carrier"
       ],
       "builtBy": [
         "fg-rusted-league-builder"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-3a6fd985"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-hero-barracks",
@@ -1340,7 +1423,12 @@
       ],
       "builtBy": [
         "fg-rusted-league-builder"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-2bf891de"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-hero-tower",
@@ -1383,6 +1471,119 @@
       ],
       "builtBy": [
         "fg-rusted-league-builder"
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-c4e02a4d"
+        }
+      }
+    },
+    {
+      "id": "fg-rusted-league-floating-array-landed",
+      "name": [
+        "Landed Floating Array",
+        "浮空阵列"
+      ],
+      "desc": [
+        "The floating defence array in its landed form.",
+        "The floating defence array in its landed form."
+      ],
+      "kind": "building",
+      "tier": 2,
+      "cost": 1900,
+      "buildTime": 90,
+      "hp": 1880,
+      "armor": "structure",
+      "vision": 9,
+      "fw": 3,
+      "fh": 3,
+      "power": -6,
+      "weapons": [
+        {
+          "id": "w1",
+          "cls": "cannon",
+          "dmg": 68.7,
+          "reload": 0.3,
+          "range": 10.5,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "shell",
+          "speed": 768,
+          "turret": false,
+          "muzzleOffset": 11.5
+        },
+        {
+          "id": "w4",
+          "cls": "autocannon",
+          "dmg": 25.2,
+          "reload": 0.52,
+          "range": 10.5,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "bullet",
+          "speed": 480,
+          "burst": 2,
+          "burstDelay": 0.12,
+          "turret": false,
+          "muzzleOffset": 11.5
+        },
+        {
+          "id": "w2",
+          "cls": "autocannon",
+          "dmg": 13.7,
+          "reload": 0.37,
+          "range": 10.5,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "bullet",
+          "speed": 768,
+          "turret": false,
+          "muzzleOffset": 11.5
+        },
+        {
+          "id": "w3",
+          "cls": "autocannon",
+          "dmg": 13.0,
+          "reload": 0.35,
+          "range": 10.5,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "bullet",
+          "speed": 768,
+          "turret": false,
+          "muzzleOffset": 11.5
+        }
+      ],
+      "regen": 7.5,
+      "sprite": "u.fg-rusted-league-floating-array",
+      "builtBy": [],
+      "rules": [
+        {
+          "button": {
+            "name": [
+              "Floating Array",
+              "浮空阵列"
+            ],
+            "cost": 0,
+            "time": 0.033333,
+            "ai": false
+          },
+          "do": {
+            "morph": "fg-rusted-league-floating-array"
+          }
+        }
       ]
     },
     {
@@ -1497,7 +1698,8 @@
       "producedBy": [
         "fg-rusted-league-army-base",
         "fg-rusted-league-army-base-2",
-        "fg-rusted-league-land-cruiser"
+        "fg-rusted-league-land-cruiser",
+        "fg-rusted-league-battle-carrier-deployed"
       ]
     },
     {
@@ -1659,7 +1861,9 @@
         "fg-rusted-league-air-base",
         "fg-rusted-league-air-base-2",
         "fg-rusted-league-lord-of-the-sky",
-        "fg-rusted-league-battle-carrier"
+        "fg-rusted-league-battle-carrier",
+        "fg-rusted-league-sky-support-carrier",
+        "fg-rusted-league-flying-battle-carrier"
       ]
     },
     {
@@ -1710,7 +1914,10 @@
         "fg-rusted-league-air-base",
         "fg-rusted-league-air-base-2",
         "fg-rusted-league-lord-of-the-sky",
-        "fg-rusted-league-battle-carrier"
+        "fg-rusted-league-battle-carrier",
+        "fg-rusted-league-sky-support-carrier",
+        "fg-rusted-league-flying-battle-carrier",
+        "fg-rusted-league-battle-carrier-deployed"
       ]
     },
     {
@@ -1761,7 +1968,9 @@
       "producedBy": [
         "fg-rusted-league-air-base-2",
         "fg-rusted-league-lord-of-the-sky",
-        "fg-rusted-league-battle-carrier"
+        "fg-rusted-league-battle-carrier",
+        "fg-rusted-league-sky-support-carrier",
+        "fg-rusted-league-flying-battle-carrier"
       ]
     },
     {
@@ -2579,8 +2788,14 @@
       ],
       "producedBy": [
         "fg-rusted-league-air-base-2",
-        "fg-rusted-league-battle-carrier"
-      ]
+        "fg-rusted-league-battle-carrier",
+        "fg-rusted-league-flying-battle-carrier"
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-d3cb041e"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-amphibious-jet-dived",
@@ -2653,7 +2868,12 @@
           }
         }
       ],
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-31abfc97"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-rocket-truck",
@@ -2719,7 +2939,12 @@
       "builds": [
         "fg-rusted-league-command"
       ],
-      "buildRate": 30
+      "buildRate": 30,
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-f04497ae"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-general-battleship",
@@ -2816,7 +3041,12 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-dde1aa35"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-apocalypse",
@@ -2888,7 +3118,12 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-t3-factory"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-6c95d990"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-mirage-tank",
@@ -2940,8 +3175,7 @@
       "rules": [
         {
           "when": {
-            "still": 1,
-            "quiet": 0.8
+            "age": 0.8
           },
           "do": {
             "morph": "fg-rusted-league-mirage-disguised"
@@ -3003,14 +3237,6 @@
       "stealth": 3,
       "rules": [
         {
-          "when": {
-            "moving": true
-          },
-          "do": {
-            "morph": "fg-rusted-league-mirage-tank"
-          }
-        },
-        {
           "on": "fired",
           "do": {
             "morph": "fg-rusted-league-mirage-tank"
@@ -3048,7 +3274,7 @@
           "id": "w1",
           "cls": "he",
           "dmg": 200.0,
-          "reload": 9.72,
+          "reload": 4.17,
           "range": 16,
           "targets": [
             "ground",
@@ -3090,7 +3316,22 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-t3-factory"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 3.0,
+            "start": 1,
+            "regen": 0.18,
+            "recharge": 0.18,
+            "full": true,
+            "usage": {
+              "w1": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-54091dc3"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-pacifier",
@@ -3196,8 +3437,8 @@
         {
           "id": "w1",
           "cls": "he",
-          "dmg": 222.0,
-          "reload": 3.1,
+          "dmg": 89.5,
+          "reload": 1.25,
           "range": 14.0,
           "targets": [
             "ground",
@@ -3240,7 +3481,21 @@
           }
         }
       ],
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0.5399999999999999,
+            "recharge": 0.5399999999999999,
+            "full": false,
+            "usage": {
+              "w1": 1.0
+            }
+          }
+        }
+      }
     },
     {
       "id": "fg-rusted-league-siege-tank",
@@ -3344,8 +3599,8 @@
         {
           "id": "w1",
           "cls": "cannon",
-          "dmg": 285.3,
-          "reload": 2.98,
+          "dmg": 126.4,
+          "reload": 1.32,
           "range": 15.7,
           "targets": [
             "ground",
@@ -3401,7 +3656,21 @@
           }
         }
       ],
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 5.0,
+            "start": 1,
+            "regen": 0.6,
+            "recharge": 0.6,
+            "full": true,
+            "usage": {
+              "w1": 1.0
+            }
+          }
+        }
+      }
     },
     {
       "id": "fg-rusted-league-rocket-launcher",
@@ -3432,7 +3701,7 @@
           "id": "w1",
           "cls": "he",
           "dmg": 128.0,
-          "reload": 5.19,
+          "reload": 3.33,
           "range": 13.3,
           "targets": [
             "ground",
@@ -3478,7 +3747,12 @@
       ],
       "producedBy": [
         "fg-rusted-league-army-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-a08c41a7"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-rocket-launcher-fixed",
@@ -3509,7 +3783,7 @@
           "id": "w1",
           "cls": "he",
           "dmg": 128.0,
-          "reload": 4.17,
+          "reload": 2.5,
           "range": 15.0,
           "targets": [
             "ground",
@@ -3553,7 +3827,12 @@
           }
         }
       ],
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-25413eb0"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-minelayer",
@@ -3677,7 +3956,12 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-army-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-8884e9e2"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-flame-tank",
@@ -3739,7 +4023,12 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-army-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-ccbbabd0"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-missile-tank",
@@ -3801,7 +4090,12 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-army-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-5a543f03"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-striker-vx",
@@ -3831,8 +4125,8 @@
         {
           "id": "w1",
           "cls": "aa",
-          "dmg": 128.0,
-          "reload": 4.35,
+          "dmg": 84.3,
+          "reload": 2.5,
           "range": 9.4,
           "targets": [
             "air"
@@ -3944,7 +4238,21 @@
       "producedBy": [
         "fg-rusted-league-air-base-2",
         "fg-rusted-league-lord-of-the-sky"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 24.0,
+            "start": 1,
+            "regen": 0.3,
+            "recharge": 0.3,
+            "full": false,
+            "usage": {
+              "w2": 1.0
+            }
+          }
+        }
+      }
     },
     {
       "id": "fg-rusted-league-twinblade",
@@ -4018,7 +4326,22 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-air-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 24.0,
+            "start": 1,
+            "regen": 0.5399999999999999,
+            "recharge": 0.5399999999999999,
+            "full": true,
+            "usage": {
+              "w2": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-c9087117"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-tengu-jet",
@@ -4086,7 +4409,10 @@
       ],
       "producedBy": [
         "fg-rusted-league-air-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      }
     },
     {
       "id": "fg-rusted-league-tengu-mech",
@@ -4186,8 +4512,8 @@
         {
           "id": "w1",
           "cls": "at",
-          "dmg": 104.0,
-          "reload": 4.88,
+          "dmg": 84.3,
+          "reload": 2.5,
           "range": 6.6,
           "targets": [
             "ground",
@@ -4250,41 +4576,10 @@
       "turnRate": 2.09,
       "weapons": [
         {
-          "id": "w3",
-          "cls": "aa",
-          "dmg": 84.1,
-          "reload": 1.0,
-          "range": 9.8,
-          "targets": [
-            "air"
-          ],
-          "projectile": "missile",
-          "speed": 60,
-          "homing": true,
-          "turret": false,
-          "muzzleOffset": 27.7
-        },
-        {
-          "id": "w4",
-          "cls": "he",
-          "dmg": 126.1,
-          "reload": 1.5,
-          "range": 9.8,
-          "targets": [
-            "ground",
-            "ship"
-          ],
-          "projectile": "bomb",
-          "speed": 768,
-          "splash": 31,
-          "turret": false,
-          "muzzleOffset": 27.7
-        },
-        {
           "id": "w1",
           "cls": "he",
-          "dmg": 63.1,
-          "reload": 2.85,
+          "dmg": 43.7,
+          "reload": 1.0,
           "range": 9.8,
           "targets": [
             "ground",
@@ -4299,9 +4594,40 @@
           "muzzleOffset": 27.7
         },
         {
+          "id": "w3",
+          "cls": "aa",
+          "dmg": 58.2,
+          "reload": 1.0,
+          "range": 9.8,
+          "targets": [
+            "air"
+          ],
+          "projectile": "missile",
+          "speed": 60,
+          "homing": true,
+          "turret": false,
+          "muzzleOffset": 27.7
+        },
+        {
+          "id": "w4",
+          "cls": "he",
+          "dmg": 87.3,
+          "reload": 1.5,
+          "range": 9.8,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bomb",
+          "speed": 768,
+          "splash": 31,
+          "turret": false,
+          "muzzleOffset": 27.7
+        },
+        {
           "id": "w2",
           "cls": "torpedo",
-          "dmg": 42.0,
+          "dmg": 29.1,
           "reload": 1.0,
           "range": 9.8,
           "targets": [
@@ -4323,7 +4649,22 @@
         "fg-rusted-league-t3-factory",
         "fg-rusted-league-airfield",
         "fg-rusted-league-battle-carrier"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0.5399999999999999,
+            "recharge": 0.5399999999999999,
+            "full": false,
+            "usage": {
+              "w1": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-003bbd98"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-heavy-gunship",
@@ -4417,8 +4758,16 @@
       },
       "aiWeight": 1.0,
       "producedBy": [
-        "fg-rusted-league-airfield"
-      ]
+        "fg-rusted-league-airfield",
+        "fg-rusted-league-sky-support-carrier",
+        "fg-rusted-league-flying-battle-carrier",
+        "fg-rusted-league-battle-carrier-deployed"
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-8de0bcc5"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-shield-tank",
@@ -4513,7 +4862,10 @@
       "producedBy": [
         "fg-rusted-league-t3-factory",
         "fg-rusted-league-airfield"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      }
     },
     {
       "id": "fg-rusted-league-bone-eagle",
@@ -4541,8 +4893,8 @@
         {
           "id": "w2",
           "cls": "at",
-          "dmg": 200.1,
-          "reload": 3.21,
+          "dmg": 69.7,
+          "reload": 0.83,
           "range": 3.5,
           "targets": [
             "ground",
@@ -4561,7 +4913,7 @@
         {
           "id": "w1",
           "cls": "aa",
-          "dmg": 46.7,
+          "dmg": 16.3,
           "reload": 0.47,
           "range": 3.5,
           "targets": [
@@ -4588,7 +4940,21 @@
       "producedBy": [
         "fg-rusted-league-air-base-2",
         "fg-rusted-league-lord-of-the-sky"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 3.0,
+            "start": 1,
+            "regen": 0.42,
+            "recharge": 0.42,
+            "full": true,
+            "usage": {
+              "w2": 1.0
+            }
+          }
+        }
+      }
     },
     {
       "id": "fg-rusted-league-strategic-bomber",
@@ -4616,8 +4982,8 @@
         {
           "id": "w1",
           "cls": "he",
-          "dmg": 74.9,
-          "reload": 2.33,
+          "dmg": 21.5,
+          "reload": 0.67,
           "range": 5.2,
           "targets": [
             "ground",
@@ -4641,7 +5007,22 @@
       "producedBy": [
         "fg-rusted-league-air-base-2",
         "fg-rusted-league-battle-carrier"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 8.0,
+            "start": 1,
+            "regen": 0.6,
+            "recharge": 0.6,
+            "full": true,
+            "usage": {
+              "w1": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-14aa9c02"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-century-bomber",
@@ -4693,7 +5074,12 @@
       "producedBy": [
         "fg-rusted-league-air-base-2",
         "fg-rusted-league-lord-of-the-sky"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-2551ac6e"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-kirov",
@@ -4742,8 +5128,15 @@
       },
       "aiWeight": 1.0,
       "producedBy": [
-        "fg-rusted-league-t3-factory"
-      ]
+        "fg-rusted-league-t3-factory",
+        "fg-rusted-league-sky-support-carrier"
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "decay": 7.533,
+          "wreck": "dec.fg-rusted-league-wreck-b30e28ac"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-lord-of-the-sky",
@@ -4772,7 +5165,7 @@
         {
           "id": "w4",
           "cls": "he",
-          "dmg": 241.5,
+          "dmg": 181.3,
           "reload": 0.53,
           "range": 10.5,
           "targets": [
@@ -4786,9 +5179,27 @@
           "muzzleOffset": 43.2
         },
         {
+          "id": "w3",
+          "cls": "cannon",
+          "dmg": 181.3,
+          "reload": 0.83,
+          "range": 10.5,
+          "targets": [
+            "ground",
+            "ship",
+            "air",
+            "sub"
+          ],
+          "projectile": "shell",
+          "speed": 768,
+          "splash": 35,
+          "turret": false,
+          "muzzleOffset": 43.2
+        },
+        {
           "id": "w2",
           "cls": "aa",
-          "dmg": 48.3,
+          "dmg": 36.3,
           "reload": 0.53,
           "range": 10.5,
           "targets": [
@@ -4805,7 +5216,7 @@
         {
           "id": "w1",
           "cls": "aa",
-          "dmg": 48.3,
+          "dmg": 36.3,
           "reload": 0.42,
           "range": 10.5,
           "targets": [
@@ -4814,24 +5225,6 @@
           "projectile": "flak",
           "speed": 672,
           "splash": 38,
-          "turret": false,
-          "muzzleOffset": 43.2
-        },
-        {
-          "id": "w3",
-          "cls": "cannon",
-          "dmg": 241.5,
-          "reload": 30.0,
-          "range": 10.5,
-          "targets": [
-            "ground",
-            "ship",
-            "air",
-            "sub"
-          ],
-          "projectile": "shell",
-          "speed": 768,
-          "splash": 35,
           "turret": false,
           "muzzleOffset": 43.2
         }
@@ -4854,7 +5247,22 @@
       ],
       "producedBy": [
         "fg-rusted-league-t3-factory"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 5.0,
+            "start": 1,
+            "regen": 0.0006000000000000001,
+            "recharge": 0.0006000000000000001,
+            "full": false,
+            "usage": {
+              "w3": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-6f2ec117"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-b52",
@@ -4939,7 +5347,12 @@
       ],
       "producedBy": [
         "fg-rusted-league-black-tech-factory"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-c1e1f099"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-laser-ufo",
@@ -5028,7 +5441,10 @@
       ],
       "producedBy": [
         "fg-rusted-league-black-tech-factory"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      }
     },
     {
       "id": "fg-rusted-league-battlecruiser",
@@ -5162,7 +5578,10 @@
       ],
       "producedBy": [
         "fg-rusted-league-black-tech-factory"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      }
     },
     {
       "id": "fg-rusted-league-hover-escort",
@@ -5215,7 +5634,8 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-black-tech-factory",
-        "fg-rusted-league-battlecruiser"
+        "fg-rusted-league-battlecruiser",
+        "fg-rusted-league-battle-carrier-deployed"
       ]
     },
     {
@@ -5245,7 +5665,7 @@
           "id": "w2",
           "cls": "at",
           "dmg": 96.0,
-          "reload": 2.78,
+          "reload": 1.5,
           "range": 12.2,
           "targets": [
             "ground",
@@ -5302,7 +5722,22 @@
       ],
       "producedBy": [
         "fg-rusted-league-airfield"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 3.5,
+            "start": 1,
+            "regen": 0.7799999999999999,
+            "recharge": 0.7799999999999999,
+            "full": true,
+            "usage": {
+              "w2": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-65cdb7c1"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-teleporter",
@@ -5345,6 +5780,26 @@
           }
         },
         {
+          "button": {
+            "cost": 5060,
+            "time": 6.7,
+            "ai": true
+          },
+          "do": {
+            "morph": "fg-rusted-league-flying-battle-carrier"
+          }
+        },
+        {
+          "button": {
+            "cost": 5060,
+            "time": 8.3,
+            "ai": true
+          },
+          "do": {
+            "morph": "fg-rusted-league-sky-support-carrier"
+          }
+        },
+        {
           "on": "destroyed",
           "do": {
             "explode": {
@@ -5358,7 +5813,12 @@
       "producedBy": [
         "fg-rusted-league-black-tech-factory",
         "fg-rusted-league-laser-ufo"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "decay": 0.9
+        }
+      }
     },
     {
       "id": "fg-rusted-league-carrier-airship",
@@ -5451,7 +5911,12 @@
         "len": 10.9
       },
       "aiWeight": 0,
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-93fce830"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-asw-plane",
@@ -5501,7 +5966,22 @@
       },
       "aiWeight": 0,
       "sonar": 5,
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 0,
+            "full": true,
+            "usage": {
+              "w1": 6.0
+            }
+          },
+          "dockRecharge": true
+        }
+      }
     },
     {
       "id": "fg-rusted-league-wasp",
@@ -5561,8 +6041,14 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-air-base",
-        "fg-rusted-league-air-base-2"
-      ]
+        "fg-rusted-league-air-base-2",
+        "fg-rusted-league-battle-carrier-deployed"
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-54b917d2"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-attack-drone",
@@ -5612,7 +6098,12 @@
         "len": 4.7
       },
       "aiWeight": 0,
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-d714d4f7"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-littoral-ship",
@@ -5678,7 +6169,12 @@
       "producedBy": [
         "fg-rusted-league-naval-base",
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-f3c15d54"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-aegis-cruiser",
@@ -5707,8 +6203,8 @@
         {
           "id": "w1",
           "cls": "aa",
-          "dmg": 78.4,
-          "reload": 0.85,
+          "dmg": 61.8,
+          "reload": 0.67,
           "range": 10.5,
           "targets": [
             "air"
@@ -5730,7 +6226,22 @@
       "producedBy": [
         "fg-rusted-league-naval-base",
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 5.3999999999999995,
+            "recharge": 5.3999999999999995,
+            "full": false,
+            "usage": {
+              "w1": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-6860d6d6"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-light-carrier",
@@ -5772,7 +6283,12 @@
       "producedBy": [
         "fg-rusted-league-naval-base",
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-aa5c4d54"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-supply-ship",
@@ -5815,7 +6331,12 @@
         "fg-rusted-league-sentry",
         "fg-rusted-league-patriot"
       ],
-      "buildRate": 30
+      "buildRate": 30,
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-c1ce4443"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-nuclear-sub",
@@ -5845,7 +6366,7 @@
           "id": "w1",
           "cls": "he",
           "dmg": 128.0,
-          "reload": 11.67,
+          "reload": 3.33,
           "range": 16,
           "targets": [
             "ground",
@@ -5870,7 +6391,22 @@
       "underwater": true,
       "producedBy": [
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 3.0,
+            "start": 1,
+            "regen": 0.12,
+            "recharge": 0.12,
+            "full": true,
+            "usage": {
+              "w1": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-c0198666"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-ghost-sub",
@@ -5922,7 +6458,12 @@
       "underwater": true,
       "producedBy": [
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-26df19b7"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-dreadnought",
@@ -5952,7 +6493,7 @@
           "id": "w1",
           "cls": "he",
           "dmg": 400.0,
-          "reload": 9.72,
+          "reload": 4.17,
           "range": 16,
           "targets": [
             "ground",
@@ -5978,7 +6519,12 @@
       "aiWeight": 1.0,
       "producedBy": [
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-1a3ca29e"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-judgment",
@@ -6123,7 +6669,12 @@
       ],
       "producedBy": [
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-a573b69d"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-land-cruiser",
@@ -6245,7 +6796,12 @@
       ],
       "producedBy": [
         "fg-rusted-league-black-tech-factory"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-c1d25f6e"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-battle-carrier",
@@ -6327,7 +6883,12 @@
       ],
       "producedBy": [
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-bf2e7075"
+        }
+      }
     },
     {
       "id": "fg-rusted-league-aircraft-carrier",
@@ -6351,42 +6912,7 @@
       "radius": 28,
       "speed": 46,
       "turnRate": 1.57,
-      "weapons": [
-        {
-          "id": "interceptors",
-          "cls": "aa",
-          "dmg": 60,
-          "reload": 2.4,
-          "range": 9,
-          "burst": 4,
-          "burstDelay": 0.2,
-          "targets": [
-            "air"
-          ],
-          "projectile": "missile",
-          "speed": 520,
-          "homing": true,
-          "muzzleOffset": 19.1,
-          "turret": true
-        },
-        {
-          "id": "strike",
-          "cls": "he",
-          "dmg": 90,
-          "reload": 3.0,
-          "range": 8,
-          "burst": 3,
-          "burstDelay": 0.2,
-          "targets": [
-            "ground",
-            "ship"
-          ],
-          "projectile": "rocket",
-          "speed": 420,
-          "muzzleOffset": 19.1,
-          "turret": true
-        }
-      ],
+      "weapons": [],
       "shield": {
         "hp": 1792,
         "regen": 17.9,
@@ -6439,7 +6965,18 @@
       ],
       "producedBy": [
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      },
+      "wing": {
+        "unit": "fg-rusted-league-carrier-interceptor",
+        "count": 4,
+        "rebuild": 10,
+        "sortie": 6,
+        "rearm": 1,
+        "range": 9
+      }
     },
     {
       "id": "fg-rusted-league-jiaolong",
@@ -6469,7 +7006,7 @@
           "id": "w2",
           "cls": "at",
           "dmg": 96.0,
-          "reload": 2.14,
+          "reload": 1.5,
           "range": 10.5,
           "targets": [
             "ground",
@@ -6506,7 +7043,382 @@
       ],
       "producedBy": [
         "fg-rusted-league-naval-base-2"
-      ]
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "energy": {
+            "max": 3.5,
+            "start": 1,
+            "regen": 1.5599999999999998,
+            "recharge": 1.5599999999999998,
+            "full": true,
+            "usage": {
+              "w2": 1.0
+            }
+          },
+          "wreck": "dec.fg-rusted-league-wreck-9ee8889e"
+        }
+      }
+    },
+    {
+      "id": "fg-rusted-league-sky-support-carrier",
+      "name": [
+        "Sky Support Carrier",
+        "空中之王"
+      ],
+      "desc": [
+        "Mobile aircraft factory with a rapidly regenerating shield.",
+        "Mobile aircraft factory with a rapidly regenerating shield."
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 3,
+      "cost": 5060,
+      "buildTime": 120,
+      "hp": 2900,
+      "pop": 5,
+      "armor": "air",
+      "vision": 9,
+      "radius": 30,
+      "speed": 64,
+      "turnRate": 1.05,
+      "metalRate": 1.05,
+      "weapons": [
+        {
+          "id": "w1",
+          "cls": "cannon",
+          "dmg": 160.0,
+          "reload": 1.33,
+          "range": 8.7,
+          "targets": [
+            "ground",
+            "ship",
+            "air",
+            "sub"
+          ],
+          "projectile": "shell",
+          "speed": 384,
+          "burst": 2,
+          "burstDelay": 0.12,
+          "turret": false,
+          "muzzleOffset": 35.1
+        },
+        {
+          "id": "w3",
+          "cls": "he",
+          "dmg": 320.0,
+          "reload": 1.33,
+          "range": 8.7,
+          "targets": [
+            "ground",
+            "ship",
+            "air",
+            "sub"
+          ],
+          "projectile": "shell",
+          "speed": 60,
+          "homing": true,
+          "arc": true,
+          "turret": false,
+          "muzzleOffset": 35.1
+        },
+        {
+          "id": "w2",
+          "cls": "cannon",
+          "dmg": 120.0,
+          "reload": 1.33,
+          "range": 8.7,
+          "targets": [
+            "ground",
+            "ship",
+            "air",
+            "sub"
+          ],
+          "projectile": "shell",
+          "speed": 60,
+          "turret": false,
+          "muzzleOffset": 35.1
+        }
+      ],
+      "shield": {
+        "hp": 102,
+        "regen": 25.5,
+        "delay": 2
+      },
+      "regen": 14.5,
+      "sprite": "u.fg-rusted-league-sky-support-carrier",
+      "body": {
+        "r": 28.9,
+        "len": 20.3
+      },
+      "aiWeight": 1.0,
+      "produces": [
+        "fg-rusted-league-apache",
+        "fg-rusted-league-fighter",
+        "fg-rusted-league-strike-jet",
+        "fg-rusted-league-heavy-gunship",
+        "fg-rusted-league-kirov"
+      ],
+      "producedBy": [
+        "fg-rusted-league-airfield"
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-bafe0435"
+        }
+      }
+    },
+    {
+      "id": "fg-rusted-league-flying-battle-carrier",
+      "name": [
+        "Flying Battle Carrier",
+        "实验航母"
+      ],
+      "desc": [
+        "An airborne factory that deploys as a ground base.",
+        "An airborne factory that deploys as a ground base."
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 3,
+      "cost": 4380,
+      "buildTime": 120,
+      "hp": 5170,
+      "pop": 5,
+      "armor": "air",
+      "vision": 9,
+      "radius": 30,
+      "speed": 29,
+      "turnRate": 0.84,
+      "metalRate": 1.05,
+      "weapons": [
+        {
+          "id": "w1",
+          "cls": "cannon",
+          "dmg": 64.0,
+          "reload": 0.42,
+          "range": 10.5,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "shell",
+          "speed": 672,
+          "burst": 2,
+          "burstDelay": 0.12,
+          "muzzleOffset": 14.4,
+          "turret": true
+        }
+      ],
+      "regen": 25.9,
+      "turretMounts": [
+        {
+          "x": -8.6,
+          "y": -4.6
+        },
+        {
+          "x": 8.2,
+          "y": -4.6
+        }
+      ],
+      "sprite": "u.fg-rusted-league-flying-battle-carrier",
+      "body": {
+        "r": 22.7,
+        "len": 29.7
+      },
+      "turretSprite": "tur.fg-rusted-league-flying-battle-carrier",
+      "aiWeight": 1.0,
+      "produces": [
+        "fg-rusted-league-apache",
+        "fg-rusted-league-fighter",
+        "fg-rusted-league-strike-jet",
+        "fg-rusted-league-amphibious-jet",
+        "fg-rusted-league-heavy-gunship"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 0,
+            "time": 30,
+            "ai": false,
+            "name": [
+              "Deploy",
+              "部署"
+            ],
+            "desc": [
+              "Digs in where it stands: it fires further, and cannot move until packed up.",
+              "原地展开：射程更远，收起前无法移动。"
+            ]
+          },
+          "do": {
+            "morph": "fg-rusted-league-battle-carrier-deployed"
+          }
+        }
+      ],
+      "producedBy": [
+        "fg-rusted-league-airfield"
+      ],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-43a301c0"
+        }
+      }
+    },
+    {
+      "id": "fg-rusted-league-battle-carrier-deployed",
+      "name": [
+        "Deployed Battle Carrier",
+        "实验航母"
+      ],
+      "desc": [
+        "The carrier landed as a forward production base.",
+        "The carrier landed as a forward production base."
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 3,
+      "cost": 4380,
+      "buildTime": 120,
+      "hp": 5170,
+      "pop": 5,
+      "armor": "heavy",
+      "vision": 9,
+      "radius": 30,
+      "speed": 0,
+      "turnRate": 0.84,
+      "fireOnMove": true,
+      "metalRate": 1.05,
+      "weapons": [
+        {
+          "id": "w1",
+          "cls": "cannon",
+          "dmg": 64.0,
+          "reload": 0.42,
+          "range": 10.5,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "shell",
+          "speed": 672,
+          "burst": 4,
+          "burstDelay": 0.12,
+          "muzzleOffset": 14.4,
+          "turret": true
+        }
+      ],
+      "regen": 25.9,
+      "turretMounts": [
+        {
+          "x": -8.6,
+          "y": -6.9
+        },
+        {
+          "x": 8.2,
+          "y": -6.9
+        },
+        {
+          "x": -8.6,
+          "y": 6.9
+        },
+        {
+          "x": 8.2,
+          "y": 6.9
+        }
+      ],
+      "sprite": "u.fg-rusted-league-flying-battle-carrier",
+      "body": {
+        "r": 22.7,
+        "len": 29.7
+      },
+      "turretSprite": "tur.fg-rusted-league-flying-battle-carrier",
+      "aiWeight": 0,
+      "produces": [
+        "fg-rusted-league-fighter",
+        "fg-rusted-league-grizzly",
+        "fg-rusted-league-hover-escort",
+        "fg-rusted-league-wasp",
+        "fg-rusted-league-heavy-gunship"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 0,
+            "time": 30,
+            "ai": false,
+            "name": [
+              "Pack Up",
+              "收起"
+            ],
+            "desc": [
+              "Back on its wheels and tracks.",
+              "收起，恢复移动。"
+            ]
+          },
+          "do": {
+            "morph": "fg-rusted-league-flying-battle-carrier"
+          }
+        }
+      ],
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {
+          "wreck": "dec.fg-rusted-league-wreck-d0bf40c9"
+        }
+      }
+    },
+    {
+      "id": "fg-rusted-league-carrier-interceptor",
+      "name": [
+        "Carrier Interceptor",
+        "拦截机3"
+      ],
+      "desc": [
+        "An interceptor launched by the flying carrier.",
+        "An interceptor launched by the flying carrier."
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 40,
+      "buildTime": 4,
+      "hp": 200,
+      "pop": 0,
+      "armor": "air",
+      "vision": 9,
+      "radius": 10,
+      "speed": 220,
+      "turnRate": 6.28,
+      "weapons": [
+        {
+          "id": "w1",
+          "cls": "he",
+          "dmg": 4.1,
+          "reload": 0.47,
+          "range": 2.4,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "shell",
+          "speed": 672,
+          "arc": true,
+          "burst": 2,
+          "burstDelay": 0.12,
+          "turret": false,
+          "muzzleOffset": 11.5
+        }
+      ],
+      "sprite": "u.fg-rusted-league-carrier-interceptor",
+      "body": {
+        "r": 14.1,
+        "len": 0
+      },
+      "aiWeight": 0,
+      "producedBy": []
     },
     {
       "id": "fg-rusted-league-aircraft-carrier-2",
@@ -6530,42 +7442,7 @@
       "radius": 28,
       "speed": 46,
       "turnRate": 1.57,
-      "weapons": [
-        {
-          "id": "interceptors",
-          "cls": "aa",
-          "dmg": 60,
-          "reload": 2.4,
-          "range": 9,
-          "burst": 5,
-          "burstDelay": 0.2,
-          "targets": [
-            "air"
-          ],
-          "projectile": "missile",
-          "speed": 520,
-          "homing": true,
-          "muzzleOffset": 19.1,
-          "turret": true
-        },
-        {
-          "id": "strike",
-          "cls": "he",
-          "dmg": 90,
-          "reload": 3.0,
-          "range": 8,
-          "burst": 4,
-          "burstDelay": 0.2,
-          "targets": [
-            "ground",
-            "ship"
-          ],
-          "projectile": "rocket",
-          "speed": 420,
-          "muzzleOffset": 19.1,
-          "turret": true
-        }
-      ],
+      "weapons": [],
       "shield": {
         "hp": 1792,
         "regen": 17.9,
@@ -6620,7 +7497,18 @@
           }
         }
       ],
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      },
+      "wing": {
+        "unit": "fg-rusted-league-carrier-interceptor",
+        "count": 5,
+        "rebuild": 10,
+        "sortie": 6,
+        "rearm": 1,
+        "range": 9
+      }
     },
     {
       "id": "fg-rusted-league-aircraft-carrier-3",
@@ -6644,42 +7532,7 @@
       "radius": 28,
       "speed": 46,
       "turnRate": 1.57,
-      "weapons": [
-        {
-          "id": "interceptors",
-          "cls": "aa",
-          "dmg": 60,
-          "reload": 2.4,
-          "range": 9,
-          "burst": 6,
-          "burstDelay": 0.2,
-          "targets": [
-            "air"
-          ],
-          "projectile": "missile",
-          "speed": 520,
-          "homing": true,
-          "muzzleOffset": 19.1,
-          "turret": true
-        },
-        {
-          "id": "strike",
-          "cls": "he",
-          "dmg": 90,
-          "reload": 3.0,
-          "range": 8,
-          "burst": 5,
-          "burstDelay": 0.2,
-          "targets": [
-            "ground",
-            "ship"
-          ],
-          "projectile": "rocket",
-          "speed": 420,
-          "muzzleOffset": 19.1,
-          "turret": true
-        }
-      ],
+      "weapons": [],
       "shield": {
         "hp": 1792,
         "regen": 17.9,
@@ -6738,7 +7591,18 @@
           }
         }
       ],
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      },
+      "wing": {
+        "unit": "fg-rusted-league-carrier-interceptor",
+        "count": 6,
+        "rebuild": 10,
+        "sortie": 6,
+        "rearm": 1,
+        "range": 9
+      }
     },
     {
       "id": "fg-rusted-league-aircraft-carrier-4",
@@ -6762,42 +7626,7 @@
       "radius": 28,
       "speed": 46,
       "turnRate": 1.57,
-      "weapons": [
-        {
-          "id": "interceptors",
-          "cls": "aa",
-          "dmg": 60,
-          "reload": 2.4,
-          "range": 9,
-          "burst": 7,
-          "burstDelay": 0.2,
-          "targets": [
-            "air"
-          ],
-          "projectile": "missile",
-          "speed": 520,
-          "homing": true,
-          "muzzleOffset": 19.1,
-          "turret": true
-        },
-        {
-          "id": "strike",
-          "cls": "he",
-          "dmg": 90,
-          "reload": 3.0,
-          "range": 8,
-          "burst": 6,
-          "burstDelay": 0.2,
-          "targets": [
-            "ground",
-            "ship"
-          ],
-          "projectile": "rocket",
-          "speed": 420,
-          "muzzleOffset": 19.1,
-          "turret": true
-        }
-      ],
+      "weapons": [],
       "shield": {
         "hp": 1792,
         "regen": 17.9,
@@ -6860,7 +7689,18 @@
           }
         }
       ],
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      },
+      "wing": {
+        "unit": "fg-rusted-league-carrier-interceptor",
+        "count": 7,
+        "rebuild": 10,
+        "sortie": 6,
+        "rearm": 1,
+        "range": 9
+      }
     },
     {
       "id": "fg-rusted-league-aircraft-carrier-5",
@@ -6884,42 +7724,7 @@
       "radius": 28,
       "speed": 46,
       "turnRate": 1.57,
-      "weapons": [
-        {
-          "id": "interceptors",
-          "cls": "aa",
-          "dmg": 60,
-          "reload": 1.44,
-          "range": 9,
-          "burst": 8,
-          "burstDelay": 0.2,
-          "targets": [
-            "air"
-          ],
-          "projectile": "missile",
-          "speed": 520,
-          "homing": true,
-          "muzzleOffset": 19.1,
-          "turret": true
-        },
-        {
-          "id": "strike",
-          "cls": "he",
-          "dmg": 90,
-          "reload": 1.8,
-          "range": 8,
-          "burst": 7,
-          "burstDelay": 0.2,
-          "targets": [
-            "ground",
-            "ship"
-          ],
-          "projectile": "rocket",
-          "speed": 420,
-          "muzzleOffset": 19.1,
-          "turret": true
-        }
-      ],
+      "weapons": [],
       "shield": {
         "hp": 1792,
         "regen": 17.9,
@@ -6966,7 +7771,18 @@
       },
       "turretSprite": "tur.fg-rusted-league-aircraft-carrier",
       "aiWeight": 0,
-      "producedBy": []
+      "producedBy": [],
+      "extensions": {
+        "fg-rusted-league.source-v1": {}
+      },
+      "wing": {
+        "unit": "fg-rusted-league-carrier-interceptor",
+        "count": 8,
+        "rebuild": 2,
+        "sortie": 6,
+        "rearm": 1,
+        "range": 9
+      }
     },
     {
       "id": "fg-rusted-league-hero-1",
@@ -8567,11 +9383,23 @@
       "producedBy": []
     }
   ],
+  "factions": [
+    {
+      "id": "fg-rusted-league-league",
+      "name": [
+        "FG Rusted League",
+        "FG 铁锈联盟",
+        "FG 러스티드 리그"
+      ],
+      "headquarters": "fg-rusted-league-command",
+      "builder": "fg-rusted-league-builder"
+    }
+  ],
   "sprites": [
     {
       "key": "u.fg-rusted-league-command",
       "file": "sprites/u.fg-rusted-league-command.png",
-      "frames": 1
+      "frames": 4
     },
     {
       "key": "u.fg-rusted-league-army-base",
@@ -8745,12 +9573,47 @@
       "key": "u.fg-rusted-league-battle-lab",
       "file": "sprites/u.fg-rusted-league-battle-lab.png",
       "frames": 4,
-      "fps": 10.0
+      "fps": 10.0,
+      "anims": {
+        "idle": [
+          0,
+          3,
+          10.0
+        ],
+        "moving": [
+          0,
+          3,
+          10.0
+        ],
+        "firing": [
+          0,
+          3,
+          10.0
+        ]
+      }
     },
     {
       "key": "u.fg-rusted-league-t3-factory",
       "file": "sprites/u.fg-rusted-league-t3-factory.png",
-      "frames": 1
+      "frames": 8,
+      "fps": 10.0,
+      "anims": {
+        "idle": [
+          0,
+          7,
+          10.0
+        ],
+        "moving": [
+          0,
+          7,
+          10.0
+        ],
+        "firing": [
+          0,
+          7,
+          10.0
+        ]
+      }
     },
     {
       "key": "u.fg-rusted-league-colossus-gun",
@@ -8798,13 +9661,32 @@
       "key": "u.fg-rusted-league-reactor",
       "file": "sprites/u.fg-rusted-league-reactor.png",
       "frames": 6,
-      "fps": 10.0
+      "fps": 10.0,
+      "anims": {
+        "idle": [
+          0,
+          5,
+          10.0
+        ],
+        "moving": [
+          0,
+          5,
+          10.0
+        ]
+      }
     },
     {
       "key": "u.fg-rusted-league-airfield",
       "file": "sprites/u.fg-rusted-league-airfield.png",
       "frames": 5,
-      "fps": 6.0
+      "fps": 6.0,
+      "anims": {
+        "idle": [
+          0,
+          4,
+          6.0
+        ]
+      }
     },
     {
       "key": "u.fg-rusted-league-hero-barracks",
@@ -9006,7 +9888,7 @@
         "moving": [
           0,
           2,
-          17.14
+          17.1429
         ]
       },
       "rotated": true,
@@ -9085,14 +9967,15 @@
       "file": "sprites/u.fg-rusted-league-apocalypse.png",
       "frames": 2,
       "anims": {
+        "idle": [
+          0,
+          0,
+          6.0
+        ],
         "moving": [
           0,
           1,
-          30
-        ],
-        "idle": [
-          0,
-          0
+          30.0
         ]
       },
       "rotated": true,
@@ -9113,19 +9996,20 @@
       "file": "sprites/u.fg-rusted-league-mirage-tank.png",
       "frames": 5,
       "anims": {
-        "moving": [
-          0,
-          1,
-          0.3
-        ],
         "idle": [
           2,
           4,
           0.3
         ],
+        "moving": [
+          0,
+          1,
+          0.12
+        ],
         "firing": [
           0,
-          1
+          1,
+          8
         ]
       },
       "rotated": true,
@@ -9163,14 +10047,15 @@
       "file": "sprites/u.fg-rusted-league-pacifier.png",
       "frames": 3,
       "anims": {
+        "idle": [
+          0,
+          0,
+          60
+        ],
         "moving": [
           1,
           2,
           10.0
-        ],
-        "idle": [
-          0,
-          0
         ]
       },
       "rotated": true,
@@ -9212,14 +10097,15 @@
       "file": "sprites/u.fg-rusted-league-siege-tank.png",
       "frames": 2,
       "anims": {
+        "idle": [
+          0,
+          0,
+          10.0
+        ],
         "moving": [
           0,
           1,
           10.0
-        ],
-        "idle": [
-          0,
-          0
         ]
       },
       "rotated": true,
@@ -9240,14 +10126,14 @@
       "file": "sprites/u.fg-rusted-league-siege-tank-deployed.png",
       "frames": 14,
       "anims": {
-        "moving": [
-          0,
-          3,
-          10.0
-        ],
         "idle": [
           7,
           13,
+          10.0
+        ],
+        "moving": [
+          0,
+          3,
           10.0
         ],
         "firing": [
@@ -9265,14 +10151,15 @@
       "file": "sprites/u.fg-rusted-league-rocket-launcher.png",
       "frames": 2,
       "anims": {
+        "idle": [
+          0,
+          0,
+          8
+        ],
         "moving": [
           0,
           1,
-          30
-        ],
-        "idle": [
-          0,
-          0
+          60
         ]
       },
       "rotated": true,
@@ -9309,14 +10196,15 @@
       "file": "sprites/u.fg-rusted-league-minelayer.png",
       "frames": 6,
       "anims": {
+        "idle": [
+          0,
+          0,
+          8
+        ],
         "moving": [
           0,
           2,
           20.0
-        ],
-        "idle": [
-          0,
-          0
         ],
         "firing": [
           3,
@@ -9370,7 +10258,7 @@
         "moving": [
           0,
           1,
-          30
+          30.0
         ]
       },
       "rotated": true,
@@ -9431,14 +10319,15 @@
       "file": "sprites/u.fg-rusted-league-tengu-jet.png",
       "frames": 4,
       "anims": {
+        "idle": [
+          0,
+          0,
+          20.0
+        ],
         "moving": [
           1,
           3,
           20.0
-        ],
-        "idle": [
-          0,
-          0
         ]
       },
       "rotated": true,
@@ -9450,14 +10339,14 @@
       "file": "sprites/u.fg-rusted-league-tengu-mech.png",
       "frames": 6,
       "anims": {
-        "moving": [
-          0,
-          3,
-          15.0
-        ],
         "idle": [
           4,
           5,
+          15.0
+        ],
+        "moving": [
+          0,
+          3,
           15.0
         ]
       },
@@ -9478,12 +10367,12 @@
       "file": "sprites/u.fg-rusted-league-vanguard-gunship.png",
       "frames": 7,
       "anims": {
-        "moving": [
+        "idle": [
           0,
           6,
           6.0
         ],
-        "idle": [
+        "moving": [
           0,
           6,
           6.0
@@ -9514,12 +10403,12 @@
       "file": "sprites/u.fg-rusted-league-shield-tank.png",
       "frames": 6,
       "anims": {
-        "moving": [
+        "idle": [
           0,
           2,
           10.0
         ],
-        "idle": [
+        "moving": [
           0,
           2,
           10.0
@@ -9539,14 +10428,14 @@
       "file": "sprites/u.fg-rusted-league-bone-eagle.png",
       "frames": 9,
       "anims": {
-        "moving": [
-          3,
-          8,
-          6.0
-        ],
         "idle": [
           0,
           2,
+          6.0
+        ],
+        "moving": [
+          3,
+          8,
           6.0
         ]
       },
@@ -9559,12 +10448,12 @@
       "file": "sprites/u.fg-rusted-league-strategic-bomber.png",
       "frames": 8,
       "anims": {
-        "moving": [
+        "idle": [
           0,
           7,
           6.0
         ],
-        "idle": [
+        "moving": [
           0,
           7,
           6.0
@@ -9592,18 +10481,20 @@
       "file": "sprites/u.fg-rusted-league-kirov.png",
       "frames": 4,
       "anims": {
+        "idle": [
+          0,
+          0,
+          8
+        ],
         "moving": [
           0,
           1,
-          30
-        ],
-        "idle": [
-          0,
-          0
+          30.0
         ],
         "firing": [
           3,
-          3
+          3,
+          8
         ]
       },
       "rotated": true,
@@ -9615,14 +10506,14 @@
       "file": "sprites/u.fg-rusted-league-lord-of-the-sky.png",
       "frames": 4,
       "anims": {
-        "moving": [
-          1,
-          3,
-          7.5
-        ],
         "idle": [
           0,
           2,
+          7.5
+        ],
+        "moving": [
+          1,
+          3,
           7.5
         ]
       },
@@ -9635,19 +10526,20 @@
       "file": "sprites/u.fg-rusted-league-b52.png",
       "frames": 5,
       "anims": {
-        "moving": [
+        "idle": [
           1,
           4,
           3.0
         ],
-        "idle": [
+        "moving": [
           1,
           4,
           3.0
         ],
         "firing": [
           0,
-          0
+          0,
+          0.6
         ]
       },
       "rotated": true,
@@ -9659,12 +10551,12 @@
       "file": "sprites/u.fg-rusted-league-laser-ufo.png",
       "frames": 5,
       "anims": {
-        "moving": [
+        "idle": [
           0,
           4,
           20.0
         ],
-        "idle": [
+        "moving": [
           0,
           4,
           20.0
@@ -9687,15 +10579,15 @@
       "file": "sprites/u.fg-rusted-league-battlecruiser.png",
       "frames": 5,
       "anims": {
-        "moving": [
-          2,
-          4,
-          30
-        ],
         "idle": [
           0,
           1,
           6.0
+        ],
+        "moving": [
+          2,
+          4,
+          30.0
         ]
       },
       "rotated": true,
@@ -9731,14 +10623,15 @@
       "file": "sprites/u.fg-rusted-league-teleporter.png",
       "frames": 5,
       "anims": {
-        "moving": [
-          0,
-          0
-        ],
         "idle": [
           1,
           4,
           12.0
+        ],
+        "moving": [
+          0,
+          0,
+          6.0
         ]
       },
       "rotated": true,
@@ -9822,13 +10715,15 @@
       "file": "sprites/u.fg-rusted-league-nuclear-sub.png",
       "frames": 2,
       "anims": {
-        "moving": [
-          0,
-          0
-        ],
         "idle": [
           1,
-          1
+          1,
+          0.6
+        ],
+        "moving": [
+          0,
+          0,
+          0.3
         ]
       },
       "rotated": true,
@@ -9840,17 +10735,20 @@
       "file": "sprites/u.fg-rusted-league-ghost-sub.png",
       "frames": 2,
       "anims": {
-        "moving": [
-          1,
-          1
-        ],
         "idle": [
           0,
-          0
+          0,
+          1.2
+        ],
+        "moving": [
+          1,
+          1,
+          6.0
         ],
         "firing": [
           0,
-          0
+          0,
+          0.6
         ]
       },
       "rotated": true,
@@ -9896,14 +10794,15 @@
       "file": "sprites/u.fg-rusted-league-land-cruiser.png",
       "frames": 3,
       "anims": {
+        "idle": [
+          0,
+          0,
+          7.5
+        ],
         "moving": [
           0,
           2,
           7.5
-        ],
-        "idle": [
-          0,
-          0
         ]
       },
       "rotated": true,
@@ -9941,15 +10840,15 @@
       "file": "sprites/u.fg-rusted-league-aircraft-carrier.png",
       "frames": 8,
       "anims": {
-        "moving": [
-          3,
-          7,
-          30
-        ],
         "idle": [
           0,
           4,
           6.0
+        ],
+        "moving": [
+          3,
+          7,
+          30.0
         ]
       },
       "rotated": true,
@@ -9965,6 +10864,51 @@
       "fh": 7,
       "pivotX": 0.524,
       "pivotY": 0.333
+    },
+    {
+      "key": "u.fg-rusted-league-sky-support-carrier",
+      "file": "sprites/u.fg-rusted-league-sky-support-carrier.png",
+      "frames": 2,
+      "anims": {
+        "idle": [
+          0,
+          1,
+          30.0
+        ],
+        "moving": [
+          0,
+          1,
+          30.0
+        ]
+      },
+      "rotated": true,
+      "fw": 37,
+      "fh": 50
+    },
+    {
+      "key": "u.fg-rusted-league-flying-battle-carrier",
+      "file": "sprites/u.fg-rusted-league-flying-battle-carrier.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 29,
+      "fh": 48
+    },
+    {
+      "key": "tur.fg-rusted-league-flying-battle-carrier",
+      "file": "sprites/tur.fg-rusted-league-flying-battle-carrier.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 10,
+      "fh": 9,
+      "pivotY": 0.65
+    },
+    {
+      "key": "u.fg-rusted-league-carrier-interceptor",
+      "file": "sprites/u.fg-rusted-league-carrier-interceptor.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 18,
+      "fh": 16
     },
     {
       "key": "u.fg-rusted-league-hero-1",
@@ -10191,6 +11135,466 @@
       "fw": 13,
       "fh": 24,
       "pivotY": 0.683
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-83635843",
+      "file": "sprites/dec.fg-rusted-league-wreck-83635843.png",
+      "frames": 1,
+      "fw": 32,
+      "fh": 40,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-33691f24",
+      "file": "sprites/dec.fg-rusted-league-wreck-33691f24.png",
+      "frames": 1,
+      "fw": 32,
+      "fh": 40,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-56ae8808",
+      "file": "sprites/dec.fg-rusted-league-wreck-56ae8808.png",
+      "frames": 1,
+      "fw": 32,
+      "fh": 40,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-3806aa52",
+      "file": "sprites/dec.fg-rusted-league-wreck-3806aa52.png",
+      "frames": 1,
+      "fw": 32,
+      "fh": 40,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-0641b633",
+      "file": "sprites/dec.fg-rusted-league-wreck-0641b633.png",
+      "frames": 1,
+      "fw": 96,
+      "fh": 146,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-4779d311",
+      "file": "sprites/dec.fg-rusted-league-wreck-4779d311.png",
+      "frames": 1,
+      "fw": 96,
+      "fh": 146,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-3a6fd985",
+      "file": "sprites/dec.fg-rusted-league-wreck-3a6fd985.png",
+      "frames": 1,
+      "fw": 160,
+      "fh": 150,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-2bf891de",
+      "file": "sprites/dec.fg-rusted-league-wreck-2bf891de.png",
+      "frames": 1,
+      "fw": 64,
+      "fh": 101,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-c4e02a4d",
+      "file": "sprites/dec.fg-rusted-league-wreck-c4e02a4d.png",
+      "frames": 1,
+      "fw": 96,
+      "fh": 122,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-d3cb041e",
+      "file": "sprites/dec.fg-rusted-league-wreck-d3cb041e.png",
+      "frames": 1,
+      "fw": 13,
+      "fh": 31,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-31abfc97",
+      "file": "sprites/dec.fg-rusted-league-wreck-31abfc97.png",
+      "frames": 1,
+      "fw": 13,
+      "fh": 31,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-f04497ae",
+      "file": "sprites/dec.fg-rusted-league-wreck-f04497ae.png",
+      "frames": 1,
+      "fw": 19,
+      "fh": 29,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-dde1aa35",
+      "file": "sprites/dec.fg-rusted-league-wreck-dde1aa35.png",
+      "frames": 1,
+      "fw": 25,
+      "fh": 51,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-6c95d990",
+      "file": "sprites/dec.fg-rusted-league-wreck-6c95d990.png",
+      "frames": 1,
+      "fw": 16,
+      "fh": 32,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-54091dc3",
+      "file": "sprites/dec.fg-rusted-league-wreck-54091dc3.png",
+      "frames": 1,
+      "fw": 14,
+      "fh": 37,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-a08c41a7",
+      "file": "sprites/dec.fg-rusted-league-wreck-a08c41a7.png",
+      "frames": 1,
+      "fw": 17,
+      "fh": 35,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-25413eb0",
+      "file": "sprites/dec.fg-rusted-league-wreck-25413eb0.png",
+      "frames": 1,
+      "fw": 27,
+      "fh": 39,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-8884e9e2",
+      "file": "sprites/dec.fg-rusted-league-wreck-8884e9e2.png",
+      "frames": 1,
+      "fw": 17,
+      "fh": 28,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-ccbbabd0",
+      "file": "sprites/dec.fg-rusted-league-wreck-ccbbabd0.png",
+      "frames": 1,
+      "fw": 17,
+      "fh": 28,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-5a543f03",
+      "file": "sprites/dec.fg-rusted-league-wreck-5a543f03.png",
+      "frames": 1,
+      "fw": 23,
+      "fh": 29,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-c9087117",
+      "file": "sprites/dec.fg-rusted-league-wreck-c9087117.png",
+      "frames": 1,
+      "fw": 20,
+      "fh": 36,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-003bbd98",
+      "file": "sprites/dec.fg-rusted-league-wreck-003bbd98.png",
+      "frames": 1,
+      "fw": 43,
+      "fh": 39,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-8de0bcc5",
+      "file": "sprites/dec.fg-rusted-league-wreck-8de0bcc5.png",
+      "frames": 1,
+      "fw": 31,
+      "fh": 32,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-14aa9c02",
+      "file": "sprites/dec.fg-rusted-league-wreck-14aa9c02.png",
+      "frames": 1,
+      "fw": 40,
+      "fh": 38,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-2551ac6e",
+      "file": "sprites/dec.fg-rusted-league-wreck-2551ac6e.png",
+      "frames": 1,
+      "fw": 33,
+      "fh": 32,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-b30e28ac",
+      "file": "sprites/dec.fg-rusted-league-wreck-b30e28ac.png",
+      "frames": 1,
+      "fw": 17,
+      "fh": 46,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-6f2ec117",
+      "file": "sprites/dec.fg-rusted-league-wreck-6f2ec117.png",
+      "frames": 1,
+      "fw": 41,
+      "fh": 62,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-c1e1f099",
+      "file": "sprites/dec.fg-rusted-league-wreck-c1e1f099.png",
+      "frames": 1,
+      "fw": 47,
+      "fh": 40,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-65cdb7c1",
+      "file": "sprites/dec.fg-rusted-league-wreck-65cdb7c1.png",
+      "frames": 1,
+      "fw": 22,
+      "fh": 41,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-93fce830",
+      "file": "sprites/dec.fg-rusted-league-wreck-93fce830.png",
+      "frames": 1,
+      "fw": 4,
+      "fh": 11,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-54b917d2",
+      "file": "sprites/dec.fg-rusted-league-wreck-54b917d2.png",
+      "frames": 1,
+      "fw": 22,
+      "fh": 25,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-d714d4f7",
+      "file": "sprites/dec.fg-rusted-league-wreck-d714d4f7.png",
+      "frames": 1,
+      "fw": 22,
+      "fh": 25,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-f3c15d54",
+      "file": "sprites/dec.fg-rusted-league-wreck-f3c15d54.png",
+      "frames": 1,
+      "fw": 11,
+      "fh": 37,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-6860d6d6",
+      "file": "sprites/dec.fg-rusted-league-wreck-6860d6d6.png",
+      "frames": 1,
+      "fw": 17,
+      "fh": 37,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-aa5c4d54",
+      "file": "sprites/dec.fg-rusted-league-wreck-aa5c4d54.png",
+      "frames": 1,
+      "fw": 14,
+      "fh": 48,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-c1ce4443",
+      "file": "sprites/dec.fg-rusted-league-wreck-c1ce4443.png",
+      "frames": 1,
+      "fw": 11,
+      "fh": 40,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-c0198666",
+      "file": "sprites/dec.fg-rusted-league-wreck-c0198666.png",
+      "frames": 1,
+      "fw": 10,
+      "fh": 40,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-26df19b7",
+      "file": "sprites/dec.fg-rusted-league-wreck-26df19b7.png",
+      "frames": 1,
+      "fw": 15,
+      "fh": 34,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-1a3ca29e",
+      "file": "sprites/dec.fg-rusted-league-wreck-1a3ca29e.png",
+      "frames": 1,
+      "fw": 26,
+      "fh": 53,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-a573b69d",
+      "file": "sprites/dec.fg-rusted-league-wreck-a573b69d.png",
+      "frames": 1,
+      "fw": 14,
+      "fh": 67,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-c1d25f6e",
+      "file": "sprites/dec.fg-rusted-league-wreck-c1d25f6e.png",
+      "frames": 1,
+      "fw": 40,
+      "fh": 64,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-bf2e7075",
+      "file": "sprites/dec.fg-rusted-league-wreck-bf2e7075.png",
+      "frames": 1,
+      "fw": 39,
+      "fh": 64,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-9ee8889e",
+      "file": "sprites/dec.fg-rusted-league-wreck-9ee8889e.png",
+      "frames": 1,
+      "fw": 22,
+      "fh": 41,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-bafe0435",
+      "file": "sprites/dec.fg-rusted-league-wreck-bafe0435.png",
+      "frames": 1,
+      "fw": 37,
+      "fh": 50,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-43a301c0",
+      "file": "sprites/dec.fg-rusted-league-wreck-43a301c0.png",
+      "frames": 1,
+      "fw": 29,
+      "fh": 48,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.fg-rusted-league-wreck-d0bf40c9",
+      "file": "sprites/dec.fg-rusted-league-wreck-d0bf40c9.png",
+      "frames": 1,
+      "fw": 29,
+      "fh": 48,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
     }
   ],
   "screenshots": [
@@ -10203,16 +11607,31 @@
   "maps": [
     "maps/proving-ground.steel-tide-map"
   ],
-  "factions": [
+  "capacity": "large",
+  "requiredCapabilities": [
+    "fg-rusted-league.source-v1"
+  ],
+  "extensionPackages": [
     {
-      "id": "fg-rusted-league-league",
-      "name": [
-        "FG Rusted League",
-        "FG 铁锈联盟",
-        "FG 러스티드 리그"
+      "id": "fg-rusted-league.source",
+      "version": "1.0.1",
+      "api": 2,
+      "capabilities": [
+        "fg-rusted-league.source-v1"
       ],
-      "headquarters": "fg-rusted-league-command",
-      "builder": "fg-rusted-league-builder"
+      "assets": {},
+      "schema": {
+        "source": "export default function () {\n  const id='fg-rusted-league.source-v1';\n  const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);\n  function definition(raw,path,issues,context) {\n    const fail=(key,message)=>issues.push({path:path+(key?'.'+key:''),message});\n    const number=(v,key,min,max)=>{if(typeof v!=='number'||!Number.isFinite(v)||v<min||v>max)fail(key,'invalid bounded number');};\n    if(!object(raw)){fail('','expected source configuration');return;}\n    for(const k of Object.keys(raw))if(!['energy','reloadTime','reloadSound','selectSound','wreck','decay','dockRecharge'].includes(k))fail(k,'unknown source field');\n    for(const k of ['reloadSound','selectSound'])if(raw[k]!==undefined&&(!context?.assetIds?.has(raw[k])))fail(k,'missing installed recording');\n    if(raw.wreck!==undefined&&!context?.spriteKeys?.has(raw.wreck))fail('wreck','missing wreck sprite');\n    if(raw.decay!==undefined)number(raw.decay,'decay',0,1e6);\n    if(raw.reloadTime!==undefined){number(raw.reloadTime,'reloadTime',0.001,3600);if(!raw.energy)fail('reloadTime','requires energy');}\n    if(raw.dockRecharge!==undefined&&(typeof raw.dockRecharge!=='boolean'||!raw.energy))fail('dockRecharge','requires boolean and energy');\n    if(raw.energy!==undefined){const e=raw.energy;\n      if(!object(e)){fail('energy','expected energy configuration');return;}\n      for(const k of Object.keys(e))if(!['max','start','regen','recharge','full','usage'].includes(k))fail('energy.'+k,'unknown energy field');\n      number(e.max,'energy.max',0.001,1e8);number(e.start,'energy.start',0,1);number(e.regen,'energy.regen',0,1e8);number(e.recharge,'energy.recharge',0,1e8);\n      if(typeof e.full!=='boolean')fail('energy.full','expected boolean');\n      if(!object(e.usage)||Object.keys(e.usage).length>8)fail('energy.usage','expected weapon energy costs');\n      else for(const [key,cost]of Object.entries(e.usage)){if(!context?.weaponIds?.includes(key))fail('energy.usage.'+key,'missing weapon');number(cost,'energy.usage.'+key,0.001,e.max);}\n    }\n    return structuredClone(raw);\n  }\n  return {capabilities:[{id,definition}]};\n}\n",
+        "sha256": "2d961c110fe900f82a57190dbe47912c61e3b6e01d32ae9a2ac7816e1c39f9d1"
+      },
+      "runtime": {
+        "source": "// Mod-owned source energy magazines. Native weapons, orders and damage stay authoritative.\nexport default function (sdk) {\n  const ID = 'fg-rusted-league.source-v1';\n  return {capabilities: [{id: ID, create(host) {\n    const states = new Map(), game = host.game;\n    const config = e => host.config(sdk.getDef(e.defId));\n    const ensure = e => {\n      const c = config(e); if (!c?.energy) return;\n      let s = states.get(e.id);\n      if (!s) { s = {energy:c.energy.max*c.energy.start, recharging:false, remaining:0, reloads:0}; states.set(e.id,s); }\n      s.energy = Math.min(c.energy.max,s.energy);\n      return s;\n    };\n    const begin = (c,s) => {\n      if (s.recharging) return;\n      s.recharging=true; s.remaining=c.reloadTime??0; s.reloads++;\n    };\n    return {\n      id:ID,\n      beforeStep(dt) {\n        for (const [id] of states) {const e=game.st.ents.get(id);if(!e||e.dead||!config(e)?.energy)states.delete(id);}\n        for (const e of host.participants()) {\n          if(e.dead||e.site)continue;\n          const c=config(e),s=ensure(e);\n          if(e.inside){if(s&&c.dockRecharge&&e.inside===e.wingOf){s.energy=c.energy.max;s.recharging=false;s.remaining=0;}continue;}\n          if(c?.decay)host.applyDamage(game.st,e,c.decay*dt,undefined,e.owner,e.id,e.defId+'/decay');\n          if(!s)continue;\n          const energy=c.energy;\n          if(s.recharging&&c.reloadTime) {\n            s.remaining=Math.max(0,s.remaining-dt);\n            if(s.remaining===0){s.energy=energy.max;s.recharging=false;}\n          } else {\n            s.energy=Math.max(0,Math.min(energy.max,s.energy+(s.recharging?energy.recharge:energy.regen)*dt));\n            if(s.energy>=energy.max-1e-8)s.recharging=false;\n          }\n        }\n      },\n      afterStep() {for(const [id]of states){const e=game.st.ents.get(id);if(!e||e.dead||!config(e)?.energy)states.delete(id);}},\n      canFire(e,d,w) {\n        const c=config(e),cost=c?.energy?.usage[w.id]; if(!cost)return true;\n        const s=ensure(e);return !s.recharging&&s.energy+1e-8>=cost;\n      },\n      // Also gate burst continuations: they bypass the native acquisition pass.\n      wrapShot(next) {return (st,e,d,w,...args) => {\n        const c=config(e),cost=c?.energy?.usage[w.id];\n        if(cost){const s=ensure(e);if(s.recharging||s.energy+1e-8<cost)return;}\n        return next(st,e,d,w,...args);\n      };},\n      onShot(e,d,w) {\n        const c=config(e),cost=c?.energy?.usage[w.id];if(!cost)return;\n        const s=ensure(e);s.energy=Math.max(0,s.energy-cost);\n        const minimum=Math.min(...Object.values(c.energy.usage));\n        if(s.energy+1e-8<minimum&&(c.energy.full||c.reloadTime))begin(c,s);\n        if(s.recharging&&c.dockRecharge&&e.wingOf){const carrier=game.st.ents.get(e.wingOf),wing=carrier&&sdk.getDef(carrier.defId).wing;if(wing)e.sortie=Math.max(e.sortie??0,wing.sortie);}\n      },\n      actions(e) {\n        const c=config(e);if(!c?.reloadTime)return[];\n        const s=ensure(e);\n        return[{id:'reload',label:['Reload magazine','更换弹夹','탄창 재장전'],enabled:!e.site&&!e.inside&&!s.recharging&&s.energy<c.energy.max}];\n      },\n      order(o) {\n        if(o.action!=='reload'||!o.ids.length)return false;\n        const selected=o.ids.map(id=>game.st.ents.get(id));\n        if(selected.some(e=>!e||e.dead||e.owner!==o.owner||e.site||e.inside||!config(e)?.reloadTime))return false;\n        let accepted=false;\n        for(const e of selected){const c=config(e),s=ensure(e);if(!s.recharging&&s.energy<c.energy.max){begin(c,s);accepted=true;}}\n        return accepted;\n      },\n      inspect(e,privateView) {\n        const c=config(e);if(!privateView||!c?.energy)return[];\n        const s=ensure(e);\n        return[{id:'energy',label:['Magazine / energy','弹夹 / 能量','탄창 / 에너지'],value:Math.round(s.energy*100)/100,fraction:s.energy/c.energy.max,tone:s.recharging?'warning':'normal'},\n          ...(s.recharging?[{id:'reload',label:['Reloading','装填中','재장전 중'],value:s.remaining||undefined}]:[])];\n      },\n      render(e,privateView) {const s=states.get(e.id);return privateView&&s?{reloads:s.reloads}:{};},\n      snapshot(view) {\n        const entities={};\n        for(const [id,s]of states)if(!view||view.privateEntity(id))entities[id]={...s};\n        return {entities};\n      },\n      restore(raw) {\n        if(!raw||typeof raw!=='object'||Array.isArray(raw)||!raw.entities||typeof raw.entities!=='object'||Array.isArray(raw.entities))throw Error('Invalid source state');\n        const next=new Map();\n        for(const [key,s]of Object.entries(raw.entities)) {\n          if(!/^[1-9]\\d*$/.test(key)||!s||typeof s!=='object'||Array.isArray(s)||Object.keys(s).some(k=>!['energy','recharging','remaining','reloads'].includes(k))||\n            !Number.isFinite(s.energy)||s.energy<0||s.energy>1e8||typeof s.recharging!=='boolean'||!Number.isFinite(s.remaining)||s.remaining<0||s.remaining>3600||!Number.isSafeInteger(s.reloads)||s.reloads<0)throw Error('Invalid magazine state');\n          next.set(Number(key),{...s});\n        }\n        states.clear();for(const [id,s]of next)states.set(id,s);\n      },\n      validateRestoredState() {\n        for(const [id,s]of states){const e=game.st.ents.get(id),c=e&&config(e);if(!e||e.dead||!c?.energy||s.energy>c.energy.max+1e-8||s.remaining>(c.reloadTime??0)+1e-8)throw Error('Magazine state has no matching unit');}\n      },\n      dispose(){states.clear();}\n    };\n  }}]};\n}\n",
+        "sha256": "add22a45fde51d10c04028b4a3b4d39a95f8ed2b9e18554698526a2e717ee0b2"
+      },
+      "presentation": {
+        "source": "// Uses only installed recordings and the host's existing rendering/audio pipelines.\nexport default function (sdk) {\n  const ID='fg-rusted-league.source-v1';\n  return {\n    feedback(context,base) {\n      const resources=new Set(),seen=new Map(),scope=sdk.createRecordedAudioScope();let previous=-1;\n      return {\n        unitVoice(defId,action,entityId) {\n          const c=sdk.getDef(defId).extensions?.[ID],key=action==='select'&&c?.selectSound;\n          const url=key&&sdk.asset(key);\n          if(!url){base.unitVoice(defId,action,entityId);return;}\n          resources.add(url);sdk.playRecordedUnitVoice(defId,action,entityId,[url],{gain:.65,repeatMs:700});\n        },\n        update(frame) {\n          if(frame.time<previous){seen.clear();scope.reset();}previous=frame.time;\n          scope.setPaused(frame.paused);scope.update();\n          const active=new Set();\n          for(const e of context.game.st.ents.values()) {\n            if(e.dead||e.owner!==context.player)continue;\n            const c=sdk.getDef(e.defId).extensions?.[ID];if(!c?.reloadSound)continue;\n            const visual=sdk.contentRuntime(context.game)?.module(ID)?.render?.(e,true),count=visual?.reloads;\n            if(count===undefined)continue;active.add(e.id);\n            if(seen.has(e.id)&&count>seen.get(e.id)){const url=sdk.asset(c.reloadSound);if(url)scope.play(url,{position:{x:e.x,y:e.y},gain:.5});}\n            seen.set(e.id,count);\n          }\n          for(const id of seen.keys())if(!active.has(id))seen.delete(id);\n        },\n        dispose(){scope.dispose();seen.clear();sdk.releaseRecordedVoiceResources([...resources]);}\n      };\n    },\n    presentation(base) {\n      return {...base,Renderer:class SourceRenderer extends base.Renderer {\n        pictureOf(e,def,alpha) {\n          const p=super.pictureOf(e,def,alpha);\n          if(!def.extensions?.[ID]||def.domain!=='air'||!p.body||p.body.dirs||p.body.frames<2)return p;\n          const states=p.body.anims;\n          const firing=e.burstLeft>0||e.wcd.some(value=>value>0);\n          const range=(firing&&states?.firing)||(p.moved>.05&&states?.moving)||states?.idle;\n          if(range){const[first,last,fps]=range;p.frame=first+Math.floor(this.renderTime*(fps??p.body.fps??8)+e.id)%(last-first+1);}\n          return p;\n        }\n        drawContentDecal(g,d,cam,alpha,bounds) {\n          const match=/^(?:hulk|crash|ruin)\\.(.+)$/.exec(d.key);\n          // Prop debris shares the ruin prefix (for example ruin.d.tower).\n          // Only registered definitions can own this package's wreck artwork.\n          const def=match&&sdk.DEFS[match[1]],c=def?.extensions?.[ID],sp=c?.wreck&&sdk.getSprite(c.wreck);\n          if(!sp)return super.drawContentDecal?.(g,d,cam,alpha,bounds)??false;\n          const scale=sdk.unitDisplayScale(def),ss=sp.ss??1,w=sp.fw*scale,h=sp.fh*scale;\n          if(d.x+w/2<bounds.x0||d.x-w/2>bounds.x1||d.y+h/2<bounds.y0||d.y-h/2>bounds.y1)return true;\n          g.save();\n          try {\n            g.globalAlpha=Math.max(0,Math.min(1,d.t/(d.fade??6)));g.translate(d.x,d.y);\n            g.rotate(def.kind==='building'?0:(d.rot??0)+(d.spin??0)*(d.fall??0));\n            g.drawImage(sp.cv,0,0,sp.fw*ss,sp.fh*ss,-w/2,-h/2,w,h);\n          } finally {g.restore();}\n          return true;\n        }\n      }};\n    }\n  };\n}\n",
+        "sha256": "449ada80beb60bc54b6ddd81e1a2d33a09a9a3636f4091f307a298195f3f1a69"
+      }
     }
   ]
 }

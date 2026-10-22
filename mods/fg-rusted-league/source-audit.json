@@ -1,0 +1,5045 @@
+{
+  "original": "rusted-warfare-mods/fg-rusted-league",
+  "sourceInventory": [
+    {
+      "file": "assets/builtin_mods/mega_builders/mega_builder/mega_builder.ini",
+      "sha256": "1de551ff970f86245ab8e6e6c7f67255e5bc7b8055acd887bf7e1ddc68dbade2"
+    },
+    {
+      "file": "assets/builtin_mods/虫族/虫族/建造虫.ini",
+      "sha256": "7c26b54f762f4c16a5112785f8c280245f53347417c21ffd243fd67d96e89358"
+    },
+    {
+      "file": "assets/builtin_mods/资金/资金/turrets/＄4444.ini",
+      "sha256": "e7c3e088fa3152ee77fe1a4b2f82781690c2ecaac954ea8348fdf6784dfc0803"
+    },
+    {
+      "file": "assets/builtin_mods/资金/资金/turrets/＄7777777.ini",
+      "sha256": "460affdd324cd355756ac9cd885b589e4d444c9105d9ce59761f2363af039709"
+    },
+    {
+      "file": "assets/maps/challenge/1v3 Island.tmx",
+      "sha256": "07d618d240e76675c2e6bf9abd48787c902ecebb6a2debe5f72b87f6f469f3c1"
+    },
+    {
+      "file": "assets/maps/challenge/1v3 岛.tmx",
+      "sha256": "c281e817778b99a55db098183787310dc2592a1ca3be819a4771b078010f0404"
+    },
+    {
+      "file": "assets/maps/challenge/Artillery.tmx",
+      "sha256": "05c17761847adf2969831b28f71767c24e23d6ce360e8470e4e1997da4c43acf"
+    },
+    {
+      "file": "assets/maps/challenge/Beachhead Landing.tmx",
+      "sha256": "db49e65c4a1c345b19ead8a591c76027ef62abe23d395197fcf7edd9eeff9892"
+    },
+    {
+      "file": "assets/maps/challenge/Flying Fortress.tmx",
+      "sha256": "b2430407377856e7e46a1980eb5297459d461f61db45f47c7f01e1d3c646c3cb"
+    },
+    {
+      "file": "assets/maps/challenge/Ice Base.tmx",
+      "sha256": "dd3a6918e943098136f9d231c54bb35b80112744ba68b7bb5f7cd6c30b694fb3"
+    },
+    {
+      "file": "assets/maps/challenge/Island Base.tmx",
+      "sha256": "90bd45e078a63f30968cc38f54e20d33618ac7694d6b99400de3db02af5d8b76"
+    },
+    {
+      "file": "assets/maps/challenge/Middle Ground.tmx",
+      "sha256": "2a12ca3e0e6758f9643afbbc4ddbe9cb3569c257d4f90ffd2cf385a19501dea5"
+    },
+    {
+      "file": "assets/maps/challenge/中间地带.tmx",
+      "sha256": "6226859a80647f15613193958dcc6cb2ad7d5265daa0c0c5f184faacad076f5b"
+    },
+    {
+      "file": "assets/maps/challenge/人虫之争1v8.tmx",
+      "sha256": "fc08ebbc5c8319740bb13d06886995480fee46b22bb903daefb556e6c2fa8295"
+    },
+    {
+      "file": "assets/maps/challenge/冰天雪地.tmx",
+      "sha256": "5d14d688e6a5816907d9315cedc3c08f611d5a975a752b8e5d1f6cdc76f74d85"
+    },
+    {
+      "file": "assets/maps/challenge/冰岛.tmx",
+      "sha256": "d69bccf2620d5776a9a682ee102fee5ce558bc5c0975da5014c3f57f316a5276"
+    },
+    {
+      "file": "assets/maps/challenge/四面楚歌.tmx",
+      "sha256": "c30b5182a4528c249d42be5ac6439a66b85f82ab2d2806220522aa958259e8d6"
+    },
+    {
+      "file": "assets/maps/challenge/大国崛起.tmx",
+      "sha256": "1859328205061e026a84979eb02ebfb5da58e7bb3a58abc013d0868102015468"
+    },
+    {
+      "file": "assets/maps/challenge/太虚幻境.tmx",
+      "sha256": "352a82da85fbefad67fabef2f5e79978fb38e18863bbd9245910c4f9aa9de54c"
+    },
+    {
+      "file": "assets/maps/challenge/岛屿基地.tmx",
+      "sha256": "c833073c58202256e672b18570eb45fe541cb3659951eb3b9d1090a96d7e1264"
+    },
+    {
+      "file": "assets/maps/challenge/帝国遗迹.tmx",
+      "sha256": "1910df57d3541c1e29e3996caf8d3e2cb5f0d937009ab120651d2be8959cf05a"
+    },
+    {
+      "file": "assets/maps/challenge/挑战5楚歌.tmx",
+      "sha256": "0cda9daa839b424a720b52037421d9009681966c07e320d4aaf55c0d5244b25f"
+    },
+    {
+      "file": "assets/maps/challenge/挑战7渡江.tmx",
+      "sha256": "a73fd86fa01e25820e891b1e8014060567213fd24bf42449e2406e9e040eeac0"
+    },
+    {
+      "file": "assets/maps/challenge/挑战8固守.tmx",
+      "sha256": "801ea57f37d96001f1860b491c5f69bb6c190946a260147f5a209631935d6776"
+    },
+    {
+      "file": "assets/maps/challenge/深海杀戮.tmx",
+      "sha256": "17baffa6d2331098678aa25d7ab51b4c7af6fd1090959d43c1b4a1b6ddf81fa2"
+    },
+    {
+      "file": "assets/maps/challenge/滩头降落.tmx",
+      "sha256": "f0048130523d260374320684ea9cb8acc1e36babb9ab68646b1e22990ee84e2b"
+    },
+    {
+      "file": "assets/maps/challenge/火炮.tmx",
+      "sha256": "a7d00f03a74e5559e7a9e83d7ba366f0c33388a90ac12dcf12de8d9d92767b29"
+    },
+    {
+      "file": "assets/maps/challenge/熔岩要塞.tmx",
+      "sha256": "34e72f6ef6a3dc2448416d048907fd5bd7ed60e7e57dbf805498388043b1ff07"
+    },
+    {
+      "file": "assets/maps/challenge/训练-1-最佳克制.tmx",
+      "sha256": "06f8db7db766ff319cfe8d5b6a06dd2c03a7e2c0b0812993b7781c8720f63617"
+    },
+    {
+      "file": "assets/maps/challenge/训练-2-最后检验.tmx",
+      "sha256": "d3b48882296dca0e630fa5b372f993e19a8658f42692f4e662f37140b220c298"
+    },
+    {
+      "file": "assets/maps/challenge/进军要塞改良版.tmx",
+      "sha256": "a751c5990348868d1ea2b66c39f38063083f1422d92497f75ffdf7c8ad805436"
+    },
+    {
+      "file": "assets/maps/challenge/雪地幸存者v1.3.tmx",
+      "sha256": "053cf7cffce57ec0b7358499d0555553b11ecbf3e4ec70e11e986ffc837a50db"
+    },
+    {
+      "file": "assets/maps/challenge/风景实验地图.tmx",
+      "sha256": "839ca663f5102422a3ca95caec0fbe0388591d37e9d54c8ff269359fd3fd00f1"
+    },
+    {
+      "file": "assets/maps/challenge/飞行堡垒.tmx",
+      "sha256": "fee1fd9596d5ad2e3bbfc4e79caa57a983e0647074af4878f44faadb0edd24a4"
+    },
+    {
+      "file": "assets/maps/menu_background/menu1.tmx",
+      "sha256": "038bc632ce3f00b8e81acbd42f02d72024418d9a2a3731d712813e5c9e11fa97"
+    },
+    {
+      "file": "assets/maps/menu_background/menu2.tmx",
+      "sha256": "74465655d13056cc322e211e60a77ec99980342797ce3962cf26d32534477cbc"
+    },
+    {
+      "file": "assets/maps/normal/l010;[demo]mission_1__-__Dividing_River.tmx",
+      "sha256": "d61ea046eac8bb83bfa561707d79fc07ee6779aab25977d9450d3999100a3517"
+    },
+    {
+      "file": "assets/maps/normal/l020;mission_2__-__Icy_Assault.tmx",
+      "sha256": "9c0cf97cf8564f2778e3ee232a02a934be6056bc9b88f3a0fcb1e4533fa7941c"
+    },
+    {
+      "file": "assets/maps/normal/l030;[demo]mission_3__-__Crossfire.tmx",
+      "sha256": "e277553a0c1770557ffd7002894159f7b40a4d2820d7c48be542668ef4a8d3c7"
+    },
+    {
+      "file": "assets/maps/normal/l040;mission_4__-__Sneak_Attack.tmx",
+      "sha256": "f4d528bfb240d6b075ea5872cd4200f80677521604b5c293e097b1d4d110ce2d"
+    },
+    {
+      "file": "assets/maps/normal/l050;mission_5__-__Desert_Base.tmx",
+      "sha256": "b4b87887e7bc7f1d30ab1da67143ec36307037bee5f8095abc06a2699872c84a"
+    },
+    {
+      "file": "assets/maps/normal/l060;mission_6__-__Snowy_Outcrop.tmx",
+      "sha256": "eaa3075afd311a8a17a2734626a1f5eb6f82385ff822aae1a4110da148250cfe"
+    },
+    {
+      "file": "assets/maps/normal/l070;mission_7__-__Lava_Fortress.tmx",
+      "sha256": "02e4f230fcc11ef3cd29ff6f0c43ffc95c86aace685ecee6f4e9650cfdaa05de"
+    },
+    {
+      "file": "assets/maps/normal/l080;mission_8__-__Downstream.tmx",
+      "sha256": "6f68f1ffa31352053b279b01a3d3d06fa2e82cdce591e7599ffd60d4e8df9797"
+    },
+    {
+      "file": "assets/maps/normal/l080;叛徒战役1新星.tmx",
+      "sha256": "96bff50a2deade5c40eb8acab11f2d5a346417cf96d87b1dd2fde075cc9550df"
+    },
+    {
+      "file": "assets/maps/normal/l090;mission_9__-__Spider battle.tmx",
+      "sha256": "f70774e161614c532656bf6e3ad91ca3d9a94591017c44d836438c0ee5b5975b"
+    },
+    {
+      "file": "assets/maps/normal/l090;叛徒战役2巡视领地.tmx",
+      "sha256": "fefb1c3c7c804322b2af2a1da63e3c3cc27bcd4b9439ba9ca82894ea67a08635"
+    },
+    {
+      "file": "assets/maps/normal/l100;mission_10__-__Carrier_Group.tmx",
+      "sha256": "1e49445a00fb3c6e78ef0926abab8146d82bf865aa872862cd62ce0ac5914c27"
+    },
+    {
+      "file": "assets/maps/normal/l100;叛徒战役3狩猎.tmx",
+      "sha256": "1a2f4570fd6684825101fe48af0bc7a18fea102ae0db95bca9cbfc44d55a8cd4"
+    },
+    {
+      "file": "assets/maps/normal/l110;叛徒战役4海岸神秘武装.tmx",
+      "sha256": "3d3fe13e7431d51d33d2f0e26a0e38b8ff7da8486587ceddfde438f13ac95307"
+    },
+    {
+      "file": "assets/maps/normal/l120;叛徒战役5清扫叛徒.tmx",
+      "sha256": "ed153fea5844bc09450e58e2df4c61b86002db67e7d14d1a88dbed9aa48da6f7"
+    },
+    {
+      "file": "assets/maps/normal/l130;叛徒战役6抢回机密.tmx",
+      "sha256": "5cf5b0e76b091e8e869a97ae25c360ef14a152f7718b113acfc6d3d973e95f2a"
+    },
+    {
+      "file": "assets/maps/normal/l140;叛徒战役7进攻.tmx",
+      "sha256": "f25a746c2d19fee0a29424a705d8771d22932e609981a8dd3089227eb536a4cc"
+    },
+    {
+      "file": "assets/maps/normal/l150;叛徒战役8奇怪洞穴.tmx",
+      "sha256": "a35ea0ec4fc98b80dd5724252fa3de041a8786cfe36ae238435177a86c0674c0"
+    },
+    {
+      "file": "assets/maps/normal/l160;叛徒战役9敌人的陷阱.tmx",
+      "sha256": "a1f41151bafe1552c3c719911e667566e74acc0686b2b47e34072bcd7d054674"
+    },
+    {
+      "file": "assets/maps/normal/l170;叛徒战役10冲破包围.tmx",
+      "sha256": "ef03a82e1a4fdf9372c40171993957bffe0521cff35e096e1d888e9d602f285e"
+    },
+    {
+      "file": "assets/maps/normal/l180;叛徒战役11未完待续.tmx",
+      "sha256": "a3a4011773f394928e777ae3cdfcab526d584bbbe8746328e3e037832179ec98"
+    },
+    {
+      "file": "assets/maps/normal/叛徒战役10冲破包围.tmx",
+      "sha256": "ef03a82e1a4fdf9372c40171993957bffe0521cff35e096e1d888e9d602f285e"
+    },
+    {
+      "file": "assets/maps/normal/叛徒战役11未完待续.tmx",
+      "sha256": "a3a4011773f394928e777ae3cdfcab526d584bbbe8746328e3e037832179ec98"
+    },
+    {
+      "file": "assets/maps/normal/叛徒战役12非任务1-攻与守.tmx",
+      "sha256": "f5ef78f7d193643236fef069ed20bd8d4ea81413cd00b45e8b240521ef98406e"
+    },
+    {
+      "file": "assets/maps/normal/叛徒战役13非任务2-对峙.tmx",
+      "sha256": "91ec8bc65b1e405eb220653a5093a04d6f75f4abe48086be2f26ceb04f5556fc"
+    },
+    {
+      "file": "assets/maps/normal/战役-虫族崛起.tmx",
+      "sha256": "1aad7f33adef204dfe0acce1eef0c0d227726c4ba8d1af6ae222fe8116e70c9d"
+    },
+    {
+      "file": "assets/maps/normal/挑战8冻土.tmx",
+      "sha256": "e5552ffc706ecf55d680b2b4181c1d5ba98fb54512c23811d6b9bc86b9c27b1e"
+    },
+    {
+      "file": "assets/maps/normal/没落行动.tmx",
+      "sha256": "4c98a77b0f6462c8f914b4d920507e3c12489ec276d962380b7ad439be4d403a"
+    },
+    {
+      "file": "assets/maps/normal/渡江战役.tmx",
+      "sha256": "97c012cebabb6350a7f646a647c9b20d296a48f13b51af8f352533e2282f069c"
+    },
+    {
+      "file": "assets/maps/normal/直击敌人1封锁.tmx",
+      "sha256": "74d98006b4dd9494d3ddcb03b0055a4352bd959ea8dea99ae14c3c0a79e134a2"
+    },
+    {
+      "file": "assets/maps/normal/直击敌人2突围.tmx",
+      "sha256": "24ff519ca2cb4ff841e6efe3518ff637e84faade1e9308254be0c9c36ef829d5"
+    },
+    {
+      "file": "assets/maps/normal/直击敌人3炎浆上的空战.tmx",
+      "sha256": "c750bcafea333d5c09e738696b6db9f1ef227921cf73622adb95d42911cbea1f"
+    },
+    {
+      "file": "assets/maps/normal/直击敌人4要塞.tmx",
+      "sha256": "8fcdb8560582c54ad2ea5a24bf3cdb75173de78e352822661fb2a92a8c87e133"
+    },
+    {
+      "file": "assets/maps/normal/遭遇战 1v3.tmx",
+      "sha256": "55ca1cc03a3a2d9a58ce2f2e6856c86413e92ee79ce33e419c0b7ff2cd8d5106"
+    },
+    {
+      "file": "assets/maps/skirmish/002.tmx",
+      "sha256": "f67bf3ea6e68240905d0a0dc072de6cd6431557d88c0737af0a7b589c6ebe842"
+    },
+    {
+      "file": "assets/maps/skirmish/10p 三战(by Voz).tmx",
+      "sha256": "dd0af0ddb24fb4c2be642bb7d4d23f330ce342f0298d96de6dd67a905a39b830"
+    },
+    {
+      "file": "assets/maps/skirmish/10p 山区围攻4v6.tmx",
+      "sha256": "c03d38ed754e7dc260b25625cb510fcb76946818fc8b5c5725a84776ea9560bd"
+    },
+    {
+      "file": "assets/maps/skirmish/1v1对战雪地(1234).tmx",
+      "sha256": "271fa89e4c350576a7933d43a218eb71ecd1d3e7e77104bce40d88442258422a"
+    },
+    {
+      "file": "assets/maps/skirmish/2V2LOL——by GWillS.tmx",
+      "sha256": "3d1d936736d318f9f2ee329d9e42dc1218a24dd533f4ee41865eac1026746593"
+    },
+    {
+      "file": "assets/maps/skirmish/2p [仿红警]沙丘巡逻.tmx",
+      "sha256": "e34b083e35c23c7f39a4f520da4c0bfe855de6e47a67d71cd44556c24471ab91"
+    },
+    {
+      "file": "assets/maps/skirmish/2p 对面岛屿.tmx",
+      "sha256": "560fcdd1c60c1f5c44fc10738525249c00347d7c2b77052493a827b64d2e96b2"
+    },
+    {
+      "file": "assets/maps/skirmish/2p 比赛专用(虫).tmx",
+      "sha256": "b6805395ef346e194ad66c1d07852c914491d52706d604bc061ac17616e3aba4"
+    },
+    {
+      "file": "assets/maps/skirmish/4p Small Lava Pass.tmx",
+      "sha256": "5351f89012e587eb257809352e35d7c750180f8216fcd15b3991cadb9546f7b4"
+    },
+    {
+      "file": "assets/maps/skirmish/4p 南太平洋2.tmx",
+      "sha256": "f778d80a47cb258673b5043b163e822bba2b2ae28935ee203c674385148fa525"
+    },
+    {
+      "file": "assets/maps/skirmish/4p 战祸兵燹.tmx",
+      "sha256": "f64c5efa9a253a7d907691c61ad51706f2809855015c0faaf36e6b14bb38b337"
+    },
+    {
+      "file": "assets/maps/skirmish/4p 破碎的神庙Lost Temple.tmx",
+      "sha256": "79d3cca0b43df8bf2c5e6487e7845706287f6c3dadfe064be6d497d99f6a16c0"
+    },
+    {
+      "file": "assets/maps/skirmish/5v5公平游戏.tmx",
+      "sha256": "e41240d169f807fe594ed6400589a6435171393e283711f27c0b19bee68df684"
+    },
+    {
+      "file": "assets/maps/skirmish/7p LT3C竞技版.tmx",
+      "sha256": "6da3aed16688afc8460320f8d255d80ed49aefc56fdbe22fc7f4cd9433546fc3"
+    },
+    {
+      "file": "assets/maps/skirmish/7p 生化狂潮-人虫大战.tmx",
+      "sha256": "f7fe59da4d8c7353319d50f88b5644d2c706d10e801d3e599dd270def4a9cb6a"
+    },
+    {
+      "file": "assets/maps/skirmish/8p 四面楚歌.tmx",
+      "sha256": "f043a9dca7c1dbb9f3151ec930cefc223922ca25717e88710b48d519f2a57220"
+    },
+    {
+      "file": "assets/maps/skirmish/8p 大河_绿地Ⅱ[BIG].tmx",
+      "sha256": "35f1139adced74a8102a4f6380d325abe6676652848af932f0bb3075c8a697df"
+    },
+    {
+      "file": "assets/maps/skirmish/8p 实验山地.tmx",
+      "sha256": "aee12ec64bb68e78fd92216ccf3a0e281628e2ac98d8ee878888f9f05dac930d"
+    },
+    {
+      "file": "assets/maps/skirmish/8p 改：Small_Island 4岛.tmx",
+      "sha256": "4a39822d381af58401ccea8f5876703973e0dc4cc9e73439ed9cc14b61f65acf"
+    },
+    {
+      "file": "assets/maps/skirmish/8p 生化狂潮2-内陆.tmx",
+      "sha256": "aca384bc9267976a6024aea09b6e72f2ed0f81ff80e28b95820f8ef4173010cd"
+    },
+    {
+      "file": "assets/maps/skirmish/8p 生化狂潮3-荒芜雪原.tmx",
+      "sha256": "b9e7ad475afe8ff9846cdae4e7ebb196f1c8f0bbdcd1466ff20a601ea39b2a3f"
+    },
+    {
+      "file": "assets/maps/skirmish/8p 锦标赛式地图.tmx",
+      "sha256": "77530c98eb30aa88cc660137ec0f558cf37d00bdadd34a5f48eec032391d2d5c"
+    },
+    {
+      "file": "assets/maps/skirmish/9p 人虫之争1v8真平衡版.tmx",
+      "sha256": "5da74d5677b411293fa208cf3777058f83f1e7e8a336e19331dd841475565e75"
+    },
+    {
+      "file": "assets/maps/skirmish/[P2](2)城中对决by_Shadow_Fox.tmx",
+      "sha256": "82ff1735335d975345585f239fe6c7de770157cdf8a4caa12cfa3d984e321f66"
+    },
+    {
+      "file": "assets/maps/skirmish/[h2]黄金国(2).tmx",
+      "sha256": "695a82fc264ccd3194b0361ce94752601e335721e35d63a3ab5183ddbfb4e782"
+    },
+    {
+      "file": "assets/maps/skirmish/[h8]北极圈(8).tmx",
+      "sha256": "e070457a6942a5b405b618301a0a452f804ddb014cfa588a27f7c9035739e834"
+    },
+    {
+      "file": "assets/maps/skirmish/[p10](10)岛屿战争.tmx",
+      "sha256": "2f5683b2d8f9ba332c849b61cfc61ac9b6b3a7f2ea345c2b19144b91ba7864c4"
+    },
+    {
+      "file": "assets/maps/skirmish/[p10](10)弹坑.tmx",
+      "sha256": "5bfa56ff97762422bfb404d9bd21f9f30aced83a316ae86d682bae2eff1fefa8"
+    },
+    {
+      "file": "assets/maps/skirmish/[p10](10)末日危局by_MP97.tmx",
+      "sha256": "8408658ea98a43ba40f1bcafb0bdee874682130bd22073a52ffcd341e91125dd"
+    },
+    {
+      "file": "assets/maps/skirmish/[p10](10)沼泽消融.tmx",
+      "sha256": "57e46378dcd04e85e3c48694823935a8a2c1d2410351286d896ed51860ff054c"
+    },
+    {
+      "file": "assets/maps/skirmish/[p10](10)海峡对峙.tmx",
+      "sha256": "b582bbb0812fbb5ece91128f160ef03f9a254377427a73b76b38a50baf1d53ad"
+    },
+    {
+      "file": "assets/maps/skirmish/[p10]Small_Island (10p).tmx",
+      "sha256": "29213fcf7eed42eb7561742670276929da8d032501c898ab469cf605e5c107f3"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2](2)堵塞之河_by_MP97.tmx",
+      "sha256": "d694882b47d758520fbc16fe0597c7525980099bef86f5eb12af44f4dfc56e7e"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2](2)泥沼by_MP97.tmx",
+      "sha256": "81798a8bd325b5706113684c72ae0b09cb737cf15bd676616104f24f9d68ab72"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2](2)热带战争by_MP97.tmx",
+      "sha256": "9531e736439185f4169a7539680d88b50e3120027d9008c4d49469504f493ddd"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2](2)熔岩地域MP97.tmx",
+      "sha256": "028a331999e5a9a3b745430bff467e038e441081d32dfe2599411b93af21f876"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2](2)遗迹by_Webster1664.tmx",
+      "sha256": "c06e8e2443b7ba0ab4d94164895c7bb0db9f10a7886433a6ac1193c1d50b1577"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]Beach landing (2p) [by hxyy].tmx",
+      "sha256": "084481e24af298a1750347707607b88e9b38e936e608b628f9cb7a170217afd2"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]Big Island (2p).tmx",
+      "sha256": "bc6b59c1aef04e3bf9d7ec10d1276c0b31a3f62a35b9996405492717bc446593"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]Dire_Straight (2p) [by uber].tmx",
+      "sha256": "99a284f4b7448bd572eec2b80ce74386d0e7857b8f35fe38e05e3ee0e2eda0be"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]Fire Bridge (2p) [by uber].tmx",
+      "sha256": "e775665420bb4ca26f9dc868a4ffd8ae2bb9d845f8a69f45baaa19e676613728"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]Ice Island (2p).tmx",
+      "sha256": "17ea0b11daa6717a0de35c1ea325a09133fb775e4e9b7cc24fc40a1eb38d9ae1"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]Lake (2p).tmx",
+      "sha256": "251273e30debff8bb3927a99a6d668ee0b5d03d936ea991de8866f638358fa6e"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]Small_Island (2p).tmx",
+      "sha256": "6ec23e2ada2a1a6cbb5a05eb4790565632efcdfcee9c4a9ef5fa86d9d38d10da"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]Two_cold_sides (2p).tmx",
+      "sha256": "57e332efc743ebcf2e0086ef7df6d566a001dd9692f92b1b3191afc30aed5d60"
+    },
+    {
+      "file": "assets/maps/skirmish/[p2]走私港湾by_Webster1664.tmx",
+      "sha256": "86ba4dc20e6801de753e82afa9bd1a6d0e0d74067d8196bc36b0965aaab6fda9"
+    },
+    {
+      "file": "assets/maps/skirmish/[p3](3)不公平优势1v2.tmx",
+      "sha256": "d0174ae4b9712ffaea7fabacc6102737ec1f539008c545c9732b3fd85051d38d"
+    },
+    {
+      "file": "assets/maps/skirmish/[p3](3)佛雷特城市圈.tmx",
+      "sha256": "187044371d3fa2da2df14dc2b28dd25eb7972ff62750856a62dfa70231a0c750"
+    },
+    {
+      "file": "assets/maps/skirmish/[p3](3)划分1v2.tmx",
+      "sha256": "c79d49ed70147b0b373d907db4f8d3f4ba561139164d0b60b955bacb7bac8dbe"
+    },
+    {
+      "file": "assets/maps/skirmish/[p3]Hercules_(2vs1p) [by_uber].tmx",
+      "sha256": "00a3ebbded7bc11a5ba7ec3a24a82ba7b67c9232d70f3c6364a90c47e99cbdf5"
+    },
+    {
+      "file": "assets/maps/skirmish/[p3]King of the Middle (3p).tmx",
+      "sha256": "91160a1819334caf6e2f904804ef3a8d44c570a8784fef63c22eaab465dcd9de"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)冰桥(4p) [by ES].tmx",
+      "sha256": "1903d0876604a6491c74c8403b3d3bd52b5102ffa460716edbc16666d8329449"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)安第斯山绿洲by_MP97.tmx",
+      "sha256": "f9329d6f1d041cd2bb3820c814b3e9c4d404d42a239be08c781e0c0d8654c16a"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)引导印记(4p).tmx",
+      "sha256": "f30f27a8ca61d5f89d65aa1c8c90dccbf1d0f738dd91e191c20f1784b5cafbb5"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)文明古道(MP97).tmx",
+      "sha256": "0de3bea6b8655fca71dc0861fb957d4ffac7ea564c885765e14bfce0e2db81ce"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)月球矿坑.tmx",
+      "sha256": "725ec150c74cdee8f1b3a9a58e85d6ddf54821fafbd97d924874b49903e44115"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)沙漠王国(4p) [by ES].tmx",
+      "sha256": "21d19ab2432a86de8d9f889dc0fe87e9ca97c7864619cb684bb92b000faf16d7"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)炽热之湖by_MP97.tmx",
+      "sha256": "ec5c8b6f99ef0dbb98b873880a48a9024102a5aa3fc0981d2af5e78cb04475d9"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)熔岩池(4p) [by ES].tmx",
+      "sha256": "acdf1eef95c4d26c080a9d0c6bddcd4a4e33813fd6f7faf4a8bd119fdb294d81"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)破碎海滩.tmx",
+      "sha256": "6f0910b818b833fdd05f640be272499f7f6deebd60ac6a2dc6ccf20bafd632b8"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)秋日癫狂by_MP97.tmx",
+      "sha256": "83466b2b444ed780c952e14ac6f2486ce6ed0010c330954488aaeb319a17330e"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)绿洲(4p) [by ES].tmx",
+      "sha256": "955b7e99ed184772f6531f25d4542885b47eef959c2b75d2c23fb214087b46e8"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)荒漠回声(4p) [by uber].tmx",
+      "sha256": "fd5608040f5a14cc4f479811dd9e658409940940ab0175f766366e65bfc7cd75"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)融接(4p) [by Mirkov].tmx",
+      "sha256": "4e9f1858a8abf57f6d502661cb19e615c31bbcf812bf1090b6fca79806fe4473"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)边疆大桥by_MP97.tmx",
+      "sha256": "3b09549870c46965c245b5fedd1d2e39ee5c0419599ca7616fbe7eb13981c772"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4](4)遭遇战(4p) [by ES].tmx",
+      "sha256": "13b38d5a5a3f6a23f78e34e82bfa4556a240c8c7162dac18cda5f3a8cfc2a379"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Depth charges (4p) [by hxyy].tmx",
+      "sha256": "7c0019ff6abf959f0c2edfccb3e9d2a469828f6dad0d08f5710d8ccb09306af2"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Desert (4p).tmx",
+      "sha256": "1c9800ae537e2fb933ac40e4e9552053bf0e6b0049381171e8324306f623fae8"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Ice Lake (4p) [by hxyy].tmx",
+      "sha256": "7d8cd68391383ee26c53f64b3918398e422e56c300c0fb6b63aa8c577d8a18ac"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Island freeze (4p) [by hxyy].tmx",
+      "sha256": "09eb6d2cdf1cee091465c2a8070ff6c0d99e8587911b3e83ca98a3f7cc09e901"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Islands (4p).tmx",
+      "sha256": "75c9fddd7b9e6ea40e2fb5b96dd3e9a17cd4c139f53e945acd0ad152db18e624"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Lava Maze (4p).tmx",
+      "sha256": "e6009a60c877067cf59b893f73925aee59b480e9d4a89080c365df36f4adfe06"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Lava Vortex (4p).tmx",
+      "sha256": "9d777deb00c21aef0531b8b7aca7662a43b111dbd88818782e7387cbde95eeee"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Magma Island (4p).tmx",
+      "sha256": "b4a307ecf93bdf113ffe1ee0221bfee02af7a6d7c3ef34f5f351c665f2e4100b"
+    },
+    {
+      "file": "assets/maps/skirmish/[p4]Nuclear war (4p) [by hxyy].tmx",
+      "sha256": "8d8ed4188b47bca6d08f655f51875b4c6786b3b304dd4b0c97df337852f9b547"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6](6)企鹅乐园by_MP97.tmx",
+      "sha256": "d88ae6f5096d96cc973829cc6a6aa2433c413dec87f24ea1c205cbd8e29362cc"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6](6)冰封山谷[by uber].tmx",
+      "sha256": "eb255a5d27ccb0e78b881bae37a9cc7dfaa9f3384880cd432a1666c4f1484ef4"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6](6)坚毅2v4.tmx",
+      "sha256": "1e247763725af9a2fd2970b0d82be477851fcb16d02b92391a2ec6e62aa5ec42"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6](6)死亡峡谷.tmx",
+      "sha256": "8de2dfbee97f392b2745568b0a361237117b43b722e34be7a15a77096597d677"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6](6)死路by_MP97.tmx",
+      "sha256": "1e0ce091fdd608059a09be3f0162c9e0327afaffc1d66fdbe2f418b02557a44f"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6](6)沙漠河流(6p) [by Mirkov].tmx",
+      "sha256": "5c9f2e2956b96ded9256b3b2edda65d978b5ef07f31c132a943ea36f3eeaed30"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6](6)西顿的离合器.tmx",
+      "sha256": "edf74efd4e93b847f620c35af68e9827cf353ef5e330c3062e0340339ace1f2a"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6](6)遥望大陆_by_MP97.tmx",
+      "sha256": "bf42b326993339d9a7d764fc683ade9213eb0cd97d277faf627346c473a1ce83"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6]Crossing (6p).tmx",
+      "sha256": "8bc8924711a4fb976a7a92faea72b3504de6fec534aef4fe5184155897328818"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6]Shore to Shore (6p).tmx",
+      "sha256": "934023cdc338b9685bea3604b00d368648c3f05883e14fa8a3d262dc13b68d27"
+    },
+    {
+      "file": "assets/maps/skirmish/[p6]Valley Pass (6p).tmx",
+      "sha256": "133169e5da0ebe1c462b69796e9ce0cd4d996844d0808fee9fb1d8139684f69c"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8](6)沉沦谷by_MP97.tmx",
+      "sha256": "86e6cb50922ab633cfab34fd9480e30514a1a5a4a5f3645f364f1317a15bde57"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8](8)中世纪by_MP97.tmx",
+      "sha256": "04db42788bf00b87f9d8e051e6bdc8363ef246b5b91f54cbd38a895b68310437"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8](8)凛冽寒流.tmx",
+      "sha256": "c587777c43a71b250eb9bc48db4c574e6533a0b9a3125db6700fa0c9292654e8"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8](8)坦克狩猎区.tmx",
+      "sha256": "f205c898b0297fae69672f4a28ebe763daf12c33c4ad4d060fc2a9094947959c"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Bridges Over Lava (8p).tmx",
+      "sha256": "18a04b6b80f810afd8483305f1f5715ef855ce47fe27b6162d6d3defb7672d05"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Coastline (8p) [by hxyy].tmx",
+      "sha256": "ac106049a440aef8c2041bf5ee4547ff4588f7f294a8cf67dc549b630891f2de"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Huge Subdivide (8p).tmx",
+      "sha256": "025eaf8ef27a44c04ce1a6a9b5ac6b2d02a778ee2b142797853d15930f1325f1"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Interlocked (8p).tmx",
+      "sha256": "c5ec5ec67250280e9fb1d728b3b173b7ca8974000af61c119527395fad329938"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Interlocked Large (8p).tmx",
+      "sha256": "5935d605eaae727f0860fcd88b061e9abf01aa5736443b5013b7c116eb7d2f47"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Isle Ring (8p).tmx",
+      "sha256": "65229084a0c9e4c3c990b27c7c32a31a3d89767e62ad0a1271eda1cd168000bf"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Large Ice Outcrop (8p).tmx",
+      "sha256": "d98434ca78ef02e0b9081fbd7a1d052ee18fe24867265b43f17607494eb944c7"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Lava Bio-grid(8p).tmx",
+      "sha256": "a2e63cdb73c02b94e2c230c16897497f0d083f34e60deee7e311e980430c34e5"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Lava Divide(8p).tmx",
+      "sha256": "042b45b52052b7f8b31a24b37ef8ee2f41d4ae97701cac85c8c7bd9b2eea28bb"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Many Islands (8p).tmx",
+      "sha256": "1d41a9e3c5fd2b52f82e6b6534ccc0b0f18e97a7b42674b0178ae8527b93e8a5"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Random Islands (8p).tmx",
+      "sha256": "5b567d59ef0cfa578076554a7d1c1c5c171534c4237efae95535319e4d6cb597"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Tornado eye (8p) [by hxyy].tmx",
+      "sha256": "1c15acebfcf93084f3ba6eb2be8793a2698c97e84d8884867ba33666cb51a5cc"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Two Sides (8p).tmx",
+      "sha256": "5ae4dac19cb9ae99c736d31c99cc7e123f833d80c322bca70308909dd000c49b"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Volcano (8p).tmx",
+      "sha256": "12b4259b112fcdd4b0e415709cd9139ba7825016a814d61f21e975c6cbe7d402"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]Volcano Crater(8p).tmx",
+      "sha256": "184c36b394c39afe7242bcfc08a124dd36bebd7c5dd8334e4ef3e32646ced44c"
+    },
+    {
+      "file": "assets/maps/skirmish/[p8]两岸（水）(8p).tmx",
+      "sha256": "c0c6cba320f3938469fead88eb16e68d203f0562846c1819a4e70e03917436b9"
+    },
+    {
+      "file": "assets/maps/skirmish/[z;p10]Crossing Large (10p).tmx",
+      "sha256": "7ca59ce6b1e6a2a0b3269d7141b055adce760b5edbc01562032a6d169c8fa6b1"
+    },
+    {
+      "file": "assets/maps/skirmish/[z;p10]Enclosed Island (10p).tmx",
+      "sha256": "c90739c29cd3810ad0072d0bf2e2b37fc538a98a177c90f76a09841babe0ae07"
+    },
+    {
+      "file": "assets/maps/skirmish/[z;p10]Kingdoms (10p) [by Vulkan].tmx",
+      "sha256": "4bb00ed749e20e4bfa1274ddef6683e78917c00f328a98a332acdc66f1002ac6"
+    },
+    {
+      "file": "assets/maps/skirmish/[z;p10]Large Lava Divide (10p).tmx",
+      "sha256": "66fb8c702c03966e7f2c65df9eee968bc5563b4e8a99ed66a6d1073efefbb5eb"
+    },
+    {
+      "file": "assets/maps/skirmish/[z;p10]Many Islands Large (10p).tmx",
+      "sha256": "3f48a1bb6247dc5638531331907f7a10f90b8abf5fc8304ce6f72ab725c02a50"
+    },
+    {
+      "file": "assets/maps/skirmish/[z;p10]Two Sides Remake (10p).tmx",
+      "sha256": "ecee16846c52cf672984286cfd412a567dc7c9a63428e7577923dcdbbbfaa9be"
+    },
+    {
+      "file": "assets/maps/skirmish/[z;p10]Valley Arena (10p) [by_uber].tmx",
+      "sha256": "d4afce5acbe4d15e8a8b3ce6e0c8e36d26b747240c6ada934cdeb95098824bfa"
+    },
+    {
+      "file": "assets/maps/skirmish/冰火两重天.tmx",
+      "sha256": "e7bfb8a3841b6f176d8374849f049b89735878fa396a6d74197f632c004cd1ea"
+    },
+    {
+      "file": "assets/maps/skirmish/同盟意义(1234).tmx",
+      "sha256": "355a4d9221d96cdea68d11a1c180e9b168e8d48b396df0c6e7a0e1195ceacb91"
+    },
+    {
+      "file": "assets/maps/skirmish/四角岛地图.tmx",
+      "sha256": "e8cb709a57c852e009b8128b0eaa9b424b6e5a38a359cb138b5ab19d5ee97a65"
+    },
+    {
+      "file": "assets/maps/skirmish/垃圾场.tmx",
+      "sha256": "2a534054a2bfd4e7b23c04d3681f04feab2ed1bfd26f79931b78698be019c15a"
+    },
+    {
+      "file": "assets/maps/skirmish/巨量资源.tmx",
+      "sha256": "754c310b11b1ff313a140c554165b72f841ce8f61ea6a31e7187a9c415e4ecc8"
+    },
+    {
+      "file": "assets/maps/skirmish/暴风天(4).tmx",
+      "sha256": "6221c729fc05d06264f1b55f024238432702cf98153c0ad0ecb465a6edeb1210"
+    },
+    {
+      "file": "assets/maps/skirmish/海战之王重制版.tmx",
+      "sha256": "87ebc98e194e4260b7d3ce0a7173828783139f0b0118da056043c3016d3247a6"
+    },
+    {
+      "file": "assets/maps/skirmish/海空大战.tmx",
+      "sha256": "83911db48a923ca82a68ee68b08c42b475828e3d89cfde4eb7bb44e503270d7e"
+    },
+    {
+      "file": "assets/maps/skirmish/猛犸之战.tmx",
+      "sha256": "7cfd116caa2f56bf7274eead42963d3a695f08564cfa198c27c4e04162001151"
+    },
+    {
+      "file": "assets/maps/skirmish/破碎海滩.tmx",
+      "sha256": "e19cae8c45fbc837ebbcafc0d1602149d49d690b2e61fbdb5b04025b316f0e23"
+    },
+    {
+      "file": "assets/maps/skirmish/破碎立方.tmx",
+      "sha256": "73392155b5cf6492fe3451ebc65a857ff39d5c351c345792a0ceacdcaf36d45b"
+    },
+    {
+      "file": "assets/maps/skirmish/红色警戒4sa.tmx",
+      "sha256": "ef295a8ab964052aaa37ea26fd7219913e6539eb383c84a7dc22163a360f0d7d"
+    },
+    {
+      "file": "assets/maps/survival/[o1]Surrounded.tmx",
+      "sha256": "4d0cc6383eb93d9d2d64fab52458827c0e4f92cafcd98f0c39cc70cbc93f9d0f"
+    },
+    {
+      "file": "assets/maps/survival/[o1]平原.tmx",
+      "sha256": "8d1ac020bf117d41f494c24f9a38c303a2886f727846f97b47b3843a8b6cd2d6"
+    },
+    {
+      "file": "assets/maps/survival/[o2]Single Passage.tmx",
+      "sha256": "73fbdb98c4b5847f9ed7800d8f212600f56a1af87fabb7858533487597d6b689"
+    },
+    {
+      "file": "assets/maps/survival/[o2]冻土.tmx",
+      "sha256": "552d8af3bcab9e7b40d0b1b202fd7be0e34bf68982a100c425f6d5d10cc039ba"
+    },
+    {
+      "file": "assets/maps/survival/[o3]Cornered Stronghold.tmx",
+      "sha256": "1aaac588316d4cf622d280aec9855b3c2f5d7b38c8e7ec3690fbef69ea6486fc"
+    },
+    {
+      "file": "assets/maps/survival/[o3]两极鸟.tmx",
+      "sha256": "9206126f6a1aecffcde038f23ad9ce8df32ce1fddd326b745e8a1b6be3e63795"
+    },
+    {
+      "file": "assets/maps/survival/双人生存.tmx",
+      "sha256": "5bf4a5d9c8d96c08d2cebc5863d69c3f433379cd70240d8df78342184ae15e20"
+    },
+    {
+      "file": "assets/maps/survival/坚守1冰雪.tmx",
+      "sha256": "e72103f4fac9944b6fc2ced6b20efff949a610dd6bd9fbf63b8ec9d581f88d7b"
+    },
+    {
+      "file": "assets/maps/survival/坚守2岩浆.tmx",
+      "sha256": "28fa85b099d43f2afab5ee5e51c33a454ee1ed958e6bf1e17d6d9956aa09c939"
+    },
+    {
+      "file": "assets/maps/survival/平原(双人).tmx",
+      "sha256": "96ebad8bd246dbaddbd6667822d5f27f87b9b4ae0fa605190fee5b3a73fb4532"
+    },
+    {
+      "file": "assets/maps/survival/异次元战场(10人).tmx",
+      "sha256": "c85fe812f1e1bd54817e4224ee36615272eb8a0e32f7b68fe0259b12a7458496"
+    },
+    {
+      "file": "assets/maps/survival/沙漠战争-水源争夺战(中国版)[1p][JasenYan].tmx",
+      "sha256": "ffc42224dbfaa79daf4ed1354b6fe67e5027d4695338b8e2eee59fbd3521bb4b"
+    },
+    {
+      "file": "assets/maps/survival/雪地.tmx",
+      "sha256": "783f37008d86c40234778194c7d5243cbd46179eb945ff6764f3526766c5feb5"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/mjjp/mjjp.ini",
+      "sha256": "1909b0255a92d911c0316fcd626405391cfb8141e78d3e131648352abb088dc2"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/money/money.ini",
+      "sha256": "9b7fc3617156ffd5d5d3be323476aacce9ddded0258b650f369dbb59705c9b8e"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/prop/prop.ini",
+      "sha256": "5fcdbab4e969864ff23e0ece70a748f452d406710c036c3132d3fe7097785eaf"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/prop/prop2.ini",
+      "sha256": "e2e06bebd6ca3608dab09c9645bb5353b0ebaffe94383480d6544464cb5925a0"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/skfy/skfy.ini",
+      "sha256": "84181d1d69e2234ee5953ff21a5341b21662f8a427e9571d539487d52b818c92"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/zzjp/zzjp.ini",
+      "sha256": "a77ff5e37cbcb4feebc4955715c007b682a44b658360a3225423f9b875b66c79"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/zzsy/zzsy.ini",
+      "sha256": "c109eb0695587753f3780438dad02ea5c127784e634e73fb3749b75fd3cc0a5a"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/机场的贴图/jc.ini",
+      "sha256": "b48b089e7bc55ab87ac980bf4e3b729562b54256e666b7916391cff123ef50f9"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/水晶/水晶.ini",
+      "sha256": "1a3bf866717216defb64b1a57bee403aa059adc96a722556cb91ba80dfea5d0c"
+    },
+    {
+      "file": "assets/units/ GF/插件/建筑/水晶/高能水晶.ini",
+      "sha256": "99507f6fe9ff43ccfd755bad2f4dd9c02be4f48c138543bd78ec816c532da4a4"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/bigs/bigs.ini",
+      "sha256": "1051f4e7ba6cb6025fe256af141f427d36f760a297e345502a4dbe188b23b20f"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/bigs/bigs2.ini",
+      "sha256": "1331b1870eb7cc5309d6691135137519b5492143d345dd1e28718811a04127fe"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/fghj/fghj.ini",
+      "sha256": "9a95926548d6df77758950d6f7b460a1b2425ecbde35644596d7596c5cfed022"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/hang_mu/hang_mu.ini",
+      "sha256": "b185241818cf85fb376565732145e0911dac682e53453850982df2a5db4dd550"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/hang_mu/hang_mu2.ini",
+      "sha256": "aa4a93f3a5006fbeb258db12fe10d697cb27cb4504656810df5850e9cb382e08"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/hang_mu/hang_mu3.ini",
+      "sha256": "d518de7d85658804b98f0d8ba0f2f2bf5ad2d8af474bd913563b0a4d8cc28a9a"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/lili/lili.ini",
+      "sha256": "70b8e98809891b2b813964835fabbfd2669c178e63308b1907141533d1ce1d50"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/mhhm/1.ini",
+      "sha256": "f44a8b2f92f4f7e3ab665a6ae996b36fe3cfb4eb885c1b88f09549f9c4c2cef1"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/mhhm/mhhm.ini",
+      "sha256": "7c035db3ea2514d0729d453a63942e53ef870dadb4c836336c4b3ed79f1dcd45"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/mhhm/分散4.ini",
+      "sha256": "1cf5f7c2ffee65351341d0b0003b00f51b7b1c9ea1ecd0b99880001c6112fb85"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/mhky/GG.ini",
+      "sha256": "e79080632678efc41e8b4132d5c0b837994e747db613d12f01d4d4b721899213"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/mhky/mhky.ini",
+      "sha256": "cb5212d2e9e999a6fd46e39f24bdc87d46632ec8b1fe748275b6800a5d6fa8be"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/mhqz/驱逐舰.ini",
+      "sha256": "f6275fc2658fa21421d99a3f983952530e908130563b951b297c2e371442c4bd"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/mhsd/mhsd.ini",
+      "sha256": "71e2fdf1f48dc070fff2dc81ed97e085526f69f9ae79fc27dba9a9836a2a2b42"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/wwzj/wwzj.ini",
+      "sha256": "0f6b33e51aa8226715281ac787c76eff2b9f44d3f16ac5e9bb8a68fc0bf0a07f"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/zdqt/zdqt.ini",
+      "sha256": "6fd9eb0ce60ec8bcd557308b19eebf179e2166814ca061d96809ba1052bd3f6a"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/航母战斗群/拦截机/拦截机.ini",
+      "sha256": "3ece870446f4fac512541a0b23c43aa7043bbb11234957322f36f343cebc1df4"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/航母战斗群/拦截机/拦截机2.ini",
+      "sha256": "446fd5e689d686a2bb1745d928c34a411bbae7dc7a78249a1e45ae59afbe93f3"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/航母战斗群/拦截机/拦截机3.ini",
+      "sha256": "13342b33869a3088dc550ed4d1e9e4f960b368fcea3d049d741b76788c0f5310"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰.ini",
+      "sha256": "3c96d6ecf352e88f5d3255a9390652f40434e8f883babd07b844c076ebea08b4"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰1.ini",
+      "sha256": "fc151d1989ab08ccc0c8fcb0814a17474ae65274e1f0dd782cc63f43b0da9809"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰2.ini",
+      "sha256": "8617703ade30869e603201e59a6f5e4dc45e4a503121bff77392788bbe567c94"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰3.ini",
+      "sha256": "4f03007754fa3bc0b1995401fdf85adf4a03a032b9df72f5f4e7206f93c9bc46"
+    },
+    {
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰4.ini",
+      "sha256": "3b99aa904de6d063458ffc01dd944309451933040ac7ffe12d24b2377767bb49"
+    },
+    {
+      "file": "assets/units/ GF/插件/炸弹之类/egg/egg.ini",
+      "sha256": "4d096345c6984b886fd0410d5f76ff7beeeff545d19f1a895d61e8c7b6bbdb9a"
+    },
+    {
+      "file": "assets/units/ GF/插件/炸弹之类/fgh/ MX重型.ini",
+      "sha256": "b29a5294f27981e041db14163ab960302b92eafae6b86128cd8a59423f80251d"
+    },
+    {
+      "file": "assets/units/ GF/插件/炸弹之类/halt.ini",
+      "sha256": "1fa92acd206c57f4450f5ab91156ca2420ab91cfc46d16dd84e9787a4a617fcc"
+    },
+    {
+      "file": "assets/units/ GF/插件/炸弹之类/wert/wer.ini",
+      "sha256": "4f82280cfb32ca79c55cf7bfd7cdbd0442a681a4b8bb7f41ba21f7d0cb03fc10"
+    },
+    {
+      "file": "assets/units/ GF/插件/炸弹之类/wert/wert.ini",
+      "sha256": "fc5bee83fa30149712692d987833ceda3519ac520a5c8e1cdeef81f6eb7c7e9a"
+    },
+    {
+      "file": "assets/units/ GF/插件/炸弹之类/龙骨炮/c3.ini",
+      "sha256": "ec1067340920b5dde0bd2210365079118763e433f62d20d964626bee0da3c4b7"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/LLC/LLC.ini",
+      "sha256": "fb3e2bc0d640a498a26f1de75a09ff35a8142564dde26930e1120a9a125428f2"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/a/a.ini",
+      "sha256": "0b698dece4b8ddecfca4b10a48ffe008ea133e1a9df81ec2cbf8fb3bd70ce96d"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/a/a1.ini",
+      "sha256": "6729c2b687b0fd51cc5391482769c390b3e9d51b50a55069390472f7230d5ae1"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/amphibious_jet/amphibious_jet.ini",
+      "sha256": "0824704b62d7732023a94555e85433c2f85495e845a45f2f63b9a4094a372b6c"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/amphibious_jet/amphibious_jet_transition.ini",
+      "sha256": "7e5ea85b2bf3686f43072b0986f560524b43ee287701ecabc0ea3de786bafd10"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/amphibious_jet/amphibious_jet_underwater.ini",
+      "sha256": "781c320fc7572873e1d144190b7491a604b9eaf888c94b6c4b85e503c5ba67c1"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/bomber/bomber.ini",
+      "sha256": "2de61a295e50f2d263776a7b181d1ff8b63ce479de63edefda0a4bf14a9f3d94"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/boss/boss.ini",
+      "sha256": "5c25394a19061cf658f576b6b027b26ff195bd093e5e55c29ec47dbd83fd0edd"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/kong_mu/fgd.ini",
+      "sha256": "089a2b6c76c024dc1c99300ffdf5accdeaca0ccd7036231c16d1ab50e4dde2fa"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/kong_mu/fgdg.ini",
+      "sha256": "ceed0852061444566fc735e56df595fbe8e0297f872cd0e7ab306a41e59f5c24"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/kong_mu/kong_mu.ini",
+      "sha256": "c6792f865c8583f3cd61abf7784a6f7ff017b4d3a0d82d20ca99726a2a5de7cf"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/kong_mu/kong_mu2.ini",
+      "sha256": "6510ad0d3d2ce5ee70bd9b937c1dd62024b5a8a06d525192f58c4fc6bfa41b4d"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/kong_mu/分散.ini",
+      "sha256": "e37760b95437f552c45f9002925b1fdd17e1291129716da1c51980cf388a10cb"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/kong_mu/分散a.ini",
+      "sha256": "c2bb38b9fbb56a53609cf9196110a384b713df6926447d5d5dfb73dc592881e0"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/kong_mu/死星.ini",
+      "sha256": "61a588ba0699ac7834ec2335d0854a1a151611aafe597971b0a74dbe7f31eea7"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/mhkh/GG.ini",
+      "sha256": "5f86de28e8d7785c2eed64abcdc1bc259f85cf562a8a29b4c969394b2879cdf8"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/mhkh/mhkh.ini",
+      "sha256": "427e68b7d5fce6280a35422815ef2bf405b39d4d865062e02c5ada7abdaa4f12"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/mhkh/mhkh2.ini",
+      "sha256": "db333c1894757e615961cc7cbbc7483b9b57418fdecdc2197b3c2ca0f6b3d51a"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/sckt/sckt.ini",
+      "sha256": "5bb6a96ebd4bdb578cfe91a3547fe6daf5d10cd558b73d530289860b31fd0673"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/scwz/scwz.ini",
+      "sha256": "7764448096ff07fec5a84e3d284c53e2053a14a47a581f98cddbaf365c71c4aa"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/sdog/sdog.ini",
+      "sha256": "68fcb952b6c2cddc9dc690f6967756a42482c890ba7c3bdbc681b8a6ad260f76"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/sdog/sdog2.ini",
+      "sha256": "57d2a604236aee908772a2372c2592c060bf2a3f31e299522f178c633a7ec733"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/se_jing/se_jing.ini",
+      "sha256": "d02e501e6816fc65a9fd43f495126dfe947346af2d4e7c6574428fd136c426c7"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/se_jing2/se_jing2.ini",
+      "sha256": "2eae96d82408dc7daef0279b0e7c427168862c8fb974e51e0be68ca183a78076"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/skyb/skyb.ini",
+      "sha256": "b34b6dcecc9fcc8eff9cd758bb35d0eca989f0402fde0fced26c818b1abd9682"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/tyui/tyui.ini",
+      "sha256": "4eebdbb6b588b2f0fafecf8b8548869ef78608440ccf60cdc12287a9d9bf563e"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/wfq/wfq.ini",
+      "sha256": "9294aed5c64878c5d6109b9be2712321d402becc91ff7a46e7b3568f90b33b63"
+    },
+    {
+      "file": "assets/units/ GF/插件/空军/ycyf/ycyf.ini",
+      "sha256": "4030a693ca0762eb41dc639c184c5fcb04b09a5672896805cbe8f6590cfdb581"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv1.ini",
+      "sha256": "844fc9c933b9b9ed3647db5547e177cec0efb8770d5d5ad01cfa88493ad6877f"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv1b.ini",
+      "sha256": "5739819553c818e6396f3bbb01bd1cff7b67c597ce54587a225fd2f9797a9f17"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv2a.ini",
+      "sha256": "d9c7a956f8d60b7d4dd171f7b24986b327741fe633701e2703f4587b81a4de76"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv2b.ini",
+      "sha256": "58158fb41e18691fe7e5486585f4727e85a8d8b754e50b4fc9cb66e3e531a4ca"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv2c.ini",
+      "sha256": "6ab6fe20bdd9aab1fdc334da7f674ac083ba53af95ab2bb4e1936749c79a76f6"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3aa.ini",
+      "sha256": "06f1ab008d1d0bd81e6a8a8f58662fcadabb244e5305f8d81fa08cfcdc415f67"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3ab.ini",
+      "sha256": "8b59e1c7ec42a872073b059955b44ca49052d1e42a18c044d142afd6af197705"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3ac.ini",
+      "sha256": "78d5d864c31d8c618911400535062976b58030d984ba0fc25e8ce20c251f97fd"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3ba.ini",
+      "sha256": "b06347682bbc027d33f87ac2628c5834e1a3158ea9941fa2959446414af840ca"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3bb.ini",
+      "sha256": "3e6506ce5a9da657242ed3e511c5bc813f79f45f4cc36ca733d6b5afe8fdbe1d"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3bc.ini",
+      "sha256": "eec45d0a9dc5673eb54b56604c9d7395cbef4e2e4ae82fe1dad97aa4c896c0f2"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3ca.ini",
+      "sha256": "af62a1ff938e808a718814af154f14233766bc85a34d2e3f1819a13a388d56d9"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3cb.ini",
+      "sha256": "f125ffe07752d87441f9ca3b5a7ee4cc9d8a6b811a822aa10db0e177bb59bae9"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3cc.ini",
+      "sha256": "55f1c81090fa32f77fda076a33bcc0cbafe14f55fb393a275d58678c56a404fa"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/ass.ini",
+      "sha256": "fdd3667aada07084b842871a0b243821bed3ff6e623eb95403e34d69cb571277"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4aa.ini",
+      "sha256": "eb0f207e8e8ab5c8f8d7bbcfb86f360dbfe0508c43f070a5d2df34af6799abca"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4ab.ini",
+      "sha256": "e978ce71155817651385da4c90e628f09e1c7e41df9f7f1cbedb590b6676a3a0"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4ac.ini",
+      "sha256": "e6266e68e51d2841b557e7436dab28d3971eb24a4c1fa97642f2dbe138ed3a6b"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4ba.ini",
+      "sha256": "e0f4e20a8ff1e1d484cea7637a2c46cb05c30030229711b8dac90fe98b7150f4"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4bb.ini",
+      "sha256": "f4829be0b93fae420e0a11a4195259e9048cfdedf4ea2f8077ec11ed7561910e"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4bc.ini",
+      "sha256": "6e2cd4ef67467ea7ea792fc3b3203a2ac95b2882c7c6148be501f43287a11a97"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4ca.ini",
+      "sha256": "59619a7b7df0bc37c8656f29a5f81bc3ab48f569466ce25c923a61aa6233322d"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4cb.ini",
+      "sha256": "1e1cf13324eee3991d04d986289f42b397a7b875d3aeb55ed928e890bb6cf299"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4cc.ini",
+      "sha256": "56cf3781d09a4510e0cba0e3bda4ca81cc7b339a18291c1e1d4a222fb7431725"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/nb/nb.ini",
+      "sha256": "46e9995144836da2b5ffb9e8c85df069c15d92bf4fc12b1bb03e349687267bdb"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/小灰机.ini",
+      "sha256": "c6cb8a04e5e9db31ad2f099cb96624c0db267dcdb3ef918ac048b67831869013"
+    },
+    {
+      "file": "assets/units/ GF/插件/英雄单位/小飞机2.ini",
+      "sha256": "4308186ec51441bd0f9579334944b6a67f207929d8bc8bd7deba441cf5745850"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/Battlecruiser/Battlecruiser.ini",
+      "sha256": "28fd2d8437851bb3661d52b4e7b41e888d8cbaf172b84114a0f4d8a266c3425a"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/Battlecruiser/fight.ini",
+      "sha256": "3a692597c872de24947809996f39892c97f217a9502cc968e3f2e53ddde38c4a"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/Battlecruiser/tttt.ini",
+      "sha256": "12ac62a52be95b0aa4d81c2c4895de38b98eeb6fca579336274107d26977813c"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/MRLS/MRLS.ini",
+      "sha256": "f84ed1df515403605c1cdda779cef0ed95b6dfe4cd87865cec9e1fe043c2557e"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/MRLS/MRLSG.ini",
+      "sha256": "75b8ba9e339b69c9a7aa043869342210e10b4cd6180b0dbac78b522cf2e81a9f"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/attacktank/attack.ini",
+      "sha256": "093318d8f71bf6aaa680f078db87b7c90c44fbebd01a2aac4893a086aca06ed3"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/attacktank/gctank.ini",
+      "sha256": "56598c83221b18b908b2af894f49c84bdb2b5a14dadb15c0345496b1ff3e3f48"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/attacktank/gctank_common.ini",
+      "sha256": "9c4e9fc684f88d318c951eb412660af313ba02096842ebd5188fb1e7956ed1e9"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/djz/djz.ini",
+      "sha256": "66e4ec3edd14121064e5345dde5470425b20b1ee3d62a15bde05a1ff406f2647"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/djz/djz2.ini",
+      "sha256": "dffd8c9c3e12e774b4d9d2b9e18786a4448e0362a7ec8453561aa39a23f85d25"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/djz/djz_common.ini",
+      "sha256": "fbdb299824aacd1d60fa84f78ba25bb9ff69dfbb06bedbf3853e7d94b224f74d"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/edd/edd.ini",
+      "sha256": "542c86544360e1c7e9811d2fe9251fff5fc478ffec882d31fbac2004765b129e"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/hjkl/hea.ini",
+      "sha256": "b48fff0b4af975bcd562779a5022671bbb4636bcaa1af49a6936f5d4f307faa0"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/hjkl/hjkl.ini",
+      "sha256": "8b81b28cd6cdf597a719fd9c5b45abff73f260b8200cd4786bd5d1c9de4ec1ac"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/mcgl/mcgl.ini",
+      "sha256": "0c706f2246c1812467b3e254bcc3297704fc3f0de1dcff5818afe10310e96d74"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/mchy/mchy.ini",
+      "sha256": "e7f210eedf13592b80fea986f140649952a019f8f50c65aa73a315b9f847be48"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/mchy/幻影坦克.ini",
+      "sha256": "8e0db763508094acc79f81ee7f449cd45df95ddf26101c6906e992c892540515"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/miss/miss.ini",
+      "sha256": "d028f63f64aa95c1081cc6efe299541d113d0657ef5b9458b10102226dc0d7ec"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/sctq/sctq.ini",
+      "sha256": "5462e7efa88013d72f678aa99e37f0c889d91a68910f22b837a9e8e9398cc305"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/vshj/tank.ini",
+      "sha256": "c02a595d1f67f48962330051f542a8b64e44f8a9b2c8a81811d21f5d8d191da0"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/vshj/tank2.ini",
+      "sha256": "510c80d03472be363bf80798addfde1cbe09ac1780ee65f717b791c84f703acd"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/vshj/vshj.ini",
+      "sha256": "d05d8949364a573c347acf83295ee6a1435a3efd51f4bcef34a89d329cc156c4"
+    },
+    {
+      "file": "assets/units/ GF/插件/陆地/vshj/燃烧.ini",
+      "sha256": "effc1bfc49fa10052a6298e3f73e7d76331b9a9d694aabbda23d0bd620d2189a"
+    },
+    {
+      "file": "assets/units/all-units.template",
+      "sha256": "73cae4aac16ec69c90805934e7ac7e919521e69ecc7d3d23fcbfbdb7f4aff9f0"
+    },
+    {
+      "file": "assets/units/amphibious_jet/amphibious_jet.ini",
+      "sha256": "0824704b62d7732023a94555e85433c2f85495e845a45f2f63b9a4094a372b6c"
+    },
+    {
+      "file": "assets/units/amphibious_jet/amphibious_jet_transition.ini",
+      "sha256": "7e5ea85b2bf3686f43072b0986f560524b43ee287701ecabc0ea3de786bafd10"
+    },
+    {
+      "file": "assets/units/amphibious_jet/amphibious_jet_underwater.ini",
+      "sha256": "781c320fc7572873e1d144190b7491a604b9eaf888c94b6c4b85e503c5ba67c1"
+    },
+    {
+      "file": "assets/units/bug_base/bug_generator/bug_generator.ini",
+      "sha256": "d1212c425fcd7a17f51622b8a2ba430f0ba328f8ce2c5b98fd31488f1edfc352"
+    },
+    {
+      "file": "assets/units/bug_base/bug_generator/bug_generatorT2.ini",
+      "sha256": "8145f5767c26db1da428e7ad0e07f660ebc17e10b78cfd1da08a249ba9bf18ee"
+    },
+    {
+      "file": "assets/units/bug_melee/bug_melee_t31.ini",
+      "sha256": "5a190802ce04b79c156d847fb3d1e9a859ed6e614d412026379ce40c1a2312ba"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_bee/bug_bee.ini",
+      "sha256": "128e5addceeac33cbe9c0c6af0c3834ca09b23f0235b66d97f4477f8de58097f"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_extractor/bug_extractor.ini",
+      "sha256": "b4026d98fc100a813a7428773fe05159cf294bd4fe6bedcbf7c0976cbcd309a4"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_extractor/bug_extractorT2.ini",
+      "sha256": "74eb208ae5929c97ff519ec7270f55f5392004cc97610a20e5145769092d280a"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_fly/bug_fly.ini",
+      "sha256": "ff8ea29b529849ecc9c77af6279b4a00494038652350d22e22d3c426358a30df"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_generator/bug_generator.ini",
+      "sha256": "0fed4698ffe433d08c980a22186f5f5962ecb28b2532f7b80c645a1f7b882686"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_generator/bug_generatorT2.ini",
+      "sha256": "26f14f8aecafcdd7f96e72922287e1b7dff537acc72caf004979a8fea44a6e19"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_melee/bug_melee.ini",
+      "sha256": "bd4d59a4b8f0e98bba13b9e569b861dac302a5ede045fa2b4ad6f52812c73050"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_melee/bug_melee_large.ini",
+      "sha256": "8af1e0541e6efb7ebdf955f05e3047eeabbb19aeb53f45bde63913609554fd1d"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_melee/bug_melee_small.ini",
+      "sha256": "211e068a860909a16ebfabc138ef43cbf1bda7b8affe78ae34254b48c8e4b750"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_nest/bug_nest.ini",
+      "sha256": "47d04b52d8b6307eca10e3fcda9607912c11b120fcc13df7a5523a54537bd329"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_ranged/bug_ranged.ini",
+      "sha256": "b9cf1536f1c4b6be52388f71282bb016ab0106a8e0ba55a05d0f38437e8ac264"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_spore/bug_spore.ini",
+      "sha256": "4d632daeff1d78b9a0972a778ceaacdd18d92ff4c9f8e3a5ac04ff80c9040b80"
+    },
+    {
+      "file": "assets/units/classic_bugs/bug_turret/bug_turret.ini",
+      "sha256": "6d90db74031665cff009a4a9298ef9efe18b3fba28b940c69dd3c90d888ea9d0"
+    },
+    {
+      "file": "assets/units/classic_bugs/bugs/bug_pickup.ini",
+      "sha256": "336797ca9ed29aa6fbdb31a389f791c4d029866091bedc12f3fc11394b82e6dd"
+    },
+    {
+      "file": "assets/units/classic_bugs/bugs/bug_wasp.ini",
+      "sha256": "6e6094e89a35b64c71fb9e2c0df66d45dffe1f1e3d2b1162e2691c7a7c6a4f04"
+    },
+    {
+      "file": "assets/units/classic_bugs/bugs_t2/bug_ranged_t2.ini",
+      "sha256": "5306e5ecb230120c9b3d1eb6e34636b83cbe4a82e5b9ae8f953cc48df69387ba"
+    },
+    {
+      "file": "assets/units/combat_engineer/combat_engineer.ini",
+      "sha256": "5de1555a2c6b28c49a8ed1686b7ade88126bd06362ff93a0d07e19b20faea5ae"
+    },
+    {
+      "file": "assets/units/experimental_carrier/Experiemental_carrier.ini",
+      "sha256": "f6f185be4a685d36449dc56568a9c787be92925d20191b0e97c0c7a5c50c0c11"
+    },
+    {
+      "file": "assets/units/experimental_dropship/experimental_dropship.ini",
+      "sha256": "2a2da4198ed8ff295f9a0296914b621fac74877635f606c780c1621e5979b9d5"
+    },
+    {
+      "file": "assets/units/experimental_gunship/experimental_gunship.ini",
+      "sha256": "3c3231f2f8ea86086e0e10ccb1dbbcb9f5c6048fc96a4a83ac326c1c42fe1095"
+    },
+    {
+      "file": "assets/units/experimental_gunship/experimental_gunship_landed.ini",
+      "sha256": "1870f576964555e10b7adf87fc5c34c0dd29fc46f23e32a83a7f3cd701004512"
+    },
+    {
+      "file": "assets/units/experimental_spider/experimental_spider.ini",
+      "sha256": "8222ce37c19edbccd4e4cb263af8e184faf09bd862f84adb019ec140875d2ead"
+    },
+    {
+      "file": "assets/units/experimental_tank/experimental_tank.ini",
+      "sha256": "0285d9f46756f7214dda8205bf176e956df41688318ccf1cc60d77ff677d9a67"
+    },
+    {
+      "file": "assets/units/fabricator/fabricatorT1.ini",
+      "sha256": "a0bcfc8a2908cf5ae3c39197753e0523f2ff2433c3c4c3c79240bad751846827"
+    },
+    {
+      "file": "assets/units/fabricator/fabricatorT2.ini",
+      "sha256": "1579e0a73dd5e16fa2b43a4de8945c4761d9815c78cd5698774c32563faf1926"
+    },
+    {
+      "file": "assets/units/fabricator/fabricatorT3.ini",
+      "sha256": "7b7efa718161cbcf5ef48d73f7740cee741a119cfb4b26d0ccdba91089fa4298"
+    },
+    {
+      "file": "assets/units/fire_bee/fire_bee.ini",
+      "sha256": "c4f21bd4ce6843ce9bf4042e57f60f1e80d82ec118a4c868a89ec1d1f88772b2"
+    },
+    {
+      "file": "assets/units/heavy_battleship/heavy_battleship.ini",
+      "sha256": "1702fd011e023590b6d7e3f05a3d2bd1c55adb36e7f383d627e779598ed0cbba"
+    },
+    {
+      "file": "assets/units/heavy_interceptor/heavyInterceptor.ini",
+      "sha256": "3b0f40fd3f65af5e1fa105c03ca171c94579db080a07e1b89c0432ab112a2ac8"
+    },
+    {
+      "file": "assets/units/heavy_missile_ship/heavy_missile_ship.ini",
+      "sha256": "08a1d02977cd56fed141cb3343eeb0908c0354d39beb8af459cec307f0ece591"
+    },
+    {
+      "file": "assets/units/heavy_sub/heavy_sub.ini",
+      "sha256": "e78df98f74c380d9665afab81646a46dcbce1978e1ee77a7be0df9adaa3c7738"
+    },
+    {
+      "file": "assets/units/helicopter/helicopter.ini",
+      "sha256": "3c7102011a0fb7adb49b23993bda95a02818bcb425d73b707374926e997a80c4"
+    },
+    {
+      "file": "assets/units/interceptor/interceptor.ini",
+      "sha256": "cf8e6c9d59e9d814cc5f9ef6496ebb01369c6475e5a465d9c4ca10aebcf7f172"
+    },
+    {
+      "file": "assets/units/laser_tank/laser_tank.ini",
+      "sha256": "4a200d82b0b4a1f7a466a20cb22a7f40c6a0e7c12904bc7bad6bf5d5b434911a"
+    },
+    {
+      "file": "assets/units/light_gunship/light_gunship.ini",
+      "sha256": "179763728db58e3dbe05a991cec44ce964c96beb5dfa19b5c65bcad2c754c66e"
+    },
+    {
+      "file": "assets/units/light_sub/light_sub.ini",
+      "sha256": "0507c9aa9b14a3bd711f12383b1f26658ec38c76c348b1b772539318398f06c5"
+    },
+    {
+      "file": "assets/units/mammoth_tank/mammoth_tank.ini",
+      "sha256": "a038dbb6d91998ef3eb64d2130294ccff2f07277c10f34a19dd5ed4d33e8ff11"
+    },
+    {
+      "file": "assets/units/mech_engineer/mech_engineer.ini",
+      "sha256": "fabb70db4f5d14106610e7bb767b39be59d724f20438fe2c7fa8c3e178f6acc5"
+    },
+    {
+      "file": "assets/units/mech_factory/mechFactory.ini",
+      "sha256": "18ceaf97c059002e684e9043b2dcb52fa9cda4f74f702d5f65d7eff695b0cfa5"
+    },
+    {
+      "file": "assets/units/mech_factory/mechFactoryT2.ini",
+      "sha256": "f151e77a37d579c0dc38d80d8b2d0d62bd0bec4f33c0bf2bb7b4eaf2349186a5"
+    },
+    {
+      "file": "assets/units/mech_factory/mechFactoryT2备用.ini",
+      "sha256": "943dc2e3ee449dbef030f4278cb235c9f3bc3ce75e0d5f9562b39cf1dd453b39"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_artillery.ini",
+      "sha256": "98f26a7ec89f8018a498fe2b6679b05f44b03390b38932fb29d3a24b1f51603e"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_bunker.ini",
+      "sha256": "78c2df7f5be88fccc315ee1846fe51a2aa3ad3191b15d780b96f119e546ef3ff"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_bunker_deployed.ini",
+      "sha256": "a53880d7d277f55f52fea9361ab0a9b1a4630c6b4a1656ee888acaa3057ca195"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_flame.ini",
+      "sha256": "530bdff962ebe2a9ee7ab13bdde654e2a9369d0d6556a15cd80a8a248b2cc5e2"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_flying_landed.ini",
+      "sha256": "7d54cf8054aa3ceb06312e59b961782e7638e604713fde1a5efa73685f55032b"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_flying_takeoff.ini",
+      "sha256": "3137a7d0e5c6515e9833e89a2a0a3f0291c54f4a725e507f5c49a7ec7d107543"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_large_common.ini",
+      "sha256": "c9891f3be663623bb8b507e859f2b7c0e8110d18ec87e1629bfcc223628573ed"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_laser.ini",
+      "sha256": "09f33178c62f184468a2d8fc3ba083092f54233b0a91b3a5a95a1eca64111264"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_lightning.ini",
+      "sha256": "26ba334f22cc84d57af45ebf7e9066b198ae58651fad0521ababf6f317d16dfa"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_med_common.ini",
+      "sha256": "cb6e2bb4927c3381834e506a7555ddefdd22c11075b96323738bdd457692251c"
+    },
+    {
+      "file": "assets/units/mechs_large/mech_minigun.ini",
+      "sha256": "99a9e3d112a9c716ad15cc0340ac00c01f94354b474f67b207f79d569c08e3ae"
+    },
+    {
+      "file": "assets/units/mechs_small/mech_gun.ini",
+      "sha256": "937a4511ce44cd3fb1de1bce5c72c8a9e3d359a504761ee004172cd63f618efe"
+    },
+    {
+      "file": "assets/units/mechs_small/mech_missile.ini",
+      "sha256": "26df92165d1b4468e496341a1f501e5920904aa819077db2930a11b5962eeb02"
+    },
+    {
+      "file": "assets/units/mechs_small/mechs_small_common.ini",
+      "sha256": "dc192cca66d4bca3f856d82263b1b011dbb83980f86c5c3333e65e22d795dafd"
+    },
+    {
+      "file": "assets/units/miscellaneous/example_faction_picker.ini",
+      "sha256": "1c553fffb65e2f7131e470c8e256a587c910f4d2e6e506100515fc4a31734774"
+    },
+    {
+      "file": "assets/units/missile_airship/llld.ini",
+      "sha256": "68450bf52cbec2aa8afead2e885a5654c2a50599ceaf80cc172e63cea468e11c"
+    },
+    {
+      "file": "assets/units/missile_airship/missile_airship.ini",
+      "sha256": "33f407451f63264860a3f7c10603791b0b3569c54ff22218e113f66da30195c5"
+    },
+    {
+      "file": "assets/units/missile_tank/missile_tank.ini",
+      "sha256": "f87a5288ce99f8c2d1a2bb1de13a2eb7f1ec9c8b6be86de91c9a0d8feb08df08"
+    },
+    {
+      "file": "assets/units/missing_unit/missing.ini",
+      "sha256": "68c02467ccb196cbef803087ce26ce74355c13e00f9852c8ff1aa28cb76c027d"
+    },
+    {
+      "file": "assets/units/nautilus/nautilus.ini",
+      "sha256": "acaed61082c03931d8a2009f428c9c8efb5dc93833a095b81bae72aa9569b0a4"
+    },
+    {
+      "file": "assets/units/nautilus/nautilusLand.ini",
+      "sha256": "cd4e98d0bda67af67dd544c5f4afc17346361a408c9384de2e9bac4b5bff9515"
+    },
+    {
+      "file": "assets/units/nautilus/nautilusSurface.ini",
+      "sha256": "411bcf7aec39afc8e1b1d31cf231928ba4ba26d6c21cf3d88863137130bce9e2"
+    },
+    {
+      "file": "assets/units/nautilus/robotCrab/robotCrab.ini",
+      "sha256": "18d9a24121f91ac34564ee29e5f42f3c392669c0fd4cca05b740557f9e4d7a3c"
+    },
+    {
+      "file": "assets/units/nautilus/robotCrab/robotCrabWater.ini",
+      "sha256": "ed2ec645ab270119e72ed3d5379d119b82b591d7b2ff58d5cd08a83d19f89d24"
+    },
+    {
+      "file": "assets/units/nukes/antinuke_launcher.ini",
+      "sha256": "9c1f40deabf947da861f41d22fc68c66d939e23302814c85affbd2b2be481fb3"
+    },
+    {
+      "file": "assets/units/nukes/nuke_launcher.ini",
+      "sha256": "78a7bb422055d52b098c68ba9f43157fba4aaf92a8e4e4efb391d8e8d7bb70a7"
+    },
+    {
+      "file": "assets/units/plasma_tank/plasma_tank.ini",
+      "sha256": "96299e43c0a98608ba6ab50b905fe56ccc7a917cbac22c448975cbd634743d70"
+    },
+    {
+      "file": "assets/units/resource_deposits/crystal_mid.ini",
+      "sha256": "1dcdc3602becd71cd5c1e81a2040dc1861341549980f6c393f1c424767446f04"
+    },
+    {
+      "file": "assets/units/scout/scout.ini",
+      "sha256": "ae426b86d5617c89fcc73561ee9eee09e6c5d1a1f372042886444de95d69b172"
+    },
+    {
+      "file": "assets/units/tanks/artillery.ini",
+      "sha256": "0a0e7c217176dd403f058587d798a36321dc11ac54dc2a801a44f5ad9e083f5a"
+    },
+    {
+      "file": "assets/units/tanks/heavy_artillery.ini",
+      "sha256": "b155685985b0088608abb2c8d6ecce9bb00b6286f8a5fecb1175abd6de3a921d"
+    },
+    {
+      "file": "assets/units/tanks/tank.ini",
+      "sha256": "11e259de2ddf7329458585e645811faef4a1c56b29a265b7c044001fd93b5359"
+    },
+    {
+      "file": "assets/units/test_tank/tank.ini",
+      "sha256": "cc8842f4a0ee99221ac95ada57a3ecaff8f197151972906c6d797fe7f726240e"
+    },
+    {
+      "file": "assets/units/turrets/turret_antiair.ini",
+      "sha256": "5a9e1c74f329b0fcb16b2584fa2ae696d6105f517058670c4b3022b536175821"
+    },
+    {
+      "file": "assets/units/turrets/turret_antiair_flakgun.ini",
+      "sha256": "29e16ffaf68e43597a6298ffd4854dc901cf2c0d977f1062d7922891fd8bee16"
+    },
+    {
+      "file": "assets/units/turrets/turret_antiair_t2.ini",
+      "sha256": "10c7dfbc831ffb56a12fb037486f99b65dae383901068dd836885591d0ae1e6a"
+    },
+    {
+      "file": "assets/units/turrets/turret_antiair_t3.ini",
+      "sha256": "0048aae311a2fa9fc1f9fac33c5f743a39409fecac1b6915e4cd24f397bac7bd"
+    },
+    {
+      "file": "bug反馈/多管火箭炮可以变形。就是两个单位互相转化/MRLS.ini",
+      "sha256": "f84ed1df515403605c1cdda779cef0ed95b6dfe4cd87865cec9e1fe043c2557e"
+    },
+    {
+      "file": "bug反馈/多管火箭炮可以变形。就是两个单位互相转化/MRLSG.ini",
+      "sha256": "75b8ba9e339b69c9a7aa043869342210e10b4cd6180b0dbac78b522cf2e81a9f"
+    },
+    {
+      "file": "bug反馈/平地者可变形。两个单位互相转换/tank.ini",
+      "sha256": "c02a595d1f67f48962330051f542a8b64e44f8a9b2c8a81811d21f5d8d191da0"
+    },
+    {
+      "file": "bug反馈/平地者可变形。两个单位互相转换/tank2.ini",
+      "sha256": "510c80d03472be363bf80798addfde1cbe09ac1780ee65f717b791c84f703acd"
+    },
+    {
+      "file": "bug反馈/攻城坦克可变形。两个单位互相转换/attack.ini",
+      "sha256": "093318d8f71bf6aaa680f078db87b7c90c44fbebd01a2aac4893a086aca06ed3"
+    },
+    {
+      "file": "bug反馈/攻城坦克可变形。两个单位互相转换/gctank.ini",
+      "sha256": "56598c83221b18b908b2af894f49c84bdb2b5a14dadb15c0345496b1ff3e3f48"
+    },
+    {
+      "file": "bug反馈/攻城坦克可变形。两个单位互相转换/gctank_common.ini",
+      "sha256": "9c4e9fc684f88d318c951eb412660af313ba02096842ebd5188fb1e7956ed1e9"
+    },
+    {
+      "file": "bug反馈/核电站/money.ini",
+      "sha256": "9b7fc3617156ffd5d5d3be323476aacce9ddded0258b650f369dbb59705c9b8e"
+    },
+    {
+      "file": "bug反馈/航飞艇T2机场，空中之主可建造（航母代码）/llld.ini",
+      "sha256": "68450bf52cbec2aa8afead2e885a5654c2a50599ceaf80cc172e63cea468e11c"
+    },
+    {
+      "file": "bug反馈/航飞艇T2机场，空中之主可建造（航母代码）/missile_airship.ini",
+      "sha256": "33f407451f63264860a3f7c10603791b0b3569c54ff22218e113f66da30195c5"
+    },
+    {
+      "file": "bug反馈/轻航母（完整的航母代码）/mhhm.ini",
+      "sha256": "7c035db3ea2514d0729d453a63942e53ef870dadb4c836336c4b3ed79f1dcd45"
+    },
+    {
+      "file": "bug反馈/轻航母（完整的航母代码）/mhkh.ini",
+      "sha256": "427e68b7d5fce6280a35422815ef2bf405b39d4d865062e02c5ada7abdaa4f12"
+    },
+    {
+      "file": "bug反馈/这个单位跟建筑一样逐次往上升级/拦截机/拦截机.ini",
+      "sha256": "3ece870446f4fac512541a0b23c43aa7043bbb11234957322f36f343cebc1df4"
+    },
+    {
+      "file": "bug反馈/这个单位跟建筑一样逐次往上升级/拦截机/拦截机2.ini",
+      "sha256": "446fd5e689d686a2bb1745d928c34a411bbae7dc7a78249a1e45ae59afbe93f3"
+    },
+    {
+      "file": "bug反馈/这个单位跟建筑一样逐次往上升级/拦截机/拦截机3.ini",
+      "sha256": "13342b33869a3088dc550ed4d1e9e4f960b368fcea3d049d741b76788c0f5310"
+    },
+    {
+      "file": "bug反馈/这个单位跟建筑一样逐次往上升级/航空母舰.ini",
+      "sha256": "3c96d6ecf352e88f5d3255a9390652f40434e8f883babd07b844c076ebea08b4"
+    },
+    {
+      "file": "bug反馈/这个单位跟建筑一样逐次往上升级/航空母舰1.ini",
+      "sha256": "fc151d1989ab08ccc0c8fcb0814a17474ae65274e1f0dd782cc63f43b0da9809"
+    },
+    {
+      "file": "bug反馈/这个单位跟建筑一样逐次往上升级/航空母舰2.ini",
+      "sha256": "8617703ade30869e603201e59a6f5e4dc45e4a503121bff77392788bbe567c94"
+    },
+    {
+      "file": "bug反馈/这个单位跟建筑一样逐次往上升级/航空母舰3.ini",
+      "sha256": "4f03007754fa3bc0b1995401fdf85adf4a03a032b9df72f5f4e7206f93c9bc46"
+    },
+    {
+      "file": "bug反馈/这个单位跟建筑一样逐次往上升级/航空母舰4.ini",
+      "sha256": "3b99aa904de6d063458ffc01dd944309451933040ac7ffe12d24b2377767bb49"
+    },
+    {
+      "file": "bug反馈/这个太弱了，需要加强/boss/boss.ini",
+      "sha256": "5c25394a19061cf658f576b6b027b26ff195bd093e5e55c29ec47dbd83fd0edd"
+    },
+    {
+      "file": "bug反馈/这个太弱了，需要加强/zzjp/zzjp.ini",
+      "sha256": "a77ff5e37cbcb4feebc4955715c007b682a44b658360a3225423f9b875b66c79"
+    },
+    {
+      "file": "bug反馈/陆地巡洋舰，黑科技工厂建造/bigs2.ini",
+      "sha256": "b6b51e0fdcb937a80e1941b30097d312721902d993137a5edb404728f9b70b51"
+    },
+    {
+      "file": "bug反馈/驱逐舰一个单位/mhky.ini",
+      "sha256": "cb5212d2e9e999a6fd46e39f24bdc87d46632ec8b1fe748275b6800a5d6fa8be"
+    },
+    {
+      "file": "bug反馈/驱逐舰一个单位/驱逐舰.ini",
+      "sha256": "f6275fc2658fa21421d99a3f983952530e908130563b951b297c2e371442c4bd"
+    }
+  ],
+  "definitions": [
+    {
+      "source": "core:commandCenter",
+      "file": "rw-core.json#commandCenter",
+      "definition": "fg-rusted-league-command",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:landFactory",
+      "file": "rw-core.json#landFactory",
+      "definition": "fg-rusted-league-army-base",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:landFactory",
+      "file": "rw-core.json#landFactory",
+      "definition": "fg-rusted-league-army-base-2",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:airFactory",
+      "file": "rw-core.json#airFactory",
+      "definition": "fg-rusted-league-air-base",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:airFactory",
+      "file": "rw-core.json#airFactory",
+      "definition": "fg-rusted-league-air-base-2",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:seaFactory",
+      "file": "rw-core.json#seaFactory",
+      "definition": "fg-rusted-league-naval-base",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:seaFactory",
+      "file": "rw-core.json#seaFactory",
+      "definition": "fg-rusted-league-naval-base-2",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:extractor",
+      "file": "rw-core.json#extractor",
+      "definition": "fg-rusted-league-mine",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:extractor",
+      "file": "rw-core.json#extractor",
+      "definition": "fg-rusted-league-mine-2",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:extractor",
+      "file": "rw-core.json#extractor",
+      "definition": "fg-rusted-league-mine-3",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:turret",
+      "file": "rw-core.json#turret",
+      "definition": "fg-rusted-league-sentry",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:turretT2",
+      "file": "rw-core.json#turretT2",
+      "definition": "fg-rusted-league-sentry-2",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:turretT3",
+      "file": "rw-core.json#turretT3",
+      "definition": "fg-rusted-league-sentry-3",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:turret_artillery",
+      "file": "rw-core.json#turret_artillery",
+      "definition": "fg-rusted-league-artillery-emplacement",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:turret_flamethrower",
+      "file": "rw-core.json#turret_flamethrower",
+      "definition": "fg-rusted-league-flame-turret",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "c_antiAirTurret",
+      "file": "assets/units/turrets/turret_antiair.ini",
+      "definition": "fg-rusted-league-patriot",
+      "restored": [
+        "source wreck",
+        "source transformation"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "c_antiAirTurretT2",
+      "file": "assets/units/turrets/turret_antiair_t2.ini",
+      "definition": "fg-rusted-league-patriot-2",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "c_antiAirTurretT3",
+      "file": "assets/units/turrets/turret_antiair_t3.ini",
+      "definition": "fg-rusted-league-absolute-domain",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "antiAirTurretFlak",
+      "file": "assets/units/turrets/turret_antiair_flakgun.ini",
+      "definition": "fg-rusted-league-flak",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:laserDefence",
+      "file": "rw-core.json#laserDefence",
+      "definition": "fg-rusted-league-prism-tower",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:laserDefence",
+      "file": "rw-core.json#laserDefence",
+      "definition": "fg-rusted-league-prism-tower-2",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:repairbay",
+      "file": "rw-core.json#repairbay",
+      "definition": "fg-rusted-league-repair-depot",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:NukeLaucher",
+      "file": "rw-core.json#NukeLaucher",
+      "definition": "fg-rusted-league-nuke-silo",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:experimentalLandFactory",
+      "file": "rw-core.json#experimentalLandFactory",
+      "definition": "fg-rusted-league-black-tech-factory",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "zzsy",
+      "file": "assets/units/ GF/插件/建筑/zzsy/zzsy.ini",
+      "definition": "fg-rusted-league-battle-lab",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "skfy",
+      "file": "assets/units/ GF/插件/建筑/skfy/skfy.ini",
+      "definition": "fg-rusted-league-t3-factory",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "mjjp",
+      "file": "assets/units/ GF/插件/建筑/mjjp/mjjp.ini",
+      "definition": "fg-rusted-league-colossus-gun",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "zzjp",
+      "file": "assets/units/ GF/插件/建筑/zzjp/zzjp.ini",
+      "definition": "fg-rusted-league-proton-cannon",
+      "restored": [
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "prop",
+      "file": "assets/units/ GF/插件/建筑/prop/prop.ini",
+      "definition": "fg-rusted-league-floating-array",
+      "restored": [
+        "source transformation"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 4,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "money",
+      "file": "assets/units/ GF/插件/建筑/money/money.ini",
+      "definition": "fg-rusted-league-reactor",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "战术机场",
+      "file": "assets/units/ GF/插件/建筑/机场的贴图/jc.ini",
+      "definition": "fg-rusted-league-airfield",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 2,
+        "attachment": 4,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "小英雄塔",
+      "file": "assets/units/ GF/插件/英雄单位/nb/ass.ini",
+      "definition": "fg-rusted-league-hero-barracks",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 1,
+        "decal": 0,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "nb",
+      "file": "assets/units/ GF/插件/英雄单位/nb/nb.ini",
+      "definition": "fg-rusted-league-hero-tower",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:builder",
+      "file": "rw-core.json#builder",
+      "definition": "fg-rusted-league-builder",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:tank",
+      "file": "rw-core.json#tank",
+      "definition": "fg-rusted-league-grizzly",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:hoverTank",
+      "file": "rw-core.json#hoverTank",
+      "definition": "fg-rusted-league-hover-tank",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:artillery",
+      "file": "rw-core.json#artillery",
+      "definition": "fg-rusted-league-artillery",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:helicopter",
+      "file": "rw-core.json#helicopter",
+      "definition": "fg-rusted-league-apache",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:airShip",
+      "file": "rw-core.json#airShip",
+      "definition": "fg-rusted-league-fighter",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:gunShip",
+      "file": "rw-core.json#gunShip",
+      "definition": "fg-rusted-league-strike-jet",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:gunBoat",
+      "file": "rw-core.json#gunBoat",
+      "definition": "fg-rusted-league-destroyer",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:missileShip",
+      "file": "rw-core.json#missileShip",
+      "definition": "fg-rusted-league-cruiser",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:battleShip",
+      "file": "rw-core.json#battleShip",
+      "definition": "fg-rusted-league-battleship",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:attackSubmarine",
+      "file": "rw-core.json#attackSubmarine",
+      "definition": "fg-rusted-league-submarine",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:builderShip",
+      "file": "rw-core.json#builderShip",
+      "definition": "fg-rusted-league-construction-ship",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:hovercraft",
+      "file": "rw-core.json#hovercraft",
+      "definition": "fg-rusted-league-hover-transport",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 0,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:tankDestroyer",
+      "file": "rw-core.json#tankDestroyer",
+      "definition": "fg-rusted-league-tank-destroyer",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:heavyTank",
+      "file": "rw-core.json#heavyTank",
+      "definition": "fg-rusted-league-heavy-tank",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:heavyHoverTank",
+      "file": "rw-core.json#heavyHoverTank",
+      "definition": "fg-rusted-league-heavy-hover-tank",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:laserTank",
+      "file": "rw-core.json#laserTank",
+      "definition": "fg-rusted-league-prism-tank",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:mammothTank",
+      "file": "rw-core.json#mammothTank",
+      "definition": "fg-rusted-league-tesla-tank",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "c_experimentalTank",
+      "file": "assets/units/experimental_tank/experimental_tank.ini",
+      "definition": "fg-rusted-league-experimental-tank",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 10,
+        "projectile": 2,
+        "effect": 3,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "core:experimentalHoverTank",
+      "file": "rw-core.json#experimentalHoverTank",
+      "definition": "fg-rusted-league-star-warship",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "c_amphibiousJet",
+      "file": "assets/units/ GF/插件/空军/amphibious_jet/amphibious_jet.ini",
+      "definition": "fg-rusted-league-amphibious-jet",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 5,
+        "decal": 0,
+        "animation": 2,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 2,
+        "leg": 0
+      }
+    },
+    {
+      "source": "c_amphibiousJet_underwater",
+      "file": "assets/units/ GF/插件/空军/amphibious_jet/amphibious_jet_underwater.ini",
+      "definition": "fg-rusted-league-amphibious-jet-dived",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 6,
+        "decal": 0,
+        "animation": 2,
+        "action": 2,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 2,
+        "leg": 0
+      }
+    },
+    {
+      "source": "missileTank",
+      "file": "assets/units/missile_tank/missile_tank.ini",
+      "definition": "fg-rusted-league-rocket-truck",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "heavyBattleship",
+      "file": "assets/units/heavy_battleship/heavy_battleship.ini",
+      "definition": "fg-rusted-league-general-battleship",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 3,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "sctq",
+      "file": "assets/units/ GF/插件/陆地/sctq/sctq.ini",
+      "definition": "fg-rusted-league-apocalypse",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "mchy",
+      "file": "assets/units/ GF/插件/陆地/mchy/mchy.ini",
+      "definition": "fg-rusted-league-mirage-tank",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "幻影坦克",
+      "file": "assets/units/ GF/插件/陆地/mchy/幻影坦克.ini",
+      "definition": "fg-rusted-league-mirage-disguised",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "vshj",
+      "file": "assets/units/ GF/插件/陆地/vshj/vshj.ini",
+      "definition": "fg-rusted-league-v3-launcher",
+      "restored": [
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 1,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "tank2",
+      "file": "assets/units/ GF/插件/陆地/vshj/tank2.ini",
+      "definition": "fg-rusted-league-pacifier",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "test_tank",
+      "file": "assets/units/ GF/插件/陆地/vshj/tank.ini",
+      "definition": "fg-rusted-league-silencer",
+      "restored": [
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "gctank",
+      "file": "assets/units/ GF/插件/陆地/attacktank/gctank.ini",
+      "definition": "fg-rusted-league-siege-tank",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 1
+      }
+    },
+    {
+      "source": "attack",
+      "file": "assets/units/ GF/插件/陆地/attacktank/attack.ini",
+      "definition": "fg-rusted-league-siege-tank-deployed",
+      "restored": [
+        "animation states",
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 1
+      }
+    },
+    {
+      "source": "MRLS",
+      "file": "assets/units/ GF/插件/陆地/MRLS/MRLS.ini",
+      "definition": "fg-rusted-league-rocket-launcher",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "固定火箭炮",
+      "file": "assets/units/ GF/插件/陆地/MRLS/MRLSG.ini",
+      "definition": "fg-rusted-league-rocket-launcher-fixed",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "edd",
+      "file": "assets/units/ GF/插件/陆地/edd/edd.ini",
+      "definition": "fg-rusted-league-minelayer",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "hea",
+      "file": "assets/units/ GF/插件/陆地/hjkl/hea.ini",
+      "definition": "fg-rusted-league-tank-killer",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "hjkl",
+      "file": "assets/units/ GF/插件/陆地/hjkl/hjkl.ini",
+      "definition": "fg-rusted-league-flame-tank",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 4,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "miss",
+      "file": "assets/units/ GF/插件/陆地/miss/miss.ini",
+      "definition": "fg-rusted-league-missile-tank",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "djz2",
+      "file": "assets/units/ GF/插件/陆地/djz/djz2.ini",
+      "definition": "fg-rusted-league-striker-vx",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 2
+      }
+    },
+    {
+      "source": "LLC",
+      "file": "assets/units/ GF/插件/空军/LLC/LLC.ini",
+      "definition": "fg-rusted-league-wolfhound",
+      "restored": [
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "scwz",
+      "file": "assets/units/ GF/插件/空军/scwz/scwz.ini",
+      "definition": "fg-rusted-league-twinblade",
+      "restored": [
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "sdog",
+      "file": "assets/units/ GF/插件/空军/sdog/sdog.ini",
+      "definition": "fg-rusted-league-tengu-jet",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "sdog2",
+      "file": "assets/units/ GF/插件/空军/sdog/sdog2.ini",
+      "definition": "fg-rusted-league-tengu-mech",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "djz",
+      "file": "assets/units/ GF/插件/陆地/djz/djz.ini",
+      "definition": "fg-rusted-league-striker-gunship",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 2
+      }
+    },
+    {
+      "source": "sejing",
+      "file": "assets/units/ GF/插件/空军/se_jing/se_jing.ini",
+      "definition": "fg-rusted-league-vanguard-gunship",
+      "restored": [
+        "animation states",
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 6,
+        "projectile": 4,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "sejing2",
+      "file": "assets/units/ GF/插件/空军/se_jing2/se_jing2.ini",
+      "definition": "fg-rusted-league-heavy-gunship",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 6,
+        "projectile": 4,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "mcgl",
+      "file": "assets/units/ GF/插件/陆地/mcgl/mcgl.ini",
+      "definition": "fg-rusted-league-shield-tank",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "skyb",
+      "file": "assets/units/ GF/插件/空军/skyb/skyb.ini",
+      "definition": "fg-rusted-league-bone-eagle",
+      "restored": [
+        "animation states",
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 6,
+        "hiddenAction": 1,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "wfq",
+      "file": "assets/units/ GF/插件/空军/wfq/wfq.ini",
+      "definition": "fg-rusted-league-strategic-bomber",
+      "restored": [
+        "animation states",
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "bomber",
+      "file": "assets/units/ GF/插件/空军/bomber/bomber.ini",
+      "definition": "fg-rusted-league-century-bomber",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 1,
+        "decal": 0,
+        "animation": 0,
+        "action": 6,
+        "hiddenAction": 1,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "sckt",
+      "file": "assets/units/ GF/插件/空军/sckt/sckt.ini",
+      "definition": "fg-rusted-league-kirov",
+      "restored": [
+        "animation states",
+        "source hull decay",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "kongmu",
+      "file": "assets/units/ GF/插件/空军/kong_mu/kong_mu.ini",
+      "definition": "fg-rusted-league-lord-of-the-sky",
+      "restored": [
+        "animation states",
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 5,
+        "effect": 6,
+        "decal": 0,
+        "animation": 0,
+        "action": 3,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "boss",
+      "file": "assets/units/ GF/插件/空军/boss/boss.ini",
+      "definition": "fg-rusted-league-b52",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "ycyf",
+      "file": "assets/units/ GF/插件/空军/ycyf/ycyf.ini",
+      "definition": "fg-rusted-league-laser-ufo",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "Battlecruiser",
+      "file": "assets/units/ GF/插件/陆地/Battlecruiser/Battlecruiser.ini",
+      "definition": "fg-rusted-league-battlecruiser",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 9,
+        "projectile": 4,
+        "effect": 1,
+        "decal": 0,
+        "animation": 0,
+        "action": 2,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "tttt",
+      "file": "assets/units/ GF/插件/陆地/Battlecruiser/tttt.ini",
+      "definition": "fg-rusted-league-hover-escort",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "轰天",
+      "file": "assets/units/ GF/插件/空军/a/a.ini",
+      "definition": "fg-rusted-league-skyshaker",
+      "restored": [
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 1,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 4,
+        "leg": 0
+      }
+    },
+    {
+      "source": "tyui",
+      "file": "assets/units/ GF/插件/空军/tyui/tyui.ini",
+      "definition": "fg-rusted-league-teleporter",
+      "restored": [
+        "animation states",
+        "source hull decay"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 0,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "missileAirship",
+      "file": "assets/units/missile_airship/missile_airship.ini",
+      "definition": "fg-rusted-league-carrier-airship",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 1,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 5,
+        "attachment": 10,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "小飞机",
+      "file": "assets/units/missile_airship/llld.ini",
+      "definition": "fg-rusted-league-airship-drone",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 4,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "mhky",
+      "file": "assets/units/ GF/插件/海军/mhky/mhky.ini",
+      "definition": "fg-rusted-league-asw-plane",
+      "restored": [
+        "carrier deck rearm",
+        "energy magazine"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 8,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "mhkh2",
+      "file": "assets/units/ GF/插件/空军/mhkh/mhkh2.ini",
+      "definition": "fg-rusted-league-wasp",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "sb",
+      "file": "assets/units/ GF/插件/空军/mhkh/mhkh.ini",
+      "definition": "fg-rusted-league-attack-drone",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 7,
+        "hiddenAction": 3,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "mhqz",
+      "file": "assets/units/ GF/插件/海军/mhqz/驱逐舰.ini",
+      "definition": "fg-rusted-league-littoral-ship",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 8,
+        "attachment": 1,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "mhsd",
+      "file": "assets/units/ GF/插件/海军/mhsd/mhsd.ini",
+      "definition": "fg-rusted-league-aegis-cruiser",
+      "restored": [
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "mhhm",
+      "file": "assets/units/ GF/插件/海军/mhhm/mhhm.ini",
+      "definition": "fg-rusted-league-light-carrier",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 5,
+        "attachment": 8,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lili",
+      "file": "assets/units/ GF/插件/海军/lili/lili.ini",
+      "definition": "fg-rusted-league-supply-ship",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "fghj",
+      "file": "assets/units/ GF/插件/海军/fghj/fghj.ini",
+      "definition": "fg-rusted-league-nuclear-sub",
+      "restored": [
+        "animation states",
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "zdqt",
+      "file": "assets/units/ GF/插件/海军/zdqt/zdqt.ini",
+      "definition": "fg-rusted-league-ghost-sub",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "wwzj",
+      "file": "assets/units/ GF/插件/海军/wwzj/wwzj.ini",
+      "definition": "fg-rusted-league-dreadnought",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "bigs",
+      "file": "assets/units/ GF/插件/海军/bigs/bigs.ini",
+      "definition": "fg-rusted-league-judgment",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 4,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "bigs2",
+      "file": "assets/units/ GF/插件/海军/bigs/bigs2.ini",
+      "definition": "fg-rusted-league-land-cruiser",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 4,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "hangmu",
+      "file": "assets/units/ GF/插件/海军/hang_mu/hang_mu.ini",
+      "definition": "fg-rusted-league-battle-carrier",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "航空母舰",
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰.ini",
+      "definition": "fg-rusted-league-aircraft-carrier",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 1,
+        "effect": 1,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "蛟龙",
+      "file": "assets/units/ GF/插件/空军/a/a1.ini",
+      "definition": "fg-rusted-league-jiaolong",
+      "restored": [
+        "energy magazine",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 3,
+        "effect": 0,
+        "decal": 0,
+        "animation": 1,
+        "action": 2,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 4,
+        "leg": 0
+      }
+    },
+    {
+      "source": "kongmu2",
+      "file": "assets/units/ GF/插件/空军/kong_mu/kong_mu2.ini",
+      "definition": "fg-rusted-league-sky-support-carrier",
+      "restored": [
+        "animation states",
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 3,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "hangmu2",
+      "file": "assets/units/ GF/插件/海军/hang_mu/hang_mu2.ini",
+      "definition": "fg-rusted-league-flying-battle-carrier",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "hangmu3",
+      "file": "assets/units/ GF/插件/海军/hang_mu/hang_mu3.ini",
+      "definition": "fg-rusted-league-battle-carrier-deployed",
+      "restored": [
+        "source wreck"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "prop2",
+      "file": "assets/units/ GF/插件/建筑/prop/prop2.ini",
+      "definition": "fg-rusted-league-floating-array-landed",
+      "restored": [
+        "source transformation"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 4,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "拦截机3",
+      "file": "assets/units/ GF/插件/海军/航母战斗群/拦截机/拦截机3.ini",
+      "definition": "fg-rusted-league-carrier-interceptor",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "航空母舰1",
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰1.ini",
+      "definition": "fg-rusted-league-aircraft-carrier-2",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "航空母舰2",
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰2.ini",
+      "definition": "fg-rusted-league-aircraft-carrier-3",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 6,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "航空母舰3",
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰3.ini",
+      "definition": "fg-rusted-league-aircraft-carrier-4",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "航空母舰4",
+      "file": "assets/units/ GF/插件/海军/航母战斗群/航空母舰4.ini",
+      "definition": "fg-rusted-league-aircraft-carrier-5",
+      "restored": [
+        "animation states"
+      ],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 8,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv1",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv1.ini",
+      "definition": "fg-rusted-league-hero-1",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv2a",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv2a.ini",
+      "definition": "fg-rusted-league-hero-gatling",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv2b",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv2b.ini",
+      "definition": "fg-rusted-league-hero-twin",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv2c",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv2c.ini",
+      "definition": "fg-rusted-league-hero-grenade",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 1,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3aa",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3aa.ini",
+      "definition": "fg-rusted-league-hero-stalker",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3ab",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3ab.ini",
+      "definition": "fg-rusted-league-hero-eradicator",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3ac",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3ac.ini",
+      "definition": "fg-rusted-league-hero-wrecker",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3ba",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3ba.ini",
+      "definition": "fg-rusted-league-hero-guardian",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3bb",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3bb.ini",
+      "definition": "fg-rusted-league-hero-hellfire",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3bc",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3bc.ini",
+      "definition": "fg-rusted-league-hero-defender",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3ca",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3ca.ini",
+      "definition": "fg-rusted-league-hero-rover",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3cb",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3cb.ini",
+      "definition": "fg-rusted-league-hero-destroyer",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv3cc",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv3cc.ini",
+      "definition": "fg-rusted-league-hero-aurora",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 2,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4aa",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4aa.ini",
+      "definition": "fg-rusted-league-hero-stalker-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4ab",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4ab.ini",
+      "definition": "fg-rusted-league-hero-eradicator-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4ac",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4ac.ini",
+      "definition": "fg-rusted-league-hero-wrecker-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 1,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4ba",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4ba.ini",
+      "definition": "fg-rusted-league-hero-guardian-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 5,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4bb",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4bb.ini",
+      "definition": "fg-rusted-league-hero-hellfire-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4bc",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4bc.ini",
+      "definition": "fg-rusted-league-hero-defender-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 7,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4ca",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4ca.ini",
+      "definition": "fg-rusted-league-hero-rover-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 2,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4cb",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4cb.ini",
+      "definition": "fg-rusted-league-hero-destroyer-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 4,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    },
+    {
+      "source": "lv4cc",
+      "file": "assets/units/ GF/插件/英雄单位/nb/lv4cc.ini",
+      "definition": "fg-rusted-league-hero-aurora-max",
+      "restored": [],
+      "unresolvedTransforms": [],
+      "sourceFeatures": {
+        "turret": 3,
+        "projectile": 1,
+        "effect": 0,
+        "decal": 0,
+        "animation": 0,
+        "action": 0,
+        "hiddenAction": 0,
+        "attachment": 0,
+        "arm": 0,
+        "leg": 0
+      }
+    }
+  ],
+  "unrepresented": [
+    {
+      "source": "GG",
+      "file": "assets/units/ GF/插件/空军/mhkh/GG.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "GHJK",
+      "file": "assets/units/ GF/插件/陆地/attacktank/gctank_common.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "NULL",
+      "file": "assets/units/ GF/插件/陆地/djz/djz_common.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "antiNukeLauncherC",
+      "file": "assets/units/nukes/antinuke_launcher.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugBee",
+      "file": "assets/units/classic_bugs/bug_bee/bug_bee.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugExtractor",
+      "file": "assets/units/classic_bugs/bug_extractor/bug_extractor.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugExtractorT2",
+      "file": "assets/units/classic_bugs/bug_extractor/bug_extractorT2.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugFly",
+      "file": "assets/units/classic_bugs/bug_fly/bug_fly.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugGenerator",
+      "file": "assets/units/classic_bugs/bug_generator/bug_generator.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugGeneratorN",
+      "file": "assets/units/bug_base/bug_generator/bug_generator.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugGeneratorNT2",
+      "file": "assets/units/bug_base/bug_generator/bug_generatorT2.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugGeneratorT2",
+      "file": "assets/units/classic_bugs/bug_generator/bug_generatorT2.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugMelee",
+      "file": "assets/units/classic_bugs/bug_melee/bug_melee.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugMeleeLarge",
+      "file": "assets/units/classic_bugs/bug_melee/bug_melee_large.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugMeleeSmall",
+      "file": "assets/units/classic_bugs/bug_melee/bug_melee_small.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugMeleeT31",
+      "file": "assets/units/bug_melee/bug_melee_t31.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugNest",
+      "file": "assets/units/classic_bugs/bug_nest/bug_nest.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugPickup",
+      "file": "assets/units/classic_bugs/bugs/bug_pickup.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugRanged",
+      "file": "assets/units/classic_bugs/bug_ranged/bug_ranged.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugRangedT2",
+      "file": "assets/units/classic_bugs/bugs_t2/bug_ranged_t2.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugSpore",
+      "file": "assets/units/classic_bugs/bug_spore/bug_spore.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugTurret",
+      "file": "assets/units/classic_bugs/bug_turret/bug_turret.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "bugWasp",
+      "file": "assets/units/classic_bugs/bugs/bug_wasp.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "c_amphibiousJet_transition",
+      "file": "assets/units/ GF/插件/空军/amphibious_jet/amphibious_jet_transition.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "c_artillery",
+      "file": "assets/units/tanks/artillery.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "c_helicopter",
+      "file": "assets/units/helicopter/helicopter.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "c_interceptor",
+      "file": "assets/units/interceptor/interceptor.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "c_laserTank",
+      "file": "assets/units/laser_tank/laser_tank.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "c_mammothTank",
+      "file": "assets/units/mammoth_tank/mammoth_tank.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "c_tank",
+      "file": "assets/units/tanks/tank.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "combatEngineer",
+      "file": "assets/units/combat_engineer/combat_engineer.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "crystal_mid",
+      "file": "assets/units/resource_deposits/crystal_mid.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "custom_tank",
+      "file": "assets/units/test_tank/tank.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "egg",
+      "file": "assets/units/ GF/插件/炸弹之类/egg/egg.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "example_faction_picker",
+      "file": "assets/units/miscellaneous/example_faction_picker.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "experiementalCarrier",
+      "file": "assets/units/experimental_carrier/Experiemental_carrier.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "experimentalDropship",
+      "file": "assets/units/experimental_dropship/experimental_dropship.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "experimentalGunship",
+      "file": "assets/units/experimental_gunship/experimental_gunship.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "experimentalGunshipLanded",
+      "file": "assets/units/experimental_gunship/experimental_gunship_landed.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "experimentalSpider",
+      "file": "assets/units/experimental_spider/experimental_spider.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "experimentals",
+      "file": "assets/units/ GF/插件/炸弹之类/fgh/ MX重型.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "fabricatorT1",
+      "file": "assets/units/fabricator/fabricatorT1.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "fabricatorT2",
+      "file": "assets/units/fabricator/fabricatorT2.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "fabricatorT3",
+      "file": "assets/units/fabricator/fabricatorT3.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "fight",
+      "file": "assets/units/ GF/插件/陆地/Battlecruiser/fight.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "fireBee",
+      "file": "assets/units/fire_bee/fire_bee.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "halt",
+      "file": "assets/units/ GF/插件/炸弹之类/halt.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "heavyArtillery",
+      "file": "assets/units/tanks/heavy_artillery.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "heavyInterceptor",
+      "file": "assets/units/heavy_interceptor/heavyInterceptor.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "heavyMissileShip",
+      "file": "assets/units/heavy_missile_ship/heavy_missile_ship.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "heavySub",
+      "file": "assets/units/heavy_sub/heavy_sub.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "lightGunship",
+      "file": "assets/units/light_gunship/light_gunship.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "lightSub",
+      "file": "assets/units/light_sub/light_sub.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "mechArtillery",
+      "file": "assets/units/mechs_large/mech_artillery.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechBunker",
+      "file": "assets/units/mechs_large/mech_bunker.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechBunkerDeployed",
+      "file": "assets/units/mechs_large/mech_bunker_deployed.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechEngineer",
+      "file": "assets/units/mech_engineer/mech_engineer.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "mechFactory",
+      "file": "assets/units/mech_factory/mechFactory.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "mechFactoryT2",
+      "file": "assets/units/mech_factory/mechFactoryT2备用.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "mechFactoryT2a",
+      "file": "assets/units/mech_factory/mechFactoryT2.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "mechFlame",
+      "file": "assets/units/mechs_large/mech_flame.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechFlyingLanded",
+      "file": "assets/units/mechs_large/mech_flying_landed.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechFlyingTakeoff",
+      "file": "assets/units/mechs_large/mech_flying_takeoff.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechGun",
+      "file": "assets/units/mechs_small/mech_gun.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechLaser",
+      "file": "assets/units/mechs_large/mech_laser.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechLightning",
+      "file": "assets/units/mechs_large/mech_lightning.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechMinigun",
+      "file": "assets/units/mechs_large/mech_minigun.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "mechMissile",
+      "file": "assets/units/mechs_small/mech_missile.ini",
+      "reason": "source template / disabled definition"
+    },
+    {
+      "source": "missing",
+      "file": "assets/units/missing_unit/missing.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "nautilusSubmarine",
+      "file": "assets/units/nautilus/nautilus.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "nautilusSubmarineLand",
+      "file": "assets/units/nautilus/nautilusLand.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "nautilusSubmarineSurface",
+      "file": "assets/units/nautilus/nautilusSurface.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "nukeLauncherC",
+      "file": "assets/units/nukes/nuke_launcher.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "plasmaTank",
+      "file": "assets/units/plasma_tank/plasma_tank.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "robotCrab",
+      "file": "assets/units/nautilus/robotCrab/robotCrab.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "robotCrabWater",
+      "file": "assets/units/nautilus/robotCrab/robotCrabWater.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "scout",
+      "file": "assets/units/scout/scout.ini",
+      "reason": "base-game content or hard-coded counterpart; no new stock art shipped"
+    },
+    {
+      "source": "wer",
+      "file": "assets/units/ GF/插件/炸弹之类/wert/wer.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "wert",
+      "file": "assets/units/ GF/插件/炸弹之类/wert/wert.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "地雷as",
+      "file": "assets/units/ GF/插件/海军/mhhm/1.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "地雷ass",
+      "file": "assets/units/ GF/插件/海军/mhhm/分散4.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "地雷投掷ass",
+      "file": "assets/units/ GF/插件/空军/kong_mu/分散a.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "地雷投掷zxc",
+      "file": "assets/units/ GF/插件/空军/kong_mu/分散.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "小灰机",
+      "file": "assets/units/ GF/插件/英雄单位/小灰机.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "小灰机2",
+      "file": "assets/units/ GF/插件/英雄单位/小飞机2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "拦截机",
+      "file": "assets/units/ GF/插件/海军/航母战斗群/拦截机/拦截机.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "拦截机2",
+      "file": "assets/units/ GF/插件/海军/航母战斗群/拦截机/拦截机2.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "死星",
+      "file": "assets/units/ GF/插件/空军/kong_mu/死星.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "水晶",
+      "file": "assets/units/ GF/插件/建筑/水晶/水晶.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "燃烧",
+      "file": "assets/units/ GF/插件/陆地/vshj/燃烧.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "英雄坦克",
+      "file": "assets/units/ GF/插件/英雄单位/hero/lv1b.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "超度",
+      "file": "assets/units/ GF/插件/空军/kong_mu/fgd.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "高能弹幕",
+      "file": "assets/units/ GF/插件/空军/kong_mu/fgdg.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "高能水晶",
+      "file": "assets/units/ GF/插件/建筑/水晶/高能水晶.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    },
+    {
+      "source": "龙骨炮",
+      "file": "assets/units/ GF/插件/炸弹之类/龙骨炮/c3.ini",
+      "reason": "not represented as a standalone playable definition; requires source-specific integration"
+    }
+  ],
+  "recordings": {},
+  "scope": "Source-derived fidelity improvements; not a claim of full RW script emulation. See PARITY.md for remaining behavior gaps."
+}

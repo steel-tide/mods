@@ -18,6 +18,7 @@ This package prices things in three resources: credits, 柴油 (diesel) and 补�
 (supply). Steel Tide has one, so the three are folded into one figure first.
 """
 import hashlib
+import importlib.util
 from copy import deepcopy
 import json
 import math
@@ -1140,6 +1141,12 @@ def composite(parts, root_pos):
 
 # ------------------------------------------------------------ conversion
 def convert():
+    spec = importlib.util.spec_from_file_location("source_roster", os.path.join(HERE, "source-roster.py"))
+    roster_module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(roster_module)
+    if not any(r[1] == "guard-rifle" for r in ROSTER):
+        from types import SimpleNamespace
+        roster_module.extend(SimpleNamespace(**globals()))
     by_name = index_units()
     ids = {rw: f"{MOD_ID}-{suffix}" for rw, suffix, *_ in ROSTER}
     suffix_of = {rw: suffix for rw, suffix, *_ in ROSTER}
@@ -1789,15 +1796,6 @@ def convert_weapons(ini, d, unit, domain, infantry, is_zombie, ov):
             continue
         kv = turrets[0][1]
         reload = seconds(kv.get("delay")) or delay_default
-        # the energy magazine: N shots, then a recharge; the average is what a reload means here
-        core = ini.get("core", {})
-        usage = num(kv.get("energyUsage")) or 0
-        emax = num(core.get("energyMax")) or 0
-        regen = num(core.get("energyRegenWhenRecharging")) or num(core.get("energyRegen")) or 0
-        if usage > 0 and emax > 0 and regen > 0:
-            shots = max(1, emax / usage)
-            recharge = emax / regen / 60
-            reload = reload + recharge / shots
         snd_name = (kv.get("shoot_sound") or "").lower()
         homing = (num(p.get("turnSpeed")) or 0) > 0 or "missile" in snd_name or "rocket" in snd_name or "火箭" in snd_name
         arc = boolish(p.get("ballistic")) or (num(p.get("initialUnguidedSpeedHeight")) or 0) > 0 or ov.get("arc", False)
@@ -1818,8 +1816,8 @@ def convert_weapons(ini, d, unit, domain, infantry, is_zombie, ov):
             targets = ["ground", "ship"]
         only_air = t_air and not t_land and not t_sub
         dmg = dmg_rw * (ZOMBIE_DMG if is_zombie else DMG)
-        if reload < 0.3:
-            k = math.ceil(0.3 / reload)
+        if reload < 0.05:
+            k = math.ceil(0.05 / reload)
             reload *= k
             dmg *= k
         rng = clamp(range_px * RANGE, 0.6, 12)
@@ -1926,7 +1924,7 @@ def main():
         "v": 2,
         "id": MOD_ID,
         "name": ["Adolence: City of Sin", "Adolence·罪恶之都"],
-        "version": "1.3.1",
+        "version": "1.4.1",
         "minGame": "0.8.16",  # authored muzzle points and native mod barrel recoil
         "author": "自然常数也有人用? and the Adolence team",
         "description": [desc_en, desc_zh],
@@ -1957,7 +1955,18 @@ def main():
         # have changed since they were composited (notably the Abrams).
         retained = {s["key"]: s for s in old.get("sprites", [])}
         manifest["sprites"] = [deepcopy(retained.get(s["key"], s)) for s in SHEETS]
+    # Reviewed composites include attachment details that the legacy compositor cannot reconstruct.
+    calibrated = json.load(open(os.path.join(HERE, "calibrated", "sheets.json")))
+    manifest["sprites"] = [deepcopy(calibrated.get(s["key"], s)) for s in manifest["sprites"]]
+    if not DRY and not NO_MEDIA:
+        for key, sheet in calibrated.items():
+            shutil.copyfile(os.path.join(HERE, "calibrated", key + ".png"), os.path.join(OUT, sheet["file"]))
     apply_weapon_geometry(manifest, HERE if NO_MEDIA or DRY else OUT)
+    spec = importlib.util.spec_from_file_location("source_parity", os.path.join(HERE, "source-parity.py"))
+    parity = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(parity)
+    from types import SimpleNamespace
+    parity.apply(SimpleNamespace(**globals()), manifest)
     text = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
     if DRY:
         art = "--art" in sys.argv

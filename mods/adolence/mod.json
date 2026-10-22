@@ -1,12 +1,12 @@
 {
   "format": "steel-tide-mod",
-  "v": 2,
+  "v": 4,
   "id": "adolence",
   "name": [
     "Adolence: City of Sin",
     "Adolence·罪恶之都"
   ],
-  "version": "1.3.1",
+  "version": "1.4.1",
   "minGame": "0.8.16",
   "author": "自然常数也有人用? and the Adolence team",
   "description": [
@@ -44,6 +44,8 @@
         "adolence-armed-police-pistol",
         "adolence-armed-police-rifle",
         "adolence-sedan-black",
+        "adolence-sedan-white",
+        "adolence-white-steel-b",
         "adolence-cruiser",
         "adolence-armoured-car",
         "adolence-amphibious-car",
@@ -53,7 +55,12 @@
         "adolence-police-engineer"
       ],
       "isHQ": true,
-      "metalRate": 0.5
+      "metalRate": 0.5,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-precinct-2",
@@ -83,6 +90,7 @@
         "adolence-police-engineer",
         "adolence-officer-pistol",
         "adolence-traffic-officer",
+        "adolence-guard-rifle",
         "adolence-armed-police-pistol",
         "adolence-armed-police-rifle",
         "adolence-swat-sea",
@@ -90,6 +98,8 @@
         "adolence-army-woodland",
         "adolence-army-marksman",
         "adolence-sedan-black",
+        "adolence-sedan-white",
+        "adolence-white-steel-b",
         "adolence-cruiser",
         "adolence-armoured-car",
         "adolence-amphibious-car",
@@ -107,6 +117,7 @@
         "adolence-light-tank-sniper",
         "adolence-heavy-tank",
         "adolence-guard-rifleman",
+        "adolence-guard-armored",
         "adolence-guard-gunner",
         "adolence-guard-flamethrower",
         "adolence-military-police",
@@ -118,7 +129,10 @@
         "adolence-taskforce-shotgunner",
         "adolence-scout-car",
         "adolence-assault-car",
+        "adolence-military-assault-car",
         "adolence-utility-vehicle",
+        "adolence-utility-a",
+        "adolence-utility-b",
         "adolence-utility-vehicle-mp",
         "adolence-transport-truck",
         "adolence-m977",
@@ -134,7 +148,12 @@
         "adolence-police-engineer"
       ],
       "isHQ": true,
-      "metalRate": 0.5
+      "metalRate": 0.5,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-outpost",
@@ -163,10 +182,12 @@
         "adolence-armed-police-pistol",
         "adolence-armed-police-rifle",
         "adolence-traffic-officer",
+        "adolence-guard-rifle",
         "adolence-swat-sea",
         "adolence-army-woodland",
         "adolence-army-marksman",
         "adolence-guard-rifleman",
+        "adolence-guard-armored",
         "adolence-guard-gunner",
         "adolence-guard-flamethrower",
         "adolence-military-police",
@@ -178,11 +199,36 @@
         "adolence-taskforce-shotgunner",
         "adolence-zhongzhou-rifleman",
         "adolence-zhongzhou-sniper",
-        "adolence-purge-gunner"
+        "adolence-purge-gunner",
+        "adolence-zhongzhou-at",
+        "adolence-zhongzhou-mg",
+        "adolence-zhongzhou-special-at",
+        "adolence-zhongzhou-special-mg",
+        "adolence-zhongzhou-special",
+        "adolence-desert-pistol",
+        "adolence-hazmat-pistol",
+        "adolence-hazmat-rifle",
+        "adolence-hazmat-red",
+        "adolence-hazmat-green",
+        "adolence-marine-scout",
+        "adolence-soldier-a",
+        "adolence-soldier-b",
+        "adolence-civilian-pistol",
+        "adolence-civilian-pistol-2",
+        "adolence-civilian-rifle",
+        "adolence-civilian-rifle-2",
+        "adolence-civilian-rifle-3",
+        "adolence-civilian-rifle-4",
+        "adolence-raincoat"
       ],
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-garage",
@@ -206,6 +252,8 @@
       "power": -6,
       "sprite": "u.adolence-garage",
       "produces": [
+        "adolence-white-steel-b",
+        "adolence-sedan-white",
         "adolence-sedan-black",
         "adolence-cruiser",
         "adolence-armoured-car",
@@ -217,7 +265,12 @@
       ],
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-arsenal",
@@ -256,7 +309,10 @@
         "adolence-heavy-tank",
         "adolence-scout-car",
         "adolence-assault-car",
+        "adolence-military-assault-car",
         "adolence-utility-vehicle",
+        "adolence-utility-a",
+        "adolence-utility-b",
         "adolence-utility-vehicle-mp",
         "adolence-transport-truck",
         "adolence-m977",
@@ -268,16 +324,33 @@
         "adolence-light-ifv",
         "adolence-heavy-ifv",
         "adolence-extremism",
+        "adolence-white-steel-b",
+        "adolence-sedan-white",
         "adolence-sedan-black",
         "adolence-cruiser",
         "adolence-armoured-car",
         "adolence-amphibious-car",
         "adolence-command-van",
-        "adolence-heavy-escort"
+        "adolence-heavy-escort",
+        "adolence-guard-assault-car",
+        "adolence-command-car-0",
+        "adolence-command-car-1",
+        "adolence-command-car-2",
+        "adolence-cruiser-d1",
+        "adolence-sedan-x0rx",
+        "adolence-white-steel-a",
+        "adolence-sedan-yellow",
+        "adolence-sedan-black-matte",
+        "adolence-m1a2-sepv2"
       ],
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-helipad",
@@ -305,7 +378,12 @@
       ],
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-airfield",
@@ -338,11 +416,22 @@
         "adolence-transport-heli",
         "adolence-fighter-u9",
         "adolence-heavy-gunship",
-        "adolence-fighter-a2"
+        "adolence-fighter-a2",
+        "adolence-armed-drone",
+        "adolence-attack-drone",
+        "adolence-k4968",
+        "adolence-eagle-a3",
+        "adolence-eagle-a4",
+        "adolence-navigator"
       ],
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-coast-guard-base",
@@ -373,7 +462,12 @@
       ],
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-solar",
@@ -398,7 +492,12 @@
       "sprite": "u.adolence-solar",
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-solar-2",
@@ -426,7 +525,12 @@
       "sprite": "u.adolence-solar-2",
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-supply-cache",
@@ -453,7 +557,12 @@
       "sprite": "u.adolence-supply-cache",
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-supply-cache-2",
@@ -482,7 +591,12 @@
       "sprite": "u.adolence-supply-cache-2",
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-mg-tower",
@@ -507,9 +621,9 @@
       "weapons": [
         {
           "id": "main",
-          "cls": "autocannon",
-          "dmg": 11.2,
-          "reload": 0.31,
+          "cls": "mg",
+          "dmg": 2.8,
+          "reload": 0.05,
           "range": 7.7,
           "targets": [
             "ground",
@@ -534,7 +648,12 @@
       ],
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-barricade",
@@ -559,7 +678,12 @@
       "sprite": "u.adolence-barricade",
       "builtBy": [
         "adolence-police-engineer"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-sloth-nest",
@@ -646,7 +770,194 @@
       "builtBy": [
         "adolence-spk-carrier"
       ],
-      "metalRate": 1.4
+      "metalRate": 1.4,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-guard-post",
+      "name": [
+        "Police Guard Post",
+        "警用卫所"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "༺封锁地带༻警力调度中心\\-基本管理治安并封锁交通，在此调动封锁地带FBL力量"
+      ],
+      "kind": "building",
+      "tier": 1,
+      "cost": 150,
+      "buildTime": 33.3,
+      "hp": 1440,
+      "armor": "structure",
+      "vision": 7,
+      "fw": 3,
+      "fh": 3,
+      "power": 0,
+      "sprite": "u.adolence-guard-post",
+      "produces": [
+        "adolence-officer-pistol",
+        "adolence-officer-rifle",
+        "adolence-armed-police-pistol",
+        "adolence-armed-police-rifle",
+        "adolence-traffic-officer",
+        "adolence-guard-rifle",
+        "adolence-swat-sea",
+        "adolence-army-woodland",
+        "adolence-army-marksman",
+        "adolence-guard-rifleman",
+        "adolence-guard-armored",
+        "adolence-guard-gunner",
+        "adolence-guard-flamethrower",
+        "adolence-military-police",
+        "adolence-taskforce-rifleman",
+        "adolence-taskforce-grenadier",
+        "adolence-taskforce-anti-materiel",
+        "adolence-taskforce-rocketeer",
+        "adolence-taskforce-gunner",
+        "adolence-taskforce-shotgunner"
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      },
+      "metalRate": 0.0938,
+      "rules": [
+        {
+          "button": {
+            "name": [
+              "National Guard squad",
+              "国民行动小组"
+            ],
+            "cost": 220,
+            "time": 30.0,
+            "ai": true,
+            "requires": [
+              "adolence-garage"
+            ]
+          },
+          "do": [
+            {
+              "spawn": {
+                "unit": "adolence-guard-rifleman",
+                "count": 4
+              }
+            },
+            {
+              "spawn": {
+                "unit": "adolence-guard-armored",
+                "count": 4
+              }
+            },
+            {
+              "spawn": {
+                "unit": "adolence-guard-gunner",
+                "count": 2
+              }
+            }
+          ]
+        },
+        {
+          "button": {
+            "name": [
+              "Zhongzhou support squad",
+              "中州特别支援小队"
+            ],
+            "cost": 440,
+            "time": 40.0,
+            "ai": true,
+            "requires": [
+              "adolence-garage"
+            ]
+          },
+          "do": [
+            {
+              "spawn": {
+                "unit": "adolence-zhongzhou-rifleman",
+                "count": 10
+              }
+            },
+            {
+              "spawn": {
+                "unit": "adolence-zhongzhou-mg",
+                "count": 4
+              }
+            },
+            {
+              "spawn": {
+                "unit": "adolence-zhongzhou-sniper",
+                "count": 5
+              }
+            },
+            {
+              "spawn": {
+                "unit": "adolence-zhongzhou-special",
+                "count": 6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adolence-fuel-depot",
+      "name": [
+        "Police Fuel Depot",
+        "警用油所"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "罪恶之都-警力调度分局，有效管理治安并封锁交通"
+      ],
+      "kind": "building",
+      "tier": 1,
+      "cost": 250,
+      "buildTime": 33.3,
+      "hp": 1440,
+      "armor": "structure",
+      "vision": 7,
+      "fw": 3,
+      "fh": 3,
+      "power": 0,
+      "sprite": "u.adolence-fuel-depot",
+      "produces": [
+        "adolence-officer-pistol",
+        "adolence-officer-rifle",
+        "adolence-armed-police-pistol",
+        "adolence-armed-police-rifle",
+        "adolence-traffic-officer",
+        "adolence-guard-rifle",
+        "adolence-swat-sea",
+        "adolence-army-woodland",
+        "adolence-army-marksman",
+        "adolence-guard-rifleman",
+        "adolence-guard-armored",
+        "adolence-guard-gunner",
+        "adolence-guard-flamethrower",
+        "adolence-military-police",
+        "adolence-taskforce-rifleman",
+        "adolence-taskforce-grenadier",
+        "adolence-taskforce-anti-materiel",
+        "adolence-taskforce-rocketeer",
+        "adolence-taskforce-gunner",
+        "adolence-taskforce-shotgunner"
+      ],
+      "builtBy": [
+        "adolence-police-engineer"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      },
+      "metalRate": 0.2779
     },
     {
       "id": "adolence-officer-pistol",
@@ -676,7 +987,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.54,
+          "reload": 0.33,
           "range": 3.6,
           "targets": [
             "ground",
@@ -708,7 +1019,9 @@
       "producedBy": [
         "adolence-precinct",
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -743,7 +1056,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 17.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 2.4,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 3.333333,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-officer-rifle",
@@ -773,7 +1103,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.34,
+          "reload": 0.2,
           "range": 4.4,
           "targets": [
             "ground",
@@ -803,7 +1133,9 @@
       "sprite": "u.adolence-officer-rifle",
       "aiWeight": 2,
       "producedBy": [
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -838,7 +1170,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-traffic-officer",
@@ -868,7 +1217,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.34,
+          "reload": 0.2,
           "range": 4.4,
           "targets": [
             "ground",
@@ -900,7 +1249,9 @@
       "producedBy": [
         "adolence-precinct",
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -935,7 +1286,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-armed-police-pistol",
@@ -965,7 +1333,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.54,
+          "reload": 0.33,
           "range": 3.6,
           "targets": [
             "ground",
@@ -997,7 +1365,9 @@
       "producedBy": [
         "adolence-precinct",
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1032,7 +1402,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 17.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 2.4,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 3.333333,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-armed-police-rifle",
@@ -1062,7 +1449,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.34,
+          "reload": 0.2,
           "range": 4.4,
           "targets": [
             "ground",
@@ -1094,7 +1481,9 @@
       "producedBy": [
         "adolence-precinct",
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1129,7 +1518,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-swat-sea",
@@ -1159,7 +1565,7 @@
           "id": "s",
           "cls": "mg",
           "dmg": 7.8,
-          "reload": 1.64,
+          "reload": 1.5,
           "range": 2.5,
           "targets": [
             "ground",
@@ -1191,7 +1597,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1226,7 +1634,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "s": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-swat-field",
@@ -1256,7 +1681,7 @@
           "id": "s",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.47,
+          "reload": 0.33,
           "range": 2.5,
           "targets": [
             "ground",
@@ -1322,7 +1747,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "s": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-army-woodland",
@@ -1352,7 +1794,7 @@
           "id": "s",
           "cls": "mg",
           "dmg": 3.1,
-          "reload": 0.64,
+          "reload": 0.5,
           "range": 2.5,
           "targets": [
             "ground",
@@ -1384,7 +1826,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1419,7 +1863,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "s": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-army-marksman",
@@ -1449,7 +1910,7 @@
           "id": "1",
           "cls": "autocannon",
           "dmg": 8.4,
-          "reload": 2.47,
+          "reload": 2.33,
           "range": 4.1,
           "targets": [
             "ground",
@@ -1480,7 +1941,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1515,7 +1978,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-guard-rifleman",
@@ -1545,7 +2025,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.8,
-          "reload": 0.56,
+          "reload": 0.42,
           "range": 5.0,
           "targets": [
             "ground",
@@ -1576,7 +2056,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1611,7 +2093,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-guard-gunner",
@@ -1640,8 +2139,8 @@
         {
           "id": "1",
           "cls": "mg",
-          "dmg": 3.4,
-          "reload": 0.41,
+          "dmg": 2.0,
+          "reload": 0.07,
           "range": 5.5,
           "targets": [
             "ground",
@@ -1672,7 +2171,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1707,7 +2208,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 40.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-guard-flamethrower",
@@ -1746,7 +2264,7 @@
           "projectile": "flame",
           "speed": 240,
           "fan": 0.22,
-          "burn": 13.1,
+          "burn": 5.3,
           "burnLife": 5,
           "splash": 30,
           "burst": 12,
@@ -1765,7 +2283,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1800,7 +2320,23 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 75.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 15.0,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667
+        }
+      }
     },
     {
       "id": "adolence-military-police",
@@ -1830,7 +2366,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.34,
+          "reload": 0.2,
           "range": 4.7,
           "targets": [
             "ground",
@@ -1861,7 +2397,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1896,7 +2434,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-taskforce-rifleman",
@@ -1925,8 +2480,8 @@
         {
           "id": "1",
           "cls": "mg",
-          "dmg": 4.2,
-          "reload": 0.44,
+          "dmg": 2.0,
+          "reload": 0.08,
           "range": 5.8,
           "targets": [
             "ground",
@@ -1957,7 +2512,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -1992,7 +2549,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-taskforce-grenadier",
@@ -2021,8 +2595,8 @@
         {
           "id": "1",
           "cls": "mg",
-          "dmg": 4.2,
-          "reload": 0.44,
+          "dmg": 2.0,
+          "reload": 0.08,
           "range": 5.8,
           "targets": [
             "ground",
@@ -2037,8 +2611,8 @@
         {
           "id": "w2",
           "cls": "he",
-          "dmg": 11.9,
-          "reload": 5.14,
+          "dmg": 6.4,
+          "reload": 5.0,
           "range": 5.8,
           "targets": [
             "ground",
@@ -2072,7 +2646,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -2107,7 +2683,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-taskforce-anti-materiel",
@@ -2136,8 +2729,8 @@
         {
           "id": "1",
           "cls": "autocannon",
-          "dmg": 14.2,
-          "reload": 0.89,
+          "dmg": 12.0,
+          "reload": 0.75,
           "range": 8.8,
           "targets": [
             "ground",
@@ -2168,7 +2761,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -2203,7 +2798,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 2.5,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-taskforce-rocketeer",
@@ -2232,8 +2844,8 @@
         {
           "id": "r",
           "cls": "at",
-          "dmg": 21.0,
-          "reload": 3.45,
+          "dmg": 2.0,
+          "reload": 0.12,
           "range": 7.2,
           "targets": [
             "ground",
@@ -2267,7 +2879,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -2302,7 +2916,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 10.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.0,
+            "full": true,
+            "usage": {
+              "r": 10.0
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-taskforce-gunner",
@@ -2331,8 +2962,8 @@
         {
           "id": "1",
           "cls": "mg",
-          "dmg": 3.4,
-          "reload": 0.34,
+          "dmg": 2.0,
+          "reload": 0.07,
           "range": 5.2,
           "targets": [
             "ground",
@@ -2363,7 +2994,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -2398,7 +3031,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 75.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-taskforce-shotgunner",
@@ -2427,8 +3077,8 @@
         {
           "id": "s",
           "cls": "mg",
-          "dmg": 6.7,
-          "reload": 0.64,
+          "dmg": 5.2,
+          "reload": 0.5,
           "range": 3.2,
           "targets": [
             "ground",
@@ -2460,7 +3110,9 @@
       "aiWeight": 2,
       "producedBy": [
         "adolence-precinct-2",
-        "adolence-outpost"
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ],
       "rules": [
         {
@@ -2495,7 +3147,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "s": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-zhongzhou-rifleman",
@@ -2525,7 +3194,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.39,
+          "reload": 0.25,
           "range": 4.1,
           "targets": [
             "ground",
@@ -2593,7 +3262,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-zhongzhou-sniper",
@@ -2622,8 +3308,8 @@
         {
           "id": "1",
           "cls": "autocannon",
-          "dmg": 10.3,
-          "reload": 0.94,
+          "dmg": 8.8,
+          "reload": 0.8,
           "range": 9.6,
           "targets": [
             "ground",
@@ -2691,7 +3377,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 6.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-purge-gunner",
@@ -2721,8 +3424,8 @@
         {
           "id": "1",
           "cls": "mg",
-          "dmg": 4.3,
-          "reload": 0.31,
+          "dmg": 2.4,
+          "reload": 0.17,
           "range": 7.4,
           "targets": [
             "ground",
@@ -2792,7 +3495,24 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 2500.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
     },
     {
       "id": "adolence-sedan-black",
@@ -2860,7 +3580,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-cruiser",
@@ -2930,7 +3655,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-armoured-car",
@@ -3010,7 +3740,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-amphibious-car",
@@ -3090,7 +3825,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-command-van",
@@ -3169,7 +3909,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-comms-van",
@@ -3247,7 +3992,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-heavy-escort",
@@ -3316,7 +4066,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-ambush-car",
@@ -3378,7 +4133,12 @@
       "aiWeight": 1.5,
       "producedBy": [
         "adolence-garage"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-mortar",
@@ -3448,7 +4208,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-heavy-mg",
@@ -3479,8 +4244,8 @@
         {
           "id": "1",
           "cls": "mg",
-          "dmg": 5.2,
-          "reload": 0.35,
+          "dmg": 2.0,
+          "reload": 0.1,
           "range": 6.9,
           "targets": [
             "ground",
@@ -3515,7 +4280,23 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 200.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 60.0,
+            "full": true,
+            "usage": {
+              "1": 1.0
+            }
+          },
+          "reloadTime": 5.0
+        }
+      }
     },
     {
       "id": "adolence-walker-rifle",
@@ -3544,9 +4325,9 @@
       "weapons": [
         {
           "id": "1",
-          "cls": "autocannon",
-          "dmg": 14.0,
-          "reload": 1.17,
+          "cls": "mg",
+          "dmg": 5.6,
+          "reload": 0.25,
           "range": 5.2,
           "targets": [
             "ground",
@@ -3568,7 +4349,22 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 100.0,
+            "start": 1,
+            "regen": 6.0,
+            "recharge": 0.36,
+            "full": true,
+            "usage": {
+              "1": 0.33
+            }
+          }
+        }
+      }
     },
     {
       "id": "adolence-walker-grenade",
@@ -3625,7 +4421,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-light-tank-lmg",
@@ -3653,9 +4454,9 @@
       "weapons": [
         {
           "id": "main",
-          "cls": "autocannon",
-          "dmg": 24.3,
-          "reload": 0.35,
+          "cls": "mg",
+          "dmg": 4.2,
+          "reload": 0.06,
           "range": 7.4,
           "targets": [
             "ground",
@@ -3693,7 +4494,12 @@
         "adolence-precinct-2",
         "adolence-arsenal"
       ],
-      "regen": 4.0
+      "regen": 4.0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-light-tank-mg",
@@ -3721,9 +4527,9 @@
       "weapons": [
         {
           "id": "main",
-          "cls": "autocannon",
-          "dmg": 16.8,
-          "reload": 0.32,
+          "cls": "mg",
+          "dmg": 6.4,
+          "reload": 0.12,
           "range": 9.4,
           "targets": [
             "ground",
@@ -3761,7 +4567,12 @@
         "adolence-precinct-2",
         "adolence-arsenal"
       ],
-      "regen": 4.0
+      "regen": 4.0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-light-tank",
@@ -3791,7 +4602,7 @@
           "id": "main",
           "cls": "autocannon",
           "dmg": 18.2,
-          "reload": 0.42,
+          "reload": 0.25,
           "range": 8.3,
           "targets": [
             "ground",
@@ -3822,7 +4633,12 @@
         "adolence-precinct-2",
         "adolence-arsenal"
       ],
-      "regen": 4.0
+      "regen": 4.0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-light-tank-missile",
@@ -3887,7 +4703,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-light-tank-flame",
@@ -3952,7 +4773,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-light-tank-sniper",
@@ -4013,7 +4839,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-heavy-tank",
@@ -4074,7 +4905,13 @@
         "adolence-precinct-2",
         "adolence-arsenal"
       ],
-      "regen": 8.8
+      "regen": 8.8,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "wreck": "dec.adolence-wreck-0f6703d2"
+        }
+      }
     },
     {
       "id": "adolence-scout-car",
@@ -4089,7 +4926,7 @@
       "kind": "unit",
       "domain": "ground",
       "tier": 2,
-      "cost": 150,
+      "cost": 240,
       "buildTime": 14.0,
       "hp": 420,
       "pop": 1,
@@ -4141,8 +4978,23 @@
               "into": "hold"
             }
           }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-armored",
+              "count": 2,
+              "into": "hold"
+            }
+          }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-assault-car",
@@ -4157,7 +5009,7 @@
       "kind": "unit",
       "domain": "ground",
       "tier": 2,
-      "cost": 240,
+      "cost": 330,
       "buildTime": 14.0,
       "hp": 420,
       "pop": 1,
@@ -4214,13 +5066,28 @@
           "on": "created",
           "do": {
             "spawn": {
+              "unit": "adolence-guard-armored",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
               "unit": "adolence-guard-rifleman",
               "count": 2,
               "into": "hold"
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-utility-vehicle",
@@ -4235,7 +5102,7 @@
       "kind": "unit",
       "domain": "ground",
       "tier": 2,
-      "cost": 240,
+      "cost": 330,
       "buildTime": 14.0,
       "hp": 420,
       "pop": 1,
@@ -4292,13 +5159,28 @@
           "on": "created",
           "do": {
             "spawn": {
+              "unit": "adolence-guard-armored",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
               "unit": "adolence-guard-rifleman",
               "count": 2,
               "into": "hold"
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-utility-vehicle-mp",
@@ -4366,7 +5248,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-transport-truck",
@@ -4381,7 +5268,7 @@
       "kind": "unit",
       "domain": "ground",
       "tier": 2,
-      "cost": 310,
+      "cost": 400,
       "buildTime": 6.0,
       "hp": 350,
       "pop": 2,
@@ -4438,13 +5325,28 @@
           "on": "created",
           "do": {
             "spawn": {
+              "unit": "adolence-guard-armored",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
               "unit": "adolence-guard-gunner",
               "count": 1,
               "into": "hold"
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-m977",
@@ -4512,7 +5414,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-m1128",
@@ -4615,7 +5522,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-m1a2",
@@ -4719,7 +5631,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-m1a2-tusk",
@@ -4823,7 +5740,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-m1a2-sepv3",
@@ -4927,7 +5849,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-m1a1-clickbait",
@@ -5031,7 +5958,12 @@
       "producedBy": [
         "adolence-precinct-2",
         "adolence-arsenal"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-light-ifv",
@@ -5062,8 +5994,8 @@
         {
           "id": "1",
           "cls": "mg",
-          "dmg": 3.4,
-          "reload": 0.4,
+          "dmg": 2.0,
+          "reload": 0.13,
           "range": 3.7,
           "targets": [
             "ground",
@@ -5122,7 +6054,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-heavy-ifv",
@@ -5153,8 +6090,8 @@
         {
           "id": "1",
           "cls": "mg",
-          "dmg": 3.4,
-          "reload": 0.4,
+          "dmg": 2.0,
+          "reload": 0.13,
           "range": 3.7,
           "targets": [
             "ground",
@@ -5215,7 +6152,12 @@
             }
           }
         }
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-extremism",
@@ -5243,9 +6185,9 @@
       "weapons": [
         {
           "id": "4",
-          "cls": "autocannon",
-          "dmg": 14.0,
-          "reload": 0.44,
+          "cls": "mg",
+          "dmg": 7.0,
+          "reload": 0.17,
           "range": 12,
           "targets": [
             "ground",
@@ -5270,7 +6212,7 @@
           "id": "1",
           "cls": "he",
           "dmg": 56.0,
-          "reload": 3.06,
+          "reload": 2.5,
           "range": 12,
           "targets": [
             "ground",
@@ -5295,7 +6237,7 @@
           "id": "2",
           "cls": "aa",
           "dmg": 42.0,
-          "reload": 2.56,
+          "reload": 2.5,
           "range": 12,
           "targets": [
             "air"
@@ -5325,7 +6267,25 @@
         "adolence-precinct-2",
         "adolence-arsenal"
       ],
-      "regen": 10.5
+      "regen": 10.5,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 20.0,
+            "start": 1,
+            "regen": 1.7999999999999998,
+            "recharge": 1.7999999999999998,
+            "full": true,
+            "usage": {
+              "4": 0.1,
+              "1": 1.0,
+              "2": 0.4
+            }
+          },
+          "wreck": "dec.adolence-wreck-35b8406c"
+        }
+      }
     },
     {
       "id": "adolence-police-heli",
@@ -5360,7 +6320,12 @@
       "producedBy": [
         "adolence-helipad",
         "adolence-airfield"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-light-gunship",
@@ -5391,7 +6356,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.8,
-          "reload": 0.6,
+          "reload": 0.5,
           "range": 12,
           "targets": [
             "ground",
@@ -5436,7 +6401,22 @@
       "aiWeight": 1.5,
       "producedBy": [
         "adolence-airfield"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 40.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 4.8,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          }
+        }
+      }
     },
     {
       "id": "adolence-heavy-gunship",
@@ -5467,7 +6447,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 3.5,
-          "reload": 0.3,
+          "reload": 0.2,
           "range": 12,
           "targets": [
             "ground",
@@ -5512,7 +6492,22 @@
       "aiWeight": 1.5,
       "producedBy": [
         "adolence-airfield"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 80.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 4.8,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          }
+        }
+      }
     },
     {
       "id": "adolence-bomber",
@@ -5527,7 +6522,7 @@
       "kind": "unit",
       "domain": "air",
       "tier": 2,
-      "cost": 940,
+      "cost": 965,
       "buildTime": 40.0,
       "hp": 1050,
       "pop": 3,
@@ -5567,7 +6562,24 @@
       "producedBy": [
         "adolence-airfield"
       ],
-      "regen": 2.1
+      "regen": 2.1,
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-rifle",
+              "count": 1,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-transport-heli",
@@ -5601,7 +6613,12 @@
       "aiWeight": 1.5,
       "producedBy": [
         "adolence-airfield"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-fighter-u9",
@@ -5673,7 +6690,12 @@
       "aiWeight": 1.5,
       "producedBy": [
         "adolence-airfield"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-fighter-a2",
@@ -5700,8 +6722,8 @@
         {
           "id": "1",
           "cls": "aa",
-          "dmg": 33.6,
-          "reload": 0.4,
+          "dmg": 16.8,
+          "reload": 0.2,
           "range": 8.3,
           "targets": [
             "air"
@@ -5742,7 +6764,12 @@
       "aiWeight": 1.5,
       "producedBy": [
         "adolence-airfield"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-scout-boat",
@@ -5775,7 +6802,12 @@
       "aiWeight": 1.5,
       "producedBy": [
         "adolence-coast-guard-base"
-      ]
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-drone-carrier",
@@ -5846,7 +6878,13 @@
       "producedBy": [
         "adolence-coast-guard-base"
       ],
-      "regen": 6.3
+      "regen": 6.3,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "wreck": "dec.adolence-wreck-0edc31eb"
+        }
+      }
     },
     {
       "id": "adolence-zombie",
@@ -5921,7 +6959,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-brute",
@@ -5996,7 +7039,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-bloater",
@@ -6072,7 +7120,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-prisoner",
@@ -6148,7 +7201,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-rager",
@@ -6224,7 +7282,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-burster",
@@ -6299,7 +7362,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-imploder",
@@ -6375,7 +7443,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-turned-officer",
@@ -6420,7 +7493,7 @@
           "id": "1",
           "cls": "autocannon",
           "dmg": 2.5,
-          "reload": 1.5,
+          "reload": 1.08,
           "range": 0.6,
           "targets": [
             "ground",
@@ -6466,7 +7539,23 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 1.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 1.2,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 3.333333
+        }
+      }
     },
     {
       "id": "adolence-turned-anti-materiel",
@@ -6496,7 +7585,7 @@
           "id": "1",
           "cls": "autocannon",
           "dmg": 16.5,
-          "reload": 2.08,
+          "reload": 1.67,
           "range": 0.6,
           "targets": [
             "ground",
@@ -6559,7 +7648,23 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 1.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 1.2,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 3.333333
+        }
+      }
     },
     {
       "id": "adolence-road-rage",
@@ -6635,7 +7740,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-acid-mass",
@@ -6715,7 +7825,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-gloater",
@@ -6788,7 +7903,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-flying-husk",
@@ -6816,7 +7936,7 @@
           "id": "1",
           "cls": "autocannon",
           "dmg": 12.5,
-          "reload": 1.06,
+          "reload": 0.5,
           "range": 5.5,
           "targets": [
             "ground",
@@ -6864,7 +7984,22 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "energy": {
+            "max": 100.0,
+            "start": 1,
+            "regen": 1.2,
+            "recharge": 1.7999999999999998,
+            "full": true,
+            "usage": {
+              "1": 1.0
+            }
+          }
+        }
+      }
     },
     {
       "id": "adolence-gorilla",
@@ -6942,7 +8077,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-no-longer-human",
@@ -7019,7 +8159,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-sin-of-wrath",
@@ -7096,7 +8241,12 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-sin-of-gluttony",
@@ -7172,7 +8322,4030 @@
           }
         }
       ],
-      "power": 0
+      "power": 0,
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-guard-rifle",
+      "name": [
+        "Guard Rifleman",
+        "卫警-步枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "隶属于特别防卫小组，管控初期疫情爆发 “都市在召唤!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 25,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.2,
+          "range": 4.4,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 10.7
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-guard-rifle",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-precinct-2",
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-zhongzhou-at",
+      "name": [
+        "Zhongzhou Anti-Tank",
+        "中州反坦克"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "中州武装力量，中州特派精锐部队"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 55,
+      "buildTime": 6.0,
+      "hp": 44,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "r",
+          "cls": "at",
+          "dmg": 2.0,
+          "reload": 0.12,
+          "range": 5.8,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "missile",
+          "speed": 192,
+          "splash": 35,
+          "homing": true,
+          "sound": "missile",
+          "turret": false,
+          "muzzleOffset": 10.7
+        }
+      ],
+      "body": {
+        "r": 11.7,
+        "len": 0
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-zhongzhou-at",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 10.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.0,
+            "full": true,
+            "usage": {
+              "r": 10.0
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-zhongzhou-mg",
+      "name": [
+        "Zhongzhou Machine Gunner",
+        "中州武装机枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "中州武装力量，中州特派精锐部队"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 60,
+      "buildTime": 6.0,
+      "hp": 44,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.1,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-mg-shot",
+          "turret": false,
+          "muzzleOffset": 11.1
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-zhongzhou-mg",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 35.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-zhongzhou-special-at",
+      "name": [
+        "Zhongzhou Special Anti-Tank",
+        "中州特战反坦克"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "中州武装力量，中州特派精锐部队"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 55,
+      "buildTime": 6.0,
+      "hp": 44,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "r",
+          "cls": "at",
+          "dmg": 2.0,
+          "reload": 0.12,
+          "range": 5.8,
+          "targets": [
+            "ground",
+            "ship",
+            "air"
+          ],
+          "projectile": "missile",
+          "speed": 192,
+          "splash": 35,
+          "homing": true,
+          "sound": "missile",
+          "turret": false,
+          "muzzleOffset": 9.7
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 4.7
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-zhongzhou-special-at",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 10.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.0,
+            "full": true,
+            "usage": {
+              "r": 10.0
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-zhongzhou-special-mg",
+      "name": [
+        "Zhongzhou Special Machine Gunner",
+        "中州特战机枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "中州武装力量，中州特派精锐部队"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 60,
+      "buildTime": 6.0,
+      "hp": 44,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.1,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-mg-shot",
+          "turret": false,
+          "muzzleOffset": 10.0
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 4.7
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-zhongzhou-special-mg",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 35.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-zhongzhou-special",
+      "name": [
+        "Zhongzhou Special Forces",
+        "中州特战步枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "中州特殊武装力量，中州特派精锐部队"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 55,
+      "buildTime": 6.0,
+      "hp": 44,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.2,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-m16-shot",
+          "turret": false,
+          "muzzleOffset": 9.0
+        },
+        {
+          "id": "w2",
+          "cls": "he",
+          "dmg": 11.0,
+          "reload": 8.5,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "shell",
+          "speed": 500,
+          "splash": 23,
+          "arc": true,
+          "spread": 38,
+          "sound": "adolence-mg-shot",
+          "turret": false,
+          "muzzleOffset": 9.0
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 3.1
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-zhongzhou-special",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-guard-armored",
+      "name": [
+        "Armored National Guard",
+        "警卫队-加强防护"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "特派部队，有限控制区域 “军事宵禁！”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 45,
+      "buildTime": 6.0,
+      "hp": 42,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.15,
+          "range": 5.2,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-m4",
+          "turret": false,
+          "muzzleOffset": 9.7
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 4.7
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-guard-armored",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-precinct-2",
+        "adolence-outpost",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-desert-pistol",
+      "name": [
+        "Desert Pistol Trooper",
+        "沙漠部队-手枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "沙漠伪装色系部队，有效打击生物个体 “沙漠死神。”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 15,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 44,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.33,
+          "range": 3.6,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 480,
+          "sound": "adolence-9mm",
+          "turret": false,
+          "muzzleOffset": 7.6
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 1.6
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.25,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-desert-pistol",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 17.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 2.4,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 3.333333,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-hazmat-pistol",
+      "name": [
+        "Hazmat Pistol Trooper",
+        "防化部队-手枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "罪都防化反应部队，有效打击生物个体 “收到，开火！”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 15,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 44,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.33,
+          "range": 3.6,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 480,
+          "sound": "adolence-9mm",
+          "turret": false,
+          "muzzleOffset": 8.0
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 1.6
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.25,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-hazmat-pistol",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 17.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 2.4,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 3.333333,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-hazmat-rifle",
+      "name": [
+        "Hazmat Rifleman",
+        "防化部队-步枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 15,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.2,
+          "range": 4.4,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 11.8
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 7.8
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-hazmat-rifle",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-hazmat-red",
+      "name": [
+        "Red Hazmat Rifleman",
+        "防化部队-红-步枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 15,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.2,
+          "range": 4.4,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 11.8
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 7.8
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-hazmat-red",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-hazmat-green",
+      "name": [
+        "Green Hazmat Rifleman",
+        "防化部队-绿-步枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 15,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.2,
+          "range": 4.4,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 11.8
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 7.8
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-hazmat-green",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-marine-scout",
+      "name": [
+        "Marine Scout",
+        "侦察兵"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "特派特战队，精锐部队 “从蒙特祖玛的宫殿，到黎波里的海岸！”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 45,
+      "buildTime": 6.0,
+      "hp": 44,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "s",
+          "cls": "mg",
+          "dmg": 7.8,
+          "reload": 1.0,
+          "range": 3.2,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "spread": 10,
+          "sound": "adolence-shotgun",
+          "turret": false,
+          "muzzleOffset": 11.4
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-marine-scout",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "s": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-soldier-a",
+      "name": [
+        "Rifle Soldier A",
+        "士兵-步枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "驻军处特派士兵，高效打击生物个体 “P T S D.”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 50,
+      "buildTime": 6.0,
+      "hp": 44,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.12,
+          "range": 4.7,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-m16-shot",
+          "turret": false,
+          "muzzleOffset": 11.1
+        }
+      ],
+      "body": {
+        "r": 4.7,
+        "len": 7.8
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-soldier-a",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-soldier-b",
+      "name": [
+        "Rifle Soldier B",
+        "士兵-步枪"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "驻军处特派士兵，高效打击生物个体 “P T S D.”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 50,
+      "buildTime": 6.0,
+      "hp": 44,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.12,
+          "range": 4.7,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-m16-shot",
+          "turret": false,
+          "muzzleOffset": 11.1
+        }
+      ],
+      "body": {
+        "r": 4.7,
+        "len": 7.8
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-soldier-b",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-civilian-pistol",
+      "name": [
+        "Armed Civilian",
+        "平民"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 15,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 44,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.33,
+          "range": 3.6,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 480,
+          "sound": "adolence-9mm",
+          "turret": false,
+          "muzzleOffset": 7.3
+        }
+      ],
+      "body": {
+        "r": 4.7,
+        "len": 1.6
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.25,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-civilian-pistol",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 17.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 2.4,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 3.333333,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-civilian-pistol-2",
+      "name": [
+        "Civilian Pistol II",
+        "平民"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 15,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 44,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.33,
+          "range": 3.6,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 480,
+          "sound": "adolence-9mm",
+          "turret": false,
+          "muzzleOffset": 7.3
+        }
+      ],
+      "body": {
+        "r": 5.5,
+        "len": 0
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.25,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-civilian-pistol-2",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 17.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 2.4,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 3.333333,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-civilian-rifle",
+      "name": [
+        "Civilian Rifleman",
+        "平民"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 20,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.17,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 10.0
+        }
+      ],
+      "body": {
+        "r": 4.7,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-civilian-rifle",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-civilian-rifle-2",
+      "name": [
+        "Civilian Rifleman II",
+        "平民"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 20,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.17,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 10.0
+        }
+      ],
+      "body": {
+        "r": 4.7,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-civilian-rifle-2",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-civilian-rifle-3",
+      "name": [
+        "Civilian Rifleman III",
+        "平民"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 20,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.17,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 10.0
+        }
+      ],
+      "body": {
+        "r": 4.7,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-civilian-rifle-3",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-civilian-rifle-4",
+      "name": [
+        "Civilian Rifleman IV",
+        "平民"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 20,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.17,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 10.0
+        }
+      ],
+      "body": {
+        "r": 4.7,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-civilian-rifle-4",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-raincoat",
+      "name": [
+        "Raincoat Rifleman",
+        "雨衣"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        ""
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 20,
+      "buildTime": 4,
+      "hp": 40,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 8,
+      "speed": 37,
+      "turnRate": 8,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.17,
+          "range": 4.1,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 1500,
+          "sound": "adolence-5-56mm",
+          "turret": false,
+          "muzzleOffset": 10.0
+        }
+      ],
+      "body": {
+        "r": 4.7,
+        "len": 6.2
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-torch",
+          "layer": "over",
+          "x": 0.5,
+          "y": -17.2,
+          "alpha": 0.2,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-raincoat",
+      "aiWeight": 2,
+      "producedBy": [
+        "adolence-outpost"
+      ],
+      "rules": [
+        {
+          "on": "destroyed",
+          "if": {
+            "killedBy": [
+              "adolence-acid-mass",
+              "adolence-bloater",
+              "adolence-brute",
+              "adolence-burster",
+              "adolence-flying-husk",
+              "adolence-gloater",
+              "adolence-gorilla",
+              "adolence-imploder",
+              "adolence-no-longer-human",
+              "adolence-prisoner",
+              "adolence-rager",
+              "adolence-road-rage",
+              "adolence-sin-of-gluttony",
+              "adolence-sin-of-wrath",
+              "adolence-turned-anti-materiel",
+              "adolence-turned-officer",
+              "adolence-zombie",
+              "adolence-spk-carrier"
+            ]
+          },
+          "do": {
+            "spawn": {
+              "unit": "adolence-brute",
+              "count": 1,
+              "side": "killer"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-450d92d8185aaf7d",
+          "energy": {
+            "max": 30.0,
+            "start": 1,
+            "regen": 0,
+            "recharge": 3.5999999999999996,
+            "full": true,
+            "usage": {
+              "1": 0.5
+            }
+          },
+          "reloadTime": 4.166667,
+          "reloadSound": "recording-2e2b77d832f06063"
+        }
+      }
+    },
+    {
+      "id": "adolence-military-assault-car",
+      "name": [
+        "Military Assault Car",
+        "军用冲锋车"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "通用军事车辆，车顶提供射击平台 “要战，便战！”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 2,
+      "cost": 330,
+      "buildTime": 14.0,
+      "hp": 420,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 18,
+      "speed": 79,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 5,
+      "fireOnMove": true,
+      "body": {
+        "r": 11.7,
+        "len": 25.0
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": 2.8,
+          "y": -26.4,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": -1.9,
+          "y": -26.4,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-military-assault-car",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-precinct-2",
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-gunner",
+              "count": 1,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-armored",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-rifleman",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-guard-assault-car",
+      "name": [
+        "National Guard Assault Car",
+        "国民冲锋车"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "通用军事车辆，车顶提供射击平台 “料敌于先！”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 2,
+      "cost": 600,
+      "buildTime": 14.0,
+      "hp": 420,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 18,
+      "speed": 158,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 20,
+      "fireOnMove": true,
+      "body": {
+        "r": 14.1,
+        "len": 21.9
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": 2.7,
+          "y": -25.9,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": -1.9,
+          "y": -25.9,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-guard-assault-car",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-gunner",
+              "count": 3,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-armored",
+              "count": 8,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-utility-a",
+      "name": [
+        "Light Utility Vehicle A",
+        "轻型多用途车辆"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "通用军事车辆，无武装 “我想回家...”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 2,
+      "cost": 285,
+      "buildTime": 6.0,
+      "hp": 420,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 18,
+      "speed": 106,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 4,
+      "fireOnMove": true,
+      "body": {
+        "r": 12.5,
+        "len": 20.3
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 1.098,
+          "x": 4.6,
+          "y": -35.7,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 1.098,
+          "x": -3.6,
+          "y": -35.7,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-utility-a",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-precinct-2",
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-rifleman",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-armored",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-utility-b",
+      "name": [
+        "Light Utility Vehicle B",
+        "轻型多用途车辆"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "通用军事车辆，无武装 “战争，前进!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 2,
+      "cost": 465,
+      "buildTime": 6.0,
+      "hp": 420,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 18,
+      "speed": 106,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 8,
+      "fireOnMove": true,
+      "body": {
+        "r": 12.5,
+        "len": 20.3
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 1.086,
+          "x": 4.5,
+          "y": -35.3,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 1.086,
+          "x": -3.6,
+          "y": -35.3,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-utility-b",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-precinct-2",
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-rifleman",
+              "count": 4,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-armored",
+              "count": 4,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-command-car-0",
+      "name": [
+        "Police Command Car A0",
+        "警用指挥车-A0"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "警用指挥车辆，车顶提供射击平台 “进攻D点。”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 185,
+      "buildTime": 10.0,
+      "hp": 350,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 18,
+      "speed": 87,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 5,
+      "fireOnMove": true,
+      "body": {
+        "r": 11.7,
+        "len": 37.5
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.836,
+          "x": 3.3,
+          "y": -33.4,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.836,
+          "x": -2.5,
+          "y": -33.4,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-command-car-0",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-armed-police-rifle",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-armed-police-pistol",
+              "count": 3,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-command-car-1",
+      "name": [
+        "Police Command Car A1",
+        "警用指挥车-A1"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "警用指挥车辆，车顶提供射击平台 “进攻D点。”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 230,
+      "buildTime": 10.0,
+      "hp": 420,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 18,
+      "speed": 87,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 5,
+      "fireOnMove": true,
+      "body": {
+        "r": 11.7,
+        "len": 37.5
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.836,
+          "x": 3.3,
+          "y": -33.4,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.836,
+          "x": -2.5,
+          "y": -33.4,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-command-car-1",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-armed-police-rifle",
+              "count": 5,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-command-car-2",
+      "name": [
+        "Police Command Car A2",
+        "警用指挥车-A2"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "警用指挥车辆，车顶提供射击平台 “进攻D点。”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 250,
+      "buildTime": 10.0,
+      "hp": 455,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 18,
+      "speed": 87,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 5,
+      "fireOnMove": true,
+      "body": {
+        "r": 11.7,
+        "len": 37.5
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.836,
+          "x": 3.3,
+          "y": -33.4,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.836,
+          "x": -2.5,
+          "y": -33.4,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-command-car-2",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-swat-sea",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-armed-police-rifle",
+              "count": 3,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-cruiser-d1",
+      "name": [
+        "Police Cruiser D1",
+        "警车-D1"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "基层警用轿车，民警-步枪*4 “收到，前进！”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 130,
+      "buildTime": 10.0,
+      "hp": 158,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 16,
+      "speed": 87,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 4,
+      "fireOnMove": true,
+      "body": {
+        "r": 11.7,
+        "len": 26.6
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": 4.2,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": -3.3,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-cruiser-d1",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-officer-rifle",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        },
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-traffic-officer",
+              "count": 2,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-sedan-x0rx",
+      "name": [
+        "X0rX Sedan",
+        "轿车-(X0rX)"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "(X0rX)的轿车风格改图，本模组单位的第一个皮肤！"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 130,
+      "buildTime": 10.0,
+      "hp": 158,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 14,
+      "speed": 87,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 4,
+      "fireOnMove": true,
+      "body": {
+        "r": 11.7,
+        "len": 26.6
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": 4.2,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": -3.3,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-sedan-x0rx",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-traffic-officer",
+              "count": 4,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-sedan-white",
+      "name": [
+        "White Sedan",
+        "轿车-白色"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "无标识通用轿车，速度相比警车更快 “银灰色的荣耀。”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 120,
+      "buildTime": 10.0,
+      "hp": 158,
+      "pop": 1,
+      "armor": "light",
+      "vision": 5,
+      "radius": 15,
+      "speed": 79,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 4,
+      "fireOnMove": true,
+      "body": {
+        "r": 12.5,
+        "len": 25.0
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": 4.2,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": -3.3,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-sedan-white",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-precinct",
+        "adolence-precinct-2",
+        "adolence-garage",
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-hazmat-pistol",
+              "count": 4,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-white-steel-a",
+      "name": [
+        "White Steel Sedan A",
+        "轿车-白钢A"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "无标识通用轿车，速度相比警车更快 “速度，激情!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 160,
+      "buildTime": 10.0,
+      "hp": 158,
+      "pop": 1,
+      "armor": "light",
+      "vision": 5,
+      "radius": 15,
+      "speed": 79,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 4,
+      "fireOnMove": true,
+      "body": {
+        "r": 12.5,
+        "len": 26.6
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.966,
+          "x": 4.0,
+          "y": -31.4,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.966,
+          "x": -3.2,
+          "y": -31.4,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-white-steel-a",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-rifle",
+              "count": 4,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-white-steel-b",
+      "name": [
+        "White Steel Sedan B",
+        "轿车-白钢B"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "无标识通用轿车，速度相比警车更快 “速度，激情!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 150,
+      "buildTime": 10.0,
+      "hp": 210,
+      "pop": 1,
+      "armor": "light",
+      "vision": 5,
+      "radius": 15,
+      "speed": 79,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 4,
+      "fireOnMove": true,
+      "body": {
+        "r": 12.5,
+        "len": 26.6
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.966,
+          "x": 4.0,
+          "y": -31.4,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "scale": 0.966,
+          "x": -3.2,
+          "y": -31.4,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-white-steel-b",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-precinct",
+        "adolence-precinct-2",
+        "adolence-garage",
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-guard-rifle",
+              "count": 4,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-sedan-yellow",
+      "name": [
+        "Yellow Sedan",
+        "轿车-黄色"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "无标识通用轿车，速度相比警车更快 “生化保密条例...”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 105,
+      "buildTime": 10.0,
+      "hp": 158,
+      "pop": 1,
+      "armor": "light",
+      "vision": 5,
+      "radius": 16,
+      "speed": 79,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 4,
+      "fireOnMove": true,
+      "body": {
+        "r": 12.5,
+        "len": 25.0
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": 4.2,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": -3.3,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-sedan-yellow",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-hazmat-pistol",
+              "count": 3,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-sedan-black-matte",
+      "name": [
+        "Matte Black Sedan",
+        "轿车-黑-低高光"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "无标识黑色轿车，民警-手枪*4 “为人民服务。”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 130,
+      "buildTime": 10.0,
+      "hp": 158,
+      "pop": 1,
+      "armor": "light",
+      "vision": 4,
+      "radius": 14,
+      "speed": 87,
+      "turnRate": 2.09,
+      "trail": "tire",
+      "transportCap": 4,
+      "fireOnMove": true,
+      "body": {
+        "r": 11.7,
+        "len": 26.6
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": 4.2,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-headlight",
+          "layer": "over",
+          "x": -3.3,
+          "y": -32.5,
+          "alpha": 0.5,
+          "when": "night"
+        }
+      ],
+      "sprite": "u.adolence-sedan-black-matte",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "rules": [
+        {
+          "on": "created",
+          "do": {
+            "spawn": {
+              "unit": "adolence-traffic-officer",
+              "count": 4,
+              "into": "hold"
+            }
+          }
+        }
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-armed-drone",
+      "name": [
+        "Armed Recon Drone",
+        "武装无人机"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "侦查用无人机，只对地 “正在侦查...”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 20,
+      "buildTime": 11.1,
+      "hp": 40,
+      "pop": 1,
+      "armor": "air",
+      "vision": 6,
+      "radius": 5,
+      "speed": 58,
+      "turnRate": 8,
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.67,
+          "range": 3.0,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 576,
+          "sound": "mg",
+          "turret": false,
+          "muzzleOffset": 6.5
+        }
+      ],
+      "body": {
+        "r": 7.8,
+        "len": 0
+      },
+      "sprite": "u.adolence-armed-drone",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-airfield"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "wreck": "dec.adolence-wreck-a5b29f48"
+        }
+      },
+      "rules": [
+        {
+          "button": {
+            "name": [
+              "Attack Drone",
+              "武装攻击机"
+            ],
+            "cost": 15,
+            "time": 5.5,
+            "ai": false
+          },
+          "do": {
+            "morph": "adolence-attack-drone"
+          }
+        }
+      ]
+    },
+    {
+      "id": "adolence-attack-drone",
+      "name": [
+        "Attack Drone",
+        "武装攻击机"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "侦查无人机，降落后可攻击 “大疆，不...”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 30,
+      "buildTime": 22.0,
+      "hp": 42,
+      "pop": 1,
+      "armor": "air",
+      "vision": 6,
+      "radius": 5,
+      "speed": 79,
+      "turnRate": 8,
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "mg",
+          "dmg": 2.0,
+          "reload": 0.53,
+          "range": 3.6,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "bullet",
+          "speed": 576,
+          "sound": "mg",
+          "turret": false,
+          "muzzleOffset": 5.5
+        }
+      ],
+      "body": {
+        "r": 7.8,
+        "len": 0
+      },
+      "sprite": "u.adolence-attack-drone",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-airfield"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73",
+          "wreck": "dec.adolence-wreck-e34f0b8b"
+        }
+      }
+    },
+    {
+      "id": "adolence-k4968",
+      "name": [
+        "K-4968",
+        "K-4968"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "一段神秘的代码，一行不被人知的过去 “但是前进，为了祖国!”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 700,
+      "buildTime": 16.0,
+      "hp": 2800,
+      "pop": 3,
+      "armor": "air",
+      "vision": 5,
+      "radius": 24,
+      "speed": 37,
+      "turnRate": 4.19,
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "aa",
+          "dmg": 8.4,
+          "reload": 0.25,
+          "range": 11.0,
+          "targets": [
+            "air"
+          ],
+          "projectile": "flak",
+          "speed": 384,
+          "bores": 2,
+          "boreSpacing": 15.4,
+          "sound": "autocannon",
+          "turret": false,
+          "muzzleOffset": 43.5
+        }
+      ],
+      "body": {
+        "r": 48.4,
+        "len": 0
+      },
+      "sprite": "u.adolence-k4968",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-airfield"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-eagle-a3",
+      "name": [
+        "Eagle A3",
+        "鹰击-A3"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        " “我只是懒得画高质量，不是不会。——自然常数也有人用？”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 515,
+      "hp": 1575,
+      "pop": 3,
+      "armor": "air",
+      "vision": 5,
+      "radius": 24,
+      "speed": 37,
+      "turnRate": 4.19,
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "aa",
+          "dmg": 8.4,
+          "reload": 0.33,
+          "range": 8.3,
+          "targets": [
+            "air"
+          ],
+          "projectile": "flak",
+          "speed": 384,
+          "bores": 2,
+          "boreSpacing": 15.4,
+          "sound": "autocannon",
+          "turret": false,
+          "muzzleOffset": 25.3
+        }
+      ],
+      "body": {
+        "r": 20.3,
+        "len": 15.6
+      },
+      "sprite": "u.adolence-eagle-a3",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-airfield"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-eagle-a4",
+      "name": [
+        "Eagle A4",
+        "鹰击-A4"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        " “我只是懒得画高质量，不是不会。——自然常数也有人用？”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 515,
+      "hp": 1575,
+      "pop": 3,
+      "armor": "air",
+      "vision": 5,
+      "radius": 24,
+      "speed": 37,
+      "turnRate": 4.19,
+      "weapons": [
+        {
+          "id": "1",
+          "cls": "aa",
+          "dmg": 8.4,
+          "reload": 0.33,
+          "range": 8.3,
+          "targets": [
+            "air"
+          ],
+          "projectile": "flak",
+          "speed": 384,
+          "bores": 2,
+          "boreSpacing": 15.4,
+          "sound": "autocannon",
+          "turret": false,
+          "muzzleOffset": 26.0
+        }
+      ],
+      "body": {
+        "r": 19.5,
+        "len": 18.8
+      },
+      "sprite": "u.adolence-eagle-a4",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-airfield"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-navigator",
+      "name": [
+        "Navigator Transport",
+        "领航员"
+      ],
+      "desc": [
+        "Original Adolence roster unit.",
+        "实验舰艇，厚重 “领航员就位。”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 1735,
+      "hp": 6000,
+      "pop": 4,
+      "armor": "air",
+      "vision": 4,
+      "radius": 24,
+      "speed": 132,
+      "turnRate": 2.09,
+      "transportCap": 1,
+      "body": {
+        "r": 14.8,
+        "len": 42.2
+      },
+      "sprite": "u.adolence-navigator",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-airfield"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
+    },
+    {
+      "id": "adolence-m1a2-sepv2",
+      "name": [
+        "M1A2 SEPv2",
+        "M1A2 SEPV2"
+      ],
+      "desc": [
+        "Abrams with the SEP urban protection package and a 120 mm gun.",
+        "M1A2 主战坦克，搭载一门M256型120口径44倍径滑膛炮"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 3,
+      "cost": 1430,
+      "buildTime": 40.0,
+      "hp": 5250,
+      "pop": 4,
+      "armor": "heavy",
+      "vision": 5,
+      "radius": 24,
+      "speed": 53,
+      "turnRate": 0.84,
+      "trail": "tread",
+      "fireOnMove": true,
+      "weapons": [
+        {
+          "id": "gun",
+          "cls": "cannon",
+          "dmg": 125,
+          "reload": 4.5,
+          "range": 9,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "projectile": "shell",
+          "speed": 700,
+          "splash": 12,
+          "turret": true,
+          "sound": "adolence-120mm-2",
+          "muzzlePoints": [
+            {
+              "forward": 45.6414,
+              "lateral": -0.6031
+            }
+          ],
+          "recoil": 2
+        },
+        {
+          "id": "coax",
+          "cls": "mg",
+          "dmg": 9,
+          "reload": 0.45,
+          "range": 6,
+          "targets": [
+            "ground",
+            "ship"
+          ],
+          "turret": true,
+          "sound": "mg",
+          "muzzlePoints": [
+            {
+              "forward": 22.2039,
+              "lateral": 1.5077
+            }
+          ]
+        }
+      ],
+      "body": {
+        "r": 17.2,
+        "len": 57.8
+      },
+      "decals": [
+        {
+          "sprite": "dec.adolence-m1-lamp-1",
+          "scale": 0.958,
+          "x": -0.2,
+          "y": -43.7,
+          "when": "night"
+        },
+        {
+          "sprite": "dec.adolence-sepv2-outline",
+          "on": "turret",
+          "layer": "under",
+          "y": 1.6,
+          "alpha": 0.8
+        },
+        {
+          "sprite": "dec.adolence-m256-outline",
+          "on": "turret",
+          "layer": "under",
+          "x": -0.4,
+          "y": -19.7,
+          "alpha": 0.8
+        }
+      ],
+      "sprite": "u.adolence-m1a2-tusk",
+      "turretSprite": "tur.adolence-m1a2-sepv2",
+      "aiWeight": 1.5,
+      "producedBy": [
+        "adolence-arsenal"
+      ],
+      "extensions": {
+        "adolence.source-v1": {
+          "selectSound": "recording-ef2a1774c6b68e73"
+        }
+      }
     },
     {
       "id": "adolence-spk-colony",
@@ -7237,7 +12410,7 @@
           "id": "1",
           "cls": "mg",
           "dmg": 2.0,
-          "reload": 0.34,
+          "reload": 0.2,
           "range": 4.4,
           "targets": [
             "ground",
@@ -7315,7 +12488,9 @@
         "adolence-solar",
         "adolence-supply-cache",
         "adolence-mg-tower",
-        "adolence-barricade"
+        "adolence-barricade",
+        "adolence-guard-post",
+        "adolence-fuel-depot"
       ]
     },
     {
@@ -7399,6 +12574,176 @@
       "builds": [
         "adolence-spk-colony",
         "adolence-sloth-nest"
+      ]
+    }
+  ],
+  "factions": [
+    {
+      "id": "adolence-city",
+      "name": [
+        "Adolon City Authority",
+        "阿多隆市政当局",
+        "아돌론 시 당국"
+      ],
+      "headquarters": "adolence-precinct",
+      "builder": "adolence-police-engineer",
+      "roster": [
+        "adolence-precinct",
+        "adolence-precinct-2",
+        "adolence-outpost",
+        "adolence-garage",
+        "adolence-arsenal",
+        "adolence-helipad",
+        "adolence-airfield",
+        "adolence-coast-guard-base",
+        "adolence-solar",
+        "adolence-solar-2",
+        "adolence-supply-cache",
+        "adolence-supply-cache-2",
+        "adolence-mg-tower",
+        "adolence-barricade",
+        "adolence-guard-post",
+        "adolence-fuel-depot",
+        "adolence-officer-pistol",
+        "adolence-officer-rifle",
+        "adolence-traffic-officer",
+        "adolence-armed-police-pistol",
+        "adolence-armed-police-rifle",
+        "adolence-swat-sea",
+        "adolence-swat-field",
+        "adolence-army-woodland",
+        "adolence-army-marksman",
+        "adolence-guard-rifleman",
+        "adolence-guard-gunner",
+        "adolence-guard-flamethrower",
+        "adolence-military-police",
+        "adolence-taskforce-rifleman",
+        "adolence-taskforce-grenadier",
+        "adolence-taskforce-anti-materiel",
+        "adolence-taskforce-rocketeer",
+        "adolence-taskforce-gunner",
+        "adolence-taskforce-shotgunner",
+        "adolence-zhongzhou-rifleman",
+        "adolence-zhongzhou-sniper",
+        "adolence-purge-gunner",
+        "adolence-sedan-black",
+        "adolence-cruiser",
+        "adolence-armoured-car",
+        "adolence-amphibious-car",
+        "adolence-command-van",
+        "adolence-comms-van",
+        "adolence-heavy-escort",
+        "adolence-ambush-car",
+        "adolence-mortar",
+        "adolence-heavy-mg",
+        "adolence-walker-rifle",
+        "adolence-walker-grenade",
+        "adolence-light-tank-lmg",
+        "adolence-light-tank-mg",
+        "adolence-light-tank",
+        "adolence-light-tank-missile",
+        "adolence-light-tank-flame",
+        "adolence-light-tank-sniper",
+        "adolence-heavy-tank",
+        "adolence-scout-car",
+        "adolence-assault-car",
+        "adolence-utility-vehicle",
+        "adolence-utility-vehicle-mp",
+        "adolence-transport-truck",
+        "adolence-m977",
+        "adolence-m1128",
+        "adolence-m1a2",
+        "adolence-m1a2-tusk",
+        "adolence-m1a2-sepv3",
+        "adolence-m1a1-clickbait",
+        "adolence-light-ifv",
+        "adolence-heavy-ifv",
+        "adolence-extremism",
+        "adolence-police-heli",
+        "adolence-light-gunship",
+        "adolence-heavy-gunship",
+        "adolence-bomber",
+        "adolence-transport-heli",
+        "adolence-fighter-u9",
+        "adolence-fighter-a2",
+        "adolence-scout-boat",
+        "adolence-drone-carrier",
+        "adolence-guard-rifle",
+        "adolence-zhongzhou-at",
+        "adolence-zhongzhou-mg",
+        "adolence-zhongzhou-special-at",
+        "adolence-zhongzhou-special-mg",
+        "adolence-zhongzhou-special",
+        "adolence-guard-armored",
+        "adolence-desert-pistol",
+        "adolence-hazmat-pistol",
+        "adolence-hazmat-rifle",
+        "adolence-hazmat-red",
+        "adolence-hazmat-green",
+        "adolence-marine-scout",
+        "adolence-soldier-a",
+        "adolence-soldier-b",
+        "adolence-civilian-pistol",
+        "adolence-civilian-pistol-2",
+        "adolence-civilian-rifle",
+        "adolence-civilian-rifle-2",
+        "adolence-civilian-rifle-3",
+        "adolence-civilian-rifle-4",
+        "adolence-raincoat",
+        "adolence-military-assault-car",
+        "adolence-guard-assault-car",
+        "adolence-utility-a",
+        "adolence-utility-b",
+        "adolence-command-car-0",
+        "adolence-command-car-1",
+        "adolence-command-car-2",
+        "adolence-cruiser-d1",
+        "adolence-sedan-x0rx",
+        "adolence-sedan-white",
+        "adolence-white-steel-a",
+        "adolence-white-steel-b",
+        "adolence-sedan-yellow",
+        "adolence-sedan-black-matte",
+        "adolence-armed-drone",
+        "adolence-attack-drone",
+        "adolence-k4968",
+        "adolence-eagle-a3",
+        "adolence-eagle-a4",
+        "adolence-navigator",
+        "adolence-m1a2-sepv2",
+        "adolence-police-engineer"
+      ]
+    },
+    {
+      "id": "adolence-infected",
+      "name": [
+        "SPK Infected",
+        "SPK 感染者",
+        "SPK 감염자"
+      ],
+      "headquarters": "adolence-spk-colony",
+      "builder": "adolence-spk-carrier",
+      "roster": [
+        "adolence-sloth-nest",
+        "adolence-zombie",
+        "adolence-brute",
+        "adolence-bloater",
+        "adolence-prisoner",
+        "adolence-rager",
+        "adolence-burster",
+        "adolence-imploder",
+        "adolence-turned-officer",
+        "adolence-turned-anti-materiel",
+        "adolence-road-rage",
+        "adolence-acid-mass",
+        "adolence-gloater",
+        "adolence-flying-husk",
+        "adolence-gorilla",
+        "adolence-no-longer-human",
+        "adolence-sin-of-wrath",
+        "adolence-sin-of-gluttony",
+        "adolence-spk-colony",
+        "adolence-spk-carrier"
       ]
     }
   ],
@@ -7749,7 +13094,19 @@
       "frames": 2,
       "rotated": true,
       "fw": 16,
-      "fh": 29
+      "fh": 29,
+      "anims": {
+        "moving": [
+          0,
+          1,
+          30.0
+        ],
+        "firing": [
+          1,
+          1,
+          30.0
+        ]
+      }
     },
     {
       "key": "u.adolence-heavy-mg",
@@ -7773,7 +13130,14 @@
       "frames": 3,
       "rotated": true,
       "fw": 11,
-      "fh": 36
+      "fh": 36,
+      "anims": {
+        "firing": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.adolence-walker-grenade",
@@ -7781,7 +13145,14 @@
       "frames": 3,
       "rotated": true,
       "fw": 15,
-      "fh": 33
+      "fh": 33,
+      "anims": {
+        "firing": [
+          0,
+          2,
+          10.0
+        ]
+      }
     },
     {
       "key": "u.adolence-light-tank-lmg",
@@ -8470,6 +13841,450 @@
       "rotated": true,
       "fw": 18,
       "fh": 31
+    },
+    {
+      "key": "u.adolence-guard-rifle",
+      "file": "sprites/u.adolence-guard-rifle.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 11
+    },
+    {
+      "key": "u.adolence-zhongzhou-at",
+      "file": "sprites/u.adolence-zhongzhou-at.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 11
+    },
+    {
+      "key": "u.adolence-zhongzhou-mg",
+      "file": "sprites/u.adolence-zhongzhou-mg.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 11
+    },
+    {
+      "key": "u.adolence-zhongzhou-special-at",
+      "file": "sprites/u.adolence-zhongzhou-special-at.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 10
+    },
+    {
+      "key": "u.adolence-zhongzhou-special-mg",
+      "file": "sprites/u.adolence-zhongzhou-special-mg.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 10
+    },
+    {
+      "key": "u.adolence-zhongzhou-special",
+      "file": "sprites/u.adolence-zhongzhou-special.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 9
+    },
+    {
+      "key": "u.adolence-guard-armored",
+      "file": "sprites/u.adolence-guard-armored.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 10
+    },
+    {
+      "key": "u.adolence-desert-pistol",
+      "file": "sprites/u.adolence-desert-pistol.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 8
+    },
+    {
+      "key": "u.adolence-hazmat-pistol",
+      "file": "sprites/u.adolence-hazmat-pistol.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 8
+    },
+    {
+      "key": "u.adolence-hazmat-rifle",
+      "file": "sprites/u.adolence-hazmat-rifle.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 12
+    },
+    {
+      "key": "u.adolence-hazmat-red",
+      "file": "sprites/u.adolence-hazmat-red.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 12
+    },
+    {
+      "key": "u.adolence-hazmat-green",
+      "file": "sprites/u.adolence-hazmat-green.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 12
+    },
+    {
+      "key": "u.adolence-marine-scout",
+      "file": "sprites/u.adolence-marine-scout.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 11
+    },
+    {
+      "key": "u.adolence-soldier-a",
+      "file": "sprites/u.adolence-soldier-a.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 6,
+      "fh": 11
+    },
+    {
+      "key": "u.adolence-soldier-b",
+      "file": "sprites/u.adolence-soldier-b.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 6,
+      "fh": 11
+    },
+    {
+      "key": "u.adolence-civilian-pistol",
+      "file": "sprites/u.adolence-civilian-pistol.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 6,
+      "fh": 7
+    },
+    {
+      "key": "u.adolence-civilian-pistol-2",
+      "file": "sprites/u.adolence-civilian-pistol-2.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 7,
+      "fh": 7
+    },
+    {
+      "key": "u.adolence-civilian-rifle",
+      "file": "sprites/u.adolence-civilian-rifle.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 6,
+      "fh": 10
+    },
+    {
+      "key": "u.adolence-civilian-rifle-2",
+      "file": "sprites/u.adolence-civilian-rifle-2.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 6,
+      "fh": 10
+    },
+    {
+      "key": "u.adolence-civilian-rifle-3",
+      "file": "sprites/u.adolence-civilian-rifle-3.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 6,
+      "fh": 10
+    },
+    {
+      "key": "u.adolence-civilian-rifle-4",
+      "file": "sprites/u.adolence-civilian-rifle-4.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 6,
+      "fh": 10
+    },
+    {
+      "key": "u.adolence-raincoat",
+      "file": "sprites/u.adolence-raincoat.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 6,
+      "fh": 10
+    },
+    {
+      "key": "u.adolence-military-assault-car",
+      "file": "sprites/u.adolence-military-assault-car.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 31
+    },
+    {
+      "key": "u.adolence-guard-assault-car",
+      "file": "sprites/u.adolence-guard-assault-car.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 18,
+      "fh": 32
+    },
+    {
+      "key": "u.adolence-utility-a",
+      "file": "sprites/u.adolence-utility-a.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 16,
+      "fh": 29
+    },
+    {
+      "key": "u.adolence-utility-b",
+      "file": "sprites/u.adolence-utility-b.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 16,
+      "fh": 29
+    },
+    {
+      "key": "u.adolence-command-car-0",
+      "file": "sprites/u.adolence-command-car-0.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 39
+    },
+    {
+      "key": "u.adolence-command-car-1",
+      "file": "sprites/u.adolence-command-car-1.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 39
+    },
+    {
+      "key": "u.adolence-command-car-2",
+      "file": "sprites/u.adolence-command-car-2.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 39
+    },
+    {
+      "key": "u.adolence-cruiser-d1",
+      "file": "sprites/u.adolence-cruiser-d1.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 32
+    },
+    {
+      "key": "u.adolence-sedan-x0rx",
+      "file": "sprites/u.adolence-sedan-x0rx.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 32
+    },
+    {
+      "key": "u.adolence-sedan-white",
+      "file": "sprites/u.adolence-sedan-white.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 16,
+      "fh": 32
+    },
+    {
+      "key": "u.adolence-white-steel-a",
+      "file": "sprites/u.adolence-white-steel-a.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 16,
+      "fh": 33
+    },
+    {
+      "key": "u.adolence-white-steel-b",
+      "file": "sprites/u.adolence-white-steel-b.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 16,
+      "fh": 33
+    },
+    {
+      "key": "u.adolence-sedan-yellow",
+      "file": "sprites/u.adolence-sedan-yellow.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 16,
+      "fh": 32
+    },
+    {
+      "key": "u.adolence-sedan-black-matte",
+      "file": "sprites/u.adolence-sedan-black-matte.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 15,
+      "fh": 32
+    },
+    {
+      "key": "u.adolence-armed-drone",
+      "file": "sprites/u.adolence-armed-drone.png",
+      "frames": 2,
+      "rotated": true,
+      "fw": 10,
+      "fh": 9,
+      "anims": {
+        "idle": [
+          0,
+          1,
+          10.0
+        ],
+        "moving": [
+          0,
+          1,
+          10.0
+        ]
+      }
+    },
+    {
+      "key": "u.adolence-attack-drone",
+      "file": "sprites/u.adolence-attack-drone.png",
+      "frames": 2,
+      "rotated": true,
+      "fw": 10,
+      "fh": 8,
+      "anims": {
+        "idle": [
+          0,
+          1,
+          10.0
+        ],
+        "moving": [
+          0,
+          1,
+          10.0
+        ]
+      }
+    },
+    {
+      "key": "u.adolence-k4968",
+      "file": "sprites/u.adolence-k4968.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 62,
+      "fh": 62
+    },
+    {
+      "key": "u.adolence-eagle-a3",
+      "file": "sprites/u.adolence-eagle-a3.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 26,
+      "fh": 36
+    },
+    {
+      "key": "u.adolence-eagle-a4",
+      "file": "sprites/u.adolence-eagle-a4.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 25,
+      "fh": 37
+    },
+    {
+      "key": "u.adolence-navigator",
+      "file": "sprites/u.adolence-navigator.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 19,
+      "fh": 46
+    },
+    {
+      "key": "u.adolence-guard-post",
+      "file": "sprites/u.adolence-guard-post.png",
+      "frames": 1
+    },
+    {
+      "key": "u.adolence-fuel-depot",
+      "file": "sprites/u.adolence-fuel-depot.png",
+      "frames": 1
+    },
+    {
+      "key": "tur.adolence-m1a2-sepv2",
+      "file": "sprites/tur.adolence-m1a2-sepv2.png",
+      "frames": 1,
+      "rotated": true,
+      "fw": 22,
+      "fh": 60,
+      "barrels": [
+        [
+          0.43859649,
+          0.01315789,
+          0.52631579,
+          0.31578947
+        ]
+      ]
+    },
+    {
+      "key": "dec.adolence-sepv2-outline",
+      "file": "sprites/dec.adolence-sepv2-outline.png",
+      "frames": 1,
+      "fw": 22,
+      "fh": 33,
+      "rotated": true
+    },
+    {
+      "key": "dec.adolence-wreck-0f6703d2",
+      "file": "sprites/dec.adolence-wreck-0f6703d2.png",
+      "frames": 1,
+      "fw": 18,
+      "fh": 28,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.adolence-wreck-35b8406c",
+      "file": "sprites/dec.adolence-wreck-35b8406c.png",
+      "frames": 1,
+      "fw": 25,
+      "fh": 33,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.adolence-wreck-0edc31eb",
+      "file": "sprites/dec.adolence-wreck-0edc31eb.png",
+      "frames": 1,
+      "fw": 34,
+      "fh": 58,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.adolence-wreck-a5b29f48",
+      "file": "sprites/dec.adolence-wreck-a5b29f48.png",
+      "frames": 1,
+      "fw": 10,
+      "fh": 9,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "dec.adolence-wreck-e34f0b8b",
+      "file": "sprites/dec.adolence-wreck-e34f0b8b.png",
+      "frames": 1,
+      "fw": 10,
+      "fh": 8,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
     }
   ],
   "sounds": [
@@ -8560,6 +14375,14 @@
     {
       "key": "adolence-husk-beam",
       "file": "sounds/husk-beam.mp3"
+    },
+    {
+      "key": "adolence-m4",
+      "file": "sounds/m4.mp3"
+    },
+    {
+      "key": "adolence-shotgun",
+      "file": "sounds/shotgun.mp3"
     }
   ],
   "screenshots": [
@@ -8578,129 +14401,35 @@
     "maps/broken-bridge.steel-tide-map",
     "maps/desert-highway.steel-tide-map"
   ],
-  "factions": [
+  "capacity": "large",
+  "requiredCapabilities": [
+    "adolence.source-v1"
+  ],
+  "extensionPackages": [
     {
-      "id": "adolence-city",
-      "name": [
-        "Adolon City Authority",
-        "阿多隆市政当局",
-        "아돌론 시 당국"
+      "id": "adolence.source",
+      "version": "1.0.1",
+      "api": 2,
+      "capabilities": [
+        "adolence.source-v1"
       ],
-      "headquarters": "adolence-precinct",
-      "builder": "adolence-police-engineer",
-      "roster": [
-        "adolence-precinct",
-        "adolence-precinct-2",
-        "adolence-outpost",
-        "adolence-garage",
-        "adolence-arsenal",
-        "adolence-helipad",
-        "adolence-airfield",
-        "adolence-coast-guard-base",
-        "adolence-solar",
-        "adolence-solar-2",
-        "adolence-supply-cache",
-        "adolence-supply-cache-2",
-        "adolence-mg-tower",
-        "adolence-barricade",
-        "adolence-officer-pistol",
-        "adolence-officer-rifle",
-        "adolence-traffic-officer",
-        "adolence-armed-police-pistol",
-        "adolence-armed-police-rifle",
-        "adolence-swat-sea",
-        "adolence-swat-field",
-        "adolence-army-woodland",
-        "adolence-army-marksman",
-        "adolence-guard-rifleman",
-        "adolence-guard-gunner",
-        "adolence-guard-flamethrower",
-        "adolence-military-police",
-        "adolence-taskforce-rifleman",
-        "adolence-taskforce-grenadier",
-        "adolence-taskforce-anti-materiel",
-        "adolence-taskforce-rocketeer",
-        "adolence-taskforce-gunner",
-        "adolence-taskforce-shotgunner",
-        "adolence-zhongzhou-rifleman",
-        "adolence-zhongzhou-sniper",
-        "adolence-purge-gunner",
-        "adolence-sedan-black",
-        "adolence-cruiser",
-        "adolence-armoured-car",
-        "adolence-amphibious-car",
-        "adolence-command-van",
-        "adolence-comms-van",
-        "adolence-heavy-escort",
-        "adolence-ambush-car",
-        "adolence-mortar",
-        "adolence-heavy-mg",
-        "adolence-walker-rifle",
-        "adolence-walker-grenade",
-        "adolence-light-tank-lmg",
-        "adolence-light-tank-mg",
-        "adolence-light-tank",
-        "adolence-light-tank-missile",
-        "adolence-light-tank-flame",
-        "adolence-light-tank-sniper",
-        "adolence-heavy-tank",
-        "adolence-scout-car",
-        "adolence-assault-car",
-        "adolence-utility-vehicle",
-        "adolence-utility-vehicle-mp",
-        "adolence-transport-truck",
-        "adolence-m977",
-        "adolence-m1128",
-        "adolence-m1a2",
-        "adolence-m1a2-tusk",
-        "adolence-m1a2-sepv3",
-        "adolence-m1a1-clickbait",
-        "adolence-light-ifv",
-        "adolence-heavy-ifv",
-        "adolence-extremism",
-        "adolence-police-heli",
-        "adolence-light-gunship",
-        "adolence-heavy-gunship",
-        "adolence-bomber",
-        "adolence-transport-heli",
-        "adolence-fighter-u9",
-        "adolence-fighter-a2",
-        "adolence-scout-boat",
-        "adolence-drone-carrier",
-        "adolence-police-engineer"
-      ]
-    },
-    {
-      "id": "adolence-infected",
-      "name": [
-        "SPK Infected",
-        "SPK 感染者",
-        "SPK 감염자"
-      ],
-      "headquarters": "adolence-spk-colony",
-      "builder": "adolence-spk-carrier",
-      "roster": [
-        "adolence-sloth-nest",
-        "adolence-zombie",
-        "adolence-brute",
-        "adolence-bloater",
-        "adolence-prisoner",
-        "adolence-rager",
-        "adolence-burster",
-        "adolence-imploder",
-        "adolence-turned-officer",
-        "adolence-turned-anti-materiel",
-        "adolence-road-rage",
-        "adolence-acid-mass",
-        "adolence-gloater",
-        "adolence-flying-husk",
-        "adolence-gorilla",
-        "adolence-no-longer-human",
-        "adolence-sin-of-wrath",
-        "adolence-sin-of-gluttony",
-        "adolence-spk-colony",
-        "adolence-spk-carrier"
-      ]
+      "assets": {
+        "recording-ef2a1774c6b68e73": "audio/recording-ef2a1774c6b68e73.mp3",
+        "recording-450d92d8185aaf7d": "audio/recording-450d92d8185aaf7d.mp3",
+        "recording-2e2b77d832f06063": "audio/recording-2e2b77d832f06063.mp3"
+      },
+      "schema": {
+        "source": "export default function () {\n  const id='adolence.source-v1';\n  const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);\n  function definition(raw,path,issues,context) {\n    const fail=(key,message)=>issues.push({path:path+(key?'.'+key:''),message});\n    const number=(v,key,min,max)=>{if(typeof v!=='number'||!Number.isFinite(v)||v<min||v>max)fail(key,'invalid bounded number');};\n    if(!object(raw)){fail('','expected source configuration');return;}\n    for(const k of Object.keys(raw))if(!['energy','reloadTime','reloadSound','selectSound','wreck','decay'].includes(k))fail(k,'unknown source field');\n    for(const k of ['reloadSound','selectSound'])if(raw[k]!==undefined&&(!context?.assetIds?.has(raw[k])))fail(k,'missing installed recording');\n    if(raw.wreck!==undefined&&!context?.spriteKeys?.has(raw.wreck))fail('wreck','missing wreck sprite');\n    if(raw.decay!==undefined)number(raw.decay,'decay',0,1e6);\n    if(raw.reloadTime!==undefined){number(raw.reloadTime,'reloadTime',0.001,3600);if(!raw.energy)fail('reloadTime','requires energy');}\n    if(raw.energy!==undefined){const e=raw.energy;\n      if(!object(e)){fail('energy','expected energy configuration');return;}\n      for(const k of Object.keys(e))if(!['max','start','regen','recharge','full','usage'].includes(k))fail('energy.'+k,'unknown energy field');\n      number(e.max,'energy.max',0.001,1e8);number(e.start,'energy.start',0,1);number(e.regen,'energy.regen',0,1e8);number(e.recharge,'energy.recharge',0,1e8);\n      if(typeof e.full!=='boolean')fail('energy.full','expected boolean');\n      if(!object(e.usage)||Object.keys(e.usage).length>8)fail('energy.usage','expected weapon energy costs');\n      else for(const [key,cost]of Object.entries(e.usage)){if(!context?.weaponIds?.includes(key))fail('energy.usage.'+key,'missing weapon');number(cost,'energy.usage.'+key,0.001,e.max);}\n    }\n    return structuredClone(raw);\n  }\n  return {capabilities:[{id,definition}]};\n}\n",
+        "sha256": "b866a0bf8c93b9fd5d105bb0e0993766ec486548ab5e94ca6d10e73b28bdd578"
+      },
+      "runtime": {
+        "source": "// Mod-owned source energy magazines. Native weapons, orders and damage stay authoritative.\nexport default function (sdk) {\n  const ID = 'adolence.source-v1';\n  return {capabilities: [{id: ID, create(host) {\n    const states = new Map(), game = host.game;\n    const config = e => host.config(sdk.getDef(e.defId));\n    const ensure = e => {\n      const c = config(e); if (!c?.energy) return;\n      let s = states.get(e.id);\n      if (!s) { s = {energy:c.energy.max*c.energy.start, recharging:false, remaining:0, reloads:0}; states.set(e.id,s); }\n      s.energy = Math.min(c.energy.max,s.energy);\n      return s;\n    };\n    const begin = (c,s) => {\n      if (s.recharging) return;\n      s.recharging=true; s.remaining=c.reloadTime??0; s.reloads++;\n    };\n    return {\n      id:ID,\n      beforeStep(dt) {\n        for (const [id] of states) {const e=game.st.ents.get(id);if(!e||e.dead||!config(e)?.energy)states.delete(id);}\n        for (const e of host.participants()) {\n          if(e.dead||e.site||e.inside)continue;\n          const c=config(e),s=ensure(e);\n          if(c?.decay)host.applyDamage(game.st,e,c.decay*dt,undefined,e.owner,e.id,e.defId+'/decay');\n          if(!s)continue;\n          const energy=c.energy;\n          if(s.recharging&&c.reloadTime) {\n            s.remaining=Math.max(0,s.remaining-dt);\n            if(s.remaining===0){s.energy=energy.max;s.recharging=false;}\n          } else {\n            s.energy=Math.max(0,Math.min(energy.max,s.energy+(s.recharging?energy.recharge:energy.regen)*dt));\n            if(s.energy>=energy.max-1e-8)s.recharging=false;\n          }\n        }\n      },\n      afterStep() {for(const [id]of states){const e=game.st.ents.get(id);if(!e||e.dead||!config(e)?.energy)states.delete(id);}},\n      canFire(e,d,w) {\n        const c=config(e),cost=c?.energy?.usage[w.id]; if(!cost)return true;\n        const s=ensure(e);return !s.recharging&&s.energy+1e-8>=cost;\n      },\n      // Also gate burst continuations: they bypass the native acquisition pass.\n      wrapShot(next) {return (st,e,d,w,...args) => {\n        const c=config(e),cost=c?.energy?.usage[w.id];\n        if(cost){const s=ensure(e);if(s.recharging||s.energy+1e-8<cost)return;}\n        return next(st,e,d,w,...args);\n      };},\n      onShot(e,d,w) {\n        const c=config(e),cost=c?.energy?.usage[w.id];if(!cost)return;\n        const s=ensure(e);s.energy=Math.max(0,s.energy-cost);\n        const minimum=Math.min(...Object.values(c.energy.usage));\n        if(s.energy+1e-8<minimum&&(c.energy.full||c.reloadTime))begin(c,s);\n      },\n      actions(e) {\n        const c=config(e);if(!c?.reloadTime)return[];\n        const s=ensure(e);\n        return[{id:'reload',label:['Reload magazine','更换弹夹','탄창 재장전'],enabled:!e.site&&!e.inside&&!s.recharging&&s.energy<c.energy.max}];\n      },\n      order(o) {\n        if(o.action!=='reload'||!o.ids.length)return false;\n        const selected=o.ids.map(id=>game.st.ents.get(id));\n        if(selected.some(e=>!e||e.dead||e.owner!==o.owner||e.site||e.inside||!config(e)?.reloadTime))return false;\n        let accepted=false;\n        for(const e of selected){const c=config(e),s=ensure(e);if(!s.recharging&&s.energy<c.energy.max){begin(c,s);accepted=true;}}\n        return accepted;\n      },\n      inspect(e,privateView) {\n        const c=config(e);if(!privateView||!c?.energy)return[];\n        const s=ensure(e);\n        return[{id:'energy',label:['Magazine / energy','弹夹 / 能量','탄창 / 에너지'],value:Math.round(s.energy*100)/100,fraction:s.energy/c.energy.max,tone:s.recharging?'warning':'normal'},\n          ...(s.recharging?[{id:'reload',label:['Reloading','装填中','재장전 중'],value:s.remaining||undefined}]:[])];\n      },\n      render(e,privateView) {const s=states.get(e.id);return privateView&&s?{reloads:s.reloads}:{};},\n      snapshot(view) {\n        const entities={};\n        for(const [id,s]of states)if(!view||view.privateEntity(id))entities[id]={...s};\n        return {entities};\n      },\n      restore(raw) {\n        if(!raw||typeof raw!=='object'||Array.isArray(raw)||!raw.entities||typeof raw.entities!=='object'||Array.isArray(raw.entities))throw Error('Invalid source state');\n        const next=new Map();\n        for(const [key,s]of Object.entries(raw.entities)) {\n          if(!/^[1-9]\\d*$/.test(key)||!s||typeof s!=='object'||Array.isArray(s)||Object.keys(s).some(k=>!['energy','recharging','remaining','reloads'].includes(k))||\n            !Number.isFinite(s.energy)||s.energy<0||s.energy>1e8||typeof s.recharging!=='boolean'||!Number.isFinite(s.remaining)||s.remaining<0||s.remaining>3600||!Number.isSafeInteger(s.reloads)||s.reloads<0)throw Error('Invalid magazine state');\n          next.set(Number(key),{...s});\n        }\n        states.clear();for(const [id,s]of next)states.set(id,s);\n      },\n      validateRestoredState() {\n        for(const [id,s]of states){const e=game.st.ents.get(id),c=e&&config(e);if(!e||e.dead||!c?.energy||s.energy>c.energy.max+1e-8||s.remaining>(c.reloadTime??0)+1e-8)throw Error('Magazine state has no matching unit');}\n      },\n      dispose(){states.clear();}\n    };\n  }}]};\n}\n",
+        "sha256": "f3e1d4cf11b07260b7f7939568daff184c3098a5f054398c5066a5a4a800096e"
+      },
+      "presentation": {
+        "source": "// Uses only installed recordings and the host's existing rendering/audio pipelines.\nexport default function (sdk) {\n  const ID='adolence.source-v1';\n  return {\n    feedback(context,base) {\n      const resources=new Set(),seen=new Map(),scope=sdk.createRecordedAudioScope();let previous=-1;\n      return {\n        unitVoice(defId,action,entityId) {\n          const c=sdk.getDef(defId).extensions?.[ID],key=action==='select'&&c?.selectSound;\n          const url=key&&sdk.asset(key);\n          if(!url){base.unitVoice(defId,action,entityId);return;}\n          resources.add(url);sdk.playRecordedUnitVoice(defId,action,entityId,[url],{gain:.65,repeatMs:700});\n        },\n        update(frame) {\n          if(frame.time<previous){seen.clear();scope.reset();}previous=frame.time;\n          scope.setPaused(frame.paused);scope.update();\n          const active=new Set();\n          for(const e of context.game.st.ents.values()) {\n            if(e.dead||e.owner!==context.player)continue;\n            const c=sdk.getDef(e.defId).extensions?.[ID];if(!c?.reloadSound)continue;\n            const visual=sdk.contentRuntime(context.game)?.module(ID)?.render?.(e,true),count=visual?.reloads;\n            if(count===undefined)continue;active.add(e.id);\n            if(seen.has(e.id)&&count>seen.get(e.id)){const url=sdk.asset(c.reloadSound);if(url)scope.play(url,{position:{x:e.x,y:e.y},gain:.5});}\n            seen.set(e.id,count);\n          }\n          for(const id of seen.keys())if(!active.has(id))seen.delete(id);\n        },\n        dispose(){scope.dispose();seen.clear();sdk.releaseRecordedVoiceResources([...resources]);}\n      };\n    },\n    presentation(base) {\n      return {...base,Renderer:class SourceRenderer extends base.Renderer {\n        pictureOf(e,def,alpha) {\n          const p=super.pictureOf(e,def,alpha);\n          if(!def.extensions?.[ID]||def.domain!=='air'||!p.body||p.body.dirs||p.body.frames<2)return p;\n          const states=p.body.anims;\n          const firing=e.burstLeft>0||e.wcd.some(value=>value>0);\n          const range=(firing&&states?.firing)||(p.moved>.05&&states?.moving)||states?.idle;\n          if(range){const[first,last,fps]=range;p.frame=first+Math.floor(this.renderTime*(fps??p.body.fps??8)+e.id)%(last-first+1);}\n          return p;\n        }\n        drawContentDecal(g,d,cam,alpha,bounds) {\n          const match=/^(?:hulk|crash|ruin)\\.(.+)$/.exec(d.key);\n          // Prop debris shares the ruin prefix (for example ruin.d.tower).\n          // Only registered definitions can own this package's wreck artwork.\n          const def=match&&sdk.DEFS[match[1]],c=def?.extensions?.[ID],sp=c?.wreck&&sdk.getSprite(c.wreck);\n          if(!sp)return super.drawContentDecal?.(g,d,cam,alpha,bounds)??false;\n          const scale=sdk.unitDisplayScale(def),ss=sp.ss??1,w=sp.fw*scale,h=sp.fh*scale;\n          if(d.x+w/2<bounds.x0||d.x-w/2>bounds.x1||d.y+h/2<bounds.y0||d.y-h/2>bounds.y1)return true;\n          g.save();\n          try {\n            g.globalAlpha=Math.max(0,Math.min(1,d.t/(d.fade??6)));g.translate(d.x,d.y);\n            g.rotate(def.kind==='building'?0:(d.rot??0)+(d.spin??0)*(d.fall??0));\n            g.drawImage(sp.cv,0,0,sp.fw*ss,sp.fh*ss,-w/2,-h/2,w,h);\n          } finally {g.restore();}\n          return true;\n        }\n      }};\n    }\n  };\n}\n",
+        "sha256": "bc4541c43f6670caad13b51d31ab4cfc83f5d9360c18941f820736000c59a6e8"
+      }
     }
   ]
 }

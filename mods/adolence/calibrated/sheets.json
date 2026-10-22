@@ -1,0 +1,50 @@
+{
+  "tur.adolence-m1128": {
+    "key": "tur.adolence-m1128",
+    "file": "sprites/tur.adolence-m1128.png",
+    "frames": 1,
+    "rotated": true,
+    "fw": 52,
+    "fh": 58,
+    "barrels": [
+      [
+        0.48818898,
+        0.07801418,
+        0.51968504,
+        0.41843972
+      ]
+    ]
+  },
+  "tur.adolence-m1a2": {
+    "key": "tur.adolence-m1a2",
+    "file": "sprites/tur.adolence-m1a2.png",
+    "frames": 1,
+    "rotated": true,
+    "fw": 37,
+    "fh": 60,
+    "barrels": [
+      [
+        0.46808511,
+        0.01315789,
+        0.5212766,
+        0.31578947
+      ]
+    ]
+  },
+  "tur.adolence-m1a2-sepv3": {
+    "key": "tur.adolence-m1a2-sepv3",
+    "file": "sprites/tur.adolence-m1a2-sepv3.png",
+    "frames": 1,
+    "rotated": true,
+    "fw": 37,
+    "fh": 60,
+    "barrels": [
+      [
+        0.46808511,
+        0.01315789,
+        0.5212766,
+        0.31578947
+      ]
+    ]
+  }
+}

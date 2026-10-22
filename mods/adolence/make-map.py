@@ -18,6 +18,7 @@ top-left tile; a unit's `a` is its facing in degrees clockwise from east.
 """
 import base64
 import json
+import math
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -245,9 +246,30 @@ def reserve(owner, domain, slots, infantry=None):
                if d["id"] in rosters[owner] and d["id"] not in present
                and d["kind"] == "unit" and d.get("domain", "ground") in domain
                and (infantry is None or (d.get("radius", 9) <= 9) == infantry)]
-    assert len(missing) <= len(slots), f"Add showcase spaces for {[d['id'] for d in missing]}"
-    for d, (x, y) in zip(missing, slots):
-        u(d["id"].removeprefix("adolence-"), owner, x, y, 180 if owner else 0)
+    # Expand the parade ranks into free police-quarter ground as the source roster grows.
+    candidates = slots + ([(x,y) for y in (69,72) for x in range(6,94,4)] if domain==('ship',) else [(x,y) for y in range(4,66,2) for x in range(4,31,2)])
+    for d in missing:
+        for x,y in candidates:
+            allowed=(WATER,DEEP) if d.get('domain')=='ship' else (GRASS,SAND,ROAD)
+            if (x,y) in decor_tiles or t[y][x] not in allowed:continue
+            if any(piece['x']<=x<piece['x']+defs[piece['id']].get('fw',1) and piece['y']<=y<piece['y']+defs[piece['id']].get('fh',1) for piece in units):continue
+            if any(math.hypot(x-piece['x'],y-piece['y'])*32 < d.get('radius',9)+defs[piece['id']].get('radius',16)+12 for piece in units):continue
+            u(d['id'].removeprefix('adolence-'),owner,x,y,180 if owner else 0)
+            break
+        else:raise AssertionError('No safe showcase space for '+d['id'])
+
+# The restored source support buildings stand behind the motor pool.
+for suffix in ['guard-post','fuel-depot']:
+    d=defs['adolence-'+suffix]
+    for y in range(3,63):
+        placed=False
+        for x in range(4,29):
+            tiles={(xx,yy) for yy in range(y,y+d.get('fh',2)) for xx in range(x,x+d.get('fw',2))}
+            occupied={(xx,yy) for piece in units for yy in range(piece['y']-1,piece['y']+defs[piece['id']].get('fh',1)+1) for xx in range(piece['x']-1,piece['x']+defs[piece['id']].get('fw',1)+1)}|decor_tiles
+            if tiles & occupied or any(t[yy][xx] not in (GRASS,SAND,ROAD) for xx,yy in tiles):continue
+            b(suffix,0,x,y);placed=True;break
+        if placed:break
+    else:raise AssertionError('No support building space for '+suffix)
 
 
 # Infantry behind the precinct; spaced vehicle ranks on the southern apron.

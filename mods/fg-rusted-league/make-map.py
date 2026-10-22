@@ -205,7 +205,7 @@ for k, suffix in enumerate(heroes):
 # carrier makes itself (`wing`), which fly from their decks and not from the map
 WING_PLANES = {d["wing"]["unit"] for d in MOD["defs"] if d.get("wing")}
 CARRIER_LEVELS = {P + f"aircraft-carrier-{n}" for n in range(2, 6)}
-SELF_FORMS = {P + "mirage-disguised"} | WING_PLANES | CARRIER_LEVELS
+SELF_FORMS = {P + "mirage-disguised", P + "floating-array-landed", P + "battle-carrier-deployed"} | WING_PLANES | CARRIER_LEVELS
 # the air wing over the north-east of the base
 air = [d["id"][len(P):] for d in MOD["defs"] if d.get("domain") == "air" and d["id"] != P + "aircraft-carrier" and d["id"] not in SELF_FORMS]
 for k, suffix in enumerate(air):

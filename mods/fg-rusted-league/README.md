@@ -28,7 +28,7 @@ base and defences from the water.
 The command supplies 60 power for the opening mines and factories until the
 League can afford its nuclear generator. The faction uses the League roster;
 the original bug toggle remains outside this port, as described above.
-Faction selection requires Steel Tide 0.8.14 with format 2 support.
+This release uses format 4 and requires the executable extension host API 2.
 
 Some of its units build others, as they do in the original: the Lord of the Sky
 and the Battle Carrier launch helicopters, jets and gunships (and the Lord of
@@ -39,7 +39,7 @@ escorts, the Laser UFO the teleporter, and the rocket truck artillery, tank
 destroyers and submarines. Select one and its production is on the card beside
 its orders; each unit it builds is launched beside it, wherever it has got to.
 
-33 buildings:
+34 building definitions, including the landed Floating Array form:
 
 | building | what it does |
 | --- | --- |
@@ -62,10 +62,10 @@ its orders; each unit it builds is launched beside it, wherever it has got to.
 | Overloaded Nuclear Generator | the League's nuclear power station: +150 power, and money, fast |
 | Hero Barracks, Hero Tower | the barracks trains the hero tank; the tower lets a Lv3 hero reach its MAX |
 
-101 units: 30 on the ground, 32 in the air, 17 at sea and the 22 ranks of the
-hero tank. Twelve of them are forms or planes rather than units a line builds:
-the Mirage's disguise, the Amphibious Jet under water, the three deployed
-forms, the Aircraft Carrier's four levels, and the three carriers' planes.
+105 unit definitions, including the hero ranks, carrier aircraft and deployed
+forms. The Sky Support Carrier and Flying Battle Carrier are available from
+the Tactical Airfield; the latter can deploy on land and pack up again.
+The Floating Array has Land/Fly controls.
 
 The hero tank ranks up as it does in the original. The barracks trains the
 Lv1 tank. Its card offers three Lv2 lines, each of those three Lv3s, and each
@@ -87,7 +87,8 @@ The Aircraft Carrier builds interceptors from its card, one at a time, as a
 building takes its upgrades: four on its deck to begin with, eight at the
 most, and the last level recharges them far faster.
 
-Three carriers fly planes of their own: the Light Carrier eight attack
+Four carrier lines fly planes of their own: the Aircraft Carrier four to eight
+interceptors, the Light Carrier eight attack
 drones, the Carrier Airship ten small drones (it has no guns besides), and the
 Littoral Combat Ship one ASW plane, which hunts what the ship's sonar hears.
 The planes take off at what their carrier fights — what it is sent at, or else
@@ -96,13 +97,9 @@ their sortie is up, and are made again for nothing when they are lost. They are
 not the player's to select or order; a carrier sent at a target with no guns
 of its own closes to its planes' reach and waits there.
 
-The Mirage tank turns into a tree once it has stood still for a second. It
-turns back into a tank the moment it moves or fires. As a tree it is seen only
-from three tiles away, and nothing on the other side can be ordered to fire on
-it; a blast still reaches it. In the original the tank stays hidden while it
-moves too. Here it shows itself when it moves, as in Red Alert, and as the
-tank's frames say: two tank frames for moving and three tree frames for
-standing.
+The Mirage tank turns into a tree after 0.8 seconds and stays disguised while
+moving, as in the source. Firing reveals it briefly. As a tree it is seen only
+from three tiles away and cannot be targeted directly; blasts can still hit it.
 
 Units with a shield in the original have one here, drawn over the health bar,
 which recharges a little after the last hit. Units that mend themselves in the
@@ -118,8 +115,9 @@ they die. The blast spares their own side.
 ## The map
 
 *Proving Ground* (试验场, `maps/proving-ground.steel-tide-map`) stands the
-whole mod on one field: every building and every unit in it, 132 pieces (the
-Mirage puts on its own disguise). Seat 0
+whole mod on one field: 179 pieces, including the opposing force. Alternate
+forms and carrier aircraft are reached through their parent units; the Mirage
+puts on its own disguise. Seat 0
 opens in the south-west on a League base built out along the north edge — the
 command, the factories and their second levels, the three ore mines, the
 turret line, the labs and the superweapons — with the army formed up on the
@@ -158,8 +156,9 @@ the League, so they are not here; nor are the bugs.
 
 Helicopters carry their rotor spinning in their frames in the original; the
 converter keeps the pixels most frames agree on, which is the hull, and the
-game lays its own rotor over it. The Aircraft Carrier's interceptors, which the
-original launches as planes that live for two seconds, are its guns here. The
+game lays its own rotor over it. The Aircraft Carrier now launches real wing
+entities using the source interceptor's combat form. The source's intermediate
+ammo-driven conversion phases are adapted to native sorties and rearming. The
 Carrier Airship's hull is Rusted Warfare's own, so it wears the League's Kirov. Weapons fire with the game's own sounds for their kind.
 
 The art of the Strategic Bomber comes, the original says, from *未来战争*
@@ -168,7 +167,8 @@ The art of the Strategic Bomber comes, the original says, from *未来战争*
 ## Rebuilding
 
 The package is not part of this repository. With it unpacked at
-`rusted-warfare-mods/skycraft` and a stock Rusted Warfare at `rusted-warfare`:
+`rusted-warfare-mods/fg-rusted-league` and a stock Rusted Warfare at
+`rusted-warfare-mods/rusted-warfare`:
 
 ```
 python3 mods/fg-rusted-league/port-fg.py
@@ -182,3 +182,14 @@ ini. `rw-dex.py` only needs rerunning for a different build of the package.
 
 The art and the design are the FG Rusted League authors'. They are shared here with
 their permission, for Steel Tide, and are not free to reuse elsewhere.
+
+## Source comparison
+
+[PARITY.md](PARITY.md) distinguishes restored features, adaptations and remaining
+gaps. [source-audit.json](source-audit.json) maps definitions to original files,
+inventories source feature sections and records source hashes. The mod owns
+its `extensions/source/` schema, runtime and presentation; `port-fg.py` embeds
+those exact modules and hashes on every regeneration. Magazines now consume
+energy per shot, source hull decay is active, aircraft animation states play,
+and original wreck art is used where present. Building front/back composition
+preserves every frame instead of flattening animated factories.

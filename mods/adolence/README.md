@@ -11,8 +11,8 @@ faction picker. What comes across is the roster and the art: the police, the
 troops that come to their aid, their vehicles, aircraft and boats, and the
 dead. So does the part of the scripting the game's mod rules can carry (see
 The dead, below). The original's city/infected choice is now the game's faction
-selector. This release requires Steel Tide 0.8.16 for authored muzzle positions
-and native barrel recoil. The currencies, supply drops, difficulty scripts and
+selector. This release uses format 4 and requires the executable extension host API 2.
+It preserves the authored muzzle positions and native barrel recoil. The currencies, supply drops, difficulty scripts and
 infantry's own orders stay behind.
 
 ## Choose a side
@@ -38,7 +38,7 @@ conversion preserves the faction setup.
 
 ## What is in it
 
-Sixteen buildings, placed by their side's construction units:
+Eighteen buildings, placed by their side's construction units:
 
 | building | line | what it does |
 | --- | --- | --- |
@@ -51,6 +51,8 @@ Sixteen buildings, placed by their side's construction units:
 | Supply Cache → II | metal | an extractor on a deposit, 1.4 then 3.0 a second |
 | MG Tower | defence | a machine gun on a street mount, fires at aircraft |
 | Barricade | defence | a 1×1 block of steel to funnel the horde |
+| Police Guard Post | support | supply income and National Guard / Zhongzhou squad calls, with a garage |
+| Police Fuel Depot | economy | source credits, diesel and supply generation folded into metal |
 | SPK Colony | infected command | headquarters; breeds SPK Carriers |
 | Sin of Sloth | the dead | a nest on a deposit; extracts 1.4 metal a second and trains the dead |
 
@@ -59,8 +61,9 @@ guard base, with a boat on its list, is a naval yard like the game's own: the
 Police Engineer lays it on the water with a shore beside it, and it launches onto
 the water.
 
-Eighty-three units: 23 kinds of infantry including the Police Engineer,
-33 vehicles, 7 aircraft, 2 boats and 18 of the dead including the SPK Carrier.
+126 units, including the original infantry variants, civilian vehicles, command
+cars, drones, Eagle variants, Navigator and M1A2 SEPv2. The Armed Recon Drone
+can convert to the Attack Drone from its card.
 The infected raise their forces from nests, and the nests also breed on their own.
 
 ## The dead
@@ -130,7 +133,9 @@ original, are priced by what they take to kill.
 
 Hit points are 0.35× the original's. Damage is 0.14×, not 0.35×, because the
 package kills about three times faster between equals than this game does;
-the original's energy magazines are averaged into the reload. Ranges are 0.55
+source energy magazines now deplete shot by shot, block firing during recharge,
+and expose the original manual reload action where present. The prior port's
+damage caps and numeric calibration still apply. Ranges are 0.55
 of a tile per 20 original px, speeds 0.55 of the original's px per tick in px
 per second, and infantry a step quicker than that so they are not calibrated
 as tanks. Every conversion rule is in `port-rw.py`, with a hand-written
@@ -161,8 +166,9 @@ hull, showing where the gun overhangs it; the headlights of every
 vehicle and the torches of the infantry, which come on at dusk and are laid
 over the dark like lamps; the ambush car's brake lights when it stands; and
 the barrels of the machine-gun tower and the MG tanks, which turn while the
-gun fires. The interface decals — selection rings, waypoints, ammunition
-counters, preview icons — and the ones a script drives are left out. So are
+gun fires. The interface decals — selection rings, waypoints and preview icons — and
+those driven by arbitrary scripts are left out. Magazine charge and reload
+status are shown on the unit card by the mod extension. So are
 the original's shadow decals: it casts an offset silhouette under every
 vehicle and its turret, and so does this game now, hull and turret each,
 and a building's gun on its roof, from the art itself — the same look
@@ -192,11 +198,16 @@ hull centre independently of the main gun.
 each saved sheet's `fw`, `fh` and pivot, plus the game's unit display scale.
 `port-rw.py` applies these measurements on every conversion; `--no-media` keeps
 the existing PNGs and their sheet sizes. Re-measure the calibration if the art
-changes. Damage, reload, range and the rest of the combat values are unchanged.
+changes. The `calibrated/` inputs preserve the reviewed Abrams and Stryker
+turret composites during a full rebuild; their measured barrel geometry stays
+in `weapon_geometry.py`.
 
 The firing sounds are the package's recordings, cut to dry mono one-shots
 under a second. The Abrams and the Stryker fire the 120 mm and 105 mm
 recordings; small arms fire the calibre recordings the original assigned them.
+Selection and reload recordings keep their complete duration. Source walker,
+mortar and drone animation ranges are retained, and original wreck images
+replace generic burnt artwork where the source supplies them.
 
 ## Licence and credit
 
@@ -206,3 +217,22 @@ lift them for another mod. The conversion script and the manifest are the
 port's own. The original's authors asked that anyone using their work be
 credited in the contributors list, and the author field and this file do that.
 The package itself (`rusted-warfare-mods/`) is not part of this repository.
+
+## Source comparison and rebuilding
+
+See [PARITY.md](PARITY.md) for the implemented changes, deliberate adaptations
+and remaining gaps. [source-audit.json](source-audit.json) records source files,
+feature counts, unresolved transformations and input hashes. This is a fidelity
+pass, not complete emulation of Rusted Warfare scripts.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 mods/adolence/port-rw.py
+PYTHONDONTWRITEBYTECODE=1 python3 mods/adolence/make-map.py
+node tools/check.mjs mods/adolence
+node mods/adolence/verify-maps.mjs
+```
+
+Use `--no-media` only when the generated media already exists. A full rebuild
+also requires Pillow and ffmpeg. The original is read from
+`rusted-warfare-mods/adolence`. The extension's schema, runtime and presentation
+sources belong to this mod; the converter embeds their exact code and hashes.
