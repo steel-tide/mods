@@ -893,7 +893,7 @@ def main():
     manifest = {
         'format': 'steel-tide-mod', 'v': 4, 'capacity': 'large',
         'id': 'gw', 'name': ['GW BattleUniverse', '高达战争_战争宇宙', 'GW 배틀 유니버스'],
-        'version': '0.0.2', 'author': '恐龙再健身房',
+        'version': '0.0.3', 'author': '恐龙再健身房',
         'description': [
             'Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits — and open their first development plans.',
             '高达战争_战争宇宙：一年战争。地球联邦军与吉翁公国军的基础兵力——坦克、飞机、舰艇与最早的机动战士——以及各自的第一项开发计划。',
