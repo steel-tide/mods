@@ -384,22 +384,22 @@
             "sprite": "tur.usgr-re-t72b3",
             "file": "sprites/tur.usgr-re-t72b3.png",
             "sourceSize": [
-              46,
-              100
+              44,
+              97
             ],
             "displaySize": [
               18,
-              40
+              39
             ],
             "pivot": [
               0.5,
-              0.69
+              0.71134
             ],
             "barrelRegion": [
-              0.456522,
-              0.02,
-              0.521739,
-              0.56
+              0.454545,
+              0.020619,
+              0.522727,
+              0.57732
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -417,10 +417,10 @@
             "sprite": "tur.usgr-re-t72b3",
             "barrels": [
               [
-                0.456522,
-                0.02,
-                0.521739,
-                0.56
+                0.454545,
+                0.020619,
+                0.522727,
+                0.57732
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -431,7 +431,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.953125,
+              "forward": 42.175406,
               "lateral": -0.390625
             }
           ]
@@ -512,22 +512,22 @@
             "sprite": "tur.usgr-re-t72b3",
             "file": "sprites/tur.usgr-re-t72b3.png",
             "sourceSize": [
-              46,
-              100
+              44,
+              97
             ],
             "displaySize": [
               18,
-              40
+              39
             ],
             "pivot": [
               0.5,
-              0.69
+              0.71134
             ],
             "barrelRegion": [
-              0.456522,
-              0.02,
-              0.521739,
-              0.56
+              0.454545,
+              0.020619,
+              0.522727,
+              0.57732
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -545,10 +545,10 @@
             "sprite": "tur.usgr-re-t72b3",
             "barrels": [
               [
-                0.456522,
-                0.02,
-                0.521739,
-                0.56
+                0.454545,
+                0.020619,
+                0.522727,
+                0.57732
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -559,7 +559,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.953125,
+              "forward": 42.175406,
               "lateral": -0.390625
             }
           ]
@@ -624,26 +624,26 @@
             "sprite": "tur.usgr-re-t90m",
             "file": "sprites/tur.usgr-re-t90m.png",
             "sourceSize": [
-              56,
-              121
+              48,
+              114
             ],
             "displaySize": [
-              22,
-              48
+              19,
+              46
             ],
             "pivot": [
               0.5,
-              0.586777
+              0.622807
             ],
             "barrelRegion": [
-              0.482143,
-              0.016529,
-              0.535714,
-              0.495868
+              0.479167,
+              0.017544,
+              0.541667,
+              0.526316
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              45.0,
+              39.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -657,10 +657,10 @@
             "sprite": "tur.usgr-re-t90m",
             "barrels": [
               [
-                0.482143,
-                0.016529,
-                0.535714,
-                0.495868
+                0.479167,
+                0.017544,
+                0.541667,
+                0.526316
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -671,7 +671,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.8364,
+              "forward": 43.592378,
               "lateral": 0.390625
             }
           ]
@@ -752,26 +752,26 @@
             "sprite": "tur.usgr-re-t90m",
             "file": "sprites/tur.usgr-re-t90m.png",
             "sourceSize": [
-              56,
-              121
+              48,
+              114
             ],
             "displaySize": [
-              22,
-              48
+              19,
+              46
             ],
             "pivot": [
               0.5,
-              0.586777
+              0.622807
             ],
             "barrelRegion": [
-              0.482143,
-              0.016529,
-              0.535714,
-              0.495868
+              0.479167,
+              0.017544,
+              0.541667,
+              0.526316
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              45.0,
+              39.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -785,10 +785,10 @@
             "sprite": "tur.usgr-re-t90m",
             "barrels": [
               [
-                0.482143,
-                0.016529,
-                0.535714,
-                0.495868
+                0.479167,
+                0.017544,
+                0.541667,
+                0.526316
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -799,7 +799,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.8364,
+              "forward": 43.592378,
               "lateral": 0.390625
             }
           ]
@@ -864,27 +864,27 @@
             "sprite": "tur.usgr-re-t14",
             "file": "sprites/tur.usgr-re-t14.png",
             "sourceSize": [
-              52,
-              142
+              40,
+              133
             ],
             "displaySize": [
-              21,
-              57
+              16,
+              53
             ],
             "pivot": [
               0.5,
-              0.661972
+              0.676692
             ],
             "barrelRegion": [
-              0.480769,
-              0.042254,
-              0.538462,
-              0.507042
+              0.475,
+              0.015038,
+              0.55,
+              0.511278
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              43.0,
-              9
+              33.0,
+              3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
             "section": "decal_炮管APFSDS_1",
@@ -897,10 +897,10 @@
             "sprite": "tur.usgr-re-t14",
             "barrels": [
               [
-                0.480769,
-                0.042254,
-                0.538462,
-                0.507042
+                0.475,
+                0.015038,
+                0.55,
+                0.511278
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -911,7 +911,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 55.441256,
+              "forward": 54.866681,
               "lateral": 0.390625
             }
           ]
@@ -992,27 +992,27 @@
             "sprite": "tur.usgr-re-t14",
             "file": "sprites/tur.usgr-re-t14.png",
             "sourceSize": [
-              52,
-              142
+              40,
+              133
             ],
             "displaySize": [
-              21,
-              57
+              16,
+              53
             ],
             "pivot": [
               0.5,
-              0.661972
+              0.676692
             ],
             "barrelRegion": [
-              0.480769,
-              0.042254,
-              0.538462,
-              0.507042
+              0.475,
+              0.015038,
+              0.55,
+              0.511278
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              43.0,
-              9
+              33.0,
+              3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
             "section": "decal_炮管HE_1",
@@ -1025,10 +1025,10 @@
             "sprite": "tur.usgr-re-t14",
             "barrels": [
               [
-                0.480769,
-                0.042254,
-                0.538462,
-                0.507042
+                0.475,
+                0.015038,
+                0.55,
+                0.511278
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -1039,7 +1039,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 55.441256,
+              "forward": 54.866681,
               "lateral": 0.390625
             }
           ]
@@ -1070,27 +1070,27 @@
             "sprite": "tur.usgr-re-t14",
             "file": "sprites/tur.usgr-re-t14.png",
             "sourceSize": [
-              52,
-              142
+              40,
+              133
             ],
             "displaySize": [
-              21,
-              57
+              16,
+              53
             ],
             "pivot": [
               0.5,
-              0.661972
+              0.676692
             ],
             "barrelRegion": [
-              0.480769,
-              0.042254,
-              0.538462,
-              0.507042
+              0.475,
+              0.015038,
+              0.55,
+              0.511278
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              43.0,
-              9
+              33.0,
+              3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
             "section": "decal_炮管ATGM_1",
@@ -1101,7 +1101,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 55.441256,
+              "forward": 54.866681,
               "lateral": 0.390625
             }
           ]
@@ -2102,26 +2102,26 @@
             "sprite": "tur.usgr-re-t72a",
             "file": "sprites/tur.usgr-re-t72a.png",
             "sourceSize": [
-              46,
-              97
+              42,
+              94
             ],
             "displaySize": [
-              18,
-              39
+              17,
+              38
             ],
             "pivot": [
               0.5,
-              0.71134
+              0.734043
             ],
             "barrelRegion": [
-              0.478261,
-              0.020619,
-              0.543478,
-              0.57732
+              0.47619,
+              0.021277,
+              0.547619,
+              0.595745
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              37.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -2135,10 +2135,10 @@
             "sprite": "tur.usgr-re-t72a",
             "barrels": [
               [
-                0.478261,
-                0.020619,
-                0.543478,
-                0.57732
+                0.47619,
+                0.021277,
+                0.547619,
+                0.595745
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -2149,7 +2149,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.175406,
+              "forward": 42.411928,
               "lateral": 0.390625
             }
           ]
@@ -2230,26 +2230,26 @@
             "sprite": "tur.usgr-re-t72a",
             "file": "sprites/tur.usgr-re-t72a.png",
             "sourceSize": [
-              46,
-              97
+              42,
+              94
             ],
             "displaySize": [
-              18,
-              39
+              17,
+              38
             ],
             "pivot": [
               0.5,
-              0.71134
+              0.734043
             ],
             "barrelRegion": [
-              0.478261,
-              0.020619,
-              0.543478,
-              0.57732
+              0.47619,
+              0.021277,
+              0.547619,
+              0.595745
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              37.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -2263,10 +2263,10 @@
             "sprite": "tur.usgr-re-t72a",
             "barrels": [
               [
-                0.478261,
-                0.020619,
-                0.543478,
-                0.57732
+                0.47619,
+                0.021277,
+                0.547619,
+                0.595745
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -2277,7 +2277,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.175406,
+              "forward": 42.411928,
               "lateral": 0.390625
             }
           ]
@@ -2308,26 +2308,26 @@
             "sprite": "tur.usgr-re-t72a",
             "file": "sprites/tur.usgr-re-t72a.png",
             "sourceSize": [
-              46,
-              97
+              42,
+              94
             ],
             "displaySize": [
-              18,
-              39
+              17,
+              38
             ],
             "pivot": [
               0.5,
-              0.71134
+              0.734043
             ],
             "barrelRegion": [
-              0.478261,
-              0.020619,
-              0.543478,
-              0.57732
+              0.47619,
+              0.021277,
+              0.547619,
+              0.595745
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              37.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -2341,10 +2341,10 @@
             "sprite": "tur.usgr-re-t72a",
             "barrels": [
               [
-                0.478261,
-                0.020619,
-                0.543478,
-                0.57732
+                0.47619,
+                0.021277,
+                0.547619,
+                0.595745
               ]
             ],
             "section": "decal_炮管HEAT_1",
@@ -2355,7 +2355,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.175406,
+              "forward": 42.411928,
               "lateral": 0.390625
             }
           ]
@@ -2529,26 +2529,26 @@
             "sprite": "tur.usgr-re-t72b",
             "file": "sprites/tur.usgr-re-t72b.png",
             "sourceSize": [
-              50,
-              97
+              44,
+              94
             ],
             "displaySize": [
-              20,
-              39
+              18,
+              38
             ],
             "pivot": [
               0.5,
-              0.71134
+              0.734043
             ],
             "barrelRegion": [
-              0.46,
-              0.020619,
-              0.52,
-              0.57732
+              0.454545,
+              0.021277,
+              0.522727,
+              0.595745
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              39.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -2562,10 +2562,10 @@
             "sprite": "tur.usgr-re-t72b",
             "barrels": [
               [
-                0.46,
-                0.020619,
-                0.52,
-                0.57732
+                0.454545,
+                0.021277,
+                0.522727,
+                0.595745
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -2576,7 +2576,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.175406,
+              "forward": 42.411928,
               "lateral": -0.390625
             }
           ]
@@ -2657,26 +2657,26 @@
             "sprite": "tur.usgr-re-t72b",
             "file": "sprites/tur.usgr-re-t72b.png",
             "sourceSize": [
-              50,
-              97
+              44,
+              94
             ],
             "displaySize": [
-              20,
-              39
+              18,
+              38
             ],
             "pivot": [
               0.5,
-              0.71134
+              0.734043
             ],
             "barrelRegion": [
-              0.46,
-              0.020619,
-              0.52,
-              0.57732
+              0.454545,
+              0.021277,
+              0.522727,
+              0.595745
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              39.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -2690,10 +2690,10 @@
             "sprite": "tur.usgr-re-t72b",
             "barrels": [
               [
-                0.46,
-                0.020619,
-                0.52,
-                0.57732
+                0.454545,
+                0.021277,
+                0.522727,
+                0.595745
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -2704,7 +2704,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.175406,
+              "forward": 42.411928,
               "lateral": -0.390625
             }
           ]
@@ -2735,26 +2735,26 @@
             "sprite": "tur.usgr-re-t72b",
             "file": "sprites/tur.usgr-re-t72b.png",
             "sourceSize": [
-              50,
-              97
+              44,
+              94
             ],
             "displaySize": [
-              20,
-              39
+              18,
+              38
             ],
             "pivot": [
               0.5,
-              0.71134
+              0.734043
             ],
             "barrelRegion": [
-              0.46,
-              0.020619,
-              0.52,
-              0.57732
+              0.454545,
+              0.021277,
+              0.522727,
+              0.595745
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              39.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -2768,10 +2768,10 @@
             "sprite": "tur.usgr-re-t72b",
             "barrels": [
               [
-                0.46,
-                0.020619,
-                0.52,
-                0.57732
+                0.454545,
+                0.021277,
+                0.522727,
+                0.595745
               ]
             ],
             "section": "decal_炮管HEAT_1",
@@ -2782,7 +2782,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.175406,
+              "forward": 42.411928,
               "lateral": -0.390625
             }
           ]
@@ -2822,26 +2822,26 @@
             "sprite": "tur.usgr-re-t72b1989",
             "file": "sprites/tur.usgr-re-t72b1989.png",
             "sourceSize": [
-              40,
-              98
+              38,
+              96
             ],
             "displaySize": [
-              16,
-              39
+              15,
+              38
             ],
             "pivot": [
               0.5,
-              0.734694
+              0.75
             ],
             "barrelRegion": [
-              0.475,
-              0.05102,
-              0.55,
-              0.602041
+              0.473684,
+              0.052083,
+              0.552632,
+              0.614583
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              33.0,
+              31.0,
               7
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -2855,10 +2855,10 @@
             "sprite": "tur.usgr-re-t72b1989",
             "barrels": [
               [
-                0.475,
-                0.05102,
-                0.55,
-                0.602041
+                0.473684,
+                0.052083,
+                0.552632,
+                0.614583
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -2869,7 +2869,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.036041,
+              "forward": 41.796875,
               "lateral": 0.390625
             }
           ]
@@ -2950,26 +2950,26 @@
             "sprite": "tur.usgr-re-t72b1989",
             "file": "sprites/tur.usgr-re-t72b1989.png",
             "sourceSize": [
-              40,
-              98
+              38,
+              96
             ],
             "displaySize": [
-              16,
-              39
+              15,
+              38
             ],
             "pivot": [
               0.5,
-              0.734694
+              0.75
             ],
             "barrelRegion": [
-              0.475,
-              0.05102,
-              0.55,
-              0.602041
+              0.473684,
+              0.052083,
+              0.552632,
+              0.614583
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              33.0,
+              31.0,
               7
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -2983,10 +2983,10 @@
             "sprite": "tur.usgr-re-t72b1989",
             "barrels": [
               [
-                0.475,
-                0.05102,
-                0.55,
-                0.602041
+                0.473684,
+                0.052083,
+                0.552632,
+                0.614583
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -2997,7 +2997,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.036041,
+              "forward": 41.796875,
               "lateral": 0.390625
             }
           ]
@@ -3062,22 +3062,22 @@
             "sprite": "tur.usgr-re-t72b3m",
             "file": "sprites/tur.usgr-re-t72b3m.png",
             "sourceSize": [
-              46,
-              97
+              44,
+              95
             ],
             "displaySize": [
               18,
-              39
+              38
             ],
             "pivot": [
               0.5,
-              0.71134
+              0.726316
             ],
             "barrelRegion": [
-              0.478261,
-              0.020619,
-              0.543478,
-              0.57732
+              0.477273,
+              0.021053,
+              0.545455,
+              0.589474
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -3095,10 +3095,10 @@
             "sprite": "tur.usgr-re-t72b3m",
             "barrels": [
               [
-                0.478261,
-                0.020619,
-                0.543478,
-                0.57732
+                0.477273,
+                0.021053,
+                0.545455,
+                0.589474
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -3109,7 +3109,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.175406,
+              "forward": 41.953137,
               "lateral": 0.390625
             }
           ]
@@ -3190,22 +3190,22 @@
             "sprite": "tur.usgr-re-t72b3m",
             "file": "sprites/tur.usgr-re-t72b3m.png",
             "sourceSize": [
-              46,
-              97
+              44,
+              95
             ],
             "displaySize": [
               18,
-              39
+              38
             ],
             "pivot": [
               0.5,
-              0.71134
+              0.726316
             ],
             "barrelRegion": [
-              0.478261,
-              0.020619,
-              0.543478,
-              0.57732
+              0.477273,
+              0.021053,
+              0.545455,
+              0.589474
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -3223,10 +3223,10 @@
             "sprite": "tur.usgr-re-t72b3m",
             "barrels": [
               [
-                0.478261,
-                0.020619,
-                0.543478,
-                0.57732
+                0.477273,
+                0.021053,
+                0.545455,
+                0.589474
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -3237,7 +3237,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.175406,
+              "forward": 41.953137,
               "lateral": 0.390625
             }
           ]
@@ -3302,26 +3302,26 @@
             "sprite": "tur.usgr-re-t72ba",
             "file": "sprites/tur.usgr-re-t72ba.png",
             "sourceSize": [
-              50,
-              95
+              48,
+              92
             ],
             "displaySize": [
-              20,
-              38
+              19,
+              37
             ],
             "pivot": [
               0.5,
-              0.726316
+              0.75
             ],
             "barrelRegion": [
-              0.46,
-              0.021053,
-              0.52,
-              0.589474
+              0.458333,
+              0.021739,
+              0.520833,
+              0.608696
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              39.0,
+              37.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -3335,10 +3335,10 @@
             "sprite": "tur.usgr-re-t72ba",
             "barrels": [
               [
-                0.46,
-                0.021053,
-                0.52,
-                0.589474
+                0.458333,
+                0.021739,
+                0.520833,
+                0.608696
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -3349,7 +3349,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.953137,
+              "forward": 42.1875,
               "lateral": -0.390625
             }
           ]
@@ -3430,26 +3430,26 @@
             "sprite": "tur.usgr-re-t72ba",
             "file": "sprites/tur.usgr-re-t72ba.png",
             "sourceSize": [
-              50,
-              95
+              48,
+              92
             ],
             "displaySize": [
-              20,
-              38
+              19,
+              37
             ],
             "pivot": [
               0.5,
-              0.726316
+              0.75
             ],
             "barrelRegion": [
-              0.46,
-              0.021053,
-              0.52,
-              0.589474
+              0.458333,
+              0.021739,
+              0.520833,
+              0.608696
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              39.0,
+              37.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -3463,10 +3463,10 @@
             "sprite": "tur.usgr-re-t72ba",
             "barrels": [
               [
-                0.46,
-                0.021053,
-                0.52,
-                0.589474
+                0.458333,
+                0.021739,
+                0.520833,
+                0.608696
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -3477,7 +3477,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.953137,
+              "forward": 42.1875,
               "lateral": -0.390625
             }
           ]
@@ -3542,22 +3542,22 @@
             "sprite": "tur.usgr-re-t72bu",
             "file": "sprites/tur.usgr-re-t72bu.png",
             "sourceSize": [
-              46,
-              97
+              44,
+              94
             ],
             "displaySize": [
               18,
-              39
+              38
             ],
             "pivot": [
               0.5,
-              0.731959
+              0.755319
             ],
             "barrelRegion": [
-              0.478261,
-              0.041237,
-              0.543478,
-              0.597938
+              0.477273,
+              0.042553,
+              0.545455,
+              0.617021
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -3575,10 +3575,10 @@
             "sprite": "tur.usgr-re-t72bu",
             "barrels": [
               [
-                0.478261,
-                0.041237,
-                0.543478,
-                0.597938
+                0.477273,
+                0.042553,
+                0.545455,
+                0.617021
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -3589,7 +3589,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.260002,
+              "forward": 42.503316,
               "lateral": 0.390625
             }
           ]
@@ -3670,22 +3670,22 @@
             "sprite": "tur.usgr-re-t72bu",
             "file": "sprites/tur.usgr-re-t72bu.png",
             "sourceSize": [
-              46,
-              97
+              44,
+              94
             ],
             "displaySize": [
               18,
-              39
+              38
             ],
             "pivot": [
               0.5,
-              0.731959
+              0.755319
             ],
             "barrelRegion": [
-              0.478261,
-              0.041237,
-              0.543478,
-              0.597938
+              0.477273,
+              0.042553,
+              0.545455,
+              0.617021
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -3703,10 +3703,10 @@
             "sprite": "tur.usgr-re-t72bu",
             "barrels": [
               [
-                0.478261,
-                0.041237,
-                0.543478,
-                0.597938
+                0.477273,
+                0.042553,
+                0.545455,
+                0.617021
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -3717,7 +3717,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.260002,
+              "forward": 42.503316,
               "lateral": 0.390625
             }
           ]
@@ -3782,26 +3782,26 @@
             "sprite": "tur.usgr-re-t80b",
             "file": "sprites/tur.usgr-re-t80b.png",
             "sourceSize": [
-              52,
-              99
+              40,
+              97
             ],
             "displaySize": [
-              21,
-              40
+              16,
+              39
             ],
             "pivot": [
               0.5,
-              0.717172
+              0.731959
             ],
             "barrelRegion": [
-              0.461538,
-              0.020202,
-              0.519231,
-              0.606061
+              0.45,
+              0.020619,
+              0.525,
+              0.618557
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              41.0,
+              31.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -3815,10 +3815,10 @@
             "sprite": "tur.usgr-re-t80b",
             "barrels": [
               [
-                0.461538,
-                0.020202,
-                0.519231,
-                0.606061
+                0.45,
+                0.020619,
+                0.525,
+                0.618557
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -3829,7 +3829,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 43.651375,
+              "forward": 43.431877,
               "lateral": -0.390625
             }
           ]
@@ -3910,26 +3910,26 @@
             "sprite": "tur.usgr-re-t80b",
             "file": "sprites/tur.usgr-re-t80b.png",
             "sourceSize": [
-              52,
-              99
+              40,
+              97
             ],
             "displaySize": [
-              21,
-              40
+              16,
+              39
             ],
             "pivot": [
               0.5,
-              0.717172
+              0.731959
             ],
             "barrelRegion": [
-              0.461538,
-              0.020202,
-              0.519231,
-              0.606061
+              0.45,
+              0.020619,
+              0.525,
+              0.618557
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              41.0,
+              31.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -3943,10 +3943,10 @@
             "sprite": "tur.usgr-re-t80b",
             "barrels": [
               [
-                0.461538,
-                0.020202,
-                0.519231,
-                0.606061
+                0.45,
+                0.020619,
+                0.525,
+                0.618557
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -3957,7 +3957,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 43.651375,
+              "forward": 43.431877,
               "lateral": -0.390625
             }
           ]
@@ -4022,26 +4022,26 @@
             "sprite": "tur.usgr-re-t80bv",
             "file": "sprites/tur.usgr-re-t80bv.png",
             "sourceSize": [
-              52,
-              101
+              42,
+              99
             ],
             "displaySize": [
-              21,
+              17,
               40
             ],
             "pivot": [
               0.5,
-              0.70297
+              0.717172
             ],
             "barrelRegion": [
-              0.480769,
-              0.019802,
-              0.538462,
-              0.594059
+              0.47619,
+              0.020202,
+              0.547619,
+              0.606061
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              43.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -4055,10 +4055,10 @@
             "sprite": "tur.usgr-re-t80bv",
             "barrels": [
               [
-                0.480769,
-                0.019802,
-                0.538462,
-                0.594059
+                0.47619,
+                0.020202,
+                0.547619,
+                0.606061
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -4069,7 +4069,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.76375,
+              "forward": 43.651375,
               "lateral": 0.390625
             }
           ]
@@ -4150,26 +4150,26 @@
             "sprite": "tur.usgr-re-t80bv",
             "file": "sprites/tur.usgr-re-t80bv.png",
             "sourceSize": [
-              52,
-              101
+              42,
+              99
             ],
             "displaySize": [
-              21,
+              17,
               40
             ],
             "pivot": [
               0.5,
-              0.70297
+              0.717172
             ],
             "barrelRegion": [
-              0.480769,
-              0.019802,
-              0.538462,
-              0.594059
+              0.47619,
+              0.020202,
+              0.547619,
+              0.606061
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              43.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -4183,10 +4183,10 @@
             "sprite": "tur.usgr-re-t80bv",
             "barrels": [
               [
-                0.480769,
-                0.019802,
-                0.538462,
-                0.594059
+                0.47619,
+                0.020202,
+                0.547619,
+                0.606061
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -4197,7 +4197,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.76375,
+              "forward": 43.651375,
               "lateral": 0.390625
             }
           ]
@@ -4262,26 +4262,26 @@
             "sprite": "tur.usgr-re-t80bvm",
             "file": "sprites/tur.usgr-re-t80bvm.png",
             "sourceSize": [
-              54,
-              108
+              46,
+              104
             ],
             "displaySize": [
-              22,
-              43
+              18,
+              42
             ],
             "pivot": [
               0.5,
-              0.657407
+              0.682692
             ],
             "barrelRegion": [
-              0.481481,
-              0.018519,
-              0.537037,
-              0.555556
+              0.478261,
+              0.019231,
+              0.543478,
+              0.576923
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              45.0,
+              37.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -4295,10 +4295,10 @@
             "sprite": "tur.usgr-re-t80bvm",
             "barrels": [
               [
-                0.481481,
-                0.018519,
-                0.537037,
-                0.555556
+                0.478261,
+                0.019231,
+                0.543478,
+                0.576923
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -4309,7 +4309,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.997658,
+              "forward": 43.629787,
               "lateral": 0.390625
             }
           ]
@@ -4390,26 +4390,26 @@
             "sprite": "tur.usgr-re-t80bvm",
             "file": "sprites/tur.usgr-re-t80bvm.png",
             "sourceSize": [
-              54,
-              108
+              46,
+              104
             ],
             "displaySize": [
-              22,
-              43
+              18,
+              42
             ],
             "pivot": [
               0.5,
-              0.657407
+              0.682692
             ],
             "barrelRegion": [
-              0.481481,
-              0.018519,
-              0.537037,
-              0.555556
+              0.478261,
+              0.019231,
+              0.543478,
+              0.576923
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              45.0,
+              37.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -4423,10 +4423,10 @@
             "sprite": "tur.usgr-re-t80bvm",
             "barrels": [
               [
-                0.481481,
-                0.018519,
-                0.537037,
-                0.555556
+                0.478261,
+                0.019231,
+                0.543478,
+                0.576923
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -4437,7 +4437,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.997658,
+              "forward": 43.629787,
               "lateral": 0.390625
             }
           ]
@@ -4502,26 +4502,26 @@
             "sprite": "tur.usgr-re-t80u-6c63c137",
             "file": "sprites/tur.usgr-re-t80u-6c63c137.png",
             "sourceSize": [
-              56,
-              104
+              50,
+              101
             ],
             "displaySize": [
-              22,
-              42
+              20,
+              40
             ],
             "pivot": [
               0.5,
-              0.682692
+              0.70297
             ],
             "barrelRegion": [
-              0.482143,
-              0.019231,
-              0.535714,
-              0.576923
+              0.48,
+              0.019802,
+              0.54,
+              0.594059
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              45.0,
+              41.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -4535,10 +4535,10 @@
             "sprite": "tur.usgr-re-t80u-6c63c137",
             "barrels": [
               [
-                0.482143,
-                0.019231,
-                0.535714,
-                0.576923
+                0.48,
+                0.019802,
+                0.54,
+                0.594059
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -4549,7 +4549,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 43.629787,
+              "forward": 42.76375,
               "lateral": 0.390625
             }
           ]
@@ -4630,26 +4630,26 @@
             "sprite": "tur.usgr-re-t80u-6c63c137",
             "file": "sprites/tur.usgr-re-t80u-6c63c137.png",
             "sourceSize": [
-              56,
-              104
+              50,
+              101
             ],
             "displaySize": [
-              22,
-              42
+              20,
+              40
             ],
             "pivot": [
               0.5,
-              0.682692
+              0.70297
             ],
             "barrelRegion": [
-              0.482143,
-              0.019231,
-              0.535714,
-              0.576923
+              0.48,
+              0.019802,
+              0.54,
+              0.594059
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              45.0,
+              41.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -4663,10 +4663,10 @@
             "sprite": "tur.usgr-re-t80u-6c63c137",
             "barrels": [
               [
-                0.482143,
-                0.019231,
-                0.535714,
-                0.576923
+                0.48,
+                0.019802,
+                0.54,
+                0.594059
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -4677,7 +4677,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 43.629787,
+              "forward": 42.76375,
               "lateral": 0.390625
             }
           ]
@@ -4742,26 +4742,26 @@
             "sprite": "tur.usgr-re-t80uk",
             "file": "sprites/tur.usgr-re-t80uk.png",
             "sourceSize": [
-              58,
-              104
+              50,
+              101
             ],
             "displaySize": [
-              23,
-              42
+              20,
+              40
             ],
             "pivot": [
               0.5,
-              0.682692
+              0.70297
             ],
             "barrelRegion": [
-              0.482759,
-              0.019231,
-              0.534483,
-              0.576923
+              0.48,
+              0.019802,
+              0.54,
+              0.594059
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              47.0,
+              41.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -4775,10 +4775,10 @@
             "sprite": "tur.usgr-re-t80uk",
             "barrels": [
               [
-                0.482759,
-                0.019231,
-                0.534483,
-                0.576923
+                0.48,
+                0.019802,
+                0.54,
+                0.594059
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -4789,7 +4789,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 43.629787,
+              "forward": 42.76375,
               "lateral": 0.390625
             }
           ]
@@ -4870,26 +4870,26 @@
             "sprite": "tur.usgr-re-t80uk",
             "file": "sprites/tur.usgr-re-t80uk.png",
             "sourceSize": [
-              58,
-              104
+              50,
+              101
             ],
             "displaySize": [
-              23,
-              42
+              20,
+              40
             ],
             "pivot": [
               0.5,
-              0.682692
+              0.70297
             ],
             "barrelRegion": [
-              0.482759,
-              0.019231,
-              0.534483,
-              0.576923
+              0.48,
+              0.019802,
+              0.54,
+              0.594059
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              47.0,
+              41.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -4903,10 +4903,10 @@
             "sprite": "tur.usgr-re-t80uk",
             "barrels": [
               [
-                0.482759,
-                0.019231,
-                0.534483,
-                0.576923
+                0.48,
+                0.019802,
+                0.54,
+                0.594059
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -4917,7 +4917,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 43.629787,
+              "forward": 42.76375,
               "lateral": 0.390625
             }
           ]
@@ -4982,26 +4982,26 @@
             "sprite": "tur.usgr-re-t90a",
             "file": "sprites/tur.usgr-re-t90a.png",
             "sourceSize": [
-              50,
-              102
+              44,
+              98
             ],
             "displaySize": [
-              20,
-              41
+              18,
+              39
             ],
             "pivot": [
               0.5,
-              0.696078
+              0.72449
             ],
             "barrelRegion": [
-              0.48,
-              0.019608,
-              0.54,
-              0.588235
+              0.477273,
+              0.020408,
+              0.545455,
+              0.612245
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              41.0,
+              37.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -5015,10 +5015,10 @@
             "sprite": "tur.usgr-re-t90a",
             "barrels": [
               [
-                0.48,
-                0.019608,
-                0.54,
-                0.588235
+                0.477273,
+                0.020408,
+                0.545455,
+                0.612245
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -5029,7 +5029,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 43.420622,
+              "forward": 42.976734,
               "lateral": 0.390625
             }
           ]
@@ -5110,26 +5110,26 @@
             "sprite": "tur.usgr-re-t90a",
             "file": "sprites/tur.usgr-re-t90a.png",
             "sourceSize": [
-              50,
-              102
+              44,
+              98
             ],
             "displaySize": [
-              20,
-              41
+              18,
+              39
             ],
             "pivot": [
               0.5,
-              0.696078
+              0.72449
             ],
             "barrelRegion": [
-              0.48,
-              0.019608,
-              0.54,
-              0.588235
+              0.477273,
+              0.020408,
+              0.545455,
+              0.612245
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              41.0,
+              37.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -5143,10 +5143,10 @@
             "sprite": "tur.usgr-re-t90a",
             "barrels": [
               [
-                0.48,
-                0.019608,
-                0.54,
-                0.588235
+                0.477273,
+                0.020408,
+                0.545455,
+                0.612245
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -5157,7 +5157,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 43.420622,
+              "forward": 42.976734,
               "lateral": 0.390625
             }
           ]
@@ -14839,26 +14839,26 @@
             "sprite": "tur.usgr-re-m60a3",
             "file": "sprites/tur.usgr-re-m60a3.png",
             "sourceSize": [
-              42,
-              102
+              40,
+              99
             ],
             "displaySize": [
-              17,
-              41
+              16,
+              40
             ],
             "pivot": [
               0.5,
-              0.72549
+              0.747475
             ],
             "barrelRegion": [
-              0.452381,
-              0.019608,
-              0.619048,
-              0.509804
+              0.45,
+              0.020202,
+              0.575,
+              0.525253
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              33.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -14872,10 +14872,10 @@
             "sprite": "tur.usgr-re-m60a3",
             "barrels": [
               [
-                0.452381,
-                0.019608,
-                0.619048,
-                0.509804
+                0.45,
+                0.020202,
+                0.575,
+                0.525253
               ]
             ],
             "section": "decal_炮管",
@@ -14886,7 +14886,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 45.304828,
+              "forward": 45.545313,
               "lateral": 0.390625
             }
           ]
@@ -14967,26 +14967,26 @@
             "sprite": "tur.usgr-re-m60a3",
             "file": "sprites/tur.usgr-re-m60a3.png",
             "sourceSize": [
-              42,
-              102
+              40,
+              99
             ],
             "displaySize": [
-              17,
-              41
+              16,
+              40
             ],
             "pivot": [
               0.5,
-              0.72549
+              0.747475
             ],
             "barrelRegion": [
-              0.452381,
-              0.019608,
-              0.619048,
-              0.509804
+              0.45,
+              0.020202,
+              0.575,
+              0.525253
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              33.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -15000,10 +15000,10 @@
             "sprite": "tur.usgr-re-m60a3",
             "barrels": [
               [
-                0.452381,
-                0.019608,
-                0.619048,
-                0.509804
+                0.45,
+                0.020202,
+                0.575,
+                0.525253
               ]
             ],
             "section": "decal_炮管1",
@@ -15014,7 +15014,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 45.304828,
+              "forward": 45.545313,
               "lateral": 0.390625
             }
           ]
@@ -15080,26 +15080,26 @@
             "sprite": "tur.usgr-re-m60a3tts",
             "file": "sprites/tur.usgr-re-m60a3tts.png",
             "sourceSize": [
-              46,
-              104
+              40,
+              101
             ],
             "displaySize": [
-              18,
-              42
+              16,
+              40
             ],
             "pivot": [
               0.5,
-              0.730769
+              0.752475
             ],
             "barrelRegion": [
-              0.456522,
-              0.019231,
-              0.608696,
-              0.5
+              0.45,
+              0.019802,
+              0.575,
+              0.514851
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              37.0,
+              33.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -15113,10 +15113,10 @@
             "sprite": "tur.usgr-re-m60a3tts",
             "barrels": [
               [
-                0.456522,
-                0.019231,
-                0.608696,
-                0.5
+                0.45,
+                0.019802,
+                0.575,
+                0.514851
               ]
             ],
             "section": "decal_炮管",
@@ -15127,7 +15127,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 46.784841,
+              "forward": 45.857813,
               "lateral": 0.390625
             }
           ]
@@ -15208,26 +15208,26 @@
             "sprite": "tur.usgr-re-m60a3tts",
             "file": "sprites/tur.usgr-re-m60a3tts.png",
             "sourceSize": [
-              46,
-              104
+              40,
+              101
             ],
             "displaySize": [
-              18,
-              42
+              16,
+              40
             ],
             "pivot": [
               0.5,
-              0.730769
+              0.752475
             ],
             "barrelRegion": [
-              0.456522,
-              0.019231,
-              0.608696,
-              0.5
+              0.45,
+              0.019802,
+              0.575,
+              0.514851
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              37.0,
+              33.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -15241,10 +15241,10 @@
             "sprite": "tur.usgr-re-m60a3tts",
             "barrels": [
               [
-                0.456522,
-                0.019231,
-                0.608696,
-                0.5
+                0.45,
+                0.019802,
+                0.575,
+                0.514851
               ]
             ],
             "section": "decal_炮管1",
@@ -15255,7 +15255,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 46.784841,
+              "forward": 45.857813,
               "lateral": 0.390625
             }
           ]
@@ -17026,11 +17026,11 @@
             "sprite": "tur.usgr-re-amx10rc",
             "file": "sprites/tur.usgr-re-amx10rc.png",
             "sourceSize": [
-              28,
+              26,
               76
             ],
             "displaySize": [
-              11,
+              10,
               30
             ],
             "pivot": [
@@ -17038,14 +17038,14 @@
               0.723684
             ],
             "barrelRegion": [
-              0.464286,
+              0.461538,
               0.026316,
-              0.571429,
+              0.576923,
               0.578947
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              22.0,
+              20.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -17059,9 +17059,9 @@
             "sprite": "tur.usgr-re-amx10rc",
             "barrels": [
               [
-                0.464286,
+                0.461538,
                 0.026316,
-                0.571429,
+                0.576923,
                 0.578947
               ]
             ],
@@ -17154,11 +17154,11 @@
             "sprite": "tur.usgr-re-amx10rc",
             "file": "sprites/tur.usgr-re-amx10rc.png",
             "sourceSize": [
-              28,
+              26,
               76
             ],
             "displaySize": [
-              11,
+              10,
               30
             ],
             "pivot": [
@@ -17166,14 +17166,14 @@
               0.723684
             ],
             "barrelRegion": [
-              0.464286,
+              0.461538,
               0.026316,
-              0.571429,
+              0.576923,
               0.578947
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              22.0,
+              20.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -17187,9 +17187,9 @@
             "sprite": "tur.usgr-re-amx10rc",
             "barrels": [
               [
-                0.464286,
+                0.461538,
                 0.026316,
-                0.571429,
+                0.576923,
                 0.578947
               ]
             ],
@@ -17266,26 +17266,26 @@
             "sprite": "tur.usgr-re-l2a6",
             "file": "sprites/tur.usgr-re-l2a6.png",
             "sourceSize": [
-              40,
-              121
+              36,
+              118
             ],
             "displaySize": [
-              16,
-              48
+              14,
+              47
             ],
             "pivot": [
               0.5,
-              0.677686
+              0.694915
             ],
             "barrelRegion": [
-              0.45,
-              0.016529,
-              0.65,
-              0.46281
+              0.444444,
+              0.016949,
+              0.555556,
+              0.474576
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              32.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -17299,10 +17299,10 @@
             "sprite": "tur.usgr-re-l2a6",
             "barrels": [
               [
-                0.45,
-                0.016529,
-                0.65,
-                0.46281
+                0.444444,
+                0.016949,
+                0.555556,
+                0.474576
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -17313,7 +17313,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 49.654575,
+              "forward": 49.860945,
               "lateral": 0.0
             }
           ]
@@ -17394,26 +17394,26 @@
             "sprite": "tur.usgr-re-l2a6",
             "file": "sprites/tur.usgr-re-l2a6.png",
             "sourceSize": [
-              40,
-              121
+              36,
+              118
             ],
             "displaySize": [
-              16,
-              48
+              14,
+              47
             ],
             "pivot": [
               0.5,
-              0.677686
+              0.694915
             ],
             "barrelRegion": [
-              0.45,
-              0.016529,
-              0.65,
-              0.46281
+              0.444444,
+              0.016949,
+              0.555556,
+              0.474576
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              32.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -17427,10 +17427,10 @@
             "sprite": "tur.usgr-re-l2a6",
             "barrels": [
               [
-                0.45,
-                0.016529,
-                0.65,
-                0.46281
+                0.444444,
+                0.016949,
+                0.555556,
+                0.474576
               ]
             ],
             "section": "decal_炮管HEAT_1",
@@ -17441,7 +17441,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 49.654575,
+              "forward": 49.860945,
               "lateral": 0.0
             }
           ]
@@ -18292,26 +18292,26 @@
             "sprite": "tur.usgr-re-l2a4",
             "file": "sprites/tur.usgr-re-l2a4.png",
             "sourceSize": [
-              38,
-              100
+              36,
+              98
             ],
             "displaySize": [
-              15,
-              40
+              14,
+              39
             ],
             "pivot": [
               0.5,
-              0.66
+              0.673469
             ],
             "barrelRegion": [
-              0.447368,
-              0.02,
-              0.710526,
-              0.39
+              0.444444,
+              0.020408,
+              0.555556,
+              0.397959
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              30.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -18325,10 +18325,10 @@
             "sprite": "tur.usgr-re-l2a4",
             "barrels": [
               [
-                0.447368,
-                0.02,
-                0.710526,
-                0.39
+                0.444444,
+                0.020408,
+                0.555556,
+                0.397959
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -18339,7 +18339,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 40.078125,
+              "forward": 39.867642,
               "lateral": 0.0
             }
           ]
@@ -18420,26 +18420,26 @@
             "sprite": "tur.usgr-re-l2a4",
             "file": "sprites/tur.usgr-re-l2a4.png",
             "sourceSize": [
-              38,
-              100
+              36,
+              98
             ],
             "displaySize": [
-              15,
-              40
+              14,
+              39
             ],
             "pivot": [
               0.5,
-              0.66
+              0.673469
             ],
             "barrelRegion": [
-              0.447368,
-              0.02,
-              0.710526,
-              0.39
+              0.444444,
+              0.020408,
+              0.555556,
+              0.397959
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              30.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -18453,10 +18453,10 @@
             "sprite": "tur.usgr-re-l2a4",
             "barrels": [
               [
-                0.447368,
-                0.02,
-                0.710526,
-                0.39
+                0.444444,
+                0.020408,
+                0.555556,
+                0.397959
               ]
             ],
             "section": "decal_炮管HEAT_1",
@@ -18467,7 +18467,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 40.078125,
+              "forward": 39.867642,
               "lateral": 0.0
             }
           ]
@@ -18533,26 +18533,26 @@
             "sprite": "tur.usgr-re-l2a5",
             "file": "sprites/tur.usgr-re-l2a5.png",
             "sourceSize": [
-              40,
-              108
+              36,
+              105
             ],
             "displaySize": [
-              16,
-              43
+              14,
+              42
             ],
             "pivot": [
               0.5,
-              0.657407
+              0.67619
             ],
             "barrelRegion": [
-              0.45,
-              0.018519,
-              0.65,
-              0.388889
+              0.444444,
+              0.019048,
+              0.555556,
+              0.4
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              32.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -18566,10 +18566,10 @@
             "sprite": "tur.usgr-re-l2a5",
             "barrels": [
               [
-                0.45,
-                0.018519,
-                0.65,
-                0.388889
+                0.444444,
+                0.019048,
+                0.555556,
+                0.4
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -18580,7 +18580,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.997658,
+              "forward": 43.203094,
               "lateral": 0.0
             }
           ]
@@ -18661,26 +18661,26 @@
             "sprite": "tur.usgr-re-l2a5",
             "file": "sprites/tur.usgr-re-l2a5.png",
             "sourceSize": [
-              40,
-              108
+              36,
+              105
             ],
             "displaySize": [
-              16,
-              43
+              14,
+              42
             ],
             "pivot": [
               0.5,
-              0.657407
+              0.67619
             ],
             "barrelRegion": [
-              0.45,
-              0.018519,
-              0.65,
-              0.388889
+              0.444444,
+              0.019048,
+              0.555556,
+              0.4
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              32.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -18694,10 +18694,10 @@
             "sprite": "tur.usgr-re-l2a5",
             "barrels": [
               [
-                0.45,
-                0.018519,
-                0.65,
-                0.388889
+                0.444444,
+                0.019048,
+                0.555556,
+                0.4
               ]
             ],
             "section": "decal_炮管HEAT_1",
@@ -18708,7 +18708,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.997658,
+              "forward": 43.203094,
               "lateral": 0.0
             }
           ]
@@ -18774,26 +18774,26 @@
             "sprite": "tur.usgr-re-l2a7",
             "file": "sprites/tur.usgr-re-l2a7.png",
             "sourceSize": [
-              40,
-              125
+              36,
+              123
             ],
             "displaySize": [
-              16,
-              50
+              14,
+              49
             ],
             "pivot": [
               0.5,
-              0.672
+              0.682927
             ],
             "barrelRegion": [
-              0.45,
-              0.016,
-              0.65,
-              0.448
+              0.444444,
+              0.01626,
+              0.555556,
+              0.455285
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              32.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -18807,10 +18807,10 @@
             "sprite": "tur.usgr-re-l2a7",
             "barrels": [
               [
-                0.45,
-                0.016,
-                0.65,
-                0.448
+                0.444444,
+                0.01626,
+                0.555556,
+                0.455285
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -18821,7 +18821,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 51.328125,
+              "forward": 51.114723,
               "lateral": 0.0
             }
           ]
@@ -18902,26 +18902,26 @@
             "sprite": "tur.usgr-re-l2a7",
             "file": "sprites/tur.usgr-re-l2a7.png",
             "sourceSize": [
-              40,
-              125
+              36,
+              123
             ],
             "displaySize": [
-              16,
-              50
+              14,
+              49
             ],
             "pivot": [
               0.5,
-              0.672
+              0.682927
             ],
             "barrelRegion": [
-              0.45,
-              0.016,
-              0.65,
-              0.448
+              0.444444,
+              0.01626,
+              0.555556,
+              0.455285
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              32.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -18935,10 +18935,10 @@
             "sprite": "tur.usgr-re-l2a7",
             "barrels": [
               [
-                0.45,
-                0.016,
-                0.65,
-                0.448
+                0.444444,
+                0.01626,
+                0.555556,
+                0.455285
               ]
             ],
             "section": "decal_炮管HEAT_1",
@@ -18949,7 +18949,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 51.328125,
+              "forward": 51.114723,
               "lateral": 0.0
             }
           ]
@@ -19555,21 +19555,21 @@
             "file": "sprites/tur.usgr-re-azur.png",
             "sourceSize": [
               40,
-              112
+              110
             ],
             "displaySize": [
               16,
-              45
+              44
             ],
             "pivot": [
               0.5,
-              0.6875
+              0.7
             ],
             "barrelRegion": [
               0.475,
-              0.017857,
+              0.018182,
               0.55,
-              0.464286
+              0.472727
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -19588,9 +19588,9 @@
             "barrels": [
               [
                 0.475,
-                0.017857,
+                0.018182,
                 0.55,
-                0.464286
+                0.472727
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -19601,7 +19601,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 47.167969,
+              "forward": 46.953125,
               "lateral": 0.390625
             }
           ]
@@ -19683,21 +19683,21 @@
             "file": "sprites/tur.usgr-re-azur.png",
             "sourceSize": [
               40,
-              112
+              110
             ],
             "displaySize": [
               16,
-              45
+              44
             ],
             "pivot": [
               0.5,
-              0.6875
+              0.7
             ],
             "barrelRegion": [
               0.475,
-              0.017857,
+              0.018182,
               0.55,
-              0.464286
+              0.472727
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -19716,9 +19716,9 @@
             "barrels": [
               [
                 0.475,
-                0.017857,
+                0.018182,
                 0.55,
-                0.464286
+                0.472727
               ]
             ],
             "section": "decal_炮管HEAT_1",
@@ -19729,7 +19729,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 47.167969,
+              "forward": 46.953125,
               "lateral": 0.390625
             }
           ]
@@ -21275,26 +21275,26 @@
             "sprite": "tur.usgr-re-l2a8",
             "file": "sprites/tur.usgr-re-l2a8.png",
             "sourceSize": [
-              44,
-              115
+              36,
+              111
             ],
             "displaySize": [
-              18,
-              46
+              14,
+              44
             ],
             "pivot": [
               0.5,
-              0.695652
+              0.720721
             ],
             "barrelRegion": [
-              0.454545,
-              0.017391,
-              0.613636,
-              0.443478
+              0.444444,
+              0.018018,
+              0.527778,
+              0.459459
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              27.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -21308,10 +21308,10 @@
             "sprite": "tur.usgr-re-l2a8",
             "barrels": [
               [
-                0.454545,
-                0.017391,
-                0.613636,
-                0.443478
+                0.444444,
+                0.018018,
+                0.527778,
+                0.459459
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -21322,7 +21322,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 48.828113,
+              "forward": 48.377694,
               "lateral": -0.390625
             }
           ]
@@ -21403,26 +21403,26 @@
             "sprite": "tur.usgr-re-l2a8",
             "file": "sprites/tur.usgr-re-l2a8.png",
             "sourceSize": [
-              44,
-              115
+              36,
+              111
             ],
             "displaySize": [
-              18,
-              46
+              14,
+              44
             ],
             "pivot": [
               0.5,
-              0.695652
+              0.720721
             ],
             "barrelRegion": [
-              0.454545,
-              0.017391,
-              0.613636,
-              0.443478
+              0.444444,
+              0.018018,
+              0.527778,
+              0.459459
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              27.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -21436,10 +21436,10 @@
             "sprite": "tur.usgr-re-l2a8",
             "barrels": [
               [
-                0.454545,
-                0.017391,
-                0.613636,
-                0.443478
+                0.444444,
+                0.018018,
+                0.527778,
+                0.459459
               ]
             ],
             "section": "decal_炮管HEAT_1",
@@ -21450,7 +21450,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 48.828113,
+              "forward": 48.377694,
               "lateral": -0.390625
             }
           ]
@@ -21794,11 +21794,11 @@
             "sprite": "tur.usgr-re-unit-6ae36ee8dc",
             "file": "sprites/tur.usgr-re-unit-6ae36ee8dc.png",
             "sourceSize": [
-              24,
+              16,
               96
             ],
             "displaySize": [
-              10,
+              6,
               38
             ],
             "pivot": [
@@ -21806,14 +21806,14 @@
               0.760417
             ],
             "barrelRegion": [
-              0.25,
+              0.125,
               0.020833,
-              0.916667,
+              0.875,
               0.979167
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              19.0,
+              11.5,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -21827,9 +21827,9 @@
             "sprite": "tur.usgr-re-unit-6ae36ee8dc",
             "barrels": [
               [
-                0.25,
+                0.125,
                 0.020833,
-                0.916667,
+                0.875,
                 0.979167
               ]
             ],
@@ -21842,7 +21842,7 @@
           "muzzlePoints": [
             {
               "forward": 43.977884,
-              "lateral": -0.390625
+              "lateral": -0.195312
             }
           ]
         }
@@ -22312,26 +22312,26 @@
             "sprite": "tur.usgr-re-915",
             "file": "sprites/tur.usgr-re-915.png",
             "sourceSize": [
-              36,
-              90
+              32,
+              88
             ],
             "displaySize": [
-              14,
-              36
+              13,
+              35
             ],
             "pivot": [
               0.5,
-              0.755556
+              0.772727
             ],
             "barrelRegion": [
-              0.444444,
-              0.022222,
-              0.666667,
-              0.588889
+              0.4375,
+              0.022727,
+              0.53125,
+              0.602273
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              27.0,
+              25.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -22345,10 +22345,10 @@
             "sprite": "tur.usgr-re-915",
             "barrels": [
               [
-                0.444444,
-                0.022222,
-                0.666667,
-                0.588889
+                0.4375,
+                0.022727,
+                0.53125,
+                0.602273
               ]
             ],
             "section": "decal_炮管",
@@ -22359,7 +22359,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.32815,
+              "forward": 41.086633,
               "lateral": -0.390625
             }
           ]
@@ -22490,26 +22490,26 @@
             "sprite": "tur.usgr-re-915",
             "file": "sprites/tur.usgr-re-915.png",
             "sourceSize": [
-              36,
-              90
+              32,
+              88
             ],
             "displaySize": [
-              14,
-              36
+              13,
+              35
             ],
             "pivot": [
               0.5,
-              0.755556
+              0.772727
             ],
             "barrelRegion": [
-              0.444444,
-              0.022222,
-              0.666667,
-              0.588889
+              0.4375,
+              0.022727,
+              0.53125,
+              0.602273
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              27.0,
+              25.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -22523,10 +22523,10 @@
             "sprite": "tur.usgr-re-915",
             "barrels": [
               [
-                0.444444,
-                0.022222,
-                0.666667,
-                0.588889
+                0.4375,
+                0.022727,
+                0.53125,
+                0.602273
               ]
             ],
             "section": "decal_炮管1",
@@ -22537,7 +22537,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.32815,
+              "forward": 41.086633,
               "lateral": -0.390625
             }
           ]
@@ -22814,21 +22814,21 @@
             "file": "sprites/tur.usgr-re-pt85.png",
             "sourceSize": [
               26,
-              69
+              66
             ],
             "displaySize": [
               10,
-              28
+              26
             ],
             "pivot": [
               0.5,
-              0.753623
+              0.787879
             ],
             "barrelRegion": [
               0.461538,
-              0.028986,
+              0.030303,
               0.576923,
-              0.753623
+              0.787879
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -22844,7 +22844,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 31.799131,
+              "forward": 30.835709,
               "lateral": 0.0
             }
           ]
@@ -22926,21 +22926,21 @@
             "file": "sprites/tur.usgr-re-pt85.png",
             "sourceSize": [
               26,
-              69
+              66
             ],
             "displaySize": [
               10,
-              28
+              26
             ],
             "pivot": [
               0.5,
-              0.753623
+              0.787879
             ],
             "barrelRegion": [
               0.461538,
-              0.028986,
+              0.030303,
               0.576923,
-              0.753623
+              0.787879
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -22956,7 +22956,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 31.799131,
+              "forward": 30.835709,
               "lateral": 0.0
             }
           ]
@@ -22988,21 +22988,21 @@
             "file": "sprites/tur.usgr-re-pt85.png",
             "sourceSize": [
               26,
-              69
+              66
             ],
             "displaySize": [
               10,
-              28
+              26
             ],
             "pivot": [
               0.5,
-              0.753623
+              0.787879
             ],
             "barrelRegion": [
               0.461538,
-              0.028986,
+              0.030303,
               0.576923,
-              0.753623
+              0.787879
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -23018,7 +23018,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 31.799131,
+              "forward": 30.835709,
               "lateral": 0.0
             }
           ]
@@ -23083,26 +23083,26 @@
             "sprite": "tur.usgr-re-t3485",
             "file": "sprites/tur.usgr-re-t3485.png",
             "sourceSize": [
-              28,
-              71
+              24,
+              69
             ],
             "displaySize": [
-              11,
+              10,
               28
             ],
             "pivot": [
               0.5,
-              0.746479
+              0.768116
             ],
             "barrelRegion": [
-              0.464286,
-              0.028169,
-              0.642857,
-              0.535211
+              0.458333,
+              0.028986,
+              0.541667,
+              0.536232
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              22.0,
+              20.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -23116,10 +23116,10 @@
             "sprite": "tur.usgr-re-t3485",
             "barrels": [
               [
-                0.464286,
-                0.028169,
-                0.642857,
-                0.535211
+                0.458333,
+                0.028986,
+                0.541667,
+                0.536232
               ]
             ],
             "section": "decal_炮管",
@@ -23130,7 +23130,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 31.486581,
+              "forward": 32.4332,
               "lateral": 0.0
             }
           ]
@@ -23211,26 +23211,26 @@
             "sprite": "tur.usgr-re-t3485",
             "file": "sprites/tur.usgr-re-t3485.png",
             "sourceSize": [
-              28,
-              71
+              24,
+              69
             ],
             "displaySize": [
-              11,
+              10,
               28
             ],
             "pivot": [
               0.5,
-              0.746479
+              0.768116
             ],
             "barrelRegion": [
-              0.464286,
-              0.028169,
-              0.642857,
-              0.535211
+              0.458333,
+              0.028986,
+              0.541667,
+              0.536232
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              22.0,
+              20.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -23244,10 +23244,10 @@
             "sprite": "tur.usgr-re-t3485",
             "barrels": [
               [
-                0.464286,
-                0.028169,
-                0.642857,
-                0.535211
+                0.458333,
+                0.028986,
+                0.541667,
+                0.536232
               ]
             ],
             "section": "decal_炮管1",
@@ -23258,7 +23258,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 31.486581,
+              "forward": 32.4332,
               "lateral": 0.0
             }
           ]
@@ -23324,26 +23324,26 @@
             "sprite": "tur.usgr-re-214",
             "file": "sprites/tur.usgr-re-214.png",
             "sourceSize": [
-              38,
-              87
+              34,
+              85
             ],
             "displaySize": [
-              15,
-              35
+              14,
+              34
             ],
             "pivot": [
               0.5,
-              0.781609
+              0.8
             ],
             "barrelRegion": [
-              0.447368,
-              0.022989,
-              0.631579,
-              0.609195
+              0.441176,
+              0.023529,
+              0.529412,
+              0.623529
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              28.0,
+              26.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -23357,10 +23357,10 @@
             "sprite": "tur.usgr-re-214",
             "barrels": [
               [
-                0.447368,
-                0.022989,
-                0.631579,
-                0.609195
+                0.441176,
+                0.023529,
+                0.529412,
+                0.623529
               ]
             ],
             "section": "decal_炮管",
@@ -23371,7 +23371,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.572367,
+              "forward": 41.328125,
               "lateral": -0.78125
             }
           ]
@@ -23452,26 +23452,26 @@
             "sprite": "tur.usgr-re-214",
             "file": "sprites/tur.usgr-re-214.png",
             "sourceSize": [
-              38,
-              87
+              34,
+              85
             ],
             "displaySize": [
-              15,
-              35
+              14,
+              34
             ],
             "pivot": [
               0.5,
-              0.781609
+              0.8
             ],
             "barrelRegion": [
-              0.447368,
-              0.022989,
-              0.631579,
-              0.609195
+              0.441176,
+              0.023529,
+              0.529412,
+              0.623529
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              28.0,
+              26.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -23485,10 +23485,10 @@
             "sprite": "tur.usgr-re-214",
             "barrels": [
               [
-                0.447368,
-                0.022989,
-                0.631579,
-                0.609195
+                0.441176,
+                0.023529,
+                0.529412,
+                0.623529
               ]
             ],
             "section": "decal_炮管1",
@@ -23499,7 +23499,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.572367,
+              "forward": 41.328125,
               "lateral": -0.78125
             }
           ]
@@ -23565,22 +23565,22 @@
             "sprite": "tur.usgr-re-215",
             "file": "sprites/tur.usgr-re-215.png",
             "sourceSize": [
-              36,
-              87
+              34,
+              85
             ],
             "displaySize": [
               14,
-              35
+              34
             ],
             "pivot": [
               0.5,
-              0.781609
+              0.8
             ],
             "barrelRegion": [
-              0.444444,
-              0.022989,
-              0.638889,
-              0.609195
+              0.441176,
+              0.023529,
+              0.529412,
+              0.623529
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -23598,10 +23598,10 @@
             "sprite": "tur.usgr-re-215",
             "barrels": [
               [
-                0.444444,
-                0.022989,
-                0.638889,
-                0.609195
+                0.441176,
+                0.023529,
+                0.529412,
+                0.623529
               ]
             ],
             "section": "decal_炮管",
@@ -23612,7 +23612,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.572367,
+              "forward": 41.328125,
               "lateral": -0.78125
             }
           ]
@@ -23693,22 +23693,22 @@
             "sprite": "tur.usgr-re-215",
             "file": "sprites/tur.usgr-re-215.png",
             "sourceSize": [
-              36,
-              87
+              34,
+              85
             ],
             "displaySize": [
               14,
-              35
+              34
             ],
             "pivot": [
               0.5,
-              0.781609
+              0.8
             ],
             "barrelRegion": [
-              0.444444,
-              0.022989,
-              0.638889,
-              0.609195
+              0.441176,
+              0.023529,
+              0.529412,
+              0.623529
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -23726,10 +23726,10 @@
             "sprite": "tur.usgr-re-215",
             "barrels": [
               [
-                0.444444,
-                0.022989,
-                0.638889,
-                0.609195
+                0.441176,
+                0.023529,
+                0.529412,
+                0.623529
               ]
             ],
             "section": "decal_炮管1",
@@ -23740,7 +23740,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.572367,
+              "forward": 41.328125,
               "lateral": -0.78125
             }
           ]
@@ -23806,22 +23806,22 @@
             "sprite": "tur.usgr-re-216",
             "file": "sprites/tur.usgr-re-216.png",
             "sourceSize": [
-              36,
-              89
+              34,
+              87
             ],
             "displaySize": [
               14,
-              36
+              35
             ],
             "pivot": [
               0.5,
-              0.764045
+              0.781609
             ],
             "barrelRegion": [
-              0.444444,
-              0.022472,
-              0.638889,
-              0.595506
+              0.441176,
+              0.022989,
+              0.529412,
+              0.609195
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -23839,10 +23839,10 @@
             "sprite": "tur.usgr-re-216",
             "barrels": [
               [
-                0.444444,
-                0.022472,
-                0.638889,
-                0.595506
+                0.441176,
+                0.022989,
+                0.529412,
+                0.609195
               ]
             ],
             "section": "decal_炮管",
@@ -23853,7 +23853,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.805656,
+              "forward": 41.572367,
               "lateral": -0.78125
             }
           ]
@@ -23959,22 +23959,22 @@
             "sprite": "tur.usgr-re-216",
             "file": "sprites/tur.usgr-re-216.png",
             "sourceSize": [
-              36,
-              89
+              34,
+              87
             ],
             "displaySize": [
               14,
-              36
+              35
             ],
             "pivot": [
               0.5,
-              0.764045
+              0.781609
             ],
             "barrelRegion": [
-              0.444444,
-              0.022472,
-              0.638889,
-              0.595506
+              0.441176,
+              0.022989,
+              0.529412,
+              0.609195
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -23992,10 +23992,10 @@
             "sprite": "tur.usgr-re-216",
             "barrels": [
               [
-                0.444444,
-                0.022472,
-                0.638889,
-                0.595506
+                0.441176,
+                0.022989,
+                0.529412,
+                0.609195
               ]
             ],
             "section": "decal_炮管1",
@@ -24006,7 +24006,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 41.805656,
+              "forward": 41.572367,
               "lateral": -0.78125
             }
           ]
@@ -25068,26 +25068,26 @@
             "sprite": "tur.usgr-re-k1a1-e17a7bf0",
             "file": "sprites/tur.usgr-re-k1a1-e17a7bf0.png",
             "sourceSize": [
-              46,
-              99
+              42,
+              96
             ],
             "displaySize": [
-              18,
-              40
+              17,
+              38
             ],
             "pivot": [
               0.5,
-              0.59596
+              0.614583
             ],
             "barrelRegion": [
-              0.434783,
-              0.030303,
-              0.586957,
-              0.454545
+              0.428571,
+              0.03125,
+              0.547619,
+              0.458333
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              33.0,
               4
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -25101,10 +25101,10 @@
             "sprite": "tur.usgr-re-k1a1-e17a7bf0",
             "barrels": [
               [
-                0.434783,
-                0.030303,
-                0.586957,
-                0.454545
+                0.428571,
+                0.03125,
+                0.547619,
+                0.458333
               ]
             ],
             "section": "decal_炮管",
@@ -25115,7 +25115,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 35.685,
+              "forward": 34.928366,
               "lateral": -0.390625
             }
           ]
@@ -25196,26 +25196,26 @@
             "sprite": "tur.usgr-re-k1a1-e17a7bf0",
             "file": "sprites/tur.usgr-re-k1a1-e17a7bf0.png",
             "sourceSize": [
-              46,
-              99
+              42,
+              96
             ],
             "displaySize": [
-              18,
-              40
+              17,
+              38
             ],
             "pivot": [
               0.5,
-              0.59596
+              0.614583
             ],
             "barrelRegion": [
-              0.434783,
-              0.030303,
-              0.586957,
-              0.454545
+              0.428571,
+              0.03125,
+              0.547619,
+              0.458333
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              33.0,
               4
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -25229,10 +25229,10 @@
             "sprite": "tur.usgr-re-k1a1-e17a7bf0",
             "barrels": [
               [
-                0.434783,
-                0.030303,
-                0.586957,
-                0.454545
+                0.428571,
+                0.03125,
+                0.547619,
+                0.458333
               ]
             ],
             "section": "decal_炮管1",
@@ -25243,7 +25243,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 35.685,
+              "forward": 34.928366,
               "lateral": -0.390625
             }
           ]
@@ -25518,26 +25518,26 @@
             "sprite": "tur.usgr-re-k1-badb7283",
             "file": "sprites/tur.usgr-re-k1-badb7283.png",
             "sourceSize": [
-              46,
-              112
+              42,
+              110
             ],
             "displaySize": [
-              18,
-              45
+              17,
+              44
             ],
             "pivot": [
               0.5,
-              0.678571
+              0.690909
             ],
             "barrelRegion": [
-              0.456522,
-              0.017857,
-              0.586957,
-              0.5625
+              0.452381,
+              0.018182,
+              0.52381,
+              0.563636
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              33.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -25551,10 +25551,10 @@
             "sprite": "tur.usgr-re-k1-badb7283",
             "barrels": [
               [
-                0.456522,
-                0.017857,
-                0.586957,
-                0.5625
+                0.452381,
+                0.018182,
+                0.52381,
+                0.563636
               ]
             ],
             "section": "decal_炮管",
@@ -25565,7 +25565,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 46.540148,
+              "forward": 46.328119,
               "lateral": -0.390625
             }
           ]
@@ -25646,26 +25646,26 @@
             "sprite": "tur.usgr-re-k1-badb7283",
             "file": "sprites/tur.usgr-re-k1-badb7283.png",
             "sourceSize": [
-              46,
-              112
+              42,
+              110
             ],
             "displaySize": [
-              18,
-              45
+              17,
+              44
             ],
             "pivot": [
               0.5,
-              0.678571
+              0.690909
             ],
             "barrelRegion": [
-              0.456522,
-              0.017857,
-              0.586957,
-              0.5625
+              0.452381,
+              0.018182,
+              0.52381,
+              0.563636
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              33.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -25679,10 +25679,10 @@
             "sprite": "tur.usgr-re-k1-badb7283",
             "barrels": [
               [
-                0.456522,
-                0.017857,
-                0.586957,
-                0.5625
+                0.452381,
+                0.018182,
+                0.52381,
+                0.563636
               ]
             ],
             "section": "decal_炮管1",
@@ -25693,7 +25693,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 46.540148,
+              "forward": 46.328119,
               "lateral": -0.390625
             }
           ]
@@ -25759,26 +25759,26 @@
             "sprite": "tur.usgr-re-k1-34fce8b7",
             "file": "sprites/tur.usgr-re-k1-34fce8b7.png",
             "sourceSize": [
-              46,
-              112
+              42,
+              109
             ],
             "displaySize": [
-              18,
-              45
+              17,
+              44
             ],
             "pivot": [
               0.5,
-              0.651786
+              0.669725
             ],
             "barrelRegion": [
-              0.478261,
-              0.017857,
-              0.608696,
-              0.5625
+              0.47619,
+              0.018349,
+              0.547619,
+              0.568807
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              37.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -25792,10 +25792,10 @@
             "sprite": "tur.usgr-re-k1-34fce8b7",
             "barrels": [
               [
-                0.478261,
-                0.017857,
-                0.608696,
-                0.5625
+                0.47619,
+                0.018349,
+                0.547619,
+                0.568807
               ]
             ],
             "section": "decal_炮管",
@@ -25806,7 +25806,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 44.656828,
+              "forward": 44.871719,
               "lateral": 0.390625
             }
           ]
@@ -25887,26 +25887,26 @@
             "sprite": "tur.usgr-re-k1-34fce8b7",
             "file": "sprites/tur.usgr-re-k1-34fce8b7.png",
             "sourceSize": [
-              46,
-              112
+              42,
+              109
             ],
             "displaySize": [
-              18,
-              45
+              17,
+              44
             ],
             "pivot": [
               0.5,
-              0.651786
+              0.669725
             ],
             "barrelRegion": [
-              0.478261,
-              0.017857,
-              0.608696,
-              0.5625
+              0.47619,
+              0.018349,
+              0.547619,
+              0.568807
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              37.0,
+              35.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -25920,10 +25920,10 @@
             "sprite": "tur.usgr-re-k1-34fce8b7",
             "barrels": [
               [
-                0.478261,
-                0.017857,
-                0.608696,
-                0.5625
+                0.47619,
+                0.018349,
+                0.547619,
+                0.568807
               ]
             ],
             "section": "decal_炮管1",
@@ -25934,7 +25934,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 44.656828,
+              "forward": 44.871719,
               "lateral": 0.390625
             }
           ]
@@ -26000,26 +26000,26 @@
             "sprite": "tur.usgr-re-k1a1-a590878b",
             "file": "sprites/tur.usgr-re-k1a1-a590878b.png",
             "sourceSize": [
-              46,
-              98
+              42,
+              95
             ],
             "displaySize": [
-              18,
-              39
+              17,
+              38
             ],
             "pivot": [
               0.5,
-              0.602041
+              0.621053
             ],
             "barrelRegion": [
-              0.434783,
-              0.010204,
-              0.586957,
-              0.438776
+              0.428571,
+              0.010526,
+              0.547619,
+              0.442105
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              33.0,
               1
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -26033,10 +26033,10 @@
             "sprite": "tur.usgr-re-k1a1-a590878b",
             "barrels": [
               [
-                0.434783,
-                0.010204,
-                0.586957,
-                0.438776
+                0.428571,
+                0.010526,
+                0.547619,
+                0.442105
               ]
             ],
             "section": "decal_炮管",
@@ -26047,7 +26047,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 36.296248,
+              "forward": 36.484397,
               "lateral": -0.390625
             }
           ]
@@ -26128,26 +26128,26 @@
             "sprite": "tur.usgr-re-k1a1-a590878b",
             "file": "sprites/tur.usgr-re-k1a1-a590878b.png",
             "sourceSize": [
-              46,
-              98
+              42,
+              95
             ],
             "displaySize": [
-              18,
-              39
+              17,
+              38
             ],
             "pivot": [
               0.5,
-              0.602041
+              0.621053
             ],
             "barrelRegion": [
-              0.434783,
-              0.010204,
-              0.586957,
-              0.438776
+              0.428571,
+              0.010526,
+              0.547619,
+              0.442105
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              35.0,
+              33.0,
               1
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -26161,10 +26161,10 @@
             "sprite": "tur.usgr-re-k1a1-a590878b",
             "barrels": [
               [
-                0.434783,
-                0.010204,
-                0.586957,
-                0.438776
+                0.428571,
+                0.010526,
+                0.547619,
+                0.442105
               ]
             ],
             "section": "decal_炮管1",
@@ -26175,7 +26175,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 36.296248,
+              "forward": 36.484397,
               "lateral": -0.390625
             }
           ]
@@ -27395,26 +27395,26 @@
             "sprite": "tur.usgr-re-74e",
             "file": "sprites/tur.usgr-re-74e.png",
             "sourceSize": [
-              38,
-              90
+              34,
+              87
             ],
             "displaySize": [
-              15,
-              36
+              14,
+              35
             ],
             "pivot": [
               0.5,
-              0.711111
+              0.735632
             ],
             "barrelRegion": [
-              0.473684,
-              0.022222,
-              0.605263,
-              0.555556
+              0.470588,
+              0.022989,
+              0.588235,
+              0.574713
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              32.0,
+              30.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -27428,10 +27428,10 @@
             "sprite": "tur.usgr-re-74e",
             "barrels": [
               [
-                0.473684,
-                0.022222,
-                0.605263,
-                0.555556
+                0.470588,
+                0.022989,
+                0.588235,
+                0.574713
               ]
             ],
             "section": "decal_炮管",
@@ -27442,7 +27442,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 38.828119,
+              "forward": 39.058,
               "lateral": 0.78125
             }
           ]
@@ -27523,26 +27523,26 @@
             "sprite": "tur.usgr-re-74e",
             "file": "sprites/tur.usgr-re-74e.png",
             "sourceSize": [
-              38,
-              90
+              34,
+              87
             ],
             "displaySize": [
-              15,
-              36
+              14,
+              35
             ],
             "pivot": [
               0.5,
-              0.711111
+              0.735632
             ],
             "barrelRegion": [
-              0.473684,
-              0.022222,
-              0.605263,
-              0.555556
+              0.470588,
+              0.022989,
+              0.588235,
+              0.574713
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              32.0,
+              30.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -27556,10 +27556,10 @@
             "sprite": "tur.usgr-re-74e",
             "barrels": [
               [
-                0.473684,
-                0.022222,
-                0.605263,
-                0.555556
+                0.470588,
+                0.022989,
+                0.588235,
+                0.574713
               ]
             ],
             "section": "decal_炮管1",
@@ -27570,7 +27570,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 38.828119,
+              "forward": 39.058,
               "lateral": 0.78125
             }
           ]
@@ -27636,26 +27636,26 @@
             "sprite": "tur.usgr-re-90b",
             "file": "sprites/tur.usgr-re-90b.png",
             "sourceSize": [
-              42,
-              109
+              36,
+              106
             ],
             "displaySize": [
-              17,
-              44
+              14,
+              42
             ],
             "pivot": [
               0.5,
-              0.733945
+              0.754717
             ],
             "barrelRegion": [
-              0.428571,
-              0.018349,
-              0.619048,
-              0.513761
+              0.416667,
+              0.018868,
+              0.583333,
+              0.528302
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              34.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -27669,10 +27669,10 @@
             "sprite": "tur.usgr-re-90b",
             "barrels": [
               [
-                0.428571,
-                0.018349,
-                0.619048,
-                0.513761
+                0.416667,
+                0.018868,
+                0.583333,
+                0.528302
               ]
             ],
             "section": "decal_炮管",
@@ -27683,7 +27683,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 49.286844,
+              "forward": 48.356428,
               "lateral": 0.0
             }
           ]
@@ -27764,26 +27764,26 @@
             "sprite": "tur.usgr-re-90b",
             "file": "sprites/tur.usgr-re-90b.png",
             "sourceSize": [
-              42,
-              109
+              36,
+              106
             ],
             "displaySize": [
-              17,
-              44
+              14,
+              42
             ],
             "pivot": [
               0.5,
-              0.733945
+              0.754717
             ],
             "barrelRegion": [
-              0.428571,
-              0.018349,
-              0.619048,
-              0.513761
+              0.416667,
+              0.018868,
+              0.583333,
+              0.528302
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              34.0,
+              28.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -27797,10 +27797,10 @@
             "sprite": "tur.usgr-re-90b",
             "barrels": [
               [
-                0.428571,
-                0.018349,
-                0.619048,
-                0.513761
+                0.416667,
+                0.018868,
+                0.583333,
+                0.528302
               ]
             ],
             "section": "decal_炮管1",
@@ -27811,7 +27811,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 49.286844,
+              "forward": 48.356428,
               "lateral": 0.0
             }
           ]
@@ -28540,11 +28540,11 @@
             "sprite": "tur.usgr-re-unit-6ae36ee8dc",
             "file": "sprites/tur.usgr-re-unit-6ae36ee8dc.png",
             "sourceSize": [
-              24,
+              16,
               96
             ],
             "displaySize": [
-              10,
+              6,
               38
             ],
             "pivot": [
@@ -28552,14 +28552,14 @@
               0.760417
             ],
             "barrelRegion": [
-              0.25,
+              0.125,
               0.020833,
-              0.916667,
+              0.875,
               0.979167
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              19.0,
+              11.5,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -28572,7 +28572,7 @@
           "muzzlePoints": [
             {
               "forward": 43.977884,
-              "lateral": -0.390625
+              "lateral": -0.195312
             }
           ]
         }
@@ -28609,26 +28609,26 @@
             "sprite": "tur.usgr-re-t90m",
             "file": "sprites/tur.usgr-re-t90m.png",
             "sourceSize": [
-              56,
-              121
+              48,
+              114
             ],
             "displaySize": [
-              22,
-              48
+              19,
+              46
             ],
             "pivot": [
               0.5,
-              0.586777
+              0.622807
             ],
             "barrelRegion": [
-              0.482143,
-              0.016529,
-              0.535714,
-              0.495868
+              0.479167,
+              0.017544,
+              0.541667,
+              0.526316
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              45.0,
+              39.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -28642,10 +28642,10 @@
             "sprite": "tur.usgr-re-t90m",
             "barrels": [
               [
-                0.482143,
-                0.016529,
-                0.535714,
-                0.495868
+                0.479167,
+                0.017544,
+                0.541667,
+                0.526316
               ]
             ],
             "section": "decal_炮管APFSDS_1",
@@ -28656,7 +28656,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.8364,
+              "forward": 43.592378,
               "lateral": 0.390625
             }
           ]
@@ -28737,26 +28737,26 @@
             "sprite": "tur.usgr-re-t90m",
             "file": "sprites/tur.usgr-re-t90m.png",
             "sourceSize": [
-              56,
-              121
+              48,
+              114
             ],
             "displaySize": [
-              22,
-              48
+              19,
+              46
             ],
             "pivot": [
               0.5,
-              0.586777
+              0.622807
             ],
             "barrelRegion": [
-              0.482143,
-              0.016529,
-              0.535714,
-              0.495868
+              0.479167,
+              0.017544,
+              0.541667,
+              0.526316
             ],
             "supersample": 4,
             "bakedPixelTip": [
-              45.0,
+              39.0,
               3
             ],
             "rule": "first opaque barrel row, centered on its visible span; unrecoiled",
@@ -28770,10 +28770,10 @@
             "sprite": "tur.usgr-re-t90m",
             "barrels": [
               [
-                0.482143,
-                0.016529,
-                0.535714,
-                0.495868
+                0.479167,
+                0.017544,
+                0.541667,
+                0.526316
               ]
             ],
             "section": "decal_炮管HE_1",
@@ -28784,7 +28784,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 42.8364,
+              "forward": 43.592378,
               "lateral": 0.390625
             }
           ]

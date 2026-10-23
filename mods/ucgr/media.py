@@ -12,7 +12,7 @@ import json
 import math
 import re
 import subprocess
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFont
 from rw import RW, resolve, num, load_unit
 
 ART_SCALE = 0.4
@@ -42,6 +42,26 @@ def source_path(entry, section, key, value=None):
 @lru_cache(None)
 def image_file(path):
     return Image.open(path).convert('RGBA')
+
+
+# Source turret art paints its own drop shadow in translucent near-black. The
+# game casts each turret's shadow from its silhouette, so the painted one goes,
+# except where it is all that shows of a barrel this port does not draw:
+# BMP-1AM's 1 px barrel falls out of its 0.95 nearest-neighbour scale, and
+# PGZ-88's barrels are an onTop decal.
+SHADOW_MAX_RGB = 32
+PAINTED_SHADOW_KEPT = {'usgr-re-bmp1am', 'usgr-re-pgz88'}
+
+
+def without_shadow(im):
+    r, g, b, a = im.split()
+    dark = ImageChops.lighter(ImageChops.lighter(r, g), b).point(lambda v: 255 * (v < SHADOW_MAX_RGB))
+    shadow = ImageChops.multiply(dark, a.point(lambda v: 255 * (0 < v < 255)))
+    if not shadow.getbbox():
+        return im
+    im = im.copy()
+    im.putalpha(ImageChops.subtract(a, shadow))
+    return im
 
 
 def default_visible(expression, tags='', unknown=False):
@@ -352,11 +372,14 @@ def build_unit(entry, out):
     def add(dest, frames, x=0, y=0, order=0, source=None, section='', alpha=1):
         if not frames:
             return
+        turret = dest is turret_parts or any(dest is g for g in groups.values())
+        if turret and entry['id'] not in PAINTED_SHADOW_KEPT:
+            frames = [without_shadow(im) for im in frames]
         dest.append({'frames': frames, 'x': x, 'y': y, 'order': order, 'alpha': alpha})
         if source:
             sources.append({'section': section, 'source': source.relative_to(RW).as_posix(),
                             'x': round(x, 3), 'y': round(y, 3), 'order': order,
-                            'target': 'turret' if dest is turret_parts or any(dest is g for g in groups.values()) else 'hull',
+                            'target': 'turret' if turret else 'hull',
                             **({'mount': name} if groups and (name := next((n for n, g in groups.items() if dest is g), None)) else {})})
 
     frames, path = asset_frames(entry, 'graphics', scale=num(field(graphics, 'imageScale'), 1),

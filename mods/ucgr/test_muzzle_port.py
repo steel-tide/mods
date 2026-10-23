@@ -29,9 +29,9 @@ class MuzzleTests(unittest.TestCase):
         records, omitted = augment_muzzles(entry, ini, definition, sprites=self.sprites)
         self.assertFalse([note for note in omitted if 'muzzle omitted' in note])
         points = {r['weapon']: r['muzzlePoints'] for r in records}
-        self.assertEqual(points['w1'], [{'forward': 42.8364, 'lateral': .390625}])
+        self.assertEqual(points['w1'], [{'forward': 43.592378, 'lateral': .390625}])
         self.assertEqual(records[0]['sourceMuzzlePoints'], [{'forward': 56.25, 'lateral': 0}])
-        self.assertEqual(records[0]['visualTip']['bakedPixelTip'], [45, 3])
+        self.assertEqual(records[0]['visualTip']['bakedPixelTip'], [39, 3])
         self.assertEqual(points['w2'], [{'forward': 8.75, 'lateral': 1.875}])
         self.assertEqual(points['w3'], [{'forward': 12.5, 'lateral': 0}])
         self.assertEqual(points['w4'], points['w1'])
@@ -41,10 +41,11 @@ class MuzzleTests(unittest.TestCase):
         entry, ini, definition = self.unit('L2A6')
         records, _ = augment_muzzles(entry, ini, definition, sprites=self.sprites)
         cannon = next(record for record in records if record['weapon'] == 'w1')
-        self.assertEqual(cannon['muzzlePoints'], [{'forward': 49.654575, 'lateral': 0}])
+        self.assertEqual(cannon['muzzlePoints'], [{'forward': 49.860945, 'lateral': 0}])
         self.assertEqual(cannon['sourceMuzzlePoints'], [{'forward': 62.5, 'lateral': 0}])
         tip = cannon['visualTip']
-        self.assertNotEqual((tip['barrelRegion'][0] + tip['barrelRegion'][2]) / 2, .5)
+        # The barrel region holds the barrel alone, without its painted shadow.
+        self.assertAlmostEqual((tip['barrelRegion'][0] + tip['barrelRegion'][2]) / 2, .5)
         self.assertEqual(tip['bakedPixelTip'][0], tip['displaySize'][0] * tip['supersample'] / 2)
 
     def test_pgz09_alternates_between_its_two_real_barrels(self):

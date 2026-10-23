@@ -198,10 +198,10 @@
         38
       ],
       "turretBounds": [
-        -16,
+        -15,
         -40,
-        16,
-        17
+        15,
+        14
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -285,10 +285,10 @@
         33
       ],
       "turretBounds": [
-        -15,
+        -13,
         -36,
-        15,
-        16
+        13,
+        13
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -375,7 +375,7 @@
         -11,
         -32,
         11,
-        16
+        13
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -479,10 +479,10 @@
         42
       ],
       "turretBounds": [
-        -23,
+        -22,
         -69,
-        23,
-        31
+        22,
+        28
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -606,10 +606,10 @@
         42
       ],
       "turretBounds": [
-        -28,
+        -24,
         -71,
-        28,
-        50
+        24,
+        43
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -733,10 +733,10 @@
         53
       ],
       "turretBounds": [
-        -26,
-        -94,
-        26,
-        48
+        -20,
+        -90,
+        20,
+        43
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -2159,10 +2159,10 @@
         38
       ],
       "turretBounds": [
-        -19,
+        -15,
         -65,
-        19,
-        25
+        15,
+        19
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -2262,10 +2262,10 @@
         38
       ],
       "turretBounds": [
-        -19,
+        -17,
         -72,
-        19,
-        17
+        17,
+        16
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -2365,10 +2365,10 @@
         37
       ],
       "turretBounds": [
-        -20,
+        -18,
         -69,
-        20,
-        22
+        18,
+        19
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -2468,10 +2468,10 @@
         37
       ],
       "turretBounds": [
-        -21,
+        -19,
         -71,
-        21,
-        21
+        19,
+        19
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -2580,10 +2580,10 @@
         39
       ],
       "turretBounds": [
-        -23,
+        -21,
         -69,
-        23,
-        28
+        21,
+        25
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -2701,7 +2701,7 @@
         -20,
         -72,
         20,
-        26
+        24
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -2810,10 +2810,10 @@
         37
       ],
       "turretBounds": [
-        -25,
+        -22,
         -69,
-        25,
-        28
+        22,
+        25
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -2937,10 +2937,10 @@
         37
       ],
       "turretBounds": [
-        -20,
+        -19,
         -72,
-        20,
-        26
+        19,
+        24
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -3064,10 +3064,10 @@
         42
       ],
       "turretBounds": [
-        -23,
+        -22,
         -69,
-        23,
-        28
+        22,
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -3191,10 +3191,10 @@
         40
       ],
       "turretBounds": [
-        -25,
+        -24,
         -69,
-        25,
-        26
+        24,
+        23
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -3318,10 +3318,10 @@
         37
       ],
       "turretBounds": [
-        -23,
+        -22,
         -71,
-        23,
-        26
+        22,
+        23
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -3445,10 +3445,10 @@
         40
       ],
       "turretBounds": [
-        -26,
+        -20,
         -71,
-        26,
-        28
+        20,
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -3572,10 +3572,10 @@
         39
       ],
       "turretBounds": [
-        -26,
+        -21,
         -71,
-        26,
-        30
+        21,
+        28
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -3699,10 +3699,10 @@
         41
       ],
       "turretBounds": [
-        -27,
+        -23,
         -71,
-        27,
-        37
+        23,
+        33
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -3826,10 +3826,10 @@
         40
       ],
       "turretBounds": [
-        -28,
+        -25,
         -71,
-        28,
-        33
+        25,
+        30
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -3953,10 +3953,10 @@
         40
       ],
       "turretBounds": [
-        -29,
+        -25,
         -71,
-        29,
-        33
+        25,
+        30
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -4080,10 +4080,10 @@
         40
       ],
       "turretBounds": [
-        -25,
+        -22,
         -71,
-        25,
-        31
+        22,
+        27
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -4797,10 +4797,10 @@
         36
       ],
       "turretBounds": [
-        -13,
+        -11,
         -25,
-        13,
-        13
+        11,
+        11
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -4900,10 +4900,10 @@
         36
       ],
       "turretBounds": [
-        -14,
+        -12,
         -32,
-        14,
-        15
+        12,
+        13
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -4994,10 +4994,10 @@
         36
       ],
       "turretBounds": [
-        -17,
+        -15,
         -30,
-        17,
-        18
+        15,
+        15
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -5181,10 +5181,10 @@
         40
       ],
       "turretBounds": [
-        -11,
+        -10,
         -22,
-        11,
-        13
+        10,
+        10
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -5270,10 +5270,10 @@
         29
       ],
       "turretBounds": [
-        -13,
+        -11,
         -29,
-        13,
-        15
+        11,
+        12
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -5359,10 +5359,10 @@
         29
       ],
       "turretBounds": [
-        -15,
+        -12,
         -32,
-        15,
-        11
+        12,
+        8
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -5977,10 +5977,10 @@
         38
       ],
       "turretBounds": [
-        -22,
+        -21,
         -74,
-        22,
-        34
+        21,
+        30
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -6358,9 +6358,9 @@
         39
       ],
       "turretBounds": [
-        -23,
+        -20,
         -44,
-        23,
+        20,
         42
       ],
       "artScale": 0.4,
@@ -6560,9 +6560,9 @@
         55
       ],
       "turretBounds": [
-        -21,
+        -18,
         -32,
-        21,
+        18,
         32
       ],
       "artScale": 0.4,
@@ -7075,9 +7075,9 @@
         44
       ],
       "turretBounds": [
-        -19,
+        -18,
         -21,
-        19,
+        18,
         18
       ],
       "artScale": 0.4,
@@ -7249,10 +7249,10 @@
         57
       ],
       "turretBounds": [
-        -20,
+        -17,
         -52,
-        20,
-        20
+        17,
+        15
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -9819,10 +9819,10 @@
         43
       ],
       "turretBounds": [
-        -19,
+        -16,
         -28,
-        19,
-        27
+        16,
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -10052,10 +10052,10 @@
         43
       ],
       "turretBounds": [
-        -15,
+        -14,
         -30,
-        15,
-        20
+        14,
+        18
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -10144,10 +10144,10 @@
         38
       ],
       "turretBounds": [
-        -18,
+        -17,
         -35,
-        18,
-        15
+        17,
+        12
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -10242,10 +10242,10 @@
         38
       ],
       "turretBounds": [
-        -21,
+        -20,
         -66,
-        21,
-        27
+        20,
+        23
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -10345,10 +10345,10 @@
         43
       ],
       "turretBounds": [
-        -24,
+        -18,
         -71,
-        24,
-        33
+        18,
+        28
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -10448,10 +10448,10 @@
         41
       ],
       "turretBounds": [
-        -22,
+        -18,
         -72,
-        22,
-        31
+        18,
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -10549,10 +10549,10 @@
         37
       ],
       "turretBounds": [
-        -18,
+        -16,
         -38,
-        18,
-        26
+        16,
+        22
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -11954,7 +11954,7 @@
         -19,
         -82,
         19,
-        31
+        25
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12054,10 +12054,10 @@
         43
       ],
       "turretBounds": [
-        -20,
+        -16,
         -82,
-        20,
-        35
+        16,
+        28
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12157,10 +12157,10 @@
         42
       ],
       "turretBounds": [
-        -19,
+        -18,
         -76,
-        19,
-        32
+        18,
+        28
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12363,10 +12363,10 @@
         34
       ],
       "turretBounds": [
-        -17,
+        -15,
         -57,
-        17,
-        17
+        15,
+        14
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12471,10 +12471,10 @@
         36
       ],
       "turretBounds": [
-        -19,
+        -18,
         -68,
-        19,
-        21
+        18,
+        17
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12579,10 +12579,10 @@
         38
       ],
       "turretBounds": [
-        -22,
+        -19,
         -72,
-        22,
-        28
+        19,
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12687,10 +12687,10 @@
         39
       ],
       "turretBounds": [
-        -23,
+        -20,
         -68,
-        23,
-        26
+        20,
+        24
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12775,10 +12775,10 @@
         38
       ],
       "turretBounds": [
-        -20,
+        -18,
         -70,
-        20,
-        24
+        18,
+        21
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12883,10 +12883,10 @@
         35
       ],
       "turretBounds": [
-        -20,
+        -19,
         -68,
-        20,
-        25
+        19,
+        21
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -12986,10 +12986,10 @@
         40
       ],
       "turretBounds": [
-        -21,
+        -18,
         -72,
-        21,
-        30
+        18,
+        27
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -13074,10 +13074,10 @@
         40
       ],
       "turretBounds": [
-        -21,
+        -17,
         -71,
-        21,
-        29
+        17,
+        25
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -13177,10 +13177,10 @@
         40
       ],
       "turretBounds": [
-        -21,
+        -17,
         -71,
-        21,
-        30
+        17,
+        25
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -13280,10 +13280,10 @@
         35
       ],
       "turretBounds": [
-        -16,
+        -15,
         -74,
-        16,
-        25
+        15,
+        22
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -13854,10 +13854,10 @@
         41
       ],
       "turretBounds": [
-        -11,
+        -7,
         -36,
-        11,
-        36
+        7,
+        31
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -13941,10 +13941,10 @@
         38
       ],
       "turretBounds": [
-        -20,
+        -17,
         -18,
-        20,
-        18
+        17,
+        15
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14028,10 +14028,10 @@
         35
       ],
       "turretBounds": [
-        -14,
+        -12,
         -15,
-        14,
-        17
+        12,
+        13
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14126,10 +14126,10 @@
         35
       ],
       "turretBounds": [
-        -16,
+        -12,
         -49,
-        16,
-        23
+        12,
+        19
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14221,7 +14221,7 @@
         -14,
         -33,
         14,
-        14
+        12
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14305,10 +14305,10 @@
         36
       ],
       "turretBounds": [
-        -13,
+        -11,
         -26,
-        13,
-        12
+        11,
+        10
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14402,10 +14402,10 @@
         36
       ],
       "turretBounds": [
-        -13,
+        -11,
         -30,
-        13,
-        12
+        11,
+        10
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14494,10 +14494,10 @@
         43
       ],
       "turretBounds": [
-        -21,
+        -17,
         -40,
-        21,
-        20
+        17,
+        15
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14584,7 +14584,7 @@
         -12,
         -24,
         12,
-        12
+        9
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14755,10 +14755,10 @@
         43
       ],
       "turretBounds": [
-        -11,
+        -9,
         -19,
-        11,
-        13
+        9,
+        11
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14842,10 +14842,10 @@
         35
       ],
       "turretBounds": [
-        -12,
+        -11,
         -26,
-        12,
-        20
+        11,
+        14
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -14945,10 +14945,10 @@
         43
       ],
       "turretBounds": [
-        -24,
+        -18,
         -71,
-        24,
-        33
+        18,
+        28
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -15048,10 +15048,10 @@
         47
       ],
       "turretBounds": [
-        -24,
+        -18,
         -71,
-        24,
-        33
+        18,
+        28
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -15157,10 +15157,10 @@
         37
       ],
       "turretBounds": [
-        -17,
+        -14,
         -21,
-        17,
-        29
+        14,
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -15268,10 +15268,10 @@
         39
       ],
       "turretBounds": [
+        -18,
         -22,
-        -22,
-        22,
-        21
+        18,
+        17
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -15466,9 +15466,9 @@
         33
       ],
       "turretBounds": [
-        -19,
+        -17,
         -59,
-        19,
+        17,
         22
       ],
       "artScale": 0.4,
@@ -15693,9 +15693,9 @@
         86
       ],
       "turretBounds": [
-        -22,
-        -36,
-        22,
+        -18,
+        -32,
+        18,
         17
       ],
       "artScale": 0.4,
@@ -15782,10 +15782,10 @@
         41
       ],
       "turretBounds": [
-        -19,
+        -16,
         -22,
-        19,
-        21
+        16,
+        19
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -15859,10 +15859,10 @@
         36
       ],
       "turretBounds": [
-        -14,
+        -12,
         -55,
-        14,
-        30
+        12,
+        24
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -19949,10 +19949,10 @@
         32
       ],
       "turretBounds": [
-        -17,
+        -16,
         -29,
-        17,
-        21
+        16,
+        19
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -20237,10 +20237,10 @@
         43
       ],
       "turretBounds": [
-        -22,
+        -21,
         -65,
-        22,
-        39
+        21,
+        36
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -20340,10 +20340,10 @@
         43
       ],
       "turretBounds": [
-        -24,
+        -22,
         -65,
-        24,
-        43
+        22,
+        41
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -22642,10 +22642,10 @@
         45
       ],
       "turretBounds": [
-        -17,
+        -16,
         -64,
-        17,
-        36
+        16,
+        31
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -22745,10 +22745,10 @@
         43
       ],
       "turretBounds": [
-        -22,
+        -19,
         -65,
-        22,
-        39
+        19,
+        36
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -22848,10 +22848,10 @@
         43
       ],
       "turretBounds": [
-        -22,
+        -19,
         -65,
-        22,
-        43
+        19,
+        41
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -22951,10 +22951,10 @@
         43
       ],
       "turretBounds": [
-        -24,
+        -22,
         -65,
-        24,
-        43
+        22,
+        41
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -23063,10 +23063,10 @@
         40
       ],
       "turretBounds": [
-        -21,
+        -20,
         -74,
-        21,
-        28
+        20,
+        25
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -23185,10 +23185,10 @@
         40
       ],
       "turretBounds": [
-        -23,
+        -20,
         -76,
-        23,
-        28
+        20,
+        25
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -23586,10 +23586,10 @@
         37
       ],
       "turretBounds": [
-        -13,
+        -11,
         -9,
-        13,
-        11
+        11,
+        10
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -23676,7 +23676,7 @@
         -15,
         -11,
         15,
-        14
+        11
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -23771,10 +23771,10 @@
         37
       ],
       "turretBounds": [
-        -17,
+        -16,
         -28,
-        17,
-        16
+        16,
+        13
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -23865,10 +23865,10 @@
         37
       ],
       "turretBounds": [
-        -17,
+        -16,
         -28,
-        17,
-        16
+        16,
+        13
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -23963,10 +23963,10 @@
         43
       ],
       "turretBounds": [
-        -25,
+        -23,
         -65,
-        25,
-        39
+        23,
+        36
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -24066,10 +24066,10 @@
         43
       ],
       "turretBounds": [
-        -25,
+        -23,
         -65,
-        25,
-        44
+        23,
+        42
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -24158,10 +24158,10 @@
         35
       ],
       "turretBounds": [
-        -17,
+        -15,
         -19,
-        17,
-        16
+        15,
+        12
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -25427,10 +25427,10 @@
         36
       ],
       "turretBounds": [
-        -12,
+        -10,
         -29,
-        12,
-        15
+        10,
+        11
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -25484,10 +25484,10 @@
         30
       ],
       "turretBounds": [
-        -19,
+        -14,
         -13,
-        19,
-        19
+        14,
+        16
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -27662,10 +27662,10 @@
         39
       ],
       "turretBounds": [
-        -24,
+        -21,
         -77,
-        24,
-        28
+        21,
+        24
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -27875,7 +27875,7 @@
         -20,
         -44,
         20,
-        19
+        16
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -27979,9 +27979,9 @@
         31
       ],
       "turretBounds": [
-        -14,
+        -13,
         -55,
-        14,
+        13,
         21
       ],
       "artScale": 0.4,
@@ -28106,10 +28106,10 @@
         40
       ],
       "turretBounds": [
-        -20,
+        -18,
         -82,
-        20,
-        39
+        18,
+        36
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -28330,10 +28330,10 @@
         40
       ],
       "turretBounds": [
-        -19,
+        -16,
         -47,
-        19,
-        27
+        16,
+        22
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -28429,10 +28429,10 @@
         53
       ],
       "turretBounds": [
-        -21,
+        -17,
         -19,
-        21,
-        29
+        17,
+        18
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -29615,10 +29615,10 @@
         41
       ],
       "turretBounds": [
-        -19,
+        -15,
         -66,
-        19,
-        37
+        15,
+        34
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -29718,10 +29718,10 @@
         38
       ],
       "turretBounds": [
-        -18,
+        -15,
         -66,
-        18,
-        24
+        15,
+        21
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -29830,10 +29830,10 @@
         40
       ],
       "turretBounds": [
-        -19,
+        -18,
         -66,
-        19,
-        34
+        18,
+        32
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -29952,10 +29952,10 @@
         40
       ],
       "turretBounds": [
-        -20,
+        -18,
         -71,
-        20,
-        37
+        18,
+        34
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -30074,10 +30074,10 @@
         40
       ],
       "turretBounds": [
-        -20,
+        -18,
         -84,
-        20,
-        41
+        18,
+        39
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -30187,10 +30187,10 @@
         41
       ],
       "turretBounds": [
-        -24,
+        -19,
         -62,
-        24,
-        37
+        19,
+        35
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -30303,7 +30303,7 @@
         -18,
         -68,
         18,
-        29
+        27
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -30406,7 +30406,7 @@
         -17,
         -71,
         17,
-        30
+        28
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -30509,7 +30509,7 @@
         -18,
         -71,
         18,
-        28
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -30621,7 +30621,7 @@
         -20,
         -77,
         20,
-        35
+        33
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -30941,10 +30941,10 @@
         41
       ],
       "turretBounds": [
-        -24,
+        -21,
         -70,
-        24,
-        22
+        21,
+        17
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -31044,10 +31044,10 @@
         40
       ],
       "turretBounds": [
-        -25,
+        -22,
         -72,
-        25,
-        32
+        22,
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -31152,10 +31152,10 @@
         41
       ],
       "turretBounds": [
-        -27,
+        -24,
         -70,
-        27,
-        35
+        24,
+        30
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -31441,10 +31441,10 @@
         41
       ],
       "turretBounds": [
-        -15,
+        -14,
         -44,
-        15,
-        19
+        14,
+        16
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -31528,10 +31528,10 @@
         37
       ],
       "turretBounds": [
-        -15,
+        -14,
         -23,
-        15,
-        23
+        14,
+        16
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -31615,10 +31615,10 @@
         44
       ],
       "turretBounds": [
-        -25,
+        -21,
         -37,
-        25,
-        23
+        21,
+        18
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -31713,10 +31713,10 @@
         37
       ],
       "turretBounds": [
-        -25,
+        -19,
         -45,
-        25,
-        37
+        19,
+        19
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -31892,10 +31892,10 @@
         38
       ],
       "turretBounds": [
-        -17,
+        -13,
         -19,
-        17,
-        19
+        13,
+        16
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -31979,10 +31979,10 @@
         45
       ],
       "turretBounds": [
-        -17,
+        -14,
         -32,
-        17,
-        25
+        14,
+        21
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -32066,9 +32066,9 @@
         21
       ],
       "turretBounds": [
-        -10,
+        -9,
         -19,
-        10,
+        9,
         10
       ],
       "artScale": 0.4,
@@ -32153,10 +32153,10 @@
         20
       ],
       "turretBounds": [
-        -15,
+        -14,
         -29,
-        15,
-        10
+        14,
+        9
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -32240,10 +32240,10 @@
         36
       ],
       "turretBounds": [
-        -17,
+        -16,
         -34,
-        17,
-        16
+        16,
+        13
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -32347,10 +32347,10 @@
         44
       ],
       "turretBounds": [
-        -22,
+        -18,
         -80,
-        22,
-        35
+        18,
+        31
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -32449,10 +32449,10 @@
         25
       ],
       "turretBounds": [
+        -12,
         -15,
-        -15,
-        15,
-        11
+        12,
+        9
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -32537,9 +32537,9 @@
         38
       ],
       "turretBounds": [
-        -20,
+        -17,
         -67,
-        20,
+        17,
         33
       ],
       "artScale": 0.4,
@@ -32626,10 +32626,10 @@
         38
       ],
       "turretBounds": [
-        -19,
         -16,
-        19,
-        21
+        -16,
+        16,
+        15
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -33049,9 +33049,9 @@
         45
       ],
       "turretBounds": [
-        -12,
+        -8,
         -73,
-        12,
+        8,
         23
       ],
       "artScale": 0.4,
@@ -33300,7 +33300,7 @@
         -8,
         -11,
         8,
-        11
+        7
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -36515,7 +36515,7 @@
         -9,
         -16,
         9,
-        9
+        8
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -36619,10 +36619,10 @@
         37
       ],
       "turretBounds": [
-        -18,
+        -16,
         -68,
-        18,
-        22
+        16,
+        20
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -37939,7 +37939,7 @@
         -13,
         -52,
         13,
-        17
+        14
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -38063,10 +38063,10 @@
         33
       ],
       "turretBounds": [
-        -14,
+        -12,
         -53,
-        14,
-        18
+        12,
+        16
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -38185,10 +38185,10 @@
         36
       ],
       "turretBounds": [
-        -19,
+        -17,
         -68,
-        19,
-        19
+        17,
+        17
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -38307,10 +38307,10 @@
         36
       ],
       "turretBounds": [
-        -18,
+        -17,
         -68,
-        18,
-        19
+        17,
+        17
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -38429,10 +38429,10 @@
         36
       ],
       "turretBounds": [
-        -18,
+        -17,
         -68,
-        18,
-        21
+        17,
+        19
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -39051,10 +39051,10 @@
         29
       ],
       "turretBounds": [
-        -9,
+        -8,
         -15,
-        9,
-        9
+        8,
+        8
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -39146,10 +39146,10 @@
         31
       ],
       "turretBounds": [
-        -9,
+        -8,
         -20,
-        9,
-        9
+        8,
+        8
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -40503,10 +40503,10 @@
         45
       ],
       "turretBounds": [
-        -23,
+        -21,
         -59,
-        23,
-        40
+        21,
+        37
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -40628,9 +40628,9 @@
         29
       ],
       "turretBounds": [
-        -17,
-        -23,
-        17,
+        -16,
+        -21,
+        16,
         10
       ],
       "artScale": 0.4,
@@ -41822,10 +41822,10 @@
         45
       ],
       "turretBounds": [
-        -23,
+        -21,
         -76,
-        23,
-        36
+        21,
+        34
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -41959,10 +41959,10 @@
         45
       ],
       "turretBounds": [
-        -23,
+        -21,
         -73,
-        23,
-        39
+        21,
+        36
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -42096,10 +42096,10 @@
         45
       ],
       "turretBounds": [
-        -23,
+        -21,
         -59,
-        23,
-        39
+        21,
+        36
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -42233,10 +42233,10 @@
         42
       ],
       "turretBounds": [
-        -18,
+        -16,
         -62,
-        18,
-        25
+        16,
+        22
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -42370,10 +42370,10 @@
         42
       ],
       "turretBounds": [
-        -18,
+        -16,
         -70,
-        18,
-        25
+        16,
+        22
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -42931,9 +42931,9 @@
         33
       ],
       "turretBounds": [
-        -15,
+        -14,
         -34,
-        15,
+        14,
         19
       ],
       "artScale": 0.4,
@@ -43031,10 +43031,10 @@
         36
       ],
       "turretBounds": [
-        -19,
+        -17,
         -36,
-        19,
-        18
+        17,
+        14
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -43143,10 +43143,10 @@
         37
       ],
       "turretBounds": [
-        -19,
+        -17,
         -64,
-        19,
-        26
+        17,
+        23
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -43265,10 +43265,10 @@
         43
       ],
       "turretBounds": [
-        -21,
+        -18,
         -80,
-        21,
-        29
+        18,
+        26
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -45691,10 +45691,10 @@
         45
       ],
       "turretBounds": [
-        -14,
+        -12,
         -55,
-        14,
-        30
+        12,
+        24
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -45933,9 +45933,9 @@
         45
       ],
       "turretBounds": [
-        -12,
+        -8,
         -73,
-        12,
+        8,
         23
       ],
       "artScale": 0.4,
@@ -46035,10 +46035,10 @@
         42
       ],
       "turretBounds": [
-        -28,
+        -24,
         -71,
-        28,
-        50
+        24,
+        43
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -46229,10 +46229,10 @@
         41
       ],
       "turretBounds": [
-        -11,
+        -7,
         -36,
-        11,
-        36
+        7,
+        31
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -46781,10 +46781,10 @@
         43
       ],
       "turretBounds": [
-        -26,
+        -14,
         -12,
-        26,
-        36
+        14,
+        32
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -47181,6 +47181,7 @@
     "u.usgr-re-iris-t-slm-radar-deployed0": "u.usgr-re-iris-t-slm-radar",
     "tur.usgr-re-iris-t-slm-radar-deployed0": "tur.usgr-re-iris-t-slm-radar",
     "u.usgr-re-eufpvsquad-travel0": "u.usgr-re-eufpvsquad",
+    "tur.usgr-re-vbl-mg": "tur.usgr-re-ebrc-mg",
     "tur.usgr-re-915-4c4b3fadc654": "tur.usgr-re-bmp3-3541749fa352",
     "tur.usgr-re-pt85-nsvt": "tur.usgr-re-ztz96a-nsvt",
     "tur.usgr-re-214-nsvt": "tur.usgr-re-t3485-nsvt",

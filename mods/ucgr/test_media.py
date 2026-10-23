@@ -5,8 +5,8 @@ import unittest
 from copy import deepcopy
 from collections import Counter
 from tempfile import TemporaryDirectory
-from PIL import Image
-from media import assemble, build_unit, build_deployment_art, build_media
+from PIL import Image, ImageChops
+from media import assemble, build_unit, build_deployment_art, build_media, without_shadow
 from rw import RW, load_unit
 
 
@@ -168,6 +168,22 @@ class RotationTests(unittest.TestCase):
                     if layer['section'] == 'decal_部件NSVT': self.assertEqual(layer['mount'], 'NSVT', name)
         self.assertGreaterEqual(len(split), 60)
         self.assertTrue({'T90M', 'T72B3', 'T14'} <= set(split))
+
+    def test_turret_art_leaves_its_shadow_to_the_engine(self):
+        from weapons import source_index
+        entries = source_index()
+        with TemporaryDirectory() as tmp:
+            # The two keep it: it is all that shows of a barrel the port does not draw.
+            for name, kept in (('T72B3', False), ('BMP1AM', True), ('PGZ88', True)):
+                entry = deepcopy(entries[name]); entry['ini'] = load_unit(RW / entry['source'])
+                sheets, _, _ = build_unit(entry, Path(tmp))
+                turrets = [sheet for sheet in sheets if sheet['key'].startswith('tur.')]
+                self.assertTrue(turrets, name)
+                for sheet in turrets:
+                    with Image.open(Path(tmp) / sheet['file']) as pixels:
+                        pixels = pixels.convert('RGBA')
+                        painted = ImageChops.difference(pixels.getchannel('A'), without_shadow(pixels).getchannel('A')).getbbox()
+                        self.assertEqual(bool(painted), kept, sheet['key'])
 
 
 if __name__ == '__main__':

@@ -23729,7 +23729,7 @@
     },
     {
       "unit": "VBL_MG",
-      "note": "Articulation: turret_2, source x=0, y=-17, 2.2°/tick and 180° arc; original sheet tur.usgr-re-vbl-mg; weapons w1. Source script conditions remain separately reported; no invented firing gate added."
+      "note": "Articulation: turret_2, source x=0, y=-17, 2.2°/tick and 180° arc; original sheet tur.usgr-re-ebrc-mg; weapons w1. Source script conditions remain separately reported; no invented firing gate added."
     },
     {
       "unit": "VBL_MG",

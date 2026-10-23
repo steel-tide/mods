@@ -77,8 +77,8 @@ test('actual T90M main gun uses native recoil at the source barrel tip', async (
   const flash = game.st.effects.find(f => f.recoil?.src === tank.id)!;
   expect(flash).toBeDefined();
   // Original source spawn lies 21 source pixels beyond the visible tube.
-  // Native 4x atlas: first opaque row 3, barrel center x45, pivot (44,112.661184).
-  expect(flash.x).toBeCloseTo(545.3364); expect(flash.y).toBeCloseTo(500.390625);
+  // Native 4x atlas: first opaque row 3, barrel center x39, pivot (38,114.596488).
+  expect(flash.x).toBeCloseTo(546.092378); expect(flash.y).toBeCloseTo(500.390625);
   expect(flash.recoil!.stroke).toBe(6);
 });
 
