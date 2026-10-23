@@ -11,9 +11,9 @@
   "version": "0.0.5",
   "author": "恐龙再健身房",
   "description": [
-    "Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits — and open their first development plans.",
-    "高达战争_战争宇宙：一年战争。地球联邦军与吉翁公国军的基础兵力——坦克、飞机、舰艇与最早的机动战士——以及各自的第一项开发计划。",
-    "건담 워 배틀 유니버스: 1년 전쟁. 지구연방군과 지온 공국군의 기본 전력 — 전차, 항공기, 함선, 그리고 최초의 모빌슈트 — 과 각자의 첫 개발 계획."
+    "The One Year War, on your terms. Lead the Earth Federation's Type 61 tanks, GMs, Ground Type Gundams and the Big Tray, or Zeon's Zakus, Gouf Custom, Gogg and the Dabude. Research your side's next development plan, rearm mobile suits with bazookas, beam rifles or 180mm cannons, and dive submarines beneath the enemy fleet.",
+    "一年战争，由你主宰。率领地球联邦军的61式坦克、吉姆、陆战型高达与大托盘级，或吉翁公国军的扎古、老虎特装型、战蟹与达布德级。研究己方的下一项开发计划，为机动战士换装火箭筒、光束步枪或180mm加农炮，再让潜艇潜入敌方舰队之下。",
+    "1년 전쟁, 당신의 방식으로. 지구연방군의 61식 전차, 짐, 육전형 건담, 빅 트레이급, 또는 지온 공국군의 자쿠, 구프 커스텀, 고그, 다부데급을 이끌어라. 진영의 다음 개발 계획을 연구하고, 모빌슈트를 바주카, 빔 라이플, 180mm 캐논으로 재무장시키고, 잠수함을 적 함대 아래로 잠항시켜라."
   ],
   "license": "LicenseRef-GW-BattleUniverse-Upstream",
   "hideFromListing": true,

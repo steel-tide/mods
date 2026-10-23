@@ -880,10 +880,11 @@ def main():
     showcase_path=build_showcase(defs,entries)
     subprocess.run(['node',str(HERE/'extensions/ek-systems/build.mjs')],check=True)
     package=json.loads((HERE/'extensions/ek-systems/extension.json').read_text())
-    original=strings(parse(RW/'mod-info.txt')['mod']['description'])
     manifest={'format':'steel-tide-mod','v':4,'capacity':'large','id':'ek-definitive-edition',
       'name':['EK Definitive Edition 2026h50','EK 决定版 2026h50','EK 결정판 2026h50'],'version':'0.0.2','author':'ice-v5 and EK contributors',
-      'description':texts(original,'“以雷霆之力，我挥锤终结审判”\nCopyright © 2021-2026 ice-v5. All Rights Reserved.'),
+      'description':['Bring the thunder. Hundreds of new units join your army on land, at sea and in the air — and experimental research unlocks the giants: the Ragnarok ultra-heavy tank, siege mechs, naval carriers, and ion-cannon aerial battleships that blot out the sky.',
+                     '雷霆降临。数以百计的新单位从陆、海、空加入你的军队——再以实验科技解锁真正的巨兽：“诸神黄昏”级超重型坦克、攻城机甲、海上航母，以及遮天蔽日的离子炮空中战舰。',
+                     '천둥을 불러라. 수백 종의 새 유닛이 육지와 바다, 하늘에서 당신의 군대에 합류하고, 실험 기술은 진짜 거인들을 해금한다. 초중전차 라그나로크, 공성 메크, 해상 항모, 그리고 하늘을 뒤덮는 이온포 공중 전함까지.'],
       'license':'CC-BY-NC-ND-4.0','hideFromListing':True,
       'requiredCapabilities':[CAP],'extensionPackages':[package],'defs':defs,'sprites':media.sprites,'sounds':media.sounds,
       'maps':[showcase_path],
