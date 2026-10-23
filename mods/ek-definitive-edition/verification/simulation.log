@@ -1,0 +1,29 @@
+bun test v1.2.20 (6ad208bc)
+
+mods/ek-definitive-edition/simulation.test.ts:
+(pass) showcase map parses without dropping placements and starts every EK specimen on valid terrain [55.70ms]
+(pass) showcase survives save/load without duplicating specimens or granting resources twice [509.11ms]
+(pass) idle showcase stays intact for one minute without spawning ordnance or detonating helpers [1926.13ms]
+(pass) showcase activation is owned, explicit, saved and also follows player actions [83.28ms]
+(pass) showcase respects selected spawn slots, closed seats and unrelated maps [70.73ms]
+(pass) every named source definition is present, including inherited dont_load modules [0.48ms]
+(pass) all definitions initialize, step and serialize without missing references [951.70ms]
+(pass) barracks upgrade pays original price, retains identity and completes on its source clock [3.50ms]
+(pass) native factories enforce research resources, refund cancellation and finish recruitment after a save [8.85ms]
+(pass) research-priced construction waits for resources and charges once across multiple builders [3.37ms]
+(pass) Arsenal Bird selects exactly one mode and creates its original attached hangars [1.84ms]
+(pass) medical transport heals allied units and leaves enemies unchanged [1.82ms]
+(pass) suicide action emits its source death weapon and damages nearby enemies [2.45ms]
+(pass) projectile cascades remain active and deterministic across a mid-flight save [14.44ms]
+(pass) private balances and action queues are excluded from another player view [1.57ms]
+(pass) queued bomber salvos stop when their source ammunition guard becomes false [3.47ms]
+(pass) EMP suppresses movement orders and expires on the source trigger clock [2.41ms]
+(pass) foreign ownership and insufficient funds cannot queue an action; cancellation refunds once [1.67ms]
+(pass) a save during an action resumes deterministically [4.89ms]
+(pass) source production links train infantry from the original barracks [2.05ms]
+(pass) independent source weapons fire and damage an enemy [2.30ms]
+
+ 21 pass
+ 0 fail
+ 5596 expect() calls
+Ran 21 tests across 1 file. [4.00s]

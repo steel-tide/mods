@@ -1,0 +1,48 @@
+  ✗ mods/ek-definitive-edition screenshots[0]: screenshots/cover.jpeg is 3840 × 2160; a screenshot is 4:3 (3840 × 2880, say)
+  ! mods/ek-definitive-edition defs[0].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[63].producedBy: nothing produces it
+  ! mods/ek-definitive-edition defs[64].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[72].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[73].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[88].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[95].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[139].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[157].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[158].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[160].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[161].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[178].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[218].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[244].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[336].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[337].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[345].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[347].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[351].producedBy: nothing produces it
+  ! mods/ek-definitive-edition defs[389].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[403].producedBy: nothing produces it
+  ! mods/ek-definitive-edition defs[411].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[414].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[431].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[432].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[475].producedBy: nothing produces it
+  ! mods/ek-definitive-edition defs[477].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[479].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[480].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[481].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[499].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[507].producedBy: nothing produces it
+  ! mods/ek-definitive-edition defs[527].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[528].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[530].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[531].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[532].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[539].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[540].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[541].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[542].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[543].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[544].builtBy: nothing can build it
+  ! mods/ek-definitive-edition defs[545].builtBy: nothing can build it
+
+some mods have errors

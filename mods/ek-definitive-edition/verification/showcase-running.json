@@ -1,0 +1,1262 @@
+[
+  {
+    "time": 1.0333333333333332,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 2.033333333333336,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 3.0333333333333323,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 4.033333333333329,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 5.033333333333325,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 6.033333333333322,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 7.033333333333318,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 8.033333333333315,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 9.033333333333312,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 10.033333333333308,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 11.033333333333305,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 12.033333333333301,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 13.033333333333298,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 14.033333333333294,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 15.03333333333329,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 16.03333333333329,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 17.03333333333334,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 18.03333333333339,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 19.033333333333438,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 20.033333333333488,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 21.033333333333537,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 22.033333333333587,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 23.033333333333637,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 24.033333333333687,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 25.033333333333736,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 26.033333333333786,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 27.033333333333836,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 28.033333333333886,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 29.033333333333935,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 30.033333333333985,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 31.033333333334035,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 32.03333333333408,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 33.03333333333402,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 34.033333333333964,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 35.03333333333391,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 36.03333333333385,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 37.03333333333379,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 38.03333333333374,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 39.03333333333368,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 40.03333333333362,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 41.033333333333566,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 42.03333333333351,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 43.03333333333345,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 44.033333333333395,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 45.03333333333334,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 46.03333333333328,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 47.033333333333225,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 48.03333333333317,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 49.03333333333311,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 50.033333333333054,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 51.033333333333,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 52.03333333333294,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 53.033333333332884,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 54.03333333333283,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 55.03333333333277,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 56.03333333333271,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 57.033333333332656,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 58.0333333333326,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 59.03333333333254,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  },
+  {
+    "time": 60.033333333332486,
+    "entities": 583,
+    "projectiles": 0,
+    "effects": 0,
+    "decals": 0,
+    "errors": [],
+    "canvas": {
+      "alpha": 1,
+      "composite": "source-over",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "largestEffects": []
+  }
+]

@@ -1,0 +1,108 @@
+Installed { enabled: true, defs: 573, sprites: 1258, sounds: 14, missing: [] }
+Runtime {
+  missing: [],
+  modules: [ 'ek-definitive-edition.systems-v1' ],
+  renderer: 'EKRenderer'
+}
+Available gallery units [
+  'EkArsenalBird',
+  'EkArsenalBird2',
+  'Ek_Cordelia',
+  'Ek_Cordelia_drone',
+  'Ek_heavyTankDrake',
+  'Ek_Gladiator',
+  'Ek_Gladiator_AFB',
+  'EkColossusCombatmode',
+  'EkColossus',
+  'EkExcelsiorCombatmode',
+  'EkExcelsior',
+  'EkInfantryFactoryT1',
+  'EkInfantryGrunt',
+  'EkNebelwerferStatic',
+  'EkSupportFactory'
+]
+Running {
+  time: 1.0333333333333332,
+  entities: 583,
+  projectiles: 0,
+  effects: 0,
+  decals: 0,
+  errors: [],
+  canvas: {
+    alpha: 1,
+    composite: 'source-over',
+    transform: [ 1, 0, 0, 1, 0, 0 ]
+  },
+  largestEffects: []
+}
+Running {
+  time: 11.033333333333305,
+  entities: 583,
+  projectiles: 0,
+  effects: 0,
+  decals: 0,
+  errors: [],
+  canvas: {
+    alpha: 1,
+    composite: 'source-over',
+    transform: [ 1, 0, 0, 1, 0, 0 ]
+  },
+  largestEffects: []
+}
+Running {
+  time: 21.033333333333537,
+  entities: 583,
+  projectiles: 0,
+  effects: 0,
+  decals: 0,
+  errors: [],
+  canvas: {
+    alpha: 1,
+    composite: 'source-over',
+    transform: [ 1, 0, 0, 1, 0, 0 ]
+  },
+  largestEffects: []
+}
+Running {
+  time: 31.033333333334035,
+  entities: 583,
+  projectiles: 0,
+  effects: 0,
+  decals: 0,
+  errors: [],
+  canvas: {
+    alpha: 1,
+    composite: 'source-over',
+    transform: [ 1, 0, 0, 1, 0, 0 ]
+  },
+  largestEffects: []
+}
+Running {
+  time: 41.033333333333566,
+  entities: 583,
+  projectiles: 0,
+  effects: 0,
+  decals: 0,
+  errors: [],
+  canvas: {
+    alpha: 1,
+    composite: 'source-over',
+    transform: [ 1, 0, 0, 1, 0, 0 ]
+  },
+  largestEffects: []
+}
+Running {
+  time: 51.033333333333,
+  entities: 583,
+  projectiles: 0,
+  effects: 0,
+  decals: 0,
+  errors: [],
+  canvas: {
+    alpha: 1,
+    composite: 'source-over',
+    transform: [ 1, 0, 0, 1, 0, 0 ]
+  },
+  largestEffects: []
+}
+Browser acceptance passed

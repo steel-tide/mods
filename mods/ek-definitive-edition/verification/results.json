@@ -1,0 +1,68 @@
+{
+  "gameCommit": "cf9d38dcfa729ba84ceab3d85afdbd62901fe7b9",
+  "manifestSha256": "a5eb89938e66bcf748a7eff0da6e233d39c2d76da2fdb5da17db4978bb163f64",
+  "packedSha256": "88b11099ed43084cfee648df70982977f9aa0f01fc97760adfc326ab989e9e2b",
+  "rebuildDeterministic": true,
+  "sourceTestsPassed": 5,
+  "simulationTestsPassed": 21,
+  "simulationAssertions": 5596,
+  "missingKoreanStrings": 0,
+  "missingChineseStrings": 0,
+  "registryValidation": "blocked by user-selected 16:9 cover; registry requires 4:3 screenshots; reachability warnings retained",
+  "browserImport": "passed: actual folder import, Conquest map selection, all 573 showcase definitions; 60 simulated seconds of idle rendering with fog, selection and camera movement; explicit carrier activation; no browser errors",
+  "gameWorktree": "clean; no engine edits",
+  "distribution": "unlisted repository submission; automatic registry publication blocked by the preserved 16:9 cover",
+  "lastBrowserVerifiedManifestSha256": "a5eb89938e66bcf748a7eff0da6e233d39c2d76da2fdb5da17db4978bb163f64",
+  "version": "0.0.1",
+  "cover": {
+    "file": "screenshots/cover.jpeg",
+    "sourceSha256": "90185014197b9ce1532bfd682297c1150ae37a81bdd09bb5302c411988d1fdb4",
+    "copiedWithoutEdits": true,
+    "dimensions": [
+      3840,
+      2160
+    ]
+  },
+  "showcase": {
+    "name": "EK Complete Showcase",
+    "file": "maps/complete-showcase.steel-tide-map",
+    "dimensions": [
+      384,
+      448
+    ],
+    "sourceDefinitions": 573,
+    "mapPlacements": 400,
+    "runtimeAdded": 177,
+    "targets": 4,
+    "fileBytes": 49600,
+    "packedBytesVerified": true,
+    "tests": [
+      "all specimens and terrain",
+      "non-overlapping footprints",
+      "seat reassignment and closed seats",
+      "normal maps unaffected",
+      "one-time setup through save/load",
+      "exact keyframe deterministic continuation",
+      "one-minute idle stability",
+      "explicit owner-authorized activation",
+      "player orders and actions resume source behavior",
+      "paused/active save restoration",
+      "immediate save after specimen removal",
+      "continuous interpolated rendering with camera movement and fog"
+    ],
+    "screenshots": [
+      "verification/showcase-overview.jpg",
+      "verification/showcase-air.jpg",
+      "verification/showcase-naval.jpg",
+      "verification/showcase-running.jpg"
+    ],
+    "pausedUntilTest": true,
+    "idleSecondsVerified": 60,
+    "stableEntityCount": 583,
+    "automaticProjectiles": 0,
+    "automaticEffects": 0,
+    "automaticDecals": 0,
+    "activationAttachedHangars": 3,
+    "beforeFixEvidence": "verification/showcase-running-before-fix.json"
+  }
+}

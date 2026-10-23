@@ -1,0 +1,7905 @@
+[
+  {
+    "id": "ek-airshiphangar1",
+    "owner": 0,
+    "x": 12,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Airship Hangar T1",
+      "空中战舰工厂-T1",
+      "비행선 격납고 T1"
+    ],
+    "source": "units/airship_hangar.ini"
+  },
+  {
+    "id": "ek-airshiphangar2",
+    "owner": 0,
+    "x": 24,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Airship Hangar T2",
+      "空中战舰工厂-T2",
+      "비행선 격납고 T2"
+    ],
+    "source": "units/airship_hangar2.ini"
+  },
+  {
+    "id": "ek-balloonbarrage",
+    "owner": 0,
+    "x": 36,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Barrage Balloon",
+      "防空气球",
+      "사격 풍선"
+    ],
+    "source": "units/balloon.ini"
+  },
+  {
+    "id": "ek-barricade1x",
+    "owner": 0,
+    "x": 48,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Barricade [3x1]",
+      "路障[3x1]",
+      "바리케이드 [3x1]"
+    ],
+    "source": "units/barricade_3x1.ini"
+  },
+  {
+    "id": "ek-barricade1y",
+    "owner": 0,
+    "x": 60,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Barricade [1x3]",
+      "路障[1x3]",
+      "바리케이드 [1x3]"
+    ],
+    "source": "units/barricade_1x3.ini"
+  },
+  {
+    "id": "ek-barricade2x",
+    "owner": 0,
+    "x": 72,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Barricade [6x1]",
+      "路障[6x1]",
+      "바리케이드 [6x1]"
+    ],
+    "source": "units/barricade_6x1.ini"
+  },
+  {
+    "id": "ek-barricade2y",
+    "owner": 0,
+    "x": 84,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Barricade [1x6]",
+      "路障[1x6]",
+      "바리케이드 [1x6]"
+    ],
+    "source": "units/barricade_1x6.ini"
+  },
+  {
+    "id": "ek-biolaboratory",
+    "owner": 0,
+    "x": 96,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Bio Laboratory",
+      "生物实验室",
+      "바이오 연구실"
+    ],
+    "source": "units/bug_laboratory.ini"
+  },
+  {
+    "id": "ek-brickwall1x",
+    "owner": 0,
+    "x": 108,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Brick Wall [3x1]",
+      "砖墙[3x1]",
+      "벽돌벽 [3x1]"
+    ],
+    "source": "units/brickwall_3x1.ini"
+  },
+  {
+    "id": "ek-brickwall1y",
+    "owner": 0,
+    "x": 120,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Brick Wall [1x3]",
+      "砖墙[1x3]",
+      "벽돌벽 [1x3]"
+    ],
+    "source": "units/brickwall_1x3.ini"
+  },
+  {
+    "id": "ek-brickwall2x",
+    "owner": 0,
+    "x": 132,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Brick Wall [6x1]",
+      "砖墙[6x1]",
+      "벽돌벽 [6x1]"
+    ],
+    "source": "units/brickwall_6x1.ini"
+  },
+  {
+    "id": "ek-brickwall2y",
+    "owner": 0,
+    "x": 144,
+    "y": 224,
+    "sector": "buildings",
+    "name": [
+      "Brick Wall [1x6]",
+      "砖墙[1x6]",
+      "벽돌벽 [1x6]"
+    ],
+    "source": "units/brickwall_1x6.ini"
+  },
+  {
+    "id": "ek-bugcolony",
+    "owner": 0,
+    "x": 12,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bug Colony",
+      "虫族地洞",
+      "버그 콜로니"
+    ],
+    "source": "units/bug_colony.ini"
+  },
+  {
+    "id": "ek-bugdepott1",
+    "owner": 0,
+    "x": 24,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bug Depot",
+      "资金生产巢",
+      "버그 저장소"
+    ],
+    "source": "units/bug_depot_t1.ini"
+  },
+  {
+    "id": "ek-bugdepott2",
+    "owner": 0,
+    "x": 36,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bug Depot T2",
+      "资金生产巢-T2",
+      "버그 디포 T2"
+    ],
+    "source": "units/bug_depot_t2.ini"
+  },
+  {
+    "id": "ek-bugnest",
+    "owner": 0,
+    "x": 48,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bug Nest",
+      "虫巢",
+      "벌레 둥지"
+    ],
+    "source": "units/bug_nest.ini"
+  },
+  {
+    "id": "ek-bunkeraa",
+    "owner": 0,
+    "x": 60,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Anti-Air]",
+      "中型碉堡[防空]",
+      "벙커 [대공]"
+    ],
+    "source": "units/bunker_aa.ini"
+  },
+  {
+    "id": "ek-bunkerartillery",
+    "owner": 0,
+    "x": 72,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Artillery]",
+      "中型碉堡[火炮]",
+      "벙커 [포병]"
+    ],
+    "source": "units/bunker_artillery.ini"
+  },
+  {
+    "id": "ek-bunkerflak",
+    "owner": 0,
+    "x": 84,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Flak Cannon]",
+      "中型碉堡[高射炮]",
+      "벙커 [플랙 캐논]"
+    ],
+    "source": "units/bunker_flak.ini"
+  },
+  {
+    "id": "ek-bunkerflakheavy",
+    "owner": 0,
+    "x": 96,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Heavy Flak Cannon]",
+      "中型碉堡[重型高射炮]",
+      "벙커 [중대공포]"
+    ],
+    "source": "units/bunker_flak_heavy.ini"
+  },
+  {
+    "id": "ek-bunkerheavyartillery",
+    "owner": 0,
+    "x": 108,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Heavy Artillery]",
+      "中型碉堡[重型火炮]",
+      "벙커 [중포병]"
+    ],
+    "source": "units/bunker_heavy_artillery.ini"
+  },
+  {
+    "id": "ek-bunkerinterceptor",
+    "owner": 0,
+    "x": 120,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Airframe Interceptor]",
+      "中型碉堡[重型地对空导弹]",
+      "벙커 [에어프레임 인터셉터]"
+    ],
+    "source": "units/bunker_missile_aa.ini"
+  },
+  {
+    "id": "ek-bunkermg",
+    "owner": 0,
+    "x": 132,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Machine Gun]",
+      "中型碉堡[机枪]",
+      "벙커 [머신건]"
+    ],
+    "source": "units/bunker_mg.ini"
+  },
+  {
+    "id": "ek-bunkerrocket",
+    "owner": 0,
+    "x": 144,
+    "y": 236,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Rocket Barrage]",
+      "中型碉堡[火箭]连发模式",
+      "벙커 [로켓탄격]"
+    ],
+    "source": "units/bunker_rocket.ini"
+  },
+  {
+    "id": "ek-bunkerrocketalt",
+    "owner": 0,
+    "x": 12,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Rocket Ripple]",
+      "中型碉堡[火箭]单发模式",
+      "벙커 [로켓리플]"
+    ],
+    "source": "units/bunker_rocket_ripple.ini"
+  },
+  {
+    "id": "ek-bunkertinyartillery",
+    "owner": 0,
+    "x": 24,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Artillery]",
+      "小型碉堡[火炮]",
+      "벙커 [포병]"
+    ],
+    "source": "units/small_bunker_artillery.ini"
+  },
+  {
+    "id": "ek-bunkertinyasat",
+    "owner": 0,
+    "x": 36,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Anti-Satellite]",
+      "小型碉堡[反卫星]",
+      "벙커 [대위성]"
+    ],
+    "source": "units/small_satellite_interceptor.ini"
+  },
+  {
+    "id": "ek-bunkertinyinterceptor",
+    "owner": 0,
+    "x": 48,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Anti-Missile]",
+      "小型碉堡[反导弹]",
+      "벙커 [대미사일]"
+    ],
+    "source": "units/small_missile_interceptor.ini"
+  },
+  {
+    "id": "ek-bunkertinyminigun",
+    "owner": 0,
+    "x": 60,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Minigun]",
+      "小型碉堡[机枪]",
+      "벙커 [미니건]"
+    ],
+    "source": "units/small_bunker_minigun.ini"
+  },
+  {
+    "id": "ek-bunkertinysam",
+    "owner": 0,
+    "x": 72,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Bunker [S.A.M.]",
+      "小型碉堡[防空炮塔]",
+      "벙커 [S.A.M.]"
+    ],
+    "source": "units/small_bunker_sam.ini"
+  },
+  {
+    "id": "ek-chronocharge",
+    "owner": 0,
+    "x": 84,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Chronocharge",
+      "时空旋涡",
+      "크로노차지"
+    ],
+    "source": "units/chrono_charge.ini"
+  },
+  {
+    "id": "ek-commercial",
+    "owner": 0,
+    "x": 96,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Commercial Center",
+      "交易中心",
+      "상업센터"
+    ],
+    "source": "units/commercial.ini"
+  },
+  {
+    "id": "ek-concreteblock",
+    "owner": 0,
+    "x": 108,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Concrete Blocker",
+      "混凝土障碍",
+      "콘크리트 차단기"
+    ],
+    "source": "units/concrete_block1.ini"
+  },
+  {
+    "id": "ek-crazy-air-factory",
+    "owner": 0,
+    "x": 120,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Crazy Air Factory",
+      "疯狂空军工厂",
+      "크레이지 에어 팩토리"
+    ],
+    "source": "units/crazy_air_factory.ini"
+  },
+  {
+    "id": "ek-crazy-base",
+    "owner": 0,
+    "x": 132,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Crazy Command Center",
+      "疯狂指挥中心",
+      "미친 명령 센터"
+    ],
+    "source": "units/crazy_command.ini"
+  },
+  {
+    "id": "ek-crazy-land-factory",
+    "owner": 0,
+    "x": 144,
+    "y": 248,
+    "sector": "buildings",
+    "name": [
+      "Crazy Land Factory",
+      "疯狂陆军工厂",
+      "크레이지랜드팩토리"
+    ],
+    "source": "units/crazy_land_factory.ini"
+  },
+  {
+    "id": "ek-creditscrate",
+    "owner": 0,
+    "x": 12,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Credits Crate",
+      "钱箱",
+      "크레딧 상자"
+    ],
+    "source": "units/creditsCrate.ini"
+  },
+  {
+    "id": "ek-cruisemissilesilo",
+    "owner": 0,
+    "x": 24,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Light Missile Silo",
+      "轻型导弹发射井",
+      "경량 미사일 사일로"
+    ],
+    "source": "units/missilesilo_small.ini"
+  },
+  {
+    "id": "ek-dugout",
+    "owner": 0,
+    "x": 36,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Armored Dugout",
+      "装甲防空洞",
+      "기갑 참호"
+    ],
+    "source": "units/HugeBunker.ini"
+  },
+  {
+    "id": "ek-experimentalairfactory",
+    "owner": 0,
+    "x": 48,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Experimental Air Factory",
+      "实验型空军工厂",
+      "실험적인 공기 공장"
+    ],
+    "source": "units/experimental_air_factory.ini"
+  },
+  {
+    "id": "ek-extractort3",
+    "owner": 0,
+    "x": 60,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "extractorT3",
+      "提取器T3",
+      "추출기T3"
+    ],
+    "source": "units/extractor_t3.ini"
+  },
+  {
+    "id": "ek-foxhole",
+    "owner": 0,
+    "x": 72,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Foxhole",
+      "散兵坑",
+      "여우 구멍"
+    ],
+    "source": "units/Foxhole.ini"
+  },
+  {
+    "id": "ek-groundrefinery",
+    "owner": 0,
+    "x": 84,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Pumpjack [Extractor]",
+      "采油机械[资源抽取器]",
+      "펌프잭 [추출기]"
+    ],
+    "source": "units/pumpjack.ini"
+  },
+  {
+    "id": "ek-harvesterfactory",
+    "owner": 0,
+    "x": 96,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Military Factory",
+      "军用工厂",
+      "군사공장"
+    ],
+    "source": "units/harvester_factory.ini"
+  },
+  {
+    "id": "ek-harvestersolar",
+    "owner": 0,
+    "x": 108,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Solar Farm",
+      "太阳能电池",
+      "태양광발전소"
+    ],
+    "source": "units/harvester_solar.ini"
+  },
+  {
+    "id": "ek-harvestertanks",
+    "owner": 0,
+    "x": 120,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Oil Tanks",
+      "油罐",
+      "석유탱크"
+    ],
+    "source": "units/harvester_tanks.ini"
+  },
+  {
+    "id": "ek-harvesterwarehouse",
+    "owner": 0,
+    "x": 132,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Weapon Stores",
+      "武器作坊",
+      "무기 상점"
+    ],
+    "source": "units/harvester_warehouse.ini"
+  },
+  {
+    "id": "ek-helipad",
+    "owner": 0,
+    "x": 144,
+    "y": 260,
+    "sector": "buildings",
+    "name": [
+      "Docking Bay",
+      "停机坪",
+      "도킹 베이"
+    ],
+    "source": "units/helipad.ini"
+  },
+  {
+    "id": "ek-infantryfactoryt1",
+    "owner": 0,
+    "x": 12,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Infantry Barracks T1",
+      "步兵营-T1",
+      "보병 막사 T1"
+    ],
+    "source": "units/infantryFactoryT1.ini"
+  },
+  {
+    "id": "ek-infantryfactoryt2",
+    "owner": 0,
+    "x": 24,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Infantry Barracks T2",
+      "步兵营-T2",
+      "보병 막사 T2"
+    ],
+    "source": "units/infantryFactoryT2.ini"
+  },
+  {
+    "id": "ek-infantryfactoryt3",
+    "owner": 0,
+    "x": 36,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Infantry Barracks T3",
+      "步兵营-T3",
+      "보병 막사 T3"
+    ],
+    "source": "units/infantryFactoryT3.ini"
+  },
+  {
+    "id": "ek-infbunker",
+    "owner": 0,
+    "x": 48,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Light Bunker",
+      "步兵掩体",
+      "라이트 벙커"
+    ],
+    "source": "units/lightbunker.ini"
+  },
+  {
+    "id": "ek-laboratory",
+    "owner": 0,
+    "x": 60,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Laboratory T1",
+      "实验室-T1",
+      "연구실 T1"
+    ],
+    "source": "units/laboratory.ini"
+  },
+  {
+    "id": "ek-laboratoryt2",
+    "owner": 0,
+    "x": 72,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Laboratory T2",
+      "实验室-T2",
+      "연구실T2"
+    ],
+    "source": "units/laboratoryt2.ini"
+  },
+  {
+    "id": "ek-laboratoryt3",
+    "owner": 0,
+    "x": 84,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Laboratory T3",
+      "实验室-T3",
+      "T3 연구실"
+    ],
+    "source": "units/laboratoryt3.ini"
+  },
+  {
+    "id": "ek-large-modular",
+    "owner": 0,
+    "x": 96,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Large Bunker [Modular]",
+      "大型碉堡[模块化]",
+      "대형 벙커 [모듈형]"
+    ],
+    "source": "units/largebunker_modular.ini"
+  },
+  {
+    "id": "ek-largeartillery",
+    "owner": 0,
+    "x": 108,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Large Bunker [Autocannon]",
+      "大型碉堡[自动炮台]",
+      "대형 벙커 [오토캐논]"
+    ],
+    "source": "units/large_bunker_artillery.ini"
+  },
+  {
+    "id": "ek-largechaingun",
+    "owner": 0,
+    "x": 120,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Large Bunker [Chaincannon]",
+      "大型碉堡[链式机炮]",
+      "대형 벙커 [체인캐논]"
+    ],
+    "source": "units/large_bunker_chaingun.ini"
+  },
+  {
+    "id": "ek-largeexperimentalhangar",
+    "owner": 0,
+    "x": 132,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Heavy Experimental Hangar",
+      "重型实验工厂",
+      "중형 실험 격납고"
+    ],
+    "source": "units/experimental_hangar.ini"
+  },
+  {
+    "id": "ek-largenukelauncher",
+    "owner": 0,
+    "x": 144,
+    "y": 272,
+    "sector": "buildings",
+    "name": [
+      "Large Nuke Launcher",
+      "大型核弹发射井",
+      "대형 핵 발사기"
+    ],
+    "source": "units/nuke_launcher_super.ini"
+  },
+  {
+    "id": "ek-largerockets",
+    "owner": 0,
+    "x": 12,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Large Bunker [Rocket Barrage]",
+      "大型碉堡[导弹]",
+      "대형 벙커 [로켓 연발]"
+    ],
+    "source": "units/large_bunker_rocket.ini"
+  },
+  {
+    "id": "ek-largerotarygun",
+    "owner": 0,
+    "x": 24,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Large Bunker [Rotarycannon]",
+      "大型碉堡[转管机炮]",
+      "대형벙커 [로터리캐논]"
+    ],
+    "source": "units/large_bunker_rotarygun.ini"
+  },
+  {
+    "id": "ek-launchpad",
+    "owner": 0,
+    "x": 36,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Launch Center",
+      "卫星发射中心",
+      "발사 센터"
+    ],
+    "source": "units/launchpad.ini"
+  },
+  {
+    "id": "ek-orbitaldroplanded",
+    "owner": 0,
+    "x": 48,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Orbital Drop Pod",
+      "着陆舱[已降落]",
+      "궤도 낙하 포드"
+    ],
+    "source": "units/orbitaldroplanded.ini"
+  },
+  {
+    "id": "ek-orbitaltransportlanded",
+    "owner": 0,
+    "x": 60,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Orbital Transport",
+      "轨道运输火箭[已降落]",
+      "궤도 수송"
+    ],
+    "source": "units/orbitaltransportlanded.ini"
+  },
+  {
+    "id": "ek-radarturret",
+    "owner": 0,
+    "x": 72,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Bunker [Radar]",
+      "小型碉堡[雷达]",
+      "벙커 [레이더]"
+    ],
+    "source": "units/radar.ini"
+  },
+  {
+    "id": "ek-railgunturret",
+    "owner": 0,
+    "x": 84,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Railgun Turret",
+      "磁轨炮塔",
+      "레일건 포탑"
+    ],
+    "source": "units/Tesla.ini"
+  },
+  {
+    "id": "ek-resourcedrill",
+    "owner": 0,
+    "x": 96,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Deep Mineral Drill",
+      "深井钻机",
+      "심층 미네랄 드릴"
+    ],
+    "source": "units/resource_drilling.ini"
+  },
+  {
+    "id": "ek-resourcerefinery",
+    "owner": 0,
+    "x": 108,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Experimental Refinery",
+      "实验型精炼厂",
+      "실험적인 정유소"
+    ],
+    "source": "units/resource_refinery.ini"
+  },
+  {
+    "id": "ek-runway",
+    "owner": 0,
+    "x": 120,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Runway",
+      "飞机跑道",
+      "활주로"
+    ],
+    "source": "units/EKrunway.ini"
+  },
+  {
+    "id": "ek-sentinelsilo",
+    "owner": 0,
+    "x": 132,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Strategic Defence Complex",
+      "战略防御复合体",
+      "전략방어복합단지"
+    ],
+    "source": "units/missilesilo_sentinel.ini"
+  },
+  {
+    "id": "ek-shielddefense",
+    "owner": 0,
+    "x": 144,
+    "y": 284,
+    "sector": "buildings",
+    "name": [
+      "Shield Defense",
+      "力场护盾生成器",
+      "방패 방어"
+    ],
+    "source": "units/shield_defense.ini"
+  },
+  {
+    "id": "ek-smallspaceelevator",
+    "owner": 0,
+    "x": 12,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Space Elevator",
+      "太空升降机",
+      "우주 엘리베이터"
+    ],
+    "source": "units/space_elevator.ini"
+  },
+  {
+    "id": "ek-solarfarmstation",
+    "owner": 0,
+    "x": 24,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Orbital Synthetic Plant",
+      "轨道合成工厂",
+      "궤도 합성 공장"
+    ],
+    "source": "units/SFS.ini"
+  },
+  {
+    "id": "ek-supplydepot",
+    "owner": 0,
+    "x": 36,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Supply Depot T1",
+      "资金供应站-T1",
+      "보급창고 T1"
+    ],
+    "source": "units/supplydepot.ini"
+  },
+  {
+    "id": "ek-supplydepott2",
+    "owner": 0,
+    "x": 48,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Supply Depot T2",
+      "资金供应站-T2",
+      "보급창고 T2"
+    ],
+    "source": "units/supplydepot2.ini"
+  },
+  {
+    "id": "ek-supportfactory",
+    "owner": 0,
+    "x": 60,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Support Factory T1",
+      "支援型单位工厂-T1",
+      "지원 공장 T1"
+    ],
+    "source": "units/support_factory_t1.ini"
+  },
+  {
+    "id": "ek-supportfactoryt2",
+    "owner": 0,
+    "x": 72,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Support Factory T2",
+      "支援型单位工厂-T2",
+      "지원 공장 T2"
+    ],
+    "source": "units/support_factory_t2.ini"
+  },
+  {
+    "id": "ek-tanktrap",
+    "owner": 0,
+    "x": 84,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Tank Trap",
+      "坦克陷阱",
+      "탱크 트랩"
+    ],
+    "source": "units/tank_trap1.ini"
+  },
+  {
+    "id": "ek-towerhmg",
+    "owner": 0,
+    "x": 96,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Perimeter Tower [HMG]",
+      "哨站[重机枪]",
+      "페리미터 타워 [HMG]"
+    ],
+    "source": "units/tower_hmg.ini"
+  },
+  {
+    "id": "ek-towerhmgupgraded",
+    "owner": 0,
+    "x": 108,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Reinforced Tower [HMG]",
+      "加固哨站[重机枪]",
+      "강화타워 [HMG]"
+    ],
+    "source": "units/tower_hmg_upgraded.ini"
+  },
+  {
+    "id": "ek-towerrifleman",
+    "owner": 0,
+    "x": 120,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Perimeter Tower [Rifleman]",
+      "哨站[步枪]",
+      "페리미터 타워 [라이플맨]"
+    ],
+    "source": "units/tower_rifleman.ini"
+  },
+  {
+    "id": "ek-towerriflemanupgraded",
+    "owner": 0,
+    "x": 132,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Reinforced Tower [Rifleman]",
+      "加固哨站[步枪]",
+      "강화타워 [라이플맨]"
+    ],
+    "source": "units/tower_rifleman_upgraded.ini"
+  },
+  {
+    "id": "ek-towersniper",
+    "owner": 0,
+    "x": 144,
+    "y": 296,
+    "sector": "buildings",
+    "name": [
+      "Perimeter Tower [Sniper]",
+      "哨站[狙击枪]",
+      "경계 타워 [스나이퍼]"
+    ],
+    "source": "units/tower_sniper.ini"
+  },
+  {
+    "id": "ek-towersniperupgraded",
+    "owner": 0,
+    "x": 12,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Reinforced Tower [Sniper]",
+      "加固哨站[狙击枪]",
+      "강화타워 [스나이퍼]"
+    ],
+    "source": "units/tower_sniper_upgraded.ini"
+  },
+  {
+    "id": "ek-turretempty",
+    "owner": 0,
+    "x": 24,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Turret Foundation",
+      "微型炮塔基座",
+      "터렛 재단"
+    ],
+    "source": "units/turret_empty.ini"
+  },
+  {
+    "id": "ek-turretgmg",
+    "owner": 0,
+    "x": 36,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Turret [GMG]",
+      "微型炮塔[榴弹炮]",
+      "터렛 [GMG]"
+    ],
+    "source": "units/turret_gmg.ini"
+  },
+  {
+    "id": "ek-turrethmg",
+    "owner": 0,
+    "x": 48,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Turret [HMG]",
+      "微型炮塔[机枪]",
+      "포탑 [HMG]"
+    ],
+    "source": "units/turret_hmg.ini"
+  },
+  {
+    "id": "ek-turretlaserdefence",
+    "owner": 0,
+    "x": 60,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Turret [Laser Defence]",
+      "微型炮塔[激光防御]",
+      "터렛 [레이저 디펜스]"
+    ],
+    "source": "units/turret_laserdefence.ini"
+  },
+  {
+    "id": "ek-turretmortar",
+    "owner": 0,
+    "x": 72,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Turret [Mortar]",
+      "微型炮塔[迫击炮]",
+      "포탑 [박격포]"
+    ],
+    "source": "units/turret_mortar.ini"
+  },
+  {
+    "id": "ek-turretrepair",
+    "owner": 0,
+    "x": 84,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Turret [Repair]",
+      "微型炮塔[修复]",
+      "포탑 [수리]"
+    ],
+    "source": "units/turret_repair.ini"
+  },
+  {
+    "id": "ek-turretsam",
+    "owner": 0,
+    "x": 96,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Turret [SAM]",
+      "微型炮塔[防空导弹]",
+      "터렛 [SAM]"
+    ],
+    "source": "units/turret_sam.ini"
+  },
+  {
+    "id": "ek-turretsamheavy",
+    "owner": 0,
+    "x": 108,
+    "y": 308,
+    "sector": "buildings",
+    "name": [
+      "Turret [SAM T2]",
+      "微型炮塔[防空导弹-T2]",
+      "터렛 [SAM T2]"
+    ],
+    "source": "units/turret_sam_heavy.ini"
+  },
+  {
+    "id": "ek-almaz",
+    "owner": 0,
+    "x": 12,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Almaz Tank",
+      "阿尔玛兹级重型坦克",
+      "알마즈 탱크"
+    ],
+    "source": "units/almaz.ini"
+  },
+  {
+    "id": "ek-apocalypse",
+    "owner": 0,
+    "x": 24,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XHT-01 \"Apocalypse\"",
+      "XHT-01 \"末日天启\"级超重型坦克",
+      "XHT-01 \"아포칼립스\""
+    ],
+    "source": "units/apocalypse.ini"
+  },
+  {
+    "id": "ek-apwsmoving",
+    "owner": 0,
+    "x": 36,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "APWS",
+      "火炮坦克",
+      "APWS"
+    ],
+    "source": "units/apws_gun.ini"
+  },
+  {
+    "id": "ek-apwsstatic",
+    "owner": 0,
+    "x": 48,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "APWS [Deployed]",
+      "火炮坦克[已部署]",
+      "APWS [배포됨]"
+    ],
+    "source": "units/apws_gun_deployed.ini"
+  },
+  {
+    "id": "ek-arrow-head",
+    "owner": 0,
+    "x": 60,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Arrowhead",
+      "海波龙防空车",
+      "화살촉"
+    ],
+    "source": "units/arrow_head.ini"
+  },
+  {
+    "id": "ek-arrow-head-2",
+    "owner": 0,
+    "x": 72,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Arrowhead T2",
+      "海波龙防空车-T2",
+      "화살촉 T2"
+    ],
+    "source": "units/arrow_head_2.ini"
+  },
+  {
+    "id": "ek-artilleryold",
+    "owner": 0,
+    "x": 84,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Old Artillery",
+      "远古自行火炮",
+      "오래된 포병"
+    ],
+    "source": "units/artillery.ini"
+  },
+  {
+    "id": "ek-atemoving",
+    "owner": 0,
+    "x": 96,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Howitzer",
+      "牵引式榴弹炮",
+      "곡사포"
+    ],
+    "source": "units/ate_gun.ini"
+  },
+  {
+    "id": "ek-atestatic",
+    "owner": 0,
+    "x": 108,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Howitzer [Deployed]",
+      "牵引式榴弹炮[已部署]",
+      "곡사포 [배치됨]"
+    ],
+    "source": "units/ate_gun_deployed.ini"
+  },
+  {
+    "id": "ek-atetowed",
+    "owner": 0,
+    "x": 120,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Howitzer",
+      "牵引式榴弹炮",
+      "곡사포"
+    ],
+    "source": "units/ate_gun_towed.ini"
+  },
+  {
+    "id": "ek-bastion",
+    "owner": 0,
+    "x": 132,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XK-01 \"Bastion\"",
+      "XK-01 \"机械堡垒\"",
+      "XK-01 \"바스티온\""
+    ],
+    "source": "units/bastion_mech.ini"
+  },
+  {
+    "id": "ek-battlewagon",
+    "owner": 0,
+    "x": 144,
+    "y": 32,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Battlewagon",
+      "作战卡车",
+      "배틀왜건"
+    ],
+    "source": "units/battlewagon.ini"
+  },
+  {
+    "id": "ek-battlewagonate",
+    "owner": 0,
+    "x": 12,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Artillery Truck",
+      "火炮卡车",
+      "포병 트럭"
+    ],
+    "source": "units/battlewagon_ate.ini"
+  },
+  {
+    "id": "ek-berdsk",
+    "owner": 0,
+    "x": 24,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Berdsk Tank",
+      "别尔茨克级重型坦克",
+      "베르드스크 탱크"
+    ],
+    "source": "units/berdsk.ini"
+  },
+  {
+    "id": "ek-bugbuilder",
+    "owner": 0,
+    "x": 36,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Bug Builder",
+      "建造虫",
+      "버그 빌더"
+    ],
+    "source": "units/bug_builder.ini"
+  },
+  {
+    "id": "ek-buggeneratort1",
+    "owner": 0,
+    "x": 48,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Bug Generator",
+      "资金生产虫",
+      "버그 생성기"
+    ],
+    "source": "units/bug_generator_t1.ini"
+  },
+  {
+    "id": "ek-buggeneratort2",
+    "owner": 0,
+    "x": 60,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Bug Generator T2",
+      "资金生产虫-T2",
+      "버그 생성기 T2"
+    ],
+    "source": "units/bug_generator_t2.ini"
+  },
+  {
+    "id": "ek-buggeneratort3",
+    "owner": 0,
+    "x": 72,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Bug Generator T3",
+      "资金生产虫-T3",
+      "버그 생성기 T3"
+    ],
+    "source": "units/bug_generator_t3.ini"
+  },
+  {
+    "id": "ek-bughavocity",
+    "owner": 0,
+    "x": 84,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "\"Havocity\"",
+      "\"崩垣\"",
+      "\"하보시티\""
+    ],
+    "source": "units/bug_havocity.ini"
+  },
+  {
+    "id": "ek-bughurricleave",
+    "owner": 0,
+    "x": 96,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "\"Hurricleave\"",
+      "\"飑刃\"",
+      "\"허리클리브\""
+    ],
+    "source": "units/bug_hurricleave.ini"
+  },
+  {
+    "id": "ek-bugthornbolt",
+    "owner": 0,
+    "x": 108,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "\"Thornbolt\"",
+      "\"贯棘\"",
+      "\"쏜볼트\""
+    ],
+    "source": "units/bug_thornbolt.ini"
+  },
+  {
+    "id": "ek-chassis",
+    "owner": 0,
+    "x": 120,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XT-00 Tank Chassis",
+      "XT-00 坦克底盘",
+      "XT-00 탱크 섀시"
+    ],
+    "source": "units/tank_chassis.ini"
+  },
+  {
+    "id": "ek-commstruck",
+    "owner": 0,
+    "x": 132,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Comms Truck",
+      "通讯卡车",
+      "통신 트럭"
+    ],
+    "source": "units/comms_truck.ini"
+  },
+  {
+    "id": "ek-diamondback",
+    "owner": 0,
+    "x": 144,
+    "y": 44,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Diamondback",
+      "响尾蛇级轻型坦克",
+      "다이아몬드백"
+    ],
+    "source": "units/diamondback.ini"
+  },
+  {
+    "id": "ek-dingo",
+    "owner": 0,
+    "x": 12,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Dingo Mech",
+      "野犬机甲",
+      "딩고 메크"
+    ],
+    "source": "units/dingo_mech.ini"
+  },
+  {
+    "id": "ek-dingoh",
+    "owner": 0,
+    "x": 24,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Dingo Mech T2",
+      "野犬机甲-T2",
+      "딩고 메크 T2"
+    ],
+    "source": "units/dingo_mech_2.ini"
+  },
+  {
+    "id": "ek-dominion",
+    "owner": 0,
+    "x": 36,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Dominion",
+      "统领者机甲",
+      "지배"
+    ],
+    "source": "units/Dominion.ini"
+  },
+  {
+    "id": "ek-drill",
+    "owner": 0,
+    "x": 48,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Drill Engine",
+      "钻头卡车",
+      "드릴 엔진"
+    ],
+    "source": "units/drill.ini"
+  },
+  {
+    "id": "ek-egret",
+    "owner": 0,
+    "x": 60,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Egret Mech",
+      "白鹭机甲",
+      "백로 기계"
+    ],
+    "source": "units/egret_mech.ini"
+  },
+  {
+    "id": "ek-ember",
+    "owner": 0,
+    "x": 72,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XT-02B \"Ember\"",
+      "XT-02B \"余烬\"级超重型歼击坦克",
+      "XT-02B \"엠버\""
+    ],
+    "source": "units/ember.ini"
+  },
+  {
+    "id": "ek-eternitytank",
+    "owner": 0,
+    "x": 84,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XT-01C \"Eternity\"",
+      "XT-01C \"不朽\"级自行火炮",
+      "XT-01C \"이터니티\""
+    ],
+    "source": "units/eternity.ini"
+  },
+  {
+    "id": "ek-exp-flak-mech",
+    "owner": 0,
+    "x": 96,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XM-01 \"Arrakis\"",
+      "XM-01 \"阿拉基斯\"机甲",
+      "XM-01 \"아라키스\""
+    ],
+    "source": "units/flak_mech.ini"
+  },
+  {
+    "id": "ek-experimentalgunshiplandeds",
+    "owner": 0,
+    "x": 108,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XHG-03 \"Archangel\"",
+      "XHG-03 \"大天使\"级空中作战平台",
+      "XHG-03 \"대천사\""
+    ],
+    "source": "units/experimental_gunship_landed.ini"
+  },
+  {
+    "id": "ek-experimentaltruck",
+    "owner": 0,
+    "x": 120,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Experimental Truck",
+      "实验科技卡车",
+      "실험용 트럭"
+    ],
+    "source": "units/Experimental_Truck.ini"
+  },
+  {
+    "id": "ek-experimentaltruckt2",
+    "owner": 0,
+    "x": 132,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Heavy Experimental Truck",
+      "重型实验科技卡车",
+      "대형 실험용 트럭"
+    ],
+    "source": "units/Experimental_Truck_T2.ini"
+  },
+  {
+    "id": "ek-fencer",
+    "owner": 0,
+    "x": 144,
+    "y": 56,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Fencer",
+      "击剑手",
+      "펜싱 선수"
+    ],
+    "source": "units/fencer.ini"
+  },
+  {
+    "id": "ek-fenrirmech",
+    "owner": 0,
+    "x": 12,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XF-01 \"Fenrir\"",
+      "XF-01 \"芬里尔\"机甲",
+      "XF-01 \"펜리르\""
+    ],
+    "source": "units/fenrir.ini"
+  },
+  {
+    "id": "ek-firestorm",
+    "owner": 0,
+    "x": 24,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Firestorm",
+      "火风暴级坦克",
+      "파이어스톰"
+    ],
+    "source": "units/firestorm.ini"
+  },
+  {
+    "id": "ek-flak-drone-fall",
+    "owner": 0,
+    "x": 36,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Flak Drone",
+      "高射炮无人机",
+      "플랙 드론"
+    ],
+    "source": "units/flak_drone_fall.ini"
+  },
+  {
+    "id": "ek-flakmoving",
+    "owner": 0,
+    "x": 48,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Flak",
+      "牵引式高射炮",
+      "플랙"
+    ],
+    "source": "units/flak_gun.ini"
+  },
+  {
+    "id": "ek-flakstatic",
+    "owner": 0,
+    "x": 60,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Flak [Deployed]",
+      "牵引式高射炮[已部署]",
+      "플랙 [배치됨]"
+    ],
+    "source": "units/flak_gun_deployed.ini"
+  },
+  {
+    "id": "ek-flaktowed",
+    "owner": 0,
+    "x": 72,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Flak",
+      "牵引式高射炮",
+      "플랙"
+    ],
+    "source": "units/flak_gun_towed.ini"
+  },
+  {
+    "id": "ek-flamer",
+    "owner": 0,
+    "x": 84,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Flamer",
+      "烈焰机兵",
+      "플레이머"
+    ],
+    "source": "units/infantry_flamer.ini"
+  },
+  {
+    "id": "ek-flametank",
+    "owner": 0,
+    "x": 96,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Flamethrower Tank",
+      "契约级喷火坦克",
+      "화염방사기 탱크"
+    ],
+    "source": "units/tank_flame.ini"
+  },
+  {
+    "id": "ek-flamingolanded",
+    "owner": 0,
+    "x": 108,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Flamingo Mech",
+      "火烈鸟级垂直起降飞行机甲",
+      "플라밍고 기계"
+    ],
+    "source": "units/flamingo.ini"
+  },
+  {
+    "id": "ek-glaze",
+    "owner": 0,
+    "x": 120,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Glaze",
+      "抛光机级运兵车",
+      "유약"
+    ],
+    "source": "units/glaze.ini"
+  },
+  {
+    "id": "ek-heavydawnmoving",
+    "owner": 0,
+    "x": 132,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Dawn",
+      "黎明级移动炮台",
+      "새벽"
+    ],
+    "source": "units/heavy_gun.ini"
+  },
+  {
+    "id": "ek-heavydawnstatic",
+    "owner": 0,
+    "x": 144,
+    "y": 68,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Dawn [Deployed]",
+      "黎明级移动炮台[已部署]",
+      "새벽 [배치됨]"
+    ],
+    "source": "units/heavy_deployed.ini"
+  },
+  {
+    "id": "ek-heavysniperdeployed",
+    "owner": 0,
+    "x": 12,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Heavy Sniper [Prone]",
+      "狙击手[趴下]",
+      "헤비 스나이퍼 [엎드리기]"
+    ],
+    "source": "units/infantry_heavysniper_deployed.ini"
+  },
+  {
+    "id": "ek-heavytankelephantine",
+    "owner": 0,
+    "x": 24,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XT-01A \"Elephantine\"",
+      "XT-01A \"战象\"级超重型坦克",
+      "XT-01A \"코끼리\""
+    ],
+    "source": "units/elephantine.ini"
+  },
+  {
+    "id": "ek-heavytanksmilodon",
+    "owner": 0,
+    "x": 36,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XT-01B \"Smilodon\"",
+      "XT-01B \"剑齿虎\"级超重型坦克歼击车",
+      "XT-01B \"스밀로돈\""
+    ],
+    "source": "units/smilodon.ini"
+  },
+  {
+    "id": "ek-heavytanktempest",
+    "owner": 0,
+    "x": 48,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XT-01D \"Tempest\"",
+      "XT-01D \"暴风\"级超重型坦克",
+      "XT-01D \"템페스트\""
+    ],
+    "source": "units/tempest.ini"
+  },
+  {
+    "id": "ek-hellfire",
+    "owner": 0,
+    "x": 60,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Hellfire Mech",
+      "地狱火机甲",
+      "지옥불 기계"
+    ],
+    "source": "units/ek_hellfire.ini"
+  },
+  {
+    "id": "ek-hound",
+    "owner": 0,
+    "x": 72,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Hound",
+      "猎犬级多功能步兵车",
+      "하운드"
+    ],
+    "source": "units/ek_smallapc.ini"
+  },
+  {
+    "id": "ek-houndapc",
+    "owner": 0,
+    "x": 84,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Hound T2",
+      "猎犬级多功能步兵车-T2",
+      "하운드 T2"
+    ],
+    "source": "units/hound.ini"
+  },
+  {
+    "id": "ek-infantryassault",
+    "owner": 0,
+    "x": 96,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Marines",
+      "海军陆战兵",
+      "해병대"
+    ],
+    "source": "units/infantry_assault.ini"
+  },
+  {
+    "id": "ek-infantryat",
+    "owner": 0,
+    "x": 108,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Missile Support",
+      "导弹支援兵",
+      "미사일 지원"
+    ],
+    "source": "units/infantry_missile.ini"
+  },
+  {
+    "id": "ek-infantryautosniper",
+    "owner": 0,
+    "x": 120,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Elite Marksman",
+      "精英神射手",
+      "엘리트 사수"
+    ],
+    "source": "units/infantry_autosniper.ini"
+  },
+  {
+    "id": "ek-infantryautosniperdeployed",
+    "owner": 0,
+    "x": 132,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Elite Marksman [Prone]",
+      "精英神射手[趴下]",
+      "엘리트 사수 [엎드리기]"
+    ],
+    "source": "units/infantry_autosniper_deployed.ini"
+  },
+  {
+    "id": "ek-infantrybeam",
+    "owner": 0,
+    "x": 144,
+    "y": 80,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Beamer",
+      "镭射步枪兵",
+      "비머"
+    ],
+    "source": "units/infantry_beam.ini"
+  },
+  {
+    "id": "ek-infantrybiohazard",
+    "owner": 0,
+    "x": 12,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Biochemical Technician",
+      "生化步兵",
+      "생화학 기술자"
+    ],
+    "source": "units/infantry_biohazard.ini"
+  },
+  {
+    "id": "ek-infantryengineer",
+    "owner": 0,
+    "x": 24,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Infantry Engineer",
+      "战地工兵",
+      "보병 엔지니어"
+    ],
+    "source": "units/infantry_engineer.ini"
+  },
+  {
+    "id": "ek-infantrygrenade",
+    "owner": 0,
+    "x": 36,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Grenadier",
+      "投弹兵",
+      "척탄병"
+    ],
+    "source": "units/infantry_grenadier.ini"
+  },
+  {
+    "id": "ek-infantrygrunt",
+    "owner": 0,
+    "x": 48,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Rifleman",
+      "步枪兵",
+      "소총수"
+    ],
+    "source": "units/infantry_grunt.ini"
+  },
+  {
+    "id": "ek-infantryheavyat",
+    "owner": 0,
+    "x": 60,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Heavy Anti-Tank",
+      "反坦克步兵",
+      "중대전차"
+    ],
+    "source": "units/infantry_heavy_at.ini"
+  },
+  {
+    "id": "ek-infantryheavysniper",
+    "owner": 0,
+    "x": 72,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Heavy Sniper",
+      "狙击手",
+      "헤비 스나이퍼"
+    ],
+    "source": "units/infantry_heavysniper.ini"
+  },
+  {
+    "id": "ek-infantryhmg",
+    "owner": 0,
+    "x": 84,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Machine-Gunner",
+      "机枪兵",
+      "기관총 사수"
+    ],
+    "source": "units/infantry_hmg.ini"
+  },
+  {
+    "id": "ek-infantryhmgdeployed",
+    "owner": 0,
+    "x": 96,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Machine-Gunner [Prone]",
+      "机枪兵[趴下]",
+      "기관총 사수 [엎드리기]"
+    ],
+    "source": "units/infantry_hmg_deployed.ini"
+  },
+  {
+    "id": "ek-infantryjetpack",
+    "owner": 0,
+    "x": 108,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Pegasus",
+      "飞行突击兵",
+      "페가수스"
+    ],
+    "source": "units/infantry_pegasus.ini"
+  },
+  {
+    "id": "ek-infantrymedic",
+    "owner": 0,
+    "x": 120,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Combat Medic",
+      "战地医生",
+      "전투 메딕"
+    ],
+    "source": "units/infantry_medic.ini"
+  },
+  {
+    "id": "ek-infantrymortar",
+    "owner": 0,
+    "x": 132,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mortar",
+      "迫击炮兵",
+      "박격포"
+    ],
+    "source": "units/infantry_mortar.ini"
+  },
+  {
+    "id": "ek-infantryrailgun",
+    "owner": 0,
+    "x": 144,
+    "y": 92,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Railgunner",
+      "电荷步枪兵",
+      "레일거너"
+    ],
+    "source": "units/infantry_railgun.ini"
+  },
+  {
+    "id": "ek-infantryrailgundeployed",
+    "owner": 0,
+    "x": 12,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Railgunner [Prone]",
+      "电荷步枪兵[趴下]",
+      "레일거너 [엎드리기]"
+    ],
+    "source": "units/infantry_railgun_deployed.ini"
+  },
+  {
+    "id": "ek-infantryscoutmech",
+    "owner": 0,
+    "x": 24,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Fearless",
+      "无畏战士",
+      "겁이 없는"
+    ],
+    "source": "units/vid_scoutmech.ini"
+  },
+  {
+    "id": "ek-infantryshock",
+    "owner": 0,
+    "x": 36,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Bolt Trooper",
+      "瞬移突击兵",
+      "볼트 트루퍼"
+    ],
+    "source": "units/infantry_shock.ini"
+  },
+  {
+    "id": "ek-infantrysniper",
+    "owner": 0,
+    "x": 48,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Marksman",
+      "神射手",
+      "사수"
+    ],
+    "source": "units/infantry_sniper.ini"
+  },
+  {
+    "id": "ek-infantrysniperdeployed",
+    "owner": 0,
+    "x": 60,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Marksman [Prone]",
+      "神射手[趴下]",
+      "명사수 [엎드리기]"
+    ],
+    "source": "units/infantry_sniper_deployed.ini"
+  },
+  {
+    "id": "ek-infantrystrike",
+    "owner": 0,
+    "x": 72,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Strike Launcher",
+      "超级火箭兵",
+      "스트라이크 런처"
+    ],
+    "source": "units/infantry_strike.ini"
+  },
+  {
+    "id": "ek-ironstorm",
+    "owner": 0,
+    "x": 84,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Iron Storm",
+      "钢铁风暴级火箭炮卡车",
+      "아이언 스톰"
+    ],
+    "source": "units/iron_Storm.ini"
+  },
+  {
+    "id": "ek-javelin",
+    "owner": 0,
+    "x": 96,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Javelin",
+      "标枪级防空卡车",
+      "자벨린"
+    ],
+    "source": "units/javelin.ini"
+  },
+  {
+    "id": "ek-juggernaut",
+    "owner": 0,
+    "x": 108,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Juggernaut",
+      "碾压者级重型坦克",
+      "거대괴수"
+    ],
+    "source": "units/juggernaut.ini"
+  },
+  {
+    "id": "ek-kamikazetruck",
+    "owner": 0,
+    "x": 120,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Kamikaze Truck",
+      "自爆卡车",
+      "가미카제 트럭"
+    ],
+    "source": "units/kamikaze_truck.ini"
+  },
+  {
+    "id": "ek-katyushamoving",
+    "owner": 0,
+    "x": 132,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Katyusha",
+      "喀秋莎火箭炮",
+      "카츄샤"
+    ],
+    "source": "units/rocket_truck.ini"
+  },
+  {
+    "id": "ek-katyushastatic",
+    "owner": 0,
+    "x": 144,
+    "y": 104,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Katyusha [Deployed]",
+      "喀秋莎火箭炮[已部署]",
+      "카츄샤 [배치됨]"
+    ],
+    "source": "units/rocket_truck_deployed.ini"
+  },
+  {
+    "id": "ek-krieg",
+    "owner": 0,
+    "x": 12,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XT-02A \"Krieg\"",
+      "XT-02A \"克里格\"级超重型坦克",
+      "XT-02A \"크리그\""
+    ],
+    "source": "units/Krieg.ini"
+  },
+  {
+    "id": "ek-kv44",
+    "owner": 0,
+    "x": 24,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XHT-02 \"Ragnarok\"",
+      "XHT-02 \"诸神黄昏\"级超重型坦克",
+      "XHT-02 \"라그나로크\""
+    ],
+    "source": "units/kv44.ini"
+  },
+  {
+    "id": "ek-lancer",
+    "owner": 0,
+    "x": 36,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Lancer Tank",
+      "枪骑兵级中型坦克",
+      "랜서 탱크"
+    ],
+    "source": "units/lancer.ini"
+  },
+  {
+    "id": "ek-lemur",
+    "owner": 0,
+    "x": 48,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Lemur Mech",
+      "狐猴机甲",
+      "여우원숭이 기계"
+    ],
+    "source": "units/lemur_mech.ini"
+  },
+  {
+    "id": "ek-lemura",
+    "owner": 0,
+    "x": 60,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Lemur Mech T2",
+      "狐猴机甲-T2",
+      "여우원숭이 기계 T2"
+    ],
+    "source": "units/lemur_mech_heavy.ini"
+  },
+  {
+    "id": "ek-lemurx",
+    "owner": 0,
+    "x": 72,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Lemur Mech T3",
+      "狐猴机甲-T3",
+      "여우원숭이 기계 T3"
+    ],
+    "source": "units/lemur_mech_3.ini"
+  },
+  {
+    "id": "ek-lionheart",
+    "owner": 0,
+    "x": 84,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Lionheart",
+      "狮心王级重型坦克",
+      "라이온하트"
+    ],
+    "source": "units/lionheart.ini"
+  },
+  {
+    "id": "ek-logistictransport",
+    "owner": 0,
+    "x": 96,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Logistic Truck",
+      "运输卡车",
+      "물류 트럭"
+    ],
+    "source": "units/logistic_truck.ini"
+  },
+  {
+    "id": "ek-lykaonmech",
+    "owner": 0,
+    "x": 108,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XF-02 \"Lykaon\"",
+      "XF-02 \"莱卡翁\"机甲",
+      "XF-02 \"리카온\""
+    ],
+    "source": "units/lykaon.ini"
+  },
+  {
+    "id": "ek-mammothtank-old",
+    "owner": 0,
+    "x": 120,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Old MammothTank",
+      "远古猛犸坦克",
+      "오래된 매머드탱크"
+    ],
+    "source": "units/mammoth_tank.ini"
+  },
+  {
+    "id": "ek-marshallmech",
+    "owner": 0,
+    "x": 132,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XD-01 \"Marshall\"",
+      "XD-01 \"元帅\"机甲",
+      "XD-01 \"마샬\""
+    ],
+    "source": "units/marshall.ini"
+  },
+  {
+    "id": "ek-martyrmech",
+    "owner": 0,
+    "x": 144,
+    "y": 116,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XG-02 \"Martyr\"",
+      "XG-02 \"殉道者\"机甲",
+      "XG-02 \"순교자\""
+    ],
+    "source": "units/martyr.ini"
+  },
+  {
+    "id": "ek-martyrmech-convert",
+    "owner": 0,
+    "x": 12,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XG-02 \"Martyr\"",
+      "XG-02 \"殉道者\"机甲",
+      "XG-02 \"순교자\""
+    ],
+    "source": "units/martyr_convert.ini"
+  },
+  {
+    "id": "ek-mauzermoving",
+    "owner": 0,
+    "x": 24,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mauzer",
+      "牵引式加农炮",
+      "마우저"
+    ],
+    "source": "units/mauser.ini"
+  },
+  {
+    "id": "ek-mauzerstatic",
+    "owner": 0,
+    "x": 36,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mauzer [Deployed]",
+      "牵引式加农炮[已部署]",
+      "마우저 [배치됨]"
+    ],
+    "source": "units/mauser_deployed.ini"
+  },
+  {
+    "id": "ek-mauzertowed",
+    "owner": 0,
+    "x": 48,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mauzer",
+      "牵引式加农炮",
+      "마우저"
+    ],
+    "source": "units/mauser_towed.ini"
+  },
+  {
+    "id": "ek-medicaltransport",
+    "owner": 0,
+    "x": 60,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mobile Infirmary",
+      "移动医务室",
+      "이동 의무실"
+    ],
+    "source": "units/Mobile_Infirmary.ini"
+  },
+  {
+    "id": "ek-megabuilder",
+    "owner": 0,
+    "x": 72,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mega Builder",
+      "超级建造者",
+      "메가 빌더"
+    ],
+    "source": "units/mega_builder.ini"
+  },
+  {
+    "id": "ek-megatank",
+    "owner": 0,
+    "x": 84,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Ek_megaTank",
+      "Me_megaTank",
+      "Me_megaTank"
+    ],
+    "source": "units/mega_tank.ini"
+  },
+  {
+    "id": "ek-mineheavy",
+    "owner": 0,
+    "x": 96,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Landmine Heavy",
+      "大型地雷",
+      "지뢰 헤비"
+    ],
+    "source": "units/placedmine_heavy.ini"
+  },
+  {
+    "id": "ek-minelayer",
+    "owner": 0,
+    "x": 108,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Minelayer Truck",
+      "布雷卡车",
+      "지뢰제거 트럭"
+    ],
+    "source": "units/mine_truck.ini"
+  },
+  {
+    "id": "ek-minemedium",
+    "owner": 0,
+    "x": 120,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Landmine Medium",
+      "中型地雷",
+      "지뢰 매체"
+    ],
+    "source": "units/placedmine_medium.ini"
+  },
+  {
+    "id": "ek-minesmall",
+    "owner": 0,
+    "x": 132,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Landmine Small",
+      "小型地雷",
+      "지뢰 소형"
+    ],
+    "source": "units/placedmine_small.ini"
+  },
+  {
+    "id": "ek-minesweeper",
+    "owner": 0,
+    "x": 144,
+    "y": 128,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mine Disposal Specialist",
+      "扫雷专家",
+      "광산 처리 전문가"
+    ],
+    "source": "units/infantry_minesweeper.ini"
+  },
+  {
+    "id": "ek-mini-arty-drone-fall",
+    "owner": 0,
+    "x": 12,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mini Artillery Drone",
+      "迷你火炮无人机",
+      "미니 포병 드론"
+    ],
+    "source": "units/mini_arty_drone_fall.ini"
+  },
+  {
+    "id": "ek-minitank",
+    "owner": 0,
+    "x": 24,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Mini Tank",
+      "轻型坦克",
+      "미니 탱크"
+    ],
+    "source": "units/mini_tank.ini"
+  },
+  {
+    "id": "ek-minitankold",
+    "owner": 0,
+    "x": 36,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Old Mini Tank",
+      "远古轻型坦克",
+      "오래된 미니 탱크"
+    ],
+    "source": "units/mini_tank_old.ini"
+  },
+  {
+    "id": "ek-nebelwerfermoving",
+    "owner": 0,
+    "x": 48,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Nebelwerfer",
+      "牵引式火箭炮",
+      "네벨베르퍼"
+    ],
+    "source": "units/nebelwerfer.ini"
+  },
+  {
+    "id": "ek-nebelwerferstatic",
+    "owner": 0,
+    "x": 60,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Nebelwerfer [Deployed]",
+      "牵引式火箭炮[已部署]",
+      "네벨베르퍼 [배치됨]"
+    ],
+    "source": "units/nebelwerfer_deployed.ini"
+  },
+  {
+    "id": "ek-nebelwerfertowed",
+    "owner": 0,
+    "x": 72,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Nebelwerfer",
+      "牵引式火箭炮",
+      "네벨베르퍼"
+    ],
+    "source": "units/nebelwerfer_towed.ini"
+  },
+  {
+    "id": "ek-nuketruckarmed",
+    "owner": 0,
+    "x": 84,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Nuke Truck [Activated]",
+      "核爆卡车[已启用]",
+      "핵 트럭 [활성화됨]"
+    ],
+    "source": "units/nuketruck_armed.ini"
+  },
+  {
+    "id": "ek-nuketruckdebug",
+    "owner": 0,
+    "x": 96,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "[Fun] Super Nuke Truck",
+      "终极核爆卡车",
+      "[재미] 슈퍼 핵 트럭"
+    ],
+    "source": "units/nuketruck_debug.ini"
+  },
+  {
+    "id": "ek-nuketruckdisarmed",
+    "owner": 0,
+    "x": 108,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Nuke Truck [Deactivated]",
+      "核爆卡车[未启用]",
+      "핵 트럭 [비활성화됨]"
+    ],
+    "source": "units/nuketruck.ini"
+  },
+  {
+    "id": "ek-obskoy",
+    "owner": 0,
+    "x": 120,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Obskoy",
+      "奥布斯科伊级步兵车",
+      "옵스코이"
+    ],
+    "source": "units/smp_av.ini"
+  },
+  {
+    "id": "ek-overseer",
+    "owner": 0,
+    "x": 132,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Overseer",
+      "监工级自行防空炮",
+      "감독관"
+    ],
+    "source": "units/tank_overseer.ini"
+  },
+  {
+    "id": "ek-paladin",
+    "owner": 0,
+    "x": 144,
+    "y": 140,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Paladin Mech",
+      "圣骑士机甲",
+      "성기사 기계"
+    ],
+    "source": "units/ek_paladin.ini"
+  },
+  {
+    "id": "ek-patriot",
+    "owner": 0,
+    "x": 12,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Patriot Scout",
+      "侦查吉普车",
+      "패트리어트 스카우트"
+    ],
+    "source": "units/patriot_scout.ini"
+  },
+  {
+    "id": "ek-phantom",
+    "owner": 0,
+    "x": 24,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Phantom",
+      "幻影突击兵",
+      "팬텀"
+    ],
+    "source": "units/infantry_phantom.ini"
+  },
+  {
+    "id": "ek-phantomcloaked",
+    "owner": 0,
+    "x": 36,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Phantom",
+      "幻影突击兵",
+      "팬텀"
+    ],
+    "source": "units/infantry_phantom_cloaked.ini"
+  },
+  {
+    "id": "ek-prototype01",
+    "owner": 0,
+    "x": 48,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XHE-01 \"Prototype\"",
+      "XHE-01 \"屠戮者\"机甲",
+      "XHE-01 \"시제품\""
+    ],
+    "source": "units/Prototype01.ini"
+  },
+  {
+    "id": "ek-radartruck",
+    "owner": 0,
+    "x": 60,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Radar Truck",
+      "雷达卡车",
+      "레이더 트럭"
+    ],
+    "source": "units/radar_truck.ini"
+  },
+  {
+    "id": "ek-raptor",
+    "owner": 0,
+    "x": 72,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Raptor",
+      "猛禽机甲",
+      "랩터"
+    ],
+    "source": "units/ek_raptor.ini"
+  },
+  {
+    "id": "ek-raptormk2",
+    "owner": 0,
+    "x": 84,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Raptor T2",
+      "猛禽机甲-T2",
+      "랩터 T2"
+    ],
+    "source": "units/raptor.ini"
+  },
+  {
+    "id": "ek-ravagermech",
+    "owner": 0,
+    "x": 96,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XB-01 \"Ravager\"",
+      "XB-01 \"劫掠者\"机甲",
+      "XB-01 \"래비저\""
+    ],
+    "source": "units/ravager.ini"
+  },
+  {
+    "id": "ek-ravagermech-mk2",
+    "owner": 0,
+    "x": 108,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XB-02 \"Marauder\"",
+      "XB-02 \"强袭者\"机甲",
+      "XB-02 \"머라우더\""
+    ],
+    "source": "units/ravager_mk2.ini"
+  },
+  {
+    "id": "ek-recruit",
+    "owner": 0,
+    "x": 120,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Sarge Mech",
+      "中士机甲",
+      "기계 병장"
+    ],
+    "source": "units/recruit_mech.ini"
+  },
+  {
+    "id": "ek-recruitt2",
+    "owner": 0,
+    "x": 132,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Sarge Mech T2",
+      "中士机甲-T2",
+      "Sarge Mech T2"
+    ],
+    "source": "units/recruit_mech_t2.ini"
+  },
+  {
+    "id": "ek-rhino",
+    "owner": 0,
+    "x": 144,
+    "y": 152,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Rhino",
+      "犀牛坦克",
+      "코뿔소"
+    ],
+    "source": "units/rhino.ini"
+  },
+  {
+    "id": "ek-saha",
+    "owner": 0,
+    "x": 12,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Saha",
+      "萨哈级重型火炮",
+      "사하"
+    ],
+    "source": "units/at_saha.ini"
+  },
+  {
+    "id": "ek-samuraimech",
+    "owner": 0,
+    "x": 24,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XU-01 \"Samurai\"",
+      "XU-01 \"武士\"机甲",
+      "XU-01 \"사무라이\""
+    ],
+    "source": "units/samurai.ini"
+  },
+  {
+    "id": "ek-samuraimech-mk2",
+    "owner": 0,
+    "x": 36,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XU-02 \"Ronin\"",
+      "XU-02 \"悍将\"机甲",
+      "XU-02 \"로닌\""
+    ],
+    "source": "units/samurai_mk2.ini"
+  },
+  {
+    "id": "ek-scabrewolfmelee",
+    "owner": 0,
+    "x": 48,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Scabrewolf",
+      "军犬",
+      "스카브울프"
+    ],
+    "source": "units/scabrewolf_mele.ini"
+  },
+  {
+    "id": "ek-scarab",
+    "owner": 0,
+    "x": 60,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Scarab",
+      "圣甲虫级防空车",
+      "풍뎅이"
+    ],
+    "source": "units/ek_scarab.ini"
+  },
+  {
+    "id": "ek-scarabt2",
+    "owner": 0,
+    "x": 72,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Scarab T2",
+      "圣甲虫级防空车-T2",
+      "풍뎅이 T2"
+    ],
+    "source": "units/scarab.ini"
+  },
+  {
+    "id": "ek-scorcher",
+    "owner": 0,
+    "x": 84,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Scorcher",
+      "灼烧者机甲",
+      "스코처"
+    ],
+    "source": "units/scorcher.ini"
+  },
+  {
+    "id": "ek-shieldtruck",
+    "owner": 0,
+    "x": 96,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Shieldbear",
+      "盾熊级防御系统卡车",
+      "쉴드베어"
+    ],
+    "source": "units/shieldbearer.ini"
+  },
+  {
+    "id": "ek-shieldtruckdeployed",
+    "owner": 0,
+    "x": 108,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Shieldbear [Deployed]",
+      "盾熊级防御系统卡车[已部署]",
+      "쉴드베어 [배치됨]"
+    ],
+    "source": "units/shieldbearer_deployed.ini"
+  },
+  {
+    "id": "ek-sjatie",
+    "owner": 0,
+    "x": 120,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Sjatie Tank",
+      "夏蒂级重型坦克",
+      "샤티 탱크"
+    ],
+    "source": "units/Sjatie_tank.ini"
+  },
+  {
+    "id": "ek-skirmisher",
+    "owner": 0,
+    "x": 132,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Skirmisher",
+      "前卫机甲",
+      "척후병"
+    ],
+    "source": "units/ek_skirmisher.ini"
+  },
+  {
+    "id": "ek-spacemarine",
+    "owner": 0,
+    "x": 144,
+    "y": 164,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Space marine",
+      "星际战士",
+      "스페이스 마린"
+    ],
+    "source": "units/infantry_space_assault.ini"
+  },
+  {
+    "id": "ek-spear",
+    "owner": 0,
+    "x": 12,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Spear",
+      "长矛级防空卡车",
+      "창"
+    ],
+    "source": "units/spear.ini"
+  },
+  {
+    "id": "ek-spook-turbo-hearse",
+    "owner": 0,
+    "x": 24,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Turbo Hearse",
+      "涡轮灵车",
+      "터보 영구차"
+    ],
+    "source": "units/turbo_hearse.ini"
+  },
+  {
+    "id": "ek-stalker",
+    "owner": 0,
+    "x": 36,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Stalker",
+      "潜行者机甲",
+      "스토커"
+    ],
+    "source": "units/ek_stalker.ini"
+  },
+  {
+    "id": "ek-stalkert2",
+    "owner": 0,
+    "x": 48,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Stalker T2",
+      "潜行者机甲-T2",
+      "스토커 T2"
+    ],
+    "source": "units/stalker.ini"
+  },
+  {
+    "id": "ek-strangler",
+    "owner": 0,
+    "x": 60,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Strangler",
+      "扼杀者级导弹车",
+      "교살자"
+    ],
+    "source": "units/strangler.ini"
+  },
+  {
+    "id": "ek-stranglerdeploy",
+    "owner": 0,
+    "x": 72,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Strangler",
+      "扼杀者级导弹车",
+      "교살자"
+    ],
+    "source": "units/strangler_deploy.ini"
+  },
+  {
+    "id": "ek-supplytruck",
+    "owner": 0,
+    "x": 84,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Supply Truck",
+      "运钞卡车",
+      "보급 트럭"
+    ],
+    "source": "units/Supply_Truck.ini"
+  },
+  {
+    "id": "ek-supplytruckt2",
+    "owner": 0,
+    "x": 96,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Heavy Supply Truck",
+      "重型运钞卡车",
+      "중장비 트럭"
+    ],
+    "source": "units/Supply_Truck_T2.ini"
+  },
+  {
+    "id": "ek-tardoba",
+    "owner": 0,
+    "x": 108,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Tardoba",
+      "塔尔多巴级运兵车",
+      "타르도바"
+    ],
+    "source": "units/tardoba.ini"
+  },
+  {
+    "id": "ek-tardoba2",
+    "owner": 0,
+    "x": 120,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Tardon",
+      "塔顿级运兵车",
+      "타돈"
+    ],
+    "source": "units/tardon.ini"
+  },
+  {
+    "id": "ek-thetamech",
+    "owner": 0,
+    "x": 132,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XA-01 \"Theta\"",
+      "XA-01 \"西塔\"级攻城机甲",
+      "XA-01 \"세타\""
+    ],
+    "source": "units/theta.ini"
+  },
+  {
+    "id": "ek-tigertooth",
+    "owner": 0,
+    "x": 144,
+    "y": 176,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Tigertooth",
+      "虎牙级重型坦克歼击车",
+      "호랑이 이빨"
+    ],
+    "source": "units/tigertooth.ini"
+  },
+  {
+    "id": "ek-trooptransport",
+    "owner": 0,
+    "x": 12,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Troop Transport",
+      "运兵卡车",
+      "병력 수송"
+    ],
+    "source": "units/transport_truck.ini"
+  },
+  {
+    "id": "ek-tunguska",
+    "owner": 0,
+    "x": 24,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Tunguska",
+      "通古斯卡级防空车",
+      "퉁구스카"
+    ],
+    "source": "units/tunguska.ini"
+  },
+  {
+    "id": "ek-unicornsmall",
+    "owner": 0,
+    "x": 36,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Unicorn",
+      "独角兽机甲",
+      "유니콘"
+    ],
+    "source": "units/unicorn.ini"
+  },
+  {
+    "id": "ek-unicornsmallemp",
+    "owner": 0,
+    "x": 48,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Unicorn",
+      "独角兽机甲",
+      "유니콘"
+    ],
+    "source": "units/unicorn_emp.ini"
+  },
+  {
+    "id": "ek-vanguard",
+    "owner": 0,
+    "x": 60,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Vanguard",
+      "先锋级歼击坦克",
+      "뱅가드"
+    ],
+    "source": "units/vanguard.ini"
+  },
+  {
+    "id": "ek-velarus-deploy",
+    "owner": 0,
+    "x": 72,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XHC-03 \"Velarus\" [Deployed]",
+      "XHC-03 \"维拉瑞斯\"级指挥中心[已部署]",
+      "XHC-03 \"벨라루스\" [배치됨]"
+    ],
+    "source": "units/velarus_deploy.ini"
+  },
+  {
+    "id": "ek-vindicatormech",
+    "owner": 0,
+    "x": 84,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XG-01 \"Vindicator\"",
+      "XG-01 \"卫道士\"机甲",
+      "XG-01 \"빈디케이터\""
+    ],
+    "source": "units/vindicator.ini"
+  },
+  {
+    "id": "ek-viper",
+    "owner": 0,
+    "x": 96,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Viper Scout",
+      "蝰蛇侦察车",
+      "바이퍼 스카우트"
+    ],
+    "source": "units/viper_scout.ini"
+  },
+  {
+    "id": "ek-wardenmech",
+    "owner": 0,
+    "x": 108,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XC-01 \"Enforcer\"",
+      "XC-01 \"镇暴者\"机甲",
+      "XC-01 \"집행자\""
+    ],
+    "source": "units/warden.ini"
+  },
+  {
+    "id": "ek-wardenmech-mk2",
+    "owner": 0,
+    "x": 120,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XC-02 \"Warden\"",
+      "XC-02 \"典狱长\"机甲",
+      "XC-02 \"워든\""
+    ],
+    "source": "units/warden_mk2.ini"
+  },
+  {
+    "id": "ek-wardenmech-sniper",
+    "owner": 0,
+    "x": 132,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XC-01S \"Curator\"",
+      "XC-01S \"守城人\"机甲",
+      "XC-01S \"큐레이터\""
+    ],
+    "source": "units/warden_sniper.ini"
+  },
+  {
+    "id": "ek-wardenmech-sniper-x",
+    "owner": 0,
+    "x": 144,
+    "y": 188,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XC-02S \"Castigator\"",
+      "XC-02S \"行刑官\"机甲",
+      "XC-02S \"캐스티게이터\""
+    ],
+    "source": "units/warden_sniper_x.ini"
+  },
+  {
+    "id": "ek-wardenmech-sniper-x-convert",
+    "owner": 0,
+    "x": 12,
+    "y": 200,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XC-02S \"Castigator\"",
+      "XC-02S \"行刑官\"机甲",
+      "XC-02S \"캐스티게이터\""
+    ],
+    "source": "units/warden_sniper_x_convert.ini"
+  },
+  {
+    "id": "ek-wardenmechx",
+    "owner": 0,
+    "x": 24,
+    "y": 200,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XC-03B \"Berserker\"",
+      "XC-03B \"狂战士\"机甲",
+      "XC-03B \"버서커\""
+    ],
+    "source": "units/wardenX.ini"
+  },
+  {
+    "id": "ek-warmastermech",
+    "owner": 0,
+    "x": 36,
+    "y": 200,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XD-02 \"Warmaster\"",
+      "XD-02 \"战帅\"机甲",
+      "XD-02 \"워마스터\""
+    ],
+    "source": "units/warmaster.ini"
+  },
+  {
+    "id": "ek-yukana",
+    "owner": 0,
+    "x": 48,
+    "y": 200,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Yukana Tank",
+      "尤卡娜级重型坦克",
+      "유카나 탱크"
+    ],
+    "source": "units/yukana.ini"
+  },
+  {
+    "id": "ek-zenit",
+    "owner": 0,
+    "x": 60,
+    "y": 200,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "Stinger Hornet",
+      "毒刺大黄蜂级火箭炮卡车",
+      "스팅어 호넷"
+    ],
+    "source": "units/Zenit.ini"
+  },
+  {
+    "id": "ek-zetamech",
+    "owner": 0,
+    "x": 72,
+    "y": 200,
+    "a": 270,
+    "sector": "ground",
+    "name": [
+      "XA-02 \"Zeta\"",
+      "XA-02 \"泽塔\"级重型攻城机甲",
+      "XA-02 \"제타\""
+    ],
+    "source": "units/theta_mk2.ini"
+  },
+  {
+    "id": "ek-arachnidmech",
+    "owner": 0,
+    "x": 172,
+    "y": 264,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Arachnid",
+      "蜘蛛机甲",
+      "거미류"
+    ],
+    "source": "units/arachnid.ini"
+  },
+  {
+    "id": "ek-barbaris",
+    "owner": 0,
+    "x": 184,
+    "y": 264,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Barbaris Tank",
+      "野蛮人级运兵车",
+      "바르바리스 탱크"
+    ],
+    "source": "units/barbaris_apc.ini"
+  },
+  {
+    "id": "ek-barbariswater",
+    "owner": 0,
+    "x": 196,
+    "y": 264,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Barbaris Tank",
+      "野蛮人级运兵车",
+      "바르바리스 탱크"
+    ],
+    "source": "units/barbaris_apc_water.ini"
+  },
+  {
+    "id": "ek-bison",
+    "owner": 0,
+    "x": 208,
+    "y": 264,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Bison",
+      "野牛级运兵艇",
+      "들소"
+    ],
+    "source": "units/bison.ini"
+  },
+  {
+    "id": "ek-bruza",
+    "owner": 0,
+    "x": 220,
+    "y": 264,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Bruza",
+      "布鲁扎级运输艇",
+      "브루자"
+    ],
+    "source": "units/bruza_craft.ini"
+  },
+  {
+    "id": "ek-bruza2",
+    "owner": 0,
+    "x": 232,
+    "y": 264,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Bruza Type II",
+      "布鲁扎级运输舰",
+      "브루자 유형 II"
+    ],
+    "source": "units/bruza_craft_2.ini"
+  },
+  {
+    "id": "ek-bruzawater",
+    "owner": 0,
+    "x": 244,
+    "y": 264,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Bruza",
+      "布鲁扎级运输艇",
+      "브루자"
+    ],
+    "source": "units/bruza_craft_water.ini"
+  },
+  {
+    "id": "ek-bruzawater2",
+    "owner": 0,
+    "x": 256,
+    "y": 264,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Bruza Type II",
+      "布鲁扎级运输舰",
+      "브루자 유형 II"
+    ],
+    "source": "units/bruza_craft_2_water.ini"
+  },
+  {
+    "id": "ek-bugcorrown",
+    "owner": 0,
+    "x": 172,
+    "y": 276,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "\"Corrown\"",
+      "\"蚀冕\"",
+      "\"코런\""
+    ],
+    "source": "units/bug_corrown.ini"
+  },
+  {
+    "id": "ek-chimeramech",
+    "owner": 0,
+    "x": 184,
+    "y": 276,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XN-01 \"Chimera\"",
+      "XN-01 \"奇美拉\"机甲",
+      "XN-01 \"키메라\""
+    ],
+    "source": "units/chimera.ini"
+  },
+  {
+    "id": "ek-colossus",
+    "owner": 0,
+    "x": 196,
+    "y": 276,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-05 \"Colossus\"",
+      "XHC-05 \"战争巨像\"级指挥中心",
+      "XHC-05 \"콜로서스\""
+    ],
+    "source": "units/colossus_productionfix.ini"
+  },
+  {
+    "id": "ek-colossuscombatmode",
+    "owner": 0,
+    "x": 208,
+    "y": 276,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-05 \"Colossus\"",
+      "XHC-05 \"战争巨像\"级指挥中心",
+      "XHC-05 \"콜로서스\""
+    ],
+    "source": "units/colossus_combatmode.ini"
+  },
+  {
+    "id": "ek-electrostormmech",
+    "owner": 0,
+    "x": 220,
+    "y": 276,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XE-01 \"Electrostorm\"",
+      "XE-01 \"磁暴\"机甲",
+      "XE-01 \"일렉트로스톰\""
+    ],
+    "source": "units/electrostorm.ini"
+  },
+  {
+    "id": "ek-electrostormmech-mk2",
+    "owner": 0,
+    "x": 232,
+    "y": 276,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XE-02 \"Aurora\"",
+      "XE-02 \"极光\"机甲",
+      "XE-02 \"오로라\""
+    ],
+    "source": "units/electrostorm_mk2.ini"
+  },
+  {
+    "id": "ek-excelsior",
+    "owner": 0,
+    "x": 244,
+    "y": 276,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-04 \"Excelsior\"",
+      "XHC-04 \"精益求精\"级指挥中心",
+      "XHC-04 \"엑셀시어\""
+    ],
+    "source": "units/excelsior_productionfix.ini"
+  },
+  {
+    "id": "ek-excelsiorcombatmode",
+    "owner": 0,
+    "x": 256,
+    "y": 276,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-04 \"Excelsior\"",
+      "XHC-04 \"精益求精\"级指挥中心",
+      "XHC-04 \"엑셀시어\""
+    ],
+    "source": "units/excelsior_combatmode.ini"
+  },
+  {
+    "id": "ek-heavycraft2",
+    "owner": 0,
+    "x": 172,
+    "y": 288,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Razorback",
+      "剃刀鲸级运输潜艇",
+      "레이저백"
+    ],
+    "source": "units/razorback.ini"
+  },
+  {
+    "id": "ek-heavytankdrake",
+    "owner": 0,
+    "x": 184,
+    "y": 288,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Drake",
+      "德雷克级重型坦克",
+      "드레이크"
+    ],
+    "source": "units/Drake.ini"
+  },
+  {
+    "id": "ek-hoverapc",
+    "owner": 0,
+    "x": 196,
+    "y": 288,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Hoverbird",
+      "悬停鸟级多功能步兵车",
+      "호버버드"
+    ],
+    "source": "units/hover_bird.ini"
+  },
+  {
+    "id": "ek-hovermortar",
+    "owner": 0,
+    "x": 208,
+    "y": 288,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Dropper",
+      "烈焰级悬浮迫击炮",
+      "드로퍼"
+    ],
+    "source": "units/heavy_mortar.ini"
+  },
+  {
+    "id": "ek-infantrydiver",
+    "owner": 0,
+    "x": 220,
+    "y": 288,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Combat Diver",
+      "战斗潜水员",
+      "전투 다이버"
+    ],
+    "source": "units/infantry_diver.ini"
+  },
+  {
+    "id": "ek-infantrydiverdeployed",
+    "owner": 0,
+    "x": 232,
+    "y": 288,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Combat Diver",
+      "战斗潜水员",
+      "전투 다이버"
+    ],
+    "source": "units/infantry_diver_deployed.ini"
+  },
+  {
+    "id": "ek-kings-man",
+    "owner": 0,
+    "x": 244,
+    "y": 288,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-01 \"Jager\"",
+      "XHC-01 \"猎杀者\"机动作战中心",
+      "XHC-01 \"예거\""
+    ],
+    "source": "units/king_s_MAN.ini"
+  },
+  {
+    "id": "ek-kings-man-b",
+    "owner": 0,
+    "x": 256,
+    "y": 288,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-01 \"Jager\"",
+      "XHC-01 \"猎杀者\"机动作战中心",
+      "XHC-01 \"예거\""
+    ],
+    "source": "units/king_s_MAN_B.ini"
+  },
+  {
+    "id": "ek-landshiplarge",
+    "owner": 0,
+    "x": 172,
+    "y": 300,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Fortress Ship",
+      "履带战列舰",
+      "요새선"
+    ],
+    "source": "units/fortress_ship.ini"
+  },
+  {
+    "id": "ek-landshiplargewater",
+    "owner": 0,
+    "x": 184,
+    "y": 300,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Fortress Ship",
+      "履带战列舰",
+      "요새선"
+    ],
+    "source": "units/fortress_ship_water.ini"
+  },
+  {
+    "id": "ek-landshipmedium",
+    "owner": 0,
+    "x": 196,
+    "y": 300,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Landcruiser",
+      "履带巡洋舰",
+      "랜드크루저"
+    ],
+    "source": "units/landcrawler.ini"
+  },
+  {
+    "id": "ek-landshipmediumwater",
+    "owner": 0,
+    "x": 208,
+    "y": 300,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Landcruiser",
+      "履带巡洋舰",
+      "랜드크루저"
+    ],
+    "source": "units/landcrawler_water.ini"
+  },
+  {
+    "id": "ek-landshipsmall",
+    "owner": 0,
+    "x": 220,
+    "y": 300,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Landship",
+      "履带驱逐舰",
+      "육상선"
+    ],
+    "source": "units/landship.ini"
+  },
+  {
+    "id": "ek-landshipsmallwater",
+    "owner": 0,
+    "x": 232,
+    "y": 300,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Landship",
+      "履带驱逐舰",
+      "육상선"
+    ],
+    "source": "units/landship_water.ini"
+  },
+  {
+    "id": "ek-nowosibirsk",
+    "owner": 0,
+    "x": 244,
+    "y": 300,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHV-09 \"Novosibirsk\" Type I",
+      "XHV-09 \"新西伯利亚\"级实验型运输舰",
+      "XHV-09 \"노보시비르스크\" 유형 I"
+    ],
+    "source": "units/nowosibirsk.ini"
+  },
+  {
+    "id": "ek-rib",
+    "owner": 0,
+    "x": 256,
+    "y": 300,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Transport Rib",
+      "步兵运输艇",
+      "운송 리브"
+    ],
+    "source": "units/transport_rib.ini"
+  },
+  {
+    "id": "ek-ribcarrying",
+    "owner": 0,
+    "x": 172,
+    "y": 312,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Transport Rib",
+      "步兵运输艇",
+      "운송 리브"
+    ],
+    "source": "units/transport_rib_carry.ini"
+  },
+  {
+    "id": "ek-robotcrab",
+    "owner": 0,
+    "x": 184,
+    "y": 312,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Crab Mech",
+      "螃蟹机甲",
+      "게 기계"
+    ],
+    "source": "units/robotCrab.ini"
+  },
+  {
+    "id": "ek-robotcrabwater",
+    "owner": 0,
+    "x": 196,
+    "y": 312,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Crab Mech",
+      "螃蟹机甲",
+      "게 기계"
+    ],
+    "source": "units/robotCrabWater.ini"
+  },
+  {
+    "id": "ek-snake",
+    "owner": 0,
+    "x": 208,
+    "y": 312,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Snake",
+      "毒蛇级激光战车",
+      "뱀"
+    ],
+    "source": "units/snake.ini"
+  },
+  {
+    "id": "ek-titanmech",
+    "owner": 0,
+    "x": 220,
+    "y": 312,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHE-02 \"Titan\"",
+      "XHE-02 \"泰坦\"级超重型攻城机甲",
+      "XHE-02 \"타이탄\""
+    ],
+    "source": "units/titan.ini"
+  },
+  {
+    "id": "ek-typhoon",
+    "owner": 0,
+    "x": 232,
+    "y": 312,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "Typhoon",
+      "台风级运兵艇",
+      "태풍"
+    ],
+    "source": "units/typhoon.ini"
+  },
+  {
+    "id": "ek-velarus",
+    "owner": 0,
+    "x": 244,
+    "y": 312,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-03 \"Velarus\"",
+      "XHC-03 \"维拉瑞斯\"级指挥中心",
+      "XHC-03 \"벨라루스\""
+    ],
+    "source": "units/velarus.ini"
+  },
+  {
+    "id": "ek-wraithmech",
+    "owner": 0,
+    "x": 256,
+    "y": 312,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XI-01 \"Wraith\"",
+      "XI-01 \"幽灵\"机甲",
+      "XI-01 \"망령\""
+    ],
+    "source": "units/wraith.ini"
+  },
+  {
+    "id": "ek-wraithmechstealth",
+    "owner": 0,
+    "x": 172,
+    "y": 324,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XI-01 \"Wraith\"",
+      "XI-01 \"幽灵\"机甲",
+      "XI-01 \"망령\""
+    ],
+    "source": "units/wraith_stealth.ini"
+  },
+  {
+    "id": "ek-zero",
+    "owner": 0,
+    "x": 184,
+    "y": 324,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-02 \"Seizor\"",
+      "XHC-02 \"征服者\"机动作战中心",
+      "XHC-02 \"세이조\""
+    ],
+    "source": "units/Zero.ini"
+  },
+  {
+    "id": "ek-zero-b",
+    "owner": 0,
+    "x": 196,
+    "y": 324,
+    "a": 270,
+    "sector": "amphibious",
+    "name": [
+      "XHC-02 \"Seizor\"",
+      "XHC-02 \"征服者\"机动作战中心",
+      "XHC-02 \"세이조\""
+    ],
+    "source": "units/Zero_B.ini"
+  },
+  {
+    "id": "ek-carriermedium",
+    "owner": 0,
+    "x": 284,
+    "y": 264,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-06 \"Ranger\"",
+      "XHV-06 \"游侠\"级航空母舰",
+      "XHV-06 \"레인저\""
+    ],
+    "source": "units/carriermed.ini"
+  },
+  {
+    "id": "ek-carriersmall",
+    "owner": 0,
+    "x": 298,
+    "y": 264,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-05 \"Illustrious\"",
+      "XHV-05 \"显赫\"级航空母舰",
+      "XHV-05 \"일러스트리어스\""
+    ],
+    "source": "units/carriersmall.ini"
+  },
+  {
+    "id": "ek-convergence",
+    "owner": 0,
+    "x": 312,
+    "y": 264,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Convergence",
+      "融合级支援舰",
+      "융합"
+    ],
+    "source": "units/convergence.ini"
+  },
+  {
+    "id": "ek-cordelia",
+    "owner": 0,
+    "x": 326,
+    "y": 264,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-07 \"Cordelia\"",
+      "XHV-07 \"科迪莉亚\"级航空母舰",
+      "XHV-07 \"코델리아\""
+    ],
+    "source": "units/Cordelia.ini"
+  },
+  {
+    "id": "ek-crazy-sea-factory",
+    "owner": 0,
+    "x": 340,
+    "y": 264,
+    "sector": "naval",
+    "name": [
+      "Crazy Sea Factory",
+      "疯狂海军工厂",
+      "크레이지 씨 팩토리"
+    ],
+    "source": "units/crazy_sea_factory.ini"
+  },
+  {
+    "id": "ek-destroyersub",
+    "owner": 0,
+    "x": 354,
+    "y": 264,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Kamikaze Submarine",
+      "自爆潜艇",
+      "카미카제 잠수함"
+    ],
+    "source": "units/kamikaze_sub.ini"
+  },
+  {
+    "id": "ek-dreadnought",
+    "owner": 0,
+    "x": 368,
+    "y": 264,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-01 \"Dreadnought\"",
+      "XHV-01 \"无畏\"级战列舰",
+      "XHV-01 \"드레드노트\""
+    ],
+    "source": "units/Dreadnought.ini"
+  },
+  {
+    "id": "ek-fairchild",
+    "owner": 0,
+    "x": 284,
+    "y": 278,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Fairchild",
+      "仙灵级驱逐舰",
+      "페어차일드"
+    ],
+    "source": "units/fairchild.ini"
+  },
+  {
+    "id": "ek-heavycraft1",
+    "owner": 0,
+    "x": 298,
+    "y": 278,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Razorback",
+      "剃刀鲸级运输潜艇",
+      "레이저백"
+    ],
+    "source": "units/razorbackdive.ini"
+  },
+  {
+    "id": "ek-heliport",
+    "owner": 0,
+    "x": 312,
+    "y": 278,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Hornet",
+      "大黄蜂级水上停机坪",
+      "호넷"
+    ],
+    "source": "units/heliport.ini"
+  },
+  {
+    "id": "ek-hermes",
+    "owner": 0,
+    "x": 326,
+    "y": 278,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Hermes",
+      "赫尔墨斯级反潜舰",
+      "헤르메스"
+    ],
+    "source": "units/hermes.ini"
+  },
+  {
+    "id": "ek-horizontalwall",
+    "owner": 0,
+    "x": 340,
+    "y": 278,
+    "sector": "naval",
+    "name": [
+      "Horizontal Wall",
+      "水上横向墙",
+      "수평벽"
+    ],
+    "source": "units/ek_wall_horiz.ini"
+  },
+  {
+    "id": "ek-huntersub",
+    "owner": 0,
+    "x": 354,
+    "y": 278,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Hunter",
+      "猎人级支援潜艇",
+      "헌터"
+    ],
+    "source": "units/heavy_sub.ini"
+  },
+  {
+    "id": "ek-iron-pearl",
+    "owner": 0,
+    "x": 368,
+    "y": 278,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-03 \"Dauntless\"",
+      "XHV-03 \"神勇\"级战列舰",
+      "XHV-03 \"던틀리스\""
+    ],
+    "source": "units/iron_pearl.ini"
+  },
+  {
+    "id": "ek-leviathan",
+    "owner": 0,
+    "x": 284,
+    "y": 292,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-04 \"Leviathan\"",
+      "XHV-04 \"利维坦\"级导弹旗舰",
+      "XHV-04 \"레비아탄\""
+    ],
+    "source": "units/leviathan.ini"
+  },
+  {
+    "id": "ek-leviathan-disabled",
+    "owner": 0,
+    "x": 298,
+    "y": 292,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-04 \"Leviathan\"",
+      "XHV-04 \"利维坦\"级导弹旗舰",
+      "XHV-04 \"레비아탄\""
+    ],
+    "source": "units/leviathan_disabled.ini"
+  },
+  {
+    "id": "ek-monitor",
+    "owner": 0,
+    "x": 312,
+    "y": 292,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Monitor",
+      "监查者级巡洋舰",
+      "모니터"
+    ],
+    "source": "units/monitor.ini"
+  },
+  {
+    "id": "ek-navalmcv",
+    "owner": 0,
+    "x": 326,
+    "y": 292,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-11 \"Alliance\"",
+      "XHV-11 \"联盟\"级海上基地",
+      "XHV-11 \"얼라이언스\""
+    ],
+    "source": "units/heavy_ship.ini"
+  },
+  {
+    "id": "ek-nowosibirsk2",
+    "owner": 0,
+    "x": 340,
+    "y": 292,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-10 \"Novosibirsk\" Type II",
+      "XHV-10 \"新西伯利亚\"级空中战舰航母",
+      "XHV-10 \"노보시비르스크\" 유형 II"
+    ],
+    "source": "units/nowosibirsk_2.ini"
+  },
+  {
+    "id": "ek-ophelia",
+    "owner": 0,
+    "x": 354,
+    "y": 292,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-08 \"Ophelia\"",
+      "XHV-08 \"奥菲莉亚\"级航空母舰",
+      "XHV-08 \"오필리아\""
+    ],
+    "source": "units/ophelia.ini"
+  },
+  {
+    "id": "ek-ophelia-b",
+    "owner": 0,
+    "x": 368,
+    "y": 292,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-08 \"Ophelia\"",
+      "XHV-08 \"奥菲莉亚\"级航空母舰",
+      "XHV-08 \"오필리아\""
+    ],
+    "source": "units/ophelia_B.ini"
+  },
+  {
+    "id": "ek-overwatch",
+    "owner": 0,
+    "x": 284,
+    "y": 306,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHV-02 \"Overwatch\"",
+      "XHV-02 \"守望\"级战列舰",
+      "XHV-02 \"오버워치\""
+    ],
+    "source": "units/ek_overwatch.ini"
+  },
+  {
+    "id": "ek-polaris",
+    "owner": 0,
+    "x": 298,
+    "y": 306,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHB-02 \"Polaris\"",
+      "XHB-02 \"北极星\"级潜艇",
+      "XHB-02 \"폴라리스\""
+    ],
+    "source": "units/polaris.ini"
+  },
+  {
+    "id": "ek-polarisdived",
+    "owner": 0,
+    "x": 312,
+    "y": 306,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHB-02 \"Polaris\"",
+      "XHB-02 \"北极星\"级潜艇",
+      "XHB-02 \"폴라리스\""
+    ],
+    "source": "units/polaris_dived.ini"
+  },
+  {
+    "id": "ek-saber",
+    "owner": 0,
+    "x": 326,
+    "y": 306,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHB-01 \"Saber\"",
+      "XHB-01 \"军刀\"级潜艇",
+      "XHB-01 \"세이버\""
+    ],
+    "source": "units/saber.ini"
+  },
+  {
+    "id": "ek-saberdived",
+    "owner": 0,
+    "x": 340,
+    "y": 306,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHB-01 \"Saber\"",
+      "XHB-01 \"军刀\"级潜艇",
+      "XHB-01 \"세이버\""
+    ],
+    "source": "units/saber_dived.ini"
+  },
+  {
+    "id": "ek-seabunkeraa",
+    "owner": 0,
+    "x": 354,
+    "y": 306,
+    "sector": "naval",
+    "name": [
+      "Sea Platform [Anti-Air]",
+      "海上平台[防空]",
+      "해상 플랫폼 [대공]"
+    ],
+    "source": "units/sea_bunker_aa.ini"
+  },
+  {
+    "id": "ek-seabunkercannon",
+    "owner": 0,
+    "x": 368,
+    "y": 306,
+    "sector": "naval",
+    "name": [
+      "Sea Platform [Cannon]",
+      "海上平台[火炮]",
+      "해상 플랫폼 [대포]"
+    ],
+    "source": "units/sea_bunker_cannon.ini"
+  },
+  {
+    "id": "ek-seabunkerminigun",
+    "owner": 0,
+    "x": 284,
+    "y": 320,
+    "sector": "naval",
+    "name": [
+      "Sea Platform [Minigun]",
+      "海上平台[机枪]",
+      "씨 플랫폼 [미니건]"
+    ],
+    "source": "units/sea_bunker_minigun.ini"
+  },
+  {
+    "id": "ek-seabunkermissile",
+    "owner": 0,
+    "x": 298,
+    "y": 320,
+    "sector": "naval",
+    "name": [
+      "Sea Platform [Missile]",
+      "海上平台[导弹]",
+      "해상 플랫폼 [미사일]"
+    ],
+    "source": "units/sea_bunker_missile.ini"
+  },
+  {
+    "id": "ek-seabunkerrefinery",
+    "owner": 0,
+    "x": 312,
+    "y": 320,
+    "sector": "naval",
+    "name": [
+      "Sea Platform [Extractor]",
+      "海上平台[资源抽取器]",
+      "씨 플랫폼 [추출기]"
+    ],
+    "source": "units/sea_platform_refinery.ini"
+  },
+  {
+    "id": "ek-seabunkerrepair",
+    "owner": 0,
+    "x": 326,
+    "y": 320,
+    "sector": "naval",
+    "name": [
+      "Sea Platform [Repair]",
+      "海上平台[修复]",
+      "씨 플랫폼 [수리]"
+    ],
+    "source": "units/sea_bunker_repair.ini"
+  },
+  {
+    "id": "ek-seabunkertorpedo",
+    "owner": 0,
+    "x": 340,
+    "y": 320,
+    "sector": "naval",
+    "name": [
+      "Sea Platform [Torpedo]",
+      "海上平台[鱼雷]",
+      "해상 플랫폼 [어뢰]"
+    ],
+    "source": "units/sea_bunker_torpedo.ini"
+  },
+  {
+    "id": "ek-seabunkertorpedounderwater",
+    "owner": 0,
+    "x": 354,
+    "y": 320,
+    "sector": "naval",
+    "name": [
+      "Sea Platform [Torpedo]",
+      "海底平台[鱼雷]",
+      "해상 플랫폼 [어뢰]"
+    ],
+    "source": "units/underwater_torpedo.ini"
+  },
+  {
+    "id": "ek-seadragon",
+    "owner": 0,
+    "x": 368,
+    "y": 320,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHB-03 \"Seadragon\"",
+      "XHB-03 \"海龙\"级指挥中心",
+      "XHB-03 \"시드래곤\""
+    ],
+    "source": "units/seadragon.ini"
+  },
+  {
+    "id": "ek-seadragondived",
+    "owner": 0,
+    "x": 284,
+    "y": 334,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "XHB-03 \"Seadragon\"",
+      "XHB-03 \"海龙\"级指挥中心",
+      "XHB-03 \"시드래곤\""
+    ],
+    "source": "units/seadragon_dived.ini"
+  },
+  {
+    "id": "ek-seaexperimentalhangar",
+    "owner": 0,
+    "x": 298,
+    "y": 334,
+    "sector": "naval",
+    "name": [
+      "Experimental Sea Factory",
+      "实验型海军工厂",
+      "실험적인 바다 공장"
+    ],
+    "source": "units/sea_experimental_hangar.ini"
+  },
+  {
+    "id": "ek-seaminemedium",
+    "owner": 0,
+    "x": 312,
+    "y": 334,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Seamine",
+      "水雷",
+      "시민"
+    ],
+    "source": "units/seamine_medium.ini"
+  },
+  {
+    "id": "ek-seaminemediumdeployed",
+    "owner": 0,
+    "x": 326,
+    "y": 334,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Seamine",
+      "水雷",
+      "시민"
+    ],
+    "source": "units/seamine_medium_deployed.ini"
+  },
+  {
+    "id": "ek-selenium",
+    "owner": 0,
+    "x": 340,
+    "y": 334,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Megalodon",
+      "巨齿鲨级潜艇",
+      "메갈로돈"
+    ],
+    "source": "units/selenium.ini"
+  },
+  {
+    "id": "ek-seleniumdived",
+    "owner": 0,
+    "x": 354,
+    "y": 334,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Megalodon",
+      "巨齿鲨级潜艇",
+      "메갈로돈"
+    ],
+    "source": "units/selenium_dived.ini"
+  },
+  {
+    "id": "ek-starbuck",
+    "owner": 0,
+    "x": 368,
+    "y": 334,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Starbuck",
+      "星巴克级支援舰",
+      "스타벅"
+    ],
+    "source": "units/starbuck.ini"
+  },
+  {
+    "id": "ek-stewart",
+    "owner": 0,
+    "x": 284,
+    "y": 348,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Stewart",
+      "斯图尔特级突击舰",
+      "스튜어트"
+    ],
+    "source": "units/stewart.ini"
+  },
+  {
+    "id": "ek-tabby",
+    "owner": 0,
+    "x": 298,
+    "y": 348,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Tabby",
+      "虎斑猫级护卫舰",
+      "태비"
+    ],
+    "source": "units/tabby.ini"
+  },
+  {
+    "id": "ek-targetsub",
+    "owner": 0,
+    "x": 312,
+    "y": 348,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Sealion",
+      "海狮级潜水艇",
+      "바다사자"
+    ],
+    "source": "units/target_sub.ini"
+  },
+  {
+    "id": "ek-thunderhead",
+    "owner": 0,
+    "x": 326,
+    "y": 348,
+    "a": 270,
+    "sector": "naval",
+    "name": [
+      "Thunderhead",
+      "雷云级火炮舰",
+      "썬더헤드"
+    ],
+    "source": "units/thunderhead.ini"
+  },
+  {
+    "id": "ek-underwaterfactory",
+    "owner": 0,
+    "x": 340,
+    "y": 348,
+    "sector": "naval",
+    "name": [
+      "Underwater Factory",
+      "水下工厂",
+      "수중공장"
+    ],
+    "source": "units/underwater_factory.ini"
+  },
+  {
+    "id": "ek-underwaterhangar",
+    "owner": 0,
+    "x": 354,
+    "y": 348,
+    "sector": "naval",
+    "name": [
+      "Submarine Hangar",
+      "潜艇工厂",
+      "잠수함 격납고"
+    ],
+    "source": "units/underwater_hangar.ini"
+  },
+  {
+    "id": "ek-verticalwall",
+    "owner": 0,
+    "x": 368,
+    "y": 348,
+    "sector": "naval",
+    "name": [
+      "Vertical Wall",
+      "水上竖向墙",
+      "수직벽"
+    ],
+    "source": "units/ek_wall_vert.ini"
+  },
+  {
+    "id": "ek--1ae142c3",
+    "owner": 0,
+    "x": 172,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "EXECUTOR",
+      "裁决",
+      "집행자"
+    ],
+    "source": "units/executor_base.ini"
+  },
+  {
+    "id": "ek-airbastion",
+    "owner": 0,
+    "x": 190,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-05 \"Meteorwing\"",
+      "XHG-05 \"流星之翼\"级悬浮炮舰",
+      "XHG-05 \"유성날개\""
+    ],
+    "source": "units/airbastion.ini"
+  },
+  {
+    "id": "ek-airbastion-landed",
+    "owner": 0,
+    "x": 208,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-05 \"Meteorwing\"",
+      "XHG-05 \"流星之翼\"级悬浮炮舰",
+      "XHG-05 \"유성날개\""
+    ],
+    "source": "units/airbastion_landed.ini"
+  },
+  {
+    "id": "ek-airbuilder",
+    "owner": 0,
+    "x": 226,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Air Builder",
+      "空中建造者",
+      "공중 건설기"
+    ],
+    "source": "units/base.ini"
+  },
+  {
+    "id": "ek-airshiptransport",
+    "owner": 0,
+    "x": 244,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-10 Orbital Transport",
+      "XHA-10 轨道运输飞艇",
+      "XHA-10 궤도 수송"
+    ],
+    "source": "units/airship_orbital_transport.ini"
+  },
+  {
+    "id": "ek-arsenalbird",
+    "owner": 0,
+    "x": 262,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-11 \"Essex\" Drone Carrier",
+      "XHA-11 \"埃塞克斯\"级巡天母舰",
+      "XHA-11 \"에식스\" 드론 캐리어"
+    ],
+    "source": "units/Arsenal_Bird.ini"
+  },
+  {
+    "id": "ek-arsenalbird2",
+    "owner": 0,
+    "x": 280,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-12 \"Lexington\" Drone Carrier",
+      "XHA-12 \"列克星敦\"级巡天母舰",
+      "XHA-12 \"렉싱턴\" 드론 캐리어"
+    ],
+    "source": "units/Arsenal_Bird2.ini"
+  },
+  {
+    "id": "ek-b1e-b",
+    "owner": 0,
+    "x": 298,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "TEV-75B",
+      "TEV-75B",
+      "TEV-75B"
+    ],
+    "source": "units/B1E-B.ini"
+  },
+  {
+    "id": "ek-b1e-b-up",
+    "owner": 0,
+    "x": 316,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "TEV-75B",
+      "TEV-75B",
+      "TEV-75B"
+    ],
+    "source": "units/B1E-B-UP.ini"
+  },
+  {
+    "id": "ek-b1e-f",
+    "owner": 0,
+    "x": 334,
+    "y": 32,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "TEV-52B",
+      "TEV-52B",
+      "TEV-52B"
+    ],
+    "source": "units/B1E-F.ini"
+  },
+  {
+    "id": "ek-b1e-f-up",
+    "owner": 0,
+    "x": 172,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "TEV-52B",
+      "TEV-52B",
+      "TEV-52B"
+    ],
+    "source": "units/B1E-F-UP.ini"
+  },
+  {
+    "id": "ek-b1e-s",
+    "owner": 0,
+    "x": 190,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "TEV-23B",
+      "TEV-23B",
+      "TEV-23B"
+    ],
+    "source": "units/B1E-S.ini"
+  },
+  {
+    "id": "ek-b1e-s-up",
+    "owner": 0,
+    "x": 208,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "TEV-23B",
+      "TEV-23B",
+      "TEV-23B"
+    ],
+    "source": "units/B1E-S-UP.ini"
+  },
+  {
+    "id": "ek-basicfighter",
+    "owner": 0,
+    "x": 226,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Eagle Fighter",
+      "雄鹰级战斗机",
+      "이글 파이터"
+    ],
+    "source": "units/fighter.ini"
+  },
+  {
+    "id": "ek-basicfighter-mk2",
+    "owner": 0,
+    "x": 244,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Eagle Fighter T2",
+      "雄鹰级战斗机-T2",
+      "이글 파이터 T2"
+    ],
+    "source": "units/fighter_mk2.ini"
+  },
+  {
+    "id": "ek-beamgunshipa-5",
+    "owner": 0,
+    "x": 262,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Centurion",
+      "百夫长级激光战机",
+      "백부장"
+    ],
+    "source": "units/centurion.ini"
+  },
+  {
+    "id": "ek-beamgunshipreaper",
+    "owner": 0,
+    "x": 280,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Reaper",
+      "收割者级激光战机",
+      "사신"
+    ],
+    "source": "units/reaper.ini"
+  },
+  {
+    "id": "ek-beamhelicopter",
+    "owner": 0,
+    "x": 298,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Zersoster",
+      "泽索斯特级直升机",
+      "저소스터"
+    ],
+    "source": "units/zersoster_gunship.ini"
+  },
+  {
+    "id": "ek-biplanebomber",
+    "owner": 0,
+    "x": 316,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Thunderstorm Bomber",
+      "雷暴级轰炸机",
+      "뇌우 폭격기"
+    ],
+    "source": "units/bomber_thunderstorm.ini"
+  },
+  {
+    "id": "ek-biplanefighter",
+    "owner": 0,
+    "x": 334,
+    "y": 50,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Thunderstorm Fighter",
+      "雷暴级战斗机",
+      "뇌우 전투기"
+    ],
+    "source": "units/thunderstorm2.ini"
+  },
+  {
+    "id": "ek-biplanefighter1",
+    "owner": 0,
+    "x": 172,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Thunderstorm Recon",
+      "雷暴级侦查机",
+      "뇌우 정찰"
+    ],
+    "source": "units/thunderstorm1.ini"
+  },
+  {
+    "id": "ek-blackbear",
+    "owner": 0,
+    "x": 190,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Atreides",
+      "阿特雷德级隐形轰炸机",
+      "아트레이드"
+    ],
+    "source": "units/Blackbear.ini"
+  },
+  {
+    "id": "ek-blackbear-smode",
+    "owner": 0,
+    "x": 208,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Atreides",
+      "阿特雷德级隐形轰炸机",
+      "아트레이드"
+    ],
+    "source": "units/Blackbear_Smode.ini"
+  },
+  {
+    "id": "ek-brutus",
+    "owner": 0,
+    "x": 226,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-03 \"Brutus\"",
+      "XHA-03 \"布鲁图斯\"级空中战舰",
+      "XHA-03 \"브루투스\""
+    ],
+    "source": "units/airship_brutus.ini"
+  },
+  {
+    "id": "ek-bugflybuilder",
+    "owner": 0,
+    "x": 244,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Bug Fly Builder",
+      "飞行建造虫",
+      "버그 플라이 빌더"
+    ],
+    "source": "units/bug_fly_builder.ini"
+  },
+  {
+    "id": "ek-buzzard",
+    "owner": 0,
+    "x": 262,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Buzzard",
+      "秃鹰级直升机",
+      "독수리"
+    ],
+    "source": "units/buzzard_gunship.ini"
+  },
+  {
+    "id": "ek-caesarius",
+    "owner": 0,
+    "x": 280,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-04 \"Caesarius\"",
+      "XHA-04 \"凯撒琉斯\"级空中战舰",
+      "XHA-04 \"카이사리우스\""
+    ],
+    "source": "units/airship_caesarius.ini"
+  },
+  {
+    "id": "ek-carrierflying",
+    "owner": 0,
+    "x": 298,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-06 \"Imperium\"",
+      "XHA-06 \"帝国\"级巡天母舰",
+      "XHA-06 \"임페리움\""
+    ],
+    "source": "units/airship_imperium.ini"
+  },
+  {
+    "id": "ek-carrierlarge",
+    "owner": 0,
+    "x": 316,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-06 \"Constantine\"",
+      "XHG-06 \"君士坦丁\"级巡天母舰",
+      "XHG-06 \"콘스탄틴\""
+    ],
+    "source": "units/carrierlarge.ini"
+  },
+  {
+    "id": "ek-carrierlargecombat",
+    "owner": 0,
+    "x": 334,
+    "y": 68,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-06 \"Constantine\"",
+      "XHG-06 \"君士坦丁\"级巡天母舰",
+      "XHG-06 \"콘스탄틴\""
+    ],
+    "source": "units/carrierlarge_combat.ini"
+  },
+  {
+    "id": "ek-chaika",
+    "owner": 0,
+    "x": 172,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Chaika",
+      "柴卡级运兵直升机",
+      "차이카"
+    ],
+    "source": "units/heli_chaika.ini"
+  },
+  {
+    "id": "ek-chisel",
+    "owner": 0,
+    "x": 190,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Chisel",
+      "錾刀级空中战舰",
+      "끌"
+    ],
+    "source": "units/airship_chisel.ini"
+  },
+  {
+    "id": "ek-condor",
+    "owner": 0,
+    "x": 208,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Condor",
+      "神鹰级运输直升机",
+      "콘도르"
+    ],
+    "source": "units/condor_dropship.ini"
+  },
+  {
+    "id": "ek-cordelia-drone",
+    "owner": 0,
+    "x": 226,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Swift Drone",
+      "雨燕级无人机",
+      "스위프트 드론"
+    ],
+    "source": "units/Cordelia_drone.ini"
+  },
+  {
+    "id": "ek-crazy-builder",
+    "owner": 0,
+    "x": 244,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Crazy Builder",
+      "疯狂建造者",
+      "크레이지 빌더"
+    ],
+    "source": "units/crazy_builder.ini"
+  },
+  {
+    "id": "ek-dolphin",
+    "owner": 0,
+    "x": 262,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Dolphin",
+      "海豚级空中运输舰",
+      "돌고래"
+    ],
+    "source": "units/airship_dolphin.ini"
+  },
+  {
+    "id": "ek-dominionflying",
+    "owner": 0,
+    "x": 280,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Dominion",
+      "统领者机甲",
+      "지배"
+    ],
+    "source": "units/mech_flying_takeoff.ini"
+  },
+  {
+    "id": "ek-dragonfly",
+    "owner": 0,
+    "x": 298,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Dragonfly",
+      "蜻蜓级垂直起降战机",
+      "잠자리"
+    ],
+    "source": "units/vtol.ini"
+  },
+  {
+    "id": "ek-dropship",
+    "owner": 0,
+    "x": 316,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "dropship",
+      "运输船",
+      "수송선"
+    ],
+    "source": "units/dropship.ini"
+  },
+  {
+    "id": "ek-egretflying",
+    "owner": 0,
+    "x": 334,
+    "y": 86,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Egret Mech",
+      "白鹭机甲",
+      "백로 기계"
+    ],
+    "source": "units/egret_mech_flying.ini"
+  },
+  {
+    "id": "ek-eris",
+    "owner": 0,
+    "x": 172,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Eris",
+      "厄里斯级中型轰炸机",
+      "에릭"
+    ],
+    "source": "units/eris.ini"
+  },
+  {
+    "id": "ek-experimental-bomber",
+    "owner": 0,
+    "x": 190,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Nightwing",
+      "夜翼级隐形轰炸机",
+      "나이트윙"
+    ],
+    "source": "units/experimental_bomber.ini"
+  },
+  {
+    "id": "ek-experimental-bomber-stealth",
+    "owner": 0,
+    "x": 208,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Nightwing",
+      "夜翼级隐形轰炸机",
+      "나이트윙"
+    ],
+    "source": "units/experimental_bomber_stealth.ini"
+  },
+  {
+    "id": "ek-experimentalartillery",
+    "owner": 0,
+    "x": 226,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-02 \"Daybreak\"",
+      "XHG-02 \"破晓\"级火力支援平台",
+      "XHG-02 \"새벽\""
+    ],
+    "source": "units/Experimental_Artillery.ini"
+  },
+  {
+    "id": "ek-experimentaldropship",
+    "owner": 0,
+    "x": 244,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "experimentalDropship",
+      "实验性运输船",
+      "실험적 수송선"
+    ],
+    "source": "units/experimental_dropship.ini"
+  },
+  {
+    "id": "ek-experimentalgun",
+    "owner": 0,
+    "x": 262,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-02 \"Daybreak\"",
+      "XHG-02 \"破晓\"级火力支援平台",
+      "XHG-02 \"새벽\""
+    ],
+    "source": "units/Experimental_Gun.ini"
+  },
+  {
+    "id": "ek-experimentalgunships",
+    "owner": 0,
+    "x": 280,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-03 \"Archangel\"",
+      "XHG-03 \"大天使\"级空中作战平台",
+      "XHG-03 \"대천사\""
+    ],
+    "source": "units/experimental_gunship.ini"
+  },
+  {
+    "id": "ek-experimentalmissile",
+    "owner": 0,
+    "x": 298,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-02 \"Daybreak\"",
+      "XHG-02 \"破晓\"级火力支援平台",
+      "XHG-02 \"새벽\""
+    ],
+    "source": "units/Experimental_Missile.ini"
+  },
+  {
+    "id": "ek-experimentalwormhead",
+    "owner": 0,
+    "x": 316,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Mechanized Worm",
+      "机械蠕虫",
+      "기계화 벌레"
+    ],
+    "source": "units/EK_worm_head.ini"
+  },
+  {
+    "id": "ek-expinterceptor",
+    "owner": 0,
+    "x": 334,
+    "y": 104,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Nighthawk",
+      "夜鹰级隐形拦截机",
+      "나이트호크"
+    ],
+    "source": "units/nighthawk.ini"
+  },
+  {
+    "id": "ek-expinterceptorstealth",
+    "owner": 0,
+    "x": 172,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Nighthawk",
+      "夜鹰级隐形拦截机",
+      "나이트호크"
+    ],
+    "source": "units/nighthawk_stealth_mode.ini"
+  },
+  {
+    "id": "ek-falcon",
+    "owner": 0,
+    "x": 190,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Falcon",
+      "猎鹰级战斗机",
+      "팔콘"
+    ],
+    "source": "units/falcon_fighter.ini"
+  },
+  {
+    "id": "ek-flamingoflying",
+    "owner": 0,
+    "x": 208,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Flamingo Mech",
+      "火烈鸟级垂直起降飞行机甲",
+      "플라밍고 기계"
+    ],
+    "source": "units/flamingoflying.ini"
+  },
+  {
+    "id": "ek-flycat",
+    "owner": 0,
+    "x": 226,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Flycat",
+      "飞猫级直升机",
+      "파리고양이"
+    ],
+    "source": "units/flycat_gunship.ini"
+  },
+  {
+    "id": "ek-freewing",
+    "owner": 0,
+    "x": 244,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Freewing",
+      "自由之翼级轰炸机",
+      "프리윙"
+    ],
+    "source": "units/Freewing.ini"
+  },
+  {
+    "id": "ek-gladiator",
+    "owner": 0,
+    "x": 262,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-08 \"Elizabeth\"",
+      "XHA-08 \"伊丽莎白\"级空中战舰",
+      "XHA-08 \"엘리자베스\""
+    ],
+    "source": "units/airship_GLADIATOR.ini"
+  },
+  {
+    "id": "ek-gladiator-afb",
+    "owner": 0,
+    "x": 280,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-08 \"Elizabeth\"",
+      "XHA-08 \"伊丽莎白\"级空中战舰",
+      "XHA-08 \"엘리자베스\""
+    ],
+    "source": "units/airship_GLADIATOR_AFB.ini"
+  },
+  {
+    "id": "ek-hammer",
+    "owner": 0,
+    "x": 298,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Hammer",
+      "锤子级轰炸机",
+      "망치"
+    ],
+    "source": "units/bomber_hammer.ini"
+  },
+  {
+    "id": "ek-hellcat",
+    "owner": 0,
+    "x": 316,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Harkonnen",
+      "悍匪级直升机",
+      "하코넨"
+    ],
+    "source": "units/hell_cat.ini"
+  },
+  {
+    "id": "ek-hunterdrone",
+    "owner": 0,
+    "x": 334,
+    "y": 122,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Kamikaze Drone",
+      "自爆无人机",
+      "카미카제 드론"
+    ],
+    "source": "units/kamikaze_drone.ini"
+  },
+  {
+    "id": "ek-hyperion",
+    "owner": 0,
+    "x": 172,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-07 \"Hyperion\"",
+      "XHA-07 \"休伯利安\"级空中战舰",
+      "XHA-07 \"하이페리온\""
+    ],
+    "source": "units/airship_Hyperion.ini"
+  },
+  {
+    "id": "ek-impostor",
+    "owner": 0,
+    "x": 190,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Impostor",
+      "欺诈者级空中战舰",
+      "사기꾼"
+    ],
+    "source": "units/airship_impostor.ini"
+  },
+  {
+    "id": "ek-infantryjetpackflying",
+    "owner": 0,
+    "x": 208,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Pegasus",
+      "飞行突击兵",
+      "페가수스"
+    ],
+    "source": "units/infantry_pegasus_flying.ini"
+  },
+  {
+    "id": "ek-interceptor",
+    "owner": 0,
+    "x": 226,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Dreamcatcher",
+      "寻找者级拦截机",
+      "드림캐쳐"
+    ],
+    "source": "units/fighter_dreamcatcher.ini"
+  },
+  {
+    "id": "ek-interceptor2",
+    "owner": 0,
+    "x": 244,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Starstrike",
+      "星击级拦截机",
+      "스타스트라이크"
+    ],
+    "source": "units/fighter_starstrike.ini"
+  },
+  {
+    "id": "ek-izhmash",
+    "owner": 0,
+    "x": 262,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Izhmash",
+      "伊兹马什级运输机",
+      "이즈마시"
+    ],
+    "source": "units/Izhmash.ini"
+  },
+  {
+    "id": "ek-jackson",
+    "owner": 0,
+    "x": 280,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Jackson",
+      "杰克逊级轰炸机",
+      "잭슨"
+    ],
+    "source": "units/jackson.ini"
+  },
+  {
+    "id": "ek-kadiak",
+    "owner": 0,
+    "x": 298,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-01 \"Kadiak\"",
+      "XHG-01 \"卡迪亚克\"级巡天母舰",
+      "XHG-01 \"카디악\""
+    ],
+    "source": "units/Kadiak.ini"
+  },
+  {
+    "id": "ek-kestrel",
+    "owner": 0,
+    "x": 316,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-01 \"Kestrel\"",
+      "XHA-01 \"红隼\"级空中战舰",
+      "XHA-01 \"케스트렐\""
+    ],
+    "source": "units/airship_kestrel.ini"
+  },
+  {
+    "id": "ek-kingfisher",
+    "owner": 0,
+    "x": 334,
+    "y": 140,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Kingfisher",
+      "翠鸟级轰炸机",
+      "물총새"
+    ],
+    "source": "units/bomber_kingfisher.ini"
+  },
+  {
+    "id": "ek-largedrone",
+    "owner": 0,
+    "x": 172,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Avenger",
+      "复仇者级拦截机",
+      "어벤저"
+    ],
+    "source": "units/fighter_avenger.ini"
+  },
+  {
+    "id": "ek-largegunship",
+    "owner": 0,
+    "x": 190,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Large Gun Ship",
+      "大型武装直升机",
+      "대형 함선"
+    ],
+    "source": "units/largeGunship.ini"
+  },
+  {
+    "id": "ek-lemurflying",
+    "owner": 0,
+    "x": 208,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Lemur Mech",
+      "狐猴机甲",
+      "여우원숭이 기계"
+    ],
+    "source": "units/lemur_mech_flying.ini"
+  },
+  {
+    "id": "ek-lemurflyinga",
+    "owner": 0,
+    "x": 226,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Lemur Mech T2",
+      "狐猴机甲-T2",
+      "여우원숭이 기계 T2"
+    ],
+    "source": "units/lemur_mech_flying_heavy.ini"
+  },
+  {
+    "id": "ek-ligfighter",
+    "owner": 0,
+    "x": 244,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Yralets",
+      "伊拉莱斯级攻击机",
+      "야랄레츠"
+    ],
+    "source": "units/fighter_yralets.ini"
+  },
+  {
+    "id": "ek-manticore",
+    "owner": 0,
+    "x": 262,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Manticore",
+      "蝎尾狮级重型轰炸机",
+      "맨티코어"
+    ],
+    "source": "units/manticore.ini"
+  },
+  {
+    "id": "ek-missiledrone",
+    "owner": 0,
+    "x": 280,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Rebeler",
+      "反叛者级战斗机",
+      "반란군"
+    ],
+    "source": "units/fighter_rebeler.ini"
+  },
+  {
+    "id": "ek-mordredekranoplan",
+    "owner": 0,
+    "x": 298,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHV-12 \"Mordred\"",
+      "XHV-12 \"莫德雷德\"悬浮机甲",
+      "XHV-12 \"모드레드\""
+    ],
+    "source": "units/mordred_ekranoplan.ini"
+  },
+  {
+    "id": "ek-multi-laser-ship",
+    "owner": 0,
+    "x": 316,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XV-01 \"Phoenix\"",
+      "XV-01 \"凤凰\"级垂直起降战机",
+      "XV-01 \"피닉스\""
+    ],
+    "source": "units/multi_laser_ship.ini"
+  },
+  {
+    "id": "ek-nightmare",
+    "owner": 0,
+    "x": 334,
+    "y": 158,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Nightmare",
+      "梦魇级垂直起降战机",
+      "악몽"
+    ],
+    "source": "units/ek_nightmare.ini"
+  },
+  {
+    "id": "ek-nightmaret2",
+    "owner": 0,
+    "x": 172,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Nightmare T2",
+      "梦魇级垂直起降战机-T2",
+      "악몽 T2"
+    ],
+    "source": "units/nightmare.ini"
+  },
+  {
+    "id": "ek-nmc-drones",
+    "owner": 0,
+    "x": 190,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Jager Drone",
+      "猎杀者无人机",
+      "예거 드론"
+    ],
+    "source": "units/EK_NEW_MECH_DRONE.ini"
+  },
+  {
+    "id": "ek-nmc-rz-drones",
+    "owner": 0,
+    "x": 208,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Seizor Drone",
+      "征服者无人机",
+      "세이조 드론"
+    ],
+    "source": "units/EK_NEW_MECH_DRONE_RZ.ini"
+  },
+  {
+    "id": "ek-olivia",
+    "owner": 0,
+    "x": 226,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Olivia",
+      "欧利维亚级空中战舰",
+      "올리비아"
+    ],
+    "source": "units/olivia.ini"
+  },
+  {
+    "id": "ek-ophelia-drone",
+    "owner": 0,
+    "x": 244,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Petrel Drone",
+      "海燕级无人机",
+      "페트렐 드론"
+    ],
+    "source": "units/ophelia_drone.ini"
+  },
+  {
+    "id": "ek-paraship",
+    "owner": 0,
+    "x": 262,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Omega",
+      "欧米加级隐形运输机",
+      "오메가"
+    ],
+    "source": "units/omega.ini"
+  },
+  {
+    "id": "ek-paraship2",
+    "owner": 0,
+    "x": 280,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Thunderstorm Dropship",
+      "雷暴级运输机",
+      "뇌우 수송선"
+    ],
+    "source": "units/ParaShip2.ini"
+  },
+  {
+    "id": "ek-parashipstealth",
+    "owner": 0,
+    "x": 298,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Omega",
+      "欧米加级隐形运输机",
+      "오메가"
+    ],
+    "source": "units/omega_stealth_mode.ini"
+  },
+  {
+    "id": "ek-predator",
+    "owner": 0,
+    "x": 316,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Predator",
+      "掠夺者级直升机",
+      "프레데터"
+    ],
+    "source": "units/predator.ini"
+  },
+  {
+    "id": "ek-protos",
+    "owner": 0,
+    "x": 334,
+    "y": 176,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Protos",
+      "普罗托斯级隐形战斗机",
+      "프로토스"
+    ],
+    "source": "units/Protos.ini"
+  },
+  {
+    "id": "ek-protos-smode",
+    "owner": 0,
+    "x": 172,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Protos",
+      "普罗托斯级隐形战斗机",
+      "프로토스"
+    ],
+    "source": "units/Protos_Smode.ini"
+  },
+  {
+    "id": "ek-pterosaur",
+    "owner": 0,
+    "x": 190,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-02 \"Pterosaur\"",
+      "XHA-02 \"翼龙\"级空中战舰",
+      "XHA-02 \"익룡\""
+    ],
+    "source": "units/airship_pterosaur.ini"
+  },
+  {
+    "id": "ek-raven",
+    "owner": 0,
+    "x": 208,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Raven",
+      "渡鸦级运输直升机",
+      "레이븐"
+    ],
+    "source": "units/raven_dropship.ini"
+  },
+  {
+    "id": "ek-scoutdrone",
+    "owner": 0,
+    "x": 226,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Switchblade",
+      "弹簧刀级侦察机",
+      "스위치블레이드"
+    ],
+    "source": "units/drone.ini"
+  },
+  {
+    "id": "ek-smalldrone",
+    "owner": 0,
+    "x": 244,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Firestinger",
+      "烈火级拦截机",
+      "파이어스팅거"
+    ],
+    "source": "units/fighter_firestinger.ini"
+  },
+  {
+    "id": "ek-smallfighter",
+    "owner": 0,
+    "x": 262,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Robin Fighter",
+      "知更鸟级战斗机",
+      "로빈 파이터"
+    ],
+    "source": "units/smallfighter.ini"
+  },
+  {
+    "id": "ek-smallfighter-mk2",
+    "owner": 0,
+    "x": 280,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Robin Fighter T2",
+      "知更鸟级战斗机-T2",
+      "로빈 파이터 T2"
+    ],
+    "source": "units/smallfighter_mk2.ini"
+  },
+  {
+    "id": "ek-snowcat",
+    "owner": 0,
+    "x": 298,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Snowcat",
+      "雪猫级直升机",
+      "스노캣"
+    ],
+    "source": "units/snowcat_gunship.ini"
+  },
+  {
+    "id": "ek-spacestation",
+    "owner": 0,
+    "x": 316,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XS-02B \"ZEUS\"",
+      "XS-02B \"宙斯\"级重型作战卫星",
+      "XS-02B \"제우스\""
+    ],
+    "source": "units/space_station.ini"
+  },
+  {
+    "id": "ek-spy",
+    "owner": 0,
+    "x": 334,
+    "y": 194,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Harbinger",
+      "先驱者级攻击机",
+      "선구자"
+    ],
+    "source": "units/harbinger.ini"
+  },
+  {
+    "id": "ek-ssp",
+    "owner": 0,
+    "x": 172,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XS-02A \"ODIN\"",
+      "XS-02A \"奥丁\"级作战卫星",
+      "XS-02A \"오딘\""
+    ],
+    "source": "units/SSP.ini"
+  },
+  {
+    "id": "ek-stallion",
+    "owner": 0,
+    "x": 190,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Stallion",
+      "雄马级隐形战斗机",
+      "종마"
+    ],
+    "source": "units/Stallion.ini"
+  },
+  {
+    "id": "ek-stallion-smode",
+    "owner": 0,
+    "x": 208,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Stallion",
+      "雄马级隐形战斗机",
+      "종마"
+    ],
+    "source": "units/Stallion_Smode.ini"
+  },
+  {
+    "id": "ek-strato",
+    "owner": 0,
+    "x": 226,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Strato",
+      "斯特拉图级轰炸机",
+      "스트라토"
+    ],
+    "source": "units/Strato.ini"
+  },
+  {
+    "id": "ek-supportsatellite",
+    "owner": 0,
+    "x": 244,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XS-00 Orbital Support Platform",
+      "XS-00 轨道支援平台",
+      "XS-00 궤도 지원 플랫폼"
+    ],
+    "source": "units/support_satellite.ini"
+  },
+  {
+    "id": "ek-supportsatelliteasat",
+    "owner": 0,
+    "x": 262,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XS-01C Co-orbital ASAT",
+      "XS-01C 共轨式反卫星武器",
+      "XS-01C 공궤도 ASAT"
+    ],
+    "source": "units/support_satellite_asat.ini"
+  },
+  {
+    "id": "ek-supportsatellitefab",
+    "owner": 0,
+    "x": 280,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XS-01D Orbital Research Satellite",
+      "XS-01D 轨道研究卫星",
+      "XS-01D 궤도 연구 위성"
+    ],
+    "source": "units/support_satellite_fab.ini"
+  },
+  {
+    "id": "ek-supportsatellitemissile",
+    "owner": 0,
+    "x": 298,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XS-01B Orbital Missile Platform",
+      "XS-01B 轨道导弹平台",
+      "XS-01B 궤도 미사일 플랫폼"
+    ],
+    "source": "units/support_satellite_missile.ini"
+  },
+  {
+    "id": "ek-supportsatelliterecon",
+    "owner": 0,
+    "x": 316,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XS-01A Orbital Recon Satellite",
+      "XS-01A 轨道侦察卫星",
+      "XS-01A 궤도 정찰 위성"
+    ],
+    "source": "units/support_satellite_recon.ini"
+  },
+  {
+    "id": "ek-swallowtail",
+    "owner": 0,
+    "x": 334,
+    "y": 212,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Swallowtail",
+      "燕尾飞艇",
+      "제비꼬리"
+    ],
+    "source": "units/ek_swallowtail_gunship.ini"
+  },
+  {
+    "id": "ek-tigermoth",
+    "owner": 0,
+    "x": 172,
+    "y": 230,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Tigermoth",
+      "虎蛾级空中战舰",
+      "호랑이나방"
+    ],
+    "source": "units/tigermoth.ini"
+  },
+  {
+    "id": "ek-twh-drones",
+    "owner": 0,
+    "x": 190,
+    "y": 230,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Sparrow Drone",
+      "麻雀级无人机",
+      "참새 드론"
+    ],
+    "source": "units/EK_TWH_DRONES.ini"
+  },
+  {
+    "id": "ek-twin-hangar",
+    "owner": 0,
+    "x": 208,
+    "y": 230,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-05 \"Horizon\"",
+      "XHA-05 \"地平线\"级巡天母舰",
+      "XHA-05 \"호라이즌\""
+    ],
+    "source": "units/twin_hangar.ini"
+  },
+  {
+    "id": "ek-valkyrie",
+    "owner": 0,
+    "x": 226,
+    "y": 230,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHG-04 \"Valkyrie\"",
+      "XHG-04 \"女武神\"级空中导弹平台",
+      "XHG-04 \"발키리\""
+    ],
+    "source": "units/Valkyrie.ini"
+  },
+  {
+    "id": "ek-wedgetail-new",
+    "owner": 0,
+    "x": 244,
+    "y": 230,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Wedgetail",
+      "楔尾级支援机",
+      "웨지테일"
+    ],
+    "source": "units/Wedgetail.ini"
+  },
+  {
+    "id": "ek-wombat",
+    "owner": 0,
+    "x": 262,
+    "y": 230,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "Wombat",
+      "袋熊级运输直升机",
+      "웜뱃"
+    ],
+    "source": "units/wombat_dropship.ini"
+  },
+  {
+    "id": "ek-zeppelin",
+    "owner": 0,
+    "x": 280,
+    "y": 230,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-09 \"Zeppelin\"",
+      "XHA-09 \"齐柏林\"级投弹飞艇",
+      "XHA-09 \"제플린\""
+    ],
+    "source": "units/Zeppelin.ini"
+  },
+  {
+    "id": "ek-zeppelin2",
+    "owner": 0,
+    "x": 298,
+    "y": 230,
+    "a": 270,
+    "sector": "air",
+    "name": [
+      "XHA-09 \"Zeppelin\"",
+      "XHA-09 \"齐柏林\"级投弹飞艇",
+      "XHA-09 \"제플린\""
+    ],
+    "source": "units/Zeppelin2.ini"
+  },
+  {
+    "id": "ek--3edbf2c9",
+    "owner": 0,
+    "x": 12,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Machine Gun",
+      "中型机枪",
+      "기관총"
+    ],
+    "source": "units/executor_medcannon2.ini"
+  },
+  {
+    "id": "ek--4999819a",
+    "owner": 0,
+    "x": 26,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek星舰悬浮炮",
+      "我星刵流浮炮",
+      "이성刵流浮炮"
+    ],
+    "source": "units/executor_hover.ini"
+  },
+  {
+    "id": "ek--5f14ab9b",
+    "owner": 0,
+    "x": 40,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Missile Pod",
+      "中型导弹舱",
+      "미사일 포드"
+    ],
+    "source": "units/executor_medmissile.ini"
+  },
+  {
+    "id": "ek--6922097b",
+    "owner": 0,
+    "x": 54,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek粒子炮",
+      "我是一个粒子",
+      "나는 입자이다"
+    ],
+    "source": "units/executor_particlegun.ini"
+  },
+  {
+    "id": "ek--75a7f76e",
+    "owner": 0,
+    "x": 68,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek星舰电弧",
+      "Ek星舰电弧",
+      "Ekstarship电弧"
+    ],
+    "source": "units/executor_energycorelightning.ini"
+  },
+  {
+    "id": "ek--88b96b03",
+    "owner": 0,
+    "x": 82,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Artillery",
+      "中型火炮",
+      "포병"
+    ],
+    "source": "units/executor_medcannon1.ini"
+  },
+  {
+    "id": "ek--97e6b24c",
+    "owner": 0,
+    "x": 96,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "\"Gamma Penetrator\" Ray Cannon",
+      "\"伽马贯穿者\"射线巨炮",
+      "\"감마 페네트레이터\" 레이 캐논"
+    ],
+    "source": "units/executor_megaslotbeam.ini"
+  },
+  {
+    "id": "ek--9a086292",
+    "owner": 0,
+    "x": 110,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek侧导弹舱",
+      "我在枪的右边",
+      "나는 총의 오른쪽에 있어요"
+    ],
+    "source": "units/executor_sidemissilepod.ini"
+  },
+  {
+    "id": "ek--a75f5372",
+    "owner": 0,
+    "x": 124,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Empty Mega Slot",
+      "模块化星舰空巨槽",
+      "빈 메가 슬롯"
+    ],
+    "source": "units/executor_megaslotempty.ini"
+  },
+  {
+    "id": "ek--bbc88611",
+    "owner": 0,
+    "x": 138,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek电球",
+      "我电动",
+      "나는 전기"
+    ],
+    "source": "units/executor_energyball.ini"
+  },
+  {
+    "id": "ek--cb087656",
+    "owner": 0,
+    "x": 152,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Empty Slot",
+      "模块化星舰空槽",
+      "빈 슬롯"
+    ],
+    "source": "units/executor_commonslotempty.ini"
+  },
+  {
+    "id": "ek--d46d051b",
+    "owner": 0,
+    "x": 166,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "\"Arbiter\" Laser Cannon",
+      "\"仲裁者\"激光巨炮",
+      "\"아비터\" 레이저 캐논"
+    ],
+    "source": "units/executor_megaslotlaser.ini"
+  },
+  {
+    "id": "ek--dabac750",
+    "owner": 0,
+    "x": 180,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "\"Shocker\" Kinetic Cannon",
+      "\"冲击者\"动能巨炮",
+      "\"쇼커\" 키네틱 캐논"
+    ],
+    "source": "units/executor_megaslotkinetic.ini"
+  },
+  {
+    "id": "ek--ee30bd1f",
+    "owner": 0,
+    "x": 194,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek星舰主炮",
+      "我星刵主炮",
+      "나는 별주주炮"
+    ],
+    "source": "units/executor_maincannon.ini"
+  },
+  {
+    "id": "ek--f75bb3ae",
+    "owner": 0,
+    "x": 208,
+    "y": 348,
+    "sector": "helpers",
+    "name": [
+      "Ek不死之身",
+      "我没有死",
+      "나는 죽지 않았다"
+    ],
+    "source": "units/executor_antidelete.ini"
+  },
+  {
+    "id": "ek-3-0234a37b",
+    "owner": 0,
+    "x": 222,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek3个炮",
+      "Ek3个炮",
+      "Ek3个炮"
+    ],
+    "source": "units/executor_3gun.ini"
+  },
+  {
+    "id": "ek-7-91ed13a0",
+    "owner": 0,
+    "x": 236,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek7个炮",
+      "Ek7个炮",
+      "Ek7个炮"
+    ],
+    "source": "units/executor_7gun.ini"
+  },
+  {
+    "id": "ek-a-s-module-attachment",
+    "owner": 0,
+    "x": 250,
+    "y": 348,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Internal Module",
+      "内部模块空槽",
+      "내부 모듈"
+    ],
+    "source": "units/A_S_module_attachment.ini"
+  },
+  {
+    "id": "ek-a-s-module-generator",
+    "owner": 0,
+    "x": 12,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Energy Generator",
+      "能源制造模块",
+      "에너지 발전기"
+    ],
+    "source": "units/A_S_Generator.ini"
+  },
+  {
+    "id": "ek-a-s-module-repair",
+    "owner": 0,
+    "x": 26,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Repair Bot",
+      "自我修复模块",
+      "수리봇"
+    ],
+    "source": "units/A_S_Repair.ini"
+  },
+  {
+    "id": "ek-a-s-module-shield",
+    "owner": 0,
+    "x": 40,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Shield Generator",
+      "护盾生成模块",
+      "보호막 생성기"
+    ],
+    "source": "units/A_S_Shield.ini"
+  },
+  {
+    "id": "ek-ai-explf",
+    "owner": 0,
+    "x": 54,
+    "y": 362,
+    "sector": "helpers",
+    "name": [
+      "Ek_AI_EXPLF",
+      "I_AI_EXPLF",
+      "I_AI_EXPLF"
+    ],
+    "source": "units/explf.ini"
+  },
+  {
+    "id": "ek-ai-explf2",
+    "owner": 0,
+    "x": 68,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_AI_EXPLF2",
+      "I_AI_EXPLF2",
+      "I_AI_EXPLF2"
+    ],
+    "source": "units/explf2.ini"
+  },
+  {
+    "id": "ek-announcement",
+    "owner": 0,
+    "x": 82,
+    "y": 362,
+    "sector": "helpers",
+    "name": [
+      "Ek_announcement",
+      "我_公告",
+      "나_공지사항"
+    ],
+    "source": "units/0.ini"
+  },
+  {
+    "id": "ek-arb-hangar-a",
+    "owner": 0,
+    "x": 96,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "[HANGAR A]",
+      "[机库A]",
+      "[격납고 A]"
+    ],
+    "source": "units/EK_ARB_HANGAR_A.ini"
+  },
+  {
+    "id": "ek-arb-hangar-b",
+    "owner": 0,
+    "x": 110,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "[HANGAR B]",
+      "[机库B]",
+      "[격납고 B]"
+    ],
+    "source": "units/EK_ARB_HANGAR_B.ini"
+  },
+  {
+    "id": "ek-arb-hangar-c",
+    "owner": 0,
+    "x": 124,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "[HANGAR C]",
+      "[机库C]",
+      "[격납고 C]"
+    ],
+    "source": "units/EK_ARB_HANGAR_C.ini"
+  },
+  {
+    "id": "ek-attackhere",
+    "owner": 0,
+    "x": 138,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkAttackHere",
+      "Ek攻击这里",
+      "Ek여기서 공격하세요"
+    ],
+    "source": "units/AttackArea.ini"
+  },
+  {
+    "id": "ek-balloonbarragedummy",
+    "owner": 0,
+    "x": 152,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_balloonbarragedummy",
+      "Me_balloonbarragedummy",
+      "나_풍선연발"
+    ],
+    "source": "units/balloon_dummy.ini"
+  },
+  {
+    "id": "ek-beamgunshiplaser",
+    "owner": 0,
+    "x": 166,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_beamgunshiplaser",
+      "I_beamgunship激光",
+      "I_빔건십레이저"
+    ],
+    "source": "units/system.ini"
+  },
+  {
+    "id": "ek-bigscarylaser",
+    "owner": 0,
+    "x": 180,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Nicoll Dyson Beam",
+      "尼科尔·戴森光束",
+      "니콜 다이슨 빔"
+    ],
+    "source": "units/bigscarylaser.ini"
+  },
+  {
+    "id": "ek-chemicalcloudsmall",
+    "owner": 0,
+    "x": 194,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkChemicalCloudSmall",
+      "EkChemicalCloudSmall",
+      "Ek화학구름작은"
+    ],
+    "source": "units/effect_chemical.ini"
+  },
+  {
+    "id": "ek-dirtybomb",
+    "owner": 0,
+    "x": 208,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Dirty Bomb",
+      "脏弹",
+      "더러운 폭탄"
+    ],
+    "source": "units/dirtybomb.ini"
+  },
+  {
+    "id": "ek-dirtybombspawner",
+    "owner": 0,
+    "x": 222,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Dirty Bomb",
+      "脏弹",
+      "더러운 폭탄"
+    ],
+    "source": "units/dirtybombspawner.ini"
+  },
+  {
+    "id": "ek-dominion-fake",
+    "owner": 0,
+    "x": 236,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkDominion_fake",
+      "IDominion_fake",
+      "IDominion_fake"
+    ],
+    "source": "units/Dominion-fake.ini"
+  },
+  {
+    "id": "ek-dominionflying-fake",
+    "owner": 0,
+    "x": 250,
+    "y": 362,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkDominionFlying_fake",
+      "EkDominionFlying_fake",
+      "IDominionFlying_fake"
+    ],
+    "source": "units/mech_flying_takeoff_fake.ini"
+  },
+  {
+    "id": "ek-experimentalwormmissile",
+    "owner": 0,
+    "x": 12,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkExperimentalWormMissile",
+      "实验蠕虫导弹",
+      "I실험적웜미사일"
+    ],
+    "source": "units/EK_worm_missile.ini"
+  },
+  {
+    "id": "ek-experimentalwormsegment",
+    "owner": 0,
+    "x": 26,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkExperimentalWormSegment",
+      "I实验蠕虫段",
+      "IExperimentalWormSegment"
+    ],
+    "source": "units/EK_worm_segment.ini"
+  },
+  {
+    "id": "ek-experimentalwormtail",
+    "owner": 0,
+    "x": 40,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkExperimentalWormTail",
+      "实验虫尾",
+      "I실험적웜테일"
+    ],
+    "source": "units/EK_worm_tail.ini"
+  },
+  {
+    "id": "ek-experimentalwormtailinvis",
+    "owner": 0,
+    "x": 54,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkExperimentalWormTailInvis",
+      "I实验虫尾隐形",
+      "I실험적WormTailInvis"
+    ],
+    "source": "units/EK_worm_tailInvis.ini"
+  },
+  {
+    "id": "ek-experimentalwormtorpedo",
+    "owner": 0,
+    "x": 68,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkExperimentalWormTorpedo",
+      "I实验蠕虫鱼雷",
+      "I실험적웜어뢰"
+    ],
+    "source": "units/EK_worm_torpedo.ini"
+  },
+  {
+    "id": "ek-gladiator-missile",
+    "owner": 0,
+    "x": 82,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_Gladiator_missile",
+      "I_角斗士_导弹",
+      "I_Gladiator_missile"
+    ],
+    "source": "units/airship_GLADIATOR_missile.ini"
+  },
+  {
+    "id": "ek-gladiator-railgun",
+    "owner": 0,
+    "x": 96,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_Gladiator_RailGun",
+      "我_角斗士_轨道枪",
+      "나_Gladiator_RailGun"
+    ],
+    "source": "units/airship_GLADIATOR_RailGun.ini"
+  },
+  {
+    "id": "ek-gladiator-shieldde-ec97344e",
+    "owner": 0,
+    "x": 110,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_Gladiator_shieldDefense_Disabled",
+      "I_Gladiator_shieldDefense_Disabled",
+      "I_Gladiator_shieldDefense_Disabled"
+    ],
+    "source": "units/airship_GLADIATOR_shield_defense_disabled.ini"
+  },
+  {
+    "id": "ek-gladiator-shielddefense",
+    "owner": 0,
+    "x": 124,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_Gladiator_shieldDefense",
+      "I_Gladiator_shieldDefense",
+      "I_Gladiator_shieldDefense"
+    ],
+    "source": "units/airship_GLADIATOR_shield_defense.ini"
+  },
+  {
+    "id": "ek-incendiarysmall",
+    "owner": 0,
+    "x": 138,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkIncendiarySmall",
+      "I 燃烧弹 小型",
+      "IIncendiarySmall"
+    ],
+    "source": "units/effect_incendiary.ini"
+  },
+  {
+    "id": "ek-invincibletarget",
+    "owner": 0,
+    "x": 152,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Invincible Target",
+      "攻击定位器",
+      "무적의 표적"
+    ],
+    "source": "units/target.ini"
+  },
+  {
+    "id": "ek-invincibletarget-land",
+    "owner": 0,
+    "x": 166,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_InvincibleTarget_Land",
+      "I_InvincibleTarget_Land",
+      "I_InvincibleTarget_Land"
+    ],
+    "source": "units/targeted_dummy.ini"
+  },
+  {
+    "id": "ek-iron-pearl-extra-guns",
+    "owner": 0,
+    "x": 180,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_iron_pearl_extra_guns",
+      "I_iron_pearl_extra_guns",
+      "I_iron_pearl_extra_guns"
+    ],
+    "source": "units/iron_pearl_small_flak.ini"
+  },
+  {
+    "id": "ek-kineticspawner",
+    "owner": 0,
+    "x": 194,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Kinetic Strike",
+      "天基炮动能打击",
+      "키네틱 스트라이크"
+    ],
+    "source": "units/kineticspawner.ini"
+  },
+  {
+    "id": "ek-kineticstrike",
+    "owner": 0,
+    "x": 208,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Kinetic Strike",
+      "天基炮动能打击",
+      "키네틱 스트라이크"
+    ],
+    "source": "units/kineticstrike.ini"
+  },
+  {
+    "id": "ek-laserdefencemoduleoff",
+    "owner": 0,
+    "x": 222,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_LaserDefenceModuleOff",
+      "I_LaserDefenceModuleOff",
+      "I_LaserDefenceModuleOff"
+    ],
+    "source": "units/laser_defence_module_off.ini"
+  },
+  {
+    "id": "ek-laserdefencemoduleon",
+    "owner": 0,
+    "x": 236,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_LaserDefenceModuleOn",
+      "I_LaserDefenceModuleOn",
+      "I_LaserDefenceModuleOn"
+    ],
+    "source": "units/laser_defence_module_on.ini"
+  },
+  {
+    "id": "ek-laserspawner",
+    "owner": 0,
+    "x": 250,
+    "y": 376,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Nicoll Dyson Beam",
+      "尼科尔·戴森光束",
+      "니콜 다이슨 빔"
+    ],
+    "source": "units/laserspawner.ini"
+  },
+  {
+    "id": "ek-mach",
+    "owner": 0,
+    "x": 12,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Remove a THOT",
+      "沙盒测试型多导弹打击系统",
+      "THOT 제거"
+    ],
+    "source": "units/THOT_away.ini"
+  },
+  {
+    "id": "ek-machspawner",
+    "owner": 0,
+    "x": 26,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Remove a THOT",
+      "沙盒测试型多导弹打击系统",
+      "THOT 제거"
+    ],
+    "source": "units/THOT_away_spawner.ini"
+  },
+  {
+    "id": "ek-minecluster",
+    "owner": 0,
+    "x": 40,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkMineCluster",
+      "矿井集群",
+      "IMineCluster"
+    ],
+    "source": "units/effect_mine_cluster.ini"
+  },
+  {
+    "id": "ek-mineheavydeployed",
+    "owner": 0,
+    "x": 54,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Landmine Heavy",
+      "大型地雷",
+      "지뢰 헤비"
+    ],
+    "source": "units/placedmine_heavy_deployed.ini"
+  },
+  {
+    "id": "ek-minemediumdeployed",
+    "owner": 0,
+    "x": 68,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Landmine Medium",
+      "中型地雷",
+      "지뢰 매체"
+    ],
+    "source": "units/placedmine_medium_deployed.ini"
+  },
+  {
+    "id": "ek-minesmalldeployed",
+    "owner": 0,
+    "x": 82,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Landmine Small",
+      "小型地雷",
+      "지뢰 소형"
+    ],
+    "source": "units/placedmine_small_deployed.ini"
+  },
+  {
+    "id": "ek-mirv",
+    "owner": 0,
+    "x": 96,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "M.I.R.V.",
+      "多导弹打击系统",
+      "M.I.R.V."
+    ],
+    "source": "units/mirv.ini"
+  },
+  {
+    "id": "ek-mirvspawner",
+    "owner": 0,
+    "x": 110,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "M.I.R.V.",
+      "多导弹打击系统",
+      "M.I.R.V."
+    ],
+    "source": "units/mirvspawner.ini"
+  },
+  {
+    "id": "ek-modular-bunker-aa-a",
+    "owner": 0,
+    "x": 124,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "AA SAM",
+      "单发防空导弹模块",
+      "AA 샘"
+    ],
+    "source": "units/AA_A_turret.ini"
+  },
+  {
+    "id": "ek-modular-bunker-aa-b",
+    "owner": 0,
+    "x": 138,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "AA Barrage",
+      "连发防空导弹模块",
+      "대공포 사격"
+    ],
+    "source": "units/AA_B_turret.ini"
+  },
+  {
+    "id": "ek-modular-bunker-artyturret",
+    "owner": 0,
+    "x": 152,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Artillery",
+      "火炮模块",
+      "포병"
+    ],
+    "source": "units/artyGun_turret.ini"
+  },
+  {
+    "id": "ek-modular-bunker-emptyslot",
+    "owner": 0,
+    "x": 166,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Free Slot",
+      "空槽",
+      "무료 슬롯"
+    ],
+    "source": "units/emptySlot.ini"
+  },
+  {
+    "id": "ek-modular-bunker-gunturret",
+    "owner": 0,
+    "x": 180,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Machine Gun",
+      "机炮模块",
+      "기관총"
+    ],
+    "source": "units/autoGun_turret.ini"
+  },
+  {
+    "id": "ek-modular-bunker-railturret",
+    "owner": 0,
+    "x": 194,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Plasma Cannon",
+      "等离子炮模块",
+      "플라즈마 캐논"
+    ],
+    "source": "units/railGun_turret.ini"
+  },
+  {
+    "id": "ek-multilaserchain",
+    "owner": 0,
+    "x": 208,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkMultiLaserChain",
+      "I多激光链",
+      "IMultiLaserChain"
+    ],
+    "source": "units/ShotMultiLaser.ini"
+  },
+  {
+    "id": "ek-nanobeam",
+    "owner": 0,
+    "x": 222,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Nano Overcharge",
+      "纳米修复系统",
+      "나노 과충전"
+    ],
+    "source": "units/nanobeam.ini"
+  },
+  {
+    "id": "ek-nanobeamspawner",
+    "owner": 0,
+    "x": 236,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Nano Overcharge",
+      "纳米修复系统",
+      "나노 과충전"
+    ],
+    "source": "units/nanobeamspawner.ini"
+  },
+  {
+    "id": "ek-nukeeffectunit",
+    "owner": 0,
+    "x": 250,
+    "y": 390,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_NukeEffectUnit",
+      "I_NukeEffectUnit",
+      "I_NukeEffectUnit"
+    ],
+    "source": "units/executor_nuke.ini"
+  },
+  {
+    "id": "ek-orbitaldrop",
+    "owner": 0,
+    "x": 12,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Landing Pod",
+      "天降着陆舱",
+      "착륙 포드"
+    ],
+    "source": "units/orbitaldrop.ini"
+  },
+  {
+    "id": "ek-orbitaldropspawner",
+    "owner": 0,
+    "x": 26,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Landing Pod",
+      "天降着陆舱",
+      "착륙 포드"
+    ],
+    "source": "units/orbitaldropspawner.ini"
+  },
+  {
+    "id": "ek-orbitaltransport",
+    "owner": 0,
+    "x": 40,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Orbital Transport",
+      "轨道运输火箭",
+      "궤도 수송"
+    ],
+    "source": "units/orbitaltransport.ini"
+  },
+  {
+    "id": "ek-paradropdummy",
+    "owner": 0,
+    "x": 54,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_paradropdummy",
+      "我_paradropdummy",
+      "나_파라드롭더미"
+    ],
+    "source": "units/paradrop_dummy.ini"
+  },
+  {
+    "id": "ek-pp",
+    "owner": 0,
+    "x": 68,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkPP",
+      "独立聚丙烯",
+      "IPP"
+    ],
+    "source": "units/pp.ini"
+  },
+  {
+    "id": "ek-radioactivefallout",
+    "owner": 0,
+    "x": 82,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkRadioactiveFallout",
+      "放射性尘埃",
+      "IRadioactiveFallout"
+    ],
+    "source": "units/fallout.ini"
+  },
+  {
+    "id": "ek-random-experiment",
+    "owner": 0,
+    "x": 96,
+    "y": 404,
+    "sector": "helpers",
+    "name": [
+      "Random Unit",
+      "随机单位",
+      "무작위 단위"
+    ],
+    "source": "units/random.ini"
+  },
+  {
+    "id": "ek-random-start",
+    "owner": 0,
+    "x": 110,
+    "y": 404,
+    "sector": "helpers",
+    "name": [
+      "Random Unit Start",
+      "随机单位开局",
+      "무작위 단위 시작"
+    ],
+    "source": "units/randomstart.ini"
+  },
+  {
+    "id": "ek-s-aoe-fire",
+    "owner": 0,
+    "x": 124,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Ek_S_AOE_fire",
+      "I_S_AOE_火",
+      "I_S_AOE_fire"
+    ],
+    "source": "units/small_AOE_fire.ini"
+  },
+  {
+    "id": "ek-sensorping",
+    "owner": 0,
+    "x": 138,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Sensor Ping",
+      "卫星探测",
+      "센서 핑"
+    ],
+    "source": "units/sensorping.ini"
+  },
+  {
+    "id": "ek-shieldjammer",
+    "owner": 0,
+    "x": 152,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Electromagnetic Pulse",
+      "电磁脉冲轰炸",
+      "전자기 펄스"
+    ],
+    "source": "units/shieldjammer.ini"
+  },
+  {
+    "id": "ek-shieldjammerspawner",
+    "owner": 0,
+    "x": 166,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "Electromagnetic Pulse",
+      "电磁脉冲轰炸",
+      "전자기 펄스"
+    ],
+    "source": "units/shieldjammerspawner.ini"
+  },
+  {
+    "id": "ek-spectremech",
+    "owner": 0,
+    "x": 180,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "XI-02 \"Spectre\"",
+      "XI-02 \"恶灵\"机甲",
+      "XI-02 \"스펙터\""
+    ],
+    "source": "units/spectre.ini"
+  },
+  {
+    "id": "ek-spectremechstealth",
+    "owner": 0,
+    "x": 194,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "XI-02 \"Spectre\"",
+      "XI-02 \"恶灵\"机甲",
+      "XI-02 \"스펙터\""
+    ],
+    "source": "units/spectre_stealth.ini"
+  },
+  {
+    "id": "ek-supernukeexplosion",
+    "owner": 0,
+    "x": 208,
+    "y": 404,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkSuperNukeExplosion",
+      "I超级核武器爆炸",
+      "ISuperNuke폭발"
+    ],
+    "source": "units/nuke_explosion_super.ini"
+  },
+  {
+    "id": "ek-tcaidairtoair",
+    "owner": 0,
+    "x": 222,
+    "y": 404,
+    "sector": "helpers",
+    "name": [
+      "Anti Air Strike",
+      "防空打击",
+      "대공습"
+    ],
+    "source": "units/anti_air.ini"
+  },
+  {
+    "id": "ek-tcaidbombdown",
+    "owner": 0,
+    "x": 236,
+    "y": 404,
+    "sector": "helpers",
+    "name": [
+      "Bomb Strike down Strafe",
+      "空中投弹支援(向下)",
+      "폭탄 공격 스트라이프"
+    ],
+    "source": "units/a10_down.ini"
+  },
+  {
+    "id": "ek-tcaidbombup",
+    "owner": 0,
+    "x": 250,
+    "y": 404,
+    "sector": "helpers",
+    "name": [
+      "Bomb Strike up Strafe",
+      "空中投弹支援(向上)",
+      "폭탄 공격 스트라이프"
+    ],
+    "source": "units/a10_up.ini"
+  },
+  {
+    "id": "ek-tcaidbuster",
+    "owner": 0,
+    "x": 12,
+    "y": 418,
+    "sector": "helpers",
+    "name": [
+      "Bunker Buster Strike",
+      "堡垒克星打击",
+      "벙커 버스터 스트라이크"
+    ],
+    "source": "units/bunkerbuster.ini"
+  },
+  {
+    "id": "ek-tcaidcarpet",
+    "owner": 0,
+    "x": 26,
+    "y": 418,
+    "sector": "helpers",
+    "name": [
+      "Carpet Bomb Horizontal Strike",
+      "横向地毯式轰炸",
+      "융단폭탄 수평타격"
+    ],
+    "source": "units/carpet_horizontal.ini"
+  },
+  {
+    "id": "ek-tcaidcarpet2",
+    "owner": 0,
+    "x": 40,
+    "y": 418,
+    "sector": "helpers",
+    "name": [
+      "Carpet Bomb Vertical Strike",
+      "竖向地毯式轰炸",
+      "융단폭탄 수직타격"
+    ],
+    "source": "units/carpet_vertical.ini"
+  },
+  {
+    "id": "ek-tcaidnapalm",
+    "owner": 0,
+    "x": 54,
+    "y": 418,
+    "sector": "helpers",
+    "name": [
+      "Napalm Strike",
+      "凝固汽油弹打击",
+      "네이팜탄 공격"
+    ],
+    "source": "units/napalm.ini"
+  },
+  {
+    "id": "ek-ultranukeexplosion",
+    "owner": 0,
+    "x": 68,
+    "y": 418,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkUltraNukeExplosion",
+      "超核爆炸",
+      "IUltraNuke폭발"
+    ],
+    "source": "units/nuke_explosion_ultra.ini"
+  },
+  {
+    "id": "ek-wavebomb",
+    "owner": 0,
+    "x": 82,
+    "y": 418,
+    "a": 270,
+    "sector": "helpers",
+    "name": [
+      "EkWaveBomb",
+      "电磁波炸弹",
+      "EkWaveBomb"
+    ],
+    "source": "units/wavebomb.ini"
+  }
+]

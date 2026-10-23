@@ -1,0 +1,2786 @@
+{
+  "format": "steel-tide-map",
+  "v": 1,
+  "name": "EK Complete Showcase",
+  "description": "All 573 EK definitions, including alternate forms and helpers. Use seat 1 and disable fog. Specimens wait until you start a test, give an order or use an action. Land, air and naval ranges; passive targets; 1M metal and 100K research.",
+  "translations": {
+    "zh": {
+      "name": "EK 全单位展示测试场",
+      "description": "包含全部573个EK定义、变体及辅助单位。使用1号席位并关闭迷雾。单位保持暂停，直至启动测试、下达指令或使用单位动作。设有陆海空区域和被动靶标；提供100万金属、10万实验科技。"
+    },
+    "ko": {
+      "name": "EK 전체 유닛 시험장",
+      "description": "변형과 보조 유닛을 포함한 EK 정의 573개를 배치합니다. 1번 자리에서 안개를 끄세요. 표본은 시험 시작, 명령 또는 유닛 행동을 선택할 때까지 정지합니다. 육해공 구역과 수동 표적, 금속 100만과 실험 기술 10만을 제공합니다."
+    }
+  },
+  "w": 384,
+  "h": 448,
+  "terrain": "/wP/A/8D/wP/A/8DCgMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wP/Bg8GcgP/Bg8GcgP/Bg8GcgMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wP/Bg8GcgP/Bg8GcgP/Bg8GcgMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBuMDAwaXAwMG4wMDBpcDAwbjAwMGlwMDBnUDagIEAwMGlwMDBnUDagIEAwMGlwMDBnUDagIEAwMGlwMDBnUDagIEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAP/Bg8GBAMEAmYBBAP/Bg8GBAMEAmYBBAP/Bg8GBAMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAQQDAwaXAwMGdQMEAmYBBAMDBpcDAwZ1AwQCZgEEAwMGlwMDBnUDBAJmAf8DFwMEAmYB/wMXAwQCZgEEA/8GDwYEAwQCZgEEA/8GDwYEAwQCZgEEA/8GDwYEAwQCZgH/AxcDBAJmAf8DFwMEAmYB/wMXAwQCZgH/AxcDBAJmAf8DFwMEAmYB/wMXAwQCZgH/AxcDBAJmAQ==",
+  "deposits": [
+    {
+      "x": 32,
+      "y": 14
+    },
+    {
+      "x": 40,
+      "y": 14
+    },
+    {
+      "x": 48,
+      "y": 14
+    },
+    {
+      "x": 56,
+      "y": 14
+    },
+    {
+      "x": 64,
+      "y": 14
+    },
+    {
+      "x": 72,
+      "y": 14
+    },
+    {
+      "x": 80,
+      "y": 14
+    },
+    {
+      "x": 88,
+      "y": 14
+    },
+    {
+      "x": 96,
+      "y": 14
+    },
+    {
+      "x": 104,
+      "y": 14
+    },
+    {
+      "x": 97,
+      "y": 225
+    },
+    {
+      "x": 60,
+      "y": 260
+    },
+    {
+      "x": 96,
+      "y": 284
+    },
+    {
+      "x": 108,
+      "y": 284
+    },
+    {
+      "x": 12,
+      "y": 296
+    }
+  ],
+  "spawns": [
+    {
+      "x": 16,
+      "y": 12
+    },
+    {
+      "x": 268,
+      "y": 432
+    }
+  ],
+  "units": [
+    {
+      "id": "ek-airshiphangar1",
+      "owner": 0,
+      "x": 12,
+      "y": 224
+    },
+    {
+      "id": "ek-airshiphangar2",
+      "owner": 0,
+      "x": 24,
+      "y": 224
+    },
+    {
+      "id": "ek-balloonbarrage",
+      "owner": 0,
+      "x": 36,
+      "y": 224
+    },
+    {
+      "id": "ek-barricade1x",
+      "owner": 0,
+      "x": 48,
+      "y": 224
+    },
+    {
+      "id": "ek-barricade1y",
+      "owner": 0,
+      "x": 60,
+      "y": 224
+    },
+    {
+      "id": "ek-barricade2x",
+      "owner": 0,
+      "x": 72,
+      "y": 224
+    },
+    {
+      "id": "ek-barricade2y",
+      "owner": 0,
+      "x": 84,
+      "y": 224
+    },
+    {
+      "id": "ek-biolaboratory",
+      "owner": 0,
+      "x": 96,
+      "y": 224
+    },
+    {
+      "id": "ek-brickwall1x",
+      "owner": 0,
+      "x": 108,
+      "y": 224
+    },
+    {
+      "id": "ek-brickwall1y",
+      "owner": 0,
+      "x": 120,
+      "y": 224
+    },
+    {
+      "id": "ek-brickwall2x",
+      "owner": 0,
+      "x": 132,
+      "y": 224
+    },
+    {
+      "id": "ek-brickwall2y",
+      "owner": 0,
+      "x": 144,
+      "y": 224
+    },
+    {
+      "id": "ek-bugcolony",
+      "owner": 0,
+      "x": 12,
+      "y": 236
+    },
+    {
+      "id": "ek-bugdepott1",
+      "owner": 0,
+      "x": 24,
+      "y": 236
+    },
+    {
+      "id": "ek-bugdepott2",
+      "owner": 0,
+      "x": 36,
+      "y": 236
+    },
+    {
+      "id": "ek-bugnest",
+      "owner": 0,
+      "x": 48,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkeraa",
+      "owner": 0,
+      "x": 60,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkerartillery",
+      "owner": 0,
+      "x": 72,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkerflak",
+      "owner": 0,
+      "x": 84,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkerflakheavy",
+      "owner": 0,
+      "x": 96,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkerheavyartillery",
+      "owner": 0,
+      "x": 108,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkerinterceptor",
+      "owner": 0,
+      "x": 120,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkermg",
+      "owner": 0,
+      "x": 132,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkerrocket",
+      "owner": 0,
+      "x": 144,
+      "y": 236
+    },
+    {
+      "id": "ek-bunkerrocketalt",
+      "owner": 0,
+      "x": 12,
+      "y": 248
+    },
+    {
+      "id": "ek-bunkertinyartillery",
+      "owner": 0,
+      "x": 24,
+      "y": 248
+    },
+    {
+      "id": "ek-bunkertinyasat",
+      "owner": 0,
+      "x": 36,
+      "y": 248
+    },
+    {
+      "id": "ek-bunkertinyinterceptor",
+      "owner": 0,
+      "x": 48,
+      "y": 248
+    },
+    {
+      "id": "ek-bunkertinyminigun",
+      "owner": 0,
+      "x": 60,
+      "y": 248
+    },
+    {
+      "id": "ek-bunkertinysam",
+      "owner": 0,
+      "x": 72,
+      "y": 248
+    },
+    {
+      "id": "ek-chronocharge",
+      "owner": 0,
+      "x": 84,
+      "y": 248
+    },
+    {
+      "id": "ek-commercial",
+      "owner": 0,
+      "x": 96,
+      "y": 248
+    },
+    {
+      "id": "ek-concreteblock",
+      "owner": 0,
+      "x": 108,
+      "y": 248
+    },
+    {
+      "id": "ek-crazy-air-factory",
+      "owner": 0,
+      "x": 120,
+      "y": 248
+    },
+    {
+      "id": "ek-crazy-base",
+      "owner": 0,
+      "x": 132,
+      "y": 248
+    },
+    {
+      "id": "ek-crazy-land-factory",
+      "owner": 0,
+      "x": 144,
+      "y": 248
+    },
+    {
+      "id": "ek-creditscrate",
+      "owner": 0,
+      "x": 12,
+      "y": 260
+    },
+    {
+      "id": "ek-cruisemissilesilo",
+      "owner": 0,
+      "x": 24,
+      "y": 260
+    },
+    {
+      "id": "ek-dugout",
+      "owner": 0,
+      "x": 36,
+      "y": 260
+    },
+    {
+      "id": "ek-experimentalairfactory",
+      "owner": 0,
+      "x": 48,
+      "y": 260
+    },
+    {
+      "id": "ek-extractort3",
+      "owner": 0,
+      "x": 60,
+      "y": 260
+    },
+    {
+      "id": "ek-foxhole",
+      "owner": 0,
+      "x": 72,
+      "y": 260
+    },
+    {
+      "id": "ek-groundrefinery",
+      "owner": 0,
+      "x": 84,
+      "y": 260
+    },
+    {
+      "id": "ek-harvesterfactory",
+      "owner": 0,
+      "x": 96,
+      "y": 260
+    },
+    {
+      "id": "ek-harvestersolar",
+      "owner": 0,
+      "x": 108,
+      "y": 260
+    },
+    {
+      "id": "ek-harvestertanks",
+      "owner": 0,
+      "x": 120,
+      "y": 260
+    },
+    {
+      "id": "ek-harvesterwarehouse",
+      "owner": 0,
+      "x": 132,
+      "y": 260
+    },
+    {
+      "id": "ek-helipad",
+      "owner": 0,
+      "x": 144,
+      "y": 260
+    },
+    {
+      "id": "ek-infantryfactoryt1",
+      "owner": 0,
+      "x": 12,
+      "y": 272
+    },
+    {
+      "id": "ek-infantryfactoryt2",
+      "owner": 0,
+      "x": 24,
+      "y": 272
+    },
+    {
+      "id": "ek-infantryfactoryt3",
+      "owner": 0,
+      "x": 36,
+      "y": 272
+    },
+    {
+      "id": "ek-infbunker",
+      "owner": 0,
+      "x": 48,
+      "y": 272
+    },
+    {
+      "id": "ek-laboratory",
+      "owner": 0,
+      "x": 60,
+      "y": 272
+    },
+    {
+      "id": "ek-laboratoryt2",
+      "owner": 0,
+      "x": 72,
+      "y": 272
+    },
+    {
+      "id": "ek-laboratoryt3",
+      "owner": 0,
+      "x": 84,
+      "y": 272
+    },
+    {
+      "id": "ek-large-modular",
+      "owner": 0,
+      "x": 96,
+      "y": 272
+    },
+    {
+      "id": "ek-largeartillery",
+      "owner": 0,
+      "x": 108,
+      "y": 272
+    },
+    {
+      "id": "ek-largechaingun",
+      "owner": 0,
+      "x": 120,
+      "y": 272
+    },
+    {
+      "id": "ek-largeexperimentalhangar",
+      "owner": 0,
+      "x": 132,
+      "y": 272
+    },
+    {
+      "id": "ek-largenukelauncher",
+      "owner": 0,
+      "x": 144,
+      "y": 272
+    },
+    {
+      "id": "ek-largerockets",
+      "owner": 0,
+      "x": 12,
+      "y": 284
+    },
+    {
+      "id": "ek-largerotarygun",
+      "owner": 0,
+      "x": 24,
+      "y": 284
+    },
+    {
+      "id": "ek-launchpad",
+      "owner": 0,
+      "x": 36,
+      "y": 284
+    },
+    {
+      "id": "ek-orbitaldroplanded",
+      "owner": 0,
+      "x": 48,
+      "y": 284
+    },
+    {
+      "id": "ek-orbitaltransportlanded",
+      "owner": 0,
+      "x": 60,
+      "y": 284
+    },
+    {
+      "id": "ek-radarturret",
+      "owner": 0,
+      "x": 72,
+      "y": 284
+    },
+    {
+      "id": "ek-railgunturret",
+      "owner": 0,
+      "x": 84,
+      "y": 284
+    },
+    {
+      "id": "ek-resourcedrill",
+      "owner": 0,
+      "x": 96,
+      "y": 284
+    },
+    {
+      "id": "ek-resourcerefinery",
+      "owner": 0,
+      "x": 108,
+      "y": 284
+    },
+    {
+      "id": "ek-runway",
+      "owner": 0,
+      "x": 120,
+      "y": 284
+    },
+    {
+      "id": "ek-sentinelsilo",
+      "owner": 0,
+      "x": 132,
+      "y": 284
+    },
+    {
+      "id": "ek-shielddefense",
+      "owner": 0,
+      "x": 144,
+      "y": 284
+    },
+    {
+      "id": "ek-smallspaceelevator",
+      "owner": 0,
+      "x": 12,
+      "y": 296
+    },
+    {
+      "id": "ek-solarfarmstation",
+      "owner": 0,
+      "x": 24,
+      "y": 296
+    },
+    {
+      "id": "ek-supplydepot",
+      "owner": 0,
+      "x": 36,
+      "y": 296
+    },
+    {
+      "id": "ek-supplydepott2",
+      "owner": 0,
+      "x": 48,
+      "y": 296
+    },
+    {
+      "id": "ek-supportfactory",
+      "owner": 0,
+      "x": 60,
+      "y": 296
+    },
+    {
+      "id": "ek-supportfactoryt2",
+      "owner": 0,
+      "x": 72,
+      "y": 296
+    },
+    {
+      "id": "ek-tanktrap",
+      "owner": 0,
+      "x": 84,
+      "y": 296
+    },
+    {
+      "id": "ek-towerhmg",
+      "owner": 0,
+      "x": 96,
+      "y": 296
+    },
+    {
+      "id": "ek-towerhmgupgraded",
+      "owner": 0,
+      "x": 108,
+      "y": 296
+    },
+    {
+      "id": "ek-towerrifleman",
+      "owner": 0,
+      "x": 120,
+      "y": 296
+    },
+    {
+      "id": "ek-towerriflemanupgraded",
+      "owner": 0,
+      "x": 132,
+      "y": 296
+    },
+    {
+      "id": "ek-towersniper",
+      "owner": 0,
+      "x": 144,
+      "y": 296
+    },
+    {
+      "id": "ek-towersniperupgraded",
+      "owner": 0,
+      "x": 12,
+      "y": 308
+    },
+    {
+      "id": "ek-turretempty",
+      "owner": 0,
+      "x": 24,
+      "y": 308
+    },
+    {
+      "id": "ek-turretgmg",
+      "owner": 0,
+      "x": 36,
+      "y": 308
+    },
+    {
+      "id": "ek-turrethmg",
+      "owner": 0,
+      "x": 48,
+      "y": 308
+    },
+    {
+      "id": "ek-turretlaserdefence",
+      "owner": 0,
+      "x": 60,
+      "y": 308
+    },
+    {
+      "id": "ek-turretmortar",
+      "owner": 0,
+      "x": 72,
+      "y": 308
+    },
+    {
+      "id": "ek-turretrepair",
+      "owner": 0,
+      "x": 84,
+      "y": 308
+    },
+    {
+      "id": "ek-turretsam",
+      "owner": 0,
+      "x": 96,
+      "y": 308
+    },
+    {
+      "id": "ek-turretsamheavy",
+      "owner": 0,
+      "x": 108,
+      "y": 308
+    },
+    {
+      "id": "ek-almaz",
+      "owner": 0,
+      "x": 12,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-apocalypse",
+      "owner": 0,
+      "x": 24,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-apwsmoving",
+      "owner": 0,
+      "x": 36,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-apwsstatic",
+      "owner": 0,
+      "x": 48,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-arrow-head",
+      "owner": 0,
+      "x": 60,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-arrow-head-2",
+      "owner": 0,
+      "x": 72,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-artilleryold",
+      "owner": 0,
+      "x": 84,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-atemoving",
+      "owner": 0,
+      "x": 96,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-atestatic",
+      "owner": 0,
+      "x": 108,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-atetowed",
+      "owner": 0,
+      "x": 120,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-bastion",
+      "owner": 0,
+      "x": 132,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-battlewagon",
+      "owner": 0,
+      "x": 144,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-battlewagonate",
+      "owner": 0,
+      "x": 12,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-berdsk",
+      "owner": 0,
+      "x": 24,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-bugbuilder",
+      "owner": 0,
+      "x": 36,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-buggeneratort1",
+      "owner": 0,
+      "x": 48,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-buggeneratort2",
+      "owner": 0,
+      "x": 60,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-buggeneratort3",
+      "owner": 0,
+      "x": 72,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-bughavocity",
+      "owner": 0,
+      "x": 84,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-bughurricleave",
+      "owner": 0,
+      "x": 96,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-bugthornbolt",
+      "owner": 0,
+      "x": 108,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-chassis",
+      "owner": 0,
+      "x": 120,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-commstruck",
+      "owner": 0,
+      "x": 132,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-diamondback",
+      "owner": 0,
+      "x": 144,
+      "y": 44,
+      "a": 270
+    },
+    {
+      "id": "ek-dingo",
+      "owner": 0,
+      "x": 12,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-dingoh",
+      "owner": 0,
+      "x": 24,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-dominion",
+      "owner": 0,
+      "x": 36,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-drill",
+      "owner": 0,
+      "x": 48,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-egret",
+      "owner": 0,
+      "x": 60,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-ember",
+      "owner": 0,
+      "x": 72,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-eternitytank",
+      "owner": 0,
+      "x": 84,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-exp-flak-mech",
+      "owner": 0,
+      "x": 96,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-experimentalgunshiplandeds",
+      "owner": 0,
+      "x": 108,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-experimentaltruck",
+      "owner": 0,
+      "x": 120,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-experimentaltruckt2",
+      "owner": 0,
+      "x": 132,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-fencer",
+      "owner": 0,
+      "x": 144,
+      "y": 56,
+      "a": 270
+    },
+    {
+      "id": "ek-fenrirmech",
+      "owner": 0,
+      "x": 12,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-firestorm",
+      "owner": 0,
+      "x": 24,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-flak-drone-fall",
+      "owner": 0,
+      "x": 36,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-flakmoving",
+      "owner": 0,
+      "x": 48,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-flakstatic",
+      "owner": 0,
+      "x": 60,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-flaktowed",
+      "owner": 0,
+      "x": 72,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-flamer",
+      "owner": 0,
+      "x": 84,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-flametank",
+      "owner": 0,
+      "x": 96,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-flamingolanded",
+      "owner": 0,
+      "x": 108,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-glaze",
+      "owner": 0,
+      "x": 120,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-heavydawnmoving",
+      "owner": 0,
+      "x": 132,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-heavydawnstatic",
+      "owner": 0,
+      "x": 144,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-heavysniperdeployed",
+      "owner": 0,
+      "x": 12,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-heavytankelephantine",
+      "owner": 0,
+      "x": 24,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-heavytanksmilodon",
+      "owner": 0,
+      "x": 36,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-heavytanktempest",
+      "owner": 0,
+      "x": 48,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-hellfire",
+      "owner": 0,
+      "x": 60,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-hound",
+      "owner": 0,
+      "x": 72,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-houndapc",
+      "owner": 0,
+      "x": 84,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryassault",
+      "owner": 0,
+      "x": 96,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryat",
+      "owner": 0,
+      "x": 108,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryautosniper",
+      "owner": 0,
+      "x": 120,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryautosniperdeployed",
+      "owner": 0,
+      "x": 132,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrybeam",
+      "owner": 0,
+      "x": 144,
+      "y": 80,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrybiohazard",
+      "owner": 0,
+      "x": 12,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryengineer",
+      "owner": 0,
+      "x": 24,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrygrenade",
+      "owner": 0,
+      "x": 36,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrygrunt",
+      "owner": 0,
+      "x": 48,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryheavyat",
+      "owner": 0,
+      "x": 60,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryheavysniper",
+      "owner": 0,
+      "x": 72,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryhmg",
+      "owner": 0,
+      "x": 84,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryhmgdeployed",
+      "owner": 0,
+      "x": 96,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryjetpack",
+      "owner": 0,
+      "x": 108,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrymedic",
+      "owner": 0,
+      "x": 120,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrymortar",
+      "owner": 0,
+      "x": 132,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryrailgun",
+      "owner": 0,
+      "x": 144,
+      "y": 92,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryrailgundeployed",
+      "owner": 0,
+      "x": 12,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryscoutmech",
+      "owner": 0,
+      "x": 24,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-infantryshock",
+      "owner": 0,
+      "x": 36,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrysniper",
+      "owner": 0,
+      "x": 48,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrysniperdeployed",
+      "owner": 0,
+      "x": 60,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrystrike",
+      "owner": 0,
+      "x": 72,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-ironstorm",
+      "owner": 0,
+      "x": 84,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-javelin",
+      "owner": 0,
+      "x": 96,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-juggernaut",
+      "owner": 0,
+      "x": 108,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-kamikazetruck",
+      "owner": 0,
+      "x": 120,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-katyushamoving",
+      "owner": 0,
+      "x": 132,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-katyushastatic",
+      "owner": 0,
+      "x": 144,
+      "y": 104,
+      "a": 270
+    },
+    {
+      "id": "ek-krieg",
+      "owner": 0,
+      "x": 12,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-kv44",
+      "owner": 0,
+      "x": 24,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-lancer",
+      "owner": 0,
+      "x": 36,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-lemur",
+      "owner": 0,
+      "x": 48,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-lemura",
+      "owner": 0,
+      "x": 60,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-lemurx",
+      "owner": 0,
+      "x": 72,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-lionheart",
+      "owner": 0,
+      "x": 84,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-logistictransport",
+      "owner": 0,
+      "x": 96,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-lykaonmech",
+      "owner": 0,
+      "x": 108,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-mammothtank-old",
+      "owner": 0,
+      "x": 120,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-marshallmech",
+      "owner": 0,
+      "x": 132,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-martyrmech",
+      "owner": 0,
+      "x": 144,
+      "y": 116,
+      "a": 270
+    },
+    {
+      "id": "ek-martyrmech-convert",
+      "owner": 0,
+      "x": 12,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-mauzermoving",
+      "owner": 0,
+      "x": 24,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-mauzerstatic",
+      "owner": 0,
+      "x": 36,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-mauzertowed",
+      "owner": 0,
+      "x": 48,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-medicaltransport",
+      "owner": 0,
+      "x": 60,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-megabuilder",
+      "owner": 0,
+      "x": 72,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-megatank",
+      "owner": 0,
+      "x": 84,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-mineheavy",
+      "owner": 0,
+      "x": 96,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-minelayer",
+      "owner": 0,
+      "x": 108,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-minemedium",
+      "owner": 0,
+      "x": 120,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-minesmall",
+      "owner": 0,
+      "x": 132,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-minesweeper",
+      "owner": 0,
+      "x": 144,
+      "y": 128,
+      "a": 270
+    },
+    {
+      "id": "ek-mini-arty-drone-fall",
+      "owner": 0,
+      "x": 12,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-minitank",
+      "owner": 0,
+      "x": 24,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-minitankold",
+      "owner": 0,
+      "x": 36,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-nebelwerfermoving",
+      "owner": 0,
+      "x": 48,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-nebelwerferstatic",
+      "owner": 0,
+      "x": 60,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-nebelwerfertowed",
+      "owner": 0,
+      "x": 72,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-nuketruckarmed",
+      "owner": 0,
+      "x": 84,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-nuketruckdebug",
+      "owner": 0,
+      "x": 96,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-nuketruckdisarmed",
+      "owner": 0,
+      "x": 108,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-obskoy",
+      "owner": 0,
+      "x": 120,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-overseer",
+      "owner": 0,
+      "x": 132,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-paladin",
+      "owner": 0,
+      "x": 144,
+      "y": 140,
+      "a": 270
+    },
+    {
+      "id": "ek-patriot",
+      "owner": 0,
+      "x": 12,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-phantom",
+      "owner": 0,
+      "x": 24,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-phantomcloaked",
+      "owner": 0,
+      "x": 36,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-prototype01",
+      "owner": 0,
+      "x": 48,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-radartruck",
+      "owner": 0,
+      "x": 60,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-raptor",
+      "owner": 0,
+      "x": 72,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-raptormk2",
+      "owner": 0,
+      "x": 84,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-ravagermech",
+      "owner": 0,
+      "x": 96,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-ravagermech-mk2",
+      "owner": 0,
+      "x": 108,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-recruit",
+      "owner": 0,
+      "x": 120,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-recruitt2",
+      "owner": 0,
+      "x": 132,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-rhino",
+      "owner": 0,
+      "x": 144,
+      "y": 152,
+      "a": 270
+    },
+    {
+      "id": "ek-saha",
+      "owner": 0,
+      "x": 12,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-samuraimech",
+      "owner": 0,
+      "x": 24,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-samuraimech-mk2",
+      "owner": 0,
+      "x": 36,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-scabrewolfmelee",
+      "owner": 0,
+      "x": 48,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-scarab",
+      "owner": 0,
+      "x": 60,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-scarabt2",
+      "owner": 0,
+      "x": 72,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-scorcher",
+      "owner": 0,
+      "x": 84,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-shieldtruck",
+      "owner": 0,
+      "x": 96,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-shieldtruckdeployed",
+      "owner": 0,
+      "x": 108,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-sjatie",
+      "owner": 0,
+      "x": 120,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-skirmisher",
+      "owner": 0,
+      "x": 132,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-spacemarine",
+      "owner": 0,
+      "x": 144,
+      "y": 164,
+      "a": 270
+    },
+    {
+      "id": "ek-spear",
+      "owner": 0,
+      "x": 12,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-spook-turbo-hearse",
+      "owner": 0,
+      "x": 24,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-stalker",
+      "owner": 0,
+      "x": 36,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-stalkert2",
+      "owner": 0,
+      "x": 48,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-strangler",
+      "owner": 0,
+      "x": 60,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-stranglerdeploy",
+      "owner": 0,
+      "x": 72,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-supplytruck",
+      "owner": 0,
+      "x": 84,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-supplytruckt2",
+      "owner": 0,
+      "x": 96,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-tardoba",
+      "owner": 0,
+      "x": 108,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-tardoba2",
+      "owner": 0,
+      "x": 120,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-thetamech",
+      "owner": 0,
+      "x": 132,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-tigertooth",
+      "owner": 0,
+      "x": 144,
+      "y": 176,
+      "a": 270
+    },
+    {
+      "id": "ek-trooptransport",
+      "owner": 0,
+      "x": 12,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-tunguska",
+      "owner": 0,
+      "x": 24,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-unicornsmall",
+      "owner": 0,
+      "x": 36,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-unicornsmallemp",
+      "owner": 0,
+      "x": 48,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-vanguard",
+      "owner": 0,
+      "x": 60,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-velarus-deploy",
+      "owner": 0,
+      "x": 72,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-vindicatormech",
+      "owner": 0,
+      "x": 84,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-viper",
+      "owner": 0,
+      "x": 96,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-wardenmech",
+      "owner": 0,
+      "x": 108,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-wardenmech-mk2",
+      "owner": 0,
+      "x": 120,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-wardenmech-sniper",
+      "owner": 0,
+      "x": 132,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-wardenmech-sniper-x",
+      "owner": 0,
+      "x": 144,
+      "y": 188,
+      "a": 270
+    },
+    {
+      "id": "ek-wardenmech-sniper-x-convert",
+      "owner": 0,
+      "x": 12,
+      "y": 200,
+      "a": 270
+    },
+    {
+      "id": "ek-wardenmechx",
+      "owner": 0,
+      "x": 24,
+      "y": 200,
+      "a": 270
+    },
+    {
+      "id": "ek-warmastermech",
+      "owner": 0,
+      "x": 36,
+      "y": 200,
+      "a": 270
+    },
+    {
+      "id": "ek-yukana",
+      "owner": 0,
+      "x": 48,
+      "y": 200,
+      "a": 270
+    },
+    {
+      "id": "ek-zenit",
+      "owner": 0,
+      "x": 60,
+      "y": 200,
+      "a": 270
+    },
+    {
+      "id": "ek-zetamech",
+      "owner": 0,
+      "x": 72,
+      "y": 200,
+      "a": 270
+    },
+    {
+      "id": "ek-arachnidmech",
+      "owner": 0,
+      "x": 172,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-barbaris",
+      "owner": 0,
+      "x": 184,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-barbariswater",
+      "owner": 0,
+      "x": 196,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-bison",
+      "owner": 0,
+      "x": 208,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-bruza",
+      "owner": 0,
+      "x": 220,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-bruza2",
+      "owner": 0,
+      "x": 232,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-bruzawater",
+      "owner": 0,
+      "x": 244,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-bruzawater2",
+      "owner": 0,
+      "x": 256,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-bugcorrown",
+      "owner": 0,
+      "x": 172,
+      "y": 276,
+      "a": 270
+    },
+    {
+      "id": "ek-chimeramech",
+      "owner": 0,
+      "x": 184,
+      "y": 276,
+      "a": 270
+    },
+    {
+      "id": "ek-colossus",
+      "owner": 0,
+      "x": 196,
+      "y": 276,
+      "a": 270
+    },
+    {
+      "id": "ek-colossuscombatmode",
+      "owner": 0,
+      "x": 208,
+      "y": 276,
+      "a": 270
+    },
+    {
+      "id": "ek-electrostormmech",
+      "owner": 0,
+      "x": 220,
+      "y": 276,
+      "a": 270
+    },
+    {
+      "id": "ek-electrostormmech-mk2",
+      "owner": 0,
+      "x": 232,
+      "y": 276,
+      "a": 270
+    },
+    {
+      "id": "ek-excelsior",
+      "owner": 0,
+      "x": 244,
+      "y": 276,
+      "a": 270
+    },
+    {
+      "id": "ek-excelsiorcombatmode",
+      "owner": 0,
+      "x": 256,
+      "y": 276,
+      "a": 270
+    },
+    {
+      "id": "ek-heavycraft2",
+      "owner": 0,
+      "x": 172,
+      "y": 288,
+      "a": 270
+    },
+    {
+      "id": "ek-heavytankdrake",
+      "owner": 0,
+      "x": 184,
+      "y": 288,
+      "a": 270
+    },
+    {
+      "id": "ek-hoverapc",
+      "owner": 0,
+      "x": 196,
+      "y": 288,
+      "a": 270
+    },
+    {
+      "id": "ek-hovermortar",
+      "owner": 0,
+      "x": 208,
+      "y": 288,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrydiver",
+      "owner": 0,
+      "x": 220,
+      "y": 288,
+      "a": 270
+    },
+    {
+      "id": "ek-infantrydiverdeployed",
+      "owner": 0,
+      "x": 232,
+      "y": 288,
+      "a": 270
+    },
+    {
+      "id": "ek-kings-man",
+      "owner": 0,
+      "x": 244,
+      "y": 288,
+      "a": 270
+    },
+    {
+      "id": "ek-kings-man-b",
+      "owner": 0,
+      "x": 256,
+      "y": 288,
+      "a": 270
+    },
+    {
+      "id": "ek-landshiplarge",
+      "owner": 0,
+      "x": 172,
+      "y": 300,
+      "a": 270
+    },
+    {
+      "id": "ek-landshiplargewater",
+      "owner": 0,
+      "x": 184,
+      "y": 300,
+      "a": 270
+    },
+    {
+      "id": "ek-landshipmedium",
+      "owner": 0,
+      "x": 196,
+      "y": 300,
+      "a": 270
+    },
+    {
+      "id": "ek-landshipmediumwater",
+      "owner": 0,
+      "x": 208,
+      "y": 300,
+      "a": 270
+    },
+    {
+      "id": "ek-landshipsmall",
+      "owner": 0,
+      "x": 220,
+      "y": 300,
+      "a": 270
+    },
+    {
+      "id": "ek-landshipsmallwater",
+      "owner": 0,
+      "x": 232,
+      "y": 300,
+      "a": 270
+    },
+    {
+      "id": "ek-nowosibirsk",
+      "owner": 0,
+      "x": 244,
+      "y": 300,
+      "a": 270
+    },
+    {
+      "id": "ek-rib",
+      "owner": 0,
+      "x": 256,
+      "y": 300,
+      "a": 270
+    },
+    {
+      "id": "ek-ribcarrying",
+      "owner": 0,
+      "x": 172,
+      "y": 312,
+      "a": 270
+    },
+    {
+      "id": "ek-robotcrab",
+      "owner": 0,
+      "x": 184,
+      "y": 312,
+      "a": 270
+    },
+    {
+      "id": "ek-robotcrabwater",
+      "owner": 0,
+      "x": 196,
+      "y": 312,
+      "a": 270
+    },
+    {
+      "id": "ek-snake",
+      "owner": 0,
+      "x": 208,
+      "y": 312,
+      "a": 270
+    },
+    {
+      "id": "ek-titanmech",
+      "owner": 0,
+      "x": 220,
+      "y": 312,
+      "a": 270
+    },
+    {
+      "id": "ek-typhoon",
+      "owner": 0,
+      "x": 232,
+      "y": 312,
+      "a": 270
+    },
+    {
+      "id": "ek-velarus",
+      "owner": 0,
+      "x": 244,
+      "y": 312,
+      "a": 270
+    },
+    {
+      "id": "ek-wraithmech",
+      "owner": 0,
+      "x": 256,
+      "y": 312,
+      "a": 270
+    },
+    {
+      "id": "ek-wraithmechstealth",
+      "owner": 0,
+      "x": 172,
+      "y": 324,
+      "a": 270
+    },
+    {
+      "id": "ek-zero",
+      "owner": 0,
+      "x": 184,
+      "y": 324,
+      "a": 270
+    },
+    {
+      "id": "ek-zero-b",
+      "owner": 0,
+      "x": 196,
+      "y": 324,
+      "a": 270
+    },
+    {
+      "id": "ek-carriermedium",
+      "owner": 0,
+      "x": 284,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-carriersmall",
+      "owner": 0,
+      "x": 298,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-convergence",
+      "owner": 0,
+      "x": 312,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-cordelia",
+      "owner": 0,
+      "x": 326,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-crazy-sea-factory",
+      "owner": 0,
+      "x": 340,
+      "y": 264
+    },
+    {
+      "id": "ek-destroyersub",
+      "owner": 0,
+      "x": 354,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-dreadnought",
+      "owner": 0,
+      "x": 368,
+      "y": 264,
+      "a": 270
+    },
+    {
+      "id": "ek-fairchild",
+      "owner": 0,
+      "x": 284,
+      "y": 278,
+      "a": 270
+    },
+    {
+      "id": "ek-heavycraft1",
+      "owner": 0,
+      "x": 298,
+      "y": 278,
+      "a": 270
+    },
+    {
+      "id": "ek-heliport",
+      "owner": 0,
+      "x": 312,
+      "y": 278,
+      "a": 270
+    },
+    {
+      "id": "ek-hermes",
+      "owner": 0,
+      "x": 326,
+      "y": 278,
+      "a": 270
+    },
+    {
+      "id": "ek-horizontalwall",
+      "owner": 0,
+      "x": 340,
+      "y": 278
+    },
+    {
+      "id": "ek-huntersub",
+      "owner": 0,
+      "x": 354,
+      "y": 278,
+      "a": 270
+    },
+    {
+      "id": "ek-iron-pearl",
+      "owner": 0,
+      "x": 368,
+      "y": 278,
+      "a": 270
+    },
+    {
+      "id": "ek-leviathan",
+      "owner": 0,
+      "x": 284,
+      "y": 292,
+      "a": 270
+    },
+    {
+      "id": "ek-leviathan-disabled",
+      "owner": 0,
+      "x": 298,
+      "y": 292,
+      "a": 270
+    },
+    {
+      "id": "ek-monitor",
+      "owner": 0,
+      "x": 312,
+      "y": 292,
+      "a": 270
+    },
+    {
+      "id": "ek-navalmcv",
+      "owner": 0,
+      "x": 326,
+      "y": 292,
+      "a": 270
+    },
+    {
+      "id": "ek-nowosibirsk2",
+      "owner": 0,
+      "x": 340,
+      "y": 292,
+      "a": 270
+    },
+    {
+      "id": "ek-ophelia",
+      "owner": 0,
+      "x": 354,
+      "y": 292,
+      "a": 270
+    },
+    {
+      "id": "ek-ophelia-b",
+      "owner": 0,
+      "x": 368,
+      "y": 292,
+      "a": 270
+    },
+    {
+      "id": "ek-overwatch",
+      "owner": 0,
+      "x": 284,
+      "y": 306,
+      "a": 270
+    },
+    {
+      "id": "ek-polaris",
+      "owner": 0,
+      "x": 298,
+      "y": 306,
+      "a": 270
+    },
+    {
+      "id": "ek-polarisdived",
+      "owner": 0,
+      "x": 312,
+      "y": 306,
+      "a": 270
+    },
+    {
+      "id": "ek-saber",
+      "owner": 0,
+      "x": 326,
+      "y": 306,
+      "a": 270
+    },
+    {
+      "id": "ek-saberdived",
+      "owner": 0,
+      "x": 340,
+      "y": 306,
+      "a": 270
+    },
+    {
+      "id": "ek-seabunkeraa",
+      "owner": 0,
+      "x": 354,
+      "y": 306
+    },
+    {
+      "id": "ek-seabunkercannon",
+      "owner": 0,
+      "x": 368,
+      "y": 306
+    },
+    {
+      "id": "ek-seabunkerminigun",
+      "owner": 0,
+      "x": 284,
+      "y": 320
+    },
+    {
+      "id": "ek-seabunkermissile",
+      "owner": 0,
+      "x": 298,
+      "y": 320
+    },
+    {
+      "id": "ek-seabunkerrefinery",
+      "owner": 0,
+      "x": 312,
+      "y": 320
+    },
+    {
+      "id": "ek-seabunkerrepair",
+      "owner": 0,
+      "x": 326,
+      "y": 320
+    },
+    {
+      "id": "ek-seabunkertorpedo",
+      "owner": 0,
+      "x": 340,
+      "y": 320
+    },
+    {
+      "id": "ek-seabunkertorpedounderwater",
+      "owner": 0,
+      "x": 354,
+      "y": 320
+    },
+    {
+      "id": "ek-seadragon",
+      "owner": 0,
+      "x": 368,
+      "y": 320,
+      "a": 270
+    },
+    {
+      "id": "ek-seadragondived",
+      "owner": 0,
+      "x": 284,
+      "y": 334,
+      "a": 270
+    },
+    {
+      "id": "ek-seaexperimentalhangar",
+      "owner": 0,
+      "x": 298,
+      "y": 334
+    },
+    {
+      "id": "ek-seaminemedium",
+      "owner": 0,
+      "x": 312,
+      "y": 334,
+      "a": 270
+    },
+    {
+      "id": "ek-seaminemediumdeployed",
+      "owner": 0,
+      "x": 326,
+      "y": 334,
+      "a": 270
+    },
+    {
+      "id": "ek-selenium",
+      "owner": 0,
+      "x": 340,
+      "y": 334,
+      "a": 270
+    },
+    {
+      "id": "ek-seleniumdived",
+      "owner": 0,
+      "x": 354,
+      "y": 334,
+      "a": 270
+    },
+    {
+      "id": "ek-starbuck",
+      "owner": 0,
+      "x": 368,
+      "y": 334,
+      "a": 270
+    },
+    {
+      "id": "ek-stewart",
+      "owner": 0,
+      "x": 284,
+      "y": 348,
+      "a": 270
+    },
+    {
+      "id": "ek-tabby",
+      "owner": 0,
+      "x": 298,
+      "y": 348,
+      "a": 270
+    },
+    {
+      "id": "ek-targetsub",
+      "owner": 0,
+      "x": 312,
+      "y": 348,
+      "a": 270
+    },
+    {
+      "id": "ek-thunderhead",
+      "owner": 0,
+      "x": 326,
+      "y": 348,
+      "a": 270
+    },
+    {
+      "id": "ek-underwaterfactory",
+      "owner": 0,
+      "x": 340,
+      "y": 348
+    },
+    {
+      "id": "ek-underwaterhangar",
+      "owner": 0,
+      "x": 354,
+      "y": 348
+    },
+    {
+      "id": "ek-verticalwall",
+      "owner": 0,
+      "x": 368,
+      "y": 348
+    },
+    {
+      "id": "ek--1ae142c3",
+      "owner": 0,
+      "x": 172,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-airbastion",
+      "owner": 0,
+      "x": 190,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-airbastion-landed",
+      "owner": 0,
+      "x": 208,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-airbuilder",
+      "owner": 0,
+      "x": 226,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-airshiptransport",
+      "owner": 0,
+      "x": 244,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-arsenalbird",
+      "owner": 0,
+      "x": 262,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-arsenalbird2",
+      "owner": 0,
+      "x": 280,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-b1e-b",
+      "owner": 0,
+      "x": 298,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-b1e-b-up",
+      "owner": 0,
+      "x": 316,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-b1e-f",
+      "owner": 0,
+      "x": 334,
+      "y": 32,
+      "a": 270
+    },
+    {
+      "id": "ek-b1e-f-up",
+      "owner": 0,
+      "x": 172,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-b1e-s",
+      "owner": 0,
+      "x": 190,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-b1e-s-up",
+      "owner": 0,
+      "x": 208,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-basicfighter",
+      "owner": 0,
+      "x": 226,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-basicfighter-mk2",
+      "owner": 0,
+      "x": 244,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-beamgunshipa-5",
+      "owner": 0,
+      "x": 262,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-beamgunshipreaper",
+      "owner": 0,
+      "x": 280,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-beamhelicopter",
+      "owner": 0,
+      "x": 298,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-biplanebomber",
+      "owner": 0,
+      "x": 316,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-biplanefighter",
+      "owner": 0,
+      "x": 334,
+      "y": 50,
+      "a": 270
+    },
+    {
+      "id": "ek-biplanefighter1",
+      "owner": 0,
+      "x": 172,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-blackbear",
+      "owner": 0,
+      "x": 190,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-blackbear-smode",
+      "owner": 0,
+      "x": 208,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-brutus",
+      "owner": 0,
+      "x": 226,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-bugflybuilder",
+      "owner": 0,
+      "x": 244,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-buzzard",
+      "owner": 0,
+      "x": 262,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-caesarius",
+      "owner": 0,
+      "x": 280,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-carrierflying",
+      "owner": 0,
+      "x": 298,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-carrierlarge",
+      "owner": 0,
+      "x": 316,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-carrierlargecombat",
+      "owner": 0,
+      "x": 334,
+      "y": 68,
+      "a": 270
+    },
+    {
+      "id": "ek-chaika",
+      "owner": 0,
+      "x": 172,
+      "y": 86,
+      "a": 270
+    },
+    {
+      "id": "ek-chisel",
+      "owner": 0,
+      "x": 190,
+      "y": 86,
+      "a": 270
+    },
+    {
+      "id": "ek-condor",
+      "owner": 0,
+      "x": 208,
+      "y": 86,
+      "a": 270
+    },
+    {
+      "id": "ek-cordelia-drone",
+      "owner": 0,
+      "x": 226,
+      "y": 86,
+      "a": 270
+    },
+    {
+      "id": "ek-crazy-builder",
+      "owner": 0,
+      "x": 244,
+      "y": 86,
+      "a": 270
+    },
+    {
+      "id": "ek-dolphin",
+      "owner": 0,
+      "x": 262,
+      "y": 86,
+      "a": 270
+    },
+    {
+      "id": "ek-dominionflying",
+      "owner": 0,
+      "x": 280,
+      "y": 86,
+      "a": 270
+    },
+    {
+      "id": "mbt",
+      "owner": 1,
+      "x": 274,
+      "y": 408,
+      "a": 180
+    },
+    {
+      "id": "htank",
+      "owner": 1,
+      "x": 274,
+      "y": 420,
+      "a": 180
+    },
+    {
+      "id": "fighter",
+      "owner": 1,
+      "x": 306,
+      "y": 408,
+      "a": 180
+    },
+    {
+      "id": "destroyer",
+      "owner": 1,
+      "x": 330,
+      "y": 420,
+      "a": 180
+    }
+  ]
+}
