@@ -36,6 +36,8 @@ CAP = 'gw.battle-v1'
 WORLD = 0.75
 DISPLAY = 1.5625
 TICKS = 60
+# A flame strip steps once each UpdateSub, which the source sends every 8 ticks.
+FLAME_FPS = TICKS / 8
 RW_TILE = 20
 TILE = 32
 # Buildings are drawn 1.5× their units' scale: GW's are barely larger than a
@@ -437,13 +439,24 @@ def weapon_id(source, seen):
 # --------------------------------------------------------------- art
 
 def frames_for(path, ini, eq=0, eq2=0, moving_pose=None):
+    """A sheet's poses, and the `anims` that play them."""
     tags = tags_of(ini)
     height = gw.num(mem(ini).get('baseHeight'), 1) or 1
     st = lambda **kw: art.State(resources={'EquipmentIndex': eq, 'EquipmentIndex2': eq2}, tags=tags, height=height, **kw)
-    poses = [art.decals(path, ini, st())]
+    rest = art.decals(path, ini, st())
     if moving_pose:
-        poses += [art.decals(path, ini, st(moving=True, frame=i), animation=moving_pose) for i in range(3)]
-    return poses
+        return [rest] + [art.decals(path, ini, st(moving=True, frame=i), animation=moving_pose) for i in range(3)], \
+            {'idle': [0, 0], 'moving': [1, 3, 12]}
+    # A flame strip runs at the source's pace: an aircraft's is always lit, a
+    # submarine's only under way.
+    n = max((p['frames'] for p in rest), default=1)
+    if n > 1:
+        return [art.decals(path, ini, st(frame=i)) for i in range(n)], {'idle': [0, n - 1, FLAME_FPS]}
+    n = max((p['frames'] for p in art.decals(path, ini, st(moving=True))), default=1)
+    if n > 1:
+        return [rest] + [art.decals(path, ini, st(moving=True, frame=i)) for i in range(n)], \
+            {'idle': [0, 0], 'moving': [1, n, FLAME_FPS]}
+    return [rest], None
 
 
 def attached_parts(ini, slots_filter):
@@ -600,9 +613,9 @@ def unit_def(side, name, order_list, variant_of=None, form=False):
     if size:
         conf['size'] = size
     d['extensions'] = {CAP: conf}
-    # Art: rest pose, and the boost pose a mobile suit flies on.
+    # Art: rest pose, the boost pose a mobile suit flies on, and engine flames.
     moving = 'OnMoving' if 'MS' in tags else None
-    poses = frames_for(path, ini, eq, eq2, moving)
+    poses, anims = frames_for(path, ini, eq, eq2, moving)
     body_parts = poses[0]
     k = art.canvas_scale(body_parts) if body_parts else 1
     member_slots = [m for m in members if 'Member' in m[1]]
@@ -621,9 +634,8 @@ def unit_def(side, name, order_list, variant_of=None, form=False):
     poses = [p + extra for p in poses]
     images, pivot = art.render_frames(poses, k, centre=True)
     if images:
-        anims = None
-        if len(images) > 1:
-            anims = {'idle': [0, 0], 'moving': [1, len(images) - 1, 12]}
+        if len(images) != len(poses):
+            anims = None
         key = MEDIA_OUT.sheet('u.' + did, art.strip(images), k, frames=len(images), pivot=pivot,
                               extra={'anims': anims} if anims else None)
         d['sprite'] = key
@@ -904,7 +916,7 @@ def main():
     manifest = {
         'format': 'steel-tide-mod', 'v': 4, 'capacity': 'large',
         'id': 'gw', 'name': ['GW BattleUniverse', '高达战争_战争宇宙', 'GW 배틀 유니버스'],
-        'version': '0.0.4', 'author': '恐龙再健身房',
+        'version': '0.0.5', 'author': '恐龙再健身房',
         'description': [
             'Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits — and open their first development plans.',
             '高达战争_战争宇宙：一年战争。地球联邦军与吉翁公国军的基础兵力——坦克、飞机、舰艇与最早的机动战士——以及各自的第一项开发计划。',

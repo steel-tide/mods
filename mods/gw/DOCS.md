@@ -167,6 +167,10 @@ and the sibling `steel-tide-game` checkout:
   `art.render_frames(..., centre=True)` pads the art, and `Media.sheet`
   asserts it. Otherwise the game bakes 24 headings that step 15°.
 - Ship bodies are measured from the art's bounding box, not the padded sheet.
+- A decal with `total_frames` and `frame:memory.boostFrame` is a flame strip
+  the source steps every 8 ticks: `frames_for` renders its frames into the
+  sheet's `anims` at 7.5 fps, always (aircraft) or while moving (submarines,
+  the Fisheye). Rendered once, it freezes on its first frame.
 - Pilots and space-only units in an unlock list are skipped and named in
   the report's `leftOut`, with the reason.
 - One Zeon plan's file is `Tech_ZEON_0079_GroundTypeMSDevelopmentPlan.ini.ini`
@@ -217,9 +221,11 @@ In each of them:
 - Original names and descriptions in English and Chinese, source wording and
   source mistakes included; Korean added for every string.
 - Original art: mobile suits composed from their part pictures in the source's
-  rest pose, with the boost pose and flame as their moving frames; tanks and
-  turret buildings with turning turrets; squads with their soldiers; ships with
-  their deck guns; original rounds for every gun.
+  rest pose, with the boost pose and flame as their moving frames; aircraft
+  with their engine flames running at the source's pace, and submarines and
+  the Fisheye with theirs lit under way; tanks and turret buildings with
+  turning turrets; squads with their soldiers; ships with their deck guns;
+  original rounds for every gun.
 - Original firing recordings.
 - HP, prices, build times, speeds, turning, sight, ranges, bursts, cooldowns,
   minimum and melee ranges, blast radii, projectile speeds and spreads.

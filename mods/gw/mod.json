@@ -8,7 +8,7 @@
     "高达战争_战争宇宙",
     "GW 배틀 유니버스"
   ],
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "恐龙再健身房",
   "description": [
     "Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits — and open their first development plans.",
@@ -19548,7 +19548,7 @@
     {
       "key": "u.gw-ff-4",
       "file": "sprites/u.gw-ff-4.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 12,
       "fh": 19,
       "rotated": true,
@@ -19556,7 +19556,14 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3462
+      "pivotY": 0.3462,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "prj.projectile-mg",
@@ -19583,7 +19590,7 @@
     {
       "key": "u.gw-ff-b2",
       "file": "sprites/u.gw-ff-b2.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 22,
       "fh": 33,
       "rotated": true,
@@ -19591,12 +19598,19 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3813
+      "pivotY": 0.3813,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-ff-6",
       "file": "sprites/u.gw-ff-6.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 18,
       "fh": 35,
       "rotated": true,
@@ -19604,12 +19618,19 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3061
+      "pivotY": 0.3061,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-ff-s3",
       "file": "sprites/u.gw-ff-s3.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 22,
       "fh": 38,
       "rotated": true,
@@ -19617,7 +19638,14 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3625
+      "pivotY": 0.3625,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-rff-06",
@@ -19670,7 +19698,7 @@
     {
       "key": "u.gw-medea",
       "file": "sprites/u.gw-medea.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 74,
       "fh": 52,
       "rotated": true,
@@ -19678,7 +19706,14 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.4375
+      "pivotY": 0.4375,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "tur.gw-medea",
@@ -19774,15 +19809,26 @@
     {
       "key": "u.gw-u-type-submarine",
       "file": "sprites/u.gw-u-type-submarine.png",
-      "frames": 1,
+      "frames": 4,
       "fw": 60,
-      "fh": 149,
+      "fh": 177,
       "rotated": true,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.5595
+      "pivotY": 0.4715,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-himalaya-class",
@@ -19962,7 +20008,7 @@
     {
       "key": "u.gw-dash",
       "file": "sprites/u.gw-dash.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 26,
       "fh": 37,
       "rotated": true,
@@ -19970,12 +20016,19 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3409
+      "pivotY": 0.3409,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-depp-rog",
       "file": "sprites/u.gw-depp-rog.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 37,
       "fh": 46,
       "rotated": true,
@@ -19983,12 +20036,19 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3673
+      "pivotY": 0.3673,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-don-escargot",
       "file": "sprites/u.gw-don-escargot.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 27,
       "fh": 36,
       "rotated": true,
@@ -19996,20 +20056,38 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3113
+      "pivotY": 0.3113,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-m-type-submarine",
       "file": "sprites/u.gw-m-type-submarine.png",
-      "frames": 1,
-      "fw": 92,
-      "fh": 178,
+      "frames": 4,
+      "fw": 96,
+      "fh": 221,
       "rotated": true,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.5243
+      "pivotY": 0.4217,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-mini-tray-class",
@@ -20522,15 +20600,26 @@
     {
       "key": "u.gw-rb-79n",
       "file": "sprites/u.gw-rb-79n.png",
-      "frames": 1,
+      "frames": 4,
       "fw": 13,
-      "fh": 25,
+      "fh": 33,
       "rotated": true,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.6667
+      "pivotY": 0.5155,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          7.5
+        ]
+      }
     },
     {
       "key": "prj.projectile-mortar-l-b",
@@ -20695,7 +20784,7 @@
     {
       "key": "u.gw-fat-uncle",
       "file": "sprites/u.gw-fat-uncle.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 65,
       "fh": 45,
       "rotated": true,
@@ -20703,12 +20792,19 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.416
+      "pivotY": 0.416,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-dopp",
       "file": "sprites/u.gw-dopp.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 17,
       "fh": 17,
       "rotated": true,
@@ -20716,12 +20812,19 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3239
+      "pivotY": 0.3239,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-dodai-ys",
       "file": "sprites/u.gw-dodai-ys.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 37,
       "fh": 30,
       "rotated": true,
@@ -20729,7 +20832,14 @@
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.3214
+      "pivotY": 0.3214,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-ms-05",
@@ -20924,15 +21034,26 @@
     {
       "key": "u.gw-u-type-submarine-zeon",
       "file": "sprites/u.gw-u-type-submarine-zeon.png",
-      "frames": 1,
+      "frames": 4,
       "fw": 60,
-      "fh": 149,
+      "fh": 177,
       "rotated": true,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.5595
+      "pivotY": 0.4715,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-ms-06j",
@@ -21240,7 +21361,7 @@
     {
       "key": "u.gw-luggun",
       "file": "sprites/u.gw-luggun.png",
-      "frames": 1,
+      "frames": 3,
       "fw": 35,
       "fh": 25,
       "rotated": true,
@@ -21249,6 +21370,13 @@
       "stabilize": false,
       "pivotX": 0.5,
       "pivotY": 0.2273,
+      "anims": {
+        "idle": [
+          0,
+          2,
+          7.5
+        ]
+      },
       "mount": [
         0.056,
         0.303
@@ -21283,15 +21411,26 @@
     {
       "key": "u.gw-m-type-submarine-zeon",
       "file": "sprites/u.gw-m-type-submarine-zeon.png",
-      "frames": 1,
-      "fw": 92,
-      "fh": 178,
+      "frames": 4,
+      "fw": 96,
+      "fh": 221,
       "rotated": true,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.5243
+      "pivotY": 0.4217,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          7.5
+        ]
+      }
     },
     {
       "key": "u.gw-ms-07b3",
