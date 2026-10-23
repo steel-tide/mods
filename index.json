@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-23T09:54:12.885Z",
+  "generated": "2026-10-23T10:19:39.879Z",
   "mods": [
     {
       "id": "adolence",
@@ -13,19 +13,19 @@
       "version": "1.4.1",
       "author": "自然常数也有人用? and the Adolence team",
       "description": [
-        "The city police and the troops that come to their aid, their cruisers, tanks and helicopters, and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill.",
-        "都市警力与前来增援的部队、他们的警车、坦克和直升机，以及他们要对付的死者——从你亲手放置的巢穴中繁殖，被它们杀死的警察也会尸变。",
-        "The city police and the troops that come to their aid, their cruisers, tanks and helicopters, and the dead they are fighting: bred from nests you can place yourself, and rising again from the police they kill."
+        "The SPK strain is loose in Adolon City. Hold the streets with patrol officers, task forces, police cruisers, Abrams tanks, gunships and a drone carrier — or become the outbreak: breed the dead from your nests, and watch every officer and soldier they cut down rise again in your horde.",
+        "SPK病毒已在阿多隆市失控。用民警、特战队、警车、艾布拉姆斯坦克、武装直升机和无人机航母守住街道——或者化身疫潮：从巢穴中繁殖死者，看着被它们撕碎的每一名警察和士兵重新站起，加入你的尸群。",
+        "SPK 균주가 아돌론 시에 퍼졌다. 순찰 경관, 특수부대, 경찰차, 에이브럼스 전차, 공격 헬기, 드론 항모로 거리를 지켜라. 아니면 감염 그 자체가 되어라. 둥지에서 시체들을 번식시키고, 그들이 쓰러뜨린 경찰과 군인이 모두 다시 일어나 당신의 무리에 합류하는 것을 지켜보라."
       ],
       "license": "LicenseRef-Adolence",
       "homepage": "https://github.com/steel-tide/mods/tree/main/mods/adolence",
       "minGame": "0.8.16",
       "path": "mods/adolence",
       "base": "https://raw.githubusercontent.com/steel-tide/mods/main/mods/adolence/",
-      "updated": "2026-10-22T09:15:32+08:00",
+      "updated": "2026-10-23T03:18:20-07:00",
       "published": "2026-09-20T15:16:26+08:00",
-      "bytes": 1174305,
-      "downloads": 377,
+      "bytes": 1174839,
+      "downloads": 378,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -21074,7 +21074,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-08T22:53:58+08:00",
       "bytes": 15799328,
-      "downloads": 133,
+      "downloads": 134,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
