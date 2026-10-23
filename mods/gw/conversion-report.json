@@ -1,0 +1,920 @@
+{
+  "units": {
+    "gw-army-squad-efsf-0079": {
+      "source": "Army_Squad_EFSF_0079_N_G_A",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Army_Squad/Squad/Army_Squad_EFSF_0079_N_G_A.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_Army_Squad_EFSF_0079_N_G_A_StandardSquad",
+          "metal": 300.0,
+          "count": 3,
+          "time": 15.0,
+          "moral": 0.0
+        },
+        {
+          "kind": "Air",
+          "section": "action_Produce_Army_Squad_EFSF_0079_N_G_A_StandardSquad",
+          "metal": 300.0,
+          "count": 3,
+          "time": 15.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-type61": {
+      "source": "Type61",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Type61/Type61.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_Type61_StandardSquad",
+          "metal": 1200.0,
+          "count": 3,
+          "time": 30.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-type74": {
+      "source": "Type74",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Type74/Type74.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_Type74_StandardSquad",
+          "metal": 1350.0,
+          "count": 3,
+          "time": 25.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-anti-zaku-tank": {
+      "source": "AntiZakuTank",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/AntiZakuTank/AntiZakuTank.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_AntiZakuTank_StandardSquad",
+          "metal": 450.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-fan-fan": {
+      "source": "FanFan",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/FanFan/FanFan.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_FanFan_StandardSquad",
+          "metal": 850.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        },
+        {
+          "kind": "Air",
+          "section": "action_Produce_FanFan_StandardSquad",
+          "metal": 850.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-ef-heli": {
+      "source": "EF_Heli",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/EF_Heli/EF_Heli.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_EF_Heli_StandardSquad",
+          "metal": 1050.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-ff-4": {
+      "source": "FF_4",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/FF_4/FF_4.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_FF_4_StandardSquad",
+          "metal": 900.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-ff-b2": {
+      "source": "FF_B2",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/FF_B2/FF_B2.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_FF_B2_StandardSquad",
+          "metal": 1800.0,
+          "count": 3,
+          "time": 35.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Bomb_FF_B2_L",
+          "never fired"
+        ]
+      ]
+    },
+    "gw-ff-6": {
+      "source": "FF_6",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/FF_6/FF_6.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_FF_6_StandardSquad",
+          "metal": 1250.0,
+          "count": 3,
+          "time": 25.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_DoubleMS_FF_6_L",
+          "never fired"
+        ]
+      ]
+    },
+    "gw-ff-s3": {
+      "source": "FF_S3",
+      "file": "GW_BattleUniverse_DLC_0087/Units/BattleUnits/FF_S3/FF_S3.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_FF_S3_StandardSquad",
+          "metal": 2050.0,
+          "count": 3,
+          "time": 35.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_DoubleMS_FF_S3_L",
+          "never fired"
+        ]
+      ]
+    },
+    "gw-rff-06": {
+      "source": "RFF_06",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RFF_06/RFF_06.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RFF_06_StandardSquad",
+          "metal": 3500.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_RFF_06_Cannon",
+          "another loadout (EquipmentIndex 1/None)"
+        ]
+      ]
+    },
+    "gw-rff-06-cannon": {
+      "source": "RFF_06",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RFF_06/RFF_06.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RFF_06_CannonSquad",
+          "metal": 5300.0,
+          "count": 3,
+          "time": 70.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ]
+      ]
+    },
+    "gw-medea": {
+      "source": "Medea",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Medea/Medea.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_Medea_StandardSquad",
+          "metal": 1500.0,
+          "count": 1,
+          "time": 25.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-ef-torpedo-boat": {
+      "source": "EF_TorpedoBoat",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/EF_TorpedoBoat/EF_TorpedoBoat.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_EF_TorpedoBoat_StandardSquad",
+          "metal": 1000.0,
+          "count": 3,
+          "time": 25.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-burke-class": {
+      "source": "BurkeClass",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/BurkeClass/BurkeClass.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_BurkeClass",
+          "metal": 1800.0,
+          "count": 1,
+          "time": 35.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-u-type-submarine": {
+      "source": "U_Type_Submarine",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/U_Type_Submarine/U_Type_Submarine.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_U_Type_Submarine",
+          "metal": 4500.0,
+          "count": 1,
+          "time": 40.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-u-type-submarine-submerged": {
+      "source": "U_Type_Submarine_StyleB",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/U_Type_Submarine/U_Type_Submarine_StyleB.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_U_Type_Submarine",
+          "metal": 4500.0,
+          "count": 1,
+          "time": 40.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-himalaya-class": {
+      "source": "HimalayaClass",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/HimalayaClass/HimalayaClass.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_HimalayaClass",
+          "metal": 7500.0,
+          "count": 1,
+          "time": 60.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-army-squad-zeon-0079": {
+      "source": "Army_Squad_ZEON_0079_N_G_A",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Army_Squad/Squad/Army_Squad_ZEON_0079_N_G_A.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_Army_Squad_ZEON_0079_N_G_A_StandardSquad",
+          "metal": 350.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        },
+        {
+          "kind": "Air",
+          "section": "action_Produce_Army_Squad_ZEON_0079_N_G_A_StandardSquad",
+          "metal": 350.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-mtank": {
+      "source": "MTank",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MTank/MTank.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MTank_StandardSquad",
+          "metal": 1400.0,
+          "count": 3,
+          "time": 30.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-samson-ground-transport-truck": {
+      "source": "SamsonGroundTransportTruck",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/SamsonGroundTransportTruck/SamsonGroundTransportTruck.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_SamsonGroundTransportTruck_StandardSquad",
+          "metal": 800.0,
+          "count": 2,
+          "time": 30.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-zn-apc": {
+      "source": "ZN_APC",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/ZN_APC/ZN_APC.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_ZN_APC_StandardSquad",
+          "metal": 450.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-wappa": {
+      "source": "Wappa",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Wappa/Wappa.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_Wappa_StandardSquad",
+          "metal": 500.0,
+          "count": 3,
+          "time": 20.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-zn-heli": {
+      "source": "ZN_Heli",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/ZN_Heli/ZN_Heli.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_ZN_Heli_StandardSquad",
+          "metal": 1400.0,
+          "count": 3,
+          "time": 25.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-fat-uncle": {
+      "source": "FatUncle",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/FatUncle/FatUncle.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_FatUncle_StandardSquad",
+          "metal": 1500.0,
+          "count": 1,
+          "time": 25.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-dopp": {
+      "source": "Dopp",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Dopp/Dopp.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_Dopp_StandardSquad",
+          "metal": 1650.0,
+          "count": 3,
+          "time": 35.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_DoubleMS_Dopp_L",
+          "never fired"
+        ]
+      ]
+    },
+    "gw-dodai-ys": {
+      "source": "DodaiYS",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Dodai/DodaiYS.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Air",
+          "section": "action_Produce_DodaiYS_StandardSquad",
+          "metal": 1900.0,
+          "count": 3,
+          "time": 40.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-ms-05": {
+      "source": "MS_05",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_05/MS_05.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_05_StandardSquad",
+          "metal": 1850.0,
+          "count": 3,
+          "time": 40.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_270mmBazookaEarly",
+          "another loadout (EquipmentIndex 1/None)"
+        ]
+      ]
+    },
+    "gw-ms-05-bazooka": {
+      "source": "MS_05",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_05/MS_05.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_05_BazookaSquad",
+          "metal": 2450.0,
+          "count": 3,
+          "time": 40.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_105mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ]
+      ]
+    },
+    "gw-ms-06c": {
+      "source": "MS_06C",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06F/MS_06C.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06C_StandardSquad",
+          "metal": 9000.0,
+          "count": 1,
+          "time": 40.0,
+          "moral": 250.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ]
+      ]
+    },
+    "gw-ms-06f": {
+      "source": "MS_06F",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06F/MS_06F.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06F_StandardSquad",
+          "metal": 2400.0,
+          "count": 3,
+          "time": 50.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_270mmBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ]
+      ]
+    },
+    "gw-ms-06f-bazooka": {
+      "source": "MS_06F",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06F/MS_06F.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06F_BazookaSquad",
+          "metal": 3000.0,
+          "count": 3,
+          "time": 50.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_120mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ]
+      ]
+    },
+    "gw-ms-06s": {
+      "source": "MS_06S",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06F/MS_06S.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06S_StandardSquad",
+          "metal": 1050.0,
+          "count": 1,
+          "time": 30.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_270mmBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ]
+      ]
+    },
+    "gw-ms-06s-bazooka": {
+      "source": "MS_06S",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06F/MS_06S.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06S_BazookaSquad",
+          "metal": 1250.0,
+          "count": 1,
+          "time": 30.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_120mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ]
+      ]
+    },
+    "gw-u-type-submarine-zeon": {
+      "source": "U_Type_Submarine_ZEON",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/U_Type_Submarine/U_Type_Submarine_ZEON.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_U_Type_Submarine_ZEON",
+          "metal": 4500.0,
+          "count": 1,
+          "time": 40.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-u-type-submarine-zeon-submerged": {
+      "source": "U_Type_Submarine_ZEON_StyleB",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/U_Type_Submarine/U_Type_Submarine_ZEON_StyleB.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_U_Type_Submarine_ZEON",
+          "metal": 4500.0,
+          "count": 1,
+          "time": 40.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    }
+  },
+  "buildings": {
+    "gw-factory-efsf-0079-land": {
+      "source": "Factory_EFSF_0079_Land",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/EFSF_0079/Factory_EFSF_0079_Land.ini"
+    },
+    "gw-factory-efsf-0079-air": {
+      "source": "Factory_EFSF_0079_Air",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/EFSF_0079/Factory_EFSF_0079_Air.ini"
+    },
+    "gw-factory-efsf-0079-aqua": {
+      "source": "Factory_EFSF_0079_Aqua",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/EFSF_0079/Factory_EFSF_0079_Aqua.ini"
+    },
+    "gw-factory-zeon-0079-land": {
+      "source": "Factory_ZEON_0079_Land",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/ZEON_0079/Factory_ZEON_0079_Land.ini"
+    },
+    "gw-factory-zeon-0079-air": {
+      "source": "Factory_ZEON_0079_Air",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/ZEON_0079/Factory_ZEON_0079_Air.ini"
+    },
+    "gw-factory-zeon-0079-aqua": {
+      "source": "Factory_ZEON_0079_Aqua",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/ZEON_0079/Factory_ZEON_0079_Aqua.ini"
+    },
+    "gw-refinery-t1": {
+      "source": "Refinery_Common_T1",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/Refinery/Common/Refinery_Common_T1.ini"
+    },
+    "gw-supply-depot-t1": {
+      "source": "SupplyDepot_Common_T1",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/SupplyDepot/Common/SupplyDepot_Common_T1.ini"
+    },
+    "gw-turret-mg-a": {
+      "source": "Turret_MG_A",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/Turret/TypeA/Turret_MG_A.ini"
+    },
+    "gw-turret-aa-a": {
+      "source": "Turret_AA_A",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/Turret/TypeA/Turret_AA_A.ini"
+    },
+    "gw-turret-cn-a": {
+      "source": "Turret_CN_A",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/Turret/TypeA/Turret_CN_A.ini"
+    },
+    "gw-turret-ms-a": {
+      "source": "Turret_MS_A",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/Turret/TypeA/Turret_MS_A.ini"
+    },
+    "gw-turret-radar-a": {
+      "source": "Turret_Radar_A",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/Turret/TypeA/Turret_Radar_A.ini"
+    },
+    "gw-wall-t1-a": {
+      "source": "Wall_T1_A",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/Wall/T1/Wall_T1_A.ini"
+    },
+    "gw-wall-t1-b": {
+      "source": "Wall_T1_B",
+      "file": "GW_BattleUniverse_Main/Units/Buildings/Wall/T1/Wall_T1_B.ini"
+    },
+    "gw-hq-efsf-0079": {
+      "source": "HQ_EFSF_0079",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/HQ/HQ_VS_GE/Faction/EFSF_0079/HQ_EFSF_0079.ini"
+    },
+    "gw-hq-zeon-0079": {
+      "source": "HQ_ZEON_0079",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/HQ/HQ_VS_GE/Faction/ZEON_0079/HQ_ZEON_0079.ini"
+    }
+  },
+  "leftOut": {
+    "SalamisClass": "Sold only by Space or Space Mega factories: a space map unit.",
+    "ColumbusClass": "Sold only by Space or Space Mega factories: a space map unit.",
+    "Gattle": "Sold only by Space or Space Mega factories: a space map unit.",
+    "JiccoClass": "Sold only by Space or Space Mega factories: a space map unit.",
+    "MusaiClass": "Sold only by Space or Space Mega factories: a space map unit.",
+    "PapuaClass": "Sold only by Space or Space Mega factories: a space map unit.",
+    "Factory_EFSF_0079_Space": "Space theatre: only a space map (TileMode 1) raises it.",
+    "Factory_EFSF_0079_Space_Mega": "Space theatre: only a space map (TileMode 1) raises it.",
+    "Factory_EFSF_0079_Mega": "Its list holds no base-tech unit; it opens with later techs.",
+    "Institute_Common_T1": "Earns TechPoint for the tech tree, which is a later batch.",
+    "Academy_Common_T1": "Trains pilots, which are a later batch.",
+    "Beacon_ACE_0079": "Calls named ACE units, a later batch and a host option in the source.",
+    "HLV_0079_Build": "Launches HLVs between ground and space maps (AutoTileMode).",
+    "Factory_ZEON_0079_Space": "Space theatre: only a space map (TileMode 1) raises it.",
+    "Factory_ZEON_0079_Space_Mega": "Space theatre: only a space map (TileMode 1) raises it.",
+    "Factory_ZEON_0079_Mega": "Its list holds no base-tech unit; it opens with later techs."
+  },
+  "adaptations": [
+    "BurkeClass: Hangar_X1_Aircraft_UseEN_Show carries the player's aircraft, which native holds cannot (ground passengers only)",
+    "HimalayaClass: Hangar_X8_Aircraft carries the player's aircraft, which native holds cannot (ground passengers only)",
+    "HimalayaClass: HimalayaClass_Hangar_X8_Aircraft_UseEN_Show carries the player's aircraft, which native holds cannot (ground passengers only)",
+    "HimalayaClass: Hangar_X8_Aircraft carries the player's aircraft, which native holds cannot (ground passengers only)",
+    "ZN_MS_06C_Bombing_Nuke: the player's targeted action fires on its own, once a life, at its source range",
+    "MS_06C: the source also asks 250 MoralPoint per order; MoralPoint is not ported",
+    "gw-fan-fan: sold by the airport only (the source's land factory also lists it)"
+  ],
+  "media": {
+    "gw-machinegun-2": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/MachineGun_2.ogg",
+    "gw-missile-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/Missile_1.ogg",
+    "gw-bazooka-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/Bazooka_1.ogg",
+    "gw-vulcan-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/Vulcan_1.ogg",
+    "gw-machinegun-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/MachineGun_1.ogg",
+    "gw-bomb-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/Bomb_1.ogg",
+    "gw-fist-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/Fist_1.ogg",
+    "gw-shellcannon-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/ShellCannon_1.ogg",
+    "gw-heathawk-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/HeatHawk_1.ogg",
+    "gw-beamcannon-2": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/BeamCannon_2.ogg",
+    "gw-throw-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/Throw_1.ogg"
+  },
+  "missingKorean": []
+}
