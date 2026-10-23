@@ -374,13 +374,16 @@ def build_unit(entry, out):
         if not frames:
             continue
         x, y = pos(name)
-        x += num(field(data, 'image_drawOffsetX'))
-        y += num(field(data, 'image_drawOffsetY'))
+        # A draw offset moves the image in the turret's own turning frame and,
+        # like the turret's position, its y points forward: a rotor blade's hub
+        # end lands on its pivot only so.
+        dx, dy = num(field(data, 'image_drawOffsetX')), -num(field(data, 'image_drawOffsetY'))
         spin = num(field(data, 'idleSpin'))
         if spin:
-            rotors.append({'name': name, 'image': frames[0], 'x': x, 'y': y, 'spin': spin,
+            rotors.append({'name': name, 'image': frames[0], 'x': x, 'y': y, 'dx': dx, 'dy': dy, 'spin': spin,
                            'phase': num(field(data, 'idleDir')), 'source': path})
             continue
+        x, y = x + dx, y + dy
         duplicates = [v for k, v in physical if field(v, 'basePositionFromTurret') == name
                       and source_path(entry, k, 'image') == path]
         if duplicates:
@@ -529,12 +532,13 @@ def build_unit(entry, out):
             groups.setdefault((rotor['x'], rotor['y'], rotor['spin']), []).append(rotor)
         for i, rotor_group in enumerate(list(groups.values())[:12]):
             rotor = rotor_group[0]
-            side = max(math.ceil(math.hypot(r['image'].width, r['image'].height)) for r in rotor_group) + 4
+            side = max(math.ceil(math.hypot(r['image'].width, r['image'].height) + 2 * math.hypot(r['dx'], r['dy']))
+                       for r in rotor_group) + 4
             base = Image.new('RGBA', (side, side))
             for blade in rotor_group:
                 im = blade['image']
                 centered = Image.new('RGBA', (side, side))
-                centered.alpha_composite(im, ((side-im.width)//2, (side-im.height)//2))
+                centered.alpha_composite(im, ((side-im.width)//2 + round(blade['dx']), (side-im.height)//2 + round(blade['dy'])))
                 base.alpha_composite(centered.rotate(-blade['phase'], Image.Resampling.NEAREST))
             rotor_frames = [base.rotate((-1 if rotor['spin'] < 0 else 1)*j*30, Image.Resampling.NEAREST) for j in range(12)]
             key = f"dec.{entry['id']}-rotor-{i+1}"

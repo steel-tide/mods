@@ -119,6 +119,9 @@ has its own bearing, strict arc, target and burst clock. `targeting` is
 `shared` or `independent`; `tolerance` is the angular firing tolerance.
 The renderer and muzzle placement use the same world pose. A parent mount
 carries a nested mount's origin and arc; chains are bounded and acyclic.
+A mount turns with what it stands on, the hull or its parent mount, before
+it traverses on its own, as a native turret rides its hull; an idle mount
+keeps its bearing relative to that carrier.
 Shared ammunition feeds remain owned by logistics; only a committed new burst
 spends stock. A lost burst target cancels the remainder, without choosing a
 replacement during that burst.

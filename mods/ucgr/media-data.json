@@ -1659,20 +1659,20 @@
       "file": "sprites/tur.usgr-re-2s35-f612c8e7.png",
       "frames": 1,
       "fw": 14,
-      "fh": 72,
+      "fh": 53,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
       "artifactCleanup": false,
       "rotated": true,
       "pivotX": 0.5,
-      "pivotY": 0.486188,
+      "pivotY": 0.661654,
       "barrels": [
         [
           0.441176,
-          0.01105,
+          0.015038,
           0.558824,
-          0.298343
+          0.406015
         ]
       ]
     },
@@ -4602,8 +4602,8 @@
       "key": "dec.usgr-re-adats-m2a3-rotor-1",
       "file": "sprites/dec.usgr-re-adats-m2a3-rotor-1.png",
       "frames": 12,
-      "fw": 19,
-      "fh": 19,
+      "fw": 20,
+      "fh": 20,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
@@ -4811,20 +4811,20 @@
       "file": "sprites/tur.usgr-re-m109a7-218fa841.png",
       "frames": 1,
       "fw": 17,
-      "fh": 46,
+      "fh": 50,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
       "artifactCleanup": false,
       "rotated": true,
       "pivotX": 0.5,
-      "pivotY": 0.758621,
+      "pivotY": 0.709677,
       "barrels": [
         [
           0.428571,
-          0.017241,
+          0.016129,
           0.571429,
-          0.534483
+          0.5
         ]
       ]
     },
@@ -5347,7 +5347,7 @@
       "artifactCleanup": false,
       "rotated": true,
       "pivotX": 0.5,
-      "pivotY": 0.884615
+      "pivotY": 0.115385
     },
     {
       "key": "dec.usgr-re-ec556had-rotor-1",
@@ -6660,8 +6660,8 @@
       "key": "dec.usgr-re-mi4-rotor-1",
       "file": "sprites/dec.usgr-re-mi4-rotor-1.png",
       "frames": 12,
-      "fw": 52,
-      "fh": 52,
+      "fw": 104,
+      "fh": 104,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
@@ -9757,7 +9757,7 @@
           "on": "hull",
           "layer": "over",
           "x": 0.0,
-          "y": 9.6
+          "y": 10.0
         }
       ]
     },
@@ -9776,7 +9776,7 @@
           "on": "hull",
           "layer": "over",
           "x": 0.0,
-          "y": 10.4
+          "y": 10.8
         }
       ]
     },
@@ -10365,7 +10365,7 @@
           "on": "hull",
           "layer": "over",
           "x": 0.0,
-          "y": -50.0
+          "y": -24.0
         }
       ]
     },

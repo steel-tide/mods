@@ -6791,7 +6791,7 @@
           "section": "turret_1",
           "source": "彩蛋/2S35-1/2S35-1炮塔.png",
           "x": 0.0,
-          "y": 24.0,
+          "y": -24.0,
           "order": 0.25,
           "target": "turret",
           "mount": "1"
@@ -6830,7 +6830,7 @@
         -17,
         -88,
         17,
-        93
+        45
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -24231,7 +24231,7 @@
           "target": "animated rotor",
           "phase": 0,
           "x": 0.0,
-          "y": 24.0
+          "y": 25.0
         }
       ],
       "notes": [
@@ -24310,7 +24310,7 @@
           "target": "animated rotor",
           "phase": 0,
           "x": 0.0,
-          "y": 26.0
+          "y": 27.0
         }
       ],
       "notes": [
@@ -25034,7 +25034,7 @@
           "section": "turret_1",
           "source": "彩蛋/M109A7/M109A7炮塔.png",
           "x": 0.0,
-          "y": -4.0,
+          "y": 4.0,
           "order": 0.25,
           "target": "turret",
           "mount": "1"
@@ -25073,7 +25073,7 @@
         -21,
         -88,
         21,
-        28
+        36
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -28500,7 +28500,7 @@
           "section": "turret_2",
           "source": "阵营单位/4.欧盟/5.旋翼机/(德)EC556虎/机炮.png",
           "x": 0.0,
-          "y": -10.0,
+          "y": 10.0,
           "order": 0.25,
           "target": "turret"
         },
@@ -28524,9 +28524,9 @@
       ],
       "turretBounds": [
         -4,
-        -23,
+        -3,
         4,
-        3
+        23
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -36797,7 +36797,7 @@
           "target": "animated rotor",
           "phase": 0.0,
           "x": 0.0,
-          "y": -125.0
+          "y": -60.0
         },
         {
           "section": "turret_LXJ2",
@@ -36805,7 +36805,7 @@
           "target": "animated rotor",
           "phase": 90.0,
           "x": 0.0,
-          "y": -125.0
+          "y": -60.0
         },
         {
           "section": "turret_LXJ3",
@@ -36813,7 +36813,7 @@
           "target": "animated rotor",
           "phase": 180.0,
           "x": 0.0,
-          "y": -125.0
+          "y": -60.0
         },
         {
           "section": "turret_LXJ4",
@@ -36821,7 +36821,7 @@
           "target": "animated rotor",
           "phase": 270.0,
           "x": 0.0,
-          "y": -125.0
+          "y": -60.0
         }
       ],
       "notes": [
@@ -45471,7 +45471,7 @@
           "section": "turret_1",
           "source": "彩蛋/2S35-1/2S35-1炮塔.png",
           "x": 0.0,
-          "y": 24.0,
+          "y": -24.0,
           "order": 0.25,
           "target": "turret",
           "mount": "1"
@@ -45510,7 +45510,7 @@
         -17,
         -88,
         17,
-        93
+        45
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],
@@ -45573,7 +45573,7 @@
           "section": "turret_1",
           "source": "彩蛋/M109A7/M109A7炮塔.png",
           "x": 0.0,
-          "y": -4.0,
+          "y": 4.0,
           "order": 0.25,
           "target": "turret",
           "mount": "1"
@@ -45612,7 +45612,7 @@
         -21,
         -88,
         21,
-        28
+        36
       ],
       "artScale": 0.4,
       "initialEquipmentTags": [],

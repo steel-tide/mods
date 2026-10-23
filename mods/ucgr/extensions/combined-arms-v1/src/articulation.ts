@@ -25,7 +25,8 @@ import type { EngineModuleInstance, Json, ModuleHost, ModuleAction } from '../..
 import type { ArticulationDef, ArticulationWeapon, AttachmentSpec, DeploymentSpec, MountSpec, TowSpec } from './articulationSpec';
 import { record } from './sensorsSpec';
 
-interface Bearing { velocity?: number; bore: number; angle: number; previousAngle: number; target: number; burst?: { weapon: string; left: number; cd: number; shot: number; target: number; x: number; y: number } }
+/** A ring's world bearing; `base` is what it stands on (hull or parent ring) as that stood when the ring last rode it. */
+interface Bearing { velocity?: number; bore: number; angle: number; previousAngle: number; base?: number; target: number; burst?: { weapon: string; left: number; cd: number; shot: number; target: number; x: number; y: number } }
 interface BarrageJob { id: string; x: number; y: number; elapsed: number; left: number; first: boolean }
 interface Assembly { energy?:number; barrage?: BarrageJob; cooldowns?: Record<string,number>; definition: string; members: Record<string, number>; mounts: Record<string, Bearing>; initialized: boolean; parentAngle?: number; tow?: number; job?: { id: string; from: string; elapsed: number } }
 interface Pose { x: number; y: number; angle: number }
@@ -55,7 +56,9 @@ export function createArticulationModule(host: ModuleHost): EngineModuleInstance
     let s = states.get(e.id); if (!s) { s = { definition: e.defId, members: Object.create(null), mounts: Object.create(null), initialized: false }; states.set(e.id, s); }
     s.definition = e.defId;
     const sourceEnergy=config(e)?.sourceEnergy;if(sourceEnergy&&s.energy===undefined)s.energy=sourceEnergy.max;
-    for (const m of config(e)?.mounts ?? []) s.mounts[m.id] ??= { bore: 0, angle: e.angle + m.rest, previousAngle: e.angle + m.rest, target: 0 };
+    const mounts = config(e)?.mounts ?? [];
+    for (const m of mounts) s.mounts[m.id] ??= { bore: 0, angle: e.angle + m.rest, previousAngle: e.angle + m.rest, target: 0 };
+    for (const m of mounts) s.mounts[m.id].base ??= m.parent ? s.mounts[m.parent].angle : getDef(e.defId).kind === 'building' ? -Math.PI / 2 : e.angle;
     return s;
   }
   function pose(e: Ent, mount: MountSpec, def = getDef(e.defId), seen = new Set<string>()): Pose {
@@ -326,6 +329,11 @@ export function createArticulationModule(host: ModuleHost): EngineModuleInstance
         const bearing = s.mounts[mount.id], at = pose(e, mount, def), parent = mount.parent && s.mounts[mount.parent];
         const base = parent ? parent.angle : def.kind === 'building' ? -Math.PI / 2 : e.angle;
         bearing.previousAngle = bearing.angle;
+        // A ring is mounted on what it stands on: whatever the hull (or its
+        // parent ring) turned since, it turned with it, and only then does it
+        // traverse on its own, as a native turret rides the hull.
+        if (bearing.base !== undefined) bearing.angle = normAngle(bearing.angle + normAngle(base - bearing.base));
+        bearing.base = base;
         const guns = def.weapons.filter(w => mount.weapons.includes(w.id));
         const valid = (candidate: Ent, w: WeaponDef): boolean => live(candidate) && host.trackTarget(e, def, candidate, false, w)
           && Math.abs(normAngle(Math.atan2(candidate.y - at.y, candidate.x - at.x) - base - mount.rest)) <= mount.arc
@@ -543,7 +551,7 @@ export function createArticulationModule(host: ModuleHost): EngineModuleInstance
     snapshot(view) {
       return [...states].filter(([id]) => !view || view.visibleEntities.has(id)).map(([id,s]) => [id, { ...s,
         members: Object.fromEntries(Object.entries(s.members).filter(([, child]) => !view || view.visibleEntities.has(child))),
-        mounts: Object.fromEntries(Object.entries(s.mounts).map(([key,m]) => [key, !view ? m : { angle: m.angle, previousAngle: m.previousAngle, target: 0 }])),
+        mounts: Object.fromEntries(Object.entries(s.mounts).map(([key,m]) => [key, !view ? m : { angle: m.angle, previousAngle: m.previousAngle, ...(m.base !== undefined ? { base: m.base } : {}), target: 0 }])),
         ...(view ? { energy:view.privateEntity(id)?s.energy:undefined,barrage:view.privateEntity(id)?s.barrage:undefined,cooldowns:view.privateEntity(id)?s.cooldowns:undefined,job: view.privateEntity(id) ? s.job : undefined, tow: s.tow && view.visibleEntities.has(s.tow) ? s.tow : undefined } : {}) }]) as unknown as Json;
     },
     restore(value) {
@@ -572,7 +580,8 @@ export function createArticulationModule(host: ModuleHost): EngineModuleInstance
           if (!record(a) || !finite(a.angle,-1e6,1e6) || !finite(a.previousAngle,-1e6,1e6) || !integer(a.target)) throw new Error('Invalid mount bearing');
           if (a.bore !== undefined && (!integer(a.bore) || a.bore > 1024)) throw new Error('Invalid mount barrel');
           if(a.velocity!==undefined&&!finite(a.velocity,-100,100))throw new Error('Invalid mount velocity');
-          const m: Bearing = {...(typeof a.velocity==='number'?{velocity:a.velocity}:{}),bore:typeof a.bore === 'number' ? a.bore : 0,angle:a.angle,previousAngle:a.previousAngle,target:a.target};
+          if(a.base!==undefined&&!finite(a.base,-1e6,1e6))throw new Error('Invalid mount carrier bearing');
+          const m: Bearing = {...(typeof a.velocity==='number'?{velocity:a.velocity}:{}),bore:typeof a.bore === 'number' ? a.bore : 0,angle:a.angle,previousAngle:a.previousAngle,...(typeof a.base==='number'?{base:a.base}:{}),target:a.target};
           if (a.burst !== undefined) {
             const b = a.burst, w = record(b) && getDef(e.defId).weapons.find(w => w.id === b.weapon);
             if (!record(b) || !w || !def.weapons.includes(w.id) || !integer(b.left) || b.left > (w.burst ?? 1) - 1 || !finite(b.cd, -1, w.burstDelay ?? .1) || !integer(b.shot) || b.shot > (w.burst ?? 1) || !integer(b.target) || !finite(b.x,0,st.map.w*TILE) || !finite(b.y,0,st.map.h*TILE)) throw new Error('Invalid mount burst');

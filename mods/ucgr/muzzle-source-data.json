@@ -7039,21 +7039,21 @@
             "file": "sprites/tur.usgr-re-2s35-f612c8e7.png",
             "sourceSize": [
               34,
-              181
+              133
             ],
             "displaySize": [
               14,
-              72
+              53
             ],
             "pivot": [
               0.5,
-              0.486188
+              0.661654
             ],
             "barrelRegion": [
               0.441176,
-              0.01105,
+              0.015038,
               0.558824,
-              0.298343
+              0.406015
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -7069,7 +7069,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 53.524275,
+              "forward": 53.621347,
               "lateral": 0.390625
             }
           ]
@@ -16249,21 +16249,21 @@
             "file": "sprites/tur.usgr-re-m109a7-218fa841.png",
             "sourceSize": [
               42,
-              116
+              124
             ],
             "displaySize": [
               17,
-              46
+              50
             ],
             "pivot": [
               0.5,
-              0.758621
+              0.709677
             ],
             "barrelRegion": [
               0.428571,
-              0.017241,
+              0.016129,
               0.571429,
-              0.534483
+              0.5
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -16279,7 +16279,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 53.354009,
+              "forward": 54.271641,
               "lateral": -0.195312
             }
           ]
@@ -28147,21 +28147,21 @@
             "file": "sprites/tur.usgr-re-2s35-f612c8e7.png",
             "sourceSize": [
               34,
-              181
+              133
             ],
             "displaySize": [
               14,
-              72
+              53
             ],
             "pivot": [
               0.5,
-              0.486188
+              0.661654
             ],
             "barrelRegion": [
               0.441176,
-              0.01105,
+              0.015038,
               0.558824,
-              0.298343
+              0.406015
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -28180,9 +28180,9 @@
             "barrels": [
               [
                 0.441176,
-                0.01105,
+                0.015038,
                 0.558824,
-                0.298343
+                0.406015
               ]
             ],
             "section": "decal_炮管",
@@ -28193,7 +28193,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 53.524275,
+              "forward": 53.621347,
               "lateral": 0.390625
             }
           ]
@@ -28257,21 +28257,21 @@
             "file": "sprites/tur.usgr-re-m109a7-218fa841.png",
             "sourceSize": [
               42,
-              116
+              124
             ],
             "displaySize": [
               17,
-              46
+              50
             ],
             "pivot": [
               0.5,
-              0.758621
+              0.709677
             ],
             "barrelRegion": [
               0.428571,
-              0.017241,
+              0.016129,
               0.571429,
-              0.534483
+              0.5
             ],
             "supersample": 4,
             "bakedPixelTip": [
@@ -28290,9 +28290,9 @@
             "barrels": [
               [
                 0.428571,
-                0.017241,
+                0.016129,
                 0.571429,
-                0.534483
+                0.5
               ]
             ],
             "section": "decal_炮管",
@@ -28303,7 +28303,7 @@
           "worldScale": 0.625,
           "muzzlePoints": [
             {
-              "forward": 53.354009,
+              "forward": 54.271641,
               "lateral": -0.195312
             }
           ]

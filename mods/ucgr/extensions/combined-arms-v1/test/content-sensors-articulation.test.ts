@@ -172,6 +172,20 @@ describe('optional sensors and physical articulation', () => {
     expect(view.mounts[0].x).toBeGreaterThan(a.x); expect(view.mounts[1].x).toBeLessThan(a.x);
     const shots=game.st.projs.filter(p=>p.src===a.id); expect(new Set(shots.map(p=>p.targetId)).size).toBe(2);
   });
+  test('idle mounts ride the hull as it turns, and a child ring rides its parent', () => {
+    const base=getDef('ltank').weapons[0], weapons=[{...base,id:'main',reload:10,range:3},{...base,id:'coax',reload:10,range:3}];
+    define('ext-riding',{weapons,extensions:{'articulation-v1':art({mounts:[{id:'ring',x:0,y:4,weapons:['main'],turnRate:.5},{id:'mg',parent:'ring',x:-2,y:2,rest:.5,weapons:['coax'],turnRate:.5}]})}});
+    const {game,runtime}=match(), a=newEnt(game.st,'ext-riding',0,600,600); a.angle=0; game.hash.rebuild(game.st);
+    const module=runtime.module('articulation-v1')!, rel=(x:number)=>Math.atan2(Math.sin(x),Math.cos(x));
+    const bearings=()=>(module.render!(a) as ArticulationVisual).mounts.map(m=>m.angle);
+    game.step(); cmdMove(game,[a.id],600,900); ticks(game,45);
+    // Far quicker than either ring could traverse alone: they turned with the hull.
+    expect(rel(a.angle)).toBeGreaterThan(1.2);
+    const [ring,mg]=bearings(); expect(rel(ring-a.angle)).toBeCloseTo(0,5); expect(rel(mg-ring)).toBeCloseTo(.5,5);
+    module.restore(module.snapshot()); cmdMove(game,[a.id],300,a.y); ticks(game,45);
+    expect(Math.abs(rel(a.angle))).toBeGreaterThan(2.5);
+    expect(rel(bearings()[0]-a.angle)).toBeCloseTo(0,5); expect(rel(bearings()[1]-bearings()[0])).toBeCloseTo(.5,5);
+  });
   test('automatic forms retain the real weapon, its reload, pending movement and independently turning member', () => {
     const gun = {...getDef('ltank').weapons[0], id:'launcher', reload:10};
     define('ext-rifleman',{weapons:[],radius:2});
