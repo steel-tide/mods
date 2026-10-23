@@ -68,7 +68,7 @@ INSTITUTE_TECH_POINT = 0.75
 LEFT_OUT = {
     'Factory_{side}_Space': 'Space theatre: only a space map (TileMode 1) raises it.',
     'Factory_{side}_Space_Mega': 'Space theatre: only a space map (TileMode 1) raises it.',
-    'Factory_{side}_Mega': 'Its list holds no base-tech unit; it opens with later techs.',
+    'Factory_{side}_Mega': 'Sells the big units the development plans open (the Mini Tray among them), a later batch.',
     'Academy_Common_T1': 'Trains pilots, which are a later batch.',
     'Beacon_ACE_0079': 'Calls named ACE units, a later batch and a host option in the source.',
     'HLV_0079_Build': 'Launches HLVs between ground and space maps (AutoTileMode).',
@@ -211,11 +211,11 @@ MEDIA_OUT = None
 
 # --------------------------------------------------------------- orders
 
-def orders():
+def orders(kinds=FACTORY_KINDS):
     """What each faction's factories sell: unit, loadout, price and batch (source unit lists)."""
     out = {}
     for side in SIDES:
-        for kind in FACTORY_KINDS:
+        for kind in kinds:
             lp = PKG_0079 / f'Units/Buildings/Factory/UnitList/{side}/{side}_UnitList_{kind}.ini'
             ini = gw.load(lp)
             for sec, f in ini.items():
@@ -256,6 +256,8 @@ def tech_plan(side, name):
     """A development plan: its text, the plans it waits on, what it unlocks, and its price."""
     folder = PKG_0079 / f'Units/TechTree/Tech/Faction/{side}'
     path = folder / f'Common/{name}.ini'
+    if not path.exists():
+        path = folder / f'Common/{name}.ini.ini'  # one Zeon plan's file is named so in the source
     ini = gw.load(path)
     core = ini['core']
     after = re.findall(r"includes='(\w+)'", core.get('@global Unlocked', ''))
@@ -725,6 +727,7 @@ def main():
     global MEDIA_OUT
     MEDIA_OUT = Media()
     sell = orders()
+    mega = orders(['Mega'])
     defs, factions, rosters = [], [], {}
     unit_ids = {}
     tech_nodes, tech_points = [], {}
@@ -756,7 +759,8 @@ def main():
                     continue
                 entries = sell.get((side, name))
                 if not entries:
-                    REPORT['leftOut'][name] = 'Sold only by Space or Space Mega factories: a space map unit.'
+                    REPORT['leftOut'][name] = ('Sold only by the Mega Factory, which a later batch ports.' if mega.get((side, name))
+                                               else 'Sold only by Space or Space Mega factories: a space map unit.')
                     continue
                 loadouts = {}
                 for o in entries:

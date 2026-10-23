@@ -12,8 +12,8 @@ refinery, supply depot, institute, turrets and walls), and the first
 development plan each side researches, with the units it opens: the
 Federation's *Anti MS Plan* and Zeon's *Ground Type Zaku Development Plan*.
 Later plans, later eras (UC0087, C.E.71), pilots and the rest of the source
-are later batches; [COMPATIBILITY.md](COMPATIBILITY.md) lists exactly what is
-and is not here.
+are later batches. [DOCS.md](DOCS.md) tracks the port's progress, how to
+carry it on, and exactly what is and is not here.
 
 The pack sets `hideFromListing: true` and requires **extension host API 2**,
 **large content capacity**, and a game whose definition packs may carry their

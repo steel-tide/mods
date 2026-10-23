@@ -1552,7 +1552,7 @@
     "RB_79K": "Sold only by Space or Space Mega factories: a space map unit.",
     "RB_79": "Sold only by Space or Space Mega factories: a space map unit.",
     "Pilot_EFSF_0079_N_ACE_YDR": "A named pilot (ACE), which is a later batch.",
-    "MiniTrayClass": "Sold only by Space or Space Mega factories: a space map unit.",
+    "MiniTrayClass": "Sold only by the Mega Factory, which a later batch ports.",
     "Gattle": "Sold only by Space or Space Mega factories: a space map unit.",
     "JiccoClass": "Sold only by Space or Space Mega factories: a space map unit.",
     "MusaiClass": "Sold only by Space or Space Mega factories: a space map unit.",
@@ -1562,13 +1562,13 @@
     "FalmerClass": "Sold only by Space or Space Mega factories: a space map unit.",
     "Factory_EFSF_0079_Space": "Space theatre: only a space map (TileMode 1) raises it.",
     "Factory_EFSF_0079_Space_Mega": "Space theatre: only a space map (TileMode 1) raises it.",
-    "Factory_EFSF_0079_Mega": "Its list holds no base-tech unit; it opens with later techs.",
+    "Factory_EFSF_0079_Mega": "Sells the big units the development plans open (the Mini Tray among them), a later batch.",
     "Academy_Common_T1": "Trains pilots, which are a later batch.",
     "Beacon_ACE_0079": "Calls named ACE units, a later batch and a host option in the source.",
     "HLV_0079_Build": "Launches HLVs between ground and space maps (AutoTileMode).",
     "Factory_ZEON_0079_Space": "Space theatre: only a space map (TileMode 1) raises it.",
     "Factory_ZEON_0079_Space_Mega": "Space theatre: only a space map (TileMode 1) raises it.",
-    "Factory_ZEON_0079_Mega": "Its list holds no base-tech unit; it opens with later techs."
+    "Factory_ZEON_0079_Mega": "Sells the big units the development plans open (the Mini Tray among them), a later batch."
   },
   "adaptations": [
     "BurkeClass: Hangar_X1_Aircraft_UseEN_Show carries the player's aircraft, which native holds cannot (ground passengers only)",
