@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-22T09:30:31.127Z",
+  "generated": "2026-10-23T06:17:43.373Z",
   "mods": [
     {
       "id": "adolence",
@@ -25,7 +25,7 @@
       "updated": "2026-10-22T09:15:32+08:00",
       "published": "2026-09-20T15:16:26+08:00",
       "bytes": 1174305,
-      "downloads": 367,
+      "downloads": 375,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -3483,7 +3483,7 @@
       "updated": "2026-10-18T16:02:28+08:00",
       "published": "2026-09-28T15:17:15+08:00",
       "bytes": 9628083,
-      "downloads": 105,
+      "downloads": 111,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -6732,7 +6732,7 @@
       "updated": "2026-10-16T14:58:07+08:00",
       "published": "2026-10-14T19:00:56+08:00",
       "bytes": 11709377,
-      "downloads": 55,
+      "downloads": 60,
       "screenshots": [
         {
           "file": "covers/blackout-card.webp",
@@ -8289,7 +8289,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-28T08:53:21+08:00",
       "bytes": 1062988,
-      "downloads": 155,
+      "downloads": 162,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -11855,7 +11855,7 @@
       "updated": "2026-10-09T20:42:04+08:00",
       "published": "2026-09-27T14:59:28+08:00",
       "bytes": 579557,
-      "downloads": 180,
+      "downloads": 190,
       "screenshots": [
         {
           "file": "screenshots/cover.webp",
@@ -12147,7 +12147,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-08T12:34:52+08:00",
       "bytes": 3228772,
-      "downloads": 160,
+      "downloads": 170,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -12295,7 +12295,7 @@
       "updated": "2026-10-22T16:26:04+08:00",
       "published": "2026-10-19T12:25:54+08:00",
       "bytes": 43893759,
-      "downloads": 15,
+      "downloads": 18,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -21074,7 +21074,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-08T22:53:58+08:00",
       "bytes": 15799328,
-      "downloads": 126,
+      "downloads": 132,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
