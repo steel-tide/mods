@@ -636,6 +636,772 @@
       ],
       "weaponsLeftOut": []
     },
+    "gw-mini-tray-class": {
+      "source": "MiniTrayClass",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MiniTrayClass/MiniTrayClass.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Mega",
+          "section": "action_Produce_MiniTrayClass",
+          "metal": 6000.0,
+          "count": 1,
+          "time": 45.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-rx-79-g": {
+      "source": "RX_79_G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_79_G/RX_79_G.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_79_G_StandardSquad",
+          "metal": 11500.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ],
+        [
+          "EF_SHM",
+          "another loadout (EquipmentIndex 5/None)"
+        ]
+      ]
+    },
+    "gw-rx-79-g-bazooka": {
+      "source": "RX_79_G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_79_G/RX_79_G.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_79_G_BazookaSquad",
+          "metal": 12100.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ],
+        [
+          "EF_SHM",
+          "another loadout (EquipmentIndex 5/None)"
+        ]
+      ]
+    },
+    "gw-rx-79-g-beam-rifle": {
+      "source": "RX_79_G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_79_G/RX_79_G.ini",
+      "loadout": [
+        2,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_79_G_BeamRifleSquad",
+          "metal": 13100.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ],
+        [
+          "EF_SHM",
+          "another loadout (EquipmentIndex 5/None)"
+        ]
+      ]
+    },
+    "gw-rx-79-g-with-backpack": {
+      "source": "RX_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_79_G/RX_79_G_WithBackpack.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_79_G_WithBackpack_StandardSquad",
+          "metal": 12100.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rx-79-g-with-backpack-bazooka": {
+      "source": "RX_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_79_G/RX_79_G_WithBackpack.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_79_G_WithBackpack_BazookaSquad",
+          "metal": 12600.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rx-79-g-with-backpack-beam-rifle": {
+      "source": "RX_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_79_G/RX_79_G_WithBackpack.ini",
+      "loadout": [
+        2,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_79_G_WithBackpack_BeamWeaponSquad",
+          "metal": 13600.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rx-79-g-with-backpack-180mmcannon": {
+      "source": "RX_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_79_G/RX_79_G_WithBackpack.ini",
+      "loadout": [
+        3,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_79_G_WithBackpack_CannonSquad",
+          "metal": 13050.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rx-79-g-with-backpack-msl": {
+      "source": "RX_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_79_G/RX_79_G_WithBackpack.ini",
+      "loadout": [
+        4,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_79_G_WithBackpack_MSLSquad",
+          "metal": 12600.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g": {
+      "source": "RGM_79_G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G/RGM_79_G.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_StandardSquad",
+          "metal": 5000.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g-bazooka": {
+      "source": "RGM_79_G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G/RGM_79_G.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_BazookaSquad",
+          "metal": 5600.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g-beam-rifle": {
+      "source": "RGM_79_G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G/RGM_79_G.ini",
+      "loadout": [
+        2,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_BeamRifleSquad",
+          "metal": 6600.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g-with-backpack": {
+      "source": "RGM_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G/RGM_79_G_WithBackpack.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_WithBackpack_StandardSquad",
+          "metal": 5500.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g-with-backpack-bazooka": {
+      "source": "RGM_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G/RGM_79_G_WithBackpack.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_WithBackpack_BazookaSquad",
+          "metal": 6100.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g-with-backpack-beam-rifle": {
+      "source": "RGM_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G/RGM_79_G_WithBackpack.ini",
+      "loadout": [
+        2,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_WithBackpack_BeamWeaponSquad",
+          "metal": 7100.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g-with-backpack-180mmcannon": {
+      "source": "RGM_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G/RGM_79_G_WithBackpack.ini",
+      "loadout": [
+        3,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_WithBackpack_CannonSquad",
+          "metal": 6550.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_GroundTypeMissileLauncher",
+          "another loadout (EquipmentIndex 4/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g-with-backpack-msl": {
+      "source": "RGM_79_G_WithBackpack",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G/RGM_79_G_WithBackpack.ini",
+      "loadout": [
+        4,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_WithBackpack_MSLSquad",
+          "metal": 6100.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_GroundTypeBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "EF_100mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "EF_GroundTypeBeamRifle",
+          "another loadout (EquipmentIndex 2/None)"
+        ],
+        [
+          "EF_180mmCannon",
+          "another loadout (EquipmentIndex 3/None)"
+        ]
+      ]
+    },
+    "gw-rgm-79-g-sp": {
+      "source": "RGM_79_G_SP",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RGM_79_G_SP/RGM_79_G_SP.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RGM_79_G_SP_StandardSquad",
+          "metal": 2100.0,
+          "count": 1,
+          "time": 35.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "EF_LongRangeBeamSniperRifle_Sniper_Aim",
+          "never fired"
+        ]
+      ]
+    },
+    "gw-rx-75r": {
+      "source": "RX_75R",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RX_75R/RX_75R.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_RX_75R_StandardSquad",
+          "metal": 2300.0,
+          "count": 3,
+          "time": 60.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "EF_RX_75R_Cannon_Fake",
+          "never fired"
+        ]
+      ]
+    },
+    "gw-rb-79n": {
+      "source": "RB_79N",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/RB_79N/RB_79N.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_RB_79N_StandardSquad",
+          "metal": 1100.0,
+          "count": 3,
+          "time": 30.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-big-tray-class": {
+      "source": "BigTrayClass",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/BigTrayClass/BigTrayClass.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Mega",
+          "section": "action_Produce_BigTrayClass",
+          "metal": 9000.0,
+          "count": 1,
+          "time": 50.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "EF_BigTrayClass_MainCannon_L",
+          "never fired"
+        ]
+      ]
+    },
     "gw-army-squad-zeon-0079": {
       "source": "Army_Squad_ZEON_0079_N_G_A",
       "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/Army_Squad/Squad/Army_Squad_ZEON_0079_N_G_A.ini",
@@ -1442,6 +2208,364 @@
         }
       ],
       "weaponsLeftOut": []
+    },
+    "gw-ms-07b3": {
+      "source": "MS_07B3",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_07B3/MS_07B3.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_07B3",
+          "metal": 2250.0,
+          "count": 1,
+          "time": 35.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_HeatSword_MS_07B3_BF_B",
+          "never fired"
+        ]
+      ]
+    },
+    "gw-ms-06g": {
+      "source": "MS_06G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06G/MS_06G.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06G_StandardSquad",
+          "metal": 4500.0,
+          "count": 3,
+          "time": 60.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_360mmBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ],
+        [
+          "ZN_4XMSL",
+          "another loadout (EquipmentIndex 2/None)"
+        ]
+      ]
+    },
+    "gw-ms-06g-bazooka": {
+      "source": "MS_06G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06G/MS_06G.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06G_BazookaSquad",
+          "metal": 5100.0,
+          "count": 3,
+          "time": 60.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_120mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "ZN_4XMSL",
+          "another loadout (EquipmentIndex 2/None)"
+        ]
+      ]
+    },
+    "gw-ms-06g-4xmsl": {
+      "source": "MS_06G",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06G/MS_06G.ini",
+      "loadout": [
+        2,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06G_AntiShipSquad",
+          "metal": 6400.0,
+          "count": 3,
+          "time": 60.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_120mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "ZN_360mmBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ]
+      ]
+    },
+    "gw-ms-06e": {
+      "source": "MS_06E",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06E/MS_06E.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06E",
+          "metal": 3450.0,
+          "count": 3,
+          "time": 65.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ]
+      ]
+    },
+    "gw-ms-06r-1a": {
+      "source": "MS_06R_1A",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06R_1/MS_06R_1A.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06R_1A_StandardSquad",
+          "metal": 3450.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_270mmBazooka",
+          "another loadout (EquipmentIndex 1/None)"
+        ]
+      ]
+    },
+    "gw-ms-06r-1a-bazooka": {
+      "source": "MS_06R_1A",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06R_1/MS_06R_1A.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06R_1A_BazookaSquad",
+          "metal": 4050.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_120mmMG",
+          "another loadout (EquipmentIndex 0/None)"
+        ]
+      ]
+    },
+    "gw-ms-06d": {
+      "source": "MS_06D",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06D/MS_06D.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06D_StandardSquad",
+          "metal": 3750.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_MS_06K_BigGun",
+          "fallback for a broken arm"
+        ]
+      ]
+    },
+    "gw-ms-06d-biggun": {
+      "source": "MS_06D",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06D/MS_06D.ini",
+      "loadout": [
+        1,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06D_BigGunSquad",
+          "metal": 4350.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ],
+        [
+          "ZN_120mmMGShortVer",
+          "another loadout (EquipmentIndex 0/None)"
+        ],
+        [
+          "ZN_MS_06K_BigGun",
+          "fallback for a broken arm"
+        ]
+      ]
+    },
+    "gw-ms-06v": {
+      "source": "MS_06V",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MS_06V/MS_06V.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MS_06V_StandardSquad",
+          "metal": 2250.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "ZN_MS_06V_Cannon_Fake",
+          "never fired"
+        ]
+      ]
+    },
+    "gw-mtank-eins": {
+      "source": "MTank_Eins",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MTank_Eins/MTank_Eins.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MTank_Eins_StandardSquad",
+          "metal": 950.0,
+          "count": 3,
+          "time": 25.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
+    },
+    "gw-msm-04": {
+      "source": "MSM_04",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/MSM_04/MSM_04.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Land",
+          "section": "action_Produce_MSM_04_StandardSquad",
+          "metal": 3750.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        },
+        {
+          "kind": "Aqua",
+          "section": "action_Produce_MSM_04_StandardSquad",
+          "metal": 3750.0,
+          "count": 3,
+          "time": 55.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": [
+        [
+          "Common_Push_A",
+          "fallback for a broken arm"
+        ]
+      ]
+    },
+    "gw-dabude-class": {
+      "source": "DabudeClass",
+      "file": "GW_BattleUniverse_DLC_0079/Units/BattleUnits/DabudeClass/DabudeClass.ini",
+      "loadout": [
+        0,
+        0
+      ],
+      "orders": [
+        {
+          "kind": "Mega",
+          "section": "action_Produce_DabudeClass",
+          "metal": 8000.0,
+          "count": 1,
+          "time": 50.0,
+          "moral": 0.0
+        }
+      ],
+      "weaponsLeftOut": []
     }
   },
   "buildings": {
@@ -1457,6 +2581,10 @@
       "source": "Factory_EFSF_0079_Aqua",
       "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/EFSF_0079/Factory_EFSF_0079_Aqua.ini"
     },
+    "gw-factory-efsf-0079-mega": {
+      "source": "Factory_EFSF_0079_Mega",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/EFSF_0079/Factory_EFSF_0079_Mega.ini"
+    },
     "gw-factory-zeon-0079-land": {
       "source": "Factory_ZEON_0079_Land",
       "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/ZEON_0079/Factory_ZEON_0079_Land.ini"
@@ -1468,6 +2596,10 @@
     "gw-factory-zeon-0079-aqua": {
       "source": "Factory_ZEON_0079_Aqua",
       "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/ZEON_0079/Factory_ZEON_0079_Aqua.ini"
+    },
+    "gw-factory-zeon-0079-mega": {
+      "source": "Factory_ZEON_0079_Mega",
+      "file": "GW_BattleUniverse_DLC_0079/Units/Buildings/Factory/Faction/ZEON_0079/Factory_ZEON_0079_Mega.ini"
     },
     "gw-refinery-t1": {
       "source": "Refinery_Common_T1",
@@ -1532,6 +2664,19 @@
         "TechPoint": 1200.0
       }
     },
+    "gw-efsf-0079-early-type-ms-dev-plan": {
+      "source": "Tech_EFSF_0079_EarlyTypeMSDevelopmentPlan",
+      "file": "GW_BattleUniverse_DLC_0079/Units/TechTree/Tech/Faction/EFSF_0079/Common/Tech_EFSF_0079_EarlyTypeMSDevelopmentPlan.ini",
+      "after": [
+        "Tech_EFSF_0079_AntiMSPlan"
+      ],
+      "price": {
+        "Time": 30.0,
+        "Money": 6000.0,
+        "Resource": 2000.0,
+        "TechPoint": 3600.0
+      }
+    },
     "gw-zeon-0079-ground-type-zaku-dev-plan": {
       "source": "Tech_ZEON_0079_GroundTypeZakuDevelopmentPlan",
       "file": "GW_BattleUniverse_DLC_0079/Units/TechTree/Tech/Faction/ZEON_0079/Common/Tech_ZEON_0079_GroundTypeZakuDevelopmentPlan.ini",
@@ -1544,6 +2689,19 @@
         "Resource": 1000.0,
         "TechPoint": 1200.0
       }
+    },
+    "gw-zeon-0079-ground-type-ms-dev-plan": {
+      "source": "Tech_ZEON_0079_GroundTypeMSDevelopmentPlan",
+      "file": "GW_BattleUniverse_DLC_0079/Units/TechTree/Tech/Faction/ZEON_0079/Common/Tech_ZEON_0079_GroundTypeMSDevelopmentPlan.ini.ini",
+      "after": [
+        "Tech_ZEON_0079_GroundTypeZakuDevelopmentPlan"
+      ],
+      "price": {
+        "Time": 30.0,
+        "Money": 6000.0,
+        "Resource": 2000.0,
+        "TechPoint": 3600.0
+      }
     }
   },
   "leftOut": {
@@ -1552,7 +2710,11 @@
     "RB_79K": "Sold only by Space or Space Mega factories: a space map unit.",
     "RB_79": "Sold only by Space or Space Mega factories: a space map unit.",
     "Pilot_EFSF_0079_N_ACE_YDR": "A named pilot (ACE), which is a later batch.",
-    "MiniTrayClass": "Sold only by the Mega Factory, which a later batch ports.",
+    "RGM_79_G_SPACE": "Sold only by Space or Space Mega factories: a space map unit.",
+    "RB_79M": "Sold only by Space or Space Mega factories: a space map unit.",
+    "Pilot_EFSF_0079_N_ACE_RVL": "A named pilot (ACE), which is a later batch.",
+    "Pilot_EFSF_0079_N_ACE_SHR": "A named pilot (ACE), which is a later batch.",
+    "MagellanClass": "Sold only by Space or Space Mega factories: a space map unit.",
     "Gattle": "Sold only by Space or Space Mega factories: a space map unit.",
     "JiccoClass": "Sold only by Space or Space Mega factories: a space map unit.",
     "MusaiClass": "Sold only by Space or Space Mega factories: a space map unit.",
@@ -1560,15 +2722,16 @@
     "MS_06F_MineLayer": "Sold only by Space or Space Mega factories: a space map unit.",
     "Pilot_ZEON_0079_N_ACE_RBR": "A named pilot (ACE), which is a later batch.",
     "FalmerClass": "Sold only by Space or Space Mega factories: a space map unit.",
+    "Pilot_ZEON_0079_N_ACE_GRN": "A named pilot (ACE), which is a later batch.",
+    "Pilot_ZEON_0079_N_ACE_NRS": "A named pilot (ACE), which is a later batch.",
+    "ChivvayClass": "Sold only by Space or Space Mega factories: a space map unit.",
     "Factory_EFSF_0079_Space": "Space theatre: only a space map (TileMode 1) raises it.",
     "Factory_EFSF_0079_Space_Mega": "Space theatre: only a space map (TileMode 1) raises it.",
-    "Factory_EFSF_0079_Mega": "Sells the big units the development plans open (the Mini Tray among them), a later batch.",
     "Academy_Common_T1": "Trains pilots, which are a later batch.",
     "Beacon_ACE_0079": "Calls named ACE units, a later batch and a host option in the source.",
     "HLV_0079_Build": "Launches HLVs between ground and space maps (AutoTileMode).",
     "Factory_ZEON_0079_Space": "Space theatre: only a space map (TileMode 1) raises it.",
-    "Factory_ZEON_0079_Space_Mega": "Space theatre: only a space map (TileMode 1) raises it.",
-    "Factory_ZEON_0079_Mega": "Sells the big units the development plans open (the Mini Tray among them), a later batch."
+    "Factory_ZEON_0079_Space_Mega": "Space theatre: only a space map (TileMode 1) raises it."
   },
   "adaptations": [
     "BurkeClass: Hangar_X1_Aircraft_UseEN_Show carries the player's aircraft, which native holds cannot (ground passengers only)",
@@ -1578,11 +2741,21 @@
     "Common_MinovskyParticle_S: the player's targeted action fires on its own, once a life, at its source range",
     "desc:M_Type_Submarine: runs past the format's 400 characters; its closing line is dropped",
     "M_Type_Submarine: Hangar_X6_Aircraft carries the player's aircraft, which native holds cannot (ground passengers only)",
+    "desc:MiniTrayClass: runs past the format's 400 characters; its closing line is dropped, and its last line",
+    "Common_MinovskyParticle_M: the player's targeted action fires on its own, once a life, at its source range",
+    "desc:BigTrayClass: runs past the format's 400 characters; its closing line is dropped, and its last 2 lines",
+    "Common_MinovskyParticle_M: the player's targeted action fires on its own, once a life, at its source range",
+    "EF_BigTrayClass_MainCannon: the player's targeted action fires on its own, once a life, at its source range",
+    "Common_Turret_Mortar_BigTrayClass: the player's targeted action fires on its own, once a life, at its source range",
     "ZN_MS_06C_Bombing_Nuke: the player's targeted action fires on its own, once a life, at its source range",
     "MS_06C: the source also asks 250 MoralPoint per order; MoralPoint is not ported",
     "Common_MinovskyParticle_S: the player's targeted action fires on its own, once a life, at its source range",
     "desc:M_Type_Submarine_ZEON: runs past the format's 400 characters; its closing line is dropped",
     "M_Type_Submarine_ZEON: Hangar_X6_Aircraft carries the player's aircraft, which native holds cannot (ground passengers only)",
+    "desc:DabudeClass: runs past the format's 400 characters; its closing line is dropped, and its last line",
+    "Common_MinovskyParticle_M: the player's targeted action fires on its own, once a life, at its source range",
+    "Common_Turret_Mortar_DabudeClass: the player's targeted action fires on its own, once a life, at its source range",
+    "DabudeClass: Hangar_X1_Aircraft_UseEN_Show carries the player's aircraft, which native holds cannot (ground passengers only)",
     "gw-fan-fan: sold by the airport only (the source's land factory also lists it)"
   ],
   "media": {
@@ -1596,11 +2769,16 @@
     "gw-beamsaber-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/BeamSaber_1.ogg",
     "gw-shellcannon-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/ShellCannon_1.ogg",
     "gw-detect-3": "GW_BattleUniverse_DLC_0087/Resource/Sound/SE/Action/Skill/Detect_3.ogg",
+    "gw-beamrifle-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/BeamRifle_1.ogg",
+    "gw-beamcannon-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/BeamCannon_1.ogg",
+    "gw-railgun-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/RailGun_1.ogg",
+    "gw-shellcannon-5": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/ShellCannon_5.ogg",
     "gw-heathawk-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/HeatHawk_1.ogg",
     "gw-beamcannon-2": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/BeamCannon_2.ogg",
     "gw-throw-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/Throw_1.ogg",
     "gw-fist-2": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/Fist_2.ogg",
-    "gw-beamspraygun-2": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/BeamSprayGun_2.ogg"
+    "gw-beamspraygun-2": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/BeamSprayGun_2.ogg",
+    "gw-beamspraygun-1": "GW_BattleUniverse_DLC_0079/Resource/Sound/SE/Weapon/Fire/BeamSprayGun_1.ogg"
   },
   "missingKorean": []
 }

@@ -5,7 +5,7 @@ A new two-seat map, not one of the source's 22: every definition in mod.json
 stands on it before the whistle, so the whole port can be looked over and
 tried in one match. The Federation holds the west, Zeon the east. Each side
 has its headquarters, factories, refinery, supply depot, radar and institute
-in a row along the north edge, turrets and walls on the highway out of its base, its
+in a row along the north edge, its Mega Factory below them, turrets and walls on the highway out of its base, its
 ground forces on a paved parade ground, its aircraft over the apron and its
 fleet off its own harbour on the southern coast. Between them a highway runs
 through a ruined town. No piece of one side stands within 32 tiles of the
@@ -76,7 +76,7 @@ fill(58, 62, 70, 70, GRASS)
 # each base: a paved apron below the building row, a parade ground behind the
 # defences, a road down to the harbour
 both(3, 8, 31, 11, ROAD)
-both(20, 11, 37, 27, ROAD)
+both(20, 11, 37, 31, ROAD)
 both(12, 29, 14, 64, ROAD)
 both(22, 46, 34, 56, FOREST)
 both(46, 6, 53, 13, FOREST)
@@ -139,13 +139,14 @@ def yard(d):
 BUILDINGS = {  # west-side top-left tiles
     'hq': (3, 3), 'land': (9, 3), 'air': (13, 3), 'gw-supply-depot-t1': (18, 3),
     'gw-refinery-t1': (22, 3), 'gw-turret-radar-a': (27, 3), 'gw-institute-t1': (29, 3), 'aqua': (6, 66),
+    'mega': (3, 38),
     'gw-wall-t1-a': (40, 23), 'gw-turret-mg-a': (40, 26), 'gw-wall-t1-b': (43, 28),
     'gw-turret-cn-a': (40, 29), 'gw-turret-ms-a': (40, 38), 'gw-turret-aa-a': (40, 41),
 }
-PARADE = [(x, y) for y in (12, 15, 18, 21, 24) for x in (21, 24, 27, 30, 33, 36)]
+PARADE = [(x, y) for y in (12, 15, 18, 21, 24, 27, 30) for x in (21, 24, 27, 30, 33, 36)]
 # the apron below the building row, and a second line on the grass above it
 APRON = [(x, 9) for x in range(4, 31, 3)] + [(x, 6) for x in (8, 14, 20, 26)]
-FLEET = [(x, y) for y in (76, 86) for x in (10, 22, 34)]
+FLEET = [(x, y) for y in (76, 86) for x in (10, 22, 34, 46)]
 
 for owner, faction in enumerate(factions):
     roster = faction['roster']

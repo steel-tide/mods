@@ -5,12 +5,14 @@ Mobile Suit Gundam fan mod for Rusted Warfare by **恐龙再健身房**. The fou
 source packages in `rusted-warfare-mods/gw` are read as data; nothing of them
 runs in the game.
 
-This port is the **UC0079 core** and the **first step of each tech tree**:
-what the Earth Federation and the Principality of Zeon unlock at the start of
-a ground match through their `BaseTech` nodes (their base units, factories,
-refinery, supply depot, institute, turrets and walls), and the first
-development plan each side researches, with the units it opens: the
-Federation's *Anti MS Plan* and Zeon's *Ground Type Zaku Development Plan*.
+This port is the **UC0079 core** and the **first two steps of each tech
+tree**: what the Earth Federation and the Principality of Zeon unlock at the
+start of a ground match through their `BaseTech` nodes (their base units,
+factories, Mega Factory, refinery, supply depot, institute, turrets and
+walls), and the first two development plans each side researches, with the
+units they open: the Federation's *Anti MS Plan* and *Early Type MS
+Development Plan*, and Zeon's *Ground Type Zaku Development Plan* and
+*Ground Type MS Development Plan*.
 Later plans, later eras (UC0087, C.E.71), pilots and the rest of the source
 are later batches. [DOCS.md](DOCS.md) tracks the port's progress, how to
 carry it on, and exactly what is and is not here.
@@ -27,9 +29,9 @@ Conquest match with **EFSF[0079]** or **ZEON[0079]** as a seat's faction.
 
 - Each side starts with its headquarters and an **Engineer Team**, which raises
   every building. The HQ trains more engineers.
-- **Land Factory**, **Airport** and **Aqua Factory** sell the base units at the
-  source's prices: a squad order of three becomes three units at a third of the
-  price and time each.
+- **Land Factory**, **Airport**, **Aqua Factory** and **Mega Factory** sell
+  the units at the source's prices: a squad order of three becomes three units
+  at a third of the price and time each.
 - The **Refinery** adds income; the **Supply Depot** raises the power ceiling
   (GW's MP cap) and supplies units around it, as do the HQ and the Aqua Factory.
 - The **headquarters' card** is GW's tech tree: it offers the faction's next
@@ -39,8 +41,9 @@ Conquest match with **EFSF[0079]** or **ZEON[0079]** as a seat's faction.
   TechPoint is in hand; the HQ's and Institute's cards show the TechPoint
   held, and what a waiting plan asks. A plan once researched is kept, and the
   units it opens appear in the factories' lists.
-- Zaku II, Old Zaku, Zaku II Type S and Zanny switch between their machine gun
-  and bazooka/cannon loadouts from their card, paid, beside a supply point.
+- Mobile suits sold with several loadouts (Zaku II, the Ground Type Gundam
+  and GM, Zanny and others) switch between them from their card, paid,
+  beside a supply point.
 - The U-type submarines dive and surface from their card.
 
 ### Odessa Coast
@@ -50,9 +53,9 @@ The pack carries one map, *Odessa Coast*
 source's 22 maps. Every definition in the pack stands on it before the match
 starts, the units behind each plan included. The Federation holds the west and
 Zeon the east. Each base has its headquarters, factories, supply depot,
-refinery, radar and institute along the north edge,
-its aircraft over the apron below them, and its ground forces, loadout variants
-included, on a paved parade ground. Its turrets and walls guard the highway out
+refinery, radar and institute along the north edge, its Mega Factory further
+south, its aircraft over the apron below the building row, and its ground
+forces, loadout variants included, on a paved parade ground. Its turrets and walls guard the highway out
 of the base, and its fleet, the dived submarine forms included, lies off its
 own harbour on the southern coast. Shared buildings stand in both bases.
 Between the bases a highway runs through a ruined town. The two sides stand

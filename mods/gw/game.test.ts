@@ -38,6 +38,7 @@ const ticks = (g: any, n: number) => { for (let i = 0; i < n; i++) g.step(); };
 const en = (module: any, e: any) => (module.snapshot() as any).entities[e.id]?.en;
 const techPoint = (module: any, owner = 0): number => (module.snapshot() as any).techPoint?.[owner] ?? 0;
 const planOf = (faction: string) => manifest.tech.find((n: any) => n.factions.includes(faction));
+const plansOf = (faction: string) => manifest.tech.filter((n: any) => n.factions.includes(faction));
 
 /** a faction's headquarters standing alone, with the tech tree on */
 function headquarters(faction: string) {
@@ -263,6 +264,34 @@ for (const faction of ['gw-efsf-0079', 'gw-zeon-0079']) test(`${faction} researc
   expect(cmdProduce(g, factory.id, units[0].id)).toBe(true);
 }, 60000);
 
+for (const [faction, ship] of [['gw-efsf-0079', 'gw-big-tray-class'], ['gw-zeon-0079', 'gw-dabude-class']]) test(`${faction}'s second plan waits on its first, takes its own TechPoint, and opens its units and the Mega Factory's ${ship}`, () => {
+  const { g, hq, module } = headquarters(faction);
+  const [first, second] = plansOf(faction);
+  expect(second.requires).toEqual([first.id]);
+  const price = manifest.defs.find((d: any) => d.id === hq.defId).extensions[CAP].research;
+  expect(price[second.id]).toBe(3600);
+  // offered once the first is on order, and queued behind it
+  expect(researchOffer(g.st, 0, hq.defId)).toEqual([first.id]);
+  expect(cmdResearch(g, hq.id, second.id)).toBe(false);
+  expect(cmdResearch(g, hq.id, first.id)).toBe(true);
+  expect(researchOffer(g.st, 0, hq.defId)).toEqual([second.id]);
+  expect(cmdResearch(g, hq.id, second.id)).toBe(true);
+  const state = module.snapshot() as any;
+  state.techPoint[0] = 1200 + 3600;
+  module.restore(state);
+  expect(stepUntil(g, () => g.st.players[0].tech?.includes(second.id) === true, 30 * 120)).toBeGreaterThan(0);
+  expect(g.st.players[0].tech).toEqual([first.id, second.id]);
+  expect(techPoint(module)).toBeLessThan(7.5 * 70);
+  const units = manifest.defs.filter((d: any) => d.requires?.includes(second.id));
+  expect(units.length).toBeGreaterThan(8);
+  for (const u of units) expect(techMet(g.st, 0, u.id), u.id).toBe(true);
+  const mega = newEnt(g.st, manifest.defs.find((d: any) => d.id.endsWith('-mega') && d.id.includes(faction.slice(3, 7))).id, 0, 1500, 900);
+  mega.site = false;
+  ticks(g, 1);
+  expect(getDef(mega.defId).produces).toContain(ship);
+  expect(cmdProduce(g, mega.id, ship)).toBe(true);
+}, 60000);
+
 test('an Institute adds its TechPoint; a plan taken off the queue gives its TechPoint back; both survive a save', () => {
   const { g, hq, module } = headquarters('gw-zeon-0079');
   const institute = newEnt(g.st, 'gw-institute-t1', 0, 1100, 900);
@@ -287,14 +316,16 @@ test('an Institute adds its TechPoint; a plan taken off the queue gives its Tech
   expect(techPoint(module)).toBeGreaterThanOrEqual(before + 1200);
 });
 
-for (const faction of ['gw-efsf-0079', 'gw-zeon-0079']) test(`a computer ${faction} side researches its first plan`, () => {
+for (const faction of ['gw-efsf-0079', 'gw-zeon-0079']) test(`a computer ${faction} side climbs its tree`, () => {
   const config: any = { mode: 'sandbox', mapKey: 'greenfield', seed: 19, fog: false, popCap: 200, startMetal: 12000,
     players: [{ isHuman: false, team: 0, faction }, { isHuman: true, team: 1 }] };
   const g = createContentGame(config, buildGameMap(config));
-  const plan = planOf(faction).id;
+  const [first, second] = plansOf(faction).map((n: any) => n.id);
   // a computer side earns three quarters of the TechPoint: 1200 at 5.6 a second, then 30 seconds of work
-  expect(stepUntil(g, () => g.st.players[0].tech?.includes(plan) === true, 30 * 60 * 8)).toBeGreaterThan(0);
-}, 120000);
+  expect(stepUntil(g, () => g.st.players[0].tech?.includes(first) === true, 30 * 60 * 8)).toBeGreaterThan(0);
+  // and the second plan's 3600 after it
+  expect(stepUntil(g, () => g.st.players[0].tech?.includes(second) === true, 30 * 60 * 14)).toBeGreaterThan(0);
+}, 180000);
 
 test('every hull and turret sheet turns smoothly rather than in the 24 baked headings', () => {
   // the game turns a u./tur./dec. sheet live only when its pivotX is 0.5 (spriteLoader's liveRotated)

@@ -48,17 +48,16 @@ SIDES = {
     'EFSF_0079': dict(id='gw-efsf-0079', hq='HQ_EFSF_0079'),
     'ZEON_0079': dict(id='gw-zeon-0079', hq='HQ_ZEON_0079'),
 }
-# The factories a ground match can raise: Space factories need a space map, and
-# the Mega lists hold no base-tech unit.
-FACTORY_KINDS = ['Land', 'Air', 'Aqua']
+# The factories a ground match can raise: Space factories need a space map.
+FACTORY_KINDS = ['Land', 'Air', 'Aqua', 'Mega']
 COMMON_BUILDINGS = ['Refinery_Common_T1', 'SupplyDepot_Common_T1', 'Institute_Common_T1', 'Turret_MG_A', 'Turret_AA_A',
                     'Turret_CN_A', 'Turret_MS_A', 'Turret_Radar_A', 'Wall_T1_A', 'Wall_T1_B']
 # The development plans ported, in tree order: each faction's first after its
 # base tech. The plan's file lists what it unlocks; the faction's TechList
 # prices it in Money, Resource, TechPoint and seconds.
 TECH_PLANS = {
-    'EFSF_0079': ['Tech_EFSF_0079_AntiMSPlan'],
-    'ZEON_0079': ['Tech_ZEON_0079_GroundTypeZakuDevelopmentPlan'],
+    'EFSF_0079': ['Tech_EFSF_0079_AntiMSPlan', 'Tech_EFSF_0079_EarlyTypeMSDevelopmentPlan'],
+    'ZEON_0079': ['Tech_ZEON_0079_GroundTypeZakuDevelopmentPlan', 'Tech_ZEON_0079_GroundTypeMSDevelopmentPlan'],
 }
 # TechPoint a second (HQ_Faction `Gen_TechPoint`): each headquarters 7.5, each
 # T1 Institute 0.75 more; a computer side's is the package's to scale.
@@ -68,7 +67,6 @@ INSTITUTE_TECH_POINT = 0.75
 LEFT_OUT = {
     'Factory_{side}_Space': 'Space theatre: only a space map (TileMode 1) raises it.',
     'Factory_{side}_Space_Mega': 'Space theatre: only a space map (TileMode 1) raises it.',
-    'Factory_{side}_Mega': 'Sells the big units the development plans open (the Mini Tray among them), a later batch.',
     'Academy_Common_T1': 'Trains pilots, which are a later batch.',
     'Beacon_ACE_0079': 'Calls named ACE units, a later batch and a host option in the source.',
     'HLV_0079_Build': 'Launches HLVs between ground and space maps (AutoTileMode).',
@@ -82,6 +80,8 @@ FORMS = {
 VARIANT = {
     'MG': ['MG', '机枪', '기관총'], 'BZ': ['Bazooka', '火箭筒', '바주카'], 'Cannon': ['Cannon', '加农炮', '캐논'],
     'BR': ['Beam Rifle', '光束步枪', '빔 라이플'], 'CN': ['CN', '加农炮', '캐논'], 'BigGun': ['BigGun', '大枪', '빅 건'],
+    '180mmCannon': ['180mmCannon', '加农炮', '180mm 캐논'], 'MSL': ['MSL', '导弹发射器', '미사일 런처'],
+    '4XMSL': ['4XMSL', '简易对舰导弹发射器', '간이 대함 미사일 런처'],
 }
 
 
@@ -103,12 +103,21 @@ TEXT_MAX = 400
 
 
 def fit(text, key):
-    """A description past the format's length loses its closing quote, the last paragraph."""
+    """A description past the format's length loses its closing quote, the last
+    paragraph, and then, while still too long, its last lines, marked with an ellipsis."""
     if len(text) <= TEXT_MAX:
         return text
     cut = text.rsplit('\n\n', 1)[0]
-    assert len(cut) <= TEXT_MAX, key
-    REPORT['adaptations'].append(f'{key}: runs past the format\'s {TEXT_MAX} characters; its closing line is dropped')
+    dropped = 0
+    if len(cut) > TEXT_MAX:
+        while len(cut) + 2 > TEXT_MAX:
+            cut = cut.rsplit('\n', 1)[0]
+            dropped += 1
+        cut += '\n…'
+    note = f'{key}: runs past the format\'s {TEXT_MAX} characters; its closing line is dropped' + (
+        (f', and its last {dropped} lines' if dropped > 1 else ', and its last line') if dropped else '')
+    if note not in REPORT['adaptations']:
+        REPORT['adaptations'].append(note)
     return cut
 
 
@@ -727,7 +736,6 @@ def main():
     global MEDIA_OUT
     MEDIA_OUT = Media()
     sell = orders()
-    mega = orders(['Mega'])
     defs, factions, rosters = [], [], {}
     unit_ids = {}
     tech_nodes, tech_points = [], {}
@@ -759,8 +767,7 @@ def main():
                     continue
                 entries = sell.get((side, name))
                 if not entries:
-                    REPORT['leftOut'][name] = ('Sold only by the Mega Factory, which a later batch ports.' if mega.get((side, name))
-                                               else 'Sold only by Space or Space Mega factories: a space map unit.')
+                    REPORT['leftOut'][name] = 'Sold only by Space or Space Mega factories: a space map unit.'
                     continue
                 loadouts = {}
                 for o in entries:
@@ -897,7 +904,7 @@ def main():
     manifest = {
         'format': 'steel-tide-mod', 'v': 4, 'capacity': 'large',
         'id': 'gw', 'name': ['GW BattleUniverse', '高达战争_战争宇宙', 'GW 배틀 유니버스'],
-        'version': '0.0.3', 'author': '恐龙再健身房',
+        'version': '0.0.4', 'author': '恐龙再健身房',
         'description': [
             'Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits — and open their first development plans.',
             '高达战争_战争宇宙：一年战争。地球联邦军与吉翁公国军的基础兵力——坦克、飞机、舰艇与最早的机动战士——以及各自的第一项开发计划。',
