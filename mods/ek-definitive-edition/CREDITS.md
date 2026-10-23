@@ -10,6 +10,6 @@
 - `maps/complete-showcase.steel-tide-map` is a newly authored test layout for this port. Its terrain uses Steel Tide's existing terrain types; its specimens retain the supplied EK artwork. The map name, instructions and Chinese/Korean translations were added with the layout. `verification/showcase-*.jpg` are actual captures of that map.
 - Missing Korean/Chinese translations were cached using Google Translate, followed by terminology corrections. Existing upstream English and Chinese text was preserved.
 
-The cover is the user-supplied `A8426642F477C69C08D5DE1E1E828E7BF6184E4C.jpeg`, copied unchanged as `screenshots/cover.jpeg`. The other two screenshots are actual game captures made with this local port. The supplied EK directory contains no music, sound files or playable maps of its own, despite its map tag; none is represented as recovered from that directory.
+The cover is the user-supplied `A8426642F477C69C08D5DE1E1E828E7BF6184E4C.jpeg`, kept whole as `screenshots/cover.jpeg`, letterboxed with black bands from 16:9 to the registry's 4:3. The other two screenshots are actual game captures made with this local port. The supplied EK directory contains no music, sound files or playable maps of its own, despite its map tag; none is represented as recovered from that directory.
 
 RW timing reference: [the author's modding reference](https://corrodinggames.com/modding-reference-beta). In particular, source generation uses its 40-tick default interval where none is specified.
