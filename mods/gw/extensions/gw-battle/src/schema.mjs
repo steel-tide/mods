@@ -30,7 +30,7 @@ export default function () {
   function definition(raw, path, issues) {
     const { fail, number, record, only } = checker(issues);
     if (!object(raw)) { fail(path, 'expected a GW battle configuration'); return; }
-    only(raw, path, ['level', 'def', 'plus', 'stance', 'size', 'en', 'mp', 'building', 'supply', 'upkeep', 'hq']);
+    only(raw, path, ['level', 'def', 'plus', 'stance', 'size', 'en', 'mp', 'building', 'supply', 'upkeep', 'hq', 'techPoint', 'research']);
     record(raw.level, path + '.level', ['shoot', 'cqb', 'accuracy', 'reaction'], 0, 10000);
     record(raw.def, path + '.def', ['beam', 'shell', 'cqb', 'dp'], -1000, 100);
     record(raw.plus, path + '.plus', ['beam', 'shell', 'cqb', 'dp'], -100000, 1000000);
@@ -42,6 +42,15 @@ export default function () {
     if (raw.hq !== undefined && typeof raw.hq !== 'boolean') fail(path + '.hq', 'expected a boolean');
     record(raw.supply, path + '.supply', ['range', 'hp', 'en'], 0, 100000);
     number(raw.upkeep, path + '.upkeep', 0, 100000);
+    // TechPoint: what it earns a second, and on a lab what each node it researches asks
+    number(raw.techPoint, path + '.techPoint', 0, 1000);
+    if (raw.research !== undefined) {
+      if (!object(raw.research)) fail(path + '.research', 'expected node id → TechPoint');
+      else for (const [k, v] of Object.entries(raw.research)) {
+        if (!/^[a-z0-9][a-z0-9_-]{1,39}$/.test(k)) fail(path + '.research.' + k, 'expected a research node id');
+        number(v, path + '.research.' + k, 0, 10000000, false);
+      }
+    }
     return structuredClone(raw);
   }
 

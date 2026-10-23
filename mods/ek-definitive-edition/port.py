@@ -23,9 +23,60 @@ CREDIT = .1
 def write(file, value):
     (HERE / file).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
 
-def building_size(entry, definition, width, height):
-    # Keep source aspect/geometry; raise compact buildings to their footprint.
-    return max(1, min(definition['fw'] * 32 / max(1, width), 512 / max(1, width, height)))
+def team_paint(im):
+    """RW's default `teamColoringMode` recolours pure green: every shade
+    of hue 120, red equal to blue and green above them (EK paints its
+    faction panels so, from 24,49,24 to 122,190,122). The game recolours
+    magenta in three tones, chosen here by the green's strength. Converts
+    in place; True when anything was."""
+    px = im.load()
+    found = False
+    for y in range(im.height):
+        for x in range(im.width):
+            r, g, b, a = px[x, y]
+            if a < 8 or r != b or g < r + 8:
+                continue
+            px[x, y] = (255, 102, 255, a) if g >= 175 else (255, 0, 255, a) if g >= 95 else (153, 0, 153, a)
+            found = True
+    return found
+
+def save_png(im, path):
+    # Another Pillow or zlib encodes the same pixels to other bytes; keep the
+    # checked-in file when nothing it shows has changed.
+    if path.is_file():
+        with Image.open(path) as old:
+            if old.size == im.size and old.convert('RGBA').tobytes() == im.tobytes():
+                return
+    im.save(path, optimize=True)
+
+RW_TILE = 20
+# world px a melee reach gains for the room between two pushing hulls
+MELEE_SLACK = 12
+# A building is drawn at most this much larger than the units around it.
+BUILDING_MAX = 1.5
+
+def footprint(core):
+    """RW `footprint` (left,up,right,down tiles; RW's default is one tile) as
+    whole Steel Tide tiles, and the scale that lays the RW footprint on them.
+
+    An RW tile is 15 world px at the units' scale, a Steel Tide tile 32, so a
+    footprint rounds up to whole tiles and the building is drawn larger by the
+    smaller of the two axes' ratios: a 3×1 wall fills its two tiles end to
+    end, as it fills its three in RW. A one-tile building would grow 2.13×;
+    the factor stops at BUILDING_MAX so turrets and towers keep their size
+    beside the units. The building stands at the footprint's centre."""
+    f = [num(v) for v in str(core.get('footprint', '') or '0,0,0,0').split(',')]
+    if len(f) != 4:
+        f = [0, 0, 0, 0]
+    w, h = (f[2] - f[0] + 1) * RW_TILE * WORLD, (f[3] - f[1] + 1) * RW_TILE * WORLD
+    fw, fh = (min(8, max(1, math.ceil(v / 32 - 1e-9))) for v in (w, h))
+    return fw, fh, min(BUILDING_MAX, fw * 32 / w, fh * 32 / h)
+
+def building_scale(fw, fh, factor, width, height):
+    """`factor` held back where the art itself already overhangs its
+    footprint by half again (a one-tile drill 144 px tall), never below 1."""
+    reach = max(width / (fw * 32), height / (fh * 32))
+    return max(1, min(factor, 1.5 / max(1e-9, reach)))
 
 def round_stats(values, fields):
     """Keep authored gameplay stats readable without quantizing internal coefficients."""
@@ -120,7 +171,13 @@ class Media:
         origin = ini.origins.get(section, {}).get(key) or str(RW / entry['source'])
         return resolve(ini.get(section, {}).get(key), Path(origin).parent)
 
-    def sheet(self, entry, section, key, sheet_key, scale, frames=1, rotated=True, fps=0):
+    def sheet(self, entry, section, key, sheet_key, scale, frames=1, rotated=True, fps=0, display=None, offset=(0, 0), teams=False):
+        """`scale` is RW px per image px. `display` is the multiple the game draws
+        the sheet at: 1.5625 for a unit's hull and parts, 1 for a building's
+        body and parts, projectiles and wrecks. `offset` is RW's
+        `image_drawOffsetX/Y` (RW px, x right, y forward): the picture is
+        padded so its pivot stays the frame's centre. `teams` turns RW's
+        pure-green faction paint into the game's magenta."""
         if len(sheet_key.split('.')[-1])>40 or not re.fullmatch(r'[a-z]+\.[a-z0-9_-]+',sheet_key):
             sheet_key=sheet_key.split('.')[0]+'.ek-definitive-edition-'+hashlib.sha256(sheet_key.encode()).hexdigest()[:18]
         path = self.path(entry, section, key)
@@ -130,31 +187,42 @@ class Media:
                 self.issues.append({'unit': entry['rwName'], 'field': section + '.' + key, 'source': ref, 'issue': 'Missing source image'})
             return None
         im = Image.open(path).convert('RGBA')
+        painted = teams and team_paint(im)
         frames = max(1, min(64, frames))
         frame_w = im.width // frames
         frame_h = im.height
         if frame_w * frames != im.width:
             frames = 1
             frame_w = im.width
+        if (offset[0] or offset[1]) and scale > 0 and frames == 1:
+            # the picture's centre sits `offset` from the pivot; widen the
+            # frame on the far side so the pivot is the centre again
+            dx, dy = round(abs(offset[0]) / scale), round(abs(offset[1]) / scale)
+            padded = Image.new('RGBA', (frame_w + 2 * dx, frame_h + 2 * dy))
+            padded.alpha_composite(im, (dx + (dx if offset[0] > 0 else -dx), dy + (-dy if offset[1] > 0 else dy)))
+            im, frame_w, frame_h = padded, padded.width, padded.height
+        if display is None:
+            display = DISPLAY if rotated else 1
         # Keep original pixels; only the declared world size changes. Do not
         # regenerate or replace source artwork, or remove its transparency.
-        factor = scale * WORLD / (DISPLAY if rotated else 1)
+        factor = scale * WORLD / display
         width, height = frame_w * factor, frame_h * factor
         correction = max(1, 4 / max(.001, width), 4 / max(.001, height))
         correction = min(correction, 512 / max(width, height, .001))
         fw, fh = max(4, round(width * correction)), max(4, round(height * correction))
         fw, fh = min(512, fw), min(512, fh)
-        identity=(sheet_key.split('.')[0],hashlib.sha256(im.tobytes()).hexdigest(), im.size, frames, fw, fh, rotated, fps)
+        identity=(sheet_key.split('.')[0],hashlib.sha256(im.tobytes()).hexdigest(), im.size, frames, fw, fh, rotated, fps, painted)
         if identity in self.sheet_cache:
             return self.sheet_cache[identity]
         self.sheet_cache[identity]=sheet_key
         file = 'sprites/' + sheet_key + '.png'
+        # Source frames are hand-drawn: no median freeze of their animation.
         sheet = {'key': sheet_key, 'file': file, 'frames': frames, 'fw': fw, 'fh': fh, 'rotated': rotated,
-                 'teams': False, 'stripBg': False, 'stabilize': False}
+                 'teams': bool(painted), 'stripBg': False, 'stabilize': False, 'freezeStatic': False}
         if fps:
             sheet['fps'] = min(60, fps)
         if self.enabled:
-            im.save(HERE / file, optimize=True)
+            save_png(im, HERE / file)
         self.sprites.append(sheet)
         self.images[sheet_key] = {'source': str(path.relative_to(RW)) if path.is_relative_to(RW) else str(path.relative_to(HERE)), 'scale': scale, 'sourceFrame': [frame_w, frame_h],
                                   'displayFrame': [fw, fh], 'minimumSizeFactor': round(correction, 5)}
@@ -167,7 +235,7 @@ class Media:
         name='ek-definitive-edition-'+ref.replace('_','-')
         if name in self.audio:return name
         file='sounds/'+name+'.mp3'
-        if self.enabled:
+        if self.enabled and not (HERE/file).is_file():
             (HERE/'sounds').mkdir(exist_ok=True)
             subprocess.run(['ffmpeg','-v','error','-y','-i',str(source),'-ac','1','-ar','44100','-b:a','96k',str(HERE/file)],check=True)
         self.sounds.append({'key':name,'file':file});self.audio[name]=str(source.relative_to(HERE));return name
@@ -181,12 +249,15 @@ class Media:
             scale = num(g['scaleImagesTo']) / max(1, Image.open(path).width / frames)
         building = definition['kind'] == 'building'
         building_factor = 1
-        if building and path:
-            with Image.open(path) as im:
-                building_factor = building_size(entry, definition, im.width / frames * scale * WORLD, im.height * scale * WORLD)
+        if building:
+            fw, fh, factor = footprint(entry['ini']['core'])
+            building_factor = factor
+            if path:
+                with Image.open(path) as im:
+                    building_factor = building_scale(fw, fh, factor, im.width / frames * scale * WORLD, im.height * scale * WORLD)
             scale *= building_factor
         key = self.sheet(entry, 'graphics', 'image', 'u.' + entry['id'], scale, frames, not building,
-                         60 / max(1, num(g.get('animation_idle_speed'), 10)) if frames > 1 else 0)
+                         60 / max(1, num(g.get('animation_idle_speed'), 10)) if frames > 1 else 0, teams=True)
         if key:
             definition['sprite'] = key
             if not building and frames>1:
@@ -199,13 +270,12 @@ class Media:
                 if animations:sheet['anims']=animations
 
             if building:
-                # Explicit anchor keeps the source artwork centered on its footprint.
+                # RW centres the picture on the footprint, `image_offsetY` RW
+                # px lower on screen. Turrets and arms keep source coordinates,
+                # so the game must not fit the content to the footprint.
                 sheet=next(s for s in self.sprites if s['key']==key)
-                sheet['anchorY'] = round(sheet['fh'] / 2)
-                # Preserve source coordinates for turrets and arms; automatic
-                # content fitting would move/resize the body independently.
-                if building_factor > 1:
-                    sheet['fitFootprint'] = False
+                sheet['anchorY'] = round(sheet['fh'] / 2 - num(g.get('image_offsetY')) * WORLD * building_factor)
+                sheet['fitFootprint'] = False
                 self.images[key]['buildingScaleFactor'] = round(building_factor, 5)
         return scale, building_factor
 
@@ -215,34 +285,50 @@ def weapon(entry, sec, turret, media):
     if not projectile:
         return None
     p = projectile
+    def may(key, default):
+        # A turret's own flag, else the unit's; RW attacks land units and
+        # nothing else by default. A conditional flag is a candidate here and
+        # its expression is checked when the gun picks a target.
+        value = str(turret.get(key, attack.get(key, '')) or '').strip()
+        return value.lower().startswith('if ') or yes(value or None, default)
     targets = []
-    if yes(turret.get('canAttackFlyingUnits', attack.get('canAttackFlyingUnits')), True) or str(turret.get('canAttackFlyingUnits',attack.get('canAttackFlyingUnits',''))).startswith('if '):
+    if may('canAttackFlyingUnits', False):
         targets.append('air')
-    if yes(turret.get('canAttackLandUnits', attack.get('canAttackLandUnits')), True) or str(turret.get('canAttackLandUnits',attack.get('canAttackLandUnits',''))).startswith('if '):
+    if may('canAttackLandUnits', True):
         targets += ['ground', 'ship']
-    if yes(turret.get('canAttackUnderwaterUnits', attack.get('canAttackUnderwaterUnits'))) or str(turret.get('canAttackUnderwaterUnits',attack.get('canAttackUnderwaterUnits',''))).startswith('if '):
+    if may('canAttackUnderwaterUnits', False):
         targets.append('sub')
     if not yes(turret.get('canAttackNotTouchingWaterUnits', attack.get('canAttackNotTouchingWaterUnits')), True):
         targets = [t for t in targets if t not in ('ground', 'air')]
-    if not targets:
+    # A turret that may fire at nothing serves interception or actions only.
+    idle = not targets
+    if idle:
         targets = ['ground','ship']
     pr = turret.get('projectile', '1')
     tag = (sec + ' ' + str(p.get('tags', '')) + ' ' + str(p.get('image', ''))).lower()
     missile = any(s in tag for s in ('missile', 'rim-', 'atgm', 'rocket', 'harpoon')) or yes(p.get('trailEffect'))
-    torpedo = 'torp' in tag or targets == ['sub']
-    bomb = 'bomb' in tag and not missile
+    # The game runs a torpedo only along open water, so only a round that
+    # strikes nothing but hulls is one; a bomb named `eris_torp` that hits
+    # the ground is a bomb.
+    torpedo = set(targets) <= {'ship', 'sub'} and ('sub' in targets or 'torp' in tag)
+    flying = str(ini.get('movement', {}).get('movementType', '')).strip().upper() == 'AIR'
+    bomb = not torpedo and not missile and ('bomb' in tag or flying and yes(p.get('targetGround')))
     cls = 'torpedo' if torpedo else 'aa' if targets == ['air'] else 'rocket' if missile else 'he' if num(p.get('areaRadius')) > 30 else 'cannon'
     kind = 'torpedo' if torpedo else 'bomb' if bomb else 'missile' if missile else 'shell'
     range_ = num(turret.get('limitingRange', attack.get('maxAttackRange')), 150) * WORLD / 32
+    if yes(attack.get('isMelee')) and not turret.get('limitingRange'):
+        # A melee reach runs from the attacker's edge; here range runs from its
+        # centre, and hulls keep apart by their bodies, wider than their radii.
+        range_ += (num(ini.get('core', {}).get('radius'), 10) * WORLD + MELEE_SLACK) / 32
     if range_ > 2000:
         range_ = 2000  # source silo's effectively global 99,999,999 range
     reload_ = seconds(turret.get('delay', attack.get('shootDelay')), 1)
     direct, area = num(p.get('directDamage')), num(p.get('areaDamage'))
     native = {'id': sec.removeprefix('turret_'), 'cls': cls, 'projectile': kind, 'dmg': min(100000, direct if direct else area),
               'reload': min(600, max(.05, reload_)), 'range': min(64, max(.5, range_)), 'targets': targets,
-              'speed': min(5000, max(1, num(p.get('speed'), 5) * 60 * WORLD)),
+              'speed': min(5000, max(1, num(p.get('targetSpeed', p.get('speed')), 5) * 60 * WORLD)),
               'turret': True, 'homing': not yes(p.get('targetGround')) and not bomb,
-              'arc': yes(p.get('ballistic')), 'interceptable': num(p.get('deflectionPower'), 1) >= 0,
+              'arc': yes(p.get('ballistic')) and 'air' not in targets, 'interceptable': num(p.get('deflectionPower'), 1) >= 0,
               'splash': min(500, num(p.get('areaRadius')) * WORLD),
               'mult': {a: 1 for a in ('light', 'medium', 'heavy', 'ship', 'sub', 'air', 'structure')}}
     if turret.get('limitingMinRange'):
@@ -257,13 +343,15 @@ def weapon(entry, sec, turret, media):
         image = media.path(entry, 'projectile_' + pr, 'image')
         if image:
             key = 'prj.' + entry['id'] + '-' + pr
-            key = media.sheet(entry, 'projectile_' + pr, 'image', key, num(p.get('drawSize'), 1), rotated=True)
+            key = media.sheet(entry, 'projectile_' + pr, 'image', key, num(p.get('drawSize'), 1), rotated=True, display=1)
             if key:
                 look['sprite'] = key
     if yes(p.get('instant')) or yes(p.get('laserEffect')) or yes(p.get('lightingEffect')) or p.get('beamImage'):
         look['beam'] = {'color': '#' + p.get('color', p.get('lightColor', '#ff4545')).lstrip('#')[-6:], 'width': 1.5, 'style': 'lightning' if yes(p.get('lightingEffect')) else 'laser', 'life': .15}
     native['look'] = look
-    costs = resource(turret.get('resourceUsage'))
+    # `setFlag`/`unsetFlag` in a usage are flag changes on firing, not stocks
+    costs = resources(turret.get('resourceUsage'))
+    flags = {k: costs.pop(k) for k in ('unsetflag', 'setflag') if k in costs}
     if turret.get('energyUsage'):
         costs['energy'] = num(turret['energyUsage'])
     mutators = []
@@ -274,20 +362,22 @@ def weapon(entry, sec, turret, media):
                              'direct': num(p.get(prefix + '_directDamageMultiplier'), 1), 'area': num(p.get(prefix + '_areaDamageMultiplier'), 1)})
     return {'id': native['id'], 'mount': native['id'], 'projectileRef':pr, 'weapon': native,
             'range': range_, 'minRange':num(turret.get('limitingMinRange'))*WORLD/32, 'reload': max(1 / 60, reload_), 'warmup': seconds(turret.get('warmup')),
-            'costs': costs, 'direct': direct * num(attack.get('shootDamageMultiplier'), 1),
+            'costs': costs, 'flags': flags, 'direct': direct * num(attack.get('shootDamageMultiplier'), 1),
             'area': area * num(attack.get('shootDamageMultiplier'), 1), 'radius': num(p.get('areaRadius')) * WORLD,
             'ignoreArmor': num(p.get('armourIgnoreAmount')), 'buildingMult': num(p.get('buildingDamageMultiplier'), 1),
             'shieldMult': num(p.get('shieldDamageMultiplier'), 1), 'mutators': mutators,
             'life': seconds(p.get('life'), 10), 'targetSpeed': num(p.get('targetSpeed', p.get('speed')), 5) * 60 * WORLD,
             'acceleration': num(p.get('targetSpeedAcceleration')) * 3600 * WORLD,
             'turnSpeed': num(p.get('turnSpeed'), 180) * math.pi / 3,
-            'spread': num(p.get('targetGroundSpread')) * WORLD, 'intercept': [t.strip() for t in turret.get('interceptProjectiles_withTags', '').split(',') if t.strip()],
+            'spread': num(p.get('targetGroundSpread')) * WORLD if yes(p.get('targetGround')) else 0, 'intercept': [t.strip() for t in turret.get('interceptProjectiles_withTags', '').split(',') if t.strip()],
             'tags': [t.strip() for t in p.get('tags', '').split(',') if t.strip()],
             'nuclear': yes(p.get('nukeWeapon')), 'friendlyFire': yes(p.get('friendlyFire')), 'bothLayers': yes(p.get('areaHitAirAndLandAtSameTime')),
             'noFalloff': yes(p.get('areaDamageNoFalloff')), 'linked': turret.get('linkDelayWithTurret', ''),
             'muzzle': max(0, num(turret.get('barrelY', turret.get('size', attack.get('turretSize'))))) * WORLD,
             'lateral': num(turret.get('barrelX')) * WORLD,
-            'manual': not yes(turret.get('canShoot'), True),
+            'manual': not yes(turret.get('canShoot'), True) or idle and not turret.get('interceptProjectiles_withTags', '').strip(),
+            # how far off the target the barrel may be and still fire
+            'maxAngle': min(math.pi, num(turret.get('canAttackMaxAngle'), 17.2) * math.pi / 180),
             'requiredTags':[t.strip() for t in turret.get('canOnlyAttackUnitsWithTags','').split(',') if t.strip()],
             'condition': turret.get('canAttackCondition', '')}
 
@@ -476,8 +566,32 @@ def action_config(entry, sec, a, cfg, definition, media, lookup):
     return result
 
 
+# RW px a tick a `spinRate` of 1 is, against the game's rotor (2.5 turns a second)
+ROTOR_RATE = 15
+
+def is_rotor(part, key):
+    """An arm whose end spins on an aircraft is a rotor or a fan, unless it
+    is a radar dish turning slowly."""
+    return key == 'image_end' and num(part.get('spinRate')) != 0 and 'dish' not in str(part.get(key, '')).lower() \
+        and not part.get('hidden') and yes(part.get('drawOverBody'), True)
+
+def turret_scale(entry, media):
+    """RW px per turret image px. RW draws every turret of a unit at one scale:
+    `scaleTurretImagesTo` px over the width of the unit's `image_turret`,
+    else 1, times `turretImageScale`. The body's `imageScale` does not apply."""
+    g=entry['ini'].get('graphics',{});k=1
+    if num(g.get('scaleTurretImagesTo'))>0:
+        path=media.path(entry,'graphics','image_turret')
+        if path:
+            with Image.open(path) as im:k=num(g['scaleTurretImagesTo'])/max(1,im.width)
+    return k*num(g.get('turretImageScale'),1)
+
+
 def config(entry, definition, scale, media, lookup, building_factor=1):
     ini=entry['ini'];core=ini['core'];graphics=ini.get('graphics',{});geometry=WORLD*building_factor
+    # A building and its parts are drawn at 1, a unit's at 1.5625.
+    display=1 if definition['kind']=='building' else DISPLAY
+    tscale=turret_scale(entry,media)*building_factor
     cfg={'tags':[t.strip() for t in core.get('tags','').split(',') if t.strip()],
        'armor':max(0,num(core.get('armour'))),'minDamage':max(0,num(core.get('armourMinDamageToKeep'),1)),
        'mounts':[],'guns':[],'actions':[],'initial':{},'rearm':[],'startCargo':[],
@@ -491,6 +605,7 @@ def config(entry, definition, scale, media, lookup, building_factor=1):
        'singleSlot':yes(core.get('transportUnitsEachUnitAlwaysUsesSingleSlot')),'cargoTags':[t.strip() for t in core.get('transportUnitsRequireTag','').split(',') if t.strip()],
        'unloadCondition':expression(entry,'core.transportUnitsCanUnloadUnits',core.get('transportUnitsCanUnloadUnits'))}
     cfg['suicide']=yes(ini.get('attack',{}).get('dieOnAttack'))
+    if yes(ini.get('attack',{}).get('isMelee')) and definition['kind']=='unit':cfg['melee']=True
     cfg['passive']=not yes(ini.get('attack',{}).get('disablePassiveTargeting'))
     if graphics.get('isVisible'):cfg['visible']=expression(entry,'graphics.isVisible',graphics['isVisible'])
     if core.get('fireTurretXAtSelfOnDeath'):cfg['deathGun']=core['fireTurretXAtSelfOnDeath']
@@ -505,15 +620,21 @@ def config(entry, definition, scale, media, lookup, building_factor=1):
           'slave':yes(t.get('slave')),'rest':num(t.get('idleDir'))*math.pi/180,'arc':num(t.get('limitingAngle'),180)*math.pi/180,
           'turn':num(t.get('turnSpeed',ini.get('attack',{}).get('turretTurnSpeed')),4)*math.pi/3,'spin':num(t.get('idleSpin'))*math.pi/3,
           'recoil':num(t.get('recoilOffset'))*geometry,'recoilOut':seconds(t.get('recoilOutTime')),'recoilReturn':seconds(t.get('recoilReturnTime'),.2)}
-        if not yes(t.get('invisible')):
+        hide=str(t.get('invisible','')).strip()
+        if hide.lower().startswith('if '):
+            # a firing frame or a loadout drawn only while its condition holds
+            mount['hidden']=expression(entry,sec+'.invisible',hide,False)
+        if not yes(hide):
             ik='image' if t.get('image') else 'image_turret';section=sec if t.get('image') else 'graphics'
-            sprite=media.sheet(entry,section,ik,'dec.'+entry['id']+'-'+mid,num(graphics.get('turretImageScale',graphics.get('imageScale')),1)*building_factor)
+            offset=(num(t.get('image_drawOffsetX'))*building_factor,num(t.get('image_drawOffsetY'))*building_factor)
+            sprite=media.sheet(entry,section,ik,'dec.'+entry['id']+'-'+mid,tscale,display=display,offset=offset,
+              teams=yes(graphics.get('teamColorsOnTurret')))
             if sprite:mount['sprite']=sprite
         cfg['mounts'].append(mount)
         if t.get('projectile') or ini.get('projectile_1'):
             gun=weapon(entry,sec,t,media)
             if gun:
-                gun['manual']=not yes(t.get('canShoot'),True) or not yes(ini.get('attack',{}).get('canAttack'),True)
+                gun['manual']=gun['manual'] or not yes(ini.get('attack',{}).get('canAttack'),True)
                 gun['predicate']=expression(entry,sec+'.canAttackCondition',t.get('canAttackCondition'))
                 gun['onShoot']=[v.strip() for v in t.get('onShoot_triggerActions','').split(',') if v.strip()]
                 gun['oddOffset']=num(t.get('barrelOffsetX_onOddShots'))*geometry
@@ -528,8 +649,13 @@ def config(entry, definition, scale, media, lookup, building_factor=1):
         keys=('image_leg','image_foot') if is_leg else ('image_end',)
         for key in keys:
             if not part.get(key):continue
-            sprite=media.sheet(entry,sec,key,'dec.'+entry['id']+'-'+sec+'-'+key,scale)
+            sprite=media.sheet(entry,sec,key,'dec.'+entry['id']+'-'+sec+'-'+key,scale,display=display,teams=yes(part.get(key+'_teamColors')))
             if not sprite:continue
+            if 'rotors' in definition and is_rotor(part,key):
+                # an aircraft's spinning blades are the game's rotors: drawn, shadowed and heard by it
+                definition['rotors'].append({'x':round(num(part.get('x'))*WORLD/DISPLAY,2),'y':round(-num(part.get('y'))*WORLD/DISPLAY,2),
+                  'spin':round(num(part.get('spinRate'))/ROTOR_RATE,3),'sprite':sprite})
+                continue
             cfg['mounts'].append({'id':sec+'-'+key,'x':num(part.get('x'))*geometry,'y':-num(part.get('y'))*geometry,
               'parent':'','slave':False,'rest':num(part.get('drawDirOffset',part.get('endDirOffset')))*math.pi/180,
               'arc':math.pi,'turn':0,'spin':num(part.get('spinRate'))*math.pi/3,'sprite':sprite,
@@ -566,6 +692,8 @@ def config(entry, definition, scale, media, lookup, building_factor=1):
                 for domain in domains:gun['targetPredicates'][domain]=expression(entry,'turret_'+tid+'.'+field,value)
 
         gun['explodeEnd']=yes(p.get('explodeOnEndOfLife'))
+        # RW's `speed: 0` round stays where it is made for its whole life
+        gun['still']=num(p.get('speed'),5)==0 and num(p.get('targetSpeed'))==0 and not yes(p.get('instant'))
         gun['instant']=yes(p.get('instant'))
         gun['hullMult']=num(p.get('hullDamageMultiplier'),1)
         gun['underwaterArea']=yes(p.get('areaHitUnderwaterAlways'))
@@ -608,7 +736,7 @@ def config(entry, definition, scale, media, lookup, building_factor=1):
     wreck=media.sheet(entry,'graphics','image_wreak','dec.'+entry['id']+'-wreck',scale,rotated=False)
     if wreck:cfg['wreck']=wreck
     if ini.get('graphics',{}).get('image_back'):
-        back=media.sheet(entry,'graphics','image_back','dec.'+entry['id']+'-back',scale,rotated=False)
+        back=media.sheet(entry,'graphics','image_back','dec.'+entry['id']+'-back',scale,rotated=False,teams=True)
         if back:cfg['back']=back
     if any(k.startswith('decal_') for k in ini):issue(entry,'decal_*','HUD status overlays / conditional source decals not yet compiled.','presentation-gap')
     return cfg
@@ -640,8 +768,8 @@ def main():
           'power':0,'pop':0,'tier':min(3,max(1,int(num(c.get('techLevel'),1)))),
           'vision':min(64,max(0,num(c.get('fogOfWarSightRange'),15)*20*WORLD/32)),'weapons':[]}
         if building:
-            f=[num(v) for v in c.get('footprint','-1,-1,1,1').split(',')]
-            d.update(fw=min(8,max(1,math.ceil((f[2]-f[0]+1)*20*WORLD/32))),fh=min(8,max(1,math.ceil((f[3]-f[1]+1)*20*WORLD/32))),builtBy=[])
+            fw,fh,_=footprint(c)
+            d.update(fw=fw,fh=fh,builtBy=[])
             if yes(c.get('placeOnlyOnResPool')):d['needsDeposit']=True
             if domain=='ship':d['offshore']=True
         else:
@@ -650,7 +778,13 @@ def main():
               producedBy=[],aiWeight=0 if yes(c.get('isUnselectable')) else 1,
               trail='none' if domain in ('air','amphibious') or yes(c.get('isBio')) else 'wake' if domain=='ship' else 'tread',
               cargoWeight=min(50,max(0,num(c.get('transportSlotsNeeded'),1))))
-            if domain=='air':d.update(hovers=True,altitude=min(64,max(0,num(mv.get('targetHeight'),20)*WORLD)))
+            if domain=='air':
+                # RW's `attackMovement: bomber` makes passes over the target, as
+                # a fixed wing does; every other aircraft can stop in the air.
+                fixed=str(e['ini'].get('attack',{}).get('attackMovement','')).strip().lower()=='bomber'
+                # every blade an EK aircraft has is its own art (`is_rotor`); none gets the game's
+                d.update(altitude=min(64,max(0,num(mv.get('targetHeight'),20)*WORLD)),rotors=[])
+                if not fixed:d['hovers']=True
             if domain=='ship' and num(mv.get('targetHeight'))<-1:d.update(underwater=True,armor='sub',shadow=False)
             if num(c.get('maxTransportingUnits'))>0:d.update(transportCap=min(50,int(num(c['maxTransportingUnits']))),transportMaxWeight=min(50,int(num(c['maxTransportingUnits']))))
             if yes(c.get('isBuilder')) or any(s.startswith('canBuild_') for s in e['ini']):
@@ -662,7 +796,8 @@ def main():
         scale,factor=media.body(e,d)
         cfg=config(e,d,scale,media,lookup,factor)
         d['extensions']={CAP:cfg};d['weapons']=[deepcopy(g['weapon']) for g in cfg['guns'] if not g['manual']][:8]
-        if not building and any('sub' in g['weapon']['targets'] for g in cfg['guns']):d['sonar']=min(64,max(g['range'] for g in cfg['guns'] if 'sub' in g['weapon']['targets']))
+        # what fires below the surface hears below it, as RW's does
+        if any('sub' in g['weapon']['targets'] for g in cfg['guns']):d['sonar']=min(64,max(g['range'] for g in cfg['guns'] if 'sub' in g['weapon']['targets']))
         if c.get('overrideAndReplace'):issue(e,'core.overrideAndReplace','Additive mod API cannot replace '+c['overrideAndReplace']+'; separate EK definition retained.','engine-limit')
         if c.get('onNewMapSpawn') or c.get('createOnAggressiveTeam'):issue(e,'core.onNewMapSpawn','Source global/map controller hook is not a native pack spawn hook.','engine-limit')
         if mv.get('movementType') in ('OVER_CLIFF','OVER_CLIFF_WATER'):issue(e,'movement.movementType','Cliff traversal needs a mod-owned pathfinder; native ground/amphibious pathing is retained.','port-gap')
@@ -747,7 +882,7 @@ def main():
     package=json.loads((HERE/'extensions/ek-systems/extension.json').read_text())
     original=strings(parse(RW/'mod-info.txt')['mod']['description'])
     manifest={'format':'steel-tide-mod','v':4,'capacity':'large','id':'ek-definitive-edition',
-      'name':['EK Definitive Edition 2026h50','EK 决定版 2026h50','EK 결정판 2026h50'],'version':'0.0.1','author':'ice-v5 and EK contributors',
+      'name':['EK Definitive Edition 2026h50','EK 决定版 2026h50','EK 결정판 2026h50'],'version':'0.0.2','author':'ice-v5 and EK contributors',
       'description':texts(original,'“以雷霆之力，我挥锤终结审判”\nCopyright © 2021-2026 ice-v5. All Rights Reserved.'),
       'license':'CC-BY-NC-ND-4.0','hideFromListing':True,
       'requiredCapabilities':[CAP],'extensionPackages':[package],'defs':defs,'sprites':media.sprites,'sounds':media.sounds,
@@ -769,6 +904,11 @@ def main():
             for k in list(a):
                 if k not in ('id','name','effects','ai','queue','canCancel') and (a[k] in (False,0,'',None) or a[k] in ([],{}) or k=='desc' and a[k]==['','','']):a.pop(k)
     (HERE/'mod.json').write_text(json.dumps(manifest,ensure_ascii=False,separators=(',',':'))+'\n')
+    if media.enabled:
+        # sprites/ holds only what this conversion writes
+        kept={s['file'] for s in media.sprites}
+        for old in (HERE/'sprites').glob('*.png'):
+            if 'sprites/'+old.name not in kept:old.unlink()
     REPORT.update(sourceTitle='EK_Definitive_Edition_2026h50',coordinateScale=WORLD,creditMetal=CREDIT,
       templates=[p.relative_to(RW).as_posix() for p in all_paths if not parse(p).get('core',{}).get('name')],
       mediaIssues=media.issues,images=media.images,summary={'sourceFiles':len(all_paths),'defs':len(defs),'sprites':len(media.sprites),

@@ -11676,17 +11676,17 @@
   "images": {
     "u.ek-announcement": {
       "source": "source-assets/shared/blank.png",
-      "scale": 64.0,
+      "scale": 1.5,
       "sourceFrame": [
         1,
         1
       ],
       "displayFrame": [
-        48,
-        48
+        4,
+        4
       ],
-      "minimumSizeFactor": 1,
-      "buildingScaleFactor": 64.0
+      "minimumSizeFactor": 3.55556,
+      "buildingScaleFactor": 1.5
     },
     "u.ek-modular-bunker-aa-a": {
       "source": "units/modular_turret_base_B.png",
@@ -11725,7 +11725,7 @@
         4,
         21
       ],
-      "minimumSizeFactor": 2.52525
+      "minimumSizeFactor": 1.61616
     },
     "dec.ek-modular-bunker-aa-a-arm_1-image_end": {
       "source": "units/modular_turret_roof.png",
@@ -11868,7 +11868,7 @@
         4,
         20
       ],
-      "minimumSizeFactor": 1.98413
+      "minimumSizeFactor": 1.26984
     },
     "dec.ek-arsenalbird-wreck": {
       "source": "units/Arsenal_bird_dead.png",
@@ -11894,7 +11894,7 @@
         4,
         4
       ],
-      "minimumSizeFactor": 8.33333
+      "minimumSizeFactor": 5.33333
     },
     "u.ek-b1e-b-up": {
       "source": "units/heavy_drone2.png",
@@ -11920,7 +11920,7 @@
         4,
         12
       ],
-      "minimumSizeFactor": 1.73611
+      "minimumSizeFactor": 1.11111
     },
     "u.ek-b1e-b": {
       "source": "units/heavy_drone.png",
@@ -12076,7 +12076,7 @@
         4,
         12
       ],
-      "minimumSizeFactor": 2.31481
+      "minimumSizeFactor": 1.48148
     },
     "u.ek-dominion-fake": {
       "source": "units/topFlying_fake.png",
@@ -12323,32 +12323,32 @@
         4,
         12
       ],
-      "minimumSizeFactor": 2.08333
+      "minimumSizeFactor": 1.33333
     },
     "u.ek-runway": {
       "source": "units/runway.png",
-      "scale": 1.3333333333333335,
+      "scale": 1.0605714285714287,
       "sourceFrame": [
         64,
         156
       ],
       "displayFrame": [
-        64,
-        156
+        51,
+        124
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.53257
+      "buildingScaleFactor": 1.21905
     },
     "dec.ek-runway-wreck": {
       "source": "units/runway_dead.png",
-      "scale": 1.3333333333333335,
+      "scale": 1.0605714285714287,
       "sourceFrame": [
         64,
         156
       ],
       "displayFrame": [
-        64,
-        156
+        51,
+        124
       ],
       "minimumSizeFactor": 1
     },
@@ -12484,17 +12484,17 @@
     },
     "u.ek-foxhole": {
       "source": "units/building_foxhole.png",
-      "scale": 7.111111111111112,
+      "scale": 1.7999999999999998,
       "sourceFrame": [
         12,
         12
       ],
       "displayFrame": [
-        64,
-        64
+        16,
+        16
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 5.92593
+      "buildingScaleFactor": 1.5
     },
     "u.ek-freewing": {
       "source": "units/freewing.png",
@@ -12520,32 +12520,32 @@
         4,
         12
       ],
-      "minimumSizeFactor": 2.08333
+      "minimumSizeFactor": 1.33333
     },
     "u.ek-dugout": {
       "source": "units/hugebunker_base.png",
-      "scale": 1.4712643678160922,
+      "scale": 1.4628571428571429,
       "sourceFrame": [
         116,
         124
       ],
       "displayFrame": [
-        128,
-        137
+        127,
+        136
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.22605
+      "buildingScaleFactor": 1.21905
     },
     "dec.ek-dugout-wreck": {
       "source": "units/hugebunker_base_dead.png",
-      "scale": 1.4712643678160922,
+      "scale": 1.4628571428571429,
       "sourceFrame": [
         114,
         118
       ],
       "displayFrame": [
-        126,
-        130
+        125,
+        129
       ],
       "minimumSizeFactor": 1
     },
@@ -12662,9 +12662,9 @@
       ],
       "displayFrame": [
         4,
-        23
+        26
       ],
-      "minimumSizeFactor": 1.38889
+      "minimumSizeFactor": 1
     },
     "dec.ek-definitive-edition-4ce3cf807c3bf3a88c": {
       "source": "units/high_barrel_heat.png",
@@ -12837,28 +12837,28 @@
     },
     "u.ek-solarfarmstation": {
       "source": "units/SFS.png",
-      "scale": 0.5,
+      "scale": 0.5333333333333333,
       "sourceFrame": [
         120,
         120
       ],
       "displayFrame": [
-        45,
-        45
+        48,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-solarfarmstation-wreck": {
       "source": "units/SFS_dead.png",
-      "scale": 0.5,
+      "scale": 0.5333333333333333,
       "sourceFrame": [
         133,
         138
       ],
       "displayFrame": [
-        50,
-        52
+        53,
+        55
       ],
       "minimumSizeFactor": 1
     },
@@ -13003,7 +13003,7 @@
         4,
         8
       ],
-      "minimumSizeFactor": 1.66667
+      "minimumSizeFactor": 1.06667
     },
     "u.ek-supplytruck": {
       "source": "units/Supply_Truck.png",
@@ -13039,8 +13039,8 @@
         64
       ],
       "displayFrame": [
-        35,
-        37
+        54,
+        58
       ],
       "minimumSizeFactor": 1
     },
@@ -13052,8 +13052,8 @@
         62
       ],
       "displayFrame": [
-        35,
-        36
+        54,
+        56
       ],
       "minimumSizeFactor": 1
     },
@@ -13065,8 +13065,8 @@
         54
       ],
       "displayFrame": [
-        35,
-        31
+        54,
+        49
       ],
       "minimumSizeFactor": 1
     },
@@ -13085,28 +13085,28 @@
     },
     "u.ek-railgunturret": {
       "source": "units/turretbase_small.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         26,
         26
       ],
       "displayFrame": [
-        32,
-        32
+        29,
+        29
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.5
     },
     "dec.ek-railgunturret-barrel1": {
       "source": "units/Teslacannon.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         23,
         61
       ],
       "displayFrame": [
-        18,
-        48
+        26,
+        69
       ],
       "minimumSizeFactor": 1
     },
@@ -13119,9 +13119,9 @@
       ],
       "displayFrame": [
         4,
-        23
+        26
       ],
-      "minimumSizeFactor": 1.38889
+      "minimumSizeFactor": 1
     },
     "u.ek-valkyrie": {
       "source": "units/gunship_valkyrie_body.png",
@@ -13147,7 +13147,7 @@
         4,
         16
       ],
-      "minimumSizeFactor": 1.62602
+      "minimumSizeFactor": 1.04065
     },
     "prj.ek-definitive-edition-4764f9cd05daf9a66e": {
       "source": "units/seismic_missile.png",
@@ -13157,8 +13157,8 @@
         48
       ],
       "displayFrame": [
-        5,
-        23
+        8,
+        36
       ],
       "minimumSizeFactor": 1
     },
@@ -13235,8 +13235,8 @@
         24
       ],
       "displayFrame": [
-        5,
-        12
+        8,
+        18
       ],
       "minimumSizeFactor": 1
     },
@@ -13359,17 +13359,17 @@
     },
     "u.ek-tcaidbombdown": {
       "source": "units/down.png",
-      "scale": 2.8444444444444446,
+      "scale": 2.25,
       "sourceFrame": [
         15,
         25
       ],
       "displayFrame": [
-        32,
-        53
+        25,
+        42
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.8963
+      "buildingScaleFactor": 1.5
     },
     "prj.ek-tcaidbombdown-timebomb": {
       "source": "units/bomber_2.png",
@@ -13379,24 +13379,24 @@
         57
       ],
       "displayFrame": [
-        22,
-        25
+        35,
+        38
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-tcaidbombup": {
       "source": "units/up.png",
-      "scale": 2.8444444444444446,
+      "scale": 2.25,
       "sourceFrame": [
         15,
         25
       ],
       "displayFrame": [
-        32,
-        53
+        25,
+        42
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.8963
+      "buildingScaleFactor": 1.5
     },
     "u.ek-airbastion": {
       "source": "units/gunship_meteorwing_base.png",
@@ -13422,7 +13422,7 @@
         4,
         53
       ],
-      "minimumSizeFactor": 2.77778
+      "minimumSizeFactor": 1.77778
     },
     "dec.ek-airbastion-arm_1-image_end": {
       "source": "units/subpanel_D10.png",
@@ -13627,8 +13627,8 @@
         17
       ],
       "displayFrame": [
-        14,
-        5
+        21,
+        8
       ],
       "minimumSizeFactor": 1
     },
@@ -14020,7 +14020,7 @@
         4,
         18
       ],
-      "minimumSizeFactor": 1.98413
+      "minimumSizeFactor": 1.26984
     },
     "dec.ek-chisel-wreck": {
       "source": "units/chisel_dead.png",
@@ -14076,55 +14076,55 @@
     },
     "u.ek-airshiphangar1": {
       "source": "units/hangar.png",
-      "scale": 1.3913043478260867,
+      "scale": 1.088,
       "sourceFrame": [
         92,
         128
       ],
       "displayFrame": [
-        96,
-        134
+        75,
+        104
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.63683
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-airshiphangar1-wreck": {
       "source": "units/hangar_dead.png",
-      "scale": 1.3913043478260867,
+      "scale": 1.088,
       "sourceFrame": [
         94,
         128
       ],
       "displayFrame": [
-        98,
-        134
+        77,
+        104
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-airshiphangar2": {
       "source": "units/hangar_t2.png",
-      "scale": 1.1636363636363638,
+      "scale": 1.1520000000000001,
       "sourceFrame": [
         110,
         120
       ],
       "displayFrame": [
-        96,
-        105
+        95,
+        104
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.29293
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-airshiphangar2-wreck": {
       "source": "units/hangar_t2_dead.png",
-      "scale": 1.1636363636363638,
+      "scale": 1.1520000000000001,
       "sourceFrame": [
         110,
         120
       ],
       "displayFrame": [
-        96,
-        105
+        95,
+        104
       ],
       "minimumSizeFactor": 1
     },
@@ -14162,8 +14162,8 @@
         60
       ],
       "displayFrame": [
-        6,
-        35
+        9,
+        54
       ],
       "minimumSizeFactor": 1
     },
@@ -14345,9 +14345,9 @@
       ],
       "displayFrame": [
         4,
-        10
+        11
       ],
-      "minimumSizeFactor": 1.51515
+      "minimumSizeFactor": 1
     },
     "dec.ek-almaz-2": {
       "source": "units/tank_almaz_strike_launcher.png",
@@ -14364,17 +14364,17 @@
     },
     "u.ek-tcaidairtoair": {
       "source": "units/antiair.png",
-      "scale": 10.666666666666666,
+      "scale": 2.25,
       "sourceFrame": [
         4,
         12
       ],
       "displayFrame": [
-        32,
-        96
+        7,
+        20
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 7.11111
+      "buildingScaleFactor": 1.5
     },
     "prj.ek-tcaidairtoair-timebomb": {
       "source": "units/bomber_4.png",
@@ -14384,8 +14384,8 @@
         50
       ],
       "displayFrame": [
-        25,
-        24
+        40,
+        38
       ],
       "minimumSizeFactor": 1
     },
@@ -14556,7 +14556,7 @@
         4,
         21
       ],
-      "minimumSizeFactor": 2.77778
+      "minimumSizeFactor": 1.77778
     },
     "dec.ek-arrow-head-flak_barrel": {
       "source": "units/arrow_head_turret_barrel.png",
@@ -14683,8 +14683,8 @@
         60
       ],
       "displayFrame": [
-        8,
-        49
+        13,
+        76
       ],
       "minimumSizeFactor": 1
     },
@@ -14781,17 +14781,17 @@
     },
     "u.ek-balloonbarrage": {
       "source": "units/balloon.png",
-      "scale": 1.0039215686274512,
+      "scale": 0.76,
       "sourceFrame": [
         85,
         44
       ],
       "displayFrame": [
-        64,
-        33
+        48,
+        25
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.32095
+      "buildingScaleFactor": 1
     },
     "u.ek-barbaris": {
       "source": "units/transport_barbaris.png",
@@ -14830,7 +14830,7 @@
         4,
         40
       ],
-      "minimumSizeFactor": 2.77778
+      "minimumSizeFactor": 1.77778
     },
     "dec.ek-barbaris-wreck": {
       "source": "units/transport_barbaris_dead.png",
@@ -14860,96 +14860,109 @@
     },
     "u.ek-barricade1y": {
       "source": "units/barricade_1x3.png",
-      "scale": 3.5555555555555554,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         12,
         74
       ],
       "displayFrame": [
-        32,
-        197
+        13,
+        79
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 3.55556
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-barricade1y-wreck": {
       "source": "units/barricade_1x3_dead.png",
-      "scale": 3.5555555555555554,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         8,
         72
       ],
       "displayFrame": [
-        21,
-        192
+        9,
+        77
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-barricade2y": {
       "source": "units/barricade_1x6.png",
-      "scale": 3.5555555555555554,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         12,
         136
       ],
       "displayFrame": [
-        32,
-        363
+        10,
+        109
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 3.55556
+      "buildingScaleFactor": 1.06667
+    },
+    "dec.ek-barricade2y-wreck": {
+      "source": "units/barricade_1x3_dead.png",
+      "scale": 1.0666666666666667,
+      "sourceFrame": [
+        8,
+        72
+      ],
+      "displayFrame": [
+        6,
+        58
+      ],
+      "minimumSizeFactor": 1
     },
     "u.ek-barricade1x": {
       "source": "units/barricade_3x1.png",
-      "scale": 1.5238095238095237,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         56,
         32
       ],
       "displayFrame": [
-        64,
-        37
+        60,
+        34
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.52381
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-barricade1x-wreck": {
       "source": "units/barricade_3x1_dead.png",
-      "scale": 1.5238095238095237,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         54,
         14
       ],
       "displayFrame": [
-        62,
-        16
+        58,
+        15
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-barricade2x": {
       "source": "units/barricade_6x1.png",
-      "scale": 1.1636363636363636,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         110,
         32
       ],
       "displayFrame": [
-        96,
-        28
+        88,
+        26
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.16364
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-barricade2x-wreck": {
       "source": "units/barricade_3x1_dead.png",
-      "scale": 1.1636363636363636,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         54,
         14
       ],
       "displayFrame": [
-        47,
-        12
+        43,
+        11
       ],
       "minimumSizeFactor": 1
     },
@@ -14963,6 +14976,19 @@
       "displayFrame": [
         22,
         24
+      ],
+      "minimumSizeFactor": 1
+    },
+    "dec.ek-airbuilder-1": {
+      "source": "source-assets/shared/nano_turret.png",
+      "scale": 1,
+      "sourceFrame": [
+        11,
+        19
+      ],
+      "displayFrame": [
+        5,
+        9
       ],
       "minimumSizeFactor": 1
     },
@@ -15215,109 +15241,109 @@
     },
     "u.ek-brickwall1y": {
       "source": "units/brickwall_1x3.png",
-      "scale": 3.282051282051282,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         13,
         74
       ],
       "displayFrame": [
-        32,
-        182
+        14,
+        79
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 3.28205
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-brickwall1y-wreck": {
       "source": "units/brickwall_1x3_dead.png",
-      "scale": 3.282051282051282,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         11,
         62
       ],
       "displayFrame": [
-        27,
-        153
+        12,
+        66
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-brickwall2y": {
       "source": "units/brickwall_1x6.png",
-      "scale": 3.282051282051282,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         13,
         136
       ],
       "displayFrame": [
-        32,
-        335
+        10,
+        109
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 3.28205
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-brickwall2y-wreck": {
       "source": "units/brickwall_1x6_dead.png",
-      "scale": 3.282051282051282,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         11,
         134
       ],
       "displayFrame": [
-        27,
-        330
+        9,
+        107
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-brickwall1x": {
       "source": "units/brickwall_3x1.png",
-      "scale": 1.5238095238095237,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         56,
         36
       ],
       "displayFrame": [
-        64,
-        41
+        60,
+        38
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.52381
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-brickwall1x-wreck": {
       "source": "units/brickwall_3x1_dead.png",
-      "scale": 1.5238095238095237,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         54,
         24
       ],
       "displayFrame": [
-        62,
-        27
+        58,
+        26
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-brickwall2x": {
       "source": "units/brickwall_6x1.png",
-      "scale": 1.1636363636363636,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         110,
         36
       ],
       "displayFrame": [
-        96,
-        31
+        88,
+        29
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.16364
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-brickwall2x-wreck": {
       "source": "units/brickwall_6x1_dead.png",
-      "scale": 1.1636363636363636,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         108,
         24
       ],
       "displayFrame": [
-        94,
-        21
+        86,
+        19
       ],
       "minimumSizeFactor": 1
     },
@@ -15401,17 +15427,17 @@
     },
     "u.ek-bugcolony": {
       "source": "units/bug_colony.png",
-      "scale": 2.3063063063063063,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         37,
         33
       ],
       "displayFrame": [
-        64,
-        57
+        39,
+        35
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 2.30631
+      "buildingScaleFactor": 1.42222
     },
     "u.ek-bugcorrown": {
       "source": "units/bug_corrown.png",
@@ -15441,31 +15467,31 @@
     },
     "u.ek-bugdepott1": {
       "source": "units/bug_depot.png",
-      "scale": 1.1531531531531531,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         37,
         36
       ],
       "displayFrame": [
-        32,
-        31
+        30,
+        29
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.15315
+      "buildingScaleFactor": 1.06667
     },
     "u.ek-bugdepott2": {
       "source": "units/bug_depot.png",
-      "scale": 1.3,
+      "scale": 1.3866666666666667,
       "sourceFrame": [
         37,
         36
       ],
       "displayFrame": [
-        36,
-        35
+        38,
+        37
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1
+      "buildingScaleFactor": 1.06667
     },
     "u.ek-bugflybuilder": {
       "source": "units/bug_fly_builder.png",
@@ -15573,42 +15599,42 @@
     },
     "u.ek-biolaboratory": {
       "source": "units/bug_laboratory.png",
-      "scale": 1.9393939393939394,
+      "scale": 1.391304347826087,
       "sourceFrame": [
         44,
         46
       ],
       "displayFrame": [
-        64,
-        67
+        46,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.93939
+      "buildingScaleFactor": 1.3913
     },
     "u.ek-bugnest": {
       "source": "units/bug_nest_front.png",
-      "scale": 2.1880341880341883,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         39,
         32
       ],
       "displayFrame": [
-        64,
-        53
+        42,
+        34
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 2.18803
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-bugnest-back": {
       "source": "units/bug_nest_back.png",
-      "scale": 2.1880341880341883,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         39,
         42
       ],
       "displayFrame": [
-        64,
-        69
+        42,
+        45
       ],
       "minimumSizeFactor": 1
     },
@@ -15627,177 +15653,177 @@
     },
     "u.ek-bunkeraa": {
       "source": "units/bunker_aa_base.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         52,
         60
       ],
       "displayFrame": [
-        64,
-        74
+        55,
+        64
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-bunkeraa-1": {
       "source": "units/sea_bunker_aa.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         16,
         46
       ],
       "displayFrame": [
-        13,
-        36
+        17,
+        49
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-bunkeraa-wreck": {
       "source": "units/bunker_dead.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         56,
         58
       ],
       "displayFrame": [
-        69,
-        71
+        60,
+        62
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-bunkerartillery": {
       "source": "units/bunker_mg_base.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         52,
         60
       ],
       "displayFrame": [
-        64,
-        74
+        55,
+        64
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-bunkerartillery-1": {
       "source": "units/bunker_artillery_turret.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         14,
         64
       ],
       "displayFrame": [
-        11,
-        50
+        15,
+        68
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-bunkerartillery-arm_1-image_end": {
       "source": "units/bunker_mg_roof.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         32,
         32
       ],
       "displayFrame": [
-        25,
-        25
+        34,
+        34
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-bunkerflak": {
       "source": "units/bunker_flak_base.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         52,
         60
       ],
       "displayFrame": [
-        64,
-        74
+        55,
+        64
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-bunkerflak-1": {
       "source": "units/bunker_flak_turret.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         16,
         52
       ],
       "displayFrame": [
-        13,
-        41
+        17,
+        55
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-bunkerflakheavy-2": {
       "source": "units/bunker_heavy_flak_turret.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         10,
         52
       ],
       "displayFrame": [
-        8,
-        41
+        11,
+        55
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-bunkerheavyartillery": {
       "source": "units/bunker_artillery_base.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         52,
         60
       ],
       "displayFrame": [
-        64,
-        74
+        55,
+        64
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-bunkerheavyartillery-2": {
       "source": "units/bunker_heavy_artillery_single.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         8,
         72
       ],
       "displayFrame": [
-        6,
-        57
+        9,
+        77
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-bunkermg-1": {
       "source": "units/bunker_mg_turret.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         14,
         64
       ],
       "displayFrame": [
-        11,
-        50
+        15,
+        68
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-bunkerinterceptor": {
       "source": "units/bunker_missile_aa.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         52,
         60
       ],
       "displayFrame": [
-        64,
-        74
+        55,
+        64
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.42222
     },
     "prj.ek-bunkerinterceptor-1": {
       "source": "units/projectile_missile_aa.png",
@@ -15807,24 +15833,24 @@
         30
       ],
       "displayFrame": [
-        5,
-        16
+        8,
+        25
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-bunkerrocket": {
       "source": "units/bunker_rocket_base.png",
-      "scale": 1.641025641025641,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         52,
         60
       ],
       "displayFrame": [
-        64,
-        74
+        55,
+        64
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.42222
     },
     "prj.ek-bunkerrocket-1": {
       "source": "units/heavy_rocket.png",
@@ -15834,24 +15860,24 @@
         16
       ],
       "displayFrame": [
-        4,
-        11
+        5,
+        12
       ],
-      "minimumSizeFactor": 1.35501
+      "minimumSizeFactor": 1
     },
     "u.ek-tcaidbuster": {
       "source": "units/firesupport_tactical_target.png",
-      "scale": 1.5,
+      "scale": 2.1333333333333333,
       "sourceFrame": [
         30,
         30
       ],
       "displayFrame": [
-        34,
-        34
+        48,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1
+      "buildingScaleFactor": 1.42222
     },
     "prj.ek-tcaidbuster-timebomb": {
       "source": "units/bomber_3.png",
@@ -15861,8 +15887,8 @@
         67
       ],
       "displayFrame": [
-        26,
-        29
+        41,
+        45
       ],
       "minimumSizeFactor": 1
     },
@@ -15890,7 +15916,7 @@
         4,
         22
       ],
-      "minimumSizeFactor": 2.19298
+      "minimumSizeFactor": 1.40351
     },
     "dec.ek-buzzard-arm_1-image_end": {
       "source": "units/buzzard_blades.png",
@@ -15940,8 +15966,8 @@
         58
       ],
       "displayFrame": [
-        18,
-        28
+        28,
+        44
       ],
       "minimumSizeFactor": 1
     },
@@ -15953,10 +15979,10 @@
         19
       ],
       "displayFrame": [
-        4,
-        8
+        5,
+        10
       ],
-      "minimumSizeFactor": 1.32275
+      "minimumSizeFactor": 1
     },
     "u.ek-tcaidcarpet2": {
       "source": "units/bommba_v.png",
@@ -16021,6 +16047,19 @@
       "displayFrame": [
         152,
         262
+      ],
+      "minimumSizeFactor": 1
+    },
+    "prj.ek-carrierlargecombat-3": {
+      "source": "units/heavy_rocket.png",
+      "scale": 1.05,
+      "sourceFrame": [
+        6,
+        16
+      ],
+      "displayFrame": [
+        5,
+        13
       ],
       "minimumSizeFactor": 1
     },
@@ -16191,7 +16230,7 @@
         4,
         22
       ],
-      "minimumSizeFactor": 1.98413
+      "minimumSizeFactor": 1.26984
     },
     "dec.ek-chimeramech-leg_1-image_leg": {
       "source": "units/chimera_leg.png",
@@ -16234,17 +16273,17 @@
     },
     "u.ek-chronocharge": {
       "source": "units/chrono_charge.png",
-      "scale": 1,
+      "scale": 1.0491803278688525,
       "sourceFrame": [
         122,
         118
       ],
       "displayFrame": [
-        92,
-        88
+        96,
+        93
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1
+      "buildingScaleFactor": 1.04918
     },
     "u.ek-colossuscombatmode": {
       "source": "units/colossus.png",
@@ -16264,11 +16303,11 @@
       "scale": 1,
       "sourceFrame": [
         46,
-        90
+        234
       ],
       "displayFrame": [
         22,
-        43
+        112
       ],
       "minimumSizeFactor": 1
     },
@@ -16277,11 +16316,11 @@
       "scale": 1,
       "sourceFrame": [
         46,
-        90
+        234
       ],
       "displayFrame": [
         22,
-        43
+        112
       ],
       "minimumSizeFactor": 1
     },
@@ -16290,11 +16329,11 @@
       "scale": 1,
       "sourceFrame": [
         46,
-        90
+        234
       ],
       "displayFrame": [
         22,
-        43
+        112
       ],
       "minimumSizeFactor": 1
     },
@@ -16310,6 +16349,19 @@
         4
       ],
       "minimumSizeFactor": 2.77778
+    },
+    "prj.ek-colossuscombatmode-5": {
+      "source": "units/heavy_rocket.png",
+      "scale": 1,
+      "sourceFrame": [
+        6,
+        16
+      ],
+      "displayFrame": [
+        4,
+        12
+      ],
+      "minimumSizeFactor": 1
     },
     "dec.ek-definitive-edition-592633a80360b50009": {
       "source": "units/colossus_mask.png",
@@ -16480,6 +16532,19 @@
       ],
       "minimumSizeFactor": 1
     },
+    "dec.ek-colossuscombatmode-arm_10-image_end": {
+      "source": "units/colossus_rotarycannon_f1.png",
+      "scale": 1,
+      "sourceFrame": [
+        46,
+        90
+      ],
+      "displayFrame": [
+        22,
+        43
+      ],
+      "minimumSizeFactor": 1
+    },
     "dec.ek-colossuscombatmode-arm_11-image_end": {
       "source": "units/colossus_mask_missile.png",
       "scale": 1,
@@ -16508,28 +16573,28 @@
     },
     "u.ek-commercial": {
       "source": "units/commercial.png",
-      "scale": 1.2799999999999998,
+      "scale": 1.216,
       "sourceFrame": [
         100,
         100
       ],
       "displayFrame": [
-        96,
-        96
+        91,
+        91
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.34737
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-commercial-wreck": {
       "source": "units/commercial_dead.png",
-      "scale": 1.2799999999999998,
+      "scale": 1.216,
       "sourceFrame": [
         100,
         100
       ],
       "displayFrame": [
-        96,
-        96
+        91,
+        91
       ],
       "minimumSizeFactor": 1
     },
@@ -16574,28 +16639,28 @@
     },
     "u.ek-concreteblock": {
       "source": "units/concrete_block1.png",
-      "scale": 2.6666666666666665,
+      "scale": 1.5,
       "sourceFrame": [
         16,
         16
       ],
       "displayFrame": [
-        32,
-        32
+        18,
+        18
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 2.66667
+      "buildingScaleFactor": 1.5
     },
     "dec.ek-concreteblock-wreck": {
       "source": "units/concrete_block1_dead.png",
-      "scale": 2.6666666666666665,
+      "scale": 1.5,
       "sourceFrame": [
         22,
         20
       ],
       "displayFrame": [
-        44,
-        40
+        25,
+        22
       ],
       "minimumSizeFactor": 1
     },
@@ -16679,16 +16744,16 @@
     },
     "dec.ek-crazy-air-factory-arm_1-image_end": {
       "source": "units/crazy_air_factory.png",
-      "scale": 64.0,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         38,
         58
       ],
       "displayFrame": [
-        335,
-        512
+        41,
+        62
       ],
-      "minimumSizeFactor": 0.28736
+      "minimumSizeFactor": 1
     },
     "u.ek-crazy-builder": {
       "source": "units/crazy_builder.png",
@@ -16705,71 +16770,57 @@
     },
     "u.ek-crazy-base": {
       "source": "units/crazy_mode_base.png",
-      "scale": 1.5238095238095237,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         56,
         84
       ],
       "displayFrame": [
-        64,
-        96
+        60,
+        90
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.52381
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-crazy-land-factory-arm_1-image_end": {
       "source": "units/crazy_land_factory.png",
-      "scale": 64.0,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         48,
         74
       ],
       "displayFrame": [
-        332,
-        512
+        51,
+        79
       ],
-      "minimumSizeFactor": 0.22523
-    },
-    "u.ek-crazy-sea-factory": {
-      "source": "source-assets/shared/blank.png",
-      "scale": 96.0,
-      "sourceFrame": [
-        1,
-        1
-      ],
-      "displayFrame": [
-        72,
-        72
-      ],
-      "minimumSizeFactor": 1,
-      "buildingScaleFactor": 96.0
+      "minimumSizeFactor": 1
     },
     "dec.ek-crazy-sea-factory-arm_1-image_end": {
       "source": "units/crazy_sea_factory.png",
-      "scale": 96.0,
+      "scale": 1.28,
       "sourceFrame": [
         86,
         97
       ],
       "displayFrame": [
-        454,
-        512
+        83,
+        93
       ],
-      "minimumSizeFactor": 0.11455
+      "minimumSizeFactor": 1
     },
     "u.ek-creditscrate": {
       "source": "units/creditsCrate.png",
-      "scale": 2.0317460317460316,
+      "scale": 1.35,
       "sourceFrame": [
         21,
         25
       ],
       "displayFrame": [
-        32,
-        38
+        21,
+        25
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 2.2575
+      "buildingScaleFactor": 1.5
     },
     "u.ek-diamondback": {
       "source": "units/diamondback.png",
@@ -17122,6 +17173,19 @@
       ],
       "minimumSizeFactor": 2.08333
     },
+    "prj.ek-overwatch-1": {
+      "source": "units/projectile5.png",
+      "scale": 0.8,
+      "sourceFrame": [
+        6,
+        35
+      ],
+      "displayFrame": [
+        4,
+        23
+      ],
+      "minimumSizeFactor": 1.11111
+    },
     "dec.ek-definitive-edition-ea33c898316002c902": {
       "source": "units/main_turret_base.png",
       "scale": 1,
@@ -17397,55 +17461,55 @@
     },
     "u.ek-horizontalwall": {
       "source": "units/wall_horiz.png",
-      "scale": 1.2673267326732676,
+      "scale": 1.3013333333333332,
       "sourceFrame": [
         101,
         32
       ],
       "displayFrame": [
-        96,
-        30
+        99,
+        31
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.03879
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-horizontalwall-wreck": {
       "source": "units/wall_horiz_dead.png",
-      "scale": 1.2673267326732676,
+      "scale": 1.3013333333333332,
       "sourceFrame": [
         99,
         28
       ],
       "displayFrame": [
-        94,
+        97,
         27
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-verticalwall": {
       "source": "units/wall_vert.png",
-      "scale": 1.2549019607843137,
+      "scale": 1.216,
       "sourceFrame": [
         34,
         110
       ],
       "displayFrame": [
-        32,
-        104
+        31,
+        100
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.10079
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-verticalwall-wreck": {
       "source": "units/wall_vert_dead.png",
-      "scale": 1.2549019607843137,
+      "scale": 1.216,
       "sourceFrame": [
         32,
         106
       ],
       "displayFrame": [
-        30,
-        100
+        29,
+        97
       ],
       "minimumSizeFactor": 1
     },
@@ -17597,11 +17661,11 @@
       "scale": 0.8,
       "sourceFrame": [
         58,
-        62
+        74
       ],
       "displayFrame": [
         22,
-        24
+        28
       ],
       "minimumSizeFactor": 1
     },
@@ -17769,8 +17833,8 @@
         20
       ],
       "displayFrame": [
-        6,
-        12
+        9,
+        18
       ],
       "minimumSizeFactor": 1
     },
@@ -17778,12 +17842,25 @@
       "source": "units/excelsior_trigun.png",
       "scale": 1,
       "sourceFrame": [
-        14,
-        128
+        64,
+        248
       ],
       "displayFrame": [
-        7,
-        61
+        31,
+        119
+      ],
+      "minimumSizeFactor": 1
+    },
+    "dec.ek-excelsiorcombatmode-4": {
+      "source": "units/excelsior_trigun.png",
+      "scale": 1,
+      "sourceFrame": [
+        64,
+        248
+      ],
+      "displayFrame": [
+        31,
+        119
       ],
       "minimumSizeFactor": 1
     },
@@ -17943,6 +18020,19 @@
       ],
       "minimumSizeFactor": 1
     },
+    "dec.ek-excelsiorcombatmode-arm_8-image_end": {
+      "source": "units/excelsior_trigun.png",
+      "scale": 1,
+      "sourceFrame": [
+        14,
+        128
+      ],
+      "displayFrame": [
+        7,
+        61
+      ],
+      "minimumSizeFactor": 1
+    },
     "dec.ek-excelsiorcombatmode-arm_10-image_end": {
       "source": "units/excelsior_podhatch_rear.png",
       "scale": 1,
@@ -17990,21 +18080,21 @@
         34
       ],
       "displayFrame": [
-        13,
-        13
+        20,
+        20
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-7-91ed13a0-1": {
       "source": "units/executor_smallcannon.png",
-      "scale": 1,
+      "scale": 2.5,
       "sourceFrame": [
         11,
         21
       ],
       "displayFrame": [
-        5,
-        10
+        13,
+        25
       ],
       "minimumSizeFactor": 1
     },
@@ -18016,24 +18106,10 @@
         68
       ],
       "displayFrame": [
-        8,
-        26
+        13,
+        41
       ],
       "minimumSizeFactor": 1
-    },
-    "u.ek--f75bb3ae": {
-      "source": "source-assets/shared/blank.png",
-      "scale": 32.0,
-      "sourceFrame": [
-        1,
-        1
-      ],
-      "displayFrame": [
-        24,
-        24
-      ],
-      "minimumSizeFactor": 1,
-      "buildingScaleFactor": 32.0
     },
     "u.ek--1ae142c3": {
       "source": "units/executor_body.png",
@@ -18050,14 +18126,14 @@
     },
     "dec.ek--1ae142c3-hell1": {
       "source": "units/executor_laserbase2.png",
-      "scale": 2.5,
+      "scale": 1,
       "sourceFrame": [
         94,
         322
       ],
       "displayFrame": [
-        113,
-        386
+        45,
+        155
       ],
       "minimumSizeFactor": 1
     },
@@ -18069,8 +18145,8 @@
         105
       ],
       "displayFrame": [
-        13,
-        50
+        21,
+        79
       ],
       "minimumSizeFactor": 1
     },
@@ -18082,8 +18158,8 @@
         17
       ],
       "displayFrame": [
-        164,
-        24
+        256,
+        38
       ],
       "minimumSizeFactor": 1
     },
@@ -18095,8 +18171,8 @@
         138
       ],
       "displayFrame": [
-        9,
-        40
+        14,
+        62
       ],
       "minimumSizeFactor": 1
     },
@@ -18111,7 +18187,7 @@
         163,
         512
       ],
-      "minimumSizeFactor": 0.49495
+      "minimumSizeFactor": 0.31677
     },
     "u.ek--bbc88611": {
       "source": "units/executor_energyball.png",
@@ -18134,8 +18210,8 @@
         10
       ],
       "displayFrame": [
-        7,
-        7
+        10,
+        10
       ],
       "minimumSizeFactor": 1
     },
@@ -18154,14 +18230,14 @@
     },
     "dec.ek--88b96b03-1": {
       "source": "units/executor_medcannon.png",
-      "scale": 1,
+      "scale": 2.5,
       "sourceFrame": [
         17,
         69
       ],
       "displayFrame": [
-        8,
-        33
+        20,
+        83
       ],
       "minimumSizeFactor": 1
     },
@@ -18173,21 +18249,21 @@
         128
       ],
       "displayFrame": [
-        12,
-        49
+        19,
+        77
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek--3edbf2c9-1": {
       "source": "units/executor_medcannon2.png",
-      "scale": 1,
+      "scale": 2.5,
       "sourceFrame": [
         17,
         51
       ],
       "displayFrame": [
-        8,
-        24
+        20,
+        61
       ],
       "minimumSizeFactor": 1
     },
@@ -18199,21 +18275,21 @@
         274
       ],
       "displayFrame": [
-        17,
-        66
+        26,
+        103
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek--5f14ab9b-1": {
       "source": "units/executor_medmissile.png",
-      "scale": 1,
+      "scale": 2.5,
       "sourceFrame": [
         17,
         29
       ],
       "displayFrame": [
-        8,
-        14
+        20,
+        35
       ],
       "minimumSizeFactor": 1
     },
@@ -18251,8 +18327,8 @@
         163
       ],
       "displayFrame": [
-        33,
-        78
+        51,
+        122
       ],
       "minimumSizeFactor": 1
     },
@@ -18303,8 +18379,8 @@
         32
       ],
       "displayFrame": [
-        12,
-        12
+        18,
+        18
       ],
       "minimumSizeFactor": 1
     },
@@ -18316,8 +18392,8 @@
         230
       ],
       "displayFrame": [
-        17,
-        110
+        27,
+        172
       ],
       "minimumSizeFactor": 1
     },
@@ -18336,28 +18412,28 @@
     },
     "u.ek-experimentalairfactory": {
       "source": "units/experimental_air_factory.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.1264,
       "sourceFrame": [
         88,
         116
       ],
       "displayFrame": [
-        96,
-        127
+        74,
+        98
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.65289
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-experimentalairfactory-wreck": {
       "source": "units/experimental_air_factory_dead.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.1264,
       "sourceFrame": [
         90,
         118
       ],
       "displayFrame": [
-        98,
-        129
+        76,
+        100
       ],
       "minimumSizeFactor": 1
     },
@@ -18467,68 +18543,68 @@
     },
     "u.ek-largeexperimentalhangar": {
       "source": "units/experimental_hangar.png",
-      "scale": 0.8050314465408807,
+      "scale": 0.7733333333333333,
       "sourceFrame": [
         212,
         320
       ],
       "displayFrame": [
-        128,
-        193
+        123,
+        186
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.11039
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-largeexperimentalhangar-wreck": {
       "source": "units/experimental_hangar_dead.png",
-      "scale": 0.8050314465408807,
+      "scale": 0.7733333333333333,
       "sourceFrame": [
         220,
         400
       ],
       "displayFrame": [
-        133,
-        242
+        128,
+        232
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largeexperimentalhangar-back": {
       "source": "units/experimental_hangar_back.png",
-      "scale": 0.8050314465408807,
+      "scale": 0.7733333333333333,
       "sourceFrame": [
         220,
         400
       ],
       "displayFrame": [
-        133,
-        242
+        128,
+        232
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-extractort3": {
       "source": "units/extractor_t3.png",
-      "scale": 1.1531531531531531,
+      "scale": 1.0847457627118644,
       "sourceFrame": [
         37,
         59
       ],
       "displayFrame": [
-        32,
-        51
+        30,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.15315
+      "buildingScaleFactor": 1.08475
     },
     "dec.ek-extractort3-back": {
       "source": "units/extractor_back.png",
-      "scale": 1.1531531531531531,
+      "scale": 1.0847457627118644,
       "sourceFrame": [
         47,
         38
       ],
       "displayFrame": [
-        41,
-        33
+        38,
+        31
       ],
       "minimumSizeFactor": 1
     },
@@ -18608,7 +18684,7 @@
         4,
         7
       ],
-      "minimumSizeFactor": 2.08333
+      "minimumSizeFactor": 1.33333
     },
     "u.ek-fencer": {
       "source": "units/fencer.png",
@@ -18644,8 +18720,8 @@
         60
       ],
       "displayFrame": [
-        5,
-        29
+        8,
+        45
       ],
       "minimumSizeFactor": 1
     },
@@ -18829,7 +18905,7 @@
         4,
         40
       ],
-      "minimumSizeFactor": 2.77778
+      "minimumSizeFactor": 1.77778
     },
     "prj.ek-ligfighter-2": {
       "source": "units/manticore_bomb_buster.png",
@@ -18840,9 +18916,9 @@
       ],
       "displayFrame": [
         4,
-        11
+        13
       ],
-      "minimumSizeFactor": 1.38889
+      "minimumSizeFactor": 1
     },
     "u.ek-firestorm": {
       "source": "units/firestorm.png",
@@ -19288,82 +19364,82 @@
     },
     "u.ek-harvesterfactory": {
       "source": "units/harvester_factory.png",
-      "scale": 1.4222222222222223,
+      "scale": 1.391304347826087,
       "sourceFrame": [
         60,
         92
       ],
       "displayFrame": [
-        64,
-        98
+        63,
+        96
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.42222
+      "buildingScaleFactor": 1.3913
     },
     "dec.ek-harvesterfactory-wreck": {
       "source": "units/harvester_factory_dead.png",
-      "scale": 1.4222222222222223,
+      "scale": 1.391304347826087,
       "sourceFrame": [
         62,
         92
       ],
       "displayFrame": [
-        66,
-        98
+        65,
+        96
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-harvestersolar": {
       "source": "units/harvester_solar.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         58,
         62
       ],
       "displayFrame": [
-        64,
-        68
+        62,
+        66
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.47126
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-harvestersolar-wreck": {
       "source": "units/harvester_solar_dead.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         62,
         64
       ],
       "displayFrame": [
-        68,
-        71
+        66,
+        68
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-harvestertanks": {
       "source": "units/harvester_tanks.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         64,
         68
       ],
       "displayFrame": [
-        64,
-        68
+        68,
+        73
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.33333
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-harvestertanks-wreck": {
       "source": "units/harvester_tanks_dead.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         64,
         68
       ],
       "displayFrame": [
-        64,
-        68
+        68,
+        73
       ],
       "minimumSizeFactor": 1
     },
@@ -19507,9 +19583,9 @@
       ],
       "displayFrame": [
         4,
-        15
+        16
       ],
-      "minimumSizeFactor": 1.46199
+      "minimumSizeFactor": 1
     },
     "dec.ek-navalmcv-railgun": {
       "source": "units/body_railgun.png",
@@ -19617,28 +19693,28 @@
     },
     "u.ek-helipad": {
       "source": "units/helipad.png",
-      "scale": 1.471264367816092,
+      "scale": 1.28,
       "sourceFrame": [
         58,
         98
       ],
       "displayFrame": [
-        64,
-        108
+        56,
+        94
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.47126
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-helipad-wreck": {
       "source": "units/helipad_dead.png",
-      "scale": 1.471264367816092,
+      "scale": 1.28,
       "sourceFrame": [
         60,
         100
       ],
       "displayFrame": [
-        66,
-        110
+        58,
+        96
       ],
       "minimumSizeFactor": 1
     },
@@ -20124,7 +20200,7 @@
         4,
         12
       ],
-      "minimumSizeFactor": 2.08333
+      "minimumSizeFactor": 1.33333
     },
     "dec.ek-flamer-4": {
       "source": "units/infantry_flamer.png",
@@ -20564,9 +20640,9 @@
       ],
       "displayFrame": [
         4,
-        16
+        18
       ],
-      "minimumSizeFactor": 1.38889
+      "minimumSizeFactor": 1
     },
     "dec.ek-ironstorm-wreck": {
       "source": "units/iron_Storm_dead.png",
@@ -20888,8 +20964,8 @@
         158
       ],
       "displayFrame": [
-        31,
-        152
+        48,
+        237
       ],
       "minimumSizeFactor": 1
     },
@@ -20960,71 +21036,71 @@
     },
     "u.ek-laboratory": {
       "source": "units/building_laboratory_base.png",
-      "scale": 1.391304347826087,
+      "scale": 1.28,
       "sourceFrame": [
         92,
         120
       ],
       "displayFrame": [
-        96,
-        125
+        88,
+        115
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.3913
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-laboratory-arm_1-image_end": {
       "source": "units/experimental_glow.png",
-      "scale": 1.391304347826087,
+      "scale": 1.28,
       "sourceFrame": [
         30,
         30
       ],
       "displayFrame": [
-        20,
-        20
+        29,
+        29
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-laboratory-wreck": {
       "source": "units/building_laboratory_base_dead.png",
-      "scale": 1.391304347826087,
+      "scale": 1.28,
       "sourceFrame": [
         91,
         120
       ],
       "displayFrame": [
-        95,
-        125
+        87,
+        115
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-laboratoryt2": {
       "source": "units/baset2.png",
-      "scale": 1.391304347826087,
+      "scale": 1.28,
       "sourceFrame": [
         92,
         120
       ],
       "displayFrame": [
-        96,
-        125
+        88,
+        115
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.3913
+      "buildingScaleFactor": 1.28
     },
     "u.ek-laboratoryt3": {
       "source": "units/baset3.png",
-      "scale": 1.391304347826087,
+      "scale": 1.28,
       "sourceFrame": [
         92,
         120
       ],
       "displayFrame": [
-        96,
-        125
+        88,
+        115
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.3913
+      "buildingScaleFactor": 1.28
     },
     "u.ek-lancer": {
       "source": "units/tank_lancer.png",
@@ -21223,54 +21299,54 @@
     },
     "u.ek-largeartillery": {
       "source": "units/largebunker_base.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         88,
         96
       ],
       "displayFrame": [
-        96,
-        105
+        84,
+        92
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.45455
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-largeartillery-2": {
       "source": "units/largebunker_artillery_cannon.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         9,
         32
       ],
       "displayFrame": [
-        6,
-        22
+        9,
+        31
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largeartillery-4": {
       "source": "units/largebunker_artillery_turret.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         40,
         40
       ],
       "displayFrame": [
-        28,
-        28
+        38,
+        38
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largeartillery-wreck": {
       "source": "units/largebunker_base_dead.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         88,
         94
       ],
       "displayFrame": [
-        96,
-        103
+        84,
+        90
       ],
       "minimumSizeFactor": 1
     },
@@ -21285,47 +21361,47 @@
         4,
         40
       ],
-      "minimumSizeFactor": 1.73611
+      "minimumSizeFactor": 1.11111
     },
     "dec.ek-largechaingun-2": {
       "source": "units/largebunker_chaingun_cannon.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         8,
         28
       ],
       "displayFrame": [
-        6,
-        20
+        8,
+        27
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largechaingun-3": {
       "source": "units/largebunker_chaingun_turret.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         40,
         78
       ],
       "displayFrame": [
-        28,
-        54
+        38,
+        75
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-largerockets": {
       "source": "units/largebunker_rockets.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         88,
         96
       ],
       "displayFrame": [
-        96,
-        105
+        84,
+        92
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.45455
+      "buildingScaleFactor": 1.28
     },
     "prj.ek-largerockets-1": {
       "source": "units/projectile_rocket_large.png",
@@ -21335,113 +21411,126 @@
         48
       ],
       "displayFrame": [
-        7,
-        24
+        11,
+        37
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largerockets-wreck": {
       "source": "units/largebunker_rockets_dead.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         88,
         94
       ],
       "displayFrame": [
-        96,
-        103
+        84,
+        90
+      ],
+      "minimumSizeFactor": 1
+    },
+    "prj.ek-largerotarygun-1": {
+      "source": "units/projectile3.png",
+      "scale": 1.2,
+      "sourceFrame": [
+        6,
+        35
+      ],
+      "displayFrame": [
+        5,
+        31
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largerotarygun-2": {
       "source": "units/largebunker_rotarygun_cannon1.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         14,
         40
       ],
       "displayFrame": [
-        10,
-        28
+        13,
+        38
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-definitive-edition-a060530ed46e53ec3a": {
       "source": "units/largebunker_rotarygun_cannon2.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         14,
         40
       ],
       "displayFrame": [
-        10,
-        28
+        13,
+        38
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-definitive-edition-2ef549740ae2e61eb6": {
       "source": "units/largebunker_rotarygun_cannon3.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         14,
         40
       ],
       "displayFrame": [
-        10,
-        28
+        13,
+        38
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-definitive-edition-f47acaf82a9f6f56d4": {
       "source": "units/largebunker_rotarygun_cannon4.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         14,
         40
       ],
       "displayFrame": [
-        10,
-        28
+        13,
+        38
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largerotarygun-3": {
       "source": "units/largebunker_rotarygun_turret.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         74,
         82
       ],
       "displayFrame": [
-        52,
-        57
+        71,
+        79
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-large-modular": {
       "source": "units/largebunker_modular.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         88,
         96
       ],
       "displayFrame": [
-        96,
-        105
+        84,
+        92
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.45455
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-large-modular-wreck": {
       "source": "units/largebunker_modular_dead.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         88,
         94
       ],
       "displayFrame": [
-        96,
-        103
+        84,
+        90
       ],
       "minimumSizeFactor": 1
     },
@@ -21460,106 +21549,106 @@
     },
     "u.ek-launchpad": {
       "source": "units/launchpad.png",
-      "scale": 1.4883720930232558,
+      "scale": 1.2190476190476192,
       "sourceFrame": [
         86,
         198
       ],
       "displayFrame": [
-        96,
-        221
+        79,
+        181
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.48837
+      "buildingScaleFactor": 1.21905
     },
     "dec.ek-launchpad-arm_1-image_end": {
       "source": "units/launchpad_platform.png",
-      "scale": 1.4883720930232558,
+      "scale": 1.2190476190476192,
       "sourceFrame": [
         26,
         54
       ],
       "displayFrame": [
-        19,
-        39
+        24,
+        49
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-launchpad-arm_2-image_end": {
       "source": "units/launchpad_rocket.png",
-      "scale": 1.4883720930232558,
+      "scale": 1.2190476190476192,
       "sourceFrame": [
         18,
         54
       ],
       "displayFrame": [
-        13,
-        39
+        16,
+        49
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-launchpad-arm_3-image_end": {
       "source": "units/launchpad_door1.png",
-      "scale": 1.4883720930232558,
+      "scale": 1.2190476190476192,
       "sourceFrame": [
         14,
         70
       ],
       "displayFrame": [
-        10,
-        50
+        13,
+        64
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-launchpad-arm_4-image_end": {
       "source": "units/launchpad_door2.png",
-      "scale": 1.4883720930232558,
+      "scale": 1.2190476190476192,
       "sourceFrame": [
         14,
         70
       ],
       "displayFrame": [
-        10,
-        50
+        13,
+        64
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-launchpad-arm_5-image_end": {
       "source": "units/launchpad_cover.png",
-      "scale": 1.4883720930232558,
+      "scale": 1.2190476190476192,
       "sourceFrame": [
         68,
         70
       ],
       "displayFrame": [
-        49,
-        50
+        62,
+        64
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-launchpad-arm_6-image_end": {
       "source": "units/launchpad_tower.png",
-      "scale": 1.4883720930232558,
+      "scale": 1.2190476190476192,
       "sourceFrame": [
         22,
         42
       ],
       "displayFrame": [
-        16,
-        30
+        20,
+        38
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-launchpad-wreck": {
       "source": "units/launchpad_dead.png",
-      "scale": 1.4883720930232558,
+      "scale": 1.2190476190476192,
       "sourceFrame": [
         88,
         198
       ],
       "displayFrame": [
-        98,
-        221
+        80,
+        181
       ],
       "minimumSizeFactor": 1
     },
@@ -21600,7 +21689,7 @@
         4,
         38
       ],
-      "minimumSizeFactor": 2.08333
+      "minimumSizeFactor": 1.33333
     },
     "dec.ek-lemur-3": {
       "source": "units/lemur_launcher.png",
@@ -21639,7 +21728,7 @@
         4,
         21
       ],
-      "minimumSizeFactor": 2.77778
+      "minimumSizeFactor": 1.77778
     },
     "dec.ek-lemurx-3": {
       "source": "units/lemur_cannonL.png",
@@ -21678,7 +21767,7 @@
         4,
         11
       ],
-      "minimumSizeFactor": 1.73611
+      "minimumSizeFactor": 1.11111
     },
     "dec.ek-lemurx-wreck": {
       "source": "units/lemur_dead.png",
@@ -22053,10 +22142,10 @@
         14
       ],
       "displayFrame": [
-        4,
-        9
+        6,
+        13
       ],
-      "minimumSizeFactor": 1.11111
+      "minimumSizeFactor": 1
     },
     "prj.ek-definitive-edition-a091e58d4a4aa45ba9": {
       "source": "units/manticore_bomb_emp.png",
@@ -22066,10 +22155,10 @@
         14
       ],
       "displayFrame": [
-        4,
-        9
+        6,
+        13
       ],
-      "minimumSizeFactor": 1.11111
+      "minimumSizeFactor": 1
     },
     "prj.ek-definitive-edition-97c4d65623317a8dfb": {
       "source": "units/manticore_bomb_incen.png",
@@ -22079,10 +22168,10 @@
         14
       ],
       "displayFrame": [
-        4,
-        9
+        6,
+        13
       ],
-      "minimumSizeFactor": 1.11111
+      "minimumSizeFactor": 1
     },
     "prj.ek-definitive-edition-94d2962c8fd87d1cd4": {
       "source": "units/manticore_bomb_buster.png",
@@ -22092,10 +22181,23 @@
         17
       ],
       "displayFrame": [
-        4,
-        12
+        7,
+        19
       ],
       "minimumSizeFactor": 1
+    },
+    "prj.ek-marshallmech-1": {
+      "source": "units/projectile3.png",
+      "scale": 0.75,
+      "sourceFrame": [
+        6,
+        35
+      ],
+      "displayFrame": [
+        4,
+        23
+      ],
+      "minimumSizeFactor": 1.18519
     },
     "dec.ek-marshallmech-2": {
       "source": "units/marshall_cannon.png",
@@ -22437,7 +22539,7 @@
     },
     "dec.ek-minitank-1": {
       "source": "units/mini_tank_turret_barrel.png",
-      "scale": 0.8,
+      "scale": 1,
       "sourceFrame": [
         2,
         23
@@ -22446,20 +22548,20 @@
         4,
         46
       ],
-      "minimumSizeFactor": 5.20833
+      "minimumSizeFactor": 4.16667
     },
     "dec.ek-minitank-base": {
       "source": "units/mini_tank_turret.png",
-      "scale": 0.8,
+      "scale": 1,
       "sourceFrame": [
         8,
         15
       ],
       "displayFrame": [
         4,
-        7
+        8
       ],
-      "minimumSizeFactor": 1.30208
+      "minimumSizeFactor": 1.04167
     },
     "dec.ek-minitank-wreck": {
       "source": "units/mini_tank_dead.png",
@@ -22534,8 +22636,8 @@
         24
       ],
       "displayFrame": [
-        6,
-        14
+        9,
+        22
       ],
       "minimumSizeFactor": 1
     },
@@ -22554,17 +22656,17 @@
     },
     "u.ek-sentinelsilo": {
       "source": "units/sentinel.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         88,
         96
       ],
       "displayFrame": [
-        96,
-        105
+        84,
+        92
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.45455
+      "buildingScaleFactor": 1.28
     },
     "prj.ek-sentinelsilo-1": {
       "source": "units/projectile_antiballistic.png",
@@ -22574,50 +22676,50 @@
         18
       ],
       "displayFrame": [
-        4,
-        12
+        5,
+        14
       ],
-      "minimumSizeFactor": 1.35501
+      "minimumSizeFactor": 1
     },
     "dec.ek-sentinelsilo-arm_1-image_end": {
       "source": "units/sentinel_door.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         8,
         10
       ],
       "displayFrame": [
-        6,
-        7
+        8,
+        10
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-sentinelsilo-wreck": {
       "source": "units/sentinel_dead.png",
-      "scale": 1.4545454545454546,
+      "scale": 1.28,
       "sourceFrame": [
         90,
         96
       ],
       "displayFrame": [
-        98,
-        105
+        86,
+        92
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-cruisemissilesilo": {
       "source": "units/silo_small.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         64,
         64
       ],
       "displayFrame": [
-        64,
-        64
+        68,
+        68
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.33333
+      "buildingScaleFactor": 1.42222
     },
     "prj.ek-definitive-edition-2e1fca49a12ee7f35b": {
       "source": "units/projectile_cruisemissile.png",
@@ -22627,8 +22729,8 @@
         64
       ],
       "displayFrame": [
-        8,
-        31
+        12,
+        49
       ],
       "minimumSizeFactor": 1
     },
@@ -22640,8 +22742,8 @@
         48
       ],
       "displayFrame": [
-        5,
-        24
+        8,
+        37
       ],
       "minimumSizeFactor": 1
     },
@@ -22653,8 +22755,8 @@
         48
       ],
       "displayFrame": [
-        5,
-        24
+        8,
+        37
       ],
       "minimumSizeFactor": 1
     },
@@ -22666,8 +22768,8 @@
         48
       ],
       "displayFrame": [
-        5,
-        24
+        8,
+        37
       ],
       "minimumSizeFactor": 1
     },
@@ -22679,112 +22781,112 @@
         56
       ],
       "displayFrame": [
-        7,
-        28
+        11,
+        43
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-cruisemissilesilo-arm_1-image_end": {
       "source": "units/silo_small_door1.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         32,
         24
       ],
       "displayFrame": [
-        20,
-        15
+        34,
+        26
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-cruisemissilesilo-arm_2-image_end": {
       "source": "units/silo_small_door2.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         32,
         24
       ],
       "displayFrame": [
-        20,
-        15
+        34,
+        26
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-cruisemissilesilo-arm_11-image_end": {
       "source": "units/silo_small_rocket.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         20,
         62
       ],
       "displayFrame": [
-        13,
-        40
+        21,
+        66
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-cruisemissilesilo-arm_12-image_end": {
       "source": "units/silo_small_chlorine.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         20,
         62
       ],
       "displayFrame": [
-        13,
-        40
+        21,
+        66
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-cruisemissilesilo-arm_13-image_end": {
       "source": "units/silo_small_emp.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         20,
         62
       ],
       "displayFrame": [
-        13,
-        40
+        21,
+        66
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-cruisemissilesilo-arm_14-image_end": {
       "source": "units/silo_small_incendiary.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         20,
         62
       ],
       "displayFrame": [
-        13,
-        40
+        21,
+        66
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-cruisemissilesilo-arm_15-image_end": {
       "source": "units/silo_small_minelayer.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         20,
         62
       ],
       "displayFrame": [
-        13,
-        40
+        21,
+        66
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-cruisemissilesilo-wreck": {
       "source": "units/silo_small_dead.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         64,
         64
       ],
       "displayFrame": [
-        64,
-        64
+        68,
+        68
       ],
       "minimumSizeFactor": 1
     },
@@ -23077,17 +23179,30 @@
     },
     "u.ek-largenukelauncher": {
       "source": "units/nuke_launcher_front.png",
-      "scale": 1.3763440860215055,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         93,
         134
       ],
       "displayFrame": [
-        96,
-        138
+        74,
+        107
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.37634
+      "buildingScaleFactor": 1.06667
+    },
+    "prj.ek-definitive-edition-875cc9f1ecfc0dcb64": {
+      "source": "units/projectile_cruisemissile.png",
+      "scale": 1,
+      "sourceFrame": [
+        16,
+        64
+      ],
+      "displayFrame": [
+        12,
+        48
+      ],
+      "minimumSizeFactor": 1
     },
     "prj.ek-definitive-edition-353cd1cdf584256abc": {
       "source": "units/projectile_nuke_large.png",
@@ -23097,8 +23212,8 @@
         124
       ],
       "displayFrame": [
-        24,
-        60
+        38,
+        93
       ],
       "minimumSizeFactor": 1
     },
@@ -23110,60 +23225,60 @@
         148
       ],
       "displayFrame": [
-        16,
-        71
+        26,
+        111
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largenukelauncher-arm_1-image_end": {
       "source": "units/nuke_launcher_door_r.png",
-      "scale": 1.3763440860215055,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         38,
         27
       ],
       "displayFrame": [
-        25,
-        18
+        30,
+        22
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largenukelauncher-arm_2-image_end": {
       "source": "units/nuke_launcher_door_l.png",
-      "scale": 1.3763440860215055,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         42,
         29
       ],
       "displayFrame": [
-        28,
-        19
+        34,
+        23
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largenukelauncher-wreck": {
       "source": "units/nuke_launcher_dead.png",
-      "scale": 1.3763440860215055,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         93,
         134
       ],
       "displayFrame": [
-        96,
-        138
+        74,
+        107
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-largenukelauncher-back": {
       "source": "units/nuke_launcher_back.png",
-      "scale": 1.3763440860215055,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         93,
         134
       ],
       "displayFrame": [
-        96,
-        138
+        74,
+        107
       ],
       "minimumSizeFactor": 1
     },
@@ -23318,24 +23433,24 @@
         65
       ],
       "displayFrame": [
-        16,
-        47
+        25,
+        73
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-orbitaldroplanded": {
       "source": "units/drop_pod_upscaled.png",
-      "scale": 1.9393939393939392,
+      "scale": 1.6,
       "sourceFrame": [
         44,
         64
       ],
       "displayFrame": [
-        64,
-        93
+        53,
+        77
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.72391
+      "buildingScaleFactor": 1.42222
     },
     "u.ek-orbitaldropspawner": {
       "source": "units/icon_drop.png",
@@ -23358,8 +23473,8 @@
         180
       ],
       "displayFrame": [
-        22,
-        130
+        34,
+        202
       ],
       "minimumSizeFactor": 1
     },
@@ -23371,24 +23486,24 @@
         160
       ],
       "displayFrame": [
-        20,
-        115
+        32,
+        180
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-orbitaltransportlanded": {
       "source": "units/orbital_transport_landed.png",
-      "scale": 2.8444444444444446,
+      "scale": 2.25,
       "sourceFrame": [
         30,
         180
       ],
       "displayFrame": [
-        64,
-        384
+        51,
+        304
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.2642
+      "buildingScaleFactor": 1
     },
     "prj.ek-orbitaltransportlanded-3": {
       "source": "units/orbital_transport2.png",
@@ -23398,8 +23513,8 @@
         181
       ],
       "displayFrame": [
-        22,
-        130
+        34,
+        204
       ],
       "minimumSizeFactor": 1
     },
@@ -23411,8 +23526,8 @@
         161
       ],
       "displayFrame": [
-        20,
-        116
+        32,
+        181
       ],
       "minimumSizeFactor": 1
     },
@@ -23561,68 +23676,68 @@
     },
     "u.ek-groundrefinery": {
       "source": "units/pumpjack.png",
-      "scale": 1.0940170940170941,
+      "scale": 1,
       "sourceFrame": [
         78,
         84
       ],
       "displayFrame": [
-        64,
-        69
+        58,
+        63
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.09402
+      "buildingScaleFactor": 1
     },
     "dec.ek-groundrefinery-wreck": {
       "source": "units/pumpjack_dead.png",
-      "scale": 1.0940170940170941,
+      "scale": 1,
       "sourceFrame": [
         78,
         84
       ],
       "displayFrame": [
-        64,
-        69
+        58,
+        63
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-radarturret": {
       "source": "units/artybase.png",
-      "scale": 1.7777777777777777,
+      "scale": 1.6,
       "sourceFrame": [
         24,
         21
       ],
       "displayFrame": [
-        32,
-        28
+        29,
+        25
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.18519
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-radarturret-2": {
       "source": "units/dish2.png",
-      "scale": 1.7777777777777777,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         26,
         36
       ],
       "displayFrame": [
-        22,
-        31
+        21,
+        29
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-radarturret-wreck": {
       "source": "units/artybase_dead.png",
-      "scale": 1.7777777777777777,
+      "scale": 1.6,
       "sourceFrame": [
         24,
         25
       ],
       "displayFrame": [
-        32,
-        33
+        29,
+        30
       ],
       "minimumSizeFactor": 1
     },
@@ -24091,8 +24206,8 @@
         128
       ],
       "displayFrame": [
-        22,
-        61
+        34,
+        96
       ],
       "minimumSizeFactor": 1
     },
@@ -24107,7 +24222,7 @@
         4,
         252
       ],
-      "minimumSizeFactor": 8.33333
+      "minimumSizeFactor": 5.33333
     },
     "u.ek-rhino": {
       "source": "units/rhino.png",
@@ -24223,6 +24338,19 @@
       "displayFrame": [
         22,
         81
+      ],
+      "minimumSizeFactor": 1
+    },
+    "dec.ek-definitive-edition-7ded9815546048ee48": {
+      "source": "units/krieg_turret.png",
+      "scale": 1,
+      "sourceFrame": [
+        12,
+        32
+      ],
+      "displayFrame": [
+        6,
+        15
       ],
       "minimumSizeFactor": 1
     },
@@ -24488,7 +24616,7 @@
     },
     "dec.ek-scabrewolfmelee-2": {
       "source": "units/scabrewolf_grey_head.png",
-      "scale": 0.8,
+      "scale": 1,
       "sourceFrame": [
         7,
         20
@@ -24497,7 +24625,7 @@
         4,
         11
       ],
-      "minimumSizeFactor": 1.4881
+      "minimumSizeFactor": 1.19048
     },
     "u.ek-scarabt2": {
       "source": "units/scarab.png",
@@ -24592,96 +24720,83 @@
     },
     "u.ek-seabunkeraa": {
       "source": "units/sea_bunker_base.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         58,
         72
       ],
       "displayFrame": [
-        64,
-        79
+        62,
+        77
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.47126
-    },
-    "dec.ek-seabunkeraa-1": {
-      "source": "units/sea_bunker_aa.png",
-      "scale": 1.471264367816092,
-      "sourceFrame": [
-        16,
-        46
-      ],
-      "displayFrame": [
-        11,
-        32
-      ],
-      "minimumSizeFactor": 1
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-seabunkeraa-wreck": {
       "source": "units/sea_bunker_base3_dead.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         62,
         72
       ],
       "displayFrame": [
-        68,
-        79
+        66,
+        77
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-seabunkercannon-2": {
       "source": "units/sea_bunker_singlecannon.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         8,
         48
       ],
       "displayFrame": [
-        6,
-        34
+        9,
+        51
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-seabunkercannon-4": {
       "source": "units/sea_bunker_twinturret.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         24,
         20
       ],
       "displayFrame": [
-        17,
-        14
+        26,
+        21
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-seabunkerminigun-1": {
       "source": "units/sea_bunker_minigun.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         14,
         34
       ],
       "displayFrame": [
-        10,
-        24
+        15,
+        36
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-seabunkermissile": {
       "source": "units/sea_bunker_base_missile.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         58,
         72
       ],
       "displayFrame": [
-        64,
-        79
+        62,
+        77
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.47126
+      "buildingScaleFactor": 1.42222
     },
     "prj.ek-seabunkermissile-missile": {
       "source": "units/building_sea_platforms_missile.png",
@@ -24691,75 +24806,75 @@
         37
       ],
       "displayFrame": [
-        5,
-        16
+        7,
+        25
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-seabunkermissile-wreck": {
       "source": "units/sea_bunker_base_missile_dead.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         62,
         72
       ],
       "displayFrame": [
-        68,
-        79
+        66,
+        77
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-seabunkerrepair": {
       "source": "units/sea_bunker_base4.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         58,
         72
       ],
       "displayFrame": [
-        64,
-        79
+        62,
+        77
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.47126
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-seabunkerrepair-wreck": {
       "source": "units/sea_bunker_base4_dead.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         62,
         72
       ],
       "displayFrame": [
-        68,
-        79
+        66,
+        77
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-seabunkertorpedo": {
       "source": "units/sea_bunker_base2.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         58,
         72
       ],
       "displayFrame": [
-        64,
-        79
+        62,
+        77
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.47126
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-seabunkertorpedo-wreck": {
       "source": "units/sea_bunker_base2_dead.png",
-      "scale": 1.471264367816092,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         62,
         72
       ],
       "displayFrame": [
-        68,
-        79
+        66,
+        77
       ],
       "minimumSizeFactor": 1
     },
@@ -24792,28 +24907,28 @@
     },
     "u.ek-seabunkerrefinery": {
       "source": "units/sea_harvester_refinery.png",
-      "scale": 1.0940170940170941,
+      "scale": 1.28,
       "sourceFrame": [
         78,
         100
       ],
       "displayFrame": [
-        64,
-        82
+        75,
+        96
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.09402
+      "buildingScaleFactor": 1.28
     },
     "dec.ek-seabunkerrefinery-wreck": {
       "source": "units/sea_harvester_refinery_dead.png",
-      "scale": 1.0940170940170941,
+      "scale": 1.28,
       "sourceFrame": [
         80,
         100
       ],
       "displayFrame": [
-        66,
-        82
+        77,
+        96
       ],
       "minimumSizeFactor": 1
     },
@@ -24949,28 +25064,28 @@
     },
     "u.ek-shielddefense": {
       "source": "units/shield_defense.png",
-      "scale": 1.8156028368794326,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         47,
         54
       ],
       "displayFrame": [
-        64,
-        74
+        50,
+        58
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.8156
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-shielddefense-wreck": {
       "source": "units/shield_defense_dead.png",
-      "scale": 1.8156028368794326,
+      "scale": 1.4222222222222223,
       "sourceFrame": [
         49,
         56
       ],
       "displayFrame": [
-        67,
-        76
+        52,
+        60
       ],
       "minimumSizeFactor": 1
     },
@@ -25061,8 +25176,8 @@
         30
       ],
       "displayFrame": [
-        9,
-        15
+        14,
+        24
       ],
       "minimumSizeFactor": 1
     },
@@ -25074,10 +25189,10 @@
         40
       ],
       "displayFrame": [
-        4,
-        27
+        5,
+        32
       ],
-      "minimumSizeFactor": 1.30208
+      "minimumSizeFactor": 1
     },
     "dec.ek-bunkertinyartillery-wreck": {
       "source": "units/small_bunker_base_dead.png",
@@ -25100,8 +25215,8 @@
         34
       ],
       "displayFrame": [
-        8,
-        17
+        13,
+        27
       ],
       "minimumSizeFactor": 1
     },
@@ -25113,8 +25228,8 @@
         18
       ],
       "displayFrame": [
-        13,
-        9
+        21,
+        14
       ],
       "minimumSizeFactor": 1
     },
@@ -25140,8 +25255,8 @@
         20
       ],
       "displayFrame": [
-        5,
-        10
+        8,
+        16
       ],
       "minimumSizeFactor": 1
     },
@@ -25153,8 +25268,8 @@
         20
       ],
       "displayFrame": [
-        5,
-        10
+        8,
+        16
       ],
       "minimumSizeFactor": 1
     },
@@ -25193,8 +25308,8 @@
         20
       ],
       "displayFrame": [
-        5,
-        10
+        8,
+        16
       ],
       "minimumSizeFactor": 1
     },
@@ -25206,8 +25321,8 @@
         20
       ],
       "displayFrame": [
-        5,
-        10
+        8,
+        16
       ],
       "minimumSizeFactor": 1
     },
@@ -25363,8 +25478,8 @@
         384
       ],
       "displayFrame": [
-        6,
-        184
+        9,
+        288
       ],
       "minimumSizeFactor": 1
     },
@@ -25379,7 +25494,7 @@
         4,
         512
       ],
-      "minimumSizeFactor": 0.37037
+      "minimumSizeFactor": 0.23704
     },
     "dec.ek-smallspaceelevator-arm_4-image_end": {
       "source": "units/space_weapons_elevator_platform.png",
@@ -25389,8 +25504,8 @@
         100
       ],
       "displayFrame": [
-        28,
-        48
+        44,
+        75
       ],
       "minimumSizeFactor": 1
     },
@@ -25402,8 +25517,8 @@
         100
       ],
       "displayFrame": [
-        43,
-        48
+        68,
+        75
       ],
       "minimumSizeFactor": 1
     },
@@ -25430,6 +25545,19 @@
       "displayFrame": [
         18,
         46
+      ],
+      "minimumSizeFactor": 1
+    },
+    "prj.ek-definitive-edition-d0aadc5dfe676078f0": {
+      "source": "units/projectile5.png",
+      "scale": 1.2,
+      "sourceFrame": [
+        6,
+        35
+      ],
+      "displayFrame": [
+        5,
+        31
       ],
       "minimumSizeFactor": 1
     },
@@ -25649,142 +25777,142 @@
         19
       ],
       "displayFrame": [
-        5,
-        10
+        7,
+        16
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-supplydepot": {
       "source": "units/building_depot_base.png",
-      "scale": 1.292929292929293,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         33,
         27
       ],
       "displayFrame": [
-        32,
-        26
+        26,
+        22
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.29293
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-supplydepot-wreck": {
       "source": "units/building_depot_base_dead.png",
-      "scale": 1.292929292929293,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         33,
         27
       ],
       "displayFrame": [
-        32,
-        26
+        26,
+        22
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-supplydepott2": {
       "source": "units/supply_depot_t2.png",
-      "scale": 1,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         45,
         39
       ],
       "displayFrame": [
-        34,
-        29
+        36,
+        31
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-supplydepott2-wreck": {
       "source": "units/supply_depot_t2_dead.png",
-      "scale": 1,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         35,
         35
       ],
       "displayFrame": [
-        26,
-        26
+        28,
+        28
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-supportfactory": {
       "source": "units/support_factory_t1_front.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.272888888888889,
       "sourceFrame": [
         64,
         89
       ],
       "displayFrame": [
-        64,
-        89
+        61,
+        85
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.48976
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-supportfactory-wreck": {
       "source": "units/support_factory_t1_dead.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.272888888888889,
       "sourceFrame": [
         66,
         89
       ],
       "displayFrame": [
-        66,
-        89
+        63,
+        85
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-supportfactory-back": {
       "source": "units/support_factory_t1_back.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.272888888888889,
       "sourceFrame": [
         68,
         89
       ],
       "displayFrame": [
-        68,
-        89
+        65,
+        85
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-supportfactoryt2": {
       "source": "units/support_factory_t2_front.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.272888888888889,
       "sourceFrame": [
         64,
         89
       ],
       "displayFrame": [
-        64,
-        89
+        61,
+        85
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.48976
+      "buildingScaleFactor": 1.42222
     },
     "dec.ek-supportfactoryt2-wreck": {
       "source": "units/support_factory_t2_dead.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.272888888888889,
       "sourceFrame": [
         68,
         89
       ],
       "displayFrame": [
-        68,
-        89
+        65,
+        85
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-supportfactoryt2-back": {
       "source": "units/support_factory_t2_back.png",
-      "scale": 1.3333333333333333,
+      "scale": 1.272888888888889,
       "sourceFrame": [
         68,
         89
       ],
       "displayFrame": [
-        68,
-        89
+        65,
+        85
       ],
       "minimumSizeFactor": 1
     },
@@ -26115,28 +26243,28 @@
     },
     "u.ek-tanktrap": {
       "source": "units/tank_trap1.png",
-      "scale": 1.5238095238095237,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         28,
         28
       ],
       "displayFrame": [
-        32,
-        32
+        22,
+        22
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.52381
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-tanktrap-wreck": {
       "source": "units/tank_trap1_dead.png",
-      "scale": 1.5238095238095237,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         28,
         18
       ],
       "displayFrame": [
-        32,
-        21
+        22,
+        14
       ],
       "minimumSizeFactor": 1
     },
@@ -26606,7 +26734,7 @@
         4,
         20
       ],
-      "minimumSizeFactor": 2.08333
+      "minimumSizeFactor": 1.33333
     },
     "dec.ek-titanmech-4": {
       "source": "units/titan_body.png",
@@ -26658,7 +26786,7 @@
         4,
         24
       ],
-      "minimumSizeFactor": 1.98413
+      "minimumSizeFactor": 1.26984
     },
     "dec.ek-titanmech-leg_1-image_foot": {
       "source": "units/titan_foot.png",
@@ -26688,87 +26816,87 @@
     },
     "u.ek-towerhmg": {
       "source": "units/tower1b_base.png",
-      "scale": 2.3703703703703702,
+      "scale": 1.3333333333333333,
       "sourceFrame": [
         18,
         48
       ],
       "displayFrame": [
-        32,
-        85
+        18,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 2.37037
+      "buildingScaleFactor": 1.33333
     },
     "u.ek-towerhmgupgraded": {
       "source": "units/tower3.png",
-      "scale": 1.9393939393939394,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         22,
         60
       ],
       "displayFrame": [
-        32,
-        87
+        18,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.93939
+      "buildingScaleFactor": 1.06667
     },
     "u.ek-towerrifleman": {
       "source": "units/tower1a_base.png",
-      "scale": 2.3703703703703702,
+      "scale": 1.3333333333333333,
       "sourceFrame": [
         18,
         48
       ],
       "displayFrame": [
-        32,
-        85
+        18,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 2.37037
+      "buildingScaleFactor": 1.33333
     },
     "u.ek-towerriflemanupgraded": {
       "source": "units/tower4.png",
-      "scale": 1.9393939393939394,
+      "scale": 1.103448275862069,
       "sourceFrame": [
         22,
         58
       ],
       "displayFrame": [
-        32,
-        84
+        18,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.93939
+      "buildingScaleFactor": 1.10345
     },
     "u.ek-towersniper": {
       "source": "units/tower2b_base.png",
-      "scale": 2.3703703703703702,
+      "scale": 1.3333333333333333,
       "sourceFrame": [
         18,
         48
       ],
       "displayFrame": [
-        32,
-        85
+        18,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 2.37037
+      "buildingScaleFactor": 1.33333
     },
     "u.ek-towersniperupgraded": {
       "source": "units/tower2a_base.png",
-      "scale": 2.3703703703703702,
+      "scale": 1.3333333333333333,
       "sourceFrame": [
         18,
         48
       ],
       "displayFrame": [
-        32,
-        85
+        18,
+        48
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 2.37037
+      "buildingScaleFactor": 1.33333
     },
     "u.ek-rib": {
       "source": "units/rib.png",
@@ -26837,108 +26965,108 @@
     },
     "u.ek-turretempty": {
       "source": "units/turretbase_empty.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         26,
         26
       ],
       "displayFrame": [
-        32,
-        32
+        29,
+        29
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.5
     },
     "dec.ek-turretgmg-1": {
       "source": "units/turrettop_gmg.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         10,
         24
       ],
       "displayFrame": [
-        8,
-        19
+        11,
+        27
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-turrethmg-1": {
       "source": "units/turrettop_hmg.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         12,
         26
       ],
       "displayFrame": [
-        9,
-        20
+        14,
+        29
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-turretlaserdefence": {
       "source": "units/turretbase_laserdefence.png",
-      "scale": 1.5802469135802468,
+      "scale": 1.5,
       "sourceFrame": [
         27,
         27
       ],
       "displayFrame": [
-        32,
-        32
+        30,
+        30
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.58025
+      "buildingScaleFactor": 1.5
     },
     "dec.ek-turretmortar-1": {
       "source": "units/turrettop_mortar.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         14,
         24
       ],
       "displayFrame": [
-        11,
-        19
+        16,
+        27
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-turretrepair": {
       "source": "units/turretbase_repair.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         26,
         26
       ],
       "displayFrame": [
-        32,
-        32
+        29,
+        29
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.64103
+      "buildingScaleFactor": 1.5
     },
     "dec.ek-turretsam-1": {
       "source": "units/turrettop_sam.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         18,
         18
       ],
       "displayFrame": [
-        14,
-        14
+        20,
+        20
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-turretsamheavy-1": {
       "source": "units/turrettop_sam2.png",
-      "scale": 1.641025641025641,
+      "scale": 1.5,
       "sourceFrame": [
         20,
         20
       ],
       "displayFrame": [
-        16,
-        16
+        22,
+        22
       ],
       "minimumSizeFactor": 1
     },
@@ -26953,7 +27081,7 @@
         4,
         22
       ],
-      "minimumSizeFactor": 2.31481
+      "minimumSizeFactor": 1.48148
     },
     "u.ek-twin-hangar": {
       "source": "units/twin_hangar_ship.png",
@@ -27022,68 +27150,68 @@
     },
     "u.ek-underwaterfactory": {
       "source": "units/underwater_factory.png",
-      "scale": 1.4222222222222223,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         60,
         68
       ],
       "displayFrame": [
-        64,
-        73
+        48,
+        54
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.42222
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-underwaterfactory-wreck": {
       "source": "units/underwater_factory_dead.png",
-      "scale": 1.4222222222222223,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         60,
         70
       ],
       "displayFrame": [
-        64,
-        75
+        48,
+        56
       ],
       "minimumSizeFactor": 1
     },
     "u.ek-underwaterhangar": {
       "source": "units/underwater_hangar.png",
-      "scale": 1.4222222222222223,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         60,
         100
       ],
       "displayFrame": [
-        64,
-        107
+        48,
+        80
       ],
       "minimumSizeFactor": 1,
-      "buildingScaleFactor": 1.42222
+      "buildingScaleFactor": 1.06667
     },
     "dec.ek-underwaterhangar-wreck": {
       "source": "units/underwater_hangar_dead.png",
-      "scale": 1.4222222222222223,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         60,
         100
       ],
       "displayFrame": [
-        64,
-        107
+        48,
+        80
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-underwaterhangar-back": {
       "source": "units/underwater_hangar_back.png",
-      "scale": 1.4222222222222223,
+      "scale": 1.0666666666666667,
       "sourceFrame": [
         54,
         60
       ],
       "displayFrame": [
-        58,
-        64
+        43,
+        48
       ],
       "minimumSizeFactor": 1
     },
@@ -27102,40 +27230,40 @@
     },
     "dec.ek-unicornsmall-2": {
       "source": "units/unicorn_cocpit.png",
-      "scale": 1.2,
+      "scale": 1,
       "sourceFrame": [
         19,
         29
       ],
       "displayFrame": [
-        11,
-        17
+        9,
+        14
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-unicornsmall-4": {
       "source": "units/unicorn_turret.png",
-      "scale": 1.2,
+      "scale": 1,
       "sourceFrame": [
         15,
         39
       ],
       "displayFrame": [
-        9,
-        22
+        7,
+        19
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-unicornsmall-5": {
       "source": "units/unicorn_cannon.png",
-      "scale": 1.2,
+      "scale": 1,
       "sourceFrame": [
         11,
         61
       ],
       "displayFrame": [
-        6,
-        35
+        5,
+        29
       ],
       "minimumSizeFactor": 1
     },
@@ -27180,27 +27308,27 @@
     },
     "dec.ek-unicornsmallemp-4": {
       "source": "units/unicorn_turret_emp.png",
-      "scale": 1.2,
+      "scale": 1,
       "sourceFrame": [
         15,
         39
       ],
       "displayFrame": [
-        9,
-        22
+        7,
+        19
       ],
       "minimumSizeFactor": 1
     },
     "dec.ek-unicornsmallemp-5": {
       "source": "units/unicorn_cannon_emp.png",
-      "scale": 1.2,
+      "scale": 1,
       "sourceFrame": [
         11,
         61
       ],
       "displayFrame": [
-        6,
-        35
+        5,
+        29
       ],
       "minimumSizeFactor": 1
     },
@@ -27345,7 +27473,7 @@
         4,
         40
       ],
-      "minimumSizeFactor": 5.55556
+      "minimumSizeFactor": 3.55556
     },
     "dec.ek-infantryscoutmech-head": {
       "source": "units/scoutmech_head.png",
@@ -28131,7 +28259,7 @@
   "summary": {
     "sourceFiles": 578,
     "defs": 573,
-    "sprites": 1258,
+    "sprites": 1268,
     "guns": 2236,
     "actions": 1512
   }

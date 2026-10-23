@@ -12,7 +12,7 @@ export default function (sdk) {
         const def=sdk.getDef(e.defId),config=def.extensions?.[ID],pose=super.pictureOf(e,def,alpha),visualBefore=sdk.contentRuntime(this.game)?.module(ID)?.render?.(e);
         if(visualBefore?.hidden)return;
         if(config?.back)this.drawPart(g,{sprite:config.back,x:e.x,y:e.y,angle:-Math.PI/2},pose,e,1);
-        for(const m of visualBefore?.mounts??[])if(m.under)this.drawPart(g,m,pose,e);
+        for(const m of visualBefore?.mounts??[])if(m.under)this.drawPart(g,m,pose,e,pose.displayScale);
         super.drawEnt(g,e,alpha,view,cam);
         const visual=sdk.contentRuntime(this.game)?.module(ID)?.render?.(e);if(!visual?.deck?.length)return;
         const p=super.pictureOf(e,sdk.getDef(e.defId),alpha);

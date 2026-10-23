@@ -2,9 +2,14 @@ const EXTENSION_HOST_VERSION = 2;
 function validCapabilityId(value) {
   return typeof value === "string" && /^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,63}$/.test(value) && !["__proto__", "constructor", "prototype"].includes(value);
 }
+const stamps = /* @__PURE__ */ new WeakMap();
 function extensionPackageStamp(pkg) {
+  const have = stamps.get(pkg);
+  if (have !== void 0) return have;
   const resources = pkg.assets ? ":" + resourceFingerprint(pkg.assets) : "";
-  return `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}${resources}${pkg.api > 1 ? ":api" + pkg.api : ""}`;
+  const stamp = `${pkg.id}@${pkg.version}:${pkg.schema.sha256}:${pkg.runtime.sha256}:${pkg.presentation?.sha256 ?? ""}${resources}${pkg.api > 1 ? ":api" + pkg.api : ""}`;
+  stamps.set(pkg, stamp);
+  return stamp;
 }
 function resourceFingerprint(assets) {
   const text = JSON.stringify(Object.entries(assets).sort(([a2], [b2]) => a2 < b2 ? -1 : a2 > b2 ? 1 : 0));
@@ -21,9 +26,9 @@ function resourceFingerprint(assets) {
 let read, references;
 let loading;
 let trustedPackages;
-function grantTrustedExtensions(stamps) {
-  if (!stamps.length) return;
-  for (const stamp of stamps)
+function grantTrustedExtensions(stamps2) {
+  if (!stamps2.length) return;
+  for (const stamp of stamps2)
     if (typeof stamp === "string" && stamp.length <= 512 && !trustedPackages?.has(stamp)) {
       (trustedPackages ??= /* @__PURE__ */ new Set()).add(stamp);
     }
@@ -345,6 +350,13 @@ function preparePackageSchemas(packages, trust = false, limits = STANDARD_CONTEN
   return work.length ? Promise.all(work).then(() => {
   }) : null;
 }
+const assetIds = /* @__PURE__ */ new WeakMap();
+function assetIdsOf(pkg) {
+  if (!pkg) return /* @__PURE__ */ new Set();
+  let ids = assetIds.get(pkg);
+  if (!ids) assetIds.set(pkg, ids = new Set(Object.keys(pkg.assets ?? {})));
+  return ids;
+}
 function readExtensions(raw, pack, path, issues, context, weapon = false) {
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
     issues.push({ path, message: "must be an object" });
@@ -370,7 +382,7 @@ function readExtensions(raw, pack, path, issues, context, weapon = false) {
       });
       continue;
     }
-    const config = reader(value, `${path}.${id}`, issues, { ...context, assetIds: new Set(Object.keys(pkg?.assets ?? {})) });
+    const config = reader(value, `${path}.${id}`, issues, { ...context, assetIds: assetIdsOf(pkg) });
     if (config !== void 0) out[id] = config;
   }
   return Object.keys(out).length ? out : void 0;
@@ -2177,6 +2189,8 @@ const STRINGS = {
   "mp.notice.afk": ["{0} was moved to the stands: away while the room waited.", "{0} 长时间未响应，已移至观众席。", "{0}님이 자리를 비워 관전석으로 이동되었습니다."],
   "mp.notice.playerDisconnected": ["{0} has disconnected.", "{0} 已断开连接。", "{0}님의 연결이 끊어졌습니다."],
   "mp.notice.playerReconnected": ["{0} has reconnected.", "{0} 已重新连接。", "{0}님이 다시 연결되었습니다."],
+  "mp.notice.sideLeft": ["Nobody is left playing for {0}: their side concedes in {1}s unless a player returns.", "{0} 一方已无人在场：若无人返回，其阵营将在 {1} 秒后投降。", "{0}님 쪽에 남은 플레이어가 없습니다. 아무도 돌아오지 않으면 {1}초 후 해당 진영이 항복합니다."],
+  "mp.notice.sideConceded": ["Nobody returned for {0}: their side has conceded.", "{0} 无人返回，其阵营已投降。", "{0}님 쪽에 아무도 돌아오지 않아 해당 진영이 항복했습니다."],
   "mp.notice.say": ["Server: {0}", "服务器：{0}", "서버: {0}"],
   "mp.notice.reported": ["Your report on {0} was sent to the server's admin.", "对 {0} 的举报已发送给服务器管理员。", "{0}님에 대한 신고가 서버 관리자에게 전달되었습니다."],
   // a public room did not relay a line; {0} is how many more end in removal
@@ -6840,7 +6854,16 @@ const DEFS = {
       mark: "cannon",
       sound: "expl"
     })],
-    sprite: "u.hornet"
+    sprite: "u.hornet",
+    // four props, one on each motor at the ends of its X (the code-drawn
+    // frame's motors, and the painted sheet's, measured), small, the
+    // diagonal pairs turning against each other as a quadcopter's do
+    rotors: [
+      { x: -7.3, y: -7.3, scale: 0.38, phase: 0, spin: 1, prop: true },
+      { x: 7.3, y: -7.3, scale: 0.38, phase: 0.7, spin: -1, prop: true },
+      { x: 7.3, y: 7.3, scale: 0.38, phase: 1.9, spin: 1, prop: true },
+      { x: -7.3, y: 7.3, scale: 0.38, phase: 2.6, spin: -1, prop: true }
+    ]
   },
   /**
    * **Anvil's recovery tank** (`fieldRecovery`): the armoured recovery
@@ -7611,7 +7634,8 @@ const DEFS = {
       ammo: 8,
       sound: "missile"
     })],
-    sprite: "u.heli"
+    sprite: "u.heli",
+    rotors: [{ x: 0, y: -2, scale: 1, phase: 0 }]
   },
   jet: {
     id: "jet",
@@ -7754,7 +7778,12 @@ const DEFS = {
     hovers: true,
     lowFlying: true,
     weapons: [],
-    sprite: "u.theli"
+    sprite: "u.theli",
+    // two in tandem, a step smaller, turning out of step
+    rotors: [
+      { x: 0, y: -6, scale: 0.9, phase: 0 },
+      { x: 0, y: 6, scale: 0.9, phase: Math.PI / 4 }
+    ]
   },
   c47: {
     id: "c47",
@@ -7928,7 +7957,8 @@ const DEFS = {
       ammo: 2,
       sound: "torpedo"
     })],
-    sprite: "u.cormorant"
+    sprite: "u.cormorant",
+    rotors: [{ x: 0, y: -2, scale: 1, phase: 0 }]
   },
   /**
    * The nuclear warhead in flight. Not built at any factory: a silo or a
@@ -10344,7 +10374,7 @@ const ABILITIES = {
   emergencyRepair: { id: "emergencyRepair", cooldown: 30, duration: 6, auraMul: 3, sound: "abRepair" }
 };
 const ABILITY_IDS = Object.keys(ABILITIES);
-const TECH = {
+const VANILLA_TECH = {
   // ---- Lightning: speed, the raid, the air
   lightning: { id: "lightning", branch: "lightning", pick: true, cost: 300, time: 30, buff: { stat: "speed", mul: 1.08, kind: "unit" } },
   smokeDischargers: { id: "smokeDischargers", branch: "lightning", cost: 450, time: 40 },
@@ -10367,8 +10397,14 @@ const TECH = {
   // ---- the last node, any doctrine's, behind its whole column
   nuclearProgram: { id: "nuclearProgram", final: true, gates: true, cost: 1e3, time: 60 }
 };
-function isTechId(id) {
-  return Object.prototype.hasOwnProperty.call(TECH, id);
+const TECH = { ...VANILLA_TECH };
+const TECH_IDS = Object.keys(TECH);
+function installTech(nodes) {
+  for (const id of Object.keys(TECH)) if (!Object.hasOwn(VANILLA_TECH, id)) delete TECH[id];
+  for (const n of nodes) TECH[n.id] = n;
+  const ids = TECH_IDS;
+  ids.length = 0;
+  ids.push(...Object.keys(TECH));
 }
 const MOD_FORMAT = "steel-tide-mod";
 const MOD_FORMAT_VERSION = 4;
@@ -10377,8 +10413,10 @@ const MOD_MANIFEST_NAME = "mod.json";
 const MAX_MOD_DEFS = STANDARD_CONTENT_LIMITS.defs;
 const MAX_MOD_SPRITES = STANDARD_CONTENT_LIMITS.sprites;
 const MAX_MOD_TERRAINS = 32;
+const MAX_MOD_TECH = 128;
 const MAX_DEF_DECALS = 12;
 const MAX_DEF_MOUNTS = 8;
+const MAX_DEF_ROTORS = 8;
 const MAX_MOD_SOUNDS = STANDARD_CONTENT_LIMITS.sounds;
 const MAX_MOD_MUSIC_TRACKS = 32;
 const MAX_MOD_MUSIC_QUEUE = 64;
@@ -10427,6 +10465,7 @@ const MANIFEST_SPECS = [
   { name: "minGame", type: "string", max: 32, doc: ["the oldest game version it is written for", "所需的最低游戏版本"] },
   { name: "defs", type: "defs", required: true, doc: ["the units, buildings and upgrade levels; may be empty when terrains, music queues or menu backgrounds are supplied", "单位、建筑与升级等级；提供 terrains、音乐队列或菜单背景时可为空"] },
   { name: "factions", type: "factions", doc: ["selectable factions, each with its own headquarters, starting builder and roster (format 2)", "可选阵营，各有自己的总部、初始建造单位和单位表（格式 2）"] },
+  { name: "tech", type: "techNodes", doc: [`up to ${MAX_MOD_TECH} research nodes of its own, researched at its own buildings (see below)`, `最多 ${MAX_MOD_TECH} 个自带科技，在本模组的建筑中研究（见下）`] },
   { name: "terrains", type: "terrains", doc: [`up to ${MAX_MOD_TERRAINS} map-selected terrain variants; preserve their base terrain’s gameplay`, `最多 ${MAX_MOD_TERRAINS} 种由地图选择的地形外观变体；保留基础地形的游戏规则`] },
   { name: "sprites", type: "sprites", doc: ["the sheets the defs draw with (see below)", "各定义使用的精灵图（见下）"] },
   { name: "music", type: "music", doc: ["custom BGM tracks and ordered menu, setup and battle queues (see below)", "自定义背景音乐及菜单、设置、战斗的顺序播放队列（见下）"] },
@@ -10498,13 +10537,14 @@ const DEF_SPECS = [
   { name: "landsForCargo", type: "bool", only: "unit", doc: ["a cargo plane that touches down to load", "装卸时降落的运输机"] },
   { name: "cargoWeight", type: "number", only: "unit", min: 0, max: 50, def: "pop", doc: ["how much of a hold it takes", "占用的载重"] },
   { name: "underwater", type: "bool", only: "unit", doc: ["a submarine: seen only by sonar", "潜艇：仅声呐可见"] },
-  { name: "sonar", type: "number", only: "unit", min: 0, max: 64, doc: ["sonar range, tiles", "声呐范围（格）"] },
+  { name: "sonar", type: "number", min: 0, max: 64, doc: ["sonar range, tiles: the one way to see a submarine below the surface, from a unit or a building", "声呐范围（格）：发现水下潜艇的唯一方式，单位与建筑均可拥有"] },
   { name: "stealth", type: "number", only: "unit", min: 0, max: 64, doc: ["seen only within this many tiles of an enemy", "仅在敌方此距离内可见"] },
   { name: "detect", type: "number", min: 0, max: 64, doc: ["reveals stealth within this many tiles", "在此范围内揭示隐形"] },
   { name: "radar", type: "bool", doc: ["sees by radio: the sight circle ignores weather and the hour, and drops to 7 tiles when short of power", "靠无线电观测：视野不受天气与昼夜影响，电力不足时缩至 7 格"] },
   { name: "remoteVision", type: "bool", only: "unit", doc: ["remote camera feed: hostile jamming blocks its sight within the field", "远程图像传输：敌方干扰阻止其揭示干扰区内的视野"] },
   { name: "jamRange", type: "number", only: "building", min: 0, max: 64, doc: ["electronic-warfare radius in tiles; requires full power, reveals its location, blocks hostile radar and remote vision, never visual sight or sonar", "电子战半径（格）：需充足电力，会暴露自身位置，阻断敌方雷达与远程视野，不影响目视与声呐"] },
-  { name: "hovers", type: "bool", only: "unit", doc: ["an aircraft that hovers instead of orbiting", "悬停而非盘旋的飞行器"] },
+  { name: "hovers", type: "bool", only: "unit", doc: ["an aircraft that hovers instead of orbiting; how it flies, not how it looks (`rotors`)", "悬停而非盘旋的飞行器；只决定飞行方式，不决定外观（见 `rotors`）"] },
+  { name: "rotors", type: "rotors", only: "unit", def: "one over the centre if it hovers, else none; the base's, when its art is kept", doc: [`the rotors and propellers drawn spinning over its art and heard while it flies, up to ${MAX_DEF_ROTORS} (see below); \`[]\` is none, for an airship or a drone whose art turns its own blades`, `在其图像上旋转绘制、飞行时可闻声的旋翼与螺旋桨，最多 ${MAX_DEF_ROTORS} 个（见下）；\`[]\` 表示没有，用于飞艇或自带旋转桨叶图像的无人机`] },
   { name: "kamikaze", type: "bool", only: "unit", doc: ["the unit is its own round: it never picks a target, and its one weapon flies it into what it is ordered at (the Hornet)", "自身即弹药：从不自行索敌，唯一的武器是被命令攻击时撞向目标（黄蜂）"] },
   { name: "lowFlying", type: "bool", only: "unit", doc: ["an aircraft at treetop height: machine guns and autocannons that fire on the ground reach it too (the helicopters and the Hornet)", "贴着树梢飞行的飞行器：对地的机枪与机炮也能打到它（直升机与黄蜂）"] },
   { name: "limit", type: "int", min: 1, max: 200, only: "unit", doc: ["at most this many a faction at once, alive and queued together (the Hornet's 10)", "每个阵营同时最多拥有的数量，在役与排队中合计（黄蜂为 10）"] },
@@ -10579,6 +10619,15 @@ const MOUNT_SPECS = [
   { name: "rest", type: "number", min: -360, max: 360, def: "0", doc: ["the bearing it trains about, degrees clockwise from the bow: 0 forward, 90 to the right, 180 aft", "转动所围绕的朝向，自车头顺时针计的角度：0 向前、90 向右、180 向后"] },
   { name: "arc", type: "number", min: 0, max: 180, def: "180", doc: ["how far either side of `rest` it turns, degrees; 180 is all round. A ring that cannot bear on the target waits at the end of its arc, and the rings that can take the shots", "在 `rest` 两侧各能转动的角度；180 即全向。无法指向目标的炮塔停在射界尽头，由能指向目标的炮塔开火"] }
 ];
+const ROTOR_SPECS = [
+  { name: "x", type: "number", min: -256, max: 256, def: "0", doc: ["where its hub is on the body's up-facing art: px right of its pivot, in the body sheet's own px at its `fw`×`fh` size (the game scales it with the unit)", "旋翼轴在主体朝上图像上的位置：枢轴右侧的像素，按主体精灵图 `fw`×`fh` 尺寸计（游戏随单位一并缩放）"] },
+  { name: "y", type: "number", min: -256, max: 256, def: "0", doc: ["px down from the pivot, toward the tail", "枢轴下方（尾部方向）的像素"] },
+  { name: "scale", type: "number", min: 0.05, max: 8, def: "1", doc: ["drawn at this multiple of its blades' sheet: the game's rotor is 22 px across, a helicopter's", "按桨叶精灵图尺寸的此倍数绘制：游戏自带的旋翼宽 22 像素，即一架直升机的旋翼"] },
+  { name: "spin", type: "number", min: -8, max: 8, def: "1", doc: ["the way it turns and how fast: 1 clockwise at the helicopter's rate, -1 against it, 2 twice as fast, 0 still", "旋转方向与速度：1 为以直升机的转速顺时针，-1 为逆时针，2 为两倍速，0 为静止"] },
+  { name: "phase", type: "number", min: -360, max: 360, def: "0", doc: ["its blades' lead on the others', degrees, so two rotors do not turn in step", "桨叶相对其他旋翼的超前角度，使多个旋翼不同步转动"] },
+  { name: "prop", type: "bool", doc: ["a small propeller: heard as a buzz rather than a rotor's beat (the Hornet's four); an aircraft is heard so when all its blades are", "小型螺旋桨：听起来是嗡鸣而非旋翼的拍击声（黄蜂的四个）；全部桨叶都是时整机按此发声"] },
+  { name: "sprite", type: "string", max: 48, def: "the game's rotor", doc: ["the blades' sheet: one of this mod's `dec.<name>` sheets, drawn turning about its centre, its magenta in the side's colour", "桨叶精灵图：本模组的 `dec.<名字>` 精灵图，绕中心旋转绘制，其品红按阵营着色"] }
+];
 const SOUND_SPECS = [
   { name: "key", type: "string", max: 60, required: true, doc: ["`<mod id>-<name>`, lower case; what a weapon's `sound` names", "`<模组 id>-<名字>`，小写；武器 `sound` 引用的键"] },
   { name: "file", type: "string", max: 120, required: true, doc: ["the recording, relative to mod.json. An MP3 plays everywhere; WAV works, OGG not on Safari. Dry, close, under a second", "录音路径，相对 mod.json。MP3 处处可播；WAV 可用，OGG 在 Safari 上不行。干声、近距、一秒以内"] }
@@ -10647,6 +10696,16 @@ const FACTION_SPECS = [
   { name: "builder", type: "id", required: true, doc: ["this mod’s ground or amphibious builder; the HQ must produce it and it must rebuild the HQ", "本模组的陆地或两栖建造单位；总部必须能生产它，它必须能重建总部"] },
   { name: "roster", type: "ids", max: LARGE_CONTENT_LIMITS.defs, doc: ["permitted definitions, including prerequisites and upgrades; defaults to all definitions in this mod", "允许的定义，包括前置建筑与升级；默认为本模组的全部定义"] }
 ];
+const TECH_SPECS = [
+  { name: "id", type: "id", required: true, doc: ["unique node id, prefixed with the mod id and a dash; never a def id", "唯一科技 id，以模组 id 和连字符开头；不能与定义 id 相同"] },
+  { name: "name", type: "text", required: true, doc: ["the node’s name on its lab’s card", "研究建筑卡片上的科技名称"] },
+  { name: "desc", type: "text", doc: ["its tooltip line", "提示说明"] },
+  { name: "lab", type: "id", required: true, doc: ["this mod’s building that researches it; the building gets a research queue", "研究它的本模组建筑；该建筑因此获得研究队列"] },
+  { name: "cost", type: "number", required: true, min: 0, max: 99999, doc: ["metal, paid as the work is done", "金属，随研究进度支付"] },
+  { name: "time", type: "number", min: 0, max: 3600, def: "30", doc: ["seconds at full power", "满电时所需秒数"] },
+  { name: "requires", type: "ids", doc: ["buildings that must stand, or nodes researched first (this mod’s or the game’s); it may be queued behind nodes on order", "必须存在的建筑，或须先研究的科技（本模组或原版）；前置科技已在队列中时也可排队"] },
+  { name: "factions", type: "ids", doc: ["this mod’s factions that may research it; absent is any seat that can raise its lab", "可研究它的本模组阵营；省略时任何能建造其研究建筑的一方都可研究"] }
+];
 const TERRAIN_SPECS = [
   { name: "id", type: "id", required: true, doc: ["unique terrain variant id, prefixed with the mod id and a dash", "唯一地形变体 id，以模组 id 和连字符开头"] },
   { name: "name", type: "text", required: true, doc: ["the terrain style name in the editor", "编辑器中的地形外观名称"] },
@@ -10685,6 +10744,7 @@ const FIELD_SPECS = {
   musicTrack: MUSIC_TRACK_SPECS,
   manifest: MANIFEST_SPECS,
   faction: FACTION_SPECS,
+  techNode: TECH_SPECS,
   terrain: TERRAIN_SPECS,
   cityTerrain: CITY_TERRAIN_SPECS,
   cityArchitecture: CITY_ARCHITECTURE_SPECS,
@@ -10692,6 +10752,7 @@ const FIELD_SPECS = {
   weapon: WEAPON_SPECS,
   decal: DECAL_SPECS,
   mount: MOUNT_SPECS,
+  rotor: ROTOR_SPECS,
   sprite: SPRITE_SPECS,
   sound: SOUND_SPECS,
   // a mod's behaviour, a weapon's look, a shield, a sheet's states and a carrier's wing (`game/ruleSpec.ts`)
@@ -10722,6 +10783,7 @@ function spriteKeysOf(table) {
     out.add(d.sprite);
     if (d.turretSprite) out.add(d.turretSprite);
     for (const dc of d.decals ?? []) out.add(dc.sprite);
+    for (const r of d.rotors ?? []) if (r.sprite) out.add(r.sprite);
   }
   return out;
 }
@@ -10913,6 +10975,8 @@ function checkField(spec, value, path, issues) {
       return Array.isArray(value) && value.length <= MAX_DEF_DECALS || bad(`must be a list of up to ${MAX_DEF_DECALS} decals`);
     case "mounts":
       return Array.isArray(value) && value.length >= 1 && value.length <= MAX_DEF_MOUNTS || bad(`must be a list of one to ${MAX_DEF_MOUNTS} mounts`);
+    case "rotors":
+      return Array.isArray(value) && value.length <= MAX_DEF_ROTORS || bad(`must be a list of up to ${MAX_DEF_ROTORS} rotors`);
     case "muzzles":
       if (!Array.isArray(value) || value.length < min || value.length > max) return bad(`must list ${min}–${max} muzzle points`);
       for (const point of value) {
@@ -10934,6 +10998,8 @@ function checkField(spec, value, path, issues) {
       return Array.isArray(value) && value.length <= MAX_MOD_MUSIC_QUEUE && value.every((id) => typeof id === "string" && ID_RE.test(id)) || bad(`must be a list of up to ${MAX_MOD_MUSIC_QUEUE} track ids`);
     case "musicTracks":
       return Array.isArray(value) && value.length <= MAX_MOD_MUSIC_TRACKS || bad(`must be a list of up to ${MAX_MOD_MUSIC_TRACKS} tracks`);
+    case "techNodes":
+      return Array.isArray(value) && value.length <= MAX_MOD_TECH || bad(`must be a list of up to ${MAX_MOD_TECH} research nodes`);
     case "weapons":
     case "factions":
     case "terrains":
@@ -11058,7 +11124,7 @@ function parseDefinitionPack(input) {
   warnings.push(...resolved.warnings);
   return errors.length > 0 ? { ok: false, errors, warnings } : { ok: true, pack: mod, warnings };
 }
-function resolveDefinitions(mod, table = VANILLA) {
+function resolveDefinitions(mod, table = VANILLA, tech = VANILLA_TECH) {
   const limits = contentLimits(mod);
   const errors = [];
   const warnings = [];
@@ -11276,6 +11342,37 @@ function resolveDefinitions(mod, table = VANILLA) {
     });
     mod.menuBackground = { cuts, queue };
   }
+  const nodes = [];
+  const nodeIds = /* @__PURE__ */ new Set();
+  if (mod.tech !== void 0) {
+    if (!Array.isArray(mod.tech) || mod.tech.length > MAX_MOD_TECH) errors.push({ path: "tech", message: `must be a list of up to ${MAX_MOD_TECH} research nodes` });
+    else mod.tech.forEach((raw, i) => {
+      const path = `tech[${i}]`;
+      if (!isPlainObject$1(raw)) {
+        errors.push({ path, message: "must be an object" });
+        return;
+      }
+      const node = checkObject(raw, TECH_SPECS, path, errors, warnings);
+      if (typeof node.id !== "string" || node.name === void 0 || typeof node.lab !== "string" || node.cost === void 0) return;
+      if (!node.id.startsWith(`${mod.id}-`) || node.id.length <= mod.id.length + 1) {
+        errors.push({ path: `${path}.id`, message: "must be prefixed with the mod id and a dash" });
+        return;
+      }
+      if (nodeIds.has(node.id) || Object.hasOwn(tech, node.id)) {
+        errors.push({ path: `${path}.id`, message: `"${node.id}" is already a research node` });
+        return;
+      }
+      if (table[node.id] || aliases.has(node.id) || ABILITY_IDS.includes(node.id) || mod.defs.some((d) => isPlainObject$1(d) && d.id === node.id)) {
+        errors.push({ path: `${path}.id`, message: `"${node.id}" already names a def or an ability; a node needs a name of its own` });
+        return;
+      }
+      nodeIds.add(node.id);
+      nodes.push({ node, path });
+    });
+    mod.tech = nodes.map((n) => n.node);
+  }
+  const isNode = (id) => nodeIds.has(id) || Object.hasOwn(tech, id);
+  let extensionNames;
   mod.defs.forEach((raw, i) => {
     const path = `defs[${i}]`;
     if (!isPlainObject$1(raw)) {
@@ -11289,6 +11386,10 @@ function resolveDefinitions(mod, table = VANILLA) {
     }
     if (table[id]) {
       errors.push({ path: `${path}.id`, message: `"${id}" is already a def${VANILLA_IDS.has(id) ? " of the game" : ` (mod ${table[id].mod ?? "?"})`}` });
+      return;
+    }
+    if (Object.hasOwn(tech, id)) {
+      errors.push({ path: `${path}.id`, message: `"${id}" is a research node` });
       return;
     }
     if (built.has(id)) {
@@ -11322,24 +11423,25 @@ function resolveDefinitions(mod, table = VANILLA) {
       skipRequired: base ? /* @__PURE__ */ new Set(["kind", "cost", "hp"]) : void 0,
       idListMax: mod.capacity === "large" && mod.v === 4 ? limits.defs : void 0
     });
-    const own = clean;
-    if (own.isHQ && mod.v < 2) errors.push({ path: `${path}.isHQ`, message: "headquarters require format 2" });
-    if (own.name === void 0) return;
-    if (own.kind === void 0) own.kind = kind;
-    const def = buildDef(own, kind, base, mod.id, soundKeys, path, errors, warnings);
+    const own2 = clean;
+    if (own2.isHQ && mod.v < 2) errors.push({ path: `${path}.isHQ`, message: "headquarters require format 2" });
+    if (own2.name === void 0) return;
+    if (own2.kind === void 0) own2.kind = kind;
+    const def = buildDef(own2, kind, base, mod.id, soundKeys, path, errors, warnings);
     if (def?.isHQ && (def.kind !== "building" || def.offshore || def.needsDeposit)) errors.push({ path: `${path}.isHQ`, message: "a headquarters must be a land building without a deposit requirement" });
     if (!def) return;
     if (def.hp > limits.hp) errors.push({ path: `${path}.hp`, message: `must be between 1 and ${limits.hp} for ${mod.capacity ?? "standard"} capacity` });
     if (def.extensions !== void 0 || def.weapons.some((w2) => w2.extensions !== void 0)) {
-      const extensionContext = { definition: { ...def, ...raw, extensions: def.extensions, weapons: def.weapons }, weaponIds: def.weapons.map((w2) => w2.id), defIds: /* @__PURE__ */ new Set([...Object.keys(table), ...mod.defs.map((d) => d.id)]), spriteKeys: /* @__PURE__ */ new Set([...tableSprites, ...sheetKeys]) };
+      extensionNames ??= { defIds: /* @__PURE__ */ new Set([...Object.keys(table), ...mod.defs.map((d) => d.id)]), spriteKeys: /* @__PURE__ */ new Set([...tableSprites, ...sheetKeys]) };
+      const extensionContext = { definition: { ...def, ...raw, extensions: def.extensions, weapons: def.weapons }, weaponIds: def.weapons.map((w2) => w2.id), ...extensionNames };
       if (def.extensions !== void 0) def.extensions = readExtensions$1(def.extensions, mod, `${path}.extensions`, errors, extensionContext);
       def.weapons.forEach((w2, wi) => {
         if (w2.extensions !== void 0) w2.extensions = readExtensions$1(w2.extensions, mod, `${path}.weapons[${wi}].extensions`, errors, extensionContext, true);
       });
     }
-    const lookCtx = ruleContext(def, table, built, sheetKeys, soundKeys);
+    const lookCtx = ruleContext(def, table, built, sheetKeys, soundKeys, isNode);
     def.weapons.forEach((wp, k) => {
-      if (!wp.look || !own.weapons?.[k]?.look) return;
+      if (!wp.look || !own2.weapons?.[k]?.look) return;
       const look = readLook(wp.look, `${path}.weapons[${k}].look`, lookCtx, errors);
       if (!look) {
         delete wp.look;
@@ -11348,15 +11450,15 @@ function resolveDefinitions(mod, table = VANILLA) {
       wp.look = look;
       if (look.beam) wp.speed = 5e3;
     });
-    if (own.shield !== void 0) {
-      const shield = readShield(own.shield, `${path}.shield`, lookCtx, errors);
+    if (own2.shield !== void 0) {
+      const shield = readShield(own2.shield, `${path}.shield`, lookCtx, errors);
       if (shield) def.shield = shield;
       else delete def.shield;
     }
     const ownSheet = sheetKeys.has(`u.${id}`);
-    const bodyKey = own.sprite ?? (ownSheet ? `u.${id}` : base?.sprite ?? `u.${id}`);
+    const bodyKey = own2.sprite ?? (ownSheet ? `u.${id}` : base?.sprite ?? `u.${id}`);
     if (!sheetKeys.has(bodyKey) && !tableSprites.has(bodyKey)) {
-      if (own.sprite) errors.push({ path: `${path}.sprite`, message: `"${bodyKey}" is neither a sheet of this mod nor art the game has` });
+      if (own2.sprite) errors.push({ path: `${path}.sprite`, message: `"${bodyKey}" is neither a sheet of this mod nor art the game has` });
       else {
         warnings.push({ path: `${path}.sprite`, message: `no sheet u.${id}: a placeholder is drawn until one is added` });
         placeholders.push(bodyKey);
@@ -11364,16 +11466,16 @@ function resolveDefinitions(mod, table = VANILLA) {
     }
     def.sprite = bodyKey;
     const ownTurret = sheetKeys.has(`tur.${id}`);
-    const turretKey = own.turretSprite ?? (ownTurret ? `tur.${id}` : own.sprite !== void 0 || ownSheet ? void 0 : base?.turretSprite);
+    const turretKey = own2.turretSprite ?? (ownTurret ? `tur.${id}` : own2.sprite !== void 0 || ownSheet ? void 0 : base?.turretSprite);
     if (turretKey !== void 0) {
       if (!sheetKeys.has(turretKey) && !tableSprites.has(turretKey)) {
         errors.push({ path: `${path}.turretSprite`, message: `"${turretKey}" is neither a sheet of this mod nor art the game has` });
       } else def.turretSprite = turretKey;
     } else delete def.turretSprite;
     for (const wp of def.weapons) if (wp.turret === void 0) wp.turret = !!def.turretSprite;
-    if (own.turretMounts !== void 0) {
+    if (own2.turretMounts !== void 0) {
       const rings = [];
-      own.turretMounts.forEach((rawMount, k) => {
+      own2.turretMounts.forEach((rawMount, k) => {
         const mpath = `${path}.turretMounts[${k}]`;
         if (!isPlainObject$1(rawMount)) {
           errors.push({ path: mpath, message: "must be an object" });
@@ -11387,8 +11489,29 @@ function resolveDefinitions(mod, table = VANILLA) {
       });
       if (rings.length > 0) def.turretMounts = rings;
       else delete def.turretMounts;
-    } else if (own.sprite !== void 0 || ownSheet) delete def.turretMounts;
-    const rawDecals = own.decals ?? (own.sprite !== void 0 || ownSheet ? void 0 : base?.decals);
+    } else if (own2.sprite !== void 0 || ownSheet) delete def.turretMounts;
+    if (own2.rotors !== void 0) {
+      const rotors = [];
+      own2.rotors.forEach((rawRotor, k) => {
+        const rpath = `${path}.rotors[${k}]`;
+        if (!isPlainObject$1(rawRotor)) {
+          errors.push({ path: rpath, message: "must be an object" });
+          return;
+        }
+        const r = checkObject(rawRotor, ROTOR_SPECS, rpath, errors, warnings);
+        if (r.sprite !== void 0 && !sheetKeys.has(r.sprite) && !tableSprites.has(r.sprite)) {
+          errors.push({ path: `${rpath}.sprite`, message: `"${r.sprite}" is neither a sheet of this mod nor art the game has` });
+          return;
+        }
+        const rotor = { x: r.x ?? 0, y: r.y ?? 0, scale: r.scale ?? 1, phase: (r.phase ?? 0) * Math.PI / 180 };
+        if (r.spin !== void 0 && r.spin !== 1) rotor.spin = r.spin;
+        if (r.prop) rotor.prop = true;
+        if (r.sprite !== void 0) rotor.sprite = r.sprite;
+        rotors.push(rotor);
+      });
+      def.rotors = rotors;
+    } else if (own2.sprite !== void 0 || ownSheet) delete def.rotors;
+    const rawDecals = own2.decals ?? (own2.sprite !== void 0 || ownSheet ? void 0 : base?.decals);
     delete def.decals;
     if (rawDecals) {
       const list = [];
@@ -11418,8 +11541,8 @@ function resolveDefinitions(mod, table = VANILLA) {
     }
     built.set(id, def);
     defs.push(def);
-    strings[`unit.${id}.name`] = contentText(own.name, id);
-    strings[`unit.${id}.desc`] = contentText(own.desc, "");
+    strings[`unit.${id}.name`] = contentText(own2.name, id);
+    strings[`unit.${id}.desc`] = contentText(own2.desc, "");
   });
   const find = (id) => table[id] ?? built.get(id);
   const forms = /* @__PURE__ */ new Set();
@@ -11427,8 +11550,8 @@ function resolveDefinitions(mod, table = VANILLA) {
     if (!isPlainObject$1(raw) || typeof raw.id !== "string") return;
     const def = built.get(raw.id);
     if (!def) return;
-    const own = raw;
-    const base = own.extends ? find(own.extends) : void 0;
+    const own2 = raw;
+    const base = own2.extends ? find(own2.extends) : void 0;
     const path = `defs[${i}]`;
     const ids = (list, field, want) => {
       if (!Array.isArray(list)) return [];
@@ -11455,8 +11578,8 @@ function resolveDefinitions(mod, table = VANILLA) {
       return out;
     };
     delete def.rules;
-    if (own.rules !== void 0) {
-      const read2 = readRules(own.rules, `${path}.rules`, ruleContext(def, table, built, sheetKeys, soundKeys), errors);
+    if (own2.rules !== void 0) {
+      const read2 = readRules(own2.rules, `${path}.rules`, ruleContext(def, table, built, sheetKeys, soundKeys, isNode), errors);
       if (read2.rules.length) {
         def.rules = read2.rules;
         for (const r of read2.rules) {
@@ -11469,36 +11592,36 @@ function resolveDefinitions(mod, table = VANILLA) {
       for (const [k, v] of Object.entries(read2.strings)) strings[k] = contentText(v, "");
     }
     delete def.wing;
-    if (own.wing !== void 0) {
-      const wing = readWing(own.wing, `${path}.wing`, ruleContext(def, table, built, sheetKeys, soundKeys), errors);
+    if (own2.wing !== void 0) {
+      const wing = readWing(own2.wing, `${path}.wing`, ruleContext(def, table, built, sheetKeys, soundKeys, isNode), errors);
       if (wing) {
         def.wing = wing;
         forms.add(wing.unit);
       }
     }
-    const nodes = (def.requires ?? []).filter((r) => isTechId(r));
-    def.requires = [...ids((def.requires ?? []).filter((r) => !isTechId(r)), "requires", "building"), ...nodes];
+    const needs = (def.requires ?? []).filter(isNode);
+    def.requires = [...ids((def.requires ?? []).filter((r) => !isNode(r)), "requires", "building"), ...needs];
     if (def.requires.length === 0) delete def.requires;
     if (def.kind === "building") {
       if (def.produces) def.produces = ids(def.produces, "produces", "unit");
-      if (own.upgradeOf !== void 0) {
-        const src = find(own.upgradeOf);
-        if (!src || src.kind !== "building") errors.push({ path: `${path}.upgradeOf`, message: `"${own.upgradeOf}" is not a building` });
+      if (own2.upgradeOf !== void 0) {
+        const src = find(own2.upgradeOf);
+        if (!src || src.kind !== "building") errors.push({ path: `${path}.upgradeOf`, message: `"${own2.upgradeOf}" is not a building` });
         else if (src.upgradesTo || patches.some((p) => p.kind === "upgrade" && p.target === src.id)) {
-          errors.push({ path: `${path}.upgradeOf`, message: `"${own.upgradeOf}" already upgrades to ${src.upgradesTo ?? "another def of this mod"}` });
-        } else if (own.upgradeOf === def.id) errors.push({ path: `${path}.upgradeOf`, message: "a building cannot upgrade to itself" });
+          errors.push({ path: `${path}.upgradeOf`, message: `"${own2.upgradeOf}" already upgrades to ${src.upgradesTo ?? "another def of this mod"}` });
+        } else if (own2.upgradeOf === def.id) errors.push({ path: `${path}.upgradeOf`, message: "a building cannot upgrade to itself" });
         else {
           def.upgradeOnly = true;
           patches.push({
             kind: "upgrade",
             target: src.id,
             id: def.id,
-            cost: own.upgradeCost ?? Math.max(0, def.cost - src.cost),
-            time: own.upgradeTime ?? def.buildTime
+            cost: own2.upgradeCost ?? Math.max(0, def.cost - src.cost),
+            time: own2.upgradeTime ?? def.buildTime
           });
         }
       } else {
-        const builders = own.builtBy !== void 0 ? ids(own.builtBy, "builtBy", "unit") : base ? Object.values({ ...table, ...Object.fromEntries(built) }).filter((d) => d.builds?.includes(base.id)).map((d) => d.id) : ["engineer"];
+        const builders = own2.builtBy !== void 0 ? ids(own2.builtBy, "builtBy", "unit") : base ? Object.values({ ...table, ...Object.fromEntries(built) }).filter((d) => d.builds?.includes(base.id)).map((d) => d.id) : ["engineer"];
         for (const b of builders) {
           const unit = find(b);
           if (!unit.builds) {
@@ -11512,7 +11635,7 @@ function resolveDefinitions(mod, table = VANILLA) {
     } else {
       if (def.builds) def.builds = ids(def.builds, "builds", "building");
       if (def.produces) def.produces = ids(def.produces, "produces", "unit");
-      const producers = own.producedBy !== void 0 ? lines(own.producedBy) : base ? Object.values({ ...table, ...Object.fromEntries(built) }).filter((d) => d.produces?.includes(base.id)).map((d) => d.id) : defaultProducers(def.domain, def.tier).filter((b) => !!find(b));
+      const producers = own2.producedBy !== void 0 ? lines(own2.producedBy) : base ? Object.values({ ...table, ...Object.fromEntries(built) }).filter((d) => d.produces?.includes(base.id)).map((d) => d.id) : defaultProducers(def.domain, def.tier).filter((b) => !!find(b));
       for (const b of producers) {
         const line = find(b);
         if (!line.produces && line.id !== def.id) {
@@ -11544,6 +11667,50 @@ function resolveDefinitions(mod, table = VANILLA) {
   });
   warnings.length = 0;
   warnings.push(...quiet);
+  const tree = [];
+  const factionIds = new Set(Array.isArray(mod.factions) ? mod.factions.map((f) => isPlainObject$1(f) ? f.id : void 0) : []);
+  for (const { node, path } of nodes) {
+    const lab = built.get(node.lab);
+    if (!lab || lab.kind !== "building") errors.push({ path: `${path}.lab`, message: `"${node.lab}" is not a building of this mod` });
+    else if (lab.upgradeOnly) errors.push({ path: `${path}.lab`, message: `"${node.lab}" is an upgrade level; a lab is raised as itself` });
+    const requires = [];
+    for (const r of node.requires ?? []) {
+      const d = table[r] ?? built.get(r);
+      if (r === node.id) errors.push({ path: `${path}.requires`, message: "a node cannot require itself" });
+      else if (isNode(r) || d?.kind === "building") requires.push(r);
+      else errors.push({ path: `${path}.requires`, message: `"${r}" is neither a building nor a research node` });
+    }
+    for (const f of node.factions ?? []) if (!factionIds.has(f)) errors.push({ path: `${path}.factions`, message: `"${f}" is not a faction of this mod` });
+    tree.push({
+      id: node.id,
+      lab: node.lab,
+      cost: node.cost,
+      time: node.time ?? 30,
+      mod: mod.id,
+      ...requires.length ? { requires } : {},
+      ...node.factions?.length ? { factions: [...node.factions] } : {}
+    });
+    strings[`tech.${node.id}.name`] = contentText(node.name, node.id);
+    strings[`tech.${node.id}.desc`] = contentText(node.desc, "");
+  }
+  const own = new Map(tree.map((n) => [n.id, n]));
+  const settled = /* @__PURE__ */ new Set();
+  const climbs = (id, path) => {
+    if (settled.has(id)) return true;
+    if (path.has(id)) return false;
+    path.add(id);
+    const ok = (own.get(id)?.requires ?? []).every((r) => !own.has(r) || climbs(r, path));
+    path.delete(id);
+    if (ok) settled.add(id);
+    return ok;
+  };
+  nodes.forEach(({ node, path }) => {
+    if (!climbs(node.id, /* @__PURE__ */ new Set())) errors.push({ path: `${path}.requires`, message: `"${node.id}" waits on itself through the nodes it requires` });
+  });
+  for (const n of tree) {
+    const lab = built.get(n.lab);
+    if (lab?.kind === "building" && !lab.upgradeOnly) lab.lab = true;
+  }
   if (mod.factions !== void 0) {
     if (mod.v < 2) errors.push({ path: "factions", message: "factions require format 2" });
     if (!Array.isArray(mod.factions) || mod.factions.length > 16) errors.push({ path: "factions", message: "must be a list of up to 16 factions" });
@@ -11579,22 +11746,34 @@ function resolveDefinitions(mod, table = VANILLA) {
             errors.push({ path: `${path}.roster`, message: `unknown definition "${id}"` });
             continue;
           }
-          for (const required of def.requires ?? []) if (!isTechId(required) && !roster.includes(required))
+          for (const required of def.requires ?? []) if (!isNode(required) && !roster.includes(required))
             errors.push({ path: `${path}.roster`, message: `"${id}" requires "${required}" outside the roster` });
+        }
+        const needed = roster.flatMap((id) => resolved[id]?.requires ?? []).filter((r) => own.has(r));
+        for (const seen2 = /* @__PURE__ */ new Set(); needed.length; ) {
+          const n = own.get(needed.pop());
+          if (seen2.has(n.id)) continue;
+          seen2.add(n.id);
+          if (n.factions && !n.factions.includes(f.id)) errors.push({ path: `${path}.roster`, message: `research "${n.id}" is needed by the roster but not open to this faction` });
+          if (!roster.includes(n.lab)) errors.push({ path: `${path}.roster`, message: `research "${n.id}" is taken at "${n.lab}" outside the roster` });
+          for (const r of n.requires ?? []) {
+            if (own.has(r)) needed.push(r);
+            else if (!isNode(r) && !roster.includes(r)) errors.push({ path: `${path}.roster`, message: `research "${n.id}" requires "${r}" outside the roster` });
+          }
         }
         factions.push({ ...f, roster });
       });
       mod.factions = factions;
     }
   }
-  return { ok: errors.length === 0, pack: mod, defs, patches, strings, placeholders, errors, warnings };
+  return { ok: errors.length === 0, pack: mod, defs, patches, strings, tech: tree, placeholders, errors, warnings };
 }
-function ruleContext(def, table, built, sheets, sounds) {
+function ruleContext(def, table, built, sheets, sounds, isNode) {
   return {
     def,
     find: (id) => table[id] ?? built.get(id),
     ownDef: (id) => built.has(id),
-    isTech: isTechId,
+    isTech: isNode,
     sheets,
     sounds,
     weaponSounds: WEAPON_SOUNDS,
@@ -11708,21 +11887,26 @@ function buildDef(own, kind, base, modId, soundKeys, path, errors, warnings) {
   return def;
 }
 function stripModOnly(own) {
-  const { name: _n, desc: _d, extends: _e, weapons: _w, producedBy: _p, builtBy: _b, upgradeOf: _u, sprite: _s, turretSprite: _t, turretMounts: _tm, decals: _dc, rules: _r, wing: _wg, ...rest } = own;
+  const { name: _n, desc: _d, extends: _e, weapons: _w, producedBy: _p, builtBy: _b, upgradeOf: _u, sprite: _s, turretSprite: _t, turretMounts: _tm, rotors: _ro, decals: _dc, rules: _r, wing: _wg, ...rest } = own;
   return rest;
 }
 let active = [];
 const injected = /* @__PURE__ */ new Set();
 const listeners = /* @__PURE__ */ new Set();
 function applyDefinitions(mods) {
+  return installDefinitions(resolveTable(mods));
+}
+function resolveTable(mods) {
   const table = cloneTable(VANILLA);
+  const tree = { ...VANILLA_TECH };
+  const tech = [];
   const strings = {};
   const report = { active: [], rejected: [], warnings: [], placeholders: [] };
   const terrains = [];
   const terrainIds = /* @__PURE__ */ new Set();
   const terrainSheets = /* @__PURE__ */ new Set();
   for (const mod of mods) {
-    const r = resolveDefinitions(mod, table);
+    const r = resolveDefinitions(mod, table, tree);
     if (!r.ok) {
       report.rejected.push({ id: mod.id, errors: r.errors });
       continue;
@@ -11739,6 +11923,10 @@ function applyDefinitions(mods) {
     }
     if (r.warnings.length > 0) report.warnings.push({ id: mod.id, warnings: r.warnings });
     for (const d of r.defs) table[d.id] = d;
+    for (const n of r.tech) {
+      tree[n.id] = n;
+      tech.push(n);
+    }
     applyPatches(table, r.patches);
     Object.assign(strings, r.strings);
     report.placeholders.push(...r.placeholders);
@@ -11749,10 +11937,21 @@ function applyDefinitions(mods) {
     }
     for (const sprite of mod.sprites ?? []) if (sprite.key.startsWith("ter.")) terrainSheets.add(sprite.key);
   }
+  return { table, tech, strings, report, terrains };
+}
+function installDefinitions(resolved) {
+  const { table, tech, strings, terrains } = resolved;
+  const report = {
+    active: [...resolved.report.active],
+    rejected: [...resolved.report.rejected],
+    warnings: [...resolved.report.warnings],
+    placeholders: [...resolved.report.placeholders]
+  };
   for (const k of Object.keys(DEFS)) delete DEFS[k];
   Object.assign(DEFS, table);
   ALL_DEF_IDS.length = 0;
   ALL_DEF_IDS.push(...Object.keys(table));
+  installTech(tech);
   for (const k of injected) delete STRINGS[k];
   injected.clear();
   for (const [k, v] of Object.entries(strings)) {
@@ -11760,7 +11959,7 @@ function applyDefinitions(mods) {
     injected.add(k);
   }
   active = report.active;
-  replaceTerrainVariants(terrains);
+  replaceTerrainVariants([...terrains]);
   for (const fn of listeners) fn();
   return report;
 }
@@ -12065,10 +12264,14 @@ function typeLabel(spec) {
       return "decal[]";
     case "mounts":
       return "mount[]";
+    case "rotors":
+      return "rotor[]";
     case "defs":
       return "def[]";
     case "factions":
       return "faction[]";
+    case "techNodes":
+      return "node[]";
     case "terrains":
       return "terrain[]";
     case "cityTerrain":
@@ -12325,6 +12528,22 @@ function agentPrompt() {
   p();
   p("A faction is selected per seat in Conquest and Breakthrough. It changes the headquarters, starting builders and allowed build/production roster; teams and victory rules still belong to the match. The chooser is hidden with only Steel Tide available. The HQ must produce its builder, and that builder must rebuild its HQ. Both must belong to this mod. A starting HQ has no prerequisites; its builder may require only that HQ. Roster building prerequisites must also be in the roster. Format 1 mods continue to work unchanged.");
   p();
+  p("### A research node (`tech[]`)");
+  p();
+  p(markdownTable(fieldRows("techNode")));
+  p();
+  p("A mod may bring a tech tree of its own beside the game's. Each node is researched at one of the mod's buildings (`lab`), which gets a research queue like the War Lab's: its card offers the nodes it researches to the factions they name, each once the nodes in its `requires` are researched or already on order, and works the head of the queue at the grid's pace, billed as it goes. What is researched is kept for the match, whatever becomes of the building. A def or a rule's button is unlocked by naming the node in its own `requires`, beside any building it needs. A node carries no doctrine and no buff, and the War Lab never offers one; with the tech tree switched off for the match, a mod's nodes stay shut like the game's. A node id is prefixed with the mod id and never equals a def id. A faction whose roster needs a node must be one the node names, with the node's lab in its roster. The computer raises the lab when its roster needs one and climbs each lab's nodes in the order they are listed.");
+  p();
+  p("```json");
+  p(JSON.stringify({
+    tech: [
+      { id: "mymod-plan-1", name: ["First Plan", "一期计划"], desc: ["Opens the walkers.", "解锁步行机甲。"], lab: "mymod-institute", cost: 1200, time: 30, factions: ["mymod-red"] },
+      { id: "mymod-plan-2", name: ["Second Plan", "二期计划"], lab: "mymod-institute", cost: 2400, time: 45, requires: ["mymod-plan-1"], factions: ["mymod-red"] }
+    ],
+    defs: [{ id: "mymod-walker", name: ["Walker", "步行机甲"], extends: "mbt", producedBy: ["mymod-factory"], requires: ["mymod-plan-1"] }]
+  }, null, 2));
+  p("```");
+  p();
   p("### A terrain variant (`terrains[]`)");
   p();
   p(markdownTable(fieldRows("terrain")));
@@ -12376,6 +12595,12 @@ function agentPrompt() {
   p(markdownTable(fieldRows("mount")));
   p();
   p(`A hull with more than one gun — a battleship's turrets fore and aft, a tank with a turret at each corner — names a ring for each, up to ${MAX_DEF_MOUNTS}: the def's one \`turretSprite\` is drawn on every ring, and every ring is trained on the one target the unit is aiming at, as far round as its own \`arc\` of its \`rest\` bearing goes, so a gun the superstructure blocks waits at its stop while the others fire. A burst walks the rings that bear (the first shot from the first of them, the next from the next), and \`muzzleOffset\` is measured from the ring a shot leaves, so give a weapon of several guns a \`burst\` of that many. \`x\`/\`y\` are a point on the body's up-facing art, as a decal's are. A def with none has one ring, where its body sheet's \`mount\` puts it.`);
+  p();
+  p("### A rotor (`defs[].rotors[]`)");
+  p();
+  p(markdownTable(fieldRows("rotor")));
+  p();
+  p(`An aircraft's rotors and propellers are data, as its turret rings are: up to ${MAX_DEF_ROTORS}, each laid over the art and turned live — a helicopter's one, a transport's two in tandem, a quadcopter's four counter-rotating props — standing still in the def's tile, casting its shadow with the hull, and heard while the aircraft flies, as a rotor's beat or, when every one is a \`prop\`, a buzz. \`x\`/\`y\` are a point on the body's up-facing art, as a ring's are. Flight is \`hovers\` and nothing else: a def that hovers and names no \`rotors\` has the game's one rotor over its centre, \`"rotors": []\` is an aircraft with none (an airship, a drone whose own art turns its blades), and a fixed wing may name a propeller. A rotor of the mod's own is a \`dec.<name>\` sheet of the blades facing up, drawn turning about its centre and wearing the side's colour where it is magenta.`);
   p();
   p("### A sheet (`sprites[]`)");
   p();
@@ -12619,6 +12844,7 @@ export {
   MAX_CONTENT_INPUT_BYTES,
   MAX_DEF_DECALS,
   MAX_DEF_MOUNTS,
+  MAX_DEF_ROTORS,
   MAX_HELLO_MODS,
   MAX_MANIFEST_BYTES,
   MAX_MOD_DEFS,
@@ -12630,6 +12856,7 @@ export {
   MAX_MOD_SCREENSHOTS,
   MAX_MOD_SOUNDS,
   MAX_MOD_SPRITES,
+  MAX_MOD_TECH,
   MAX_MOD_TERRAINS,
   MAX_REQUIRED_MODS,
   MAX_SCREENSHOT_BYTES,
@@ -12683,6 +12910,7 @@ export {
   fieldRows,
   imageSize,
   indexEntryFor,
+  installDefinitions,
   isContentStamp,
   isContentStamp as isModStamp,
   listedMods,
@@ -12712,6 +12940,7 @@ export {
   requiredContentOf as requiredModOf,
   resolveDefinitions,
   resolveMod,
+  resolveTable,
   rosterLines,
   sameStamps,
   stampOf,

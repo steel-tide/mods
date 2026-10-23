@@ -8,12 +8,12 @@
     "高达战争_战争宇宙",
     "GW 배틀 유니버스"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "恐龙再健身房",
   "description": [
-    "Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits.",
-    "高达战争_战争宇宙：一年战争。地球联邦军与吉翁公国军的基础兵力——坦克、飞机、舰艇与最早的机动战士。",
-    "건담 워 배틀 유니버스: 1년 전쟁. 지구연방군과 지온 공국군의 기본 전력 — 전차, 항공기, 함선, 그리고 최초의 모빌슈트."
+    "Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits — and open their first development plans.",
+    "高达战争_战争宇宙：一年战争。地球联邦军与吉翁公国军的基础兵力——坦克、飞机、舰艇与最早的机动战士——以及各自的第一项开发计划。",
+    "건담 워 배틀 유니버스: 1년 전쟁. 지구연방군과 지온 공국군의 기본 전력 — 전차, 항공기, 함선, 그리고 최초의 모빌슈트 — 과 각자의 첫 개발 계획."
   ],
   "license": "LicenseRef-GW-BattleUniverse-Upstream",
   "hideFromListing": true,
@@ -34,7 +34,11 @@
         "gw-anti-zaku-tank",
         "gw-army-squad-efsf-0079",
         "gw-burke-class",
+        "gw-dash",
+        "gw-depp-rog",
+        "gw-don-escargot",
         "gw-ef-heli",
+        "gw-ef-minigun-apc",
         "gw-ef-torpedo-boat",
         "gw-engineer-efsf-0079",
         "gw-factory-efsf-0079-air",
@@ -47,10 +51,15 @@
         "gw-ff-s3",
         "gw-himalaya-class",
         "gw-hq-efsf-0079",
+        "gw-institute-t1",
+        "gw-m-type-submarine",
         "gw-medea",
+        "gw-missile-car",
         "gw-refinery-t1",
         "gw-rff-06",
         "gw-rff-06-cannon",
+        "gw-rgm-79-e",
+        "gw-rgm-79-e-bazooka",
         "gw-supply-depot-t1",
         "gw-turret-aa-a",
         "gw-turret-cn-a",
@@ -58,7 +67,10 @@
         "gw-turret-ms-a",
         "gw-turret-radar-a",
         "gw-type61",
+        "gw-type61-spg",
+        "gw-type61a5",
         "gw-type74",
+        "gw-type74kai",
         "gw-u-type-submarine",
         "gw-u-type-submarine-submerged",
         "gw-wall-t1-a",
@@ -76,6 +88,7 @@
       "builder": "gw-engineer-zeon-0079",
       "roster": [
         "gw-army-squad-zeon-0079",
+        "gw-cui",
         "gw-dodai-ys",
         "gw-dopp",
         "gw-engineer-zeon-0079",
@@ -84,13 +97,26 @@
         "gw-factory-zeon-0079-land",
         "gw-fat-uncle",
         "gw-hq-zeon-0079",
+        "gw-institute-t1",
+        "gw-luggun",
+        "gw-m-type-submarine-zeon",
         "gw-ms-05",
         "gw-ms-05-bazooka",
         "gw-ms-06c",
         "gw-ms-06f",
         "gw-ms-06f-bazooka",
+        "gw-ms-06j",
+        "gw-ms-06j-bazooka",
+        "gw-ms-06j-cn",
+        "gw-ms-06k",
+        "gw-ms-06k-biggun",
+        "gw-ms-06m",
+        "gw-ms-06r-1",
+        "gw-ms-06r-1-bazooka",
         "gw-ms-06s",
         "gw-ms-06s-bazooka",
+        "gw-ms-07b",
+        "gw-msm-03",
         "gw-mtank",
         "gw-refinery-t1",
         "gw-samson-ground-transport-truck",
@@ -106,7 +132,48 @@
         "gw-wall-t1-b",
         "gw-wappa",
         "gw-zn-apc",
+        "gw-zn-apc-with-ms",
         "gw-zn-heli"
+      ]
+    }
+  ],
+  "tech": [
+    {
+      "id": "gw-efsf-0079-anti-ms-plan",
+      "name": [
+        "Anti MS Plan",
+        "反MS计划",
+        "대MS 계획"
+      ],
+      "desc": [
+        "Unlock Anti MS Units",
+        "解锁反MS单位",
+        "대MS 유닛 해금"
+      ],
+      "lab": "gw-hq-efsf-0079",
+      "cost": 4000.0,
+      "time": 30.0,
+      "factions": [
+        "gw-efsf-0079"
+      ]
+    },
+    {
+      "id": "gw-zeon-0079-ground-type-zaku-dev-plan",
+      "name": [
+        "Ground Type Zaku Development Plan",
+        "陆地用扎古开发计划",
+        "지상용 자쿠 개발 계획"
+      ],
+      "desc": [
+        "Unlock Ground Type Zaku",
+        "解锁陆地用扎古",
+        "지상용 자쿠 해금"
+      ],
+      "lab": "gw-hq-zeon-0079",
+      "cost": 4000.0,
+      "time": 30.0,
+      "factions": [
+        "gw-zeon-0079"
       ]
     }
   ],
@@ -147,10 +214,17 @@
       "produces": [
         "gw-anti-zaku-tank",
         "gw-army-squad-efsf-0079",
+        "gw-ef-minigun-apc",
+        "gw-missile-car",
         "gw-rff-06",
         "gw-rff-06-cannon",
+        "gw-rgm-79-e",
+        "gw-rgm-79-e-bazooka",
         "gw-type61",
-        "gw-type74"
+        "gw-type61-spg",
+        "gw-type61a5",
+        "gw-type74",
+        "gw-type74kai"
       ],
       "builtBy": [
         "gw-engineer-efsf-0079"
@@ -191,6 +265,9 @@
       },
       "produces": [
         "gw-army-squad-efsf-0079",
+        "gw-dash",
+        "gw-depp-rog",
+        "gw-don-escargot",
         "gw-ef-heli",
         "gw-fan-fan",
         "gw-ff-4",
@@ -245,6 +322,7 @@
         "gw-burke-class",
         "gw-ef-torpedo-boat",
         "gw-himalaya-class",
+        "gw-m-type-submarine",
         "gw-u-type-submarine"
       ],
       "builtBy": [
@@ -286,17 +364,29 @@
       },
       "produces": [
         "gw-army-squad-zeon-0079",
+        "gw-cui",
         "gw-ms-05",
         "gw-ms-05-bazooka",
         "gw-ms-06c",
         "gw-ms-06f",
         "gw-ms-06f-bazooka",
+        "gw-ms-06j",
+        "gw-ms-06j-bazooka",
+        "gw-ms-06j-cn",
+        "gw-ms-06k",
+        "gw-ms-06k-biggun",
+        "gw-ms-06m",
+        "gw-ms-06r-1",
+        "gw-ms-06r-1-bazooka",
         "gw-ms-06s",
         "gw-ms-06s-bazooka",
+        "gw-ms-07b",
+        "gw-msm-03",
         "gw-mtank",
         "gw-samson-ground-transport-truck",
         "gw-wappa",
-        "gw-zn-apc"
+        "gw-zn-apc",
+        "gw-zn-apc-with-ms"
       ],
       "builtBy": [
         "gw-engineer-zeon-0079"
@@ -340,6 +430,7 @@
         "gw-dodai-ys",
         "gw-dopp",
         "gw-fat-uncle",
+        "gw-luggun",
         "gw-zn-heli"
       ],
       "builtBy": [
@@ -385,6 +476,9 @@
         }
       },
       "produces": [
+        "gw-m-type-submarine-zeon",
+        "gw-ms-06m",
+        "gw-msm-03",
         "gw-u-type-submarine-zeon"
       ],
       "builtBy": [
@@ -465,6 +559,45 @@
             "en": 0.04
           },
           "upkeep": 1
+        }
+      },
+      "builtBy": [
+        "gw-engineer-efsf-0079",
+        "gw-engineer-zeon-0079"
+      ]
+    },
+    {
+      "id": "gw-institute-t1",
+      "name": [
+        "Institute[T1]",
+        "研究所[T1]",
+        "연구소[T1]"
+      ],
+      "desc": [
+        "Requires 2 Money And 4 Resource to maintain\nProvides 0.75 TechPoint per second",
+        "需要2资金和4物资以维持\n每秒提供0.75科技",
+        "유지에 자금 2와 물자 4가 필요\n매초 테크 포인트 0.75 제공"
+      ],
+      "kind": "building",
+      "cost": 1500.0,
+      "buildTime": 15.0,
+      "hp": 45000.0,
+      "vision": 7.03,
+      "power": 0,
+      "fw": 2,
+      "fh": 2,
+      "sprite": "u.gw-institute-t1",
+      "weapons": [],
+      "extensions": {
+        "gw.battle-v1": {
+          "building": true,
+          "def": {
+            "beam": 0.0,
+            "shell": 0.0,
+            "cqb": 25.0
+          },
+          "upkeep": 6,
+          "techPoint": 0.75
         }
       },
       "builtBy": [
@@ -948,7 +1081,11 @@
             "hp": 0.04,
             "en": 0.08
           },
-          "hq": true
+          "hq": true,
+          "techPoint": 7.5,
+          "research": {
+            "gw-efsf-0079-anti-ms-plan": 1200.0
+          }
         }
       },
       "isHQ": true,
@@ -995,7 +1132,11 @@
             "hp": 0.04,
             "en": 0.08
           },
-          "hq": true
+          "hq": true,
+          "techPoint": 7.5,
+          "research": {
+            "gw-zeon-0079-ground-type-zaku-dev-plan": 1200.0
+          }
         }
       },
       "isHQ": true,
@@ -3941,6 +4082,1651 @@
         "r": 38.4,
         "len": 138.04
       },
+      "producedBy": [
+        "gw-factory-efsf-0079-aqua"
+      ]
+    },
+    {
+      "id": "gw-rgm-79-e",
+      "name": [
+        "GM Early Type",
+        "吉姆初期型",
+        "짐 초기형"
+      ],
+      "desc": [
+        "An early-type GM developed by Luna II, with rather mediocre performance\nAdvantages\n=Equipped with a shield=\nDisadvantages\n=Relatively weak armor=\n\n\"My teammates have all disappeared\"",
+        "月神二号所开发的初期型吉姆,性能较为平庸\n优势\n=装备护盾=\n劣势\n=装甲较薄弱=\n\n“队友都失踪了”",
+        "루나 II에서 개발한 초기형 짐, 성능은 평범한 편\n장점\n=실드 장비=\n단점\n=장갑이 비교적 약함=\n\n“동료들이 전부 사라졌어”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1316.67,
+      "buildTime": 20.0,
+      "hp": 12500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 56.25,
+      "turnRate": 1.623,
+      "vision": 9.38,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "EF_90mmMG",
+          "cls": "mg",
+          "dmg": 725.0,
+          "reload": 2.0,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 9,
+          "burstDelay": 0.1,
+          "speed": 421.88,
+          "spread": 32.81,
+          "muzzleOffset": 18.0,
+          "sound": "gw-machinegun-1",
+          "look": {
+            "sprite": "prj.projectile-mg"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 725.0,
+              "dp": 30.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "en": 20.0
+            }
+          }
+        },
+        {
+          "id": "EF_BeamSaber_A",
+          "cls": "at",
+          "dmg": 5000.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-beamsaber-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2500.0,
+              "cqbBeam": 2500.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        },
+        {
+          "id": "Common_DoubleVulcan_MS",
+          "cls": "mg",
+          "dmg": 150.0,
+          "reload": 5.5,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "burst": 16,
+          "burstDelay": 0.1,
+          "speed": 506.25,
+          "spread": 39.41,
+          "sound": "gw-vulcan-1",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 150.0,
+              "dp": 10.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.5,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 1.0,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 1.0
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 105.0,
+            "accuracy": 110.0,
+            "reaction": 105.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 35.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 600.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-rgm-79-e",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 200.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-rgm-79-e-bazooka"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-rgm-79-e-bazooka",
+      "name": [
+        "GM Early Type (Bazooka)",
+        "吉姆初期型（火箭筒）",
+        "짐 초기형 (바주카)"
+      ],
+      "desc": [
+        "An early-type GM developed by Luna II, with rather mediocre performance\nAdvantages\n=Equipped with a shield=\nDisadvantages\n=Relatively weak armor=\n\n\"My teammates have all disappeared\"",
+        "月神二号所开发的初期型吉姆,性能较为平庸\n优势\n=装备护盾=\n劣势\n=装甲较薄弱=\n\n“队友都失踪了”",
+        "루나 II에서 개발한 초기형 짐, 성능은 평범한 편\n장점\n=실드 장비=\n단점\n=장갑이 비교적 약함=\n\n“동료들이 전부 사라졌어”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1516.67,
+      "buildTime": 20.0,
+      "hp": 12500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 56.25,
+      "turnRate": 1.623,
+      "vision": 9.38,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "EF_HypeBazooka",
+          "cls": "cannon",
+          "dmg": 8500.0,
+          "reload": 4.0,
+          "range": 11.72,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "speed": 309.38,
+          "splash": 22.5,
+          "spread": 6.55,
+          "muzzleOffset": 12.75,
+          "sound": "gw-bazooka-1",
+          "look": {
+            "sprite": "prj.projectile-bazooka"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 8500.0,
+              "dp": 350.0,
+              "accuracy": 75.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.5
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "blast": 22.5,
+              "en": 55.0
+            }
+          }
+        },
+        {
+          "id": "EF_BeamSaber_A",
+          "cls": "at",
+          "dmg": 5000.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-beamsaber-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2500.0,
+              "cqbBeam": 2500.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        },
+        {
+          "id": "Common_DoubleVulcan_MS",
+          "cls": "mg",
+          "dmg": 150.0,
+          "reload": 5.5,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "burst": 16,
+          "burstDelay": 0.1,
+          "speed": 506.25,
+          "spread": 39.41,
+          "sound": "gw-vulcan-1",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 150.0,
+              "dp": 10.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.5,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 1.0,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 1.0
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 105.0,
+            "accuracy": 110.0,
+            "reaction": 105.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 35.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 600.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-rgm-79-e-bazooka",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 0.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-rgm-79-e"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-type61a5",
+      "name": [
+        "Type61A5 MBT",
+        "61式主战坦克A5型",
+        "61식 주력 전차 A5형"
+      ],
+      "desc": [
+        "Modernized Type 61 tank\nStrengths\n=Overall performance enhanced=\nWeaknesses\n=Severely low combat power when in insufficient numbers=\n\n\"Watch closely! This is how you use the autoloading cannon!\"",
+        "现代化改修后的61式战车\n优势\n=综合性能得到强化=\n劣势\n=数量不够时战力严重低下=\n\n“看好了!连装炮应该是这样用的!”",
+        "현대화 개수를 거친 61식 전차\n장점\n=종합 성능 강화=\n단점\n=수가 부족하면 전투력이 크게 떨어짐=\n\n“잘 봐둬! 자동 장전포는 이렇게 쓰는 거야!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 450.0,
+      "buildTime": 10.0,
+      "hp": 5500.0,
+      "pop": 1,
+      "armor": "heavy",
+      "speed": 51.75,
+      "turnRate": 1.571,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "tread",
+      "weapons": [
+        {
+          "id": "EF_Type61A5_MG",
+          "cls": "mg",
+          "dmg": 75.0,
+          "reload": 3.1,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "burst": 12,
+          "burstDelay": 0.1,
+          "speed": 478.12,
+          "spread": 26.22,
+          "muzzleOffset": 3.0,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 75.0,
+              "dp": 5.0,
+              "accuracy": 110.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 1.0,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 1.0
+              }
+            }
+          }
+        },
+        {
+          "id": "EF_Type61A5_Cannon",
+          "cls": "cannon",
+          "dmg": 1850.0,
+          "reload": 4.05,
+          "range": 11.72,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "burst": 2,
+          "burstDelay": 0.05,
+          "speed": 337.5,
+          "splash": 22.5,
+          "spread": 19.65,
+          "muzzleOffset": 15.0,
+          "sound": "gw-bazooka-1",
+          "look": {
+            "sprite": "prj.projectile-bazooka-s"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 1850.0,
+              "dp": 150.0,
+              "accuracy": 90.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.25,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "blast": 22.5,
+              "enShot": 8.0
+            }
+          }
+        }
+      ],
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 120.0,
+            "cqb": 100.0,
+            "accuracy": 120.0,
+            "reaction": 80.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 60.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 500.0,
+            "move": 1.2
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-type61a5",
+      "turretSprite": "tur.gw-type61a5",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-land"
+      ]
+    },
+    {
+      "id": "gw-type74kai",
+      "name": [
+        "Hover Truck Kai",
+        "气垫卡车[寻血猎犬]",
+        "호버 트럭 개"
+      ],
+      "desc": [
+        "Federation transport and reconnaissance vehicle\nStrengths\n=Capable of area reconnaissance=\n=Amphibious unit=\n=Supply unit=\n=Allow Cmmand Communicatio=\n=Transport capacity: 1=\nWeaknesses\n=Poorly armed=\n=Low durability=\n\n\"One unit... two units... there's too many, I can't tell them apart!\"",
+        "联邦军货运兼侦察车辆\n优势\n=两栖单位=\n=补给单位=\n=允许通信指挥=\n=可以进行区域侦测=\n=可以运载步兵=\n=运输力:1=\n劣势\n=武装贫弱=\n=抗性较弱=\n\n“一机..两机...数量太多了分辨不出来了!”",
+        "연방군 수송 겸 정찰 차량\n장점\n=구역 정찰 가능=\n=수륙양용 유닛=\n=보급 유닛=\n=통신 지휘 가능=\n=수송력: 1=\n단점\n=무장이 빈약함=\n=내구가 약함=\n\n“한 대... 두 대... 너무 많아서 구분이 안 돼!”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 450.0,
+      "buildTime": 8.33,
+      "hp": 4500.0,
+      "pop": 1,
+      "armor": "heavy",
+      "speed": 69.75,
+      "turnRate": 1.676,
+      "vision": 9.38,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "tread",
+      "weapons": [
+        {
+          "id": "EF_Type74_MG",
+          "cls": "mg",
+          "dmg": 145.0,
+          "reload": 3.1,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "burst": 12,
+          "burstDelay": 0.1,
+          "speed": 478.12,
+          "spread": 26.22,
+          "muzzleOffset": 2.25,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 145.0,
+              "dp": 5.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.5,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 1.0,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 1.0
+              },
+              "enShot": 0.5
+            }
+          }
+        }
+      ],
+      "transportCap": 1,
+      "transportMaxWeight": 1,
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 100.0,
+            "accuracy": 100.0,
+            "reaction": 75.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0,
+            "shell": 0,
+            "cqb": 0,
+            "dp": 0
+          },
+          "stance": "land",
+          "en": {
+            "max": 7500.0,
+            "move": 1.2
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-type74kai",
+      "turretSprite": "tur.gw-type74",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-land"
+      ]
+    },
+    {
+      "id": "gw-type61-spg",
+      "name": [
+        "Type61 Mode.SPG",
+        "61式主战坦克[榴弹炮搭载型]",
+        "61식 주력 전차[유탄포 탑재형]"
+      ],
+      "desc": [
+        "[Original] Modified Type 61 tank equipped with a howitzer\nStrengths\n=Range increases after deployment=\n=Capable of bombardment=\n=Extremely long range=\nWeaknesses\n=Lacks melee capability=\n=Cannot attack air targets=\n\n\"Artillery operation ready!\"",
+        "[原创]在61式战车上搭载榴弹炮的改修型号\n优势\n=部署后获得长射程=\n=可以进行炮击=\n=射程极远=\n劣势\n=缺乏近战能力=\n=无法对空=\n\n“炮击作业准备就绪!”",
+        "[오리지널] 61식 전차에 유탄포를 탑재한 개수형\n장점\n=전개 후 사거리 증가=\n=포격 가능=\n=사거리가 매우 김=\n단점\n=근접전 능력 부족=\n=대공 불가=\n\n“포격 작업 준비 완료!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 383.33,
+      "buildTime": 8.33,
+      "hp": 4500.0,
+      "pop": 1,
+      "armor": "heavy",
+      "speed": 45.0,
+      "turnRate": 0.785,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "tread",
+      "weapons": [
+        {
+          "id": "EF_Type61_SPG_Cannon",
+          "cls": "he",
+          "dmg": 4000.0,
+          "reload": 5.0,
+          "range": 14.06,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub"
+          ],
+          "turret": true,
+          "speed": 168.75,
+          "splash": 22.5,
+          "arc": true,
+          "muzzleOffset": 13.5,
+          "sound": "gw-shellcannon-1",
+          "look": {
+            "sprite": "prj.projectile-mortar"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 4000.0,
+              "dp": 500.0,
+              "accuracy": 75.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.5
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "blast": 22.5,
+              "enShot": 30.0
+            }
+          }
+        }
+      ],
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 125.0,
+            "cqb": 100.0,
+            "accuracy": 100.0,
+            "reaction": 60.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0,
+            "shell": 0,
+            "cqb": 0,
+            "dp": 0
+          },
+          "stance": "land",
+          "en": {
+            "max": 350.0,
+            "move": 1.2
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-type61-spg",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-land"
+      ]
+    },
+    {
+      "id": "gw-missile-car",
+      "name": [
+        "MissileCar",
+        "导弹车",
+        "미사일 차량"
+      ],
+      "desc": [
+        "Combat vehicle equipped with missile launcher\nStrengths\n=Relatively strong anti-air=\nWeaknesses\n=Extremely poor performance=\n\n\"Quick, shoot down that Zaku!\"",
+        "装备导弹发射器的战斗车辆\n优势\n=对空较为优秀=\n劣势\n=性能过低=\n\n“快击落那台扎古!”",
+        "미사일 런처를 장비한 전투 차량\n장점\n=대공 능력이 비교적 강함=\n단점\n=성능이 지나치게 낮음=\n\n“어서 저 자쿠를 격추해!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 233.33,
+      "buildTime": 6.67,
+      "hp": 3000.0,
+      "pop": 1,
+      "armor": "heavy",
+      "speed": 74.25,
+      "turnRate": 1.833,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "tread",
+      "weapons": [
+        {
+          "id": "Common_DoubleMS_MissileCar",
+          "cls": "rocket",
+          "dmg": 500.0,
+          "reload": 3.6,
+          "range": 14.06,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "burst": 5,
+          "burstDelay": 0.15,
+          "speed": 281.25,
+          "muzzleOffset": 9.38,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 500.0,
+              "dp": 20.0,
+              "accuracy": 95.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.5,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "enShot": 5.0
+            }
+          }
+        }
+      ],
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 125.0,
+            "cqb": 75.0,
+            "accuracy": 115.0,
+            "reaction": 110.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0,
+            "shell": 0,
+            "cqb": 0,
+            "dp": 0
+          },
+          "stance": "land",
+          "en": {
+            "max": 300.0,
+            "move": 1.2
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-missile-car",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-land"
+      ]
+    },
+    {
+      "id": "gw-ef-minigun-apc",
+      "name": [
+        "MinigunAPC",
+        "加特林装甲车",
+        "미니건 장갑차"
+      ],
+      "desc": [
+        "Federation Army's modified combat vehicle, designed to counter lightly armored units\nAdvantages\n=Effective against light armor=\nDisadvantages\n=Low durability=\n\n“Objective secured!”",
+        "联邦军改装战斗车辆,用于对付轻装甲单位\n优势\n=对轻装甲单位有效=\n劣势\n=耐久较低=\n\n“制压据点了!”",
+        "경장갑 유닛에 대응하려고 개조한 연방군 전투 차량\n장점\n=경장갑에 효과적=\n단점\n=내구가 약함=\n\n“목표 확보!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 200.0,
+      "buildTime": 6.67,
+      "hp": 4000.0,
+      "pop": 1,
+      "armor": "heavy",
+      "speed": 56.25,
+      "turnRate": 1.047,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "tread",
+      "weapons": [
+        {
+          "id": "EF_MinigunAPC_MG",
+          "cls": "mg",
+          "dmg": 300.0,
+          "reload": 3.825,
+          "range": 14.06,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "burst": 12,
+          "burstDelay": 0.075,
+          "speed": 421.88,
+          "spread": 71.27,
+          "muzzleOffset": 13.5,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-mg"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 300.0,
+              "dp": 20.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 2.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 100.0,
+            "accuracy": 100.0,
+            "reaction": 65.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 15.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 350.0,
+            "move": 1.2
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-ef-minigun-apc",
+      "turretSprite": "tur.gw-ef-minigun-apc",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-land"
+      ]
+    },
+    {
+      "id": "gw-dash",
+      "name": [
+        "Dash",
+        "天谍",
+        "대시"
+      ],
+      "desc": [
+        "Federation high-altitude reconnaissance aircraft\nStrengths\n=Capable of area scanning=\n=High maneuverability=\n= Can disperse Minovsky particles =\nWeaknesses\n=Virtually no combat capability=\n=Cannot attack ground targets=\n\n\"Enemy unit confirmed, transmitting data now\"",
+        "联邦军高空侦察机\n优势\n=可以进行区域侦测=\n=机动性较高=\n=可以散布米诺夫斯基粒子=\n劣势\n=几乎没有战斗能力=\n=无法对地=\n\n“确认到敌机,正在传输信息”",
+        "연방군 고고도 정찰기\n장점\n=구역 탐지 가능=\n=기동성이 높음=\n=미노프스키 입자 살포 가능=\n단점\n=전투 능력이 거의 없음=\n=지상 공격 불가=\n\n“적기 확인, 지금 데이터를 전송한다”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 750.0,
+      "buildTime": 25.0,
+      "hp": 4500.0,
+      "pop": 1,
+      "armor": "air",
+      "speed": 157.5,
+      "turnRate": 2.094,
+      "vision": 11.72,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "altitude": 41.25,
+      "weapons": [
+        {
+          "id": "Common_MinovskyParticle_S",
+          "cls": "aa",
+          "dmg": 0.0,
+          "reload": 180.0,
+          "range": 28.12,
+          "projectile": "bullet",
+          "targets": [
+            "ground"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-detect-3",
+          "arc": true,
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "accuracy": 100,
+              "anti": {
+                "land": 1,
+                "air": 1,
+                "aqua": 1,
+                "building": 1
+              },
+              "size": {
+                "large": 1,
+                "small": 1,
+                "largeAccuracy": 1,
+                "smallAccuracy": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "Common_DoubleVulcan_Dash",
+          "cls": "aa",
+          "dmg": 200.0,
+          "reload": 1.5,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "air"
+          ],
+          "turret": false,
+          "burst": 8,
+          "burstDelay": 0.075,
+          "speed": 562.5,
+          "spread": 39.41,
+          "muzzleOffset": 4.5,
+          "sound": "gw-vulcan-1",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 200.0,
+              "dp": 10.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 2.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "en": 10.0
+            }
+          }
+        }
+      ],
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 100.0,
+            "cqb": 100.0,
+            "accuracy": 105.0,
+            "reaction": 155.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 0.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "air",
+          "en": {
+            "max": 1500.0,
+            "move": 2.4
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-dash",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-air"
+      ]
+    },
+    {
+      "id": "gw-depp-rog",
+      "name": [
+        "DEPP·ROG",
+        "迪普·罗格",
+        "뎁·로그"
+      ],
+      "desc": [
+        "Federation advanced high-altitude heavy bomber\nStrengths\n=Devastating power in group operations=\n=Can greatly weaken enemy morale=\nWeaknesses\n=Poor anti-air capability=\n=Low maneuverability=\n\n\"Blast them all back into space!\"",
+        "联邦军先进高空重型轰炸机\n优势\n=集团作战时威力惊人=\n劣势\n=对空较差=\n=机动性较差=\n\n“把他们全部炸回宇宙去!”",
+        "연방군 최신형 고고도 중폭격기\n장점\n=집단 작전 시 위력이 엄청남=\n=적의 사기를 크게 떨어뜨림=\n단점\n=대공 능력이 약함=\n=기동성이 낮음=\n\n“전부 우주로 날려 보내 버려!”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 916.67,
+      "buildTime": 15.0,
+      "hp": 13500.0,
+      "pop": 2,
+      "armor": "air",
+      "speed": 96.75,
+      "turnRate": 1.833,
+      "vision": 10.31,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "altitude": 33.75,
+      "weapons": [
+        {
+          "id": "Common_DoubleMS_DEPP_ROG",
+          "cls": "rocket",
+          "dmg": 750.0,
+          "reload": 4.0,
+          "range": 10.55,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub"
+          ],
+          "turret": false,
+          "minRange": 3.52,
+          "speed": 196.88,
+          "muzzleOffset": 7.5,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 750.0,
+              "dp": 50.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        },
+        {
+          "id": "Common_Bomb_DEPP_ROG",
+          "cls": "he",
+          "dmg": 1500.0,
+          "reload": 6.0,
+          "range": 10.55,
+          "projectile": "bomb",
+          "targets": [
+            "ground",
+            "ship",
+            "sub"
+          ],
+          "turret": false,
+          "burst": 8,
+          "burstDelay": 0.2,
+          "speed": 5.62,
+          "splash": 60.0,
+          "spread": 29.53,
+          "muzzleOffset": 4.5,
+          "sound": "gw-bomb-1",
+          "look": {
+            "sprite": "prj.projectile-bomb"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 1500.0,
+              "dp": 100.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.25,
+                "aqua": 0.5,
+                "building": 0.75
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "blast": 60.0,
+              "en": 90.0
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 125.0,
+            "cqb": 100.0,
+            "accuracy": 115.0,
+            "reaction": 85.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 100.0,
+            "cqb": 100.0,
+            "dp": 0.0
+          },
+          "stance": "air",
+          "en": {
+            "max": 750.0,
+            "move": 2.4
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-depp-rog",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-air"
+      ]
+    },
+    {
+      "id": "gw-don-escargot",
+      "name": [
+        "Don Escargot",
+        "唐·埃斯卡特",
+        "돈 에스카르고"
+      ],
+      "desc": [
+        "Federation Navy Anti-Submarine Bomber\nStrengths\n=Most effective against underwater units=\n=Devastating in group operations=\n=Equipped with sonar=\n=Possesses some anti-air capability=\nWeaknesses\n=Low durability=\n\n\"Anti-submarine operation ready\"",
+        "联邦军反潜轰炸机\n优势\n=对水中单位效果较高=\n=集团作战时威力惊人=\n=装备声纳=\n劣势\n=抗性较弱=\n\n“反潜作业准备完成”",
+        "연방 해군 대잠 폭격기\n장점\n=수중 유닛에 가장 효과적=\n=집단 작전 시 위력이 엄청남=\n=소나 장비=\n=어느 정도 대공 능력 보유=\n단점\n=내구가 약함=\n\n“대잠 작업 준비 완료”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 650.0,
+      "buildTime": 11.67,
+      "hp": 6000.0,
+      "pop": 1,
+      "armor": "air",
+      "speed": 112.5,
+      "turnRate": 2.094,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "altitude": 26.25,
+      "weapons": [
+        {
+          "id": "Common_DoubleVulcan_DonEscargot",
+          "cls": "mg",
+          "dmg": 125.0,
+          "reload": 1.5,
+          "range": 10.55,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub"
+          ],
+          "turret": false,
+          "burst": 8,
+          "burstDelay": 0.075,
+          "speed": 562.5,
+          "spread": 35.47,
+          "muzzleOffset": 15.0,
+          "sound": "gw-vulcan-1",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 125.0,
+              "dp": 10.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 1.0,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "en": 15.0
+            }
+          }
+        },
+        {
+          "id": "Common_Bomb_DonEscargot",
+          "cls": "he",
+          "dmg": 3000.0,
+          "reload": 5.0,
+          "range": 10.55,
+          "projectile": "bomb",
+          "targets": [
+            "ground",
+            "ship",
+            "sub"
+          ],
+          "turret": false,
+          "burst": 2,
+          "burstDelay": 0.3,
+          "speed": 5.62,
+          "splash": 60.0,
+          "spread": 29.53,
+          "muzzleOffset": 4.5,
+          "sound": "gw-bomb-1",
+          "look": {
+            "sprite": "prj.projectile-bomb"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 3000.0,
+              "dp": 250.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 0.5,
+                "air": 0.25,
+                "aqua": 2.0,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "blast": 60.0,
+              "en": 30.0
+            }
+          }
+        }
+      ],
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 100.0,
+            "accuracy": 100.0,
+            "reaction": 110.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 0.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "air",
+          "en": {
+            "max": 400.0,
+            "move": 2.4
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-don-escargot",
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
+      "producedBy": [
+        "gw-factory-efsf-0079-air"
+      ]
+    },
+    {
+      "id": "gw-m-type-submarine",
+      "name": [
+        "M-Type Submarine",
+        "M型潜水艇",
+        "M형 잠수함"
+      ],
+      "desc": [
+        "Large Missile-Attack Submarine Built by the Federation Navy\nStrengths\n=Allow Cmmand Communicatio=\n=Auto-repairs when out of combat=\n=Can change posture=\n=Long-range bombardment=\n=Equipped with sonar=\n=Transport capacity: 16+6=\nWeaknesses\n=Massive size=\n=Cannot attack air units=\n=-200 yards stealth radius=\n=Reveals vision when detected=\n=Poor performance against close-range units=",
+        "联邦海军建造的大型导弹攻击潜艇\n优势\n=允许通信指挥=\n=脱战自动修复=\n=可改变姿态=\n=远距离轰炸=\n=装备声纳=\n=运输力:16+6=\n劣势\n=体积巨大=\n=无法对空=\n=负200码反侦测=\n=被发现时暴露视野=\n=对抗近距离单位不佳=\n\n“从水中出发!”",
+        "연방 해군이 건조한 대형 미사일 공격 잠수함\n장점\n=통신 지휘 가능=\n=전투 이탈 시 자동 수리=\n=자세 변경 가능=\n=원거리 폭격=\n=소나 장비=\n=수송력: 16+6=\n단점\n=선체가 거대함=\n=대공 불가=\n=은신 반경 -200야드=\n=발견되면 시야가 노출됨=\n=근거리 유닛 상대로 불리=\n\n“수중에서 출격!”"
+      ],
+      "kind": "unit",
+      "domain": "ship",
+      "tier": 1,
+      "cost": 7500.0,
+      "buildTime": 60.0,
+      "hp": 120000.0,
+      "pop": 4,
+      "armor": "ship",
+      "speed": 45.0,
+      "turnRate": 0.367,
+      "vision": 9.38,
+      "radius": 22.5,
+      "aiWeight": 2,
+      "weapons": [
+        {
+          "id": "M_Type_Submarine_Turret_AMS",
+          "cls": "rocket",
+          "dmg": 2500.0,
+          "reload": 5.5,
+          "range": 28.12,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "burst": 8,
+          "burstDelay": 0.375,
+          "speed": 168.75,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms-aqua-l"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 2500.0,
+              "dp": 150.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.25,
+                "aqua": 2.0,
+                "building": 0.5
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              }
+            }
+          },
+          "vertical": true,
+          "muzzleOffset": 101.25
+        },
+        {
+          "id": "M_Type_Submarine_Turret_MS",
+          "cls": "rocket",
+          "dmg": 1200.0,
+          "reload": 8.25,
+          "range": 28.12,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "burst": 32,
+          "burstDelay": 0.094,
+          "speed": 196.88,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 1200.0,
+              "dp": 90.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.25,
+                "aqua": 0.25,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              }
+            }
+          },
+          "vertical": true,
+          "muzzleOffset": 37.5
+        }
+      ],
+      "transportCap": 12,
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 135.0,
+            "cqb": 100.0,
+            "accuracy": 105.0,
+            "reaction": 85.0
+          },
+          "def": {
+            "beam": 35.0,
+            "shell": 30.0,
+            "cqb": 20.0,
+            "dp": 100.0
+          },
+          "plus": {
+            "beam": 50.0,
+            "shell": 50.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 9000.0,
+            "move": 1.2
+          },
+          "mp": 4,
+          "size": "large"
+        }
+      },
+      "sprite": "u.gw-m-type-submarine",
+      "body": {
+        "r": 57.3,
+        "len": 121.27
+      },
+      "requires": [
+        "gw-efsf-0079-anti-ms-plan"
+      ],
       "producedBy": [
         "gw-factory-efsf-0079-aqua"
       ]
@@ -6902,6 +8688,2742 @@
       ]
     },
     {
+      "id": "gw-ms-06j",
+      "name": [
+        "Zaku II GroundType",
+        "扎古II陆战型",
+        "자쿠 II 육전형"
+      ],
+      "desc": [
+        "Zaku modified for gravity combat\nStrengths\n=Equipped with missile launcher=\n=Can be equipped with various weapons=\nWeaknesses\n=Reduced responsiveness=\n\n\"Where did it go!?\"",
+        "为适应重力作战进行了改装的扎古\n优势\n=装备导弹发射器=\n=可装备多种武器=\n劣势\n=反应有所降低=\n\n“到哪里去了!?”",
+        "중력 전투에 맞게 개조한 자쿠\n장점\n=미사일 런처 장비=\n=다양한 무기 장비 가능=\n단점\n=반응성이 떨어짐=\n\n“어디로 간 거야!?”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 866.67,
+      "buildTime": 16.67,
+      "hp": 14500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 49.5,
+      "turnRate": 1.571,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_120mmMG",
+          "cls": "mg",
+          "dmg": 575.0,
+          "reload": 2.0,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 8,
+          "burstDelay": 0.125,
+          "speed": 421.88,
+          "spread": 32.81,
+          "muzzleOffset": 22.5,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-mg"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 575.0,
+              "dp": 30.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "en": 20.0
+            }
+          }
+        },
+        {
+          "id": "ZN_MS_06J_LegMS",
+          "cls": "rocket",
+          "dmg": 950.0,
+          "reload": 8.0,
+          "range": 11.72,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 2,
+          "burstDelay": 0.033,
+          "speed": 168.75,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 950.0,
+              "dp": 100.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "en": 20.0
+            }
+          }
+        },
+        {
+          "id": "ZN_HeatHawk_A",
+          "cls": "at",
+          "dmg": 4500.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-heathawk-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2250.0,
+              "cqbShell": 2250.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 115.0,
+            "cqb": 100.0,
+            "accuracy": 110.0,
+            "reaction": 95.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 5.0,
+            "dp": 7.5
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 50.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 750.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-06j",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 200.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06j-bazooka"
+          }
+        },
+        {
+          "button": {
+            "cost": 450.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06j-cn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-ms-06j-bazooka",
+      "name": [
+        "Zaku II GroundType (Bazooka)",
+        "扎古II陆战型（火箭筒）",
+        "자쿠 II 육전형 (바주카)"
+      ],
+      "desc": [
+        "Zaku modified for gravity combat\nStrengths\n=Equipped with missile launcher=\n=Can be equipped with various weapons=\nWeaknesses\n=Reduced responsiveness=\n\n\"Where did it go!?\"",
+        "为适应重力作战进行了改装的扎古\n优势\n=装备导弹发射器=\n=可装备多种武器=\n劣势\n=反应有所降低=\n\n“到哪里去了!?”",
+        "중력 전투에 맞게 개조한 자쿠\n장점\n=미사일 런처 장비=\n=다양한 무기 장비 가능=\n단점\n=반응성이 떨어짐=\n\n“어디로 간 거야!?”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1066.67,
+      "buildTime": 16.67,
+      "hp": 14500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 49.5,
+      "turnRate": 1.571,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_270mmBazooka",
+          "cls": "cannon",
+          "dmg": 8500.0,
+          "reload": 4.5,
+          "range": 11.72,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "speed": 309.38,
+          "splash": 22.5,
+          "spread": 6.55,
+          "muzzleOffset": 20.25,
+          "sound": "gw-bazooka-1",
+          "look": {
+            "sprite": "prj.projectile-bazooka"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 8500.0,
+              "dp": 350.0,
+              "accuracy": 75.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.5
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "blast": 22.5,
+              "en": 55.0
+            }
+          }
+        },
+        {
+          "id": "ZN_MS_06J_LegMS",
+          "cls": "rocket",
+          "dmg": 950.0,
+          "reload": 8.0,
+          "range": 11.72,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 2,
+          "burstDelay": 0.033,
+          "speed": 168.75,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 950.0,
+              "dp": 100.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "en": 20.0
+            }
+          }
+        },
+        {
+          "id": "ZN_HeatHawk_A",
+          "cls": "at",
+          "dmg": 4500.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-heathawk-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2250.0,
+              "cqbShell": 2250.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 115.0,
+            "cqb": 100.0,
+            "accuracy": 110.0,
+            "reaction": 95.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 5.0,
+            "dp": 7.5
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 50.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 750.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-06j-bazooka",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 0.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06j"
+          }
+        },
+        {
+          "button": {
+            "cost": 450.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06j-cn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-ms-06j-cn",
+      "name": [
+        "Zaku II GroundType (CN)",
+        "扎古II陆战型（加农炮）",
+        "자쿠 II 육전형 (캐논)"
+      ],
+      "desc": [
+        "Zaku modified for gravity combat\nStrengths\n=Equipped with missile launcher=\n=Can be equipped with various weapons=\nWeaknesses\n=Reduced responsiveness=\n\n\"Where did it go!?\"",
+        "为适应重力作战进行了改装的扎古\n优势\n=装备导弹发射器=\n=可装备多种武器=\n劣势\n=反应有所降低=\n\n“到哪里去了!?”",
+        "중력 전투에 맞게 개조한 자쿠\n장점\n=미사일 런처 장비=\n=다양한 무기 장비 가능=\n단점\n=반응성이 떨어짐=\n\n“어디로 간 거야!?”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1216.67,
+      "buildTime": 16.67,
+      "hp": 14500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 49.5,
+      "turnRate": 1.571,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_MagellaCannon",
+          "cls": "cannon",
+          "dmg": 6000.0,
+          "reload": 6.0,
+          "range": 11.72,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "speed": 365.62,
+          "splash": 26.25,
+          "muzzleOffset": 26.25,
+          "sound": "gw-bazooka-1",
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 6000.0,
+              "dp": 500.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "blast": 26.25,
+              "en": 45.0
+            }
+          }
+        },
+        {
+          "id": "ZN_MS_06J_LegMS",
+          "cls": "rocket",
+          "dmg": 950.0,
+          "reload": 8.0,
+          "range": 11.72,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 2,
+          "burstDelay": 0.033,
+          "speed": 168.75,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 950.0,
+              "dp": 100.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "en": 20.0
+            }
+          }
+        },
+        {
+          "id": "ZN_HeatHawk_A",
+          "cls": "at",
+          "dmg": 4500.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-heathawk-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2250.0,
+              "cqbShell": 2250.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 115.0,
+            "cqb": 100.0,
+            "accuracy": 110.0,
+            "reaction": 95.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 5.0,
+            "dp": 7.5
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 50.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 750.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-06j-cn",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 0.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06j"
+          }
+        },
+        {
+          "button": {
+            "cost": 200.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06j-bazooka"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-ms-07b",
+      "name": [
+        "Gouf B",
+        "老虎 B型",
+        "구프 B형"
+      ],
+      "desc": [
+        "Based on Type A with added thermic blade for improved melee combat ability\nAdvantages\n=Skilled in melee combat=\n=Capable of dashing=\n=Good adaptation to ground combat=\nDisadvantages\n=Type B cannot equip ranged weapons and thus lacks shooting ability=\n\n\"If I won, it's not you, but the machine's performance!\"",
+        "基于A型追加了热能刀具备更好的格斗战能力\n优势\n=擅长格斗战=\n=可以进行冲刺=\n=受到建筑伤害减少35%=\n劣势\n=对建筑伤害减少25%=\n=B型无法装备射击武器故而缺乏射击能力=\n\n“赢了我的不是你,而是机体性能!”",
+        "A형을 바탕으로 히트 소드를 더해 근접전 능력을 높인 기체\n장점\n=근접전에 능함=\n=대시 가능=\n=지상전 적응력이 좋음=\n단점\n=B형은 사격 무기를 장비할 수 없어 사격 능력이 부족함=\n\n“나를 이긴 건 네가 아니라 기체의 성능이다!”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1000.0,
+      "buildTime": 16.67,
+      "hp": 16500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 60.75,
+      "turnRate": 1.571,
+      "vision": 9.38,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_MS_07B_HandMG",
+          "cls": "mg",
+          "dmg": 375.0,
+          "reload": 2.0,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 8,
+          "burstDelay": 0.075,
+          "speed": 478.12,
+          "spread": 52.7,
+          "muzzleOffset": 13.5,
+          "sound": "gw-vulcan-1",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 375.0,
+              "dp": 35.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "en": 20.0
+            }
+          }
+        },
+        {
+          "id": "ZN_MS_07B_HeatRod",
+          "cls": "at",
+          "dmg": 3500.0,
+          "reload": 5.0,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "speed": 309.38,
+          "spread": 6.55,
+          "muzzleOffset": 12.75,
+          "sound": "gw-fist-2",
+          "look": {
+            "sprite": "prj.projectile-heat-rod"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 3500.0,
+              "dp": 750.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.5
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        },
+        {
+          "id": "ZN_HeatSword_A",
+          "cls": "at",
+          "dmg": 5000.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-heathawk-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2500.0,
+              "cqbShell": 2500.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 120.0,
+            "accuracy": 110.0,
+            "reaction": 115.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 15.0,
+            "dp": 15.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 100.0,
+            "cqb": 300.0,
+            "dp": 15.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 750.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-07b",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ]
+    },
+    {
+      "id": "gw-ms-06k",
+      "name": [
+        "Zaku Cannon",
+        "扎古加农",
+        "자쿠 캐논"
+      ],
+      "desc": [
+        "Mobile suit developed for bombardment operations\nStrengths\n=Anti-Air Cannon=\nWeaknesses\n=Extremely poor mobility=\n=Lacks melee capability=\n\n\"No choice, because supplies must not be destroyed\"",
+        "为进行对空作战而开发的机体\n优势\n=装备对空火炮=\n劣势\n=机动性极差=\n=缺乏近战能力=\n\n“没办法,因为物资不能让人破坏掉”",
+        "포격 작전용으로 개발된 모빌슈트\n장점\n=대공 캐논=\n단점\n=기동성이 극히 나쁨=\n=근접전 능력 부족=\n\n“어쩔 수 없어, 물자를 파괴당할 수는 없으니까”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1183.33,
+      "buildTime": 18.33,
+      "hp": 14500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 38.25,
+      "turnRate": 1.047,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_120mmMG",
+          "cls": "mg",
+          "dmg": 575.0,
+          "reload": 2.0,
+          "range": 17.58,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 8,
+          "burstDelay": 0.125,
+          "speed": 421.88,
+          "spread": 49.21,
+          "muzzleOffset": 22.5,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-mg"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 575.0,
+              "dp": 30.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "en": 20.0
+            }
+          }
+        },
+        {
+          "id": "Common_Cannon_AntiAir",
+          "cls": "he",
+          "dmg": 1750.0,
+          "reload": 9.0,
+          "range": 17.58,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 2.81,
+          "speed": 393.75,
+          "splash": 33.75,
+          "arc": true,
+          "sound": "gw-shellcannon-1",
+          "look": {
+            "sprite": "prj.anti-air-cannon-diffusion-area-a"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 1750.0,
+              "dp": 100.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 0.75,
+                "air": 1.5,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "blast": 33.75,
+              "en": 55.0
+            }
+          }
+        },
+        {
+          "id": "Common_Cqb_A",
+          "cls": "at",
+          "dmg": 4000.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-fist-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2000.0,
+              "cqbShell": 2000.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 75.0,
+            "accuracy": 110.0,
+            "reaction": 90.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 35.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 750.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-06k",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 400.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06k-biggun"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-ms-06k-biggun",
+      "name": [
+        "Zaku Cannon (BigGun)",
+        "扎古加农（大枪）",
+        "자쿠 캐논 (빅 건)"
+      ],
+      "desc": [
+        "Mobile suit developed for bombardment operations\nStrengths\n=Anti-Air Cannon=\nWeaknesses\n=Extremely poor mobility=\n=Lacks melee capability=\n\n\"No choice, because supplies must not be destroyed\"",
+        "为进行对空作战而开发的机体\n优势\n=装备对空火炮=\n劣势\n=机动性极差=\n=缺乏近战能力=\n\n“没办法,因为物资不能让人破坏掉”",
+        "포격 작전용으로 개발된 모빌슈트\n장점\n=대공 캐논=\n단점\n=기동성이 극히 나쁨=\n=근접전 능력 부족=\n\n“어쩔 수 없어, 물자를 파괴당할 수는 없으니까”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1416.67,
+      "buildTime": 18.33,
+      "hp": 14500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 38.25,
+      "turnRate": 1.047,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "Common_Cannon_AntiAir",
+          "cls": "he",
+          "dmg": 1750.0,
+          "reload": 9.0,
+          "range": 17.58,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 2.81,
+          "speed": 393.75,
+          "splash": 33.75,
+          "arc": true,
+          "sound": "gw-shellcannon-1",
+          "look": {
+            "sprite": "prj.anti-air-cannon-diffusion-area-a"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 1750.0,
+              "dp": 100.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 0.75,
+                "air": 1.5,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "blast": 33.75,
+              "en": 55.0
+            }
+          }
+        },
+        {
+          "id": "Common_Cqb_A",
+          "cls": "at",
+          "dmg": 4000.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-fist-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2000.0,
+              "cqbShell": 2000.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 75.0,
+            "accuracy": 110.0,
+            "reaction": 90.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 35.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 750.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-06k-biggun",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 0.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06k"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-ms-06m",
+      "name": [
+        "Zaku Marine Type",
+        "水中型扎古",
+        "수중형 자쿠"
+      ],
+      "desc": [
+        "Zaku equipped for underwater operations\nAdvantages\n=Possesses anti-submarine capability=\n=Equipped with sonar=\nDisadvantages\n=Lacks melee capability=\n\n\"Sonar has detected a target!\"",
+        "装备了水中作战装备的扎古\n优势\n=具备反潜能力=\n=装备声纳=\n劣势\n=缺乏格斗能力=\n\n“声纳捕获到了!”",
+        "수중 작전 장비를 갖춘 자쿠\n장점\n=대잠 능력 보유=\n=소나 장비=\n단점\n=근접전 능력 부족=\n\n“소나에 목표가 잡혔다!”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 866.67,
+      "buildTime": 16.67,
+      "hp": 14500.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 42.75,
+      "turnRate": 1.518,
+      "vision": 8.44,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_MS_06M_MSL",
+          "cls": "rocket",
+          "dmg": 1750.0,
+          "reload": 5.0,
+          "range": 11.72,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 4,
+          "burstDelay": 0.3,
+          "speed": 225.0,
+          "muzzleOffset": 13.5,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 1750.0,
+              "dp": 75.0,
+              "accuracy": 90.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.5,
+                "aqua": 3.0,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "en": 45.0
+            }
+          }
+        },
+        {
+          "id": "Common_Cqb_A",
+          "cls": "at",
+          "dmg": 4000.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-fist-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2000.0,
+              "cqbShell": 2000.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 115.0,
+            "cqb": 100.0,
+            "accuracy": 110.0,
+            "reaction": 95.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 5.0,
+            "dp": 7.5
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 50.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 750.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-06m",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-aqua",
+        "gw-factory-zeon-0079-land"
+      ]
+    },
+    {
+      "id": "gw-ms-06r-1",
+      "name": [
+        "Zaku II HighMobility R-1",
+        "扎古II高机动型R-1",
+        "자쿠 II 고기동형 R-1"
+      ],
+      "desc": [
+        "Zaku equipped with additional thrusters, with improved mobility\nAdvantages\n=High mobility=\nDisadvantages\n=Weaker structural integrity=\n\n\"Mobile maneuver combat!\"",
+        "增设了推进器的扎古,机动性有所提升\n优势\n=机动性较高=\n劣势\n=结构强度较差=\n\n“机动作战!”",
+        "추진기를 추가해 기동성을 높인 자쿠\n장점\n=기동성이 높음=\n단점\n=구조 강도가 약함=\n\n“기동 작전!”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1150.0,
+      "buildTime": 18.33,
+      "hp": 15000.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 54.0,
+      "turnRate": 1.518,
+      "vision": 9.38,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_120mmMG",
+          "cls": "mg",
+          "dmg": 575.0,
+          "reload": 2.0,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 8,
+          "burstDelay": 0.125,
+          "speed": 421.88,
+          "spread": 32.81,
+          "muzzleOffset": 22.5,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-mg"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 575.0,
+              "dp": 30.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "en": 20.0
+            }
+          }
+        },
+        {
+          "id": "ZN_HeatHawk_A",
+          "cls": "at",
+          "dmg": 4500.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-heathawk-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2250.0,
+              "cqbShell": 2250.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 125.0,
+            "cqb": 100.0,
+            "accuracy": 115.0,
+            "reaction": 120.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 5.0,
+            "dp": 7.5
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 60.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 600.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-06r-1",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 200.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06r-1-bazooka"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-ms-06r-1-bazooka",
+      "name": [
+        "Zaku II HighMobility R-1 (Bazooka)",
+        "扎古II高机动型R-1（火箭筒）",
+        "자쿠 II 고기동형 R-1 (바주카)"
+      ],
+      "desc": [
+        "Zaku equipped with additional thrusters, with improved mobility\nAdvantages\n=High mobility=\nDisadvantages\n=Weaker structural integrity=\n\n\"Mobile maneuver combat!\"",
+        "增设了推进器的扎古,机动性有所提升\n优势\n=机动性较高=\n劣势\n=结构强度较差=\n\n“机动作战!”",
+        "추진기를 추가해 기동성을 높인 자쿠\n장점\n=기동성이 높음=\n단점\n=구조 강도가 약함=\n\n“기동 작전!”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1283.33,
+      "buildTime": 18.33,
+      "hp": 15000.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 54.0,
+      "turnRate": 1.518,
+      "vision": 9.38,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_270mmBazooka",
+          "cls": "cannon",
+          "dmg": 8500.0,
+          "reload": 4.5,
+          "range": 11.72,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "speed": 309.38,
+          "splash": 22.5,
+          "spread": 6.55,
+          "muzzleOffset": 20.25,
+          "sound": "gw-bazooka-1",
+          "look": {
+            "sprite": "prj.projectile-bazooka"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 8500.0,
+              "dp": 350.0,
+              "accuracy": 75.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.5
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "blast": 22.5,
+              "en": 55.0
+            }
+          }
+        },
+        {
+          "id": "ZN_HeatHawk_A",
+          "cls": "at",
+          "dmg": 4500.0,
+          "reload": 3.0,
+          "range": 1.41,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 2000,
+          "sound": "gw-heathawk-1",
+          "look": {
+            "muzzle": "none",
+            "impact": "fx.spark",
+            "impactScale": 1.5
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "cqb",
+              "cqb": 2250.0,
+              "cqbShell": 2250.0,
+              "dp": 750.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 125.0,
+            "cqb": 100.0,
+            "accuracy": 115.0,
+            "reaction": 120.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 10.0,
+            "cqb": 5.0,
+            "dp": 7.5
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 60.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 600.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-ms-06r-1-bazooka",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ],
+      "rules": [
+        {
+          "button": {
+            "cost": 0.0,
+            "time": 3.0
+          },
+          "if": {
+            "near": {
+              "units": [
+                "gw-factory-efsf-0079-aqua",
+                "gw-factory-zeon-0079-aqua",
+                "gw-hq-efsf-0079",
+                "gw-hq-zeon-0079",
+                "gw-supply-depot-t1"
+              ],
+              "side": "friend",
+              "within": 7.03
+            }
+          },
+          "do": {
+            "morph": "gw-ms-06r-1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gw-msm-03",
+      "name": [
+        "Gogg",
+        "战蟹",
+        "고그"
+      ],
+      "desc": [
+        "Amphibious MS equipped with experimental beam weapons\nAdvantages\n=High durability=\n=Stealthy underwater=\n=Equipped with sonar=\n=Excellent resistance to physical projectiles=\nDisadvantages\n=Low mobility=\n\n\"No doubt about the Gogg—totally reliable!\"",
+        "水陆两用MS,装备了实验性光束武器\n优势\n=抗性较高=\n=水中匿踪=\n=装备声纳=\n=实弹抗性极高=\n=受到建筑伤害减少35%=\n劣势\n=机动性较差=\n\n“不愧是战蟹,完全没问题!”",
+        "실험용 빔 병기를 장비한 수륙양용 MS\n장점\n=내구가 높음=\n=수중 은신=\n=소나 장비=\n=실탄에 대한 저항이 매우 뛰어남=\n단점\n=기동성이 낮음=\n\n“역시 고그, 완전히 믿음직해!”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 1333.33,
+      "buildTime": 18.33,
+      "hp": 24000.0,
+      "pop": 2,
+      "armor": "medium",
+      "speed": 40.5,
+      "turnRate": 1.414,
+      "vision": 9.38,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "none",
+      "weapons": [
+        {
+          "id": "ZN_MSM_03_ChestBeam",
+          "cls": "mg",
+          "dmg": 0.0,
+          "reload": 7.0,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "speed": 337.5,
+          "spread": 6.55,
+          "sound": "gw-beamspraygun-2",
+          "look": {
+            "sprite": "prj.projectile-beam-shot-gun-yellow"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "dp": 20.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.5,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "en": 15.0
+            }
+          }
+        },
+        {
+          "id": "ZN_MSM_03_SMS",
+          "cls": "rocket",
+          "dmg": 750.0,
+          "reload": 9.0,
+          "range": 11.72,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "minRange": 1.41,
+          "burst": 6,
+          "burstDelay": 0.1,
+          "speed": 168.75,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 750.0,
+              "dp": 50.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.0,
+                "aqua": 2.0,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.25,
+                "small": 0.75,
+                "largeAccuracy": 1.25,
+                "smallAccuracy": 0.75
+              },
+              "en": 35.0
+            }
+          }
+        }
+      ],
+      "cargoWeight": 2,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 115.0,
+            "accuracy": 110.0,
+            "reaction": 100.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 20.0,
+            "cqb": 20.0,
+            "dp": 20.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 250.0,
+            "cqb": 350.0,
+            "dp": 25.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 750.0,
+            "move": 1.2
+          },
+          "mp": 2
+        }
+      },
+      "sprite": "u.gw-msm-03",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-aqua",
+        "gw-factory-zeon-0079-land"
+      ]
+    },
+    {
+      "id": "gw-cui",
+      "name": [
+        "Cui",
+        "邱伊",
+        "쿠이"
+      ],
+      "desc": [
+        "Zeon troop transport vehicle\nAdvantages\n=Can transport infantry=\n=Transport Capacity: 1=\nDisadvantages\n=Poorly armed=\n=Low durability=\n\n\"Assault operation!\"",
+        "吉翁军运兵车\n优势\n=可以运载步兵=\n=运输力:1=\n劣势\n=武装贫弱=\n=抗性较弱=\n\n“突击作战!”",
+        "지온군 병력 수송 차량\n장점\n=보병 수송 가능=\n=수송력: 1=\n단점\n=무장이 빈약함=\n=내구가 약함=\n\n“돌격 작전!”"
+      ],
+      "kind": "unit",
+      "domain": "ground",
+      "tier": 1,
+      "cost": 133.33,
+      "buildTime": 6.67,
+      "hp": 2500.0,
+      "pop": 1,
+      "armor": "heavy",
+      "speed": 65.25,
+      "turnRate": 0.785,
+      "vision": 9.38,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "tread",
+      "weapons": [
+        {
+          "id": "ZN_Cui_AA",
+          "cls": "mg",
+          "dmg": 30.0,
+          "reload": 4.9,
+          "range": 10.55,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "burst": 20,
+          "burstDelay": 0.1,
+          "speed": 562.5,
+          "spread": 35.47,
+          "muzzleOffset": 2.25,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 30.0,
+              "dp": 1.5,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 2.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 1.0,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 1.0
+              },
+              "enShot": 0.5
+            }
+          }
+        },
+        {
+          "id": "Member_MG",
+          "cls": "mg",
+          "dmg": 8.0,
+          "reload": 5.2,
+          "range": 10.55,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "burst": 32,
+          "burstDelay": 0.037,
+          "speed": 450.0,
+          "spread": 35.47,
+          "muzzleOffset": 3.75,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 8.0,
+              "dp": 1.0,
+              "accuracy": 90.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              }
+            }
+          }
+        },
+        {
+          "id": "Member_BZ",
+          "cls": "cannon",
+          "dmg": 300.0,
+          "reload": 7.0,
+          "range": 10.55,
+          "projectile": "shell",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "speed": 168.75,
+          "splash": 41.25,
+          "spread": 5.89,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-bazooka-xs"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 300.0,
+              "dp": 50.0,
+              "accuracy": 75.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.75,
+                "aqua": 0.75,
+                "building": 1.5
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "blast": 41.25
+            }
+          },
+          "burst": 2,
+          "burstDelay": 0.05
+        }
+      ],
+      "transportCap": 1,
+      "transportMaxWeight": 1,
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 100.0,
+            "cqb": 100.0,
+            "accuracy": 100.0,
+            "reaction": 85.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0,
+            "shell": 0,
+            "cqb": 0,
+            "dp": 0
+          },
+          "stance": "land",
+          "en": {
+            "max": 600.0,
+            "move": 1.2
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-cui",
+      "turretSprite": "tur.gw-cui",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ]
+    },
+    {
+      "id": "gw-luggun",
+      "name": [
+        "Luggun",
+        "鲁艮",
+        "루건"
+      ],
+      "desc": [
+        "Zeon's high-altitude reconnaissance aircraft\nAdvantages\n=Capable of area reconnaissance=\n=Has certain combat ability=\n= Can disperse Minovsky particles =\nDisadvantages\n=Poor turning ability=\n\n\"Enemy aircraft confirmed, transmitting data now\"",
+        "吉翁军高空侦察机\n优势\n=可以进行区域侦测=\n=拥有一定战斗力=\n=可以散布米诺夫斯基粒子=\n劣势\n=回旋较差=\n\n“确认到敌机,正在传输信息”",
+        "지온군 고고도 정찰기\n장점\n=구역 정찰 가능=\n=어느 정도 전투 능력 보유=\n=미노프스키 입자 살포 가능=\n단점\n=선회 능력이 떨어짐=\n\n“적기 확인, 지금 데이터를 전송한다”"
+      ],
+      "kind": "unit",
+      "domain": "air",
+      "tier": 1,
+      "cost": 850.0,
+      "buildTime": 25.0,
+      "hp": 4500.0,
+      "pop": 1,
+      "armor": "air",
+      "speed": 135.0,
+      "turnRate": 1.309,
+      "vision": 11.72,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "altitude": 33.75,
+      "weapons": [
+        {
+          "id": "Common_MinovskyParticle_S",
+          "cls": "mg",
+          "dmg": 0.0,
+          "reload": 180.0,
+          "range": 28.12,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub"
+          ],
+          "turret": true,
+          "speed": 2000,
+          "sound": "gw-detect-3",
+          "arc": true,
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "accuracy": 100,
+              "anti": {
+                "land": 1,
+                "air": 1,
+                "aqua": 1,
+                "building": 1
+              },
+              "size": {
+                "large": 1,
+                "small": 1,
+                "largeAccuracy": 1,
+                "smallAccuracy": 1
+              }
+            }
+          }
+        },
+        {
+          "id": "ZN_Luggun_AA_L",
+          "cls": "mg",
+          "dmg": 30.0,
+          "reload": 0.1,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "speed": 562.5,
+          "spread": 39.41,
+          "muzzleOffset": 2.25,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 30.0,
+              "dp": 1.5,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 2.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "enShot": 0.5
+            }
+          }
+        },
+        {
+          "id": "ZN_Luggun_AA_R",
+          "cls": "mg",
+          "dmg": 30.0,
+          "reload": 0.1,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "speed": 562.5,
+          "spread": 39.41,
+          "muzzleOffset": 2.25,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 30.0,
+              "dp": 1.5,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 2.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "enShot": 0.5
+            }
+          }
+        },
+        {
+          "id": "Common_Bomb_Luggun",
+          "cls": "he",
+          "dmg": 4500.0,
+          "reload": 5.0,
+          "range": 11.72,
+          "projectile": "bomb",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "speed": 5.62,
+          "splash": 60.0,
+          "spread": 32.81,
+          "muzzleOffset": 4.5,
+          "sound": "gw-bomb-1",
+          "look": {
+            "sprite": "prj.projectile-bomb"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 4500.0,
+              "dp": 400.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.25,
+                "aqua": 0.75,
+                "building": 1.5
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "blast": 60.0,
+              "en": 30.0
+            }
+          }
+        }
+      ],
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 100.0,
+            "cqb": 100.0,
+            "accuracy": 105.0,
+            "reaction": 155.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0.0,
+            "shell": 0.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "air",
+          "en": {
+            "max": 1000.0,
+            "move": 2.4
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-luggun",
+      "turretSprite": "tur.gw-luggun",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-air"
+      ]
+    },
+    {
+      "id": "gw-zn-apc-with-ms",
+      "name": [
+        "APC[WithMS]",
+        "装甲车[加装导弹]",
+        "장갑차[미사일 탑재]"
+      ],
+      "desc": [
+        "Amphibious armored vehicle equipped with missiles\nAdvantages\n=Reconnaissance vehicle=\n=Possesses some anti-air capability=\n=Capable of transporting infantry=\n=Transport Capacity: 1=\nDisadvantages\n=Weak armor=\n\n\"We've secured the outpost!\"",
+        "加装了导弹的两栖装甲车\n优势\n=侦察用车辆=\n=具备一定对空能力=\n=可以运载步兵=\n=运输力:1=\n劣势\n=装甲薄弱=\n\n“制压据点了!”",
+        "미사일을 추가 장비한 수륙양용 장갑차\n장점\n=정찰용 차량=\n=어느 정도 대공 능력 보유=\n=보병 수송 가능=\n=수송력: 1=\n단점\n=장갑이 약함=\n\n“거점을 제압했다!”"
+      ],
+      "kind": "unit",
+      "domain": "amphibious",
+      "tier": 1,
+      "cost": 150.0,
+      "buildTime": 6.67,
+      "hp": 3500.0,
+      "pop": 1,
+      "armor": "heavy",
+      "speed": 45.0,
+      "turnRate": 1.309,
+      "vision": 8.91,
+      "radius": 11.25,
+      "aiWeight": 2,
+      "trail": "tread",
+      "weapons": [
+        {
+          "id": "ZN_APC_MG",
+          "cls": "mg",
+          "dmg": 65.0,
+          "reload": 3.1,
+          "range": 11.72,
+          "projectile": "bullet",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "burst": 12,
+          "burstDelay": 0.1,
+          "speed": 478.12,
+          "spread": 26.22,
+          "muzzleOffset": 3.75,
+          "sound": "gw-machinegun-2",
+          "look": {
+            "sprite": "prj.projectile-vulcan"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 65.0,
+              "dp": 5.0,
+              "accuracy": 125.0,
+              "anti": {
+                "land": 1.0,
+                "air": 1.5,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 1.0,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 1.0
+              },
+              "enShot": 0.5
+            }
+          }
+        },
+        {
+          "id": "Common_DoubleMS_ZN_APC",
+          "cls": "rocket",
+          "dmg": 1000.0,
+          "reload": 3.15,
+          "range": 11.72,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": true,
+          "burst": 2,
+          "burstDelay": 0.15,
+          "speed": 281.25,
+          "muzzleOffset": 9.38,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 1000.0,
+              "dp": 50.0,
+              "accuracy": 90.0,
+              "anti": {
+                "land": 1.0,
+                "air": 2.0,
+                "aqua": 0.75,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              },
+              "enShot": 10.0
+            }
+          }
+        }
+      ],
+      "transportCap": 1,
+      "transportMaxWeight": 1,
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 110.0,
+            "cqb": 75.0,
+            "accuracy": 105.0,
+            "reaction": 50.0
+          },
+          "def": {
+            "beam": 5.0,
+            "shell": 5.0,
+            "cqb": 5.0,
+            "dp": 5.0
+          },
+          "plus": {
+            "beam": 0,
+            "shell": 0,
+            "cqb": 0,
+            "dp": 0
+          },
+          "stance": "land",
+          "en": {
+            "max": 250.0,
+            "move": 1.2
+          },
+          "mp": 1
+        }
+      },
+      "sprite": "u.gw-zn-apc",
+      "turretSprite": "tur.gw-zn-apc-with-ms",
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-land"
+      ]
+    },
+    {
+      "id": "gw-m-type-submarine-zeon",
+      "name": [
+        "MadAngler Class",
+        "魔鲨级",
+        "매드앵글러급"
+      ],
+      "desc": [
+        "Zeon's Large Missile-Attack Submarine Built by the Federation Navy\nStrengths\n=Allow Cmmand Communicatio=\n=Auto-repairs when out of combat=\n=Can change posture=\n=Long-range bombardment=\n=Equipped with sonar=\n=Transport capacity: 16+6=\nWeaknesses\n=Massive size=\n=Cannot attack air units=\n=-200 yards stealth radius=\n=Reveals vision when detected=\n=Poor performance against close-range units=",
+        "吉翁的联邦海军建造的大型导弹攻击潜艇\n优势\n=允许通信指挥=\n=脱战自动修复=\n=可改变姿态=\n=远距离轰炸=\n=装备声纳=\n=运输力:16+6=\n劣势\n=体积巨大=\n=无法对空=\n=负200码反侦测=\n=被发现时暴露视野=\n=对抗近距离单位不佳=\n\n“从水中出发!”",
+        "연방 해군이 건조한 지온의 대형 미사일 공격 잠수함\n장점\n=통신 지휘 가능=\n=전투 이탈 시 자동 수리=\n=자세 변경 가능=\n=원거리 폭격=\n=소나 장비=\n=수송력: 16+6=\n단점\n=선체가 거대함=\n=대공 불가=\n=은신 반경 -200야드=\n=발견되면 시야가 노출됨=\n=근거리 유닛 상대로 불리=\n\n“수중에서 출격!”"
+      ],
+      "kind": "unit",
+      "domain": "ship",
+      "tier": 1,
+      "cost": 7500.0,
+      "buildTime": 60.0,
+      "hp": 120000.0,
+      "pop": 4,
+      "armor": "ship",
+      "speed": 45.0,
+      "turnRate": 0.367,
+      "vision": 9.38,
+      "radius": 22.5,
+      "aiWeight": 2,
+      "weapons": [
+        {
+          "id": "M_Type_Submarine_Turret_AMS",
+          "cls": "rocket",
+          "dmg": 2500.0,
+          "reload": 5.5,
+          "range": 28.12,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "burst": 8,
+          "burstDelay": 0.375,
+          "speed": 168.75,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms-aqua-l"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 2500.0,
+              "dp": 150.0,
+              "accuracy": 85.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.25,
+                "aqua": 2.0,
+                "building": 0.5
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              }
+            }
+          },
+          "vertical": true,
+          "muzzleOffset": 101.25
+        },
+        {
+          "id": "M_Type_Submarine_Turret_MS",
+          "cls": "rocket",
+          "dmg": 1200.0,
+          "reload": 8.25,
+          "range": 28.12,
+          "projectile": "missile",
+          "targets": [
+            "ground",
+            "ship",
+            "sub",
+            "air"
+          ],
+          "turret": false,
+          "burst": 32,
+          "burstDelay": 0.094,
+          "speed": 196.88,
+          "sound": "gw-missile-1",
+          "look": {
+            "sprite": "prj.projectile-ms"
+          },
+          "extensions": {
+            "gw.battle-v1": {
+              "kind": "shell",
+              "shell": 1200.0,
+              "dp": 90.0,
+              "accuracy": 100.0,
+              "anti": {
+                "land": 1.0,
+                "air": 0.25,
+                "aqua": 0.25,
+                "building": 1.0
+              },
+              "size": {
+                "large": 1.0,
+                "small": 0.75,
+                "largeAccuracy": 1.0,
+                "smallAccuracy": 0.75
+              }
+            }
+          },
+          "vertical": true,
+          "muzzleOffset": 37.5
+        }
+      ],
+      "transportCap": 12,
+      "cargoWeight": 1,
+      "extensions": {
+        "gw.battle-v1": {
+          "level": {
+            "shoot": 135.0,
+            "cqb": 100.0,
+            "accuracy": 105.0,
+            "reaction": 85.0
+          },
+          "def": {
+            "beam": 35.0,
+            "shell": 30.0,
+            "cqb": 20.0,
+            "dp": 100.0
+          },
+          "plus": {
+            "beam": 50.0,
+            "shell": 50.0,
+            "cqb": 0.0,
+            "dp": 0.0
+          },
+          "stance": "land",
+          "en": {
+            "max": 9000.0,
+            "move": 1.2
+          },
+          "mp": 4,
+          "size": "large"
+        }
+      },
+      "sprite": "u.gw-m-type-submarine-zeon",
+      "body": {
+        "r": 57.3,
+        "len": 121.27
+      },
+      "requires": [
+        "gw-zeon-0079-ground-type-zaku-dev-plan"
+      ],
+      "producedBy": [
+        "gw-factory-zeon-0079-aqua"
+      ]
+    },
+    {
       "id": "gw-engineer-efsf-0079",
       "name": [
         "Engineer Team [EFSF][0079]",
@@ -6955,6 +11477,7 @@
         "gw-factory-efsf-0079-air",
         "gw-factory-efsf-0079-aqua",
         "gw-factory-efsf-0079-land",
+        "gw-institute-t1",
         "gw-refinery-t1",
         "gw-supply-depot-t1",
         "gw-turret-aa-a",
@@ -7021,6 +11544,7 @@
         "gw-factory-zeon-0079-air",
         "gw-factory-zeon-0079-aqua",
         "gw-factory-zeon-0079-land",
+        "gw-institute-t1",
         "gw-refinery-t1",
         "gw-supply-depot-t1",
         "gw-turret-aa-a",
@@ -7461,17 +11985,99 @@
       "pivotY": 0.5193
     },
     {
-      "key": "u.gw-army-squad-zeon-0079",
-      "file": "sprites/u.gw-army-squad-zeon-0079.png",
-      "frames": 1,
-      "fw": 18,
-      "fh": 19,
+      "key": "u.gw-rgm-79-e",
+      "file": "sprites/u.gw-rgm-79-e.png",
+      "frames": 4,
+      "fw": 17,
+      "fh": 33,
       "rotated": true,
       "teams": false,
       "stripBg": false,
       "stabilize": false,
       "pivotX": 0.5,
-      "pivotY": 0.525
+      "pivotY": 0.3824,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-rgm-79-e-bazooka",
+      "file": "sprites/u.gw-rgm-79-e-bazooka.png",
+      "frames": 4,
+      "fw": 17,
+      "fh": 37,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.4615,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-type61a5",
+      "file": "sprites/u.gw-type61a5.png",
+      "frames": 1,
+      "fw": 10,
+      "fh": 16,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.52,
+      "mount": [
+        0.5,
+        0.5508
+      ]
+    },
+    {
+      "key": "tur.gw-type61a5",
+      "file": "sprites/tur.gw-type61a5.png",
+      "frames": 1,
+      "fw": 4,
+      "fh": 5,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.5333
+    },
+    {
+      "key": "u.gw-type74kai",
+      "file": "sprites/u.gw-type74kai.png",
+      "frames": 1,
+      "fw": 10,
+      "fh": 13,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.5238,
+      "mount": [
+        0.6923,
+        0.3773
+      ]
     },
     {
       "key": "prj.projectile-mortar",
@@ -7483,6 +12089,127 @@
       "teams": false,
       "stripBg": false,
       "stabilize": false
+    },
+    {
+      "key": "u.gw-type61-spg",
+      "file": "sprites/u.gw-type61-spg.png",
+      "frames": 1,
+      "fw": 10,
+      "fh": 24,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.6623
+    },
+    {
+      "key": "u.gw-missile-car",
+      "file": "sprites/u.gw-missile-car.png",
+      "frames": 1,
+      "fw": 6,
+      "fh": 10,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.4906
+    },
+    {
+      "key": "u.gw-ef-minigun-apc",
+      "file": "sprites/u.gw-ef-minigun-apc.png",
+      "frames": 1,
+      "fw": 10,
+      "fh": 15,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.5,
+      "mount": [
+        0.5,
+        0.6282
+      ]
+    },
+    {
+      "key": "tur.gw-ef-minigun-apc",
+      "file": "sprites/tur.gw-ef-minigun-apc.png",
+      "frames": 1,
+      "fw": 4,
+      "fh": 17,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.6964
+    },
+    {
+      "key": "u.gw-dash",
+      "file": "sprites/u.gw-dash.png",
+      "frames": 1,
+      "fw": 26,
+      "fh": 37,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.3409
+    },
+    {
+      "key": "u.gw-depp-rog",
+      "file": "sprites/u.gw-depp-rog.png",
+      "frames": 1,
+      "fw": 37,
+      "fh": 46,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.3673
+    },
+    {
+      "key": "u.gw-don-escargot",
+      "file": "sprites/u.gw-don-escargot.png",
+      "frames": 1,
+      "fw": 27,
+      "fh": 36,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.3113
+    },
+    {
+      "key": "u.gw-m-type-submarine",
+      "file": "sprites/u.gw-m-type-submarine.png",
+      "frames": 1,
+      "fw": 92,
+      "fh": 178,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.5243
+    },
+    {
+      "key": "u.gw-army-squad-zeon-0079",
+      "file": "sprites/u.gw-army-squad-zeon-0079.png",
+      "frames": 1,
+      "fw": 18,
+      "fh": 19,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.525
     },
     {
       "key": "u.gw-mtank",
@@ -7837,6 +12564,365 @@
       "pivotY": 0.5595
     },
     {
+      "key": "u.gw-ms-06j",
+      "file": "sprites/u.gw-ms-06j.png",
+      "frames": 4,
+      "fw": 21,
+      "fh": 36,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.4474,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-ms-06j-bazooka",
+      "file": "sprites/u.gw-ms-06j-bazooka.png",
+      "frames": 4,
+      "fw": 21,
+      "fh": 40,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.494,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-ms-06j-cn",
+      "file": "sprites/u.gw-ms-06j-cn.png",
+      "frames": 4,
+      "fw": 21,
+      "fh": 48,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.5657,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "prj.projectile-heat-rod",
+      "file": "sprites/prj.projectile-heat-rod.png",
+      "frames": 1,
+      "fw": 4,
+      "fh": 4,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "u.gw-ms-07b",
+      "file": "sprites/u.gw-ms-07b.png",
+      "frames": 4,
+      "fw": 19,
+      "fh": 28,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.2759,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "prj.anti-air-cannon-diffusion-area-a",
+      "file": "sprites/prj.anti-air-cannon-diffusion-area-a.png",
+      "frames": 1,
+      "fw": 4,
+      "fh": 5,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "u.gw-ms-06k",
+      "file": "sprites/u.gw-ms-06k.png",
+      "frames": 4,
+      "fw": 17,
+      "fh": 36,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.4474,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-ms-06k-biggun",
+      "file": "sprites/u.gw-ms-06k-biggun.png",
+      "frames": 4,
+      "fw": 18,
+      "fh": 32,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.3731,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-ms-06m",
+      "file": "sprites/u.gw-ms-06m.png",
+      "frames": 4,
+      "fw": 18,
+      "fh": 34,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.4085,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-ms-06r-1",
+      "file": "sprites/u.gw-ms-06r-1.png",
+      "frames": 4,
+      "fw": 21,
+      "fh": 36,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.4474,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-ms-06r-1-bazooka",
+      "file": "sprites/u.gw-ms-06r-1-bazooka.png",
+      "frames": 4,
+      "fw": 21,
+      "fh": 40,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.494,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "prj.projectile-beam-shot-gun-yellow",
+      "file": "sprites/prj.projectile-beam-shot-gun-yellow.png",
+      "frames": 1,
+      "fw": 4,
+      "fh": 16,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false
+    },
+    {
+      "key": "u.gw-msm-03",
+      "file": "sprites/u.gw-msm-03.png",
+      "frames": 4,
+      "fw": 29,
+      "fh": 34,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.4085,
+      "anims": {
+        "idle": [
+          0,
+          0
+        ],
+        "moving": [
+          1,
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "key": "u.gw-cui",
+      "file": "sprites/u.gw-cui.png",
+      "frames": 1,
+      "fw": 22,
+      "fh": 10,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.4419,
+      "mount": [
+        0.5,
+        0.4419
+      ]
+    },
+    {
+      "key": "tur.gw-cui",
+      "file": "sprites/tur.gw-cui.png",
+      "frames": 1,
+      "fw": 4,
+      "fh": 4,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.6471
+    },
+    {
+      "key": "u.gw-luggun",
+      "file": "sprites/u.gw-luggun.png",
+      "frames": 1,
+      "fw": 35,
+      "fh": 25,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.2273,
+      "mount": [
+        0.056,
+        0.303
+      ]
+    },
+    {
+      "key": "tur.gw-luggun",
+      "file": "sprites/tur.gw-luggun.png",
+      "frames": 1,
+      "fw": 4,
+      "fh": 4,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.75
+    },
+    {
+      "key": "tur.gw-zn-apc-with-ms",
+      "file": "sprites/tur.gw-zn-apc-with-ms.png",
+      "frames": 1,
+      "fw": 6,
+      "fh": 6,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.6538
+    },
+    {
+      "key": "u.gw-m-type-submarine-zeon",
+      "file": "sprites/u.gw-m-type-submarine-zeon.png",
+      "frames": 1,
+      "fw": 92,
+      "fh": 178,
+      "rotated": true,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "pivotX": 0.5,
+      "pivotY": 0.5243
+    },
+    {
       "key": "u.gw-factory-efsf-0079-land",
       "file": "sprites/u.gw-factory-efsf-0079-land.png",
       "frames": 1,
@@ -7939,6 +13025,19 @@
       "stabilize": false,
       "fitFootprint": false,
       "anchorY": 42
+    },
+    {
+      "key": "u.gw-institute-t1",
+      "file": "sprites/u.gw-institute-t1.png",
+      "frames": 1,
+      "fw": 65,
+      "fh": 57,
+      "rotated": false,
+      "teams": false,
+      "stripBg": false,
+      "stabilize": false,
+      "fitFootprint": false,
+      "anchorY": 33
     },
     {
       "key": "u.gw-turret-mg-a",
@@ -8148,8 +13247,16 @@
       "file": "sounds/gw-fist-1.mp3"
     },
     {
+      "key": "gw-beamsaber-1",
+      "file": "sounds/gw-beamsaber-1.mp3"
+    },
+    {
       "key": "gw-shellcannon-1",
       "file": "sounds/gw-shellcannon-1.mp3"
+    },
+    {
+      "key": "gw-detect-3",
+      "file": "sounds/gw-detect-3.mp3"
     },
     {
       "key": "gw-heathawk-1",
@@ -8162,6 +13269,14 @@
     {
       "key": "gw-throw-1",
       "file": "sounds/gw-throw-1.mp3"
+    },
+    {
+      "key": "gw-fist-2",
+      "file": "sounds/gw-fist-2.mp3"
+    },
+    {
+      "key": "gw-beamspraygun-2",
+      "file": "sounds/gw-beamspraygun-2.mp3"
     }
   ],
   "maps": [
@@ -8176,12 +13291,12 @@
         "gw.battle-v1"
       ],
       "schema": {
-        "source": "// GW battle data: what a definition or a weapon carries for the `gw.battle-v1`\n// runtime. Readers validate and return a clean copy; nothing here executes.\nexport default function () {\n  const id = 'gw.battle-v1';\n  const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);\n  const STANCES = ['land', 'air', 'aqua'];\n  const SIZES = ['large', 'small'];\n  const KINDS = ['shell', 'beam', 'cqb'];\n\n  function checker(issues) {\n    const fail = (at, message) => issues.push({ path: at, message });\n    const number = (value, at, low, high, optional = true) => {\n      if (value === undefined && optional) return;\n      if (typeof value !== 'number' || !Number.isFinite(value) || value < low || value > high) fail(at, `expected a number in ${low}–${high}`);\n    };\n    const record = (value, at, keys, low, high) => {\n      if (value === undefined) return;\n      if (!object(value)) return fail(at, 'expected an object');\n      for (const k of Object.keys(value)) {\n        if (!keys.includes(k)) fail(at + '.' + k, 'unknown field');\n        else number(value[k], at + '.' + k, low, high);\n      }\n    };\n    const only = (raw, path, keys) => {\n      for (const k of Object.keys(raw)) if (!keys.includes(k)) fail(path + '.' + k, 'unknown GW battle field');\n    };\n    return { fail, number, record, only };\n  }\n\n  function definition(raw, path, issues) {\n    const { fail, number, record, only } = checker(issues);\n    if (!object(raw)) { fail(path, 'expected a GW battle configuration'); return; }\n    only(raw, path, ['level', 'def', 'plus', 'stance', 'size', 'en', 'mp', 'building', 'supply', 'upkeep', 'hq']);\n    record(raw.level, path + '.level', ['shoot', 'cqb', 'accuracy', 'reaction'], 0, 10000);\n    record(raw.def, path + '.def', ['beam', 'shell', 'cqb', 'dp'], -1000, 100);\n    record(raw.plus, path + '.plus', ['beam', 'shell', 'cqb', 'dp'], -100000, 1000000);\n    if (raw.stance !== undefined && !STANCES.includes(raw.stance)) fail(path + '.stance', 'expected land, air or aqua');\n    if (raw.size !== undefined && !SIZES.includes(raw.size)) fail(path + '.size', 'expected large or small');\n    record(raw.en, path + '.en', ['max', 'move'], 0, 1000000);\n    number(raw.mp, path + '.mp', 0, 1000);\n    if (raw.building !== undefined && typeof raw.building !== 'boolean') fail(path + '.building', 'expected a boolean');\n    if (raw.hq !== undefined && typeof raw.hq !== 'boolean') fail(path + '.hq', 'expected a boolean');\n    record(raw.supply, path + '.supply', ['range', 'hp', 'en'], 0, 100000);\n    number(raw.upkeep, path + '.upkeep', 0, 100000);\n    return structuredClone(raw);\n  }\n\n  function weapon(raw, path, issues) {\n    const { fail, number, record, only } = checker(issues);\n    if (!object(raw)) { fail(path, 'expected a GW weapon payload'); return; }\n    only(raw, path, ['kind', 'shell', 'shellAp', 'beam', 'beamAp', 'cqb', 'cqbAp', 'cqbShell', 'cqbBeam', 'dp', 'accuracy',\n      'cantDodge', 'anti', 'size', 'blast', 'en', 'enShot', 'once']);\n    if (!KINDS.includes(raw.kind)) fail(path + '.kind', 'expected shell, beam or cqb');\n    for (const k of ['shell', 'shellAp', 'beam', 'beamAp', 'cqb', 'cqbAp', 'cqbShell', 'cqbBeam', 'dp', 'blast', 'en', 'enShot'])\n      number(raw[k], path + '.' + k, 0, 10000000);\n    number(raw.accuracy, path + '.accuracy', 0, 10000, false);\n    for (const k of ['cantDodge', 'once']) if (raw[k] !== undefined && typeof raw[k] !== 'boolean') fail(path + '.' + k, 'expected a boolean');\n    record(raw.anti, path + '.anti', ['land', 'air', 'aqua', 'building'], 0, 100);\n    record(raw.size, path + '.size', ['large', 'small', 'largeAccuracy', 'smallAccuracy'], 0, 100);\n    return structuredClone(raw);\n  }\n\n  return { capabilities: [{ id, definition, weapon }] };\n}\n",
-        "sha256": "a4b7f67da3778a444a324303f416563b62370e532ea55700779d60ba053f24a9"
+        "source": "// GW battle data: what a definition or a weapon carries for the `gw.battle-v1`\n// runtime. Readers validate and return a clean copy; nothing here executes.\nexport default function () {\n  const id = 'gw.battle-v1';\n  const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);\n  const STANCES = ['land', 'air', 'aqua'];\n  const SIZES = ['large', 'small'];\n  const KINDS = ['shell', 'beam', 'cqb'];\n\n  function checker(issues) {\n    const fail = (at, message) => issues.push({ path: at, message });\n    const number = (value, at, low, high, optional = true) => {\n      if (value === undefined && optional) return;\n      if (typeof value !== 'number' || !Number.isFinite(value) || value < low || value > high) fail(at, `expected a number in ${low}–${high}`);\n    };\n    const record = (value, at, keys, low, high) => {\n      if (value === undefined) return;\n      if (!object(value)) return fail(at, 'expected an object');\n      for (const k of Object.keys(value)) {\n        if (!keys.includes(k)) fail(at + '.' + k, 'unknown field');\n        else number(value[k], at + '.' + k, low, high);\n      }\n    };\n    const only = (raw, path, keys) => {\n      for (const k of Object.keys(raw)) if (!keys.includes(k)) fail(path + '.' + k, 'unknown GW battle field');\n    };\n    return { fail, number, record, only };\n  }\n\n  function definition(raw, path, issues) {\n    const { fail, number, record, only } = checker(issues);\n    if (!object(raw)) { fail(path, 'expected a GW battle configuration'); return; }\n    only(raw, path, ['level', 'def', 'plus', 'stance', 'size', 'en', 'mp', 'building', 'supply', 'upkeep', 'hq', 'techPoint', 'research']);\n    record(raw.level, path + '.level', ['shoot', 'cqb', 'accuracy', 'reaction'], 0, 10000);\n    record(raw.def, path + '.def', ['beam', 'shell', 'cqb', 'dp'], -1000, 100);\n    record(raw.plus, path + '.plus', ['beam', 'shell', 'cqb', 'dp'], -100000, 1000000);\n    if (raw.stance !== undefined && !STANCES.includes(raw.stance)) fail(path + '.stance', 'expected land, air or aqua');\n    if (raw.size !== undefined && !SIZES.includes(raw.size)) fail(path + '.size', 'expected large or small');\n    record(raw.en, path + '.en', ['max', 'move'], 0, 1000000);\n    number(raw.mp, path + '.mp', 0, 1000);\n    if (raw.building !== undefined && typeof raw.building !== 'boolean') fail(path + '.building', 'expected a boolean');\n    if (raw.hq !== undefined && typeof raw.hq !== 'boolean') fail(path + '.hq', 'expected a boolean');\n    record(raw.supply, path + '.supply', ['range', 'hp', 'en'], 0, 100000);\n    number(raw.upkeep, path + '.upkeep', 0, 100000);\n    // TechPoint: what it earns a second, and on a lab what each node it researches asks\n    number(raw.techPoint, path + '.techPoint', 0, 1000);\n    if (raw.research !== undefined) {\n      if (!object(raw.research)) fail(path + '.research', 'expected node id → TechPoint');\n      else for (const [k, v] of Object.entries(raw.research)) {\n        if (!/^[a-z0-9][a-z0-9_-]{1,39}$/.test(k)) fail(path + '.research.' + k, 'expected a research node id');\n        number(v, path + '.research.' + k, 0, 10000000, false);\n      }\n    }\n    return structuredClone(raw);\n  }\n\n  function weapon(raw, path, issues) {\n    const { fail, number, record, only } = checker(issues);\n    if (!object(raw)) { fail(path, 'expected a GW weapon payload'); return; }\n    only(raw, path, ['kind', 'shell', 'shellAp', 'beam', 'beamAp', 'cqb', 'cqbAp', 'cqbShell', 'cqbBeam', 'dp', 'accuracy',\n      'cantDodge', 'anti', 'size', 'blast', 'en', 'enShot', 'once']);\n    if (!KINDS.includes(raw.kind)) fail(path + '.kind', 'expected shell, beam or cqb');\n    for (const k of ['shell', 'shellAp', 'beam', 'beamAp', 'cqb', 'cqbAp', 'cqbShell', 'cqbBeam', 'dp', 'blast', 'en', 'enShot'])\n      number(raw[k], path + '.' + k, 0, 10000000);\n    number(raw.accuracy, path + '.accuracy', 0, 10000, false);\n    for (const k of ['cantDodge', 'once']) if (raw[k] !== undefined && typeof raw[k] !== 'boolean') fail(path + '.' + k, 'expected a boolean');\n    record(raw.anti, path + '.anti', ['land', 'air', 'aqua', 'building'], 0, 100);\n    record(raw.size, path + '.size', ['large', 'small', 'largeAccuracy', 'smallAccuracy'], 0, 100);\n    return structuredClone(raw);\n  }\n\n  return { capabilities: [{ id, definition, weapon }] };\n}\n",
+        "sha256": "f94e8f1d0d16274a1424d7ce3f03cd7371360c5d1d884306870d2478ea24cd0e"
       },
       "runtime": {
-        "source": "// GW BattleUniverse's battle rules, as the source's damage checkers, battle\n// framework and HQ resolve them. Every behavior here belongs to this mod; the\n// factory receives only the public host SDK.\nexport default function (sdk) {\n  const ID = 'gw.battle-v1';\n  // Seconds a unit counts as in battle after it attacks or is hit (`inBattleTimer`).\n  const BATTLE = 5;\n  // A run of hits makes the next dodge likelier; ten quiet seconds clear it.\n  const DODGE_CLEAR = 10;\n  // RW px a blast's falloff runs past its radius, at this mod's 0.75 world px per RW px.\n  const BLAST_EDGE = 40 * 0.75;\n  // GW resolves the hit itself, so the armour matrix cell is always one.\n  const ONE = Object.freeze({ light: 1, medium: 1, heavy: 1, structure: 1, ship: 1, sub: 1, air: 1, warhead: 1 });\n  const EN = ['EN', '能量', 'EN'];\n\n  function create(host) {\n    const game = host.game;\n    const states = new Map();\n    let clock = 0;\n    const cfg = e => host.config(sdk.getDef(e.defId));\n    const live = e => e && !e.dead;\n    const defOfGun = gun => {\n      const cut = gun.indexOf('/');\n      if (cut < 0) return undefined;\n      try { return sdk.getDef(gun.slice(0, cut)); } catch { return undefined; }\n    };\n    const weaponOfGun = gun => {\n      const def = defOfGun(gun);\n      const id = gun.slice(gun.indexOf('/') + 1);\n      return def?.weapons.find(w => w.id === id);\n    };\n    const state = e => {\n      let s = states.get(e.id);\n      if (!s) {\n        const c = cfg(e);\n        s = { en: c?.en?.max ?? 0, dodge: 0, dodgeUntil: 0, battle: -1e9, x: e.x, y: e.y, spent: [] };\n        states.set(e.id, s);\n      }\n      return s;\n    };\n    const engage = e => { if (live(e) && cfg(e) && sdk.getDef(e.defId).kind === 'unit') state(e).battle = game.st.time; };\n    const inBattle = (e, s) => game.st.time - s.battle < BATTLE;\n    const normAngle = a => Math.atan2(Math.sin(a), Math.cos(a));\n\n    // DamageChecker: the round connects, grazes or misses, then each payload\n    // part is reduced by the target's flat and percentage defence of its kind.\n    function resolve(st, t, tc, wc, sc, from, src) {\n      const level = sc?.level ?? {};\n      const impact = host.currentImpact;\n      const primary = !impact || !impact.direct || impact.direct === t;\n      const accuracy = (level.accuracy ?? 100) / 100 * (wc.accuracy ?? 100) / 100 * (primary ? 1 : 0.75);\n      const sizeAcc = tc.size === 'large' ? wc.size?.largeAccuracy ?? 1 : tc.size === 'small' ? wc.size?.smallAccuracy ?? 1 : 1;\n      const lv = ((wc.kind === 'cqb' ? level.cqb : level.shoot) ?? 100) / 100;\n      let falloff = 1;\n      if (wc.blast && impact?.projectile) {\n        const d = Math.hypot(impact.projectile.x - t.x, impact.projectile.y - t.y);\n        falloff = d > wc.blast + BLAST_EDGE ? 0.75 : Math.max(1 - d / (wc.blast + BLAST_EDGE), 0.75);\n      }\n      const def = tc.def ?? {};\n      const pct = k => 1 - (def[k] ?? 0) / 100;\n      const ap = k => 1 - (def[k] ?? 0) / 400;\n      if (tc.building) {\n        const k = lv * falloff;\n        let dmg = 0;\n        if (wc.kind === 'shell') dmg = (wc.shell ?? 0) * k * pct('shell') + (wc.shellAp ?? 0) * k * ap('shell');\n        else if (wc.kind === 'beam') dmg = (wc.beam ?? 0) * k * pct('beam') + (wc.beamAp ?? 0) * k * ap('beam');\n        else dmg = (wc.cqb ?? 0) * k * pct('cqb') + (wc.cqbAp ?? 0) * k * ap('cqb') + (wc.cqbBeam ?? 0) * k * pct('beam') + (wc.cqbShell ?? 0) * k * pct('shell');\n        return Math.max(0, dmg) * st.rng.range(0.75, 1) * (wc.anti?.building ?? 1);\n      }\n      const s = state(t);\n      if (s.dodgeUntil < st.time) s.dodge = 0;\n      let back = false;\n      const ox = from?.x ?? src?.x, oy = from?.y ?? src?.y;\n      if (ox !== undefined && oy !== undefined) back = Math.abs(normAngle(Math.atan2(oy - t.y, ox - t.x) - t.angle)) > Math.PI / 2;\n      const reaction = (tc.level?.reaction ?? 100) / 100;\n      if (!(accuracy * (back ? 1.5 : 1) > reaction * st.rng.range(0.35, 1.35) * (1 + s.dodge * 0.03))) {\n        s.dodge = 0;\n        return null;\n      }\n      s.dodge = Math.min(9, s.dodge + 1);\n      s.dodgeUntil = st.time + DODGE_CLEAR;\n      const graze = reaction * (back ? 0.75 : 1) * st.rng.range(0.25, 0.75) >= accuracy * sizeAcc;\n      const tile = tc.stance === 'air' ? wc.anti?.air ?? 1 : tc.stance === 'aqua' ? wc.anti?.aqua ?? 1 : wc.anti?.land ?? 1;\n      const size = tc.size === 'large' ? wc.size?.large ?? 1 : tc.size === 'small' ? wc.size?.small ?? 1 : 1;\n      const k = lv * falloff * tile * size;\n      const plus = tc.plus ?? {};\n      let dmg;\n      if (wc.kind === 'shell') dmg = ((wc.shell ?? 0) * k - (plus.shell ?? 0)) * pct('shell') + (wc.shellAp ?? 0) * k * ap('shell');\n      else if (wc.kind === 'beam') dmg = ((wc.beam ?? 0) * k - (plus.beam ?? 0)) * pct('beam') + (wc.beamAp ?? 0) * k * ap('beam');\n      else {\n        // A melee blow is three parts, each against the melee bonus: the zero\n        // parts subtract it too, as the source's formula does.\n        const p = plus.cqb ?? 0;\n        dmg = ((wc.cqb ?? 0) * k - p) * pct('cqb') + ((wc.cqbBeam ?? 0) * k - p) * pct('beam') + ((wc.cqbShell ?? 0) * k - p) * pct('shell')\n          + (wc.cqbAp ?? 0) * k * ap('cqb');\n      }\n      if (back && !graze) dmg *= 1.25;\n      if (graze) dmg *= wc.cantDodge ? 0.7 : 0.35;\n      return Math.max(0, dmg) * st.rng.range(0.75, 1);\n    }\n\n    function supply(st) {\n      const units = host.participants().filter(e => live(e) && !e.inside && !e.site && sdk.getDef(e.defId).kind === 'unit');\n      for (const b of host.participants()) {\n        const c = cfg(b);\n        if (!c?.supply || !live(b) || b.site) continue;\n        const team = st.players[b.owner]?.team;\n        for (const u of units) {\n          if (st.players[u.owner]?.team !== team) continue;\n          if (Math.hypot(u.x - b.x, u.y - b.y) > c.supply.range) continue;\n          const uc = cfg(u), s = state(u);\n          if (uc.en?.max) s.en = Math.min(uc.en.max, s.en + uc.en.max * (c.supply.en ?? 0));\n          if (!inBattle(u, s) && c.supply.hp) {\n            const top = sdk.maxHp(u);\n            if (u.hp < top) u.hp = Math.min(top, u.hp + top * c.supply.hp);\n          }\n        }\n      }\n    }\n\n    // HQ_Faction: a human side pays for every unit's MP and its buildings'\n    // upkeep each second; a computer side earns its income twice and pays none.\n    function economy(st) {\n      const cost = new Map(), bonus = new Map();\n      for (const e of host.participants()) {\n        if (!live(e) || e.site) continue;\n        const c = cfg(e), d = sdk.getDef(e.defId);\n        if (!c) continue;\n        if (d.kind === 'unit') cost.set(e.owner, (cost.get(e.owner) ?? 0) + (c.mp ?? 0));\n        else {\n          cost.set(e.owner, (cost.get(e.owner) ?? 0) + (c.upkeep ?? 0));\n          if (d.metalRate) bonus.set(e.owner, (bonus.get(e.owner) ?? 0) + d.metalRate);\n        }\n      }\n      st.players.forEach((p, i) => {\n        if (!p || !p.alive) return;\n        if (p.isHuman) p.metal = Math.max(0, p.metal - (cost.get(i) ?? 0));\n        else p.metal += bonus.get(i) ?? 0;\n      });\n    }\n\n    return {\n      id: ID,\n      wrapDamage(next) {\n        return (st, t, raw, mult, owner, sourceId = 0, gun = '', from, hit) => {\n          const tc = live(t) ? cfg(t) : undefined;\n          const weapon = gun ? weaponOfGun(gun) : undefined;\n          const wc = weapon ? host.config(weapon) : undefined;\n          if (!tc || !wc) return next(st, t, raw, mult, owner, sourceId, gun, from, hit);\n          const src = st.ents.get(sourceId);\n          const sdef = src ? sdk.getDef(src.defId) : defOfGun(gun);\n          engage(t);\n          engage(src);\n          const dmg = resolve(st, t, tc, wc, sdef ? host.config(sdef) : undefined, from, src);\n          if (dmg === null) return;\n          return next(st, t, dmg, ONE, owner, sourceId, gun, from, hit);\n        };\n      },\n      canFire(entity, def, weapon) {\n        const c = cfg(entity), wc = host.config(weapon);\n        if (!c || !wc) return true;\n        const s = state(entity);\n        // A once-a-life weapon (the Zaku II C's warhead) never fires again.\n        if (wc.once && s.spent.includes(weapon.id)) return false;\n        if (!c.en?.max) return true;\n        // A magazine turret pays per round and must hold the whole price; a\n        // triggered weapon needs only some EN left to start its sequence.\n        if (wc.enShot) return s.en >= wc.enShot;\n        if (wc.en) return s.en > 0;\n        return true;\n      },\n      spendRound(entity, def, index) {\n        const c = cfg(entity), w = def.weapons[index], wc = w && host.config(w);\n        if (!c || !wc) return;\n        const s = state(entity);\n        s.battle = game.st.time;\n        if (wc.once && !s.spent.includes(w.id)) s.spent.push(w.id);\n        if (c.en?.max) s.en = Math.max(0, s.en - (wc.en ?? 0) - (wc.enShot ?? 0) * (w.burst ?? 1));\n      },\n      afterStep(dt) {\n        const st = game.st;\n        for (const e of host.participants()) {\n          if (!live(e)) continue;\n          const c = cfg(e);\n          if (!c?.en?.max) continue;\n          const s = state(e);\n          const moved = Math.hypot(e.x - s.x, e.y - s.y) / Math.max(dt, 1e-6);\n          // Moving drains EN (`Check_Move_EN`), at a quarter RW px a tick or more.\n          if (!e.inside && moved > 0.25 * 60 * 0.75) s.en = Math.max(0, s.en - (c.en.move ?? 0) * dt);\n          s.x = e.x; s.y = e.y;\n        }\n        clock += dt;\n        while (clock >= 1) {\n          clock -= 1;\n          supply(st);\n          economy(st);\n          for (const id of [...states.keys()]) if (!live(st.ents.get(id))) states.delete(id);\n        }\n      },\n      inspect(entity) {\n        const c = cfg(entity);\n        if (!c?.en?.max) return [];\n        const s = state(entity);\n        return [{ id: 'en', label: EN, value: Math.round(s.en) + ' / ' + Math.round(c.en.max), fraction: s.en / c.en.max,\n          tone: s.en <= 0 ? 'danger' : s.en < c.en.max * 0.25 ? 'warning' : 'normal' }];\n      },\n      snapshot(view) {\n        const entities = {};\n        for (const [id, s] of states) {\n          const e = game.st.ents.get(id);\n          if (!live(e)) continue;\n          if (view?.player !== undefined && e.owner !== view.player) continue;\n          entities[id] = { ...s, spent: [...s.spent] };\n        }\n        return { version: 1, clock, entities };\n      },\n      restore(value) {\n        if (!value || value.version !== 1 || typeof value.entities !== 'object' || !Number.isFinite(value.clock)) throw Error('Invalid GW battle state');\n        const next = new Map();\n        for (const [id, s] of Object.entries(value.entities)) {\n          const e = game.st.ents.get(+id);\n          if (!e || !cfg(e) || !s || ![s.en, s.dodge, s.dodgeUntil, s.battle, s.x, s.y].every(Number.isFinite) || s.en < 0 || s.dodge < 0 || s.dodge > 9\n            || !Array.isArray(s.spent) || s.spent.length > 8 || s.spent.some(w => !sdk.getDef(e.defId).weapons.some(x => x.id === w)))\n            throw Error('Invalid GW battle entity ' + id);\n          next.set(+id, { en: s.en, dodge: s.dodge, dodgeUntil: s.dodgeUntil, battle: s.battle, x: s.x, y: s.y, spent: [...s.spent] });\n        }\n        states.clear();\n        for (const [id, s] of next) states.set(id, s);\n        clock = value.clock;\n      },\n      dispose() { states.clear(); },\n    };\n  }\n\n  return { capabilities: [{ id: ID, create }] };\n}\n",
-        "sha256": "289a7aec53e0624c1595575d4174f220e27bb8f4dcccde4ce78e0352772fd0e1"
+        "source": "// GW BattleUniverse's battle rules, as the source's damage checkers, battle\n// framework and HQ resolve them. Every behavior here belongs to this mod; the\n// factory receives only the public host SDK.\nexport default function (sdk) {\n  const ID = 'gw.battle-v1';\n  // Seconds a unit counts as in battle after it attacks or is hit (`inBattleTimer`).\n  const BATTLE = 5;\n  // A run of hits makes the next dodge likelier; ten quiet seconds clear it.\n  const DODGE_CLEAR = 10;\n  // RW px a blast's falloff runs past its radius, at this mod's 0.75 world px per RW px.\n  const BLAST_EDGE = 40 * 0.75;\n  // GW resolves the hit itself, so the armour matrix cell is always one.\n  const ONE = Object.freeze({ light: 1, medium: 1, heavy: 1, structure: 1, ship: 1, sub: 1, air: 1, warhead: 1 });\n  const EN = ['EN', '能量', 'EN'];\n  const TECH_POINT = ['TechPoint', '科技', '테크 포인트'];\n  // A computer side earns three quarters of the TechPoint (`Gen_TechPoint`).\n  const AI_TECH = 0.75;\n\n  function create(host) {\n    const game = host.game;\n    const states = new Map();\n    // TechPoint in hand, by owner; the node whose TechPoint a lab has taken, by lab\n    const techPoint = new Map(), paid = new Map();\n    let clock = 0;\n    const cfg = e => host.config(sdk.getDef(e.defId));\n    const live = e => e && !e.dead;\n    const defOfGun = gun => {\n      const cut = gun.indexOf('/');\n      if (cut < 0) return undefined;\n      try { return sdk.getDef(gun.slice(0, cut)); } catch { return undefined; }\n    };\n    const weaponOfGun = gun => {\n      const def = defOfGun(gun);\n      const id = gun.slice(gun.indexOf('/') + 1);\n      return def?.weapons.find(w => w.id === id);\n    };\n    const state = e => {\n      let s = states.get(e.id);\n      if (!s) {\n        const c = cfg(e);\n        s = { en: c?.en?.max ?? 0, dodge: 0, dodgeUntil: 0, battle: -1e9, x: e.x, y: e.y, spent: [] };\n        states.set(e.id, s);\n      }\n      return s;\n    };\n    const engage = e => { if (live(e) && cfg(e) && sdk.getDef(e.defId).kind === 'unit') state(e).battle = game.st.time; };\n    const inBattle = (e, s) => game.st.time - s.battle < BATTLE;\n    const normAngle = a => Math.atan2(Math.sin(a), Math.cos(a));\n\n    // DamageChecker: the round connects, grazes or misses, then each payload\n    // part is reduced by the target's flat and percentage defence of its kind.\n    function resolve(st, t, tc, wc, sc, from, src) {\n      const level = sc?.level ?? {};\n      const impact = host.currentImpact;\n      const primary = !impact || !impact.direct || impact.direct === t;\n      const accuracy = (level.accuracy ?? 100) / 100 * (wc.accuracy ?? 100) / 100 * (primary ? 1 : 0.75);\n      const sizeAcc = tc.size === 'large' ? wc.size?.largeAccuracy ?? 1 : tc.size === 'small' ? wc.size?.smallAccuracy ?? 1 : 1;\n      const lv = ((wc.kind === 'cqb' ? level.cqb : level.shoot) ?? 100) / 100;\n      let falloff = 1;\n      if (wc.blast && impact?.projectile) {\n        const d = Math.hypot(impact.projectile.x - t.x, impact.projectile.y - t.y);\n        falloff = d > wc.blast + BLAST_EDGE ? 0.75 : Math.max(1 - d / (wc.blast + BLAST_EDGE), 0.75);\n      }\n      const def = tc.def ?? {};\n      const pct = k => 1 - (def[k] ?? 0) / 100;\n      const ap = k => 1 - (def[k] ?? 0) / 400;\n      if (tc.building) {\n        const k = lv * falloff;\n        let dmg = 0;\n        if (wc.kind === 'shell') dmg = (wc.shell ?? 0) * k * pct('shell') + (wc.shellAp ?? 0) * k * ap('shell');\n        else if (wc.kind === 'beam') dmg = (wc.beam ?? 0) * k * pct('beam') + (wc.beamAp ?? 0) * k * ap('beam');\n        else dmg = (wc.cqb ?? 0) * k * pct('cqb') + (wc.cqbAp ?? 0) * k * ap('cqb') + (wc.cqbBeam ?? 0) * k * pct('beam') + (wc.cqbShell ?? 0) * k * pct('shell');\n        return Math.max(0, dmg) * st.rng.range(0.75, 1) * (wc.anti?.building ?? 1);\n      }\n      const s = state(t);\n      if (s.dodgeUntil < st.time) s.dodge = 0;\n      let back = false;\n      const ox = from?.x ?? src?.x, oy = from?.y ?? src?.y;\n      if (ox !== undefined && oy !== undefined) back = Math.abs(normAngle(Math.atan2(oy - t.y, ox - t.x) - t.angle)) > Math.PI / 2;\n      const reaction = (tc.level?.reaction ?? 100) / 100;\n      if (!(accuracy * (back ? 1.5 : 1) > reaction * st.rng.range(0.35, 1.35) * (1 + s.dodge * 0.03))) {\n        s.dodge = 0;\n        return null;\n      }\n      s.dodge = Math.min(9, s.dodge + 1);\n      s.dodgeUntil = st.time + DODGE_CLEAR;\n      const graze = reaction * (back ? 0.75 : 1) * st.rng.range(0.25, 0.75) >= accuracy * sizeAcc;\n      const tile = tc.stance === 'air' ? wc.anti?.air ?? 1 : tc.stance === 'aqua' ? wc.anti?.aqua ?? 1 : wc.anti?.land ?? 1;\n      const size = tc.size === 'large' ? wc.size?.large ?? 1 : tc.size === 'small' ? wc.size?.small ?? 1 : 1;\n      const k = lv * falloff * tile * size;\n      const plus = tc.plus ?? {};\n      let dmg;\n      if (wc.kind === 'shell') dmg = ((wc.shell ?? 0) * k - (plus.shell ?? 0)) * pct('shell') + (wc.shellAp ?? 0) * k * ap('shell');\n      else if (wc.kind === 'beam') dmg = ((wc.beam ?? 0) * k - (plus.beam ?? 0)) * pct('beam') + (wc.beamAp ?? 0) * k * ap('beam');\n      else {\n        // A melee blow is three parts, each against the melee bonus: the zero\n        // parts subtract it too, as the source's formula does.\n        const p = plus.cqb ?? 0;\n        dmg = ((wc.cqb ?? 0) * k - p) * pct('cqb') + ((wc.cqbBeam ?? 0) * k - p) * pct('beam') + ((wc.cqbShell ?? 0) * k - p) * pct('shell')\n          + (wc.cqbAp ?? 0) * k * ap('cqb');\n      }\n      if (back && !graze) dmg *= 1.25;\n      if (graze) dmg *= wc.cantDodge ? 0.7 : 0.35;\n      return Math.max(0, dmg) * st.rng.range(0.75, 1);\n    }\n\n    function supply(st) {\n      const units = host.participants().filter(e => live(e) && !e.inside && !e.site && sdk.getDef(e.defId).kind === 'unit');\n      for (const b of host.participants()) {\n        const c = cfg(b);\n        if (!c?.supply || !live(b) || b.site) continue;\n        const team = st.players[b.owner]?.team;\n        for (const u of units) {\n          if (st.players[u.owner]?.team !== team) continue;\n          if (Math.hypot(u.x - b.x, u.y - b.y) > c.supply.range) continue;\n          const uc = cfg(u), s = state(u);\n          if (uc.en?.max) s.en = Math.min(uc.en.max, s.en + uc.en.max * (c.supply.en ?? 0));\n          if (!inBattle(u, s) && c.supply.hp) {\n            const top = sdk.maxHp(u);\n            if (u.hp < top) u.hp = Math.min(top, u.hp + top * c.supply.hp);\n          }\n        }\n      }\n    }\n\n    // HQ_Faction: a human side pays for every unit's MP and its buildings'\n    // upkeep each second; a computer side earns its income twice and pays none.\n    // Headquarters and Institutes earn TechPoint, a computer side's at 0.75.\n    function economy(st) {\n      const cost = new Map(), bonus = new Map(), tech = new Map();\n      for (const e of host.participants()) {\n        if (!live(e) || e.site) continue;\n        const c = cfg(e), d = sdk.getDef(e.defId);\n        if (!c) continue;\n        if (d.kind === 'unit') cost.set(e.owner, (cost.get(e.owner) ?? 0) + (c.mp ?? 0));\n        else {\n          cost.set(e.owner, (cost.get(e.owner) ?? 0) + (c.upkeep ?? 0));\n          if (d.metalRate) bonus.set(e.owner, (bonus.get(e.owner) ?? 0) + d.metalRate);\n          if (c.techPoint) tech.set(e.owner, (tech.get(e.owner) ?? 0) + c.techPoint);\n        }\n      }\n      st.players.forEach((p, i) => {\n        if (!p || !p.alive) return;\n        if (p.isHuman) p.metal = Math.max(0, p.metal - (cost.get(i) ?? 0));\n        else p.metal += bonus.get(i) ?? 0;\n        if (tech.has(i)) techPoint.set(i, (techPoint.get(i) ?? 0) + tech.get(i) * (p.isHuman ? 1 : AI_TECH));\n      });\n    }\n\n    // What the node at the head of a lab's queue still asks in TechPoint: none\n    // once the lab has taken it.\n    const asks = (e, c) => {\n      const head = e.research?.queue[0];\n      return head === undefined || paid.get(e.id) === head ? 0 : c.research?.[head] ?? 0;\n    };\n\n    return {\n      id: ID,\n      // A plan asks TechPoint besides its Money and Resource. The lab takes it\n      // when the plan comes to the head of its queue, and until there is\n      // enough the research waits, unworked and unbilled, while the lab's\n      // production and guns go on. A plan taken off the queue unfinished\n      // gives its TechPoint back.\n      wrapBuildingStep(next) {\n        return (e, def, dt) => {\n          const r = e.research, c = cfg(e);\n          if (!r || !c?.research) return next(e, def, dt);\n          const took = paid.get(e.id);\n          if (took !== undefined && took !== r.queue[0]) {\n            if (!game.st.players[e.owner]?.tech?.includes(took)) techPoint.set(e.owner, (techPoint.get(e.owner) ?? 0) + (c.research[took] ?? 0));\n            paid.delete(e.id);\n          }\n          if (r.queue.length === 0) return next(e, def, dt);\n          const ask = asks(e, c);\n          if (ask > (techPoint.get(e.owner) ?? 0)) {\n            e.research = undefined;\n            try { next(e, def, dt); } finally { e.research = r; }\n            return;\n          }\n          if (paid.get(e.id) !== r.queue[0]) {\n            techPoint.set(e.owner, (techPoint.get(e.owner) ?? 0) - ask);\n            paid.set(e.id, r.queue[0]);\n          }\n          next(e, def, dt);\n        };\n      },\n      wrapDamage(next) {\n        return (st, t, raw, mult, owner, sourceId = 0, gun = '', from, hit) => {\n          const tc = live(t) ? cfg(t) : undefined;\n          const weapon = gun ? weaponOfGun(gun) : undefined;\n          const wc = weapon ? host.config(weapon) : undefined;\n          if (!tc || !wc) return next(st, t, raw, mult, owner, sourceId, gun, from, hit);\n          const src = st.ents.get(sourceId);\n          const sdef = src ? sdk.getDef(src.defId) : defOfGun(gun);\n          engage(t);\n          engage(src);\n          const dmg = resolve(st, t, tc, wc, sdef ? host.config(sdef) : undefined, from, src);\n          if (dmg === null) return;\n          return next(st, t, dmg, ONE, owner, sourceId, gun, from, hit);\n        };\n      },\n      canFire(entity, def, weapon) {\n        const c = cfg(entity), wc = host.config(weapon);\n        if (!c || !wc) return true;\n        const s = state(entity);\n        // A once-a-life weapon (the Zaku II C's warhead) never fires again.\n        if (wc.once && s.spent.includes(weapon.id)) return false;\n        if (!c.en?.max) return true;\n        // A magazine turret pays per round and must hold the whole price; a\n        // triggered weapon needs only some EN left to start its sequence.\n        if (wc.enShot) return s.en >= wc.enShot;\n        if (wc.en) return s.en > 0;\n        return true;\n      },\n      spendRound(entity, def, index) {\n        const c = cfg(entity), w = def.weapons[index], wc = w && host.config(w);\n        if (!c || !wc) return;\n        const s = state(entity);\n        s.battle = game.st.time;\n        if (wc.once && !s.spent.includes(w.id)) s.spent.push(w.id);\n        if (c.en?.max) s.en = Math.max(0, s.en - (wc.en ?? 0) - (wc.enShot ?? 0) * (w.burst ?? 1));\n      },\n      afterStep(dt) {\n        const st = game.st;\n        for (const e of host.participants()) {\n          if (!live(e)) continue;\n          const c = cfg(e);\n          if (!c?.en?.max) continue;\n          const s = state(e);\n          const moved = Math.hypot(e.x - s.x, e.y - s.y) / Math.max(dt, 1e-6);\n          // Moving drains EN (`Check_Move_EN`), at a quarter RW px a tick or more.\n          if (!e.inside && moved > 0.25 * 60 * 0.75) s.en = Math.max(0, s.en - (c.en.move ?? 0) * dt);\n          s.x = e.x; s.y = e.y;\n        }\n        clock += dt;\n        while (clock >= 1) {\n          clock -= 1;\n          supply(st);\n          economy(st);\n          for (const id of [...states.keys()]) if (!live(st.ents.get(id))) states.delete(id);\n          for (const id of [...paid.keys()]) if (!live(st.ents.get(id))) paid.delete(id);\n        }\n      },\n      inspect(entity, privateView) {\n        const c = cfg(entity);\n        const rows = [];\n        if (c?.en?.max) {\n          const s = state(entity);\n          rows.push({ id: 'en', label: EN, value: Math.round(s.en) + ' / ' + Math.round(c.en.max), fraction: s.en / c.en.max,\n            tone: s.en <= 0 ? 'danger' : s.en < c.en.max * 0.25 ? 'warning' : 'normal' });\n        }\n        // the owner's TechPoint, and on a waiting lab what its plan asks\n        if (privateView && (c?.techPoint || c?.research)) {\n          const have = techPoint.get(entity.owner) ?? 0, ask = asks(entity, c);\n          rows.push(ask > have\n            ? { id: 'techPoint', label: TECH_POINT, value: Math.floor(have) + ' / ' + Math.round(ask), fraction: have / ask, tone: 'warning' }\n            : { id: 'techPoint', label: TECH_POINT, value: Math.floor(have) });\n        }\n        return rows;\n      },\n      snapshot(view) {\n        const entities = {};\n        for (const [id, s] of states) {\n          const e = game.st.ents.get(id);\n          if (!live(e)) continue;\n          if (view?.player !== undefined && e.owner !== view.player) continue;\n          entities[id] = { ...s, spent: [...s.spent] };\n        }\n        const tech = {}, labs = {};\n        for (const [i, v] of techPoint) if (view?.player === undefined || view.player === i) tech[i] = v;\n        for (const [id, node] of paid) {\n          const e = game.st.ents.get(id);\n          if (live(e) && (view?.player === undefined || e.owner === view.player)) labs[id] = node;\n        }\n        return { version: 2, clock, entities, techPoint: tech, paid: labs };\n      },\n      restore(value) {\n        if (!value || (value.version !== 1 && value.version !== 2) || typeof value.entities !== 'object' || !Number.isFinite(value.clock)) throw Error('Invalid GW battle state');\n        const tech = new Map(), labs = new Map();\n        for (const [i, v] of Object.entries(value.techPoint ?? {})) {\n          if (!game.st.players[+i] || !Number.isFinite(v) || v < 0) throw Error('Invalid GW TechPoint ' + i);\n          tech.set(+i, v);\n        }\n        for (const [id, node] of Object.entries(value.paid ?? {})) {\n          const e = game.st.ents.get(+id);\n          if (!e?.research || typeof node !== 'string' || !(cfg(e)?.research && node in cfg(e).research)) throw Error('Invalid GW research ' + id);\n          labs.set(+id, node);\n        }\n        const next = new Map();\n        for (const [id, s] of Object.entries(value.entities)) {\n          const e = game.st.ents.get(+id);\n          if (!e || !cfg(e) || !s || ![s.en, s.dodge, s.dodgeUntil, s.battle, s.x, s.y].every(Number.isFinite) || s.en < 0 || s.dodge < 0 || s.dodge > 9\n            || !Array.isArray(s.spent) || s.spent.length > 8 || s.spent.some(w => !sdk.getDef(e.defId).weapons.some(x => x.id === w)))\n            throw Error('Invalid GW battle entity ' + id);\n          next.set(+id, { en: s.en, dodge: s.dodge, dodgeUntil: s.dodgeUntil, battle: s.battle, x: s.x, y: s.y, spent: [...s.spent] });\n        }\n        states.clear();\n        for (const [id, s] of next) states.set(id, s);\n        techPoint.clear();\n        for (const [i, v] of tech) techPoint.set(i, v);\n        paid.clear();\n        for (const [id, node] of labs) paid.set(id, node);\n        clock = value.clock;\n      },\n      dispose() { states.clear(); techPoint.clear(); paid.clear(); },\n    };\n  }\n\n  return { capabilities: [{ id: ID, create }] };\n}\n",
+        "sha256": "4bff3e4fe90e5194549ee9e39adcc61727046c60501f30397b140be679f70b71"
       }
     }
   ]

@@ -5,15 +5,20 @@ Mobile Suit Gundam fan mod for Rusted Warfare by **恐龙再健身房**. The fou
 source packages in `rusted-warfare-mods/gw` are read as data; nothing of them
 runs in the game.
 
-This pass is the **UC0079 core**: what the Earth Federation and the
-Principality of Zeon unlock at the start of a ground match through their
-`BaseTech` nodes — their base units, factories, refinery, supply depot,
-turrets and walls. Later eras (UC0087, C.E.71), the tech tree, pilots and the
-rest of the source are later batches; [COMPATIBILITY.md](COMPATIBILITY.md)
-lists exactly what is and is not here.
+This port is the **UC0079 core** and the **first step of each tech tree**:
+what the Earth Federation and the Principality of Zeon unlock at the start of
+a ground match through their `BaseTech` nodes (their base units, factories,
+refinery, supply depot, institute, turrets and walls), and the first
+development plan each side researches, with the units it opens: the
+Federation's *Anti MS Plan* and Zeon's *Ground Type Zaku Development Plan*.
+Later plans, later eras (UC0087, C.E.71), pilots and the rest of the source
+are later batches; [COMPATIBILITY.md](COMPATIBILITY.md) lists exactly what is
+and is not here.
 
-The pack sets `hideFromListing: true` and requires **extension host API 2**
-and **large content capacity**.
+The pack sets `hideFromListing: true` and requires **extension host API 2**,
+**large content capacity**, and a game whose definition packs may carry their
+own research nodes (`tech`).
+
 
 ## Play
 
@@ -27,6 +32,13 @@ Conquest match with **EFSF[0079]** or **ZEON[0079]** as a seat's faction.
   price and time each.
 - The **Refinery** adds income; the **Supply Depot** raises the power ceiling
   (GW's MP cap) and supplies units around it, as do the HQ and the Aqua Factory.
+- The **headquarters' card** is GW's tech tree: it offers the faction's next
+  development plan. A plan costs Money and Resource (metal here), seconds of
+  work, and **TechPoint**, which the HQ earns at 7.5 a second and each
+  **Institute** at 0.75 more. A plan waits at the head of the queue until its
+  TechPoint is in hand; the HQ's and Institute's cards show the TechPoint
+  held, and what a waiting plan asks. A plan once researched is kept, and the
+  units it opens appear in the factories' lists.
 - Zaku II, Old Zaku, Zaku II Type S and Zanny switch between their machine gun
   and bazooka/cannon loadouts from their card, paid, beside a supply point.
 - The U-type submarines dive and surface from their card.
@@ -36,8 +48,9 @@ Conquest match with **EFSF[0079]** or **ZEON[0079]** as a seat's faction.
 The pack carries one map, *Odessa Coast*
 (`maps/odessa-coast.steel-tide-map`), a new showcase rather than one of the
 source's 22 maps. Every definition in the pack stands on it before the match
-starts. The Federation holds the west and Zeon the east. Each base has its
-headquarters, factories, supply depot, refinery and radar along the north edge,
+starts, the units behind each plan included. The Federation holds the west and
+Zeon the east. Each base has its headquarters, factories, supply depot,
+refinery, radar and institute along the north edge,
 its aircraft over the apron below them, and its ground forces, loadout variants
 included, on a paved parade ground. Its turrets and walls guard the highway out
 of the base, and its fleet, the dived submarine forms included, lies off its
@@ -66,6 +79,10 @@ The pack's `gw.battle` package keeps the source's own combat and logistics:
   next dodge likelier; fire from behind hits harder and more surely.
 - **EN** is spent per burst or per round and on the move; an empty unit holds
   its fire. Supply points refill EN and, out of battle, repair.
+- **TechPoint**: headquarters and Institutes earn it each second, a computer
+  side at three quarters; a development plan takes its TechPoint when it
+  comes to the head of the HQ's queue and gives it back if taken off
+  unfinished.
 - **Upkeep**: a human side pays each unit's MP and its buildings' upkeep every
   second; a computer side earns its income twice, as in the source.
 

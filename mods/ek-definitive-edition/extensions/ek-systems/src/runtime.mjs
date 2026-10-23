@@ -2,6 +2,8 @@
 export default function (sdk) {
   const ID='ek-definitive-edition.systems-v1';
   const norm=a=>Math.atan2(Math.sin(a),Math.cos(a));
+  // RW buildings face up; Steel Tide raises them at angle 0.
+  const facing=e=>sdk.getDef(e.defId)?.kind==='building'?-Math.PI/2:e.angle;
   const text={energy:['Energy','能量','에너지'],ammo:['Ammunition','弹药','탄약'],busy:['Action progress','操作进度','행동 진행'],
     launch:['Launch aircraft','放飞舰载机','함재기 출격'],recover:['Recover aircraft','回收飞机','항공기 회수'],cancel:['Cancel action','取消操作','행동 취소'],
     startTest:['Start specimen test','启动单位测试','표본 시험 시작'],pausedTest:['Specimen paused — start a test to run its scripts','展示已暂停：启动测试后运行单位脚本','표본 일시 정지 — 시험을 시작하면 스크립트가 실행됩니다']};
@@ -32,27 +34,32 @@ export default function (sdk) {
       let s=states.get(e.id);
       if(!s){s={definition:e.defId,stocks:{...c.initial,energy:c.energyMax*c.energyStart},guns:{},mounts:{},cooldowns:{},initialized:false,recharging:false,age:0,flags:{},tags:{},memory:{},queue:[],timer:0,triggerClock:0,incomeClock:0,children:{},empActive:false};states.set(e.id,s);}
       if(s.definition!==e.defId){s.definition=e.defId;s.stocks.energy=Math.min(c.energyMax,s.stocks.energy??c.energyMax);}
-      for(const m of c.mounts) s.mounts[m.id]??={angle:e.angle+m.rest,previous:e.angle+m.rest};
+      for(const m of c.mounts) s.mounts[m.id]??={angle:facing(e)+m.rest,previous:facing(e)+m.rest};
       for(const g of c.guns) s.guns[g.id]??={cd:0,warm:0,target:0};
       return s;
     };
     function mountPose(e,c,s,id,visited=new Set()) {
-      const m=c.mounts.find(m=>m.id===id);if(!m||visited.has(id))return{x:e.x,y:e.y,angle:e.angle};
+      const m=c.mounts.find(m=>m.id===id);if(!m||visited.has(id))return{x:e.x,y:e.y,angle:facing(e)};
       visited.add(id);
-      const parent=m.parent?mountPose(e,c,s,m.parent,visited):{x:e.x,y:e.y,angle:e.angle};
+      const parent=m.parent?mountPose(e,c,s,m.parent,visited):{x:e.x,y:e.y,angle:facing(e)};
       const a=parent.angle+Math.PI/2;
-      const angle=s.mounts[id]?.angle??e.angle+m.rest,age=game.st.time-(s.guns[id]?.firedAt??-1e9);
+      const angle=s.mounts[id]?.angle??facing(e)+m.rest,age=game.st.time-(s.guns[id]?.firedAt??-1e9);
       const amount=m.recoilOut>0&&age<m.recoilOut?age/m.recoilOut:Math.max(0,1-(age-m.recoilOut)/Math.max(.001,m.recoilReturn));
       const recoil=(m.recoil??0)*amount;
       return{x:parent.x+m.x*Math.cos(a)-m.y*Math.sin(a)+Math.cos(angle)*recoil,y:parent.y+m.x*Math.sin(a)+m.y*Math.cos(a)+Math.sin(angle)*recoil,angle};
     }
     function rotateMounts(e,c,s,dt) {
       for(const m of c.mounts){const v=s.mounts[m.id];v.previous=v.angle;
-        const parent=m.parent?s.mounts[m.parent]?.angle??e.angle:e.angle;
-        const gun=c.guns.find(g=>g.mount===m.id)||c.guns.find(g=>c.mounts.find(a=>a.id===g.mount)?.parent===m.id);
-        const target=game.st.ents.get(gun?s.guns[gun.id]?.target:0);
+        const parent=m.parent?s.mounts[m.parent]?.angle??facing(e):facing(e);
+        // A mount trains on what its own gun is aiming at, else on what a gun
+        // carried on it is: RW's aiming base (`canShoot: 0`) turns for the
+        // barrels attached to it.
+        const aiming=g=>!g.manual&&(alive(game.st.ents.get(s.guns[g.id]?.target))||!!s.guns[g.id]?.aim);
+        const carried=id=>{for(let x=c.mounts.find(a=>a.id===id),k=0;x&&k<8;x=c.mounts.find(a=>a.id===x.parent),k++)if(x.parent===m.id)return true;return false;};
+        const gun=c.guns.find(g=>g.mount===m.id&&aiming(g))||c.guns.find(g=>carried(g.mount)&&aiming(g))||c.guns.find(g=>g.mount===m.id);
+        const unit=game.st.ents.get(gun?s.guns[gun.id]?.target:0),target=alive(unit)?unit:gun?s.guns[gun.id]?.aim:undefined;
         const pose=mountPose(e,c,s,m.id);
-        let desired=alive(target)?Math.atan2(target.y-pose.y,target.x-pose.x):parent+m.rest;
+        let desired=target?Math.atan2(target.y-pose.y,target.x-pose.x):parent+m.rest;
         if(m.slave){v.angle=norm(parent+m.rest);continue;}
         const rel=Math.max(-m.arc,Math.min(m.arc,norm(desired-parent-m.rest)));
         desired=parent+m.rest+rel;
@@ -61,15 +68,18 @@ export default function (sdk) {
         else{const delta=norm(desired-v.angle);v.angle=norm(v.angle+Math.sign(delta)*Math.min(Math.abs(delta),m.turn*dt));}
       }
     }
+    // what the player ordered it at, an ally included: an attack order, or an emplacement's lock
+    const ordered=e=>e.orders[0]?.kind==='attack'?e.orders[0].targetId:e.manualTargetId??0;
     function permitted(e,c,s,g,target) {
-      if(!alive(target)||target.inside||target.id===e.id||game.st.players[target.owner]?.team===game.st.players[e.owner]?.team)return false;
+      if(!alive(target)||target.inside||target.id===e.id)return false;
+      if(game.st.players[target.owner]?.team===game.st.players[e.owner]?.team&&target.id!==ordered(e))return false;
       if(!host.visible(target,game.st.players[e.owner].team))return false;
       const td=sdk.getDef(target.defId),cat=sdk.targetCat(game.st,target);
       if(!g.weapon.targets.includes(cat))return false;
       if(g.requiredTags?.length&&!g.requiredTags.some(tag=>(cfg(target)?.tags??[]).includes(tag)))return false;
       const dist=Math.hypot(target.x-e.x,target.y-e.y)-td.radius;
       if(dist>g.range*32||dist<(g.minRange??0)*32)return false;
-      const m=c.mounts.find(m=>m.id===g.mount),parent=m.parent?s.mounts[m.parent]?.angle??e.angle:e.angle;
+      const m=c.mounts.find(m=>m.id===g.mount),parent=m.parent?s.mounts[m.parent]?.angle??facing(e):facing(e);
       const angle=Math.atan2(target.y-e.y,target.x-e.x);
       if(Math.abs(norm(angle-parent-m.rest))>m.arc+.01)return false;
       // A source runtime expression is never treated as an always-true predicate.
@@ -78,6 +88,9 @@ export default function (sdk) {
       return host.canFire(e,host.effectiveDef(e),g.weapon,target,target);
     }
     function choose(e,c,s,g) {
+      // the player's order first, then the gun's lock, then what the unit has picked
+      const order=game.st.ents.get(ordered(e));
+      if(permitted(e,c,s,g,order))return order;
       const current=game.st.ents.get(s.guns[g.id].target);
       if(permitted(e,c,s,g,current))return current;
       const explicit=game.st.ents.get(e.orders[0]?.targetId??e.targetId);
@@ -89,15 +102,21 @@ export default function (sdk) {
       }
       return best;
     }
+    // a shot the player forced, at a spot or at an ally, hurts its own side as the game's do;
+    // what the guns choose for themselves, cascades and scripted strikes spare it, as RW's do
+    let forcing=false;
     function fire(e,d,c,s,g,target,point,intercept,origin,depth=0) {
       const shot=g.alt&&logic(g.altCondition,e)?c.guns.find(a=>a.id===g.alt)??g:g;
       const pose=origin??mountPose(e,c,s,g.mount);
       const emitter={...e,x:pose.x,y:pose.y,angle:pose.angle,turretAngle:pose.angle};
       const weapon={...shot.weapon,muzzleOffset:g.muzzle,muzzlePoints:[{forward:g.muzzle,lateral:g.lateral+((s.guns[g.id]?.shots??0)%2?(g.oddOffset??0):0)}],turret:true,spread:g.spread,
         range:g.range,reload:g.reload,splash:Math.min(500,g.radius),friendlyFire:g.friendlyFire};
-      pending={gun:shot,source:e.defId,intercept,depth,...(origin?{angle:origin.angle}:{})};
+      pending={gun:shot,source:e.defId,intercept,depth,...(origin?{angle:origin.angle}:{}),...(forcing?{forced:true}:{})};
       try{host.fireShot(game.st,emitter,{...d,turretSprite:undefined,turretMounts:undefined},weapon,target,point??null);}finally{pending=null;}
       pay(e,g.costs);
+      // flags cleared before set: `setFlag=1,unsetFlag=1-2` leaves flag 1 up
+      if(g.flags?.unsetflag)add(e,{unsetflag:g.flags.unsetflag});
+      if(g.flags?.setflag)add(e,{setflag:g.flags.setflag});
       if(c.fullRecharge&&s.stocks.energy<=1e-8)s.recharging=true;
       s.guns[g.id].cd=Math.max(1/60,g.reload-g.warmup);s.guns[g.id].warm=0;
       if(g.linked&&s.guns[g.linked])s.guns[g.id].linkStamp=s.guns[g.linked].firedAt;
@@ -138,7 +157,7 @@ export default function (sdk) {
       plan??=planBatch(e,c,batch,inside);if(!plan)return false;
       const st=game.st;
       for(const {x,y,item} of plan){
-        const angle=(item.alwaysstartdiratzero||item.alwaystartdiratzero?0:e.angle)+(item.offsetDir??0)+(item.offsetRandomDir?st.rng.range(-item.offsetRandomDir,item.offsetRandomDir):0);
+        const angle=(item.alwaysstartdiratzero||item.alwaystartdiratzero?0:facing(e))+(item.offsetDir??0)+(item.offsetRandomDir?st.rng.range(-item.offsetRandomDir,item.offsetRandomDir):0);
         const u=sdk.newEnt(st,item.unit,e.owner,x,y,angle,'spawn');
         const childState=ensure(u);if(childState)childState.home=e.id;
         if(item.resources)add(u,item.resources);
@@ -151,7 +170,7 @@ export default function (sdk) {
       let done=false,i=0;
       for(const id of [...(e.cargo??[])]){
         const u=game.st.ents.get(id);if(!alive(u)||sdk.getDef(u.defId).domain!=='air')continue;
-        const angle=e.angle+(i++%3-1)*.5;
+        const angle=facing(e)+(i++%3-1)*.5;
         u.inside=undefined;u.x=u.prevX=e.x+Math.cos(angle)*(sdk.getDef(e.defId).radius+24);u.y=u.prevY=e.y+Math.sin(angle)*(sdk.getDef(e.defId).radius+24);
         e.cargo=e.cargo.filter(v=>v!==id);u.orders=[];sdk.cmdMove(game,[id],u.x+Math.cos(angle)*80,u.y+Math.sin(angle)*80);done=true;
       }
@@ -166,7 +185,18 @@ export default function (sdk) {
         }
       }
     }
-    function stepGuns(st,e,d,dt){const c=cfg(e);if(!c||e.holdFire||e.site||e.dead||ensure(e).empActive)return;
+    // a point the player is shelling (force fire, or the trigger under the helm):
+    // what this gun would answer there, as the game's own guns do (`weaponCanBombard`)
+    function bombards(st,e,c,s,g,point){
+      const cat=sdk.groundAimCat(st,point);
+      if(!g.weapon.targets.includes(cat)&&!g.weapon.targets.includes('air'))return false;
+      const dist=Math.hypot(point.x-e.x,point.y-e.y);
+      if(dist>g.range*32||dist<(g.minRange??0)*32)return false;
+      const m=c.mounts.find(m=>m.id===g.mount),parent=m.parent?s.mounts[m.parent]?.angle??facing(e):facing(e);
+      if(Math.abs(norm(Math.atan2(point.y-e.y,point.x-e.x)-parent-m.rest))>m.arc+.01)return false;
+      return logic(g.predicate,e)&&logic(g.targetPredicates?.[cat],e)&&host.canFire(e,host.effectiveDef(e),g.weapon,point,null);
+    }
+    function stepGuns(st,e,d,dt,point){const c=cfg(e);if(!c||e.holdFire||e.site||e.dead||ensure(e).empActive)return;
         const s=ensure(e);
         for(const g of c.guns){const clock=s.guns[g.id];clock.cd=Math.max(0,clock.cd-dt);if(g.manual||s.recharging||!canPay(e,g.costs))continue;
           const anchor=g.linked&&s.guns[g.linked];
@@ -174,12 +204,21 @@ export default function (sdk) {
           let intercepted;
           if(g.intercept.length)intercepted=st.projs.find(p=>!p.downed&&p.team!==st.players[e.owner].team&&Math.hypot(p.x-e.x,p.y-e.y)<=g.range*32&&g.intercept.some(tag=>rounds.get(p.id)?.gun.tags.includes(tag)||tag==='nuke'&&p.kind==='nuke'));
           if(intercepted){fire(e,d,c,s,g,null,{x:intercepted.x,y:intercepted.y},intercepted.id);continue;}
-          const t=choose(e,c,s,g);if(!t){clock.target=0;clock.warm=0;continue;}
-          if(clock.target!==t.id){clock.target=t.id;clock.warm=0;}
+          const shelling=!!point&&bombards(st,e,c,s,g,point);
+          const t=shelling?{x:point.x,y:point.y}:choose(e,c,s,g);
+          if(!t){clock.target=0;delete clock.aim;clock.warm=0;continue;}
+          if(shelling){if(clock.target||clock.aim?.x!==t.x||clock.aim?.y!==t.y)clock.warm=0;clock.target=0;clock.aim=t;}
+          else{if(clock.target!==t.id)clock.warm=0;clock.target=t.id;delete clock.aim;}
           clock.warm+=dt;
-          const pose=mountPose(e,c,s,g.mount);const bearing=Math.atan2(t.y-pose.y,t.x-pose.x);
-          if(!anchor&&clock.warm+1e-8<g.warmup||Math.abs(norm(bearing-pose.angle))>.3)continue;
-          fire(e,d,c,s,g,t);
+          // a slave barrel is aimed by the turret it follows, from that
+          // turret's ring; a barrel that cannot turn is aimed by the hull
+          const mount=c.mounts.find(a=>a.id===g.mount),pose=mountPose(e,c,s,g.mount);
+          let aim=pose.angle,master=mount;for(let k=0;master?.slave&&k<8;k++){aim-=master.rest;master=c.mounts.find(a=>a.id===master.parent)??null;}
+          const from=!mount?.slave?(mount&&!mount.turn&&!mount.spin&&!mount.parent?e:pose):master?mountPose(e,c,s,master.id):e;
+          const bearing=Math.atan2(t.y-from.y,t.x-from.x);
+          if(!anchor&&clock.warm+1e-8<g.warmup||Math.abs(norm(bearing-aim))>(g.maxAngle??.3))continue;
+          forcing=shelling||game.st.players[t.owner]?.team===game.st.players[e.owner].team;
+          try{if(shelling)fire(e,d,c,s,g,null,t);else fire(e,d,c,s,g,t);}finally{forcing=false;}
         }
     }
     const teams=new Map();
@@ -254,7 +293,7 @@ export default function (sdk) {
           if(args.withinrange!==undefined&&Math.hypot(t.x-who.x,t.y-who.y)>args.withinrange*.75)continue;n++;
         }return path==='hasunitinteam'&&!('greaterthan'in args)&&!('lessthan'in args)?n>0:compare(n);
       }
-      const water=game.st.map.terrain[Math.floor(who.y/32)*game.st.map.w+Math.floor(who.x/32)]===sdk.Terrain.Water;
+      const tile=game.st.map.terrain[Math.floor(who.y/32)*game.st.map.w+Math.floor(who.x/32)],water=tile===sdk.Terrain.Water||tile===sdk.Terrain.DeepWater;
       const moving=Math.hypot(who.x-who.prevX,who.y-who.prevY)>.001;
       const queued=state.job?[state.job,...state.queue]:state.queue;
       const queuedStock=k=>queued.reduce((n,j)=>n+(action(config,j.action)?.effects??[]).reduce((m,f)=>m+(f.add?.[k]??0),0),0);
@@ -269,7 +308,7 @@ export default function (sdk) {
         case 'queuesize':value=queued.filter(j=>!args.withactiontag||action(config,j.action)?.tag===args.withactiontag).length;break;
         case 'transportingcount':value=who.cargo?.length??0;break;case 'kills':value=who.kills??0;break;
         case 'customtimer':value=state.age-state.timer;break;case 'timealive':value=state.age;break;
-        case 'x':value=who.x/.75;break;case 'y':value=who.y/.75;break;case 'dir':value=who.angle*180/Math.PI;break;case 'height':value=def.altitude??0;break;
+        case 'x':value=who.x/.75;break;case 'y':value=who.y/.75;break;case 'dir':value=facing(who)*180/Math.PI;break;case 'height':value=def.altitude??0;break;
         case 'hasactivewaypoint':return who.orders.length>0&&(!args.type||who.orders[0].kind===args.type);
         case 'numberofqueuedwaypoints':return who.orders.length;
         case 'ismoving':return moving;case 'isattacking':return !!who.targetId;case 'iscontrolledbyai':return !game.st.players[who.owner].isHuman;
@@ -304,7 +343,7 @@ export default function (sdk) {
         if(f.clearOrders){e.orders=[];e.targetId=0;}if(f.clearWaypoint)e.orders.shift();
         if(f.resetTimer)s.timer=s.age;if(f.clearCooldowns)s.cooldowns={};
         if(f.spawn){if(!spawnBatch(e,c,f.spawn,f.into,plans.get(f)))return false;}
-        if(f.fire){const g=c.guns.find(g=>g.id===f.fire);if(g){let point={x:job.x??e.x,y:job.y??e.y};if(f.offset){const angle=e.angle+Math.PI/2;point={x:e.x+f.offset[0]*Math.cos(angle)+f.offset[1]*Math.cos(e.angle),y:e.y+f.offset[0]*Math.sin(angle)+f.offset[1]*Math.sin(e.angle)};}fire(e,sdk.getDef(e.defId),c,s,g,null,point);}}
+        if(f.fire){const g=c.guns.find(g=>g.id===f.fire);if(g){let point={x:job.x??e.x,y:job.y??e.y};if(f.offset){const angle=facing(e)+Math.PI/2;point={x:e.x+f.offset[0]*Math.cos(angle)+f.offset[1]*Math.cos(facing(e)),y:e.y+f.offset[0]*Math.sin(angle)+f.offset[1]*Math.sin(facing(e))};}fire(e,sdk.getDef(e.defId),c,s,g,null,point);}}
         if(f.triggerActions&&logic(f.condition,e))for(const id of f.triggerActions){const child=c.actions.find(a=>a.id==='hiddenAction_'+id||a.id==='action_'+id);if(child&&allowed(e,s,child))perform(e,child,job,depth+1);}
         if(f.queueActions&&logic(f.condition,e))for(const id of f.queueActions){const child=c.actions.find(a=>a.id==='hiddenAction_'+id||a.id==='action_'+id);if(child&&!child.blocked&&s.queue.length<32)s.queue.push({action:child.id,origin:e.defId,remaining:child.time,total:child.time,lock:child.lock});}
         if(f.parentResources){const p=parentOf(e);if(p)for(const[k,v]of Object.entries(f.parentResources))setStock(p,k,stock(p,k)-v);}
@@ -329,7 +368,7 @@ export default function (sdk) {
           else if(w.kind==='move'||w.kind==='attackMove'){const x=target?.x??e.x+(w.offset?.[0]??0)+(w.random?game.st.rng.range(-w.random[0],w.random[0]):0),y=target?.y??e.y+(w.offset?.[1]??0)+(w.random?game.st.rng.range(-w.random[1],w.random[1]):0);sdk.cmdMove(game,[e.id],x,y,w.kind==='attackMove');}
           if(w.time)s.waypointUntil=s.age+w.time;
         }
-        if(f.attach){const slots=c.attachments.filter(slot=>!f.slots[0]||f.slots.includes(slot.id.replace('attachment_','')));let count=0;for(const item of f.attach)for(let i=0;i<item.count;i++){const slot=slots[count++];if(!slot)break;const old=game.st.ents.get(s.children[slot.id]);if(alive(old))continue;const child=sdk.newEnt(game.st,item.unit,e.owner,e.x,e.y,e.angle+slot.angle,'spawn'),cs=ensure(child);cs.parent=e.id;cs.slot=slot.id;cs.home=e.id;s.children[slot.id]=child.id;}}
+        if(f.attach){const slots=c.attachments.filter(slot=>!f.slots[0]||f.slots.includes(slot.id.replace('attachment_','')));let count=0;for(const item of f.attach)for(let i=0;i<item.count;i++){const slot=slots[count++];if(!slot)break;const old=game.st.ents.get(s.children[slot.id]);if(alive(old))continue;const child=sdk.newEnt(game.st,item.unit,e.owner,e.x,e.y,facing(e)+slot.angle,'spawn'),cs=ensure(child);cs.parent=e.id;cs.slot=slot.id;cs.home=e.id;s.children[slot.id]=child.id;}}
       }
       const built=a.effects.find(f=>f.built!==undefined)?.built;if(built!==undefined){e.site=built<1;e.hp=Math.max(1,sdk.maxHp(e)*built);}
       return true;
@@ -354,12 +393,12 @@ export default function (sdk) {
           if(!alive(e)||showcase.paused(e))continue;let c=cfg(e),s=ensure(e);s.age+=dt;
           if(e.site){if(c.selfBuildTime>0){e.hp=Math.min(sdk.maxHp(e),e.hp+sdk.maxHp(e)*dt/c.selfBuildTime);if(e.hp>=sdk.maxHp(e))e.site=false;}if(e.site)continue;}
           if(!s.initialized){s.initialized=true;runEvent(e,'created');
-            for(const slot of c.attachments)if(slot.spawn.length){const item=slot.spawn[0],child=sdk.newEnt(game.st,item.unit,e.owner,e.x,e.y,e.angle+slot.angle,'spawn');const cs=ensure(child);cs.parent=e.id;cs.slot=slot.id;cs.home=e.id;s.children[slot.id]=child.id;}
+            for(const slot of c.attachments)if(slot.spawn.length){const item=slot.spawn[0],child=sdk.newEnt(game.st,item.unit,e.owner,e.x,e.y,facing(e)+slot.angle,'spawn');const cs=ensure(child);cs.parent=e.id;cs.slot=slot.id;cs.home=e.id;s.children[slot.id]=child.id;}
           }
           if(!game.st.ents.has(e.id))continue;c=cfg(e);s=ensure(e);
           if(s.parent){const p=game.st.ents.get(s.parent),slot=(p?cfg(p):null)?.attachments.find(a=>a.id===s.slot);
             if(!alive(p)){if(slot?.keep){delete s.parent;delete s.slot;}else{sdk.markBlocked(game.st,e,0);game.st.ents.delete(e.id);continue;}}
-            else if(slot){const angle=p.angle+Math.PI/2;e.prevX=e.x;e.prevY=e.y;e.x=p.x+slot.x*Math.cos(angle)-slot.y*Math.sin(angle);e.y=p.y+slot.x*Math.sin(angle)+slot.y*Math.cos(angle);e.angle=p.angle+slot.angle;e.orders=[];}
+            else if(slot){const angle=facing(p)+Math.PI/2;e.prevX=e.x;e.prevY=e.y;e.x=p.x+slot.x*Math.cos(angle)-slot.y*Math.sin(angle);e.y=p.y+slot.x*Math.sin(angle)+slot.y*Math.cos(angle);e.angle=facing(p)+slot.angle;e.orders=[];}
           }
           const emp=s.empActive;
           s.triggerClock+=dt;
@@ -406,21 +445,32 @@ export default function (sdk) {
       wrapUnitStep(next){return(e,d,dt)=>{if(showcase.paused(e))return;const order=e.orders[0];
         if(order?.kind==='buildSite'){const site=game.st.ents.get(order.siteId),c=site&&cfg(site);if(c){const extra=Object.fromEntries(Object.entries(c.sourceCost??{}).filter(([k])=>k!=='credits')),s=ensure(site);
           if(!s.constructionPaid&&Object.keys(extra).length){if(!canPay(site,extra))return;pay(site,extra);s.constructionPaid=true;}
-        }}return next(e,d,dt);};},
+        }}
+        const x=e.x,y=e.y;next(e,d,dt);
+        // The game parks a unit 85% into its reach and calls it arrived 14 px
+        // short of that; a melee reach is shorter than the slack, so a fighter
+        // left standing short of its target walks the last of the way in.
+        const c=cfg(e);if(!c?.melee||e.holdPos||e.x!==x||e.y!==y||e.dead)return;
+        const t=game.st.ents.get(e.orders[0]?.kind==='attack'?e.orders[0].targetId:e.targetId);if(!alive(t)||t.inside)return;
+        const reach=Math.min(...c.guns.filter(g=>!g.manual).map(g=>g.range))*32,gap=Math.hypot(t.x-e.x,t.y-e.y)-sdk.getDef(t.defId).radius;
+        if(gap>reach*.9&&gap<reach+96)sdk.moveToward(game.st,e,d,t.x,t.y,dt,sdk.getDef(t.defId).radius+reach*.5);
+      };},
       wrapAI(next){return(g,p)=>{if(showcase.active)return;next(g,p);for(const e of members())if(alive(e)&&e.owner===p.idx&&!e.inside&&!e.site){const c=cfg(e),s=ensure(e);if(s.job)continue;const a=c.actions.find(a=>a.ai&&!a.hidden&&!a.target&&affordable(e,s,a)&&a.effects.some(f=>f.spawn||f.morph));if(a)sdk.cmdContentAction(g,ID,{owner:p.idx,ids:[e.id],action:a.id});}};},
       wrapWeapons(next){return(st,e,d,target,dt,powerFactor,...rest)=>{
         if(showcase.paused(e))return;
         const c=cfg(e);if(!c||c.adapter)return next(st,e,d,target,dt,powerFactor,...rest);if(e.inside)return;
-        stepGuns(st,e,d,dt);
+        stepGuns(st,e,d,dt,rest[0]);
         let cargoIndex=0;
         for(const slot of c.attachments)if(slot.cargo){const child=st.ents.get(e.cargo?.[cargoIndex++]);if(!alive(child)||!slot.attack||!cfg(child))continue;
-          const angle=e.angle+Math.PI/2,proxy={...child,inside:undefined,x:e.x+slot.x*Math.cos(angle)-slot.y*Math.sin(angle),y:e.y+slot.x*Math.sin(angle)+slot.y*Math.cos(angle)};
+          const angle=facing(e)+Math.PI/2,proxy={...child,inside:undefined,x:e.x+slot.x*Math.cos(angle)-slot.y*Math.sin(angle),y:e.y+slot.x*Math.sin(angle)+slot.y*Math.cos(angle)};
           rotateMounts(proxy,cfg(child),ensure(child),dt);stepGuns(st,proxy,sdk.getDef(child.defId),dt);
         }
       };},
       onShot(e,d,w,p){if(!pending||d.id!==pending.source||w.id!==pending.gun.id)return;
-        p.id??=game.st.nextProjId++;const meta={gun:pending.gun,source:pending.source,depth:pending.depth??0};rounds.set(p.id,meta);
+        p.id??=game.st.nextProjId++;const meta={gun:pending.gun,source:pending.source,depth:pending.depth??0,...(pending.forced?{forced:true}:{})};rounds.set(p.id,meta);
         p.ttl=pending.gun.life;p.speed=pending.gun.weapon.speed;
+        // a round that cannot turn flies to where it was aimed, as a shell does
+        if(!pending.gun.turnSpeed)p.homing=false;
         if(pending.angle!==undefined)p.angle=pending.angle;
         p.mult={light:1,medium:1,heavy:1,ship:1,sub:1,air:1,structure:1};
         if(pending.intercept)p.hitProj=pending.intercept;
@@ -429,10 +479,13 @@ export default function (sdk) {
       beforeProjectiles(){for(let i=0;i<512&&pendingCascades.length;i++){const task=pendingCascades.shift();cascade(task.projectile,task.meta,task.phase);}},
       projectileStep(p,dt){const meta=rounds.get(p.id);if(!meta)return;
         if(meta.gun.instant){const target=game.st.ents.get(p.targetId);p.x=p.tx;p.y=p.ty;host.resolveImpact(game.st,game.hash,p,alive(target)?target:null,false);return 'remove';}
+        if(meta.gun.still){p.px=p.x;p.py=p.y;p.ttl-=dt;if(p.ttl>0)return 'hold';
+          cascade(p,meta,'expired');if(meta.gun.explodeEnd)host.resolveImpact(game.st,game.hash,p,null,false);rounds.delete(p.id);return 'remove';}
         if(p.ttl>dt)return;
+        // a round that outlives its life is gone, unless it bursts then
         cascade(p,meta,'expired');
-        if(meta.gun.explodeEnd){host.resolveImpact(game.st,game.hash,p,null,false);return 'remove';}
-        rounds.delete(p.id);
+        if(meta.gun.explodeEnd)host.resolveImpact(game.st,game.hash,p,null,false);
+        rounds.delete(p.id);return 'remove';
       },
       guideProjectile(p,dt){const m=rounds.get(p.id);if(!m)return false;const g=m.gun;
         if(g.acceleration)p.speed=Math.min(g.targetSpeed,p.speed+g.acceleration*dt);
@@ -451,7 +504,7 @@ export default function (sdk) {
         const g=meta.gun;
         const harm=(t,raw,area)=>{
           if(!alive(t)||t.inside||raw<=0)return;
-          if(!g.friendlyFire&&st.players[t.owner]?.team===p.team)return;
+          if(!g.friendlyFire&&!meta.forced&&st.players[t.owner]?.team===p.team)return;
           const td=sdk.getDef(t.defId),tc=cfg(t),tags=tc?.tags??[];
           if(area&&!g.bothLayers&&!g.weapon.targets.includes(sdk.targetCat(st,t))&&!(g.underwaterArea&&sdk.targetCat(st,t)==='sub'))return;
           let amount=raw*(td.kind==='building'?g.buildingMult:1);
@@ -513,14 +566,14 @@ export default function (sdk) {
           ...(s.job?[{id:'job',label:text.busy,fraction:Math.max(0,1-s.job.remaining/Math.max(.001,s.job.total))}]:[])];
       },
       render(e){if(publicMounts.has(e.id))return publicMounts.get(e.id);const c=cfg(e),s=c&&ensure(e);if(!s)return;
-        const a=e.angle+Math.PI/2;
+        const a=facing(e)+Math.PI/2;
         const parent=parentOf(e),slot=parent&&cfg(parent)?.attachments.find(m=>m.id===s.slot);
         return{hidden:!logic(c.visible,e)||!!slot&&!logic(slot.draw,parent),mounts:c.mounts.filter(m=>m.sprite&&!logic(m.hidden??['lit',false],e)).map(m=>({...mountPose(e,c,s,m.id),previous:s.mounts[m.id].previous,sprite:m.sprite,under:m.under})),
-          deck:(c.attachments??[]).filter(m=>m.cargo&&logic(m.draw,e)).flatMap((m,i)=>{const u=game.st.ents.get(e.cargo?.[i]);if(!alive(u))return[];const d=sdk.getDef(u.defId);return[{x:e.x+m.x*Math.cos(a)-m.y*Math.sin(a),y:e.y+m.x*Math.sin(a)+m.y*Math.cos(a),angle:e.angle+m.angle,sprite:d.sprite??'u.'+d.id}];})};
+          deck:(c.attachments??[]).filter(m=>m.cargo&&logic(m.draw,e)).flatMap((m,i)=>{const u=game.st.ents.get(e.cargo?.[i]);if(!alive(u))return[];const d=sdk.getDef(u.defId);return[{x:e.x+m.x*Math.cos(a)-m.y*Math.sin(a),y:e.y+m.x*Math.sin(a)+m.y*Math.cos(a),angle:facing(e)+m.angle,sprite:d.sprite??'u.'+d.id}];})};
       },
       snapshot(view){const entities={},visuals={};for(const[id,s]of states)if(alive(game.st.ents.get(id))&&(!view||view.privateEntity(id)))entities[id]=structuredClone(s);
         if(view)for(const e of host.participants())if(view.visibleEntities.has(e.id)&&!view.privateEntity(e.id))visuals[e.id]=this.render(e);
-        const projectiles={};for(const[id,m]of rounds)if(!view||view.visibleProjectiles.has(id))projectiles[id]={source:m.source,gun:m.gun.id,depth:m.depth??0,...(m.nextSearch!==undefined?{nextSearch:m.nextSearch}:{})};
+        const projectiles={};for(const[id,m]of rounds)if(!view||view.visibleProjectiles.has(id))projectiles[id]={source:m.source,gun:m.gun.id,depth:m.depth??0,...(m.nextSearch!==undefined?{nextSearch:m.nextSearch}:{}),...(m.forced?{forced:true}:{})};
         const balances={};for(const[owner,v]of teams)if(!view||view.player===undefined||view.player===owner)balances[owner]=structuredClone(v);return{version:1,entities,projectiles,visuals,balances,...(showcase.active?{showcase:showcase.snapshot(view)}:{}),cascades:pendingCascades.filter(task=>!view||view.visibleProjectiles.has(task.projectile.id)).map(task=>({projectile:task.projectile,source:task.meta.source,gun:task.meta.gun.id,depth:task.meta.depth,phase:task.phase}))};
       },
       restore(value){
@@ -540,7 +593,7 @@ export default function (sdk) {
           }
           newStates.set(+id,structuredClone(s));
         }
-        for(const[id,m]of Object.entries(value.projectiles)){const d=sdk.getDef(m.source),g=host.config(d)?.guns.find(g=>g.id===m.gun);if(!g)throw Error('Invalid source projectile');newRounds.set(+id,{source:m.source,gun:g,depth:m.depth??0,...(m.nextSearch!==undefined?{nextSearch:m.nextSearch}:{})});}
+        for(const[id,m]of Object.entries(value.projectiles)){const d=sdk.getDef(m.source),g=host.config(d)?.guns.find(g=>g.id===m.gun);if(!g)throw Error('Invalid source projectile');newRounds.set(+id,{source:m.source,gun:g,depth:m.depth??0,...(m.nextSearch!==undefined?{nextSearch:m.nextSearch}:{}),...(m.forced===true?{forced:true}:{})});}
         teams.clear();for(const[k,v]of Object.entries(value.balances??{})){if(!Object.values(v).every(n=>Number.isFinite(n)&&n>=0))throw Error('Invalid team resource');teams.set(+k,structuredClone(v));}states.clear();rounds.clear();publicMounts.clear();for(const[id,s]of newStates)states.set(id,s);for(const[id,s]of newRounds)rounds.set(id,s);
         pendingCascades.length=0;
         for(const task of value.cascades??[]){const gun=host.config(sdk.getDef(task.source))?.guns.find(g=>g.id===task.gun);if(!gun||!['created','expired','impact'].includes(task.phase)||!Number.isInteger(task.depth)||task.depth<0||task.depth>64)throw Error('Invalid cascade state');pendingCascades.push({projectile:structuredClone(task.projectile),meta:{source:task.source,gun,depth:task.depth},phase:task.phase});}

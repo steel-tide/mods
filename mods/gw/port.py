@@ -5,8 +5,9 @@
   python3 mods/gw/port.py --no-media   # mod.json and the report only
 
 The source is the four RW packages in ../../rusted-warfare-mods/gw (git-ignored),
-read as data and never executed. This pass covers the UC0079 base tech: what
-the EFSF and Zeon `BaseTech` nodes unlock at the start of a ground match.
+read as data and never executed. It covers the UC0079 base tech (what the EFSF
+and Zeon `BaseTech` nodes unlock at the start of a ground match) and the first
+development plan of each tree, researched at the faction's headquarters.
 
 Conversion (see README):
   lengths   0.75 world px per RW px (art, radii, ranges, speeds, offsets)
@@ -50,14 +51,24 @@ SIDES = {
 # The factories a ground match can raise: Space factories need a space map, and
 # the Mega lists hold no base-tech unit.
 FACTORY_KINDS = ['Land', 'Air', 'Aqua']
-COMMON_BUILDINGS = ['Refinery_Common_T1', 'SupplyDepot_Common_T1', 'Turret_MG_A', 'Turret_AA_A', 'Turret_CN_A',
-                    'Turret_MS_A', 'Turret_Radar_A', 'Wall_T1_A', 'Wall_T1_B']
+COMMON_BUILDINGS = ['Refinery_Common_T1', 'SupplyDepot_Common_T1', 'Institute_Common_T1', 'Turret_MG_A', 'Turret_AA_A',
+                    'Turret_CN_A', 'Turret_MS_A', 'Turret_Radar_A', 'Wall_T1_A', 'Wall_T1_B']
+# The development plans ported, in tree order: each faction's first after its
+# base tech. The plan's file lists what it unlocks; the faction's TechList
+# prices it in Money, Resource, TechPoint and seconds.
+TECH_PLANS = {
+    'EFSF_0079': ['Tech_EFSF_0079_AntiMSPlan'],
+    'ZEON_0079': ['Tech_ZEON_0079_GroundTypeZakuDevelopmentPlan'],
+}
+# TechPoint a second (HQ_Faction `Gen_TechPoint`): each headquarters 7.5, each
+# T1 Institute 0.75 more; a computer side's is the package's to scale.
+HQ_TECH_POINT = 7.5
+INSTITUTE_TECH_POINT = 0.75
 # Base-tech entries this pass leaves out, and why (conversion-report.json).
 LEFT_OUT = {
     'Factory_{side}_Space': 'Space theatre: only a space map (TileMode 1) raises it.',
     'Factory_{side}_Space_Mega': 'Space theatre: only a space map (TileMode 1) raises it.',
     'Factory_{side}_Mega': 'Its list holds no base-tech unit; it opens with later techs.',
-    'Institute_Common_T1': 'Earns TechPoint for the tech tree, which is a later batch.',
     'Academy_Common_T1': 'Trains pilots, which are a later batch.',
     'Beacon_ACE_0079': 'Calls named ACE units, a later batch and a host option in the source.',
     'HLV_0079_Build': 'Launches HLVs between ground and space maps (AutoTileMode).',
@@ -70,7 +81,7 @@ FORMS = {
 # Unit text the source gives as "MG Squad" etc.: the loadout label for a variant.
 VARIANT = {
     'MG': ['MG', '机枪', '기관총'], 'BZ': ['Bazooka', '火箭筒', '바주카'], 'Cannon': ['Cannon', '加农炮', '캐논'],
-    'BR': ['Beam Rifle', '光束步枪', '빔 라이플'],
+    'BR': ['Beam Rifle', '光束步枪', '빔 라이플'], 'CN': ['CN', '加农炮', '캐논'], 'BigGun': ['BigGun', '大枪', '빅 건'],
 }
 
 
@@ -87,6 +98,20 @@ def rnd(x, places=2):
     return round(float(x), places)
 
 
+# A text the format holds, in each language.
+TEXT_MAX = 400
+
+
+def fit(text, key):
+    """A description past the format's length loses its closing quote, the last paragraph."""
+    if len(text) <= TEXT_MAX:
+        return text
+    cut = text.rsplit('\n\n', 1)[0]
+    assert len(cut) <= TEXT_MAX, key
+    REPORT['adaptations'].append(f'{key}: runs past the format\'s {TEXT_MAX} characters; its closing line is dropped')
+    return cut
+
+
 def text3(en, zh, key=None):
     """[en, zh, ko]: the source's two languages, Korean from localization.json."""
     en, zh = gw.text(en), gw.text(zh)
@@ -94,13 +119,13 @@ def text3(en, zh, key=None):
     if ko is None:
         MISSING.add(key or en)
         ko = en
-    return [en, zh or en, ko]
+    return [fit(en, key or en), fit(zh or en, key or en), fit(ko, key or en)]
 
 
 LOCAL_PATH = HERE / 'localization.json'
 LOCAL = json.loads(LOCAL_PATH.read_text()) if LOCAL_PATH.exists() else {}
 MISSING = set()
-REPORT = {'units': {}, 'buildings': {}, 'leftOut': {}, 'adaptations': [], 'media': {}}
+REPORT = {'units': {}, 'buildings': {}, 'tech': {}, 'leftOut': {}, 'adaptations': [], 'media': {}}
 
 
 def price(value):
@@ -219,6 +244,31 @@ def base_tech(side):
     return [v.get('@define UnitID') for k, v in ini.items() if k.startswith('action_UnlockInfo_')]
 
 
+def node_id(name):
+    """`Tech_ZEON_0079_GroundTypeZakuDevelopmentPlan` → `gw-zeon-0079-ground-type-zaku-dev-plan`."""
+    s = re.sub(r'(?<=[a-z0-9])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])', '_', name.replace('Tech_', '', 1))
+    nid = 'gw-' + re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-').replace('development', 'dev')
+    assert len(nid) <= 40, nid
+    return nid
+
+
+def tech_plan(side, name):
+    """A development plan: its text, the plans it waits on, what it unlocks, and its price."""
+    folder = PKG_0079 / f'Units/TechTree/Tech/Faction/{side}'
+    path = folder / f'Common/{name}.ini'
+    ini = gw.load(path)
+    core = ini['core']
+    after = re.findall(r"includes='(\w+)'", core.get('@global Unlocked', ''))
+    unlocks = [v.get('@define UnitID') for k, v in ini.items() if k.startswith('action_UnlockInfo_')]
+    awake = gw.load(folder / f'TechList_{side}.ini').get(f'hiddenAction_{name}_Awake', {})
+    fig = {k: float(v) for k, v in re.findall(r'_(Time|Money|Resource|TechPoint)=([\d.]+)', awake.get('setUnitMemory', ''))}
+    REPORT['tech'][node_id(name)] = {'source': name, 'file': path.relative_to(gw.SOURCE).as_posix(), 'after': after, 'price': fig}
+    return {'name': text3(core.get('displayText', name), core.get('displayText_zh', '')),
+            'desc': text3(core.get('displayDescription', ''), core.get('displayDescription_zh', ''), key='desc:' + name),
+            'after': after, 'unlocks': unlocks, 'metal': fig.get('Money', 0) + fig.get('Resource', 0),
+            'time': fig.get('Time', 30), 'techPoint': fig.get('TechPoint', 0)}
+
+
 # --------------------------------------------------------------- weapons
 
 def target_set(stats, kind):
@@ -320,6 +370,9 @@ def native_weapon(w, unit_range, targets, *, hull, prefix='', own_reach=False):
     elif proj_path:
         # The round as the source draws it: its picture, and a bazooka's trail.
         key = 'prj.' + slug(w['projectileUnit'])[3:]
+        if len(key) > 44:
+            key = key.replace('prj.projectile-', 'prj.', 1)
+        assert len(key) <= 44, key
         if not any(s['key'] == key for s in MEDIA_OUT.sprites):
             parts = art.decals(proj_path, proj, art.State(), layers=art.ROUND_LAYERS)
             if parts:
@@ -674,68 +727,90 @@ def main():
     sell = orders()
     defs, factions, rosters = [], [], {}
     unit_ids = {}
+    tech_nodes, tech_points = [], {}
     for side, conf in SIDES.items():
-        tech = base_tech(side)
         roster = []
         rosters[side] = roster
-        for name in tech:
-            if name.startswith(('Factory_', 'Refinery', 'Institute', 'SupplyDepot', 'Academy', 'Beacon', 'HLV', 'Turret', 'Wall')):
-                continue
-            entries = sell.get((side, name))
-            if not entries:
-                REPORT['leftOut'][name] = 'Sold only by Space or Space Mega factories: a space map unit.'
-                continue
-            loadouts = {}
-            for o in entries:
-                loadouts.setdefault((o['eq'], o['eq2']), []).append(o)
-            path, ini = gw.unit(name)
-            eq_text = {}
-            for s, f in ini.items():
-                m = re.match(r'action_Set_Equipment(\d)$', s)
-                if m:
-                    t = gw.text(f.get('text', '')).replace('Equipment ', '').strip()
-                    eq_text[int(m[1])] = VARIANT.get(t, [t, gw.text(f.get('text_zh', '')).replace('装备 ', ''), t])
-            for i, (lo, olist) in enumerate(sorted(loadouts.items())):
-                key = (name, lo)
-                if key not in unit_ids:
-                    label = eq_text.get(lo[0]) if i > 0 else None
-                    if i > 0 and not label:
-                        t = olist[0]['text'] or f'Loadout {lo[0]}'
-                        label = [t, olist[0]['text_zh'] or t, LOCAL.get(t, t)]
-                    d = unit_def(side, name, olist, variant_of=label)
-                    unit_ids[key] = d['id']
-                    d['producedBy'] = []
-                    d['_variants'] = []
-                    defs.append(d)
-                did = unit_ids[key]
-                d = next(x for x in defs if x['id'] == did)
-                for o in olist:
-                    fid = slug(f'Factory_{side}_{o["kind"]}')
-                    if fid not in d['producedBy']:
-                        d['producedBy'].append(fid)
-                roster.append(did)
-            # Equipment switches: GW's paid change of loadout at a supply point.
-            ids = [unit_ids[(name, lo)] for lo in sorted(loadouts)]
-            if len(ids) > 1:
-                for lo, did in zip(sorted(loadouts), ids):
+        # The base tech is open from the start; each plan's units wait on it.
+        stages = [(base_tech(side), None)]
+        tech_points[side] = {}
+        for plan in TECH_PLANS.get(side, []):
+            t = tech_plan(side, plan)
+            nid = node_id(plan)
+            base = f'Tech_{side}_BaseTech'
+            assert all(a == base or a in TECH_PLANS[side] for a in t['after']), f'{plan} waits on a plan not ported'
+            node = {'id': nid, 'name': t['name'], 'desc': t['desc'], 'lab': slug(conf['hq']), 'cost': rnd(t['metal']),
+                    'time': rnd(t['time']), 'factions': [conf['id']]}
+            after = [node_id(a) for a in t['after'] if a != base]
+            if after:
+                node['requires'] = after
+            tech_nodes.append(node)
+            tech_points[side][nid] = t['techPoint']
+            stages.append((t['unlocks'], nid))
+        for names, need in stages:
+            for name in names:
+                if name.startswith(('Factory_', 'Refinery', 'Institute', 'SupplyDepot', 'Academy', 'Beacon', 'HLV', 'Turret', 'Wall')):
+                    continue
+                if name.startswith('Pilot_'):
+                    REPORT['leftOut'][name] = 'A named pilot (ACE), which is a later batch.'
+                    continue
+                entries = sell.get((side, name))
+                if not entries:
+                    REPORT['leftOut'][name] = 'Sold only by Space or Space Mega factories: a space map unit.'
+                    continue
+                loadouts = {}
+                for o in entries:
+                    loadouts.setdefault((o['eq'], o['eq2']), []).append(o)
+                path, ini = gw.unit(name)
+                eq_text = {}
+                for s, f in ini.items():
+                    m = re.match(r'action_Set_Equipment(\d)$', s)
+                    if m:
+                        t = gw.text(f.get('text', '')).replace('Equipment ', '').strip()
+                        eq_text[int(m[1])] = VARIANT.get(t, [t, gw.text(f.get('text_zh', '')).replace('装备 ', ''), t])
+                for i, (lo, olist) in enumerate(sorted(loadouts.items())):
+                    key = (name, lo)
+                    if key not in unit_ids:
+                        label = eq_text.get(lo[0]) if i > 0 else None
+                        if i > 0 and not label:
+                            t = olist[0]['text'] or f'Loadout {lo[0]}'
+                            label = [t, olist[0]['text_zh'] or t, LOCAL.get(t, t)]
+                        d = unit_def(side, name, olist, variant_of=label)
+                        if need:
+                            d['requires'] = [need]
+                        unit_ids[key] = d['id']
+                        d['producedBy'] = []
+                        d['_variants'] = []
+                        defs.append(d)
+                    did = unit_ids[key]
                     d = next(x for x in defs if x['id'] == did)
-                    for lo2, other in zip(sorted(loadouts), ids):
-                        if other == did:
-                            continue
-                        sec = ini.get(f'action_Set_Equipment{lo2[0]}', {})
-                        cost = gw.num(sec.get('@define Money'), 0) + gw.num(sec.get('@define Resource'), 0)
-                        d['_variants'].append({'button': {'cost': cost, 'time': gw.num(sec.get('buildSpeed'), 3)},
-                                               'if': {'near': {'units': supply_points(), 'side': 'friend', 'within': rnd(300 * WORLD / TILE)}},
-                                               'do': {'morph': other}})
-            # Forms a unit changes into on its own card (a submarine's dive).
-            for form, (label, back) in FORMS.get(name, {}).items():
-                base = next(x for x in defs if x['id'] == ids[0])
-                f = unit_def(side, form, loadouts[sorted(loadouts)[0]], variant_of=label, form=True)
-                f['producedBy'] = []
-                f['_variants'] = [{'button': {'name': back}, 'do': {'morph': base['id']}}]
-                base['_variants'].append({'button': {'name': label}, 'do': {'morph': f['id']}})
-                defs.append(f)
-                roster.append(f['id'])
+                    for o in olist:
+                        fid = slug(f'Factory_{side}_{o["kind"]}')
+                        if fid not in d['producedBy']:
+                            d['producedBy'].append(fid)
+                    roster.append(did)
+                # Equipment switches: GW's paid change of loadout at a supply point.
+                ids = [unit_ids[(name, lo)] for lo in sorted(loadouts)]
+                if len(ids) > 1:
+                    for lo, did in zip(sorted(loadouts), ids):
+                        d = next(x for x in defs if x['id'] == did)
+                        for lo2, other in zip(sorted(loadouts), ids):
+                            if other == did:
+                                continue
+                            sec = ini.get(f'action_Set_Equipment{lo2[0]}', {})
+                            cost = gw.num(sec.get('@define Money'), 0) + gw.num(sec.get('@define Resource'), 0)
+                            d['_variants'].append({'button': {'cost': cost, 'time': gw.num(sec.get('buildSpeed'), 3)},
+                                                   'if': {'near': {'units': supply_points(), 'side': 'friend', 'within': rnd(300 * WORLD / TILE)}},
+                                                   'do': {'morph': other}})
+                # Forms a unit changes into on its own card (a submarine's dive).
+                for form, (label, back) in FORMS.get(name, {}).items():
+                    base = next(x for x in defs if x['id'] == ids[0])
+                    f = unit_def(side, form, loadouts[sorted(loadouts)[0]], variant_of=label, form=True)
+                    f['producedBy'] = []
+                    f['_variants'] = [{'button': {'name': back}, 'do': {'morph': base['id']}}]
+                    base['_variants'].append({'button': {'name': label}, 'do': {'morph': f['id']}})
+                    defs.append(f)
+                    roster.append(f['id'])
     for d in defs:
         if d.get('_variants'):
             d['rules'] = d['_variants'][:24]
@@ -769,6 +844,10 @@ def main():
             d['power'] = 9
             conf['supply'] = supply_of(g, 200)
             conf['upkeep'] = 1
+        if name.startswith('Institute'):
+            # 2 Money and 4 Resource a second to keep, 0.75 TechPoint a second earned
+            conf['upkeep'] = 6
+            conf['techPoint'] = INSTITUTE_TECH_POINT
         if name.startswith('Turret'):
             conf['upkeep'] = 0.5
         if name.startswith('Turret_Radar'):
@@ -791,6 +870,11 @@ def main():
         hq['buildTime'] = 60
         hq['extensions'][CAP]['supply'] = supply_of(g, 200)
         hq['extensions'][CAP]['hq'] = True
+        # GW's tech tree is the headquarters' own page: its plans are researched
+        # here, each also asking the TechPoint the package keeps.
+        hq['extensions'][CAP]['techPoint'] = HQ_TECH_POINT
+        if tech_points[side]:
+            hq['extensions'][CAP]['research'] = tech_points[side]
         builder = builder_def(side)
         hq['produces'] = [builder['id']]
         own = [b for b in rosters[side] if b in buildings]
@@ -809,15 +893,16 @@ def main():
     manifest = {
         'format': 'steel-tide-mod', 'v': 4, 'capacity': 'large',
         'id': 'gw', 'name': ['GW BattleUniverse', '高达战争_战争宇宙', 'GW 배틀 유니버스'],
-        'version': '0.0.1', 'author': '恐龙再健身房',
+        'version': '0.0.2', 'author': '恐龙再健身房',
         'description': [
-            'Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits.',
-            '高达战争_战争宇宙：一年战争。地球联邦军与吉翁公国军的基础兵力——坦克、飞机、舰艇与最早的机动战士。',
-            '건담 워 배틀 유니버스: 1년 전쟁. 지구연방군과 지온 공국군의 기본 전력 — 전차, 항공기, 함선, 그리고 최초의 모빌슈트.'],
+            'Gundam War BattleUniverse: the One Year War. The Earth Federation and the Principality of Zeon field their base forces — tanks, aircraft, warships and the first mobile suits — and open their first development plans.',
+            '高达战争_战争宇宙：一年战争。地球联邦军与吉翁公国军的基础兵力——坦克、飞机、舰艇与最早的机动战士——以及各自的第一项开发计划。',
+            '건담 워 배틀 유니버스: 1년 전쟁. 지구연방군과 지온 공국군의 기본 전력 — 전차, 항공기, 함선, 그리고 최초의 모빌슈트 — 과 각자의 첫 개발 계획.'],
         'license': 'LicenseRef-GW-BattleUniverse-Upstream',
         'hideFromListing': True,
         'requiredCapabilities': [CAP],
         'factions': factions,
+        'tech': tech_nodes,
         'defs': defs,
         'sprites': MEDIA_OUT.sprites,
         'sounds': MEDIA_OUT.sounds,

@@ -12,10 +12,15 @@ export default function (sdk) {
   // GW resolves the hit itself, so the armour matrix cell is always one.
   const ONE = Object.freeze({ light: 1, medium: 1, heavy: 1, structure: 1, ship: 1, sub: 1, air: 1, warhead: 1 });
   const EN = ['EN', '能量', 'EN'];
+  const TECH_POINT = ['TechPoint', '科技', '테크 포인트'];
+  // A computer side earns three quarters of the TechPoint (`Gen_TechPoint`).
+  const AI_TECH = 0.75;
 
   function create(host) {
     const game = host.game;
     const states = new Map();
+    // TechPoint in hand, by owner; the node whose TechPoint a lab has taken, by lab
+    const techPoint = new Map(), paid = new Map();
     let clock = 0;
     const cfg = e => host.config(sdk.getDef(e.defId));
     const live = e => e && !e.dead;
@@ -120,8 +125,9 @@ export default function (sdk) {
 
     // HQ_Faction: a human side pays for every unit's MP and its buildings'
     // upkeep each second; a computer side earns its income twice and pays none.
+    // Headquarters and Institutes earn TechPoint, a computer side's at 0.75.
     function economy(st) {
-      const cost = new Map(), bonus = new Map();
+      const cost = new Map(), bonus = new Map(), tech = new Map();
       for (const e of host.participants()) {
         if (!live(e) || e.site) continue;
         const c = cfg(e), d = sdk.getDef(e.defId);
@@ -130,17 +136,54 @@ export default function (sdk) {
         else {
           cost.set(e.owner, (cost.get(e.owner) ?? 0) + (c.upkeep ?? 0));
           if (d.metalRate) bonus.set(e.owner, (bonus.get(e.owner) ?? 0) + d.metalRate);
+          if (c.techPoint) tech.set(e.owner, (tech.get(e.owner) ?? 0) + c.techPoint);
         }
       }
       st.players.forEach((p, i) => {
         if (!p || !p.alive) return;
         if (p.isHuman) p.metal = Math.max(0, p.metal - (cost.get(i) ?? 0));
         else p.metal += bonus.get(i) ?? 0;
+        if (tech.has(i)) techPoint.set(i, (techPoint.get(i) ?? 0) + tech.get(i) * (p.isHuman ? 1 : AI_TECH));
       });
     }
 
+    // What the node at the head of a lab's queue still asks in TechPoint: none
+    // once the lab has taken it.
+    const asks = (e, c) => {
+      const head = e.research?.queue[0];
+      return head === undefined || paid.get(e.id) === head ? 0 : c.research?.[head] ?? 0;
+    };
+
     return {
       id: ID,
+      // A plan asks TechPoint besides its Money and Resource. The lab takes it
+      // when the plan comes to the head of its queue, and until there is
+      // enough the research waits, unworked and unbilled, while the lab's
+      // production and guns go on. A plan taken off the queue unfinished
+      // gives its TechPoint back.
+      wrapBuildingStep(next) {
+        return (e, def, dt) => {
+          const r = e.research, c = cfg(e);
+          if (!r || !c?.research) return next(e, def, dt);
+          const took = paid.get(e.id);
+          if (took !== undefined && took !== r.queue[0]) {
+            if (!game.st.players[e.owner]?.tech?.includes(took)) techPoint.set(e.owner, (techPoint.get(e.owner) ?? 0) + (c.research[took] ?? 0));
+            paid.delete(e.id);
+          }
+          if (r.queue.length === 0) return next(e, def, dt);
+          const ask = asks(e, c);
+          if (ask > (techPoint.get(e.owner) ?? 0)) {
+            e.research = undefined;
+            try { next(e, def, dt); } finally { e.research = r; }
+            return;
+          }
+          if (paid.get(e.id) !== r.queue[0]) {
+            techPoint.set(e.owner, (techPoint.get(e.owner) ?? 0) - ask);
+            paid.set(e.id, r.queue[0]);
+          }
+          next(e, def, dt);
+        };
+      },
       wrapDamage(next) {
         return (st, t, raw, mult, owner, sourceId = 0, gun = '', from, hit) => {
           const tc = live(t) ? cfg(t) : undefined;
@@ -195,14 +238,25 @@ export default function (sdk) {
           supply(st);
           economy(st);
           for (const id of [...states.keys()]) if (!live(st.ents.get(id))) states.delete(id);
+          for (const id of [...paid.keys()]) if (!live(st.ents.get(id))) paid.delete(id);
         }
       },
-      inspect(entity) {
+      inspect(entity, privateView) {
         const c = cfg(entity);
-        if (!c?.en?.max) return [];
-        const s = state(entity);
-        return [{ id: 'en', label: EN, value: Math.round(s.en) + ' / ' + Math.round(c.en.max), fraction: s.en / c.en.max,
-          tone: s.en <= 0 ? 'danger' : s.en < c.en.max * 0.25 ? 'warning' : 'normal' }];
+        const rows = [];
+        if (c?.en?.max) {
+          const s = state(entity);
+          rows.push({ id: 'en', label: EN, value: Math.round(s.en) + ' / ' + Math.round(c.en.max), fraction: s.en / c.en.max,
+            tone: s.en <= 0 ? 'danger' : s.en < c.en.max * 0.25 ? 'warning' : 'normal' });
+        }
+        // the owner's TechPoint, and on a waiting lab what its plan asks
+        if (privateView && (c?.techPoint || c?.research)) {
+          const have = techPoint.get(entity.owner) ?? 0, ask = asks(entity, c);
+          rows.push(ask > have
+            ? { id: 'techPoint', label: TECH_POINT, value: Math.floor(have) + ' / ' + Math.round(ask), fraction: have / ask, tone: 'warning' }
+            : { id: 'techPoint', label: TECH_POINT, value: Math.floor(have) });
+        }
+        return rows;
       },
       snapshot(view) {
         const entities = {};
@@ -212,10 +266,26 @@ export default function (sdk) {
           if (view?.player !== undefined && e.owner !== view.player) continue;
           entities[id] = { ...s, spent: [...s.spent] };
         }
-        return { version: 1, clock, entities };
+        const tech = {}, labs = {};
+        for (const [i, v] of techPoint) if (view?.player === undefined || view.player === i) tech[i] = v;
+        for (const [id, node] of paid) {
+          const e = game.st.ents.get(id);
+          if (live(e) && (view?.player === undefined || e.owner === view.player)) labs[id] = node;
+        }
+        return { version: 2, clock, entities, techPoint: tech, paid: labs };
       },
       restore(value) {
-        if (!value || value.version !== 1 || typeof value.entities !== 'object' || !Number.isFinite(value.clock)) throw Error('Invalid GW battle state');
+        if (!value || (value.version !== 1 && value.version !== 2) || typeof value.entities !== 'object' || !Number.isFinite(value.clock)) throw Error('Invalid GW battle state');
+        const tech = new Map(), labs = new Map();
+        for (const [i, v] of Object.entries(value.techPoint ?? {})) {
+          if (!game.st.players[+i] || !Number.isFinite(v) || v < 0) throw Error('Invalid GW TechPoint ' + i);
+          tech.set(+i, v);
+        }
+        for (const [id, node] of Object.entries(value.paid ?? {})) {
+          const e = game.st.ents.get(+id);
+          if (!e?.research || typeof node !== 'string' || !(cfg(e)?.research && node in cfg(e).research)) throw Error('Invalid GW research ' + id);
+          labs.set(+id, node);
+        }
         const next = new Map();
         for (const [id, s] of Object.entries(value.entities)) {
           const e = game.st.ents.get(+id);
@@ -226,9 +296,13 @@ export default function (sdk) {
         }
         states.clear();
         for (const [id, s] of next) states.set(id, s);
+        techPoint.clear();
+        for (const [i, v] of tech) techPoint.set(i, v);
+        paid.clear();
+        for (const [id, node] of labs) paid.set(id, node);
         clock = value.clock;
       },
-      dispose() { states.clear(); },
+      dispose() { states.clear(); techPoint.clear(); paid.clear(); },
     };
   }
 

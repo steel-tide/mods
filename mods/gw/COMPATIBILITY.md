@@ -1,10 +1,12 @@
 # Compatibility and fidelity record
 
-No Steel Tide game code is changed for this port. Everything GW-specific lives
-in the pack: definitions, art and sounds, and the `gw.battle` package. This
-record separates what is ported, what is adapted, what a later batch can still
-port within the modding system, and what the game or its modding system does
-not support.
+Everything GW-specific lives in the pack: definitions, art and sounds, and the
+`gw.battle` package. One game change was made for it, with approval: a
+definition pack may declare research nodes of its own (`tech`), researched at
+one of its buildings and readable by `requires`; GW's tech tree needed it,
+since the game's tree was fixed at its sixteen nodes. This record separates
+what is ported, what is adapted, what a later batch can still port within the
+modding system, and what the game or its modding system does not support.
 
 ## Scope of this pass
 
@@ -15,10 +17,18 @@ The UC0079 `BaseTech` of both factions (`Tech_EFSF_0079_BaseTech.ini`,
 | --- | --- | --- |
 | EFSF[0079] | Army Squad, Type 61, Hover Truck (Type 74), Anti-Zaku Tank, FanFan, Battle Helicopter, Toriares, Fly Manta, Tincod, SaberFish, Zanny (MG / Cannon), Medea, Torpedo Boat, Burke Class, U-Type Submarine (+ submerged form), Himalaya Class | HQ, Land Factory, Airport, Aqua Factory |
 | ZEON[0079] | Army Squad, Magella tank, Samson truck, APC, Wappa, Battle Helicopter, Fat Uncle, Dopp, Dodai YS, Old Zaku (MG / Bazooka), Zaku II C, Zaku II (MG / Bazooka), Zaku II S (MG / Bazooka), Ucon (+ submerged form) | HQ, Land Factory, Airport, Aqua Factory |
-| shared | — | Refinery T1, Supply Depot T1, MG / AA / CN / MS turrets, Radar, Wall A and B |
+| shared | — | Refinery T1, Supply Depot T1, Institute T1, MG / AA / CN / MS turrets, Radar, Wall A and B |
 
-[conversion-report.json](conversion-report.json) gives every definition's
-source file and the weapons it leaves out.
+and the first development plan of each tree, researched at the faction's
+headquarters, with the units it opens on a ground match:
+
+| Plan | Units |
+| --- | --- |
+| Anti MS Plan (EFSF, `Tech_EFSF_0079_AntiMSPlan`) | GM Early Type (and Bazooka), Type61A5, Hover Truck Kai, Type61 Mode.SPG, Missile Car, Minigun APC, Dash, DEPP·ROG, Don Escargot, M-Type Submarine |
+| Ground Type Zaku Development Plan (ZEON, `Tech_ZEON_0079_GroundTypeZakuDevelopmentPlan`) | Zaku II Ground Type (and Bazooka, CN), Gouf B, Zaku Cannon (and BigGun), Zaku Marine Type, Zaku II R-1 (and Bazooka), Gogg, Cui, APC with MS, MadAngler Class |
+
+[conversion-report.json](conversion-report.json) gives every definition's and
+plan's source file, the plans' prices, and the weapons each unit leaves out.
 
 ## Ported
 
@@ -34,6 +44,11 @@ source file and the weapons it leaves out.
 - GW's damage formula, hit and graze rolls, EN, supply points and upkeep (see
   README); loadout switching at supply points; submarine dive/surface forms;
   hangars as transport holds; the Zaku II C's nuclear warhead.
+- The first development plan of each tree: its name, description, Money and
+  Resource, 30 seconds and 1200 TechPoint, and what it unlocks. TechPoint as
+  `Gen_TechPoint` makes it: 7.5 a second for each headquarters, 0.75 for each
+  T1 Institute, a computer side's at 0.75 of that, from nothing at the start;
+  the Institute's upkeep of 2 Money and 4 Resource.
 
 ## Adaptations
 
@@ -51,12 +66,21 @@ source file and the weapons it leaves out.
 | Hangars that take only infantry (Type 74, APC, Samson truck) | Take any passenger of one place | A native hold has a weight limit, not a passenger filter |
 | The radar reveals hidden units within its detect range | Native `detect` at that range, and radar sight | GW's own stealth and detection are a later batch |
 | A pilot aboard every unit: skills 100–110 at the start (leadership 55–75, which a command unit such as the Himalaya reads instead), rising with experience | No pilot: every skill reads 100 | Pilots are a later batch |
+| The tech tree page, opened from the HQ: every node at once, started with a button, several researched side by side | The plans the HQ can take now are tiles on its card, put on its queue of five; several headquarters research side by side | The game's lab card and queue |
+| TechPoint on the HUD beside Money and Resource; a plan's button locked until its TechPoint is there | The TechPoint held, and what a waiting plan asks, on the HQ's and Institute's cards; the plan may be queued, and waits at the head of the queue for it | The HUD shows one resource; a lab queues before it can pay |
+| A computer side's TechPoint ×0.75, then ×1–1.35 by its `AIHard` handicap | ×0.75 | No difficulty handicap reaches the package |
+| A plan's TechPoint is spent when it starts | Taken when it reaches the head of the queue, whether or not the plan before it is done; back whole if taken off unfinished, lost with the HQ | The package holds research only as the queue's head |
+| A host's tech start and tech multiplier options | TechPoint from nothing, at ×1 | No setup options for a mod |
+| The M-Type submarines' English description (412 and 419 characters) | Its closing quote line is dropped in English | The format holds 400 characters a language |
+| The tech tree with the game's tech tree switched off in setup | The plans stay closed: only the base tech is built | A pack's nodes follow the game's switch |
 
 ## Later batches (portable through the modding system)
 
 - **Eras and factions**: UC0087 (AEUG, Titans, Neo Zeon) and C.E.71 (ZAFT,
-  OMNI), and the UC0079 units behind the tech tree (GM, Gundam, Gouf, Dom…).
-- **Tech tree and TechPoint** (Institute), **pilots** (Academy, ACE beacon,
+  OMNI).
+- **The rest of the tech tree**: the plans after the first (GM, Gundam, Gouf,
+  Dom…), the T2 plans, the Mega factories and the Institute's T2 upgrade they
+  open, and starting at T2 or T3. **Pilots** (Academy, ACE beacon,
   ejection, Core Fighter), **parts breaking** (arm, head, leg, backpack),
   **DP / stagger**, **shields** (block chance and size), **stealth and
   detection** (radar-hidden squads, detect and anti-detect ranges), **custom units**
@@ -76,8 +100,9 @@ worked around in this port.
   ground and space maps are left out.
 - **Extra currencies on the HUD.** Money, Resource, TechPoint, MP, War Level
   and Moral Point are global resources with their own HUD readouts; a mod has
-  one metal and no way to show another player resource. MoralPoint prices (the
-  Zaku II C asks 250) are dropped.
+  one metal and no way to show another player resource. TechPoint is kept by
+  the `gw.battle` package and read off the HQ's and Institute's cards instead;
+  MoralPoint prices (the Zaku II C asks 250) are dropped.
 - **Host options.** GW's in-match host menu (game mode, ground/space, resource,
   MP and tech multipliers, bullet speed, auto tile mode, ACE and PMC switches)
   has no place in Steel Tide's match setup; a mod cannot add setup options.
@@ -93,7 +118,11 @@ worked around in this port.
 ## Verification
 
 `game.test.ts` runs the real pack in the engine: both factions' start and
-builder loop, factory sales at source prices, the damage formula on a Zaku
+builder loop, factory sales at source prices, each faction's first plan
+researched at its headquarters (held for its TechPoint, unbilled, then
+opening its units), the Institute's TechPoint, a cancelled plan's refund and
+the TechPoint in a save, a computer side of each faction researching its
+plan, the damage formula on a Zaku
 machine gun against a Type 61 and infantry rifles against armour, EN use and
 refill, upkeep, the warhead's single shot, diving, loadout switching at a
 supply point, a save round trip, and a computer side of each faction building

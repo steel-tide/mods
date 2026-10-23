@@ -8,11 +8,11 @@ The original English and Chinese names and descriptions are retained. Missing Ch
 
 ## Use
 
-In Steel Tide, open **Settings → Mods → Add folder** and select this folder. Enable the pack before starting a match. It uses format 4, large capacity and the existing extension host API 2. Verification used game commit `cf9d38dcfa729ba84ceab3d85afdbd62901fe7b9`.
+In Steel Tide, open **Settings → Mods → Add folder** and select this folder. Enable the pack before starting a match. It uses format 4, large capacity and the existing extension host API 2. It needs a game build whose definitions accept `rotors` and a building's `sonar`; an older build refuses the pack at import.
 
 This is an additive pack. Native engineers gain the source construction links; EK barracks, support factories and carriers expose their own production. Units that cost experimental research use package recruitment actions, including on native factories, so both currencies are charged. Research-priced buildings wait for the shared resource before construction progresses. No separate starting faction is added.
 
-The conversion uses **10 RW credits = 1 metal**, **0.75 world pixels per RW pixel**, and **60 RW ticks = 1 second**. HP and damage values are retained in the package simulation. Footprints and bounded native fields have explicit adaptations in `conversion-report.json`. Units do not acquire an extra population or power cost absent from the source.
+The conversion uses **10 RW credits = 1 metal**, **0.75 world pixels per RW pixel**, and **60 RW ticks = 1 second**. A building's RW footprint rounds up to whole tiles and the building is drawn up to 1.5× larger to fill it. Aircraft RW flies as bombers fly as fixed wings; every other aircraft hovers, and each spins only the blades RW gives it. RW's green team mask becomes each player's colour. HP and damage values are retained in the package simulation. Footprints and bounded native fields have explicit adaptations in `conversion-report.json`. Units do not acquire an extra population or power cost absent from the source.
 
 中文：已保留全部 573 个有名称的源单位定义、原有中英文说明和原始素材，并补充缺失中文及韩文。此版本供本地审阅；尚未完全复现的机制、缺失素材和引擎限制详见兼容性报告。
 
@@ -60,4 +60,4 @@ node tools/pack.mjs mods/ek-definitive-edition
 
 `port.py` also regenerates the test map, specimen index and embedded extension package. `verify-browser.mjs` imports the actual folder in an isolated disposable Chrome profile, checks all definitions/assets, switches languages, selects the installed map in Conquest, and verifies its complete opening roster. It captures the gameplay screenshots and three map views. Set `EK_SOAK_SECONDS=60` to verify the idle map through a full minute of simulation with panning, fog and interpolated rendering, followed by explicit carrier activation. It expects the existing game Vite server at `http://127.0.0.1:5209`; override with `GAME_ORIGIN`. Evidence is in `verification/browser.json`, `verification/showcase-*.jpg` and `screenshots/`.
 
-The package code lives entirely under `extensions/ek-systems`. It uses the public host SDK; it does not copy or modify the game implementation. The port is submitted as unlisted at version 0.0.1. Automatic registry publication remains blocked by the selected cover's 16:9 aspect ratio; the registry currently requires 4:3 screenshots.
+The package code lives entirely under `extensions/ek-systems`. It uses the public host SDK; it does not copy or modify the game implementation. The port is submitted as unlisted at version 0.0.2. Automatic registry publication remains blocked by the selected cover's 16:9 aspect ratio; the registry currently requires 4:3 screenshots.

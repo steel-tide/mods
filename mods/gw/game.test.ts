@@ -8,10 +8,11 @@ import { prepareContentCapabilities } from '../../../steel-tide-game/game/core/s
 import { contentRuntime, createContentGame } from '../../../steel-tide-game/game/core/src/game/contentGame';
 import { getDef } from '../../../steel-tide-game/game/core/src/game/defs';
 import { newEnt } from '../../../steel-tide-game/game/core/src/game/state';
-import { cmdProduce } from '../../../steel-tide-game/game/core/src/game/orders';
+import { cmdCancelResearch, cmdProduce, cmdResearch, techMet } from '../../../steel-tide-game/game/core/src/game/orders';
+import { researchOffer } from '../../../steel-tide-game/game/core/src/game/tech';
 import { cmdRuleButton } from '../../../steel-tide-game/game/core/src/game/modRules';
 import { serializeGame, deserializeGame } from '../../../steel-tide-game/game/core/src/game/save';
-import { arena, arenaMap } from '../../../steel-tide-game/game/core/server/testkit/game';
+import { arena, arenaMap, stepUntil } from '../../../steel-tide-game/game/core/server/testkit/game';
 import { Terrain } from '../../../steel-tide-game/game/core/src/core/types';
 import { buildGameMap } from '../../../steel-tide-game/game/core/src/game/mapdefs';
 import { customMapToGameMap, parseCustomMap } from '../../../steel-tide-game/game/core/src/game/customMap';
@@ -35,6 +36,19 @@ function scene(fill = Terrain.Grass) {
 }
 const ticks = (g: any, n: number) => { for (let i = 0; i < n; i++) g.step(); };
 const en = (module: any, e: any) => (module.snapshot() as any).entities[e.id]?.en;
+const techPoint = (module: any, owner = 0): number => (module.snapshot() as any).techPoint?.[owner] ?? 0;
+const planOf = (faction: string) => manifest.tech.find((n: any) => n.factions.includes(faction));
+
+/** a faction's headquarters standing alone, with the tech tree on */
+function headquarters(faction: string) {
+  const base = arena({ mode: 'campaign', fog: false, dayNight: false, metal: 100000, popCap: 500 });
+  const cfg = { ...base.st.cfg, tech: true, players: base.st.cfg.players.map((p, i) => i === 0 ? { ...p, faction } : p) };
+  const g = createContentGame(cfg, arenaMap({ w: 96, h: 96 }), true);
+  const hq = newEnt(g.st, manifest.factions.find((f: any) => f.id === faction).headquarters, 0, 900, 900);
+  hq.site = false;
+  g.recomputePower();
+  return { g, hq, module: contentRuntime(g)!.module(CAP)! };
+}
 
 test('both factions start with their HQ and builder, and the HQ trains another builder', () => {
   expect(manifest.factions.map((f: any) => f.id)).toEqual(['gw-efsf-0079', 'gw-zeon-0079']);
@@ -219,6 +233,68 @@ test('the showcase map stands every definition, each where it was laid, and neit
   expect(g.st.projs.length).toBe(0);
   expect(laid.filter(e => e.dead || e.hp < hp.get(e.id)!).map(e => e.defId)).toEqual([]);
 }, 60000);
+
+for (const faction of ['gw-efsf-0079', 'gw-zeon-0079']) test(`${faction} researches its first plan at its headquarters, TechPoint first, and the plan opens its units`, () => {
+  const { g, hq, module } = headquarters(faction);
+  const plan = planOf(faction);
+  const ask = manifest.defs.find((d: any) => d.id === hq.defId).extensions[CAP].research[plan.id];
+  const units = manifest.defs.filter((d: any) => d.requires?.includes(plan.id));
+  expect(ask).toBe(1200);
+  expect(units.length).toBeGreaterThan(9);
+  expect(researchOffer(g.st, 0, hq.defId)).toEqual([plan.id]);
+  for (const u of units) expect(techMet(g.st, 0, u.id), u.id).toBe(false);
+  expect(cmdResearch(g, hq.id, plan.id)).toBe(true);
+  // the headquarters earns 7.5 TechPoint a second; until the plan's 1200 are in hand it waits, unbilled
+  const spent = g.st.players[0].stats.metalSpent;
+  ticks(g, 30 * 60);
+  expect(hq.research!.progress).toBe(0);
+  expect(g.st.players[0].stats.metalSpent).toBe(spent);
+  // the package's clock ticks whole seconds: 59 or 60 of them in a minute's ticks
+  expect(techPoint(module)).toBeGreaterThanOrEqual(7.5 * 59);
+  expect(techPoint(module)).toBeLessThanOrEqual(7.5 * 60);
+  expect(contentRuntime(g)!.inspect(hq, 0).rows.find(r => r.id === 'techPoint')?.tone).toBe('warning');
+  expect(stepUntil(g, () => g.st.players[0].tech?.includes(plan.id) === true, 30 * 240)).toBeGreaterThan(0);
+  expect(g.st.time).toBeGreaterThan(ask / 7.5 + plan.time - 2);
+  expect(g.st.players[0].stats.metalSpent - spent).toBeCloseTo(plan.cost, 0);
+  for (const u of units) expect(techMet(g.st, 0, u.id), u.id).toBe(true);
+  const factory = newEnt(g.st, units[0].producedBy[0], 0, 1300, 900);
+  factory.site = false;
+  ticks(g, 1);
+  expect(cmdProduce(g, factory.id, units[0].id)).toBe(true);
+}, 60000);
+
+test('an Institute adds its TechPoint; a plan taken off the queue gives its TechPoint back; both survive a save', () => {
+  const { g, hq, module } = headquarters('gw-zeon-0079');
+  const institute = newEnt(g.st, 'gw-institute-t1', 0, 1100, 900);
+  institute.site = false;
+  ticks(g, 30 * 10 + 1);
+  expect(techPoint(module)).toBeCloseTo((7.5 + 0.75) * 10, 6);
+  const state = module.snapshot() as any;
+  state.techPoint[0] = 5000;
+  module.restore(state);
+  const plan = planOf('gw-zeon-0079');
+  expect(cmdResearch(g, hq.id, plan.id)).toBe(true);
+  ticks(g, 30 * 5);
+  expect(hq.research!.progress).toBeGreaterThan(0);
+  expect(techPoint(module)).toBeLessThan(5000 - 1200 + 50);
+  const g2 = deserializeGame(serializeGame(g));
+  const m2 = contentRuntime(g2)!.module(CAP)!;
+  expect(techPoint(m2)).toBeCloseTo(techPoint(module), 6);
+  expect((m2.snapshot() as any).paid).toEqual({ [hq.id]: plan.id });
+  const before = techPoint(module);
+  expect(cmdCancelResearch(g, hq.id, 0)).toBe(true);
+  ticks(g, 2);
+  expect(techPoint(module)).toBeGreaterThanOrEqual(before + 1200);
+});
+
+for (const faction of ['gw-efsf-0079', 'gw-zeon-0079']) test(`a computer ${faction} side researches its first plan`, () => {
+  const config: any = { mode: 'sandbox', mapKey: 'greenfield', seed: 19, fog: false, popCap: 200, startMetal: 12000,
+    players: [{ isHuman: false, team: 0, faction }, { isHuman: true, team: 1 }] };
+  const g = createContentGame(config, buildGameMap(config));
+  const plan = planOf(faction).id;
+  // a computer side earns three quarters of the TechPoint: 1200 at 5.6 a second, then 30 seconds of work
+  expect(stepUntil(g, () => g.st.players[0].tech?.includes(plan) === true, 30 * 60 * 8)).toBeGreaterThan(0);
+}, 120000);
 
 test('every hull and turret sheet turns smoothly rather than in the 24 baked headings', () => {
   // the game turns a u./tur./dec. sheet live only when its pivotX is 0.5 (spriteLoader's liveRotated)

@@ -8,9 +8,9 @@ import { prepareContentCapabilities } from '../../../steel-tide-game/game/core/s
 import { contentRuntime, createContentGame } from '../../../steel-tide-game/game/core/src/game/contentGame';
 import { getDef } from '../../../steel-tide-game/game/core/src/game/defs';
 import { newEnt } from '../../../steel-tide-game/game/core/src/game/state';
-import { cmdContentAction, cmdProduce, cmdWorldRemove } from '../../../steel-tide-game/game/core/src/game/orders';
+import { cmdAttack, cmdAttackGround, cmdContentAction, cmdFire, cmdHelm, cmdProduce, cmdWorldRemove } from '../../../steel-tide-game/game/core/src/game/orders';
 import { serializeGame, deserializeGame, buildContentSnapshot } from '../../../steel-tide-game/game/core/src/game/save';
-import { arena, arenaMap } from '../../../steel-tide-game/game/core/server/testkit/game';
+import { arena, arenaMap, columns } from '../../../steel-tide-game/game/core/server/testkit/game';
 import { Terrain } from '../../../steel-tide-game/game/core/src/core/types';
 import { buildGameMap } from '../../../steel-tide-game/game/core/src/game/mapdefs';
 import { parseCustomMap, customMapToGameMap } from '../../../steel-tide-game/game/core/src/game/customMap';
@@ -269,4 +269,116 @@ test('independent source weapons fire and damage an enemy',()=>{
   const hp=b.hp;let shot=false;
   for(let i=0;i<240;i++){g.step();shot ||=g.st.projs.some(p=>p.src===a.id);if(b.dead||b.hp<hp)break;}
   expect(shot).toBe(true);expect(b.dead||b.hp<hp).toBe(true);
+});
+
+// Armed definitions that do not fire in a plain duel off a deep-water coast, as in RW: drones armed
+// only by their carrier's ammunition, strike helpers that expire, launchers
+// the AI fires and players work by action, rounds made by an action first,
+// a form that must land or deploy, and mines-only sweepers.
+const DUEL_EXEMPT:Record<string,string>={
+  'Ek_B1E-B':'carrier ammunition','Ek_B1E-B-UP':'carrier ammunition','Ek_B1E-F':'carrier ammunition','Ek_B1E-F-UP':'carrier ammunition',
+  'Ek_B1E-S':'carrier ammunition','Ek_B1E-S-UP':'carrier ammunition','Ek_Cordelia_drone':'carrier ammunition','Ek_Ophelia_drone':'carrier ammunition',
+  'Ek_NMC_DRONES':'carrier ammunition','Ek_NMC_RZ_DRONES':'carrier ammunition','Ek_TWH_DRONES':'carrier ammunition',
+  EkTCAIDbombdown:'expiring strike helper',EkTCAIDbombup:'expiring strike helper',EkTCAIDairtoair:'expiring strike helper',EkTCAIDbuster:'expiring strike helper',
+  EkTCAIDcarpet:'expiring strike helper',EkTCAIDcarpet2:'expiring strike helper',EkTCAIDnapalm:'expiring strike helper',
+  EkExperimentalWormTorpedo:'expiring helper',EkMultiLaserChain:'expiring helper',EkHunterDrone:'kamikaze helper',
+  EkWedgetail_new:'AI-only guns',EkCommsTruck:'AI-only guns',EkLaunchpad:'AI-only guns',EkCruiseMissileSilo:'AI-only guns',EkLargeNukeLauncher:'AI-only guns',
+  EkStranglerDeploy:'missiles built by action',experimentalDropship:'fires on land only',EkMinesweeper:'mines only',
+};
+const DUEL_TARGET:Record<string,string>={ground:'mbt',air:'heli',ship:'destroyer',sub:'sub'};
+function duel(defId:string,cat:string,ordered:boolean,seconds:number){
+  const base=arena({mode:'campaign',fog:false,dayNight:false,metal:10000000,popCap:500});
+  const g=createContentGame(base.st.cfg,arenaMap({w:128,h:128,fill:Terrain.Grass,paint:columns(64,128,Terrain.DeepWater)}),true);
+  for(const p of g.st.players)p.isHuman=true;
+  const d=getDef(defId),hurts=(x:any)=>!x.manual&&(x.direct>0||x.area>0||x.spawn||x.cascade);
+  const guns=d.extensions![ID].guns.filter((x:any)=>hurts(x)&&x.weapon.targets.includes(cat)&&x.range>=.5);
+  const near=guns.reduce((a:any,b:any)=>b.range<a.range?b:a),half=d.kind==='building'?Math.max(d.fw!,d.fh!)/2:0;
+  // a hull, a swimmer or an aircraft hunting a submarine works from the water
+  const water=d.kind==='building'?!!d.offshore:d.domain==='ship'||cat==='sub'&&(d.domain==='amphibious'||d.domain==='air');
+  const sx=(water?64.5+half:63.5-half)*32,sy=2048,D=Math.max((near.minRange??0)+.6,Math.min(near.range*.6,near.range-.5))*32;
+  const wet=cat==='ship'||cat==='sub';let tx=sx,ty=sy+D;
+  if(cat!=='air'&&wet!==water){tx=(wet?64.5:63.5)*32;ty=sy+Math.sqrt(Math.max(0,D*D-(tx-sx)**2));}
+  const e=newEnt(g.st,defId,0,sx,sy,d.kind==='building'?0:-Math.PI/2),t=newEnt(g.st,DUEL_TARGET[cat],1,tx,ty);
+  if(d.kind==='unit')e.holdPos=!ordered;t.holdFire=true;t.holdPos=true;
+  const hp=t.hp;
+  for(let i=0;i<seconds*30;i++){
+    if(ordered&&i===30)cmdAttack(g,[e.id],t.id);
+    g.step();
+    if(t.dead||t.hp<hp)return true;
+    if(e.dead||!g.st.ents.has(e.id))return false;
+  }
+  return false;
+}
+test('every armed definition damages each kind of target its guns name',()=>{
+  const failed:string[]=[];
+  for(const entry of inventory){
+    const d=getDef(entry.id),guns=(d.extensions?.[ID]?.guns??[]).filter((x:any)=>!x.manual&&(x.direct>0||x.area>0||x.spawn||x.cascade)&&x.range>=.5);
+    if(!guns.length||DUEL_EXEMPT[entry.rwName])continue;
+    for(const cat of new Set<string>(guns.flatMap((x:any)=>x.weapon.targets)))
+      if(!duel(entry.id,cat,false,12)&&!(d.kind==='unit'&&duel(entry.id,cat,true,25)))failed.push(entry.rwName+' vs '+cat);
+  }
+  expect(failed).toEqual([]);
+},300000);
+
+test('RW bombers fly as fixed wings; every other aircraft hovers; only blades RW spins are rotors',()=>{
+  expect(getDef(id('EkHammer')).hovers).toBeUndefined();
+  expect(getDef(id('EkInterceptor')).hovers).toBeUndefined();
+  expect(getDef(id('EkBuzzard')).hovers).toBe(true);
+  // an airship hovers on no rotor; the Condor's two blades counter-rotate in its own art; a dish stays an arm
+  expect(getDef(id('Ek_Zeppelin')).rotors).toEqual([]);
+  expect(getDef(id('EkKestrel')).rotors).toEqual([]);
+  const condor=getDef(id('EkCondor')).rotors!;
+  expect(condor).toHaveLength(2);expect(Math.sign(condor[0].spin!)).toBe(-Math.sign(condor[1].spin!));
+  expect(condor.every(r=>r.sprite?.startsWith('dec.'))).toBe(true);
+  expect(getDef(id('EkCarrierLarge')).rotors).toHaveLength(4);
+  expect(getDef(id('EkCarrierLarge')).extensions![ID].mounts.filter((m:any)=>m.id.startsWith('arm_')).length).toBe(3);
+});
+test('a building stands facing up: its turrets keep the source layout and train from it',()=>{
+  const {g,module}=scene(),e=newEnt(g.st,id('EkLargeArtillery'),0,1024,1024);ticks(g,2);
+  const barrels=(module.render!(e) as any).mounts.filter((m:any)=>m.sprite);
+  // the cannons stand forward of the base, above it on the screen, and rest pointing up
+  expect(barrels.some((m:any)=>m.y<e.y-10)).toBe(true);
+  for(const m of barrels)expect(Math.abs(m.angle+Math.PI/2)).toBeLessThan(.01);
+});
+test('turret art takes the turret scale, not the hull image scale',()=>{
+  const c=getDef(id('EkUnicornSmall')).extensions![ID],sheet=manifest.sprites.find((s:any)=>s.key===c.mounts.find((m:any)=>m.id==='2').sprite);
+  // unicorn_cocpit.png is 19 px wide; the hull's imageScale is 1.2 and the turrets have none
+  expect(sheet.fw).toBe(Math.round(19*.75/1.5625));
+});
+test('walls fill the footprint RW gives them',()=>{
+  for(const name of ['EkBrickwall1X','EkBrickwall2Y']){
+    const d=getDef(id(name)),sheet=manifest.sprites.find((s:any)=>s.key===d.sprite);
+    expect(sheet.fitFootprint).toBe(false);
+    expect(Math.max(sheet.fw/(d.fw!*32),sheet.fh/(d.fh!*32))).toBeLessThan(1.3);
+  }
+});
+test('RW pure-green faction paint becomes the game\'s team colour',()=>{
+  const body=(name:string)=>manifest.sprites.find((s:any)=>s.key===getDef(id(name)).sprite);
+  expect(body('Ek_heavyTankDrake').teams).toBe(true);
+  expect(body('EkBrickwall1X').teams).toBe(true);
+});
+
+test('the player aims the guns: force fire on a spot, the trigger under the helm, an attack on an ally',()=>{
+  // shots from the tank that land near the point it was told to shell
+  const shells=(g:any,e:any,x:number,y:number)=>g.st.projs.filter((p:any)=>p.src===e.id&&Math.hypot(p.tx-x,p.ty-y)<40).length;
+  {
+    const {g}=scene(),e=newEnt(g.st,id('Ek_heavyTankDrake'),0,900,900,-Math.PI/2);
+    cmdAttackGround(g,[e.id],1000,900);let seen=0;
+    for(let i=0;i<240&&!seen;i++){g.step();seen=shells(g,e,1000,900);}
+    expect(seen).toBeGreaterThan(0);
+  }
+  {
+    const {g}=scene(),e=newEnt(g.st,id('Ek_heavyTankDrake'),0,900,900,-Math.PI/2);
+    cmdHelm(g,[e.id],{dx:0,dy:0});cmdFire(g,[e.id],{x:900,y:1000});let seen=0;
+    for(let i=0;i<240&&!seen;i++){g.step();seen=shells(g,e,900,1000);}
+    expect(seen).toBeGreaterThan(0);
+  }
+  {
+    const {g}=scene(),e=newEnt(g.st,id('Ek_heavyTankDrake'),0,900,900,-Math.PI/2),ally=newEnt(g.st,'mbt',0,1000,900);
+    ally.holdFire=true;ally.holdPos=true;const hp=ally.hp;
+    ticks(g,60);expect(ally.hp).toBe(hp); // never on its own
+    cmdAttack(g,[e.id],ally.id);
+    for(let i=0;i<300&&ally.hp===hp;i++)g.step();
+    expect(ally.hp).toBeLessThan(hp);
+  }
 });
