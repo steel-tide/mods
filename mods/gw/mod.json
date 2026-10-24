@@ -8,7 +8,7 @@
     "高达战争：战争宇宙",
     "GW 배틀 유니버스"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "恐龙再健身房",
   "description": [
     "The One Year War, on your terms. Lead the Earth Federation's Type 61 tanks, GMs, Ground Type Gundams and the Big Tray, or Zeon's Zakus, Gouf Custom, Gogg and the Dabude. Research your side's next development plan, rearm mobile suits with bazookas, beam rifles or 180mm cannons, and dive submarines beneath the enemy fleet.",
@@ -204246,6 +204246,9 @@
     }
   ],
   "screenshots": [
-    "screenshots/odessa-coast.jpg"
+    "screenshots/odessa-coast.jpg",
+    "screenshots/showcase-1-federation.jpg",
+    "screenshots/showcase-2-gryps-battle.jpg",
+    "screenshots/showcase-3-archangel.jpg"
   ]
 }

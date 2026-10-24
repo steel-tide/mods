@@ -1635,7 +1635,7 @@ def main():
     manifest = {
         'format': 'steel-tide-mod', 'v': 4, 'capacity': 'large',
         'id': 'gw', 'name': ['GW BattleUniverse', '高达战争：战争宇宙', 'GW 배틀 유니버스'],
-        'version': '0.1.0', 'author': '恐龙再健身房',
+        'version': '0.1.1', 'author': '恐龙再健身房',
         'description': [
             "The One Year War, on your terms. Lead the Earth Federation's Type 61 tanks, GMs, Ground Type Gundams and the Big Tray, or Zeon's Zakus, Gouf Custom, Gogg and the Dabude. Research your side's next development plan, rearm mobile suits with bazookas, beam rifles or 180mm cannons, and dive submarines beneath the enemy fleet.",
             '一年战争，由你主宰。率领地球联邦军的61式坦克、吉姆、陆战型高达与大托盘级，或吉翁公国军的扎古、老虎特装型、战蟹与达布德级。研究己方的下一项开发计划，为机动战士换装火箭筒、光束步枪或180mm加农炮，再让潜艇潜入敌方舰队之下。',
