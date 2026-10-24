@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-24T03:34:00.425Z",
+  "generated": "2026-10-24T08:58:13.580Z",
   "mods": [
     {
       "id": "adolence",
@@ -25,7 +25,7 @@
       "updated": "2026-10-23T03:18:20-07:00",
       "published": "2026-09-20T15:16:26+08:00",
       "bytes": 1174839,
-      "downloads": 384,
+      "downloads": 388,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -6732,7 +6732,7 @@
       "updated": "2026-10-16T14:58:07+08:00",
       "published": "2026-10-14T19:00:56+08:00",
       "bytes": 11709377,
-      "downloads": 60,
+      "downloads": 62,
       "screenshots": [
         {
           "file": "covers/blackout-card.webp",
@@ -8289,7 +8289,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-28T08:53:21+08:00",
       "bytes": 1062988,
-      "downloads": 168,
+      "downloads": 170,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -11855,7 +11855,7 @@
       "updated": "2026-10-09T20:42:04+08:00",
       "published": "2026-09-27T14:59:28+08:00",
       "bytes": 579557,
-      "downloads": 192,
+      "downloads": 195,
       "screenshots": [
         {
           "file": "screenshots/cover.webp",
@@ -12147,7 +12147,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-08T12:34:52+08:00",
       "bytes": 3228772,
-      "downloads": 176,
+      "downloads": 177,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -12295,7 +12295,7 @@
       "updated": "2026-10-22T16:26:04+08:00",
       "published": "2026-10-19T12:25:54+08:00",
       "bytes": 43893759,
-      "downloads": 20,
+      "downloads": 21,
       "screenshots": [
         {
           "file": "screenshots/cover.png",
@@ -21074,7 +21074,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-08T22:53:58+08:00",
       "bytes": 15799328,
-      "downloads": 141,
+      "downloads": 142,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
