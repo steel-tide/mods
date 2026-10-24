@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-mod-index",
   "v": 1,
-  "generated": "2026-10-24T03:26:24.140Z",
+  "generated": "2026-10-24T03:34:00.425Z",
   "mods": [
     {
       "id": "adolence",
@@ -8289,7 +8289,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-28T08:53:21+08:00",
       "bytes": 1062988,
-      "downloads": 167,
+      "downloads": 168,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
@@ -12147,7 +12147,7 @@
       "updated": "2026-10-22T10:19:43+08:00",
       "published": "2026-09-08T12:34:52+08:00",
       "bytes": 3228772,
-      "downloads": 175,
+      "downloads": 176,
       "screenshots": [
         {
           "file": "screenshots/cover.jpg",
