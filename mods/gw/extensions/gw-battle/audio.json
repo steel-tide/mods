@@ -1,0 +1,117 @@
+{
+ "era": {
+  "0079": [
+   "gw-0079-01-remix",
+   "gw-0080-01-remix",
+   "gw-0081-01-remix",
+   "gw-bd-01-remix-byfinlee",
+   "gw-bd-02-remix-byfinlee",
+   "gw-cd-01-remix",
+   "gw-edf-05-remix",
+   "gw-gbol-01",
+   "gw-grnyb-01-remix",
+   "gw-grnyb-02-remix",
+   "gw-grnyb-03-remix",
+   "gw-grnyb-04-remix",
+   "gw-grnyb-05-remix",
+   "gw-grnyb-06-remix",
+   "gw-igloo-01-remix",
+   "gw-msgo-0079-remix",
+   "gw-msgo-0080-remix",
+   "gw-msgo-0083-remix",
+   "gw-msgo-0083-remix-v2",
+   "gw-msgo-battle01-remix",
+   "gw-msgo-battle02-remix",
+   "gw-missinglink-01-remix",
+   "gw-tb-01-remix"
+  ],
+  "0087": [
+   "gw-grnyb-03-remix",
+   "gw-grnyb-04-remix",
+   "gw-grnyb-05-remix",
+   "gw-grnyb-06-remix",
+   "gw-msgo-0087-remix",
+   "gw-msgo-0088-remix",
+   "gw-msgo-0093-remix",
+   "gw-msgo-0096-remix",
+   "gw-msgo-battle01-remix",
+   "gw-msgo-battle02-remix"
+  ],
+  "ce71": [
+   "gw-sdgo-0018-remix",
+   "gw-sdgo-lobby-a",
+   "gw-sdgo-lobby-b",
+   "gw-sdgo-0018-remix",
+   "gw-sdgo-glorious-zaft",
+   "gw-sdgo-city",
+   "gw-sdgo-gundam-vanguard",
+   "gw-seedastray-01-remix",
+   "gw-seed-01-remix",
+   "gw-seed-02-remix",
+   "gw-seed-03-remix",
+   "gw-seed-04-remix",
+   "gw-seed-05-remix",
+   "gw-seed-06-remix"
+  ]
+ },
+ "lines": {
+  "gameStart": [
+   "vc-noe-gamestart-1",
+   "vc-noe-gamestart-2"
+  ],
+  "win": [
+   "vc-noe-win-1"
+  ],
+  "lose": [
+   "vc-noe-lose-1"
+  ],
+  "baseUnderAttack": [
+   "vc-noe-baseunderattack-1"
+  ],
+  "allyACE": [
+   "vc-noe-allyace"
+  ],
+  "enemyACE": [
+   "vc-noe-enemyace"
+  ],
+  "allySupplyUnit": [
+   "vc-noe-allysupplyunit"
+  ],
+  "enemySupplyUnit": [
+   "vc-noe-enemysupplyunit"
+  ]
+ },
+ "picked": {
+  "gw-efsf-0079": [
+   "vc-revil-pick"
+  ],
+  "gw-zeon-0079": [
+   "vc-gihren-pick"
+  ],
+  "gw-aeug-0087": [
+   "vc-aeug-bks-pick"
+  ],
+  "gw-titans-0087": [
+   "vc-titans-jmtf-pick"
+  ],
+  "gw-neo-zeon-0087": [
+   "vc-neo-zeon-ham-pick"
+  ]
+ },
+ "assets": {
+  "vc-noe-gamestart-1": "voice/vc-noe-gamestart-1.mp3",
+  "vc-noe-gamestart-2": "voice/vc-noe-gamestart-2.mp3",
+  "vc-noe-win-1": "voice/vc-noe-win-1.mp3",
+  "vc-noe-lose-1": "voice/vc-noe-lose-1.mp3",
+  "vc-noe-baseunderattack-1": "voice/vc-noe-baseunderattack-1.mp3",
+  "vc-noe-allyace": "voice/vc-noe-allyace.mp3",
+  "vc-noe-enemyace": "voice/vc-noe-enemyace.mp3",
+  "vc-noe-allysupplyunit": "voice/vc-noe-allysupplyunit.mp3",
+  "vc-noe-enemysupplyunit": "voice/vc-noe-enemysupplyunit.mp3",
+  "vc-revil-pick": "voice/vc-revil-pick.mp3",
+  "vc-gihren-pick": "voice/vc-gihren-pick.mp3",
+  "vc-aeug-bks-pick": "voice/vc-aeug-bks-pick.mp3",
+  "vc-titans-jmtf-pick": "voice/vc-titans-jmtf-pick.mp3",
+  "vc-neo-zeon-ham-pick": "voice/vc-neo-zeon-ham-pick.mp3"
+ }
+}

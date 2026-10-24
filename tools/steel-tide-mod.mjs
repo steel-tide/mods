@@ -105,7 +105,9 @@ const STANDARD_CONTENT_LIMITS = Object.freeze({
   filesBytes: 24 * 1024 * 1024,
   hp: 1e6,
   extensionSourceBytes: 512 * 1024,
-  extensionAssets: 256
+  extensionAssets: 256,
+  maps: 8,
+  musicTracks: 32
 });
 const LARGE_CONTENT_LIMITS = Object.freeze({
   defs: 1024,
@@ -115,7 +117,9 @@ const LARGE_CONTENT_LIMITS = Object.freeze({
   filesBytes: 256 * 1024 * 1024,
   hp: 1e8,
   extensionSourceBytes: 2 * 1024 * 1024,
-  extensionAssets: 2048
+  extensionAssets: 2048,
+  maps: 16,
+  musicTracks: 64
 });
 function contentLimits(pack) {
   return pack.v === 4 && pack.capacity === "large" ? LARGE_CONTENT_LIMITS : STANDARD_CONTENT_LIMITS;
@@ -316,8 +320,16 @@ function preparedExtensionStamps() {
 function parts(pkg) {
   return [pkg.schema, pkg.runtime, ...pkg.presentation ? [pkg.presentation] : []];
 }
+const matched = /* @__PURE__ */ new WeakMap();
+function matchesVerified(code) {
+  const seen = matched.get(code);
+  if (seen && seen.sha256 === code.sha256 && seen.source === code.source) return true;
+  if (verifiedSources.get(code.sha256) !== code.source) return false;
+  matched.set(code, { sha256: code.sha256, source: code.source });
+  return true;
+}
 function preparedPackage(pkg) {
-  return parts(pkg).every((code) => verifiedSources.get(code.sha256) === code.source) ? schemas.get(extensionPackageStamp(pkg)) : void 0;
+  return parts(pkg).every(matchesVerified) ? schemas.get(extensionPackageStamp(pkg)) : void 0;
 }
 function preparePackageSchemas(packages, trust = false, limits = STANDARD_CONTENT_LIMITS) {
   if (!trust && packages.some((pkg) => !isTrustedExtension(extensionPackageStamp(pkg))))
@@ -474,7 +486,6 @@ const STRINGS = {
   "module.ready": ["Ready", "就绪", "준비 완료"],
   "module.busy": ["In progress", "进行中", "진행 중"],
   "module.target": ["Target", "目标", "대상"],
-  "module.confirm": ["Give order", "下达指令", "명령 내리기"],
   "module.failed": ["The action is unavailable now.", "当前无法执行此操作。", "지금은 이 작업을 수행할 수 없습니다."],
   "module.restoring": ["The server is restoring its content. Please reconnect shortly.", "服务器正在恢复内容，请稍后重新连接。", "서버가 콘텐츠를 복원하고 있습니다. 잠시 후 다시 연결하세요."],
   "module.required": ["This room requires engine capabilities this client does not support.", "此房间需要当前客户端不支持的引擎功能。", "이 방에는 현재 클라이언트에서 지원하지 않는 엔진 기능이 필요합니다."],
@@ -4124,6 +4135,28 @@ const STRINGS = {
   "mods.searchNone": ['Nothing matches "{0}".', "没有匹配“{0}”的模组。", '"{0}"에 맞는 모드가 없습니다.'],
   "mods.install": ["Install", "安装", "설치"],
   "mods.installedMark": ["Installed", "已安装", "설치됨"],
+  "mods.terms.title": ["Community mod terms", "社区模组条款", "커뮤니티 모드 약관"],
+  "mods.terms.intro": [
+    "Mods are made by independent players, not by Steel Tide, and some run their own code on your device. You install them at your own risk. By continuing, you agree that:",
+    "模组由独立玩家制作，并非钢铁浪潮出品，部分模组会在你的设备上运行其自带的代码。安装风险由你自行承担。继续即表示你同意：",
+    "모드는 스틸 타이드가 아닌 개별 플레이어가 만들며, 일부 모드는 자체 코드를 기기에서 실행합니다. 설치에 따른 위험은 본인이 부담합니다. 계속하면 다음 내용에 동의하는 것으로 간주됩니다."
+  ],
+  "mods.terms.creator": [
+    "The creator alone is responsible for the mod and its content, including any dispute or claim over copyright, trademark or other rights.",
+    "模组及其内容的全部责任由其创作者承担，包括涉及版权、商标或其他权利的任何争议或索赔。",
+    "모드와 그 콘텐츠에 대한 모든 책임은 제작자에게 있으며, 저작권·상표권 등 권리에 관한 모든 분쟁이나 청구도 이에 포함됩니다."
+  ],
+  "mods.terms.framework": [
+    "Steel Tide is only the framework that runs mods. Mods are provided as is, with no guarantee of quality, safety or compatibility, and to the extent the law allows, Steel Tide is not liable for any loss they cause.",
+    "钢铁浪潮仅为运行模组的框架。模组按“现状”提供，不对其质量、安全性或兼容性作任何保证；在法律允许的范围内，钢铁浪潮不对模组造成的任何损失承担责任。",
+    "스틸 타이드는 모드를 실행하는 프레임워크일 뿐입니다. 모드는 있는 그대로 제공되며 품질, 안전성, 호환성을 보증하지 않습니다. 법이 허용하는 범위에서 스틸 타이드는 모드로 인한 어떠한 손실에도 책임을 지지 않습니다."
+  ],
+  "mods.terms.report": [
+    "To report a mod that is inappropriate or infringes your rights, email {0}. Steel Tide may remove any mod from the registry at any time.",
+    "如发现不当或侵犯你权利的模组，请发送邮件至 {0} 举报。钢铁浪潮可随时将任何模组从官方仓库下架。",
+    "부적절하거나 권리를 침해하는 모드는 {0}(으)로 신고해 주세요. 스틸 타이드는 언제든지 어떤 모드든 레지스트리에서 내릴 수 있습니다."
+  ],
+  "mods.terms.agree": ["I have read and agree", "我已阅读并同意", "읽었으며 동의합니다"],
   "mods.add": ["Add your own", "添加自制模组", "직접 만든 모드 추가"],
   "mods.add.file": ["Upload file", "上传文件", "파일 업로드"],
   "mods.add.folder": ["Open folder", "打开文件夹", "폴더 열기"],
@@ -4601,6 +4634,10 @@ const STRINGS = {
   "pad.hint.orderAt": ["Order here", "在此下令", "여기에 명령"],
   "pad.hint.zoom": ["Zoom", "缩放", "확대/축소"],
   "pad.hint.letGo": ["Let go", "结束操控", "조종 해제"],
+  // the battery on the trigger (`game/helmWeapons.ts`): the d-pad turns it, 1–4 pick it, Shift fires them all
+  "pad.hint.weapon": ["Weapon", "武器", "무기"],
+  "hint.helmWeapon": ["Weapon", "武器", "무기"],
+  "hint.fireAll": ["Fire all", "全部开火", "전체 발사"],
   "pad.hint.place": ["Place", "放置", "놓기"],
   "pad.hint.keepPlacing": ["Hold: keep placing", "按住：连续放置", "누르고 있기: 계속 놓기"],
   "pad.hint.nudge": ["Nudge", "微调", "미세 조정"],
@@ -10418,10 +10455,10 @@ const MAX_DEF_DECALS = 12;
 const MAX_DEF_MOUNTS = 8;
 const MAX_DEF_ROTORS = 8;
 const MAX_MOD_SOUNDS = STANDARD_CONTENT_LIMITS.sounds;
-const MAX_MOD_MUSIC_TRACKS = 32;
+const MAX_MOD_MUSIC_TRACKS = STANDARD_CONTENT_LIMITS.musicTracks;
 const MAX_MOD_MUSIC_QUEUE = 64;
 const MAX_MOD_SCREENSHOTS = 8;
-const MAX_MOD_MAPS = 8;
+const MAX_MOD_MAPS = STANDARD_CONTENT_LIMITS.maps;
 const MAX_MOD_MAP_BYTES = 512 * 1024;
 const MIN_SCREENSHOT_WIDTH = 640;
 const MAX_SCREENSHOT_BYTES = 2 * 1024 * 1024;
@@ -10449,7 +10486,7 @@ const DECAL_LAYERS = ["under", "hull", "over"];
 const DECAL_ANCHORS = ["hull", "turret"];
 const DECAL_WHENS = ["always", "moving", "still", "firing", "damaged", "night", "ability"];
 const MANIFEST_SPECS = [
-  { name: "capacity", type: "enum", values: ["standard", "large"], def: "standard", doc: [`format 4: large allows ${LARGE_CONTENT_LIMITS.defs} defs, ${LARGE_CONTENT_LIMITS.sprites} sheets, ${LARGE_CONTENT_LIMITS.sounds} sounds, ${LARGE_CONTENT_LIMITS.manifestBytes / 1048576} MiB metadata and ${LARGE_CONTENT_LIMITS.filesBytes / 1048576} MiB stored data URLs; standard keeps ${MAX_MOD_DEFS}/${MAX_MOD_SPRITES}/${MAX_MOD_SOUNDS}, ${MAX_MANIFEST_BYTES / 1048576}/${MAX_MOD_FILES_BYTES / 1048576} MiB`, `格式 4：large 允许 ${LARGE_CONTENT_LIMITS.defs} 个定义、${LARGE_CONTENT_LIMITS.sprites} 张图、${LARGE_CONTENT_LIMITS.sounds} 个音效、${LARGE_CONTENT_LIMITS.manifestBytes / 1048576} MiB 元数据和 ${LARGE_CONTENT_LIMITS.filesBytes / 1048576} MiB 已编码资源；standard 保留 ${MAX_MOD_DEFS}/${MAX_MOD_SPRITES}/${MAX_MOD_SOUNDS} 和 ${MAX_MANIFEST_BYTES / 1048576}/${MAX_MOD_FILES_BYTES / 1048576} MiB 限额`] },
+  { name: "capacity", type: "enum", values: ["standard", "large"], def: "standard", doc: [`format 4: large allows ${LARGE_CONTENT_LIMITS.defs} defs, ${LARGE_CONTENT_LIMITS.sprites} sheets, ${LARGE_CONTENT_LIMITS.sounds} sounds, ${LARGE_CONTENT_LIMITS.maps} maps, ${LARGE_CONTENT_LIMITS.musicTracks} music tracks, ${LARGE_CONTENT_LIMITS.manifestBytes / 1048576} MiB metadata and ${LARGE_CONTENT_LIMITS.filesBytes / 1048576} MiB stored data URLs; standard keeps ${MAX_MOD_DEFS}/${MAX_MOD_SPRITES}/${MAX_MOD_SOUNDS}/${MAX_MOD_MAPS}/${MAX_MOD_MUSIC_TRACKS}, ${MAX_MANIFEST_BYTES / 1048576}/${MAX_MOD_FILES_BYTES / 1048576} MiB`, `格式 4：large 允许 ${LARGE_CONTENT_LIMITS.defs} 个定义、${LARGE_CONTENT_LIMITS.sprites} 张图、${LARGE_CONTENT_LIMITS.sounds} 个音效、${LARGE_CONTENT_LIMITS.maps} 张地图、${LARGE_CONTENT_LIMITS.musicTracks} 首音乐、${LARGE_CONTENT_LIMITS.manifestBytes / 1048576} MiB 元数据和 ${LARGE_CONTENT_LIMITS.filesBytes / 1048576} MiB 已编码资源；standard 保留 ${MAX_MOD_DEFS}/${MAX_MOD_SPRITES}/${MAX_MOD_SOUNDS}/${MAX_MOD_MAPS}/${MAX_MOD_MUSIC_TRACKS} 和 ${MAX_MANIFEST_BYTES / 1048576}/${MAX_MOD_FILES_BYTES / 1048576} MiB 限额`] },
   { name: "requiredCapabilities", type: "capabilities", min: 1, max: 32, doc: ["Required package-provided capability IDs", "由扩展包提供的必需能力 ID"] },
   { name: "extensionPackages", type: "extensionPackages", doc: ["Versioned extension packages with SHA-256 verified schema, simulation and optional presentation modules (format 4)", "含 SHA-256 校验的配置验证、模拟和可选显示模块的版本化扩展包（格式 4）"] },
   { name: "format", type: "string", required: true, doc: [`always "${MOD_FORMAT}"`, `固定为 "${MOD_FORMAT}"`] },
@@ -10472,7 +10509,7 @@ const MANIFEST_SPECS = [
   { name: "menuBackground", type: "menuBackground", doc: ["ordered home-menu cut queue, mixing original scenes and this pack’s maps (see below)", "主页背景镜头的顺序队列，可混用原版场景与本模组地图（见下）"] },
   { name: "sounds", type: "sounds", doc: ["the recordings the weapons fire with (see below)", "武器开火时播放的录音（见下）"] },
   { name: "screenshots", type: "images", doc: [`pictures of the mod in play, relative to mod.json (\`screenshots/1.png\`): 4:3, at least ${MIN_SCREENSHOT_WIDTH} px wide, under ${MAX_SCREENSHOT_BYTES / 1048576} MB each, up to ${MAX_MOD_SCREENSHOTS}. The registry asks for at least one and shows them on the mod's page`, `模组游玩截图，路径相对 mod.json（\`screenshots/1.png\`）：4:3，宽至少 ${MIN_SCREENSHOT_WIDTH} 像素，每张不超过 ${MAX_SCREENSHOT_BYTES / 1048576} MB，最多 ${MAX_MOD_SCREENSHOTS} 张。仓库要求至少一张，并展示在模组页面上`] },
-  { name: "maps", type: "maps", doc: [`maps the mod carries, relative to mod.json (\`maps/city.steel-tide-map\`): files exported from the Scenario Editor, up to ${MAX_MOD_MAPS}, each under ${MAX_MOD_MAP_BYTES / 1024} KB. A map may stand the mod's own units; the setup screens offer it beside the player's own map while the mod is on`, `模组自带的地图，路径相对 mod.json（\`maps/city.steel-tide-map\`）：场景编辑器导出的文件，最多 ${MAX_MOD_MAPS} 张，每张不超过 ${MAX_MOD_MAP_BYTES / 1024} KB。地图上可以预置本模组的单位；模组开启时，设置界面会把它列在自定义地图旁`] },
+  { name: "maps", type: "maps", doc: [`maps the mod carries, relative to mod.json (\`maps/city.steel-tide-map\`): files exported from the Scenario Editor, up to ${MAX_MOD_MAPS} (${LARGE_CONTENT_LIMITS.maps} with large capacity), each under ${MAX_MOD_MAP_BYTES / 1024} KB. A map may stand the mod's own units; the setup screens offer it beside the player's own map while the mod is on`, `模组自带的地图，路径相对 mod.json（\`maps/city.steel-tide-map\`）：场景编辑器导出的文件，最多 ${MAX_MOD_MAPS} 张（large 容量 ${LARGE_CONTENT_LIMITS.maps} 张），每张不超过 ${MAX_MOD_MAP_BYTES / 1024} KB。地图上可以预置本模组的单位；模组开启时，设置界面会把它列在自定义地图旁`] },
   { name: "files", type: "files", doc: ["single-file form only: the sheets, sounds, music and maps, embedded as data URLs by path", "仅单文件形式：按路径内嵌的图片、音频与地图（data URL）"] }
 ];
 const DEF_SPECS = [
@@ -10533,6 +10570,7 @@ const DEF_SPECS = [
   { name: "interceptMuzzleOffset", type: "number", min: 0, max: 200, doc: ["point defence: launcher length, world px", "拦截：发射器长度（世界像素）"] },
   { name: "transportCap", type: "int", only: "unit", min: 1, max: 50, doc: ["a transport: hold, in cargo weight", "运输载具：载重"] },
   { name: "transportMaxWeight", type: "number", only: "unit", min: 0, max: 50, def: "transportCap", doc: ["a transport: maximum cargo weight of one passenger", "运输载具：单个乘员的最大载重"] },
+  { name: "transportDomain", type: "enum", values: ["ground", "air"], only: "unit", def: "ground", doc: ["a transport: what its hold takes, ground units or aircraft; aircraft fly aboard and are launched ahead of the bow, as from the carrier's hangar", "运输载具：载舱装载的对象，地面单位或飞机；飞机自行飞入，并从舰首前方放出，如同航母机库"] },
   { name: "cargoReach", type: "number", only: "unit", min: 0.5, max: 4, def: "1", doc: ["a transport: how far its load and unload distances stretch, as a multiple of the default (the landing craft's 1.1, the Moray's 1.5); on a ship it widens the ground its ramp reaches too", "运输载具：装卸距离相对默认值的倍率（登陆艇 1.1，海鳗 1.5）；舰船的卸载落点范围也随之扩大"] },
   { name: "landsForCargo", type: "bool", only: "unit", doc: ["a cargo plane that touches down to load", "装卸时降落的运输机"] },
   { name: "cargoWeight", type: "number", only: "unit", min: 0, max: 50, def: "pop", doc: ["how much of a hold it takes", "占用的载重"] },
@@ -10680,7 +10718,7 @@ const MENU_CUT_SPECS = [
   { name: "orders", type: "menuOrders", doc: ["opening attack-move targets for the map’s mobile units, by owner", "按所属方为地图上的移动单位指定初始攻击移动目标"] }
 ];
 const MUSIC_SPECS = [
-  { name: "tracks", type: "musicTracks", doc: [`up to ${MAX_MOD_MUSIC_TRACKS} custom recordings, each with an id and file`, `最多 ${MAX_MOD_MUSIC_TRACKS} 首自定义录音，每首包含 id 和 file`] },
+  { name: "tracks", type: "musicTracks", doc: [`up to ${MAX_MOD_MUSIC_TRACKS} custom recordings (${LARGE_CONTENT_LIMITS.musicTracks} with large capacity), each with an id and file`, `最多 ${MAX_MOD_MUSIC_TRACKS} 首自定义录音（large 容量 ${LARGE_CONTENT_LIMITS.musicTracks} 首），每首包含 id 和 file`] },
   { name: "menu", type: "musicQueue", doc: ["ordered repeating queue for menus; also used for setup unless setup is supplied. Omitted keeps the previous queue; [] is silence", "菜单循环顺序队列；未指定 setup 时也用于对局设置。省略保留之前的队列；[] 表示静音"] },
   { name: "setup", type: "musicQueue", doc: ["optional separate queue for match setup", "可选的对局设置独立队列"] },
   { name: "battle", type: "musicQueue", doc: [`ordered repeating queue during battle. Omitted keeps the previous queue; [] is silence. Built-in IDs: ${Object.values(MUSIC_FILES).flat().join(", ")}`, `战斗中的循环顺序队列。省略保留之前的队列；[] 表示静音。原版曲目 id：${Object.values(MUSIC_FILES).flat().join("、")}`] }
@@ -10919,7 +10957,7 @@ function checkField(spec, value, path, issues) {
       }
       return true;
     case "maps":
-      if (!Array.isArray(value) || value.length > MAX_MOD_MAPS) return bad(`must be a list of up to ${MAX_MOD_MAPS} map paths`);
+      if (!Array.isArray(value) || value.length > LARGE_CONTENT_LIMITS.maps) return bad(`must be a list of up to ${LARGE_CONTENT_LIMITS.maps} map paths`);
       for (const x of value) {
         if (typeof x !== "string" || !FILE_RE.test(x)) return bad(`"${String(x)}" is not a relative path inside the mod`);
         if (!MAP_FILE_RE.test(x)) return bad(`${x} is not a .steel-tide-map file`);
@@ -10997,7 +11035,7 @@ function checkField(spec, value, path, issues) {
     case "musicQueue":
       return Array.isArray(value) && value.length <= MAX_MOD_MUSIC_QUEUE && value.every((id) => typeof id === "string" && ID_RE.test(id)) || bad(`must be a list of up to ${MAX_MOD_MUSIC_QUEUE} track ids`);
     case "musicTracks":
-      return Array.isArray(value) && value.length <= MAX_MOD_MUSIC_TRACKS || bad(`must be a list of up to ${MAX_MOD_MUSIC_TRACKS} tracks`);
+      return Array.isArray(value) && value.length <= LARGE_CONTENT_LIMITS.musicTracks || bad(`must be a list of up to ${LARGE_CONTENT_LIMITS.musicTracks} tracks`);
     case "techNodes":
       return Array.isArray(value) && value.length <= MAX_MOD_TECH || bad(`must be a list of up to ${MAX_MOD_TECH} research nodes`);
     case "weapons":
@@ -11099,6 +11137,10 @@ function parseDefinitionPack(input) {
   if (sprites.length > limits.sprites) errors.push({ path: "mod.sprites", message: `at most ${limits.sprites} sheets` });
   const sounds = head.sounds ?? [];
   if (sounds.length > limits.sounds) errors.push({ path: "mod.sounds", message: `at most ${limits.sounds} sounds` });
+  const maps = Array.isArray(head.maps) ? head.maps : [];
+  if (maps.length > limits.maps) errors.push({ path: "maps", message: `must be a list of up to ${limits.maps} map paths for ${head.capacity ?? "standard"} capacity` });
+  const tracks = isPlainObject$1(head.music) && Array.isArray(head.music.tracks) ? head.music.tracks : [];
+  if (tracks.length > limits.musicTracks) errors.push({ path: "music.tracks", message: `must be a list of up to ${limits.musicTracks} tracks for ${head.capacity ?? "standard"} capacity` });
   if (errors.length > 0) return { ok: false, errors, warnings };
   const files = head.files;
   if (files) {
@@ -12508,7 +12550,7 @@ function agentPrompt() {
   p();
   p(`\`name\`, \`description\` and every \`desc\`/\`name\` on a def are *text*: a string (used for every language), \`["English", "中文", "한국어"]\` in that order, or \`{ ${LANGS.map((l) => `"${l}": "…"`).join(", ")} }\`. Only English is required; a language left out reads as English.`);
   p();
-  p(`Capacity is an installation-time declaration. Omit it for the existing ordinary limits, or set \`capacity: "large"\` in format 4 for ${LARGE_CONTENT_LIMITS.defs} definitions and entries per production/build/reference list (ordinary lists allow 64), ${LARGE_CONTENT_LIMITS.sprites} sheets, ${LARGE_CONTENT_LIMITS.sounds} sounds, ${LARGE_CONTENT_LIMITS.manifestBytes / 1048576} MiB of metadata and ${LARGE_CONTENT_LIMITS.filesBytes / 1048576} MiB of stored data URLs. Large packs allow ${LARGE_CONTENT_LIMITS.hp} HP per definition and ${LARGE_CONTENT_LIMITS.extensionSourceBytes / 1048576} MiB per executable module; their combined source and configuration must still fit the metadata budget. All path, identity, reference and adds-only checks still apply. Budgets do not preallocate runtime memory. Ordinary multiplayer transfers manifests; players install the asset bytes locally.`);
+  p(`Capacity is an installation-time declaration. Omit it for the existing ordinary limits, or set \`capacity: "large"\` in format 4 for ${LARGE_CONTENT_LIMITS.defs} definitions and entries per production/build/reference list (ordinary lists allow 64), ${LARGE_CONTENT_LIMITS.sprites} sheets, ${LARGE_CONTENT_LIMITS.sounds} sounds, ${LARGE_CONTENT_LIMITS.maps} maps, ${LARGE_CONTENT_LIMITS.musicTracks} music tracks, ${LARGE_CONTENT_LIMITS.manifestBytes / 1048576} MiB of metadata and ${LARGE_CONTENT_LIMITS.filesBytes / 1048576} MiB of stored data URLs. Large packs allow ${LARGE_CONTENT_LIMITS.hp} HP per definition and ${LARGE_CONTENT_LIMITS.extensionSourceBytes / 1048576} MiB per executable module; their combined source and configuration must still fit the metadata budget. All path, identity, reference and adds-only checks still apply. Budgets do not preallocate runtime memory. Ordinary multiplayer transfers manifests; players install the asset bytes locally.`);
   p();
   p("### Extension packages (format 4)");
   p();
@@ -12520,7 +12562,7 @@ function agentPrompt() {
   p();
   p("For locally chosen content, game/API consumers must `await prepareContentSchema(raw, true)` before synchronously calling `parseDefinitionPack(raw)` or `parseMod(raw)` on capability-bearing content; await `prepareContentCapabilities(packs)` before opening a match. For a world, prepare its embedded packs by passing the raw world to `prepareContentSchema`. Registry tooling likewise explicitly approves local files. Network inputs use `prepareContentSchema(raw)` and cannot approve unknown code. Read the extension framework guide in the mod repository for package ownership, trust and SDK details. Never ignore a schema or capability loading failure.");
   p();
-  p("The shared inspection model exposes private state and available actions only to authorized viewers. Actions go through `contentAction` and the ordinary commands/orders gateway. The CLI exposes the same interface with `steel content-action <units> <module> <action> [--choice id] [--target id] [--at x,y]`. Port only source combinations the contract represents faithfully; omit and document unsupported behavior.");
+  p("The shared inspection model exposes private state and available actions only to authorized viewers. Actions go through `contentAction` and the ordinary commands/orders gateway. An action that names a `target` (`ground`, `own`, `ally` or `enemy`) is aimed on the map as a warhead launch is: the next click gives its point or the unit under it. The CLI exposes the same interface with `steel content-action <units> <module> <action> [--choice id] [--target id] [--at x,y]`. Port only source combinations the contract represents faithfully; omit and document unsupported behavior.");
   p();
   p("### A faction (`factions[]`, format 2)");
   p();
@@ -12636,7 +12678,7 @@ function agentPrompt() {
   p();
   p("## Maps");
   p();
-  p(`A mod may carry maps: files the game's Scenario Editor exports (\`${CUSTOM_MAP_EXT}\`), named under \`maps\` in mod.json, up to ${MAX_MOD_MAPS} of them and each under ${MAX_MOD_MAP_BYTES / 1024} KB. While the mod is on, the Conquest setup and the lobby offer them as cards beside the player's own map; choosing one plays it exactly as painted. A map may stand the mod's own units and buildings before the whistle: with the mod on, they are in the editor's forces palette, and the map reads on any game that has the mod (the registry checks it against the mod's own defs, not the vanilla roster). A scene laid this way — a base built up, a horde at the gate — is how a mod shows what it is without a word.`);
+  p(`A mod may carry maps: files the game's Scenario Editor exports (\`${CUSTOM_MAP_EXT}\`), named under \`maps\` in mod.json, up to ${MAX_MOD_MAPS} of them (${LARGE_CONTENT_LIMITS.maps} in a large pack) and each under ${MAX_MOD_MAP_BYTES / 1024} KB. While the mod is on, the Conquest setup and the lobby offer them as cards beside the player's own map; choosing one plays it exactly as painted. A map may stand the mod's own units and buildings before the whistle: with the mod on, they are in the editor's forces palette, and the map reads on any game that has the mod (the registry checks it against the mod's own defs, not the vanilla roster). A scene laid this way — a base built up, a horde at the gate — is how a mod shows what it is without a word.`);
   p();
   p("## Units of measure");
   p();

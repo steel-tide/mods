@@ -53,6 +53,7 @@ def _py(expr, state):
         (r'self\.tags\(\s*includes\s*=\s*\'(\w+)\'\s*\)', lambda m: str(m[1] in state.tags)),
         (r'self\.hasTags\(\s*includes\s*=\s*\'(\w+)\'\s*\)', lambda m: str(m[1] in state.tags)),
         (r'(?:self\.)?parent\.(?:hasTags|tags)\([^)]*\)', 'False'),
+        (r'self\.hasParent\(\)', 'False'),
         (r'parent\.hp', '0'), (r'self\.parent\.hp', '0'),
         (r'self\.maxHp', '1'), (r'self\.hp', '1'), (r'self\.shield', '0'), (r'self\.speed', '1' if state.moving else '0'),
         (r'self\.height', str(state.height)), (r'self\.teamId', '0'), (r'self\.queueSize\(\)', '0'),

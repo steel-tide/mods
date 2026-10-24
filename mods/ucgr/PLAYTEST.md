@@ -1,8 +1,8 @@
-# UCGR 0.0.1 playtest
+# UCGR 0.0.2 playtest
 
 Use the current local game checkout and import `mods/ucgr`, the folder with
 `mod.json`. In Settings → Mods, reload the installed folder (or import it again),
-confirm **0.0.1** is enabled, and start a **new match**. An old match retains its
+confirm **0.0.2** is enabled, and start a **new match**. An old match retains its
 old definitions. The original `rusted-warfare-mods/usgr-re` folder is source,
 not the playable pack.
 

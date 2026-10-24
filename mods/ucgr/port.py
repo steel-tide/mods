@@ -322,7 +322,7 @@ def main():
     # No unsupported mechanics are represented by approximate rule programs.
     capabilities = sorted({cap for d in defs for cap in d.get('extensions', {})} |
                           {cap for d in defs for w in d['weapons'] for cap in w.get('extensions', {})})
-    manifest={'format':'steel-tide-mod','v':4,'capacity':'large','id':MOD_ID,'version':'0.0.1','hideFromListing':True,'minGame':'0.8.15',
+    manifest={'format':'steel-tide-mod','v':4,'capacity':'large','id':MOD_ID,'version':'0.0.2','hideFromListing':True,'minGame':'0.8.15',
               'requiredCapabilities': capabilities,
               'extensionPackages': [package],
               'name':['UCGR','UCGR','UCGR'],

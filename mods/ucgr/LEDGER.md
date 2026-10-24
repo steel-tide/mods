@@ -1,6 +1,6 @@
 # UCGR source-to-port ledger — 2026-10-19
 
-Pack version **0.0.1**, 366 definitions, 553 sheets, 50 ordinary sounds, 312
+Pack version **0.0.2**, 366 definitions, 553 sheets, 50 ordinary sounds, 312
 extension assets. Seven national rosters recruit 323 source combat units
 (ru 75, cn 81, us 47, eu 53, kp 36, kr 24, jp 6). Host: extension API 2, large
 capacity. No game code changed; work stays local on `main`, unpushed.

@@ -2,7 +2,7 @@
 
 A local Steel Tide port of **UCGR-RE v4.3 / 巨浪 v1.29.6 信息战 20261004**,
 by **GY工作室 / GY Studio**. Original player group: **1106943912**.
-Version **0.0.1** carries its own executable extension and assets in this folder.
+Version **0.0.2** carries its own executable extension and assets in this folder.
 It requires the generic **extension host API 2** and large content capacity.
 The ordinary game version string alone does not establish compatibility.
 The pack ID and folder are `ucgr`; existing unit, sprite and extension IDs
@@ -20,7 +20,7 @@ The available host APIs do not by themselves establish original-mod parity.
 In **Settings → Mods → Open folder**, select `steel-tide-mods/mods/ucgr`,
 the folder containing this README and `mod.json`. The original
 `rusted-warfare-mods/usgr-re` folder is source material, not a Steel Tide pack.
-Reload or reimport an installed copy, verify version **0.0.1**, and start a
+Reload or reimport an installed copy, verify version **0.0.2**, and start a
 **new match**. Select a UCGR national faction or **Crossroads Exercise**.
 Installing content does not replace the current faction or an existing match.
 

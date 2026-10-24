@@ -223,7 +223,7 @@ Unknown ordinary fields produce a warning. Each extension package defines and va
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
-| `capacity` | standard \| large |  | standard | format 4: large allows 1024 defs, 2048 sheets, 512 sounds, 4 MiB metadata and 256 MiB stored data URLs; standard keeps 200/192/60, 1/24 MiB |
+| `capacity` | standard \| large |  | standard | format 4: large allows 1024 defs, 2048 sheets, 512 sounds, 16 maps, 64 music tracks, 4 MiB metadata and 256 MiB stored data URLs; standard keeps 200/192/60/8/32, 1/24 MiB |
 | `requiredCapabilities` | capability id[] |  |  | Required package-provided capability IDs |
 | `extensionPackages` | { id, version, api, capabilities, schema, runtime, presentation? }[] |  |  | Versioned extension packages with SHA-256 verified schema, simulation and optional presentation modules (format 4) |
 | `format` | string | yes |  | always "steel-tide-mod" |
@@ -246,12 +246,12 @@ Unknown ordinary fields produce a warning. Each extension package defines and va
 | `menuBackground` | { cuts, queue } |  |  | ordered home-menu cut queue, mixing original scenes and this pack’s maps (see below) |
 | `sounds` | sound[] |  |  | the recordings the weapons fire with (see below) |
 | `screenshots` | path[] |  |  | pictures of the mod in play, relative to mod.json (`screenshots/1.png`): 4:3, at least 640 px wide, under 2 MB each, up to 8. The registry asks for at least one and shows them on the mod's page |
-| `maps` | string |  |  | maps the mod carries, relative to mod.json (`maps/city.steel-tide-map`): files exported from the Scenario Editor, up to 8, each under 512 KB. A map may stand the mod's own units; the setup screens offer it beside the player's own map while the mod is on |
+| `maps` | string |  |  | maps the mod carries, relative to mod.json (`maps/city.steel-tide-map`): files exported from the Scenario Editor, up to 8 (16 with large capacity), each under 512 KB. A map may stand the mod's own units; the setup screens offer it beside the player's own map while the mod is on |
 | `files` | { path: dataURL } |  |  | single-file form only: the sheets, sounds, music and maps, embedded as data URLs by path |
 
 `name`, `description` and every `desc`/`name` on a def are *text*: a string (used for every language), `["English", "中文", "한국어"]` in that order, or `{ "en": "…", "zh": "…", "ko": "…" }`. Only English is required; a language left out reads as English.
 
-Capacity is an installation-time declaration. Omit it for the existing ordinary limits, or set `capacity: "large"` in format 4 for 1024 definitions and entries per production/build/reference list (ordinary lists allow 64), 2048 sheets, 512 sounds, 4 MiB of metadata and 256 MiB of stored data URLs. Large packs allow 100000000 HP per definition and 2 MiB per executable module; their combined source and configuration must still fit the metadata budget. All path, identity, reference and adds-only checks still apply. Budgets do not preallocate runtime memory. Ordinary multiplayer transfers manifests; players install the asset bytes locally.
+Capacity is an installation-time declaration. Omit it for the existing ordinary limits, or set `capacity: "large"` in format 4 for 1024 definitions and entries per production/build/reference list (ordinary lists allow 64), 2048 sheets, 512 sounds, 16 maps, 64 music tracks, 4 MiB of metadata and 256 MiB of stored data URLs. Large packs allow 100000000 HP per definition and 2 MiB per executable module; their combined source and configuration must still fit the metadata budget. All path, identity, reference and adds-only checks still apply. Budgets do not preallocate runtime memory. Ordinary multiplayer transfers manifests; players install the asset bytes locally.
 
 ### Extension packages (format 4)
 
@@ -263,7 +263,7 @@ Read the [extension framework guide](https://github.com/steel-tide/mods/blob/mai
 
 For locally chosen content, game/API consumers must `await prepareContentSchema(raw, true)` before synchronously calling `parseDefinitionPack(raw)` or `parseMod(raw)` on capability-bearing content; await `prepareContentCapabilities(packs)` before opening a match. For a world, prepare its embedded packs by passing the raw world to `prepareContentSchema`. Registry tooling likewise explicitly approves local files. Network inputs use `prepareContentSchema(raw)` and cannot approve unknown code. Read the extension framework guide in the mod repository for package ownership, trust and SDK details. Never ignore a schema or capability loading failure.
 
-The shared inspection model exposes private state and available actions only to authorized viewers. Actions go through `contentAction` and the ordinary commands/orders gateway. The CLI exposes the same interface with `steel content-action <units> <module> <action> [--choice id] [--target id] [--at x,y]`. Port only source combinations the contract represents faithfully; omit and document unsupported behavior.
+The shared inspection model exposes private state and available actions only to authorized viewers. Actions go through `contentAction` and the ordinary commands/orders gateway. An action that names a `target` (`ground`, `own`, `ally` or `enemy`) is aimed on the map as a warhead launch is: the next click gives its point or the unit under it. The CLI exposes the same interface with `steel content-action <units> <module> <action> [--choice id] [--target id] [--at x,y]`. Port only source combinations the contract represents faithfully; omit and document unsupported behavior.
 
 ### A faction (`factions[]`, format 2)
 
@@ -457,6 +457,7 @@ The optional kit changes visible building forms, storeys, lot coverage, planting
 | `interceptMuzzleOffset` | number 0–200 |  |  | point defence: launcher length, world px |
 | `transportCap` | integer 1–50 | units only |  | a transport: hold, in cargo weight |
 | `transportMaxWeight` | number 0–50 | units only | transportCap | a transport: maximum cargo weight of one passenger |
+| `transportDomain` | ground \| air | units only | ground | a transport: what its hold takes, ground units or aircraft; aircraft fly aboard and are launched ahead of the bow, as from the carrier's hangar |
 | `cargoReach` | number 0.5–4 | units only | 1 | a transport: how far its load and unload distances stretch, as a multiple of the default (the landing craft's 1.1, the Moray's 1.5); on a ship it widens the ground its ramp reaches too |
 | `landsForCargo` | boolean | units only |  | a cargo plane that touches down to load |
 | `cargoWeight` | number 0–50 | units only | pop | how much of a hold it takes |
@@ -654,7 +655,7 @@ Supply a nonempty queue to replace the home-menu reel. It repeats in listed orde
 
 | field | type | required | default | meaning |
 | --- | --- | --- | --- | --- |
-| `tracks` | track[] |  |  | up to 32 custom recordings, each with an id and file |
+| `tracks` | track[] |  |  | up to 32 custom recordings (64 with large capacity), each with an id and file |
 | `menu` | track id[] |  |  | ordered repeating queue for menus; also used for setup unless setup is supplied. Omitted keeps the previous queue; [] is silence |
 | `setup` | track id[] |  |  | optional separate queue for match setup |
 | `battle` | track id[] |  |  | ordered repeating queue during battle. Omitted keeps the previous queue; [] is silence. Built-in IDs: menu, glassline-drive, setup, cold-front, victory, defeat, battle-1, battle-2, assembly-gears, disciplined-unease, methodical-calm, iron-standard, danger-close, dead-reckoning, zero-hour, stand-to, stand-down |
@@ -996,7 +997,7 @@ On a unit's body sheet, the frames played by what it is doing instead of one loo
 
 ## Maps
 
-A mod may carry maps: files the game's Scenario Editor exports (`.steel-tide-map`), named under `maps` in mod.json, up to 8 of them and each under 512 KB. While the mod is on, the Conquest setup and the lobby offer them as cards beside the player's own map; choosing one plays it exactly as painted. A map may stand the mod's own units and buildings before the whistle: with the mod on, they are in the editor's forces palette, and the map reads on any game that has the mod (the registry checks it against the mod's own defs, not the vanilla roster). A scene laid this way — a base built up, a horde at the gate — is how a mod shows what it is without a word.
+A mod may carry maps: files the game's Scenario Editor exports (`.steel-tide-map`), named under `maps` in mod.json, up to 8 of them (16 in a large pack) and each under 512 KB. While the mod is on, the Conquest setup and the lobby offer them as cards beside the player's own map; choosing one plays it exactly as painted. A map may stand the mod's own units and buildings before the whistle: with the mod on, they are in the editor's forces palette, and the map reads on any game that has the mod (the registry checks it against the mod's own defs, not the vanilla roster). A scene laid this way — a base built up, a horde at the gate — is how a mod shows what it is without a word.
 
 ## Units of measure
 

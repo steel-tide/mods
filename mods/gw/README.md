@@ -5,27 +5,27 @@ Mobile Suit Gundam fan mod for Rusted Warfare by **恐龙再健身房**. The fou
 source packages in `rusted-warfare-mods/gw` are read as data; nothing of them
 runs in the game.
 
-This port is the **UC0079 core** and the **first two steps of each tech
-tree**: what the Earth Federation and the Principality of Zeon unlock at the
-start of a ground match through their `BaseTech` nodes (their base units,
-factories, Mega Factory, refinery, supply depot, institute, turrets and
-walls), and the first two development plans each side researches, with the
-units they open: the Federation's *Anti MS Plan* and *Early Type MS
-Development Plan*, and Zeon's *Ground Type Zaku Development Plan* and
-*Ground Type MS Development Plan*.
-Later plans, later eras (UC0087, C.E.71), pilots and the rest of the source
-are later batches. [DOCS.md](DOCS.md) tracks the port's progress, how to
-carry it on, and exactly what is and is not here.
+This port is GW's **ground game**: all seven factions of its three eras —
+the Earth Federation and Zeon of UC0079, the AEUG, Titans and Neo Zeon of
+UC0087, OMNI and ZAFT of C.E.71 — each with its base tech, its whole tech
+tree and every unit those sell on a ground map, with GW's pilots, ACEs,
+parts, shields, skills and systems, its soundtrack and operator voice, and
+nine of its maps. Space is left out: Steel Tide has no space theatre.
+[DOCS.md](DOCS.md) tracks the port's progress, how to carry it on, and exactly
+what is and is not here.
 
 The pack sets `hideFromListing: true` and requires **extension host API 2**,
-**large content capacity**, and a game whose definition packs may carry their
-own research nodes (`tech`).
-
+**large content capacity**, and a game with pack research nodes, map-aimed
+module actions, `transportDomain`, amphibious passengers in ground holds and
+the large-capacity caps of 16 maps and 64 tracks.
 
 ## Play
 
 **Settings → Mods → Open folder**, choose this folder, and start a new
-Conquest match with **EFSF[0079]** or **ZEON[0079]** as a seat's faction.
+Conquest match with a GW faction on a seat: **EFSF[0079]**, **ZEON[0079]**,
+**AEUG[0087]**, **TITANS[0087]**, **NEO ZEON[0087]**, **OMNI[CE71]** or
+**ZAFT[CE71]**. GW is not balanced against the vanilla roster; play it
+against itself.
 
 - Each side starts with its headquarters and an **Engineer Team**, which raises
   every building. The HQ trains more engineers.
@@ -35,39 +35,36 @@ Conquest match with **EFSF[0079]** or **ZEON[0079]** as a seat's faction.
 - The **Refinery** adds income; the **Supply Depot** raises the power ceiling
   (GW's MP cap) and supplies units around it, as do the HQ and the Aqua Factory.
 - The **headquarters' card** is GW's tech tree: it offers the faction's next
-  development plan. A plan costs Money and Resource (metal here), seconds of
+  development plans. A plan costs Money and Resource (metal here), seconds of
   work, and **TechPoint**, which the HQ earns at 7.5 a second and each
   **Institute** at 0.75 more. A plan waits at the head of the queue until its
-  TechPoint is in hand; the HQ's and Institute's cards show the TechPoint
-  held, and what a waiting plan asks. A plan once researched is kept, and the
-  units it opens appear in the factories' lists.
-- Mobile suits sold with several loadouts (Zaku II, the Ground Type Gundam
-  and GM, Zanny and others) switch between them from their card, paid,
-  beside a supply point.
-- The U-type submarines dive and surface from their card.
+  TechPoint is in hand. The HQ's card also shows the side's **MoralPoint**,
+  which some units ask besides their price.
+- Every unit has a **pilot** who learns from the harm it does and climbs
+  levels. The **Academy** trains pilots for units left without one; the
+  UC0079 **ACE Beacon** calls named ACE pilots once their plan is in, each
+  with skills of their own. A unit that loses its pilot stands idle until
+  another boards it.
+- Mobile suits switch **loadouts** and **convert** beside a supply point,
+  **transform** to flight forms and back, ride **sub-flight systems** and
+  fire from them, and use their **skills** from the card: an aimed skill
+  (a warhead, a mortar, mines) takes its point from the next map click.
+- Submarines dive and surface from their card; hangars carry ground units
+  or aircraft.
 
-### Odessa Coast
+### Maps
 
-The pack carries one map, *Odessa Coast*
-(`maps/odessa-coast.steel-tide-map`), a new showcase rather than one of the
-source's 22 maps. Every definition in the pack stands on it before the match
-starts, the units behind each plan included. The Federation holds the west and
-Zeon the east. Each base has its headquarters, factories, supply depot,
-refinery, radar and institute along the north edge, its Mega Factory further
-south, its aircraft over the apron below the building row, and its ground
-forces, loadout variants included, on a paved parade ground. Its turrets and walls guard the highway out
-of the base, and its fleet, the dived submarine forms included, lies off its
-own harbour on the southern coast. Shared buildings stand in both bases.
-Between the bases a highway runs through a ruined town. The two sides stand
-further apart than the longest gun reaches, so nothing fires until a side
-moves.
+Five **showcase** maps stand every definition of their factions before the
+whistle, out of each other's reach: one each for EFSF[0079], ZEON[0079] and
+AEUG[0087], one for TITANS and NEO ZEON, one for OMNI and ZAFT. Seat N opens
+on the Nth spawn and gets that faction's pieces, so pick the factions in the
+order the map names them. `make-map.py` draws them from `mod.json`.
 
-Seat one opens on the west and gets the Federation's pieces, seat two on the
-east and gets Zeon's. Choose **EFSF[0079]** and **ZEON[0079]** for those seats
-so each opens with its own headquarters and engineers beside the exhibit. The
-map is drawn by `make-map.py` from `mod.json`, not in the Map Editor, so it
-follows the roster. The generator checks coverage, faction ownership, terrain,
-each hull's sea room and overlaps before writing.
+Nine of the source's ground maps come with them: **At Jaburo's Fall** [2v2]
+and [3v3], **Cucuruz Doan's Island**, **Dense Forest Region**,
+**Mountainous Region**, **New City**, **Rise From The Ashes**, **Southeast
+Asia** and **Tremor Mountain**, read through the game's Rusted Warfare
+importer at this port's scale (`source-maps.ts`).
 
 ## What GW's battle rules do here
 
@@ -77,17 +74,24 @@ The pack's `gw.battle` package keeps the source's own combat and logistics:
   melee damage, armour-piercing parts and Anti-land/air/water/building factors;
   a target takes away its flat defence of that kind, then its percentage. A
   machine gun that cannot beat a tank's flat shell defence does nothing to it.
-- **Hit and graze**: accuracy against reaction decides whether a round
-  connects, and a second roll whether it only grazes. A run of hits makes the
-  next dodge likelier; fire from behind hits harder and more surely.
+  Shields block, I-Fields turn beams, PS armour turns shells.
+- **Hit and graze**: accuracy against reaction, both from the pilot, decides
+  whether a round connects, and a second roll whether it only grazes. Fire
+  from behind hits harder and more surely; an unseen unit is hit half as hard.
+- **Parts and DP**: a mobile suit hit hard and often loses parts: a broken
+  right arm drops its hand weapons, a broken head shortens its sight and
+  reach, and any break locks its transformation. DP past its whole staggers
+  it.
+- **Detection**: an enemy is a target only once a detector of its side finds
+  it, and stays found five seconds. Smoke and optical camouflage make a unit
+  harder to find, smoke also harder to hit; Minovsky particles hide what
+  stands in them and halve the reach of detectors inside them.
 - **EN** is spent per burst or per round and on the move; an empty unit holds
   its fire. Supply points refill EN and, out of battle, repair.
-- **TechPoint**: headquarters and Institutes earn it each second, a computer
-  side at three quarters; a development plan takes its TechPoint when it
-  comes to the head of the HQ's queue and gives it back if taken off
-  unfinished.
-- **Upkeep**: a human side pays each unit's MP and its buildings' upkeep every
-  second; a computer side earns its income twice, as in the source.
+- **Economy**: a human side pays each unit's MP and its buildings' upkeep
+  every second; a computer side earns its income twice, more at Seasoned and
+  Veteran (the source's `AIHard` brackets), and three quarters of the
+  TechPoint.
 
 ## Conversion
 
@@ -99,11 +103,10 @@ The pack's `gw.battle` package keeps the source's own combat and logistics:
 | time | 60 RW ticks a second |
 | Money + Resource | metal, 1:1 each (same incomes; the HQ trades them symmetrically) |
 | MP / MP max | population / power |
-| HP, damage, defences, EN | unscaled |
+| HP, damage, defences, EN, pilots' skills | unscaled |
 
 Units move at their high-speed (boost) mode speed, the default for a human
-player in the source. GW is not balanced against the vanilla roster; play it
-against itself.
+player in the source.
 
 ## Rebuild and verify
 
@@ -111,19 +114,20 @@ From the repository root, with Python 3 and Pillow, FFmpeg, Node 22+ and Bun,
 and the sibling `steel-tide-game` checkout for the engine tests:
 
 ```sh
-node mods/gw/extensions/gw-battle/build.mjs
-python3 mods/gw/port.py                 # --no-media keeps the sheets and sounds
-python3 mods/gw/make-map.py             # --check-only compares the saved map
+python3 mods/gw/port.py                 # --no-media writes only mod.json and the report
+python3 mods/gw/make-map.py             # --check-only compares the saved maps
+bun mods/gw/source-maps.ts              # the source's ground maps
 bun test ./mods/gw/game.test.ts
 node tools/check.mjs mods/gw
 node tools/pack.mjs mods/gw
 ```
 
-`port.py` writes `mod.json`, `sprites/`, `sounds/` and
-[conversion-report.json](conversion-report.json), which records the source file
-of every definition, the weapons each one leaves out and why, the base-tech
-entries this pass leaves out, and the adaptations. Korean text lives in
-[localization.json](localization.json); the port reports any string without it.
+`port.py` writes `mod.json`, `sprites/`, `sounds/`, `music/`, `voice/`, builds
+the `gw.battle` package, and writes [conversion-report.json](conversion-report.json),
+which records the source file of every definition, the weapons each one
+leaves out and why, what the port leaves out, and the adaptations. Korean text
+lives in [localization.json](localization.json); the port reports any string
+without it.
 
 ## Credits and licence
 

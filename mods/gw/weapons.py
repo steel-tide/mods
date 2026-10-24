@@ -35,7 +35,9 @@ def payload(spawn):
         k, _, v = item.replace('=', ':', 1).partition(':')
         k, v = k.strip(), v.strip()
         if k:
-            out[k] = gw.num(v, v)
+            # a stray word after the figure (`0.75 0`) leaves its leading number
+            lead = re.match(r'-?\d+(?:\.\d+)?', v)
+            out[k] = gw.num(v, gw.num(lead[0]) if lead else v)
     return name, out
 
 
@@ -57,9 +59,10 @@ def _fires(ini, action):
     return sec.get('fireTurretXAtGround', '').strip(), _seconds(sec.get('buildSpeed'), 0)
 
 
-def sequence(ini, weapon):
-    """Shots and their spacing from `<W>_Fire`'s queued steps: (turrets fired, wind-up, gaps)."""
-    fire = ini.get('hiddenAction_' + weapon + '_Fire') or ini.get('action_' + weapon + '_Fire') or {}
+def sequence(ini, weapon, start=None):
+    """Shots and their spacing from `<W>_Fire`'s queued steps (or another
+    action's, `start`): (turrets fired, wind-up, gaps)."""
+    fire = (ini.get(start) if start else None) or ini.get('hiddenAction_' + weapon + '_Fire') or ini.get('action_' + weapon + '_Fire') or {}
     queue = []
     stack = _list(fire.get('alsoTriggerAction')) + _list(fire.get('alsoQueueAction'))
     seen = set()
@@ -91,9 +94,11 @@ def sequence(ini, weapon):
 def classify(cond):
     """Read a `_Trigger` condition: loadout, distance band, and whether the port fires it."""
     c = ' '.join((cond or '').split())
-    out = {'eq': None, 'eq2': None, 'melee': None, 'min': None, 'skip': None}
+    out = {'eq': None, 'eq2': None, 'melee': None, 'min': None, 'skip': None, 'hand': False}
     if 'armRBreaked==true' in c or 'armLBreaked==true' in c:
         out['skip'] = 'fallback for a broken arm'
+    # fired from the right hand: a broken right arm holds it
+    out['hand'] = 'armRBreaked==false' in c
     if 'pilotUnit' in c or 'pilot' in c.lower() and 'Skill' in c:
         out['skip'] = out['skip'] or 'needs a skilled pilot'
     m = re.search(r'EquipmentIndex==(\d+)', c)
@@ -119,8 +124,13 @@ def turret_weapons(ini):
         w = sec[7:]
         proj = ini.get('projectile_' + t.get('projectile', ''), {})
         unit, figures = payload(proj.get('spawnUnit'))
+        spawned = None
         if not unit:
-            continue
+            # a turret that launches a unit of its own (a funnel, an incom) carries no payload
+            m = re.match(r'\s*(\w+)\s*\*\s*(\d+)\s*$', ' '.join((proj.get('spawnUnit') or '').split()))
+            if not m or not gw.unit(m[1])[1]:
+                continue
+            unit, spawned = m[1], m[1]
         trig_sec = 'hiddenAction_' + w + '_Trigger'
         action_sec = 'action_' + w + '_Trigger'
         trigger = ini.get(trig_sec)
@@ -128,7 +138,8 @@ def turret_weapons(ini):
                    cd=_seconds(g.get(w + '_CD'), 0), en=_seconds(g.get(w + '_EN'), 0), magazine=int(_seconds(g.get(w + '_Shoot'), 1) or 1),
                    delay=_seconds(t.get('delay'), 0), barrelY=_seconds(t.get('barrelY'), 0), barrelX=_seconds(t.get('barrelX'), 0),
                    x=_seconds(t.get('x'), 0), y=_seconds(t.get('y'), 0), sound=t.get('shoot_sound', ''), soundOrigin=ini.origins.get(sec, {}).get('shoot_sound'),
-                   flame=t.get('shoot_flame', ''), maxAngle=_seconds(t.get('canAttackMaxAngle'), 180), button=action_sec in ini)
+                   flame=t.get('shoot_flame', ''), maxAngle=_seconds(t.get('canAttackMaxAngle'), 180), button=action_sec in ini,
+                   spawned=spawned)
         use = t.get('resourceUsage', '')
         m = re.search(r'\ben\s*=\s*([\d.]+)', use)
         rec['enPerShot'] = float(m[1]) if m else 0.0
@@ -136,6 +147,15 @@ def turret_weapons(ini):
             rec['trigger'] = classify(trigger.get('requireConditional'))
             shots, windup, gaps = sequence(ini, w)
             rec['shots'], rec['windup'], rec['gaps'] = shots, windup, gaps
+        if rec['button']:
+            # a player's skill: what its button says and asks, and the shots it queues
+            act = ini[action_sec]
+            locked = ' '.join(' '.join(v.split()) for k, v in act.items() if k.startswith('isLocked'))
+            rec['skill'] = dict(text=act.get('text', ''), text_zh=act.get('text_zh', ''), visible=' '.join(act.get('isVisible', '').split()), locked=locked,
+                                aim='ground' if act.get('fireTurretXAtGround_count', '').strip() == '0' else 'self',
+                                ai=('hiddenAction_' + w + '_Trigger_ByAI') in ini)
+            shots, windup, gaps = sequence(ini, w, action_sec)
+            rec['skill']['shots'], rec['skill']['windup'], rec['skill']['gaps'] = len(shots), windup, gaps
         out.append(rec)
     return out
 
@@ -145,9 +165,15 @@ def used(weapons, eq=0, eq2=0):
     shooters = {s for w in weapons for s in w.get('shots', [])}
     keep, dropped = [], []
     for w in weapons:
+        if w.get('spawned') and not w['button']:
+            dropped.append((w['id'], 'launches a unit on its own'))
+            continue
         if w['button']:
-            # A player's targeted action (the Zaku II C's nuke): the port fires
-            # it on its own, as the source's computer side does.
+            # A player's skill, offered on the unit's card for the loadouts that show it.
+            m = re.search(r'EquipmentIndex==(\d+)', w['skill']['visible'])
+            if m and int(m[1]) != eq:
+                dropped.append((w['id'], f'another loadout (EquipmentIndex {m[1]})'))
+                continue
             keep.append(w)
             continue
         trig = w.get('trigger')
