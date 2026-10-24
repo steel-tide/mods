@@ -1,6 +1,6 @@
 # GW BattleUniverse
 
-A local Steel Tide port of **GW BattleUniverse (高达战争_战争宇宙) V159**, a
+A local Steel Tide port of **GW BattleUniverse (高达战争：战争宇宙) V159**, a
 Mobile Suit Gundam fan mod for Rusted Warfare by **恐龙再健身房**. The four
 source packages in `rusted-warfare-mods/gw` are read as data; nothing of them
 runs in the game.

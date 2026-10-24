@@ -1,6 +1,6 @@
 # Credits
 
-**GW BattleUniverse (高达战争_战争宇宙) V159** — a Mobile Suit Gundam fan mod
+**GW BattleUniverse (高达战争：战争宇宙) V159** — a Mobile Suit Gundam fan mod
 for Rusted Warfare by **恐龙再健身房** (`mod-info.txt`: "By恐龙再健身房").
 Mobile Suit Gundam and its series belong to their rights holders; GW is a fan
 work about them.

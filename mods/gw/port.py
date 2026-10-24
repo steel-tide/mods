@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Port GW BattleUniverse (高达战争_战争宇宙) V159 into this Steel Tide mod.
+"""Port GW BattleUniverse (高达战争：战争宇宙) V159 into this Steel Tide mod.
 
   python3 mods/gw/port.py              # sheets, sounds, mod.json, conversion-report.json
   python3 mods/gw/port.py --no-media   # mod.json and the report only
@@ -1634,7 +1634,7 @@ def main():
     defs = list(buildings.values()) + defs
     manifest = {
         'format': 'steel-tide-mod', 'v': 4, 'capacity': 'large',
-        'id': 'gw', 'name': ['GW BattleUniverse', '高达战争_战争宇宙', 'GW 배틀 유니버스'],
+        'id': 'gw', 'name': ['GW BattleUniverse', '高达战争：战争宇宙', 'GW 배틀 유니버스'],
         'version': '0.1.0', 'author': '恐龙再健身房',
         'description': [
             "The One Year War, on your terms. Lead the Earth Federation's Type 61 tanks, GMs, Ground Type Gundams and the Big Tray, or Zeon's Zakus, Gouf Custom, Gogg and the Dabude. Research your side's next development plan, rearm mobile suits with bazookas, beam rifles or 180mm cannons, and dive submarines beneath the enemy fleet.",
