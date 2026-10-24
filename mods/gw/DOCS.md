@@ -184,7 +184,7 @@ theirs with Neo Zeon, OMNI with ZAFT. `make-map.py` draws them from
 
 Nine of the source's ground maps, read by the game's own Rusted Warfare
 importer (`source-maps.ts`) and resampled to this port's scale: At Jaburo's
-Fall [2v2] and [3v3], Cucuruz Doan's Island, Dense Forest Region,
+Fall (one for 2v2, one for 3v3), Cucuruz Doan's Island, Dense Forest Region,
 Mountainous Region, New City, Rise From The Ashes, Southeast Asia and Tremor
 Mountain. Their names are the source's, with Chinese and Korean. The space
 and ground-and-space maps, and the `_02` copies that differ only in props,

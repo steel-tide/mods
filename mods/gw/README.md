@@ -60,8 +60,8 @@ AEUG[0087], one for TITANS and NEO ZEON, one for OMNI and ZAFT. Seat N opens
 on the Nth spawn and gets that faction's pieces, so pick the factions in the
 order the map names them. `make-map.py` draws them from `mod.json`.
 
-Nine of the source's ground maps come with them: **At Jaburo's Fall** [2v2]
-and [3v3], **Cucuruz Doan's Island**, **Dense Forest Region**,
+Nine of the source's ground maps come with them: **At Jaburo's Fall**, for
+2v2 and for 3v3, **Cucuruz Doan's Island**, **Dense Forest Region**,
 **Mountainous Region**, **New City**, **Rise From The Ashes**, **Southeast
 Asia** and **Tremor Mountain**, read through the game's Rusted Warfare
 importer at this port's scale (`source-maps.ts`).

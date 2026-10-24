@@ -23,23 +23,23 @@ const SOURCE = resolve(HERE, '../../rusted-warfare-mods/gw/GW_BattleUniverse_Mai
 const WORLD = 0.75, TILE = 32;
 
 const MAPS: { file: string; id: string; name: [string, string, string]; line: [string, string, string] }[] = [
-  { file: 'AtJaburosFall[2v2]_PVP_01', id: 'at-jaburos-fall-2v2', name: ["At Jaburo's Fall [2v2]", '魂断贾布罗 [2v2]', '자브로 함락 [2v2]'],
+  { file: 'AtJaburosFall[2v2]_PVP_01', id: 'at-jaburos-fall-2v2', name: ["At Jaburo's Fall", '魂断贾布罗', '자브로 함락'],
     line: ['The Federation headquarters under the jungle, assaulted from both banks.', '丛林下的联邦军总部，两岸同时遭到攻击。', '정글 아래의 연방군 본부, 양쪽 강변에서 공격받는다.'] },
-  { file: 'AtJaburosFall[3v3]_PVP_01', id: 'at-jaburos-fall-3v3', name: ["At Jaburo's Fall [3v3]", '魂断贾布罗 [3v3]', '자브로 함락 [3v3]'],
+  { file: 'AtJaburosFall[3v3]_PVP_01', id: 'at-jaburos-fall-3v3', name: ["At Jaburo's Fall", '魂断贾布罗', '자브로 함락'],
     line: ['The Federation headquarters under the jungle, assaulted from both banks.', '丛林下的联邦军总部，两岸同时遭到攻击。', '정글 아래의 연방군 본부, 양쪽 강변에서 공격받는다.'] },
-  { file: 'CucuruzDoansIsland[2v2]_PVP_01', id: 'cucuruz-doans-island', name: ["Cucuruz Doan's Island [2v2]", '库库鲁斯多安之岛 [2v2]', '쿠쿠루즈 도안의 섬 [2v2]'],
+  { file: 'CucuruzDoansIsland[2v2]_PVP_01', id: 'cucuruz-doans-island', name: ["Cucuruz Doan's Island", '库库鲁斯多安之岛', '쿠쿠루즈 도안의 섬'],
     line: ['A lone island and the sea round it.', '一座孤岛，与环绕它的海。', '외딴 섬과 그를 둘러싼 바다.'] },
-  { file: 'DenseForestRegion[1v1]_PVP_01', id: 'dense-forest-region', name: ['Dense Forest Region [1v1]', '密林地带 [1v1]', '밀림 지대 [1v1]'],
+  { file: 'DenseForestRegion[1v1]_PVP_01', id: 'dense-forest-region', name: ['Dense Forest Region', '密林地带', '밀림 지대'],
     line: ['Two bases a short drive apart through the trees.', '两座基地隔着树林，近在咫尺。', '숲을 사이에 두고 가까이 마주한 두 기지.'] },
-  { file: 'MountainousRegion[1v1]_PVP_01', id: 'mountainous-region', name: ['Mountainous Region [1v1]', '山岳地带 [1v1]', '산악 지대 [1v1]'],
+  { file: 'MountainousRegion[1v1]_PVP_01', id: 'mountainous-region', name: ['Mountainous Region', '山岳地带', '산악 지대'],
     line: ['Passes between the peaks.', '群峰之间的山口。', '봉우리 사이의 고갯길.'] },
-  { file: 'NewCity[3v3]_PVP_01', id: 'new-city', name: ['New City [3v3]', '燃烧的新都市 [3v3]', '불타는 신도시 [3v3]'],
+  { file: 'NewCity[3v3]_PVP_01', id: 'new-city', name: ['New City', '燃烧的新都市', '불타는 신도시'],
     line: ['A city fought over street by street.', '逐街争夺的城市。', '거리마다 쟁탈전이 벌어지는 도시.'] },
-  { file: 'RiseFromTheAshes[3v3]_PVP_01', id: 'rise-from-the-ashes', name: ['Rise From The Ashes [3v3]', '自灰烬中崛起 [3v3]', '잿더미에서 일어서다 [3v3]'],
+  { file: 'RiseFromTheAshes[3v3]_PVP_01', id: 'rise-from-the-ashes', name: ['Rise From The Ashes', '自灰烬中崛起', '잿더미에서 일어서다'],
     line: ['Open ground and the ruins on it.', '开阔地与其上的废墟。', '탁 트인 땅과 그 위의 폐허.'] },
-  { file: 'SoutheastAsia[3v3]_PVP_01', id: 'southeast-asia', name: ['Southeast Asia [3v3]', '东南亚战线 [3v3]', '동남아시아 전선 [3v3]'],
+  { file: 'SoutheastAsia[3v3]_PVP_01', id: 'southeast-asia', name: ['Southeast Asia', '东南亚战线', '동남아시아 전선'],
     line: ['Jungle, rivers and the coast.', '丛林、河流与海岸。', '정글과 강, 그리고 해안.'] },
-  { file: 'TremorMountain[3v3]_PVP_01', id: 'tremor-mountain', name: ['Tremor Mountain [3v3]', '震荡之山 [3v3]', '진동의 산 [3v3]'],
+  { file: 'TremorMountain[3v3]_PVP_01', id: 'tremor-mountain', name: ['Tremor Mountain', '震荡之山', '진동의 산'],
     line: ['A mountain range split by a valley.', '被山谷一分为二的山脉。', '골짜기로 갈라진 산맥.'] },
 ];
 
